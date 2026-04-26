@@ -1,0 +1,2788 @@
+{
+  "pilot_id": "g5s2u2-general-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S2",
+    "unit": "U2",
+    "pages": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/02.五年级下册语料.js",
+    "app/knowledge/raw/06.五年级下册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 5 · Volume 2), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 5 · Volume 2), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 21,
+    "source_kind": "textbook_source_js",
+    "source_format": "js"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 2",
+      "word": "spring",
+      "phonetic": "/sprɪŋ/",
+      "chinese": "春天",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U2-P12-D1",
+        "TB-G5S2U2-P14-D2",
+        "TB-G5S2U2-P15-D1",
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "summer",
+      "phonetic": "/'sʌmə(r)/",
+      "chinese": "夏天",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U2-P13-D1",
+        "TB-G5S2U2-P15-D1",
+        "TB-G5S2U2-P17-D2",
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "autumn",
+      "phonetic": "/'ɔːtəm/",
+      "chinese": "秋天",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U2-P12-D1",
+        "TB-G5S2U2-P15-D1",
+        "TB-G5S2U2-P17-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "winter",
+      "phonetic": "/'wɪntə(r)/",
+      "chinese": "冬天",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U2-P12-D1",
+        "TB-G5S2U2-P14-D2",
+        "TB-G5S2U2-P15-D1",
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "season",
+      "phonetic": "/'siːzn/",
+      "chinese": "季节",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U2-P12-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "picnic",
+      "phonetic": "/'pɪknɪk/",
+      "chinese": "野餐",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "go on a picnic",
+      "chinese": "去野餐",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "pick",
+      "phonetic": "/pɪk/",
+      "chinese": "摘；采集",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "pick apples",
+      "chinese": "摘苹果",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "snowman",
+      "phonetic": "/'snəʊmæn/",
+      "chinese": "雪人",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "make a snowman",
+      "chinese": "堆雪人",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "go swimming",
+      "chinese": "去游泳",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U2-P13-D1",
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "which",
+      "phonetic": "/wɪtʃ/",
+      "chinese": "哪一个",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S2U2-P20-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "best",
+      "phonetic": "/best/",
+      "chinese": "最；最高程度地",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "snow",
+      "phonetic": "/snəʊ/",
+      "chinese": "雪",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S2U2-P14-D2",
+        "TB-G5S2U2-P18-D2",
+        "TB-G5S2U2-P21-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "good job",
+      "chinese": "做得好",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "because",
+      "phonetic": "/bɪ'kɒz/",
+      "chinese": "因为",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "vacation",
+      "phonetic": "/və'keɪʃn/",
+      "chinese": "假期",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S2U2-P17-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "all",
+      "phonetic": "/ɔːl/",
+      "chinese": "全；完全",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "pink",
+      "phonetic": "/pɪŋk/",
+      "chinese": "粉色；粉色的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "lovely",
+      "phonetic": "/'lʌvli/",
+      "chinese": "可爱的；美丽的",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "leaf",
+      "phonetic": "/liːf/",
+      "chinese": "叶子（复数 leaves /liːvz/）",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "fall",
+      "phonetic": "/fɔːl/",
+      "chinese": "落下；【美】秋天",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "paint",
+      "phonetic": "/peɪnt/",
+      "chinese": "用颜料绘画",
+      "emphasized": false,
+      "linked_block_uids": []
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S2U2-P12-D1-goal",
+      "block_uid": "TB-G5S2U2-P12-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P13-D1-goal",
+      "block_uid": "TB-G5S2U2-P13-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P14-D1-goal",
+      "block_uid": "TB-G5S2U2-P14-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P14-D2-goal",
+      "block_uid": "TB-G5S2U2-P14-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P14-D3-goal",
+      "block_uid": "TB-G5S2U2-P14-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P15-D1-goal",
+      "block_uid": "TB-G5S2U2-P15-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P15-D2-goal",
+      "block_uid": "TB-G5S2U2-P15-D2",
+      "category": "practice_match",
+      "text": "Work on the practice match activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P16-D1-goal",
+      "block_uid": "TB-G5S2U2-P16-D1",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P16-D2-goal",
+      "block_uid": "TB-G5S2U2-P16-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P16-D3-goal",
+      "block_uid": "TB-G5S2U2-P16-D3",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P17-D1-goal",
+      "block_uid": "TB-G5S2U2-P17-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P17-D2-goal",
+      "block_uid": "TB-G5S2U2-P17-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P17-D3-goal",
+      "block_uid": "TB-G5S2U2-P17-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P18-D1-goal",
+      "block_uid": "TB-G5S2U2-P18-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P18-D2-goal",
+      "block_uid": "TB-G5S2U2-P18-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P19-D1-goal",
+      "block_uid": "TB-G5S2U2-P19-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P19-D2-goal",
+      "block_uid": "TB-G5S2U2-P19-D2",
+      "category": "practice_choice",
+      "text": "Work on the practice choice activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P19-D3-goal",
+      "block_uid": "TB-G5S2U2-P19-D3",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P20-D1-goal",
+      "block_uid": "TB-G5S2U2-P20-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P20-D2-goal",
+      "block_uid": "TB-G5S2U2-P20-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U2-P21-D1-goal",
+      "block_uid": "TB-G5S2U2-P21-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-all",
+      "atom_type": "word",
+      "text": "all",
+      "gloss": "全；完全",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-australia",
+      "atom_type": "word",
+      "text": "Australia",
+      "gloss": "澳大利亚",
+      "linked_blocks": [
+        "TB-G5S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-autumn",
+      "atom_type": "word",
+      "text": "autumn",
+      "gloss": "秋天",
+      "linked_blocks": [
+        "TB-G5S2U2-P12-D1",
+        "TB-G5S2U2-P15-D1",
+        "TB-G5S2U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-beautiful",
+      "atom_type": "word",
+      "text": "beautiful",
+      "gloss": "美丽的",
+      "linked_blocks": [
+        "TB-G5S2U2-P14-D2",
+        "TB-G5S2U2-P17-D2",
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-because",
+      "atom_type": "word",
+      "text": "because",
+      "gloss": "因为",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-best",
+      "atom_type": "word",
+      "text": "best",
+      "gloss": "最；最高程度地",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-breakfast",
+      "atom_type": "word",
+      "text": "breakfast",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-brother",
+      "atom_type": "word",
+      "text": "brother",
+      "gloss": "兄弟",
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D1",
+        "TB-G5S2U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-brown",
+      "atom_type": "word",
+      "text": "brown",
+      "gloss": "棕色的",
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D1",
+        "TB-G5S2U2-P16-D2",
+        "TB-G5S2U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-children-s-day",
+      "atom_type": "word",
+      "text": "Children's Day",
+      "gloss": "儿童节",
+      "linked_blocks": [
+        "TB-G5S2U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-christmas-day",
+      "atom_type": "word",
+      "text": "Christmas Day",
+      "gloss": "圣诞节",
+      "linked_blocks": [
+        "TB-G5S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-colours",
+      "atom_type": "word",
+      "text": "colours",
+      "gloss": "颜色",
+      "linked_blocks": [
+        "TB-G5S2U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-draw",
+      "atom_type": "word",
+      "text": "draw",
+      "gloss": "画",
+      "linked_blocks": [
+        "TB-G5S2U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-eat-ice-cream",
+      "atom_type": "word",
+      "text": "eat ice cream",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-fall",
+      "atom_type": "word",
+      "text": "fall",
+      "gloss": "落下；【美】秋天",
+      "linked_blocks": [
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-go-on-a-picnic",
+      "atom_type": "word",
+      "text": "go on a picnic",
+      "gloss": "去野餐",
+      "linked_blocks": [
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-go-swimming",
+      "atom_type": "word",
+      "text": "go swimming",
+      "gloss": "去游泳",
+      "linked_blocks": [
+        "TB-G5S2U2-P13-D1",
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-go-to-the-beach",
+      "atom_type": "word",
+      "text": "go to the beach",
+      "gloss": "去海滩",
+      "linked_blocks": [
+        "TB-G5S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-good-job",
+      "atom_type": "word",
+      "text": "good job",
+      "gloss": "做得好",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-grandma",
+      "atom_type": "word",
+      "text": "grandma",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D2",
+        "TB-G5S2U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-grandpa",
+      "atom_type": "word",
+      "text": "grandpa",
+      "gloss": "爷爷；外公",
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D1",
+        "TB-G5S2U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-grapes",
+      "atom_type": "word",
+      "text": "grapes",
+      "gloss": "葡萄",
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D1",
+        "TB-G5S2U2-P16-D2",
+        "TB-G5S2U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-grass",
+      "atom_type": "word",
+      "text": "grass",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-green",
+      "atom_type": "word",
+      "text": "green",
+      "gloss": "绿色的",
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D1",
+        "TB-G5S2U2-P16-D2",
+        "TB-G5S2U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-grow",
+      "atom_type": "word",
+      "text": "grow",
+      "gloss": "生长；种植",
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D1",
+        "TB-G5S2U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-grows",
+      "atom_type": "word",
+      "text": "grows",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-leaf",
+      "atom_type": "word",
+      "text": "leaf",
+      "gloss": "叶子（复数 leaves /liːvz/）",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-leaves",
+      "atom_type": "word",
+      "text": "leaves",
+      "gloss": "树叶",
+      "linked_blocks": [
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-library",
+      "atom_type": "word",
+      "text": "library",
+      "gloss": "图书馆",
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-lovely",
+      "atom_type": "word",
+      "text": "lovely",
+      "gloss": "可爱的；美丽的",
+      "linked_blocks": [
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-make-a-snowman",
+      "atom_type": "word",
+      "text": "make a snowman",
+      "gloss": "堆雪人",
+      "linked_blocks": [
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-merry-christmas",
+      "atom_type": "word",
+      "text": "Merry Christmas",
+      "gloss": "圣诞快乐",
+      "linked_blocks": [
+        "TB-G5S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-never",
+      "atom_type": "word",
+      "text": "never",
+      "gloss": "从不",
+      "linked_blocks": [
+        "TB-G5S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-paint",
+      "atom_type": "word",
+      "text": "paint",
+      "gloss": "用颜料绘画",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-pick",
+      "atom_type": "word",
+      "text": "pick",
+      "gloss": "摘；采集",
+      "linked_blocks": [
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pick-apples",
+      "atom_type": "word",
+      "text": "pick apples",
+      "gloss": "摘苹果",
+      "linked_blocks": [
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-picnic",
+      "atom_type": "word",
+      "text": "picnic",
+      "gloss": "野餐",
+      "linked_blocks": [
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pink",
+      "atom_type": "word",
+      "text": "pink",
+      "gloss": "粉色；粉色的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-plant-flowers",
+      "atom_type": "word",
+      "text": "plant flowers",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-play-in-the-snow",
+      "atom_type": "word",
+      "text": "play in the snow",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pretty",
+      "atom_type": "word",
+      "text": "pretty",
+      "gloss": "漂亮的",
+      "linked_blocks": [
+        "TB-G5S2U2-P12-D1",
+        "TB-G5S2U2-P14-D2",
+        "TB-G5S2U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-purple",
+      "atom_type": "word",
+      "text": "purple",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-rainy-and-cold",
+      "atom_type": "word",
+      "text": "rainy and cold",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P14-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-season",
+      "atom_type": "word",
+      "text": "season",
+      "gloss": "季节",
+      "linked_blocks": [
+        "TB-G5S2U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-snow",
+      "atom_type": "word",
+      "text": "snow",
+      "gloss": "雪",
+      "linked_blocks": [
+        "TB-G5S2U2-P14-D2",
+        "TB-G5S2U2-P18-D2",
+        "TB-G5S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-snowman",
+      "atom_type": "word",
+      "text": "snowman",
+      "gloss": "雪人",
+      "linked_blocks": [
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-spring",
+      "atom_type": "word",
+      "text": "spring",
+      "gloss": "春天",
+      "linked_blocks": [
+        "TB-G5S2U2-P12-D1",
+        "TB-G5S2U2-P14-D2",
+        "TB-G5S2U2-P15-D1",
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-summer",
+      "atom_type": "word",
+      "text": "summer",
+      "gloss": "夏天",
+      "linked_blocks": [
+        "TB-G5S2U2-P13-D1",
+        "TB-G5S2U2-P15-D1",
+        "TB-G5S2U2-P17-D2",
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-summer-vacation",
+      "atom_type": "word",
+      "text": "summer vacation",
+      "gloss": "暑假",
+      "linked_blocks": [
+        "TB-G5S2U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-sunny-and-warm",
+      "atom_type": "word",
+      "text": "sunny and warm",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P14-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sunny-days",
+      "atom_type": "word",
+      "text": "sunny days",
+      "gloss": "晴天",
+      "linked_blocks": [
+        "TB-G5S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-swim",
+      "atom_type": "word",
+      "text": "swim",
+      "gloss": "游泳",
+      "linked_blocks": [
+        "TB-G5S2U2-P19-D1",
+        "TB-G5S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-swim-in-the-sea",
+      "atom_type": "word",
+      "text": "swim in the sea",
+      "gloss": "在海里游泳",
+      "linked_blocks": [
+        "TB-G5S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-the-four-seasons",
+      "atom_type": "word",
+      "text": "The Four Seasons",
+      "gloss": "《四季》",
+      "linked_blocks": [
+        "TB-G5S2U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-umbrella",
+      "atom_type": "word",
+      "text": "umbrella",
+      "gloss": "雨伞",
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-vacation",
+      "atom_type": "word",
+      "text": "vacation",
+      "gloss": "假期",
+      "linked_blocks": [
+        "TB-G5S2U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-what",
+      "atom_type": "word",
+      "text": "what",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P20-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-when",
+      "atom_type": "word",
+      "text": "when",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P20-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-where",
+      "atom_type": "word",
+      "text": "where",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P20-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-which",
+      "atom_type": "word",
+      "text": "which",
+      "gloss": "哪一个",
+      "linked_blocks": [
+        "TB-G5S2U2-P20-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-why",
+      "atom_type": "word",
+      "text": "why",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P20-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-windy-and-cold",
+      "atom_type": "word",
+      "text": "windy and cold",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P14-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-winter",
+      "atom_type": "word",
+      "text": "winter",
+      "gloss": "冬天",
+      "linked_blocks": [
+        "TB-G5S2U2-P12-D1",
+        "TB-G5S2U2-P14-D2",
+        "TB-G5S2U2-P15-D1",
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-yellow",
+      "atom_type": "word",
+      "text": "yellow",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-autumn",
+      "atom_type": "sentence_pattern",
+      "text": "Autumn.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-because-the-colours-are-pretty",
+      "atom_type": "sentence_pattern",
+      "text": "Because the colours are pretty!",
+      "gloss": "因为颜色很漂亮！",
+      "linked_blocks": [
+        "TB-G5S2U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-because-there-are-pretty-flowers",
+      "atom_type": "sentence_pattern",
+      "text": "Because there are pretty flowers.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P17-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-because",
+      "atom_type": "sentence_pattern",
+      "text": "Because...",
+      "gloss": "因为...",
+      "linked_blocks": [
+        "TB-G5S2U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-choose-write-and-say",
+      "atom_type": "sentence_pattern",
+      "text": "Choose, write and say.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-like-the-music-children",
+      "atom_type": "sentence_pattern",
+      "text": "Do you like the music, children?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-good-job-i-like-the-trees-the-colours-are-very-pretty",
+      "atom_type": "sentence_pattern",
+      "text": "Good job! I like the trees. The colours are very pretty!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hello-miss-white-look-at-my-picture",
+      "atom_type": "sentence_pattern",
+      "text": "Hello, Miss White. Look at my picture.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-like-snow-too-which-season-do-you-like-best-wu-binbin",
+      "atom_type": "sentence_pattern",
+      "text": "I like snow, too. Which season do you like best, Wu Binbin?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-like-spring-because-there-are-beautiful-flowers-everywhere",
+      "atom_type": "sentence_pattern",
+      "text": "I like spring because there are beautiful flowers everywhere.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-like-spring-best",
+      "atom_type": "sentence_pattern",
+      "text": "I like spring best.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P17-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-like-spring-best-there-are-beautiful-flowers-everywhere",
+      "atom_type": "sentence_pattern",
+      "text": "I like spring best. There are beautiful flowers everywhere.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-like-spring-best-there-are-beautiful-flowers-everywhere-i-often-go-on-a-picnic-with-my-family",
+      "atom_type": "sentence_pattern",
+      "text": "I like spring best. There are beautiful flowers everywhere. I often go on a picnic with my family.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-like-summer-best-because-of-children-s-day",
+      "atom_type": "sentence_pattern",
+      "text": "I like summer best because of Children's Day.",
+      "gloss": "我最喜欢夏天，因为有儿童节。",
+      "linked_blocks": [
+        "TB-G5S2U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-like-summer-but-i-can-t-swim",
+      "atom_type": "sentence_pattern",
+      "text": "I like summer, but I can't swim.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-often-go-swimming",
+      "atom_type": "sentence_pattern",
+      "text": "I often go swimming.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-learn-the-consonant-blend-br-as-in-brown",
+      "atom_type": "sentence_pattern",
+      "text": "Learn the consonant blend 'br' as in 'brown'.",
+      "gloss": "学习辅音丛'br'的发音，如'brown'。",
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-learn-the-consonant-blend-gr-as-in-green",
+      "atom_type": "sentence_pattern",
+      "text": "Learn the consonant blend 'gr' as in 'green'.",
+      "gloss": "学习辅音丛'gr'的发音，如'green'。",
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-learn-the-sound-of-r-in-words-like-library-and-umbrella",
+      "atom_type": "sentence_pattern",
+      "text": "Learn the sound of 'r' in words like 'library' and 'umbrella'.",
+      "gloss": "学习字母'r'在'library'和'umbrella'等词中的发音。",
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-write",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and write.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P20-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-at-my-picture-miss-white-i-like-summer-best-because-of-children-s-day",
+      "atom_type": "sentence_pattern",
+      "text": "Look at my picture, Miss White. I like summer best because of Children's Day.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-at-the-green-trees-and-pink-flowers",
+      "atom_type": "sentence_pattern",
+      "text": "Look at the green trees and pink flowers.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-merry-christmas",
+      "atom_type": "sentence_pattern",
+      "text": "Merry Christmas!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-and-group",
+      "atom_type": "sentence_pattern",
+      "text": "Read and group.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-and-match",
+      "atom_type": "sentence_pattern",
+      "text": "Read and match",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P15-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "Read and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-summer-i-can-go-swimming-every-day",
+      "atom_type": "sentence_pattern",
+      "text": "Summer. I can go swimming every day!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-survey-classmates-about-their-favourite-season",
+      "atom_type": "sentence_pattern",
+      "text": "Survey classmates about their favourite season.",
+      "gloss": "调查同学们最喜欢的季节。",
+      "linked_blocks": [
+        "TB-G5S2U2-P14-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-thank-you-merry-christmas",
+      "atom_type": "sentence_pattern",
+      "text": "Thank you. Merry Christmas!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-four-seasons-today-we-ll-draw-the-seasons-which-season-do-you-like-best-mike",
+      "atom_type": "sentence_pattern",
+      "text": "The Four Seasons. Today we'll draw the seasons. Which season do you like best, Mike?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-weather-is-hot-hot-hot",
+      "atom_type": "sentence_pattern",
+      "text": "The weather is hot, hot, hot!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-understand-that-seasons-are-opposite-in-the-northern-and-southern-hemispheres",
+      "atom_type": "sentence_pattern",
+      "text": "Understand that seasons are opposite in the Northern and Southern Hemispheres.",
+      "gloss": "理解南北半球的季节是相反的。",
+      "linked_blocks": [
+        "TB-G5S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-welcome",
+      "atom_type": "sentence_pattern",
+      "text": "Welcome!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-do-you-often-do-in-summer",
+      "atom_type": "sentence_pattern",
+      "text": "What do you often do in summer?",
+      "gloss": "你在夏天经常做什么？",
+      "linked_blocks": [
+        "TB-G5S2U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-do-you-usually-do-on-christmas-day",
+      "atom_type": "sentence_pattern",
+      "text": "What do you usually do on Christmas Day?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-is-the-weather-like-today-listen-and-write",
+      "atom_type": "sentence_pattern",
+      "text": "What is the weather like today? Listen and write.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P14-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-lovely-colours-the-leaves-fall-and-fall-and-fall-i-love-fall",
+      "atom_type": "sentence_pattern",
+      "text": "What lovely colours! The leaves fall and fall and fall. I love fall!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-is-do",
+      "atom_type": "sentence_pattern",
+      "text": "Where is \"do\"?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P20-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-which-season-do-you-like-best",
+      "atom_type": "sentence_pattern",
+      "text": "Which season do you like best?",
+      "gloss": "你最喜欢哪个季节？",
+      "linked_blocks": [
+        "TB-G5S2U2-P12-D1",
+        "TB-G5S2U2-P14-D2",
+        "TB-G5S2U2-P14-D3",
+        "TB-G5S2U2-P15-D1",
+        "TB-G5S2U2-P17-D2",
+        "TB-G5S2U2-P17-D3",
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2",
+        "TB-G5S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-which-season-do-you-like-best-why-complete-the-sentence",
+      "atom_type": "sentence_pattern",
+      "text": "Which season do you like best? Why? Complete the sentence.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P19-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-why",
+      "atom_type": "sentence_pattern",
+      "text": "Why?",
+      "gloss": "为什么？",
+      "linked_blocks": [
+        "TB-G5S2U2-P12-D1",
+        "TB-G5S2U2-P17-D2",
+        "TB-G5S2U2-P17-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-winter",
+      "atom_type": "sentence_pattern",
+      "text": "Winter.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P14-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-winter-i-can-sleep-all-day-how-about-you",
+      "atom_type": "sentence_pattern",
+      "text": "Winter. I can sleep all day. How about you?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-winter-i-like-snow",
+      "atom_type": "sentence_pattern",
+      "text": "Winter. I like snow.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-winter-i-often-play-in-the-snow",
+      "atom_type": "sentence_pattern",
+      "text": "Winter. I often play in the snow.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wow-i-want-to-paint-a-picture-too",
+      "atom_type": "sentence_pattern",
+      "text": "Wow! I want to paint a picture, too!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-i-like-autumn-best-the-weather-is-good-and-the-colours-are-beautiful-which-season-do-you-like-best-miss-white",
+      "atom_type": "sentence_pattern",
+      "text": "Yes. I like autumn best. The weather is good and the colours are beautiful! Which season do you like best, Miss White?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-it-s-very-beautiful-what-is-it",
+      "atom_type": "sentence_pattern",
+      "text": "Yes. It's very beautiful. What is it?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-zhang-peng-and-john-are-looking-at-some-pictures-which-is-zhang-peng-s-picture-listen-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "Zhang Peng and John are looking at some pictures. Which is Zhang Peng's picture? Listen and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U2-P17-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S2U2-P12",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: My favourite season. 单元首页图。在美术课上，约翰和艾米讨论他们最喜欢的季节以及原因。同时，小动物兹普和祖姆也在讨论它们各自喜欢的季节，引出本单元关于季节和喜好的主题。",
+      "entry_probe_questions": [
+        "Do you know the word season?",
+        "Can you say: Which season do you like best?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U2-P12-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U2-P13",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: My favourite season. 在教室里，奥利弗向怀特老师展示了一张关于儿童节的画，并解释说他最喜欢夏天是因为儿童节。老师接着询问他在夏天经常做的活动。",
+      "entry_probe_questions": [
+        "Do you know the word summer?",
+        "Can you say: I like summer best because of Children's Day."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U2-P13-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U2-P14",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Favourite Seasons. 在美术课上，琼斯老师播放了《四季》这首曲子，并引导学生们讨论自己最喜欢的季节，然后准备画出季节的图画。",
+      "entry_probe_questions": [
+        "Do you know the word beautiful?",
+        "Can you say: Which season do you like best?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U2-P14-D2",
+        "TB-G5S2U2-P14-D3",
+        "TB-G5S2U2-P14-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U2-P15",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: The Four Seasons. 老师在课堂上展示了四季的图片，并向学生提问他们最喜欢的季节，以此引出四个季节的单词。",
+      "entry_probe_questions": [
+        "Do you know the word spring?",
+        "Can you say: Which season do you like best?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U2-P15-D1",
+        "TB-G5S2U2-P15-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U2-P16",
+      "page_type": "phonics",
+      "page_intro_cn": "Theme: Phonics: br / gr / r. 根据单词中的发音，将词库中的单词分类填写到'br'和'gr'两个组别中。",
+      "entry_probe_questions": [
+        "Do you know the word green?",
+        "Can you say: Read and group."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U2-P16-D2",
+        "TB-G5S2U2-P16-D1",
+        "TB-G5S2U2-P16-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U2-P17",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Favourite Seasons. 艾米向怀特老师展示她画的秋天图画，并与老师讨论了各自最喜欢的季节以及原因。",
+      "entry_probe_questions": [
+        "Do you know the word pretty?",
+        "Can you say: Which season do you like best?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U2-P17-D2",
+        "TB-G5S2U2-P17-D3",
+        "TB-G5S2U2-P17-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U2-P18",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Seasonal Activities. 通过图片展示了四种典型的季节性活动，并配有问答对话，练习讨论喜欢的季节及相关活动。",
+      "entry_probe_questions": [
+        "Do you know the word go on a picnic?",
+        "Can you say: Which season do you like best?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U2-P19",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Describing seasons. 机器人罗宾通过四张邮票般的图片，分别描述了春夏秋冬四个季节的特点以及它喜欢（或不喜欢）的原因。",
+      "entry_probe_questions": [
+        "Do you know the word spring?",
+        "Can you say: Look at the green trees and pink flowers."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U2-P19-D1",
+        "TB-G5S2U2-P19-D2",
+        "TB-G5S2U2-P19-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U2-P20",
+      "page_type": "listening",
+      "page_intro_cn": "Theme: Unit 2 Check & Wrap-up. 听一段男孩和女孩的对话，并根据内容填写对话中缺失的部分。",
+      "entry_probe_questions": [
+        "Can you say: Listen and write."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U2-P20-D1",
+        "TB-G5S2U2-P20-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U2-P21",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Story time. 一个连环画故事。来自澳大利亚的考拉来过圣诞节。兹普和祖姆对考拉在圣诞节去海滩游泳感到惊讶，考拉解释说在南半球的澳大利亚，圣诞节是在夏天。最后，它们一起在雪地里堆雪人，体验了一个“白色圣诞节”。",
+      "entry_probe_questions": [
+        "Do you know the word Merry Christmas?",
+        "Can you say: Understand that seasons are opposite in the Northern and Southern Hemispheres."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U2-P21-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S2U2-P12-D1",
+      "page_uid": "TB-G5S2U2-P12",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U2-P12-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "单元首页图。在美术课上，约翰和艾米讨论他们最喜欢的季节以及原因。同时，小动物兹普和祖姆也在讨论它们各自喜欢的季节，引出本单元关于季节和喜好的主题。 Key patterns: Which season do you like best?; Why?",
+      "focus_vocabulary": [
+        "season",
+        "autumn",
+        "colours",
+        "pretty",
+        "winter",
+        "spring"
+      ],
+      "core_patterns": [
+        "Which season do you like best?",
+        "Why?",
+        "Because the colours are pretty!",
+        "Winter. I can sleep all day. How about you?",
+        "Autumn.",
+        "I like spring best. There are beautiful flowers everywhere."
+      ],
+      "allowed_answer_scope": [
+        "Autumn.",
+        "Because the colours are pretty!",
+        "I like spring best. There are beautiful flowers everywhere."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word season?",
+        "Can you say: Which season do you like best?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U2-P12-D1-goal"
+      ],
+      "branchable_topics": [
+        "season",
+        "autumn",
+        "colours",
+        "pretty",
+        "winter",
+        "spring",
+        "My favourite season",
+        "Unit Two"
+      ],
+      "return_anchors": [
+        "Which season do you like best?",
+        "Why?",
+        "Because the colours are pretty!"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P13-D1",
+      "page_uid": "TB-G5S2U2-P13",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U2-P13-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "在教室里，奥利弗向怀特老师展示了一张关于儿童节的画，并解释说他最喜欢夏天是因为儿童节。老师接着询问他在夏天经常做的活动。 Key patterns: I like summer best because of Children's Day.; What do you often do in summer?",
+      "focus_vocabulary": [
+        "summer",
+        "Children's Day",
+        "go swimming"
+      ],
+      "core_patterns": [
+        "I like summer best because of Children's Day.",
+        "What do you often do in summer?",
+        "Look at my picture, Miss White. I like summer best because of Children's Day.",
+        "I often go swimming."
+      ],
+      "allowed_answer_scope": [
+        "Look at my picture, Miss White. I like summer best because of Children's Day.",
+        "I often go swimming."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word summer?",
+        "Can you say: I like summer best because of Children's Day."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U2-P13-D1-goal"
+      ],
+      "branchable_topics": [
+        "summer",
+        "Children's Day",
+        "go swimming",
+        "My favourite season"
+      ],
+      "return_anchors": [
+        "I like summer best because of Children's Day.",
+        "What do you often do in summer?",
+        "Look at my picture, Miss White. I like summer best because of Children's Day."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P14-D1",
+      "page_uid": "TB-G5S2U2-P14",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U2-P14-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，根据对话内容判断今天的天气，并从词汇瓶中选择正确的描述填空。 Key patterns: What is the weather like today? Listen and write.",
+      "focus_vocabulary": [
+        "rainy and cold",
+        "windy and cold",
+        "sunny and warm"
+      ],
+      "core_patterns": [
+        "What is the weather like today? Listen and write."
+      ],
+      "allowed_answer_scope": [
+        "sunny and warm"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word rainy and cold?",
+        "Can you say: What is the weather like today? Listen and write."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U2-P14-D1-goal"
+      ],
+      "branchable_topics": [
+        "rainy and cold",
+        "windy and cold",
+        "sunny and warm",
+        "Favourite Seasons",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "What is the weather like today? Listen and write."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P14-D2",
+      "page_uid": "TB-G5S2U2-P14",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U2-P14-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "在美术课上，琼斯老师播放了《四季》这首曲子，并引导学生们讨论自己最喜欢的季节，然后准备画出季节的图画。 Key patterns: Which season do you like best?; Do you like the music, children?",
+      "focus_vocabulary": [
+        "beautiful",
+        "The Four Seasons",
+        "draw",
+        "winter",
+        "snow",
+        "spring",
+        "pretty"
+      ],
+      "core_patterns": [
+        "Which season do you like best?",
+        "Do you like the music, children?",
+        "Yes. It's very beautiful. What is it?",
+        "The Four Seasons. Today we'll draw the seasons. Which season do you like best, Mike?",
+        "I like snow, too. Which season do you like best, Wu Binbin?",
+        "Winter. I like snow."
+      ],
+      "allowed_answer_scope": [
+        "Winter. I like snow.",
+        "Spring. It's pretty.",
+        "Yes, it is."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word beautiful?",
+        "Can you say: Which season do you like best?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U2-P14-D3",
+        "TB-G5S2U2-P14-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U2-P14-D2-goal"
+      ],
+      "branchable_topics": [
+        "beautiful",
+        "The Four Seasons",
+        "draw",
+        "winter",
+        "snow",
+        "spring",
+        "pretty",
+        "Favourite Seasons"
+      ],
+      "return_anchors": [
+        "Which season do you like best?",
+        "Do you like the music, children?",
+        "Yes. It's very beautiful. What is it?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P14-D3",
+      "page_uid": "TB-G5S2U2-P14",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S2U2-P14-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "一个调查活动。学生需要询问同伴最喜欢的季节，并在表格中做标记。小动物们提供了一个问答示例。 Key patterns: Survey classmates about their favourite season.; Which season do you like best?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Survey classmates about their favourite season.",
+        "Which season do you like best?",
+        "Winter."
+      ],
+      "allowed_answer_scope": [
+        "Winter."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Survey classmates about their favourite season."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U2-P14-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U2-P14-D3-goal"
+      ],
+      "branchable_topics": [
+        "Favourite Seasons",
+        "Which season do you like best? Ask and answer."
+      ],
+      "return_anchors": [
+        "Survey classmates about their favourite season.",
+        "Which season do you like best?",
+        "Winter."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P15-D1",
+      "page_uid": "TB-G5S2U2-P15",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S2U2-P15-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "老师在课堂上展示了四季的图片，并向学生提问他们最喜欢的季节，以此引出四个季节的单词。 Key patterns: Which season do you like best?; Summer. I can go swimming every day!",
+      "focus_vocabulary": [
+        "spring",
+        "summer",
+        "autumn",
+        "winter"
+      ],
+      "core_patterns": [
+        "Which season do you like best?",
+        "Summer. I can go swimming every day!"
+      ],
+      "allowed_answer_scope": [
+        "Summer. I can go swimming every day!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word spring?",
+        "Can you say: Which season do you like best?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U2-P15-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U2-P15-D1-goal"
+      ],
+      "branchable_topics": [
+        "spring",
+        "summer",
+        "autumn",
+        "winter",
+        "The Four Seasons",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Which season do you like best?",
+        "Summer. I can go swimming every day!"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P15-D2",
+      "page_uid": "TB-G5S2U2-P15",
+      "page_type": "vocabulary",
+      "block_type": "practice_match",
+      "source_refs": [
+        "TB-G5S2U2-P15-D2"
+      ],
+      "teaching_goal": "Work on the practice match activity.",
+      "teaching_summary": "阅读四句描述不同季节特点的句子，并将它们与对应的季节图片进行匹配。 Key patterns: Read and match",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Read and match"
+      ],
+      "allowed_answer_scope": [
+        "Picture of a spring scene with flowers and butterflies.",
+        "Picture of a summer pond with bright sunlight.",
+        "Picture of a farmer harvesting in a golden field.",
+        "Picture of a winter scene with a snowman and snow-covered house."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Read and match"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U2-P15-D2-goal"
+      ],
+      "branchable_topics": [
+        "The Four Seasons",
+        "Read and match"
+      ],
+      "return_anchors": [
+        "Read and match"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P16-D1",
+      "page_uid": "TB-G5S2U2-P16",
+      "page_type": "phonics",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G5S2U2-P16-D1"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "学习辅音丛'br'、'gr'以及字母'r'在单词中的发音。 Key patterns: Learn the consonant blend 'br' as in 'brown'.; Learn the consonant blend 'gr' as in 'green'.",
+      "focus_vocabulary": [
+        "brown",
+        "library",
+        "brother",
+        "umbrella",
+        "green",
+        "grapes",
+        "grandpa",
+        "grow"
+      ],
+      "core_patterns": [
+        "Learn the consonant blend 'br' as in 'brown'.",
+        "Learn the consonant blend 'gr' as in 'green'.",
+        "Learn the sound of 'r' in words like 'library' and 'umbrella'."
+      ],
+      "allowed_answer_scope": [
+        "brown",
+        "library",
+        "brother",
+        "umbrella",
+        "green",
+        "grapes"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word brown?",
+        "Can you say: Learn the consonant blend 'br' as in 'brown'."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U2-P16-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U2-P16-D1-goal"
+      ],
+      "branchable_topics": [
+        "brown",
+        "library",
+        "brother",
+        "umbrella",
+        "green",
+        "grapes",
+        "grandpa",
+        "grow"
+      ],
+      "return_anchors": [
+        "Learn the consonant blend 'br' as in 'brown'.",
+        "Learn the consonant blend 'gr' as in 'green'.",
+        "Learn the sound of 'r' in words like 'library' and 'umbrella'."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P16-D2",
+      "page_uid": "TB-G5S2U2-P16",
+      "page_type": "phonics",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G5S2U2-P16-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "根据单词中的发音，将词库中的单词分类填写到'br'和'gr'两个组别中。 Key patterns: Read and group.",
+      "focus_vocabulary": [
+        "green",
+        "brown",
+        "grow",
+        "grandma",
+        "breakfast",
+        "brother",
+        "grass",
+        "grapes"
+      ],
+      "core_patterns": [
+        "Read and group."
+      ],
+      "allowed_answer_scope": [
+        "brown, brother, breakfast, library",
+        "green, grow, grandma, grass, grapes, great"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word green?",
+        "Can you say: Read and group."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U2-P16-D1",
+        "TB-G5S2U2-P16-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U2-P16-D2-goal"
+      ],
+      "branchable_topics": [
+        "green",
+        "brown",
+        "grow",
+        "grandma",
+        "breakfast",
+        "brother",
+        "grass",
+        "grapes"
+      ],
+      "return_anchors": [
+        "Read and group."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P16-D3",
+      "page_uid": "TB-G5S2U2-P16",
+      "page_type": "phonics",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S2U2-P16-D3"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "从给定的词库中选择合适的词语，组成通顺的句子并写下来。 Key patterns: Choose, write and say.",
+      "focus_vocabulary": [
+        "Grandpa",
+        "Grandma",
+        "grows",
+        "green",
+        "yellow",
+        "brown",
+        "purple",
+        "grapes"
+      ],
+      "core_patterns": [
+        "Choose, write and say."
+      ],
+      "allowed_answer_scope": [
+        "Grandpa grows green grapes.",
+        "Grandma grows purple grapes."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word Grandpa?",
+        "Can you say: Choose, write and say."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U2-P16-D3-goal"
+      ],
+      "branchable_topics": [
+        "Grandpa",
+        "Grandma",
+        "grows",
+        "green",
+        "yellow",
+        "brown",
+        "purple",
+        "grapes"
+      ],
+      "return_anchors": [
+        "Choose, write and say."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P17-D1",
+      "page_uid": "TB-G5S2U2-P17",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U2-P17-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听一段张鹏和约翰的对话，他们正在看一些图片。根据对话内容，判断哪一张是张鹏的图片并勾选。 Key patterns: Zhang Peng and John are looking at some pictures. Which is Zhang Peng's picture? Listen and tick.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Zhang Peng and John are looking at some pictures. Which is Zhang Peng's picture? Listen and tick."
+      ],
+      "allowed_answer_scope": [
+        "Picture 2"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Zhang Peng and John are looking at some pictures. Which is Zhang Peng's picture? Listen and tick."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U2-P17-D1-goal"
+      ],
+      "branchable_topics": [
+        "Favourite Seasons",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Zhang Peng and John are looking at some pictures. Which is Zhang Peng's picture? Listen and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P17-D2",
+      "page_uid": "TB-G5S2U2-P17",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U2-P17-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "艾米向怀特老师展示她画的秋天图画，并与老师讨论了各自最喜欢的季节以及原因。 Key patterns: Which season do you like best?; Why?",
+      "focus_vocabulary": [
+        "pretty",
+        "autumn",
+        "beautiful",
+        "summer",
+        "summer vacation"
+      ],
+      "core_patterns": [
+        "Which season do you like best?",
+        "Why?",
+        "Because...",
+        "Yes. I like autumn best. The weather is good and the colours are beautiful! Which season do you like best, Miss White?",
+        "Hello, Miss White. Look at my picture.",
+        "Good job! I like the trees. The colours are very pretty!"
+      ],
+      "allowed_answer_scope": [
+        "Hello, Miss White. Look at my picture.",
+        "Good job! I like the trees. The colours are very pretty!",
+        "Summer.",
+        "Because I like summer vacation!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word pretty?",
+        "Can you say: Which season do you like best?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U2-P17-D3",
+        "TB-G5S2U2-P17-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U2-P17-D2-goal"
+      ],
+      "branchable_topics": [
+        "pretty",
+        "autumn",
+        "beautiful",
+        "summer",
+        "summer vacation",
+        "Favourite Seasons",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "Which season do you like best?",
+        "Why?",
+        "Because..."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P17-D3",
+      "page_uid": "TB-G5S2U2-P17",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S2U2-P17-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "提供一个对话框架，引导学生练习询问和回答关于最喜欢的季节及其原因。 Key patterns: Which season do you like best?; Why?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Which season do you like best?",
+        "Why?",
+        "I like spring best.",
+        "Because there are pretty flowers."
+      ],
+      "allowed_answer_scope": [
+        "I like spring best.",
+        "Because there are pretty flowers."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Which season do you like best?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U2-P17-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U2-P17-D3-goal"
+      ],
+      "branchable_topics": [
+        "Favourite Seasons",
+        "Ask and answer."
+      ],
+      "return_anchors": [
+        "Which season do you like best?",
+        "Why?",
+        "I like spring best."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P18-D1",
+      "page_uid": "TB-G5S2U2-P18",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S2U2-P18-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "通过图片展示了四种典型的季节性活动，并配有问答对话，练习讨论喜欢的季节及相关活动。 Key patterns: Which season do you like best?; I like spring best. There are beautiful flowers everywhere. I often go on a picnic with my family.",
+      "focus_vocabulary": [
+        "go on a picnic",
+        "go swimming",
+        "pick apples",
+        "make a snowman"
+      ],
+      "core_patterns": [
+        "Which season do you like best?",
+        "I like spring best. There are beautiful flowers everywhere. I often go on a picnic with my family."
+      ],
+      "allowed_answer_scope": [
+        "I like spring best. There are beautiful flowers everywhere. I often go on a picnic with my family."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word go on a picnic?",
+        "Can you say: Which season do you like best?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U2-P18-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U2-P18-D1-goal"
+      ],
+      "branchable_topics": [
+        "go on a picnic",
+        "go swimming",
+        "pick apples",
+        "make a snowman",
+        "Seasonal Activities",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Which season do you like best?",
+        "I like spring best. There are beautiful flowers everywhere. I often go on a picnic with my family."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P18-D2",
+      "page_uid": "TB-G5S2U2-P18",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S2U2-P18-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "提供一个词汇库和一段示范对话，引导学生练习询问和回答关于最喜欢的季节及在该季节常做的活动。 Key patterns: Which season do you like best?; Winter. I often play in the snow.",
+      "focus_vocabulary": [
+        "go on a picnic",
+        "go swimming",
+        "pick apples",
+        "make a snowman",
+        "play in the snow",
+        "plant flowers",
+        "eat ice cream"
+      ],
+      "core_patterns": [
+        "Which season do you like best?",
+        "Winter. I often play in the snow."
+      ],
+      "allowed_answer_scope": [
+        "Winter. I often play in the snow."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word go on a picnic?",
+        "Can you say: Which season do you like best?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U2-P18-D2-goal"
+      ],
+      "branchable_topics": [
+        "go on a picnic",
+        "go swimming",
+        "pick apples",
+        "make a snowman",
+        "play in the snow",
+        "plant flowers",
+        "eat ice cream",
+        "Seasonal Activities"
+      ],
+      "return_anchors": [
+        "Which season do you like best?",
+        "Winter. I often play in the snow."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P19-D1",
+      "page_uid": "TB-G5S2U2-P19",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S2U2-P19-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "机器人罗宾通过四张邮票般的图片，分别描述了春夏秋冬四个季节的特点以及它喜欢（或不喜欢）的原因。 Key patterns: Look at the green trees and pink flowers.; I like spring because there are beautiful flowers everywhere.",
+      "focus_vocabulary": [
+        "spring",
+        "summer",
+        "fall",
+        "winter",
+        "beautiful",
+        "swim",
+        "lovely",
+        "leaves"
+      ],
+      "core_patterns": [
+        "Look at the green trees and pink flowers.",
+        "I like spring because there are beautiful flowers everywhere.",
+        "The weather is hot, hot, hot!",
+        "I like summer, but I can't swim.",
+        "What lovely colours! The leaves fall and fall and fall. I love fall!",
+        "Wow! I want to paint a picture, too!"
+      ],
+      "allowed_answer_scope": [
+        "spring",
+        "summer",
+        "fall",
+        "winter",
+        "beautiful",
+        "swim"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word spring?",
+        "Can you say: Look at the green trees and pink flowers."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U2-P19-D2",
+        "TB-G5S2U2-P19-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U2-P19-D1-goal"
+      ],
+      "branchable_topics": [
+        "spring",
+        "summer",
+        "fall",
+        "winter",
+        "beautiful",
+        "swim",
+        "lovely",
+        "leaves"
+      ],
+      "return_anchors": [
+        "Look at the green trees and pink flowers.",
+        "I like spring because there are beautiful flowers everywhere.",
+        "The weather is hot, hot, hot!"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P19-D2",
+      "page_uid": "TB-G5S2U2-P19",
+      "page_type": "reading",
+      "block_type": "practice_choice",
+      "source_refs": [
+        "TB-G5S2U2-P19-D2"
+      ],
+      "teaching_goal": "Work on the practice choice activity.",
+      "teaching_summary": "根据上面的阅读内容，回答两个选择题。 Key patterns: Read and tick.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Read and tick."
+      ],
+      "allowed_answer_scope": [
+        "autumn",
+        "All the four seasons."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Read and tick."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U2-P19-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U2-P19-D2-goal"
+      ],
+      "branchable_topics": [
+        "Describing seasons",
+        "Read and tick."
+      ],
+      "return_anchors": [
+        "Read and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P19-D3",
+      "page_uid": "TB-G5S2U2-P19",
+      "page_type": "reading",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G5S2U2-P19-D3"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "一个个性化的写作练习，要求学生写出自己最喜欢的季节以及原因。 Key patterns: Which season do you like best? Why? Complete the sentence.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Which season do you like best? Why? Complete the sentence."
+      ],
+      "allowed_answer_scope": [
+        "Which season do you like best? Why? Complete the sentence."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Which season do you like best? Why? Complete the sentence."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U2-P19-D3-goal"
+      ],
+      "branchable_topics": [
+        "Describing seasons",
+        "Which season do you like best? Why? Complete the sentence."
+      ],
+      "return_anchors": [
+        "Which season do you like best? Why? Complete the sentence."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P20-D1",
+      "page_uid": "TB-G5S2U2-P20",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U2-P20-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听一段男孩和女孩的对话，并根据内容填写对话中缺失的部分。 Key patterns: Listen and write.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and write."
+      ],
+      "allowed_answer_scope": [
+        "Which season do you like best?",
+        "I like winter. It's beautiful.",
+        "Do you like summer?",
+        "No, I don't. It's too hot.",
+        "Autumn."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and write."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U2-P20-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U2-P20-D1-goal"
+      ],
+      "branchable_topics": [
+        "Unit 2 Check & Wrap-up",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Listen and write."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P20-D2",
+      "page_uid": "TB-G5S2U2-P20",
+      "page_type": "listening",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G5S2U2-P20-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "总结和巩固疑问词的使用。学生需要根据问句和答句的内容，从旁边的词汇表中选择正确的疑问词填空。 Key patterns: Where is \"do\"?",
+      "focus_vocabulary": [
+        "what",
+        "when",
+        "where",
+        "which",
+        "why"
+      ],
+      "core_patterns": [
+        "Where is \"do\"?"
+      ],
+      "allowed_answer_scope": [
+        "Why",
+        "Which",
+        "When",
+        "What",
+        "Where"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word what?",
+        "Can you say: Where is \"do\"?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U2-P20-D2-goal"
+      ],
+      "branchable_topics": [
+        "what",
+        "when",
+        "where",
+        "which",
+        "why",
+        "Unit 2 Check & Wrap-up",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Where is \"do\"?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P21-D1",
+      "page_uid": "TB-G5S2U2-P21",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S2U2-P21-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一个连环画故事。来自澳大利亚的考拉来过圣诞节。兹普和祖姆对考拉在圣诞节去海滩游泳感到惊讶，考拉解释说在南半球的澳大利亚，圣诞节是在夏天。最后，它们一起在雪地里堆雪人，体验了一个“白色圣诞节”。 Key patterns: Understand that seasons are opposite in the Northern and Southern Hemispheres.; What do you usually do on Christmas Day?",
+      "focus_vocabulary": [
+        "Merry Christmas",
+        "Christmas Day",
+        "go to the beach",
+        "swim in the sea",
+        "Australia",
+        "never",
+        "snow",
+        "sunny days"
+      ],
+      "core_patterns": [
+        "Understand that seasons are opposite in the Northern and Southern Hemispheres.",
+        "What do you usually do on Christmas Day?",
+        "Which season do you like best?",
+        "Welcome!",
+        "Thank you. Merry Christmas!",
+        "Merry Christmas!"
+      ],
+      "allowed_answer_scope": [
+        "Welcome!",
+        "Thank you. Merry Christmas!",
+        "Merry Christmas!",
+        "I usually go to the beach and swim in the sea!",
+        "Christmas is in summer in Australia, so we never have snow for Christmas.",
+        "Summer. I like sunny days."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word Merry Christmas?",
+        "Can you say: Understand that seasons are opposite in the Northern and Southern Hemispheres."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U2-P21-D1-goal"
+      ],
+      "branchable_topics": [
+        "Merry Christmas",
+        "Christmas Day",
+        "go to the beach",
+        "swim in the sea",
+        "Australia",
+        "never",
+        "snow",
+        "sunny days"
+      ],
+      "return_anchors": [
+        "Understand that seasons are opposite in the Northern and Southern Hemispheres.",
+        "What do you usually do on Christmas Day?",
+        "Which season do you like best?"
+      ]
+    }
+  ]
+}

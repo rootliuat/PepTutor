@@ -1,0 +1,3255 @@
+{
+  "pilot_id": "g6s1u2-general-v1",
+  "scope": {
+    "grade": "G6",
+    "semester": "S1",
+    "unit": "U2",
+    "pages": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/03.六年级上册语料.json",
+    "app/knowledge/raw/07.六年级上册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 6 · Volume 1), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 6 · Volume 1), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 23,
+    "source_kind": "textbook_source_json",
+    "source_format": "json"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 2",
+      "word": "on foot",
+      "chinese": "步行",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U2-P13-D1",
+        "TB-G6S1U2-P14-D2",
+        "TB-G6S1U2-P15-D1",
+        "TB-G6S1U2-P18-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "by",
+      "phonetic": "/baɪ/",
+      "chinese": "（表示方式）乘",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U2-P14-D1",
+        "TB-G6S1U2-P14-D2",
+        "TB-G6S1U2-P15-D1",
+        "TB-G6S1U2-P18-D2",
+        "TB-G6S1U2-P20-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "bus",
+      "phonetic": "/bʌs/",
+      "chinese": "公共汽车",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U2-P14-D1",
+        "TB-G6S1U2-P14-D2",
+        "TB-G6S1U2-P15-D1",
+        "TB-G6S1U2-P20-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "plane",
+      "phonetic": "/pleɪn/",
+      "chinese": "飞机",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U2-P15-D1",
+        "TB-G6S1U2-P18-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "taxi",
+      "phonetic": "/'tæksi/",
+      "chinese": "出租汽车",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U2-P15-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "ship",
+      "phonetic": "/ʃɪp/",
+      "chinese": "（大）船",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U2-P15-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "subway",
+      "phonetic": "/'sʌbweɪ/",
+      "chinese": "地铁",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U2-P12-D1",
+        "TB-G6S1U2-P15-D1",
+        "TB-G6S1U2-P16-D3",
+        "TB-G6S1U2-P18-D2",
+        "TB-G6S1U2-P19-D2",
+        "TB-G6S1U2-P20-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "train",
+      "phonetic": "/treɪn/",
+      "chinese": "火车",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U2-P15-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "slow",
+      "phonetic": "/sləʊ/",
+      "chinese": "（使）放慢速度；慢的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U2-P17-D1",
+        "TB-G6S1U2-P17-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "down",
+      "phonetic": "/daʊn/",
+      "chinese": "减少；降低",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U2-P17-D1",
+        "TB-G6S1U2-P17-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "slow down",
+      "chinese": "慢下来",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U2-P17-D1",
+        "TB-G6S1U2-P17-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "stop",
+      "phonetic": "/stɒp/",
+      "chinese": "停下",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U2-P16-D3",
+        "TB-G6S1U2-P17-D1",
+        "TB-G6S1U2-P17-D2",
+        "TB-G6S1U2-P19-D4"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "Mrs",
+      "phonetic": "/'mɪsɪz/",
+      "chinese": "夫人",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "early",
+      "phonetic": "/'ɜːli/",
+      "chinese": "早到的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "helmet",
+      "phonetic": "/'helmɪt/",
+      "chinese": "头盔",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U2-P16-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "must",
+      "phonetic": "/məst; mʌst/",
+      "chinese": "必须",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "wear",
+      "phonetic": "/weə(r)/",
+      "chinese": "戴",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U2-P16-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "attention",
+      "phonetic": "/ə'tenʃn/",
+      "chinese": "注意",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U2-P12-D1",
+        "TB-G6S1U2-P16-D2",
+        "TB-G6S1U2-P19-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "pay attention to",
+      "chinese": "注意",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U2-P12-D1",
+        "TB-G6S1U2-P16-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "traffic",
+      "phonetic": "/'træfɪk/",
+      "chinese": "交通",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U2-P12-D1",
+        "TB-G6S1U2-P16-D2",
+        "TB-G6S1U2-P17-D1",
+        "TB-G6S1U2-P19-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "traffic lights",
+      "chinese": "交通信号灯",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U2-P12-D1",
+        "TB-G6S1U2-P16-D2",
+        "TB-G6S1U2-P17-D1",
+        "TB-G6S1U2-P19-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "Munich",
+      "phonetic": "/'mjuːnɪk/",
+      "chinese": "慕尼黑（德国城市）",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U2-P18-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "Germany",
+      "phonetic": "/'dʒɜːməni/",
+      "chinese": "德国",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U2-P18-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "Alaska",
+      "phonetic": "/ə'læskə/",
+      "chinese": "阿拉斯加州（美国州名）",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U2-P18-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "sled",
+      "phonetic": "/sled/",
+      "chinese": "雪橇",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U2-P18-D2",
+        "TB-G6S1U2-P19-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "fast",
+      "phonetic": "/fɑːst/",
+      "chinese": "快",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "ferry",
+      "phonetic": "/'feri/",
+      "chinese": "轮渡",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U2-P18-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "Papa Westray",
+      "phonetic": "/ˌpɑːpə 'westreɪ/",
+      "chinese": "帕帕韦斯特雷岛",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "Scotland",
+      "phonetic": "/'skɒtlənd/",
+      "chinese": "苏格兰",
+      "emphasized": false,
+      "linked_block_uids": []
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G6S1U2-P12-D1-goal",
+      "block_uid": "TB-G6S1U2-P12-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P13-D1-goal",
+      "block_uid": "TB-G6S1U2-P13-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P14-D1-goal",
+      "block_uid": "TB-G6S1U2-P14-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P14-D2-goal",
+      "block_uid": "TB-G6S1U2-P14-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P14-D3-goal",
+      "block_uid": "TB-G6S1U2-P14-D3",
+      "category": "practice_speaking",
+      "text": "Work on the practice speaking activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P14-D4-goal",
+      "block_uid": "TB-G6S1U2-P14-D4",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P15-D1-goal",
+      "block_uid": "TB-G6S1U2-P15-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P15-D2-goal",
+      "block_uid": "TB-G6S1U2-P15-D2",
+      "category": "practice_speaking",
+      "text": "Work on the practice speaking activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P16-D1-goal",
+      "block_uid": "TB-G6S1U2-P16-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P16-D2-goal",
+      "block_uid": "TB-G6S1U2-P16-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P16-D3-goal",
+      "block_uid": "TB-G6S1U2-P16-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P17-D1-goal",
+      "block_uid": "TB-G6S1U2-P17-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P17-D2-goal",
+      "block_uid": "TB-G6S1U2-P17-D2",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P18-D1-goal",
+      "block_uid": "TB-G6S1U2-P18-D1",
+      "category": "practice_speaking",
+      "text": "Work on the practice speaking activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P18-D2-goal",
+      "block_uid": "TB-G6S1U2-P18-D2",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P18-D3-goal",
+      "block_uid": "TB-G6S1U2-P18-D3",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P19-D1-goal",
+      "block_uid": "TB-G6S1U2-P19-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P19-D2-goal",
+      "block_uid": "TB-G6S1U2-P19-D2",
+      "category": "grammar_point",
+      "text": "Work on the grammar point activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P19-D3-goal",
+      "block_uid": "TB-G6S1U2-P19-D3",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P19-D4-goal",
+      "block_uid": "TB-G6S1U2-P19-D4",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P20-D1-goal",
+      "block_uid": "TB-G6S1U2-P20-D1",
+      "category": "assessment_quiz",
+      "text": "Check whether the learner can complete the unit review task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P20-D2-goal",
+      "block_uid": "TB-G6S1U2-P20-D2",
+      "category": "practice_multiple_choice",
+      "text": "Work on the practice multiple choice activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U2-P21-D1-goal",
+      "block_uid": "TB-G6S1U2-P21-D1",
+      "category": "story_time",
+      "text": "Read and retell the key story events.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-alaska",
+      "atom_type": "word",
+      "text": "Alaska",
+      "gloss": "阿拉斯加州（美国州名）",
+      "linked_blocks": [
+        "TB-G6S1U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-attention",
+      "atom_type": "word",
+      "text": "attention",
+      "gloss": "注意",
+      "linked_blocks": [
+        "TB-G6S1U2-P12-D1",
+        "TB-G6S1U2-P16-D2",
+        "TB-G6S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-bike",
+      "atom_type": "word",
+      "text": "bike",
+      "gloss": "自行车",
+      "linked_blocks": [
+        "TB-G6S1U2-P13-D1",
+        "TB-G6S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-bus",
+      "atom_type": "word",
+      "text": "bus",
+      "gloss": "公共汽车",
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D1",
+        "TB-G6S1U2-P14-D2",
+        "TB-G6S1U2-P15-D1",
+        "TB-G6S1U2-P20-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-by",
+      "atom_type": "word",
+      "text": "by",
+      "gloss": "（表示方式）乘",
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D1",
+        "TB-G6S1U2-P14-D2",
+        "TB-G6S1U2-P15-D1",
+        "TB-G6S1U2-P18-D2",
+        "TB-G6S1U2-P20-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-by-bike",
+      "atom_type": "word",
+      "text": "by bike",
+      "gloss": "骑自行车",
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-by-bus",
+      "atom_type": "word",
+      "text": "by bus",
+      "gloss": "乘公共汽车",
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D1",
+        "TB-G6S1U2-P14-D2",
+        "TB-G6S1U2-P15-D1",
+        "TB-G6S1U2-P20-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-by-car",
+      "atom_type": "word",
+      "text": "by car",
+      "gloss": "乘汽车",
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-by-ferry",
+      "atom_type": "word",
+      "text": "by ferry",
+      "gloss": "乘轮渡",
+      "linked_blocks": [
+        "TB-G6S1U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-by-plane",
+      "atom_type": "word",
+      "text": "by plane",
+      "gloss": "乘飞机",
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D1",
+        "TB-G6S1U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-by-ship",
+      "atom_type": "word",
+      "text": "by ship",
+      "gloss": "乘轮船",
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-by-sled",
+      "atom_type": "word",
+      "text": "by sled",
+      "gloss": "乘雪橇",
+      "linked_blocks": [
+        "TB-G6S1U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-by-subway",
+      "atom_type": "word",
+      "text": "by subway",
+      "gloss": "乘地铁",
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D1",
+        "TB-G6S1U2-P18-D2",
+        "TB-G6S1U2-P20-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-by-taxi",
+      "atom_type": "word",
+      "text": "by taxi",
+      "gloss": "乘出租车",
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-by-train",
+      "atom_type": "word",
+      "text": "by train",
+      "gloss": "乘火车",
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-china",
+      "atom_type": "word",
+      "text": "China",
+      "gloss": "中国",
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-chopsticks",
+      "atom_type": "word",
+      "text": "chopsticks",
+      "gloss": "筷子",
+      "linked_blocks": [
+        "TB-G6S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-cinema",
+      "atom_type": "word",
+      "text": "cinema",
+      "gloss": "电影院",
+      "linked_blocks": [
+        "TB-G6S1U2-P20-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-come",
+      "atom_type": "word",
+      "text": "come",
+      "gloss": "来",
+      "linked_blocks": [
+        "TB-G6S1U2-P13-D1",
+        "TB-G6S1U2-P19-D4",
+        "TB-G6S1U2-P20-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-come-and-have-a-look",
+      "atom_type": "word",
+      "text": "come and have a look",
+      "gloss": "来看一看",
+      "linked_blocks": [
+        "TB-G6S1U2-P19-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-come-to-school",
+      "atom_type": "word",
+      "text": "come to school",
+      "gloss": "来上学",
+      "linked_blocks": [
+        "TB-G6S1U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-cross-the-road",
+      "atom_type": "word",
+      "text": "cross the road",
+      "gloss": "横穿马路",
+      "linked_blocks": [
+        "TB-G6S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-double-decker",
+      "atom_type": "word",
+      "text": "double-decker",
+      "gloss": "双层公共汽车",
+      "linked_blocks": [
+        "TB-G6S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-down",
+      "atom_type": "word",
+      "text": "down",
+      "gloss": "减少；降低",
+      "linked_blocks": [
+        "TB-G6S1U2-P17-D1",
+        "TB-G6S1U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-early",
+      "atom_type": "word",
+      "text": "early",
+      "gloss": "早到的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-exercise",
+      "atom_type": "word",
+      "text": "exercise",
+      "gloss": "锻炼",
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-fast",
+      "atom_type": "word",
+      "text": "fast",
+      "gloss": "快",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-ferry",
+      "atom_type": "word",
+      "text": "ferry",
+      "gloss": "轮渡",
+      "linked_blocks": [
+        "TB-G6S1U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-germany",
+      "atom_type": "word",
+      "text": "Germany",
+      "gloss": "德国",
+      "linked_blocks": [
+        "TB-G6S1U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-go",
+      "atom_type": "word",
+      "text": "go",
+      "gloss": "走",
+      "linked_blocks": [
+        "TB-G6S1U2-P17-D1",
+        "TB-G6S1U2-P17-D2",
+        "TB-G6S1U2-P20-D1",
+        "TB-G6S1U2-P20-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-go-home",
+      "atom_type": "word",
+      "text": "go home",
+      "gloss": "回家",
+      "linked_blocks": [
+        "TB-G6S1U2-P20-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-go-to-the-park",
+      "atom_type": "word",
+      "text": "go to the park",
+      "gloss": "去公园",
+      "linked_blocks": [
+        "TB-G6S1U2-P20-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-go-to-work",
+      "atom_type": "word",
+      "text": "go to work",
+      "gloss": "去上班",
+      "linked_blocks": [
+        "TB-G6S1U2-P20-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-helmet",
+      "atom_type": "word",
+      "text": "helmet",
+      "gloss": "头盔",
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-look-left",
+      "atom_type": "word",
+      "text": "look left",
+      "gloss": "向左看",
+      "linked_blocks": [
+        "TB-G6S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-look-right",
+      "atom_type": "word",
+      "text": "look right",
+      "gloss": "向右看",
+      "linked_blocks": [
+        "TB-G6S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-mind-the-gap",
+      "atom_type": "word",
+      "text": "mind the gap",
+      "gloss": "小心空隙",
+      "linked_blocks": [
+        "TB-G6S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-mrs",
+      "atom_type": "word",
+      "text": "Mrs",
+      "gloss": "夫人",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-munich",
+      "atom_type": "word",
+      "text": "Munich",
+      "gloss": "慕尼黑（德国城市）",
+      "linked_blocks": [
+        "TB-G6S1U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-museum",
+      "atom_type": "word",
+      "text": "museum",
+      "gloss": "博物馆",
+      "linked_blocks": [
+        "TB-G6S1U2-P20-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-must",
+      "atom_type": "word",
+      "text": "must",
+      "gloss": "必须",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-often",
+      "atom_type": "word",
+      "text": "often",
+      "gloss": "经常",
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-on-foot",
+      "atom_type": "word",
+      "text": "on foot",
+      "gloss": "步行",
+      "linked_blocks": [
+        "TB-G6S1U2-P13-D1",
+        "TB-G6S1U2-P14-D2",
+        "TB-G6S1U2-P15-D1",
+        "TB-G6S1U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-papa-westray",
+      "atom_type": "word",
+      "text": "Papa Westray",
+      "gloss": "帕帕韦斯特雷岛",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-park",
+      "atom_type": "word",
+      "text": "park",
+      "gloss": "公园",
+      "linked_blocks": [
+        "TB-G6S1U2-P20-D1",
+        "TB-G6S1U2-P20-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pay-attention",
+      "atom_type": "word",
+      "text": "pay attention",
+      "gloss": "注意",
+      "linked_blocks": [
+        "TB-G6S1U2-P12-D1",
+        "TB-G6S1U2-P16-D2",
+        "TB-G6S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pay-attention-to",
+      "atom_type": "word",
+      "text": "pay attention to",
+      "gloss": "注意",
+      "linked_blocks": [
+        "TB-G6S1U2-P12-D1",
+        "TB-G6S1U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pictures-of",
+      "atom_type": "word",
+      "text": "pictures of",
+      "gloss": "……的照片",
+      "linked_blocks": [
+        "TB-G6S1U2-P19-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-plane",
+      "atom_type": "word",
+      "text": "plane",
+      "gloss": "飞机",
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D1",
+        "TB-G6S1U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-poster",
+      "atom_type": "word",
+      "text": "poster",
+      "gloss": "海报",
+      "linked_blocks": [
+        "TB-G6S1U2-P19-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-red-light",
+      "atom_type": "word",
+      "text": "red light",
+      "gloss": "红灯",
+      "linked_blocks": [
+        "TB-G6S1U2-P12-D1",
+        "TB-G6S1U2-P19-D2",
+        "TB-G6S1U2-P19-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-road",
+      "atom_type": "word",
+      "text": "road",
+      "gloss": "马路",
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D3",
+        "TB-G6S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-scotland",
+      "atom_type": "word",
+      "text": "Scotland",
+      "gloss": "苏格兰",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-ship",
+      "atom_type": "word",
+      "text": "ship",
+      "gloss": "（大）船",
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sign",
+      "atom_type": "word",
+      "text": "sign",
+      "gloss": "标志",
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-sled",
+      "atom_type": "word",
+      "text": "sled",
+      "gloss": "雪橇",
+      "linked_blocks": [
+        "TB-G6S1U2-P18-D2",
+        "TB-G6S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-slow",
+      "atom_type": "word",
+      "text": "slow",
+      "gloss": "（使）放慢速度；慢的",
+      "linked_blocks": [
+        "TB-G6S1U2-P17-D1",
+        "TB-G6S1U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-slow-down",
+      "atom_type": "word",
+      "text": "slow down",
+      "gloss": "慢下来",
+      "linked_blocks": [
+        "TB-G6S1U2-P17-D1",
+        "TB-G6S1U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-sometimes",
+      "atom_type": "word",
+      "text": "sometimes",
+      "gloss": "有时",
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-sports-meet",
+      "atom_type": "word",
+      "text": "sports meet",
+      "gloss": "运动会",
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-stop",
+      "atom_type": "word",
+      "text": "stop",
+      "gloss": "停下",
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D3",
+        "TB-G6S1U2-P17-D1",
+        "TB-G6S1U2-P17-D2",
+        "TB-G6S1U2-P19-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-stop-at-a-red-light",
+      "atom_type": "word",
+      "text": "stop at a red light",
+      "gloss": "在红灯处停下",
+      "linked_blocks": [
+        "TB-G6S1U2-P19-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-subway",
+      "atom_type": "word",
+      "text": "subway",
+      "gloss": "地铁",
+      "linked_blocks": [
+        "TB-G6S1U2-P12-D1",
+        "TB-G6S1U2-P15-D1",
+        "TB-G6S1U2-P16-D3",
+        "TB-G6S1U2-P18-D2",
+        "TB-G6S1U2-P19-D2",
+        "TB-G6S1U2-P20-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-suggestion",
+      "atom_type": "word",
+      "text": "suggestion",
+      "gloss": "建议",
+      "linked_blocks": [
+        "TB-G6S1U2-P19-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-taxi",
+      "atom_type": "word",
+      "text": "taxi",
+      "gloss": "出租汽车",
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-touch",
+      "atom_type": "word",
+      "text": "touch",
+      "gloss": "触摸",
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-traffic",
+      "atom_type": "word",
+      "text": "traffic",
+      "gloss": "交通",
+      "linked_blocks": [
+        "TB-G6S1U2-P12-D1",
+        "TB-G6S1U2-P16-D2",
+        "TB-G6S1U2-P17-D1",
+        "TB-G6S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-traffic-lights",
+      "atom_type": "word",
+      "text": "traffic lights",
+      "gloss": "交通信号灯",
+      "linked_blocks": [
+        "TB-G6S1U2-P12-D1",
+        "TB-G6S1U2-P16-D2",
+        "TB-G6S1U2-P17-D1",
+        "TB-G6S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-train",
+      "atom_type": "word",
+      "text": "train",
+      "gloss": "火车",
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-usa",
+      "atom_type": "word",
+      "text": "USA",
+      "gloss": "美国",
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-usually",
+      "atom_type": "word",
+      "text": "usually",
+      "gloss": "通常",
+      "linked_blocks": [
+        "TB-G6S1U2-P13-D1",
+        "TB-G6S1U2-P14-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-wait",
+      "atom_type": "word",
+      "text": "wait",
+      "gloss": "等待",
+      "linked_blocks": [
+        "TB-G6S1U2-P17-D1",
+        "TB-G6S1U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-walk",
+      "atom_type": "word",
+      "text": "walk",
+      "gloss": "走路",
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-wear",
+      "atom_type": "word",
+      "text": "wear",
+      "gloss": "戴",
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-answer-the-question",
+      "atom_type": "sentence_pattern",
+      "text": "Answer the question.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-by-bus",
+      "atom_type": "sentence_pattern",
+      "text": "By bus.",
+      "gloss": "乘公共汽车。",
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-by-plane",
+      "atom_type": "sentence_pattern",
+      "text": "By plane.",
+      "gloss": "乘飞机。",
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-by-sled-don-t-let-the-dogs-run-too-fast",
+      "atom_type": "sentence_pattern",
+      "text": "By sled: Don't let the dogs run too fast.",
+      "gloss": "乘雪橇：不要让狗跑得太快。",
+      "linked_blocks": [
+        "TB-G6S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-by-sled-you-must-drive-slowly",
+      "atom_type": "sentence_pattern",
+      "text": "By sled: You must drive slowly.",
+      "gloss": "乘雪橇：你必须开得慢一点。",
+      "linked_blocks": [
+        "TB-G6S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-chinese-food-is-different-from-british-food",
+      "atom_type": "sentence_pattern",
+      "text": "Chinese food is different from British food.",
+      "gloss": "中国食物与英国食物不同。",
+      "linked_blocks": [
+        "TB-G6S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-come-or-go",
+      "atom_type": "sentence_pattern",
+      "text": "Come or go?",
+      "gloss": "来还是去？",
+      "linked_blocks": [
+        "TB-G6S1U2-P20-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-don-t",
+      "atom_type": "sentence_pattern",
+      "text": "Don't ...",
+      "gloss": "不要……",
+      "linked_blocks": [
+        "TB-G6S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-don-t-go-at-the-red-light",
+      "atom_type": "sentence_pattern",
+      "text": "Don't go at the red light!",
+      "gloss": "红灯时别走！",
+      "linked_blocks": [
+        "TB-G6S1U2-P12-D1",
+        "TB-G6S1U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-don-t-touch-the-door",
+      "atom_type": "sentence_pattern",
+      "text": "Don't touch the door.",
+      "gloss": "不要触摸门。",
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-don-t-touch-the-door-you-can-see-this-in-the-subway",
+      "atom_type": "sentence_pattern",
+      "text": "Don't touch the door. You can see this in the subway.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-go-at-a-green-light",
+      "atom_type": "sentence_pattern",
+      "text": "Go at a green light.",
+      "gloss": "绿灯亮时可以走。",
+      "linked_blocks": [
+        "TB-G6S1U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-good-morning-john-how-do-you-go-to-school",
+      "atom_type": "sentence_pattern",
+      "text": "Good morning, John. How do you go to school?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-good-morning-mrs-smith",
+      "atom_type": "sentence_pattern",
+      "text": "Good morning, Mrs Smith!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-grandpa-let-me-read-this-for-you",
+      "atom_type": "sentence_pattern",
+      "text": "Grandpa, let me read this for you.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P18-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hi-mike-is-this-your-bike",
+      "atom_type": "sentence_pattern",
+      "text": "Hi, Mike. Is this your bike?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hi-children-you-re-early-how-do-you-come-to-school",
+      "atom_type": "sentence_pattern",
+      "text": "Hi, children. You're early. How do you come to school?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hooray",
+      "atom_type": "sentence_pattern",
+      "text": "Hooray!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-can-i-get-to-the-fuxing-hospital",
+      "atom_type": "sentence_pattern",
+      "text": "How can I get to the Fuxing Hospital?",
+      "gloss": "我怎么去复兴医院？",
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-do-we-get-there",
+      "atom_type": "sentence_pattern",
+      "text": "How do we get there?",
+      "gloss": "我们怎么去那里？",
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-do-you-come-to-school-mrs-smith-by-car",
+      "atom_type": "sentence_pattern",
+      "text": "How do you come to school, Mrs Smith? By car?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-do-you-come-to-school",
+      "atom_type": "sentence_pattern",
+      "text": "How do you come to school?",
+      "gloss": "你怎样来上学？",
+      "linked_blocks": [
+        "TB-G6S1U2-P13-D1",
+        "TB-G6S1U2-P14-D2",
+        "TB-G6S1U2-P14-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-do-you-get-to-the-usa-from-china",
+      "atom_type": "sentence_pattern",
+      "text": "How do you get to the USA from China?",
+      "gloss": "你怎么从中国去美国？",
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-do-you-go-to-school",
+      "atom_type": "sentence_pattern",
+      "text": "How do you go to school?",
+      "gloss": "你怎样去上学？",
+      "linked_blocks": [
+        "TB-G6S1U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-many-ways-can-you-think-of-to-go-to-school",
+      "atom_type": "sentence_pattern",
+      "text": "How many ways can you think of to go to school?",
+      "gloss": "你能想到多少种去上学的方式？",
+      "linked_blocks": [
+        "TB-G6S1U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-don-t-go-to-school-i-learn-at-home",
+      "atom_type": "sentence_pattern",
+      "text": "I don't go to school. I learn at home.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P18-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-must-pay-attention-to-the-traffic-lights",
+      "atom_type": "sentence_pattern",
+      "text": "I must pay attention to the traffic lights!",
+      "gloss": "我必须注意交通信号灯！",
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-often-come-by-bike",
+      "atom_type": "sentence_pattern",
+      "text": "I often come by bike.",
+      "gloss": "我经常骑自行车来。",
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-often-go-by-subway",
+      "atom_type": "sentence_pattern",
+      "text": "I often go by subway.",
+      "gloss": "我经常坐地铁去。",
+      "linked_blocks": [
+        "TB-G6S1U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-usually-come-on-foot",
+      "atom_type": "sentence_pattern",
+      "text": "I usually come on foot.",
+      "gloss": "我通常步行来。",
+      "linked_blocks": [
+        "TB-G6S1U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-usually-often-sometimes",
+      "atom_type": "sentence_pattern",
+      "text": "I usually/often/sometimes ...",
+      "gloss": "我通常/经常/有时……",
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-in-china-bus-doors-are-on-the-right-side",
+      "atom_type": "sentence_pattern",
+      "text": "In China, bus doors are on the right side.",
+      "gloss": "在中国，公交车门在右侧。",
+      "linked_blocks": [
+        "TB-G6S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-in-china-we-must-look-left-and-then-right-before-crossing-the-road",
+      "atom_type": "sentence_pattern",
+      "text": "In China, we must look left and then right before crossing the road.",
+      "gloss": "在中国，过马路前我们必须先向左看，再向右看。",
+      "linked_blocks": [
+        "TB-G6S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-in-the-usa-people-on-bikes-must-wear-one",
+      "atom_type": "sentence_pattern",
+      "text": "In the USA people on bikes must wear one.",
+      "gloss": "在美国，骑自行车的人必须戴头盔。",
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-so-good-to-see-you-annie",
+      "atom_type": "sentence_pattern",
+      "text": "It's so good to see you, Annie!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-check",
+      "atom_type": "sentence_pattern",
+      "text": "Let's check",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P20-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-go-to-the-nature-park",
+      "atom_type": "sentence_pattern",
+      "text": "Let's go to the nature park.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-go",
+      "atom_type": "sentence_pattern",
+      "text": "Let's go!",
+      "gloss": "我们走吧！",
+      "linked_blocks": [
+        "TB-G6S1U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-linking-sounds",
+      "atom_type": "sentence_pattern",
+      "text": "Linking sounds",
+      "gloss": "连读",
+      "linked_blocks": [
+        "TB-G6S1U2-P19-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-tick-or-cross",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and tick or cross.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-the-park-is-over-there-let-s-go",
+      "atom_type": "sentence_pattern",
+      "text": "Look! The park is over there! Let's go!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-mr-jones-how-can-i-get-to-the-fuxing-hospital",
+      "atom_type": "sentence_pattern",
+      "text": "Mr Jones, how can I get to the Fuxing Hospital?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-nice",
+      "atom_type": "sentence_pattern",
+      "text": "Nice!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-on-foot-don-t-go-at-a-red-light",
+      "atom_type": "sentence_pattern",
+      "text": "On foot: Don't go at a red light.",
+      "gloss": "步行：不要闯红灯。",
+      "linked_blocks": [
+        "TB-G6S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-on-foot-you-must-stop-at-a-red-light",
+      "atom_type": "sentence_pattern",
+      "text": "On foot: You must stop at a red light.",
+      "gloss": "步行：你必须在红灯处停下。",
+      "linked_blocks": [
+        "TB-G6S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-please-wait-it-s-red-now-we-must-stop-and-wait",
+      "atom_type": "sentence_pattern",
+      "text": "Please wait! It's red now. We must stop and wait.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-and-answer",
+      "atom_type": "sentence_pattern",
+      "text": "Read and answer",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-slow-down-and-stop-at-a-yellow-light",
+      "atom_type": "sentence_pattern",
+      "text": "Slow down and stop at a yellow light.",
+      "gloss": "黄灯亮时慢下来并停下。",
+      "linked_blocks": [
+        "TB-G6S1U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-slow-down-and-stop",
+      "atom_type": "sentence_pattern",
+      "text": "Slow down and stop!",
+      "gloss": "慢下来并停下！",
+      "linked_blocks": [
+        "TB-G6S1U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-some-children-go-to-school-on-foot-by",
+      "atom_type": "sentence_pattern",
+      "text": "Some children go to school on foot/by...",
+      "gloss": "一些孩子步行/乘……去上学",
+      "linked_blocks": [
+        "TB-G6S1U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-sorry",
+      "atom_type": "sentence_pattern",
+      "text": "Sorry.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-stop-and-wait-at-a-red-light",
+      "atom_type": "sentence_pattern",
+      "text": "Stop and wait at a red light.",
+      "gloss": "红灯亮时停下并等待。",
+      "linked_blocks": [
+        "TB-G6S1U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-stop-and-wait",
+      "atom_type": "sentence_pattern",
+      "text": "Stop and wait!",
+      "gloss": "停下并等待！",
+      "linked_blocks": [
+        "TB-G6S1U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-take-the-no-57-bus-over-there",
+      "atom_type": "sentence_pattern",
+      "text": "Take the No. 57 bus over there.",
+      "gloss": "在那边坐57路公共汽车。",
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-thanks-robin",
+      "atom_type": "sentence_pattern",
+      "text": "Thanks, Robin.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P18-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-thanks-how-do-you-come-to-school",
+      "atom_type": "sentence_pattern",
+      "text": "Thanks. How do you come to school?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-usually-i-come-on-foot",
+      "atom_type": "sentence_pattern",
+      "text": "Usually, I come on foot.",
+      "gloss": "通常，我步行来。",
+      "linked_blocks": [
+        "TB-G6S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wait-don-t-go-at-the-red-light",
+      "atom_type": "sentence_pattern",
+      "text": "Wait! Don't go at the red light!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-does-mrs-smith-tell-the-children-to-do-listen-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "What does Mrs Smith tell the children to do? Listen and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-suggestions-will-you-give-to-your-friends-make-a-poster",
+      "atom_type": "sentence_pattern",
+      "text": "What suggestions will you give to your friends? Make a poster.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P19-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-is-mike",
+      "atom_type": "sentence_pattern",
+      "text": "Where is Mike?",
+      "gloss": "迈克在哪里？",
+      "linked_blocks": [
+        "TB-G6S1U2-P20-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-can-you-use-chopsticks",
+      "atom_type": "sentence_pattern",
+      "text": "Yes. Can you use chopsticks?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-can-see-this-on-the-road-in-the-subway",
+      "atom_type": "sentence_pattern",
+      "text": "You can see this on the road/in the subway.",
+      "gloss": "你可以在马路上/地铁里看到这个。",
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-must",
+      "atom_type": "sentence_pattern",
+      "text": "You must ...",
+      "gloss": "你必须……",
+      "linked_blocks": [
+        "TB-G6S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-must-stop",
+      "atom_type": "sentence_pattern",
+      "text": "You must stop.",
+      "gloss": "你必须停下来。",
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-must-stop-you-can-see-this-on-the-road",
+      "atom_type": "sentence_pattern",
+      "text": "You must stop. You can see this on the road.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-too-amy-i-missed-you",
+      "atom_type": "sentence_pattern",
+      "text": "You too, Amy. I missed you.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U2-P21-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G6S1U2-P12",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Ways to go to school. A street scene near a subway station. A man stops a girl from crossing at a red light. Another man greets John.",
+      "entry_probe_questions": [
+        "Do you know the word subway?",
+        "Can you say: Don't go at the red light!"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U2-P12-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U2-P13",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Ways to go to school. Amy and Mike are talking at the bicycle shed at school.",
+      "entry_probe_questions": [
+        "Do you know the word bike?",
+        "Can you say: How do you come to school?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U2-P13-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U2-P14",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Ways to go to school. Mike, Amy and Mrs Smith are meeting at the school gate in the morning.",
+      "entry_probe_questions": [
+        "Do you know the word on foot?",
+        "Can you say: How do you come to school?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U2-P14-D2",
+        "TB-G6S1U2-P14-D1",
+        "TB-G6S1U2-P14-D4",
+        "TB-G6S1U2-P14-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U2-P15",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Ways to go to school. Mrs Smith and students are talking about going to the nature park. The background shows various modes of transportation.",
+      "entry_probe_questions": [
+        "Do you know the word on foot?",
+        "Can you say: How do we get there?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U2-P15-D1",
+        "TB-G6S1U2-P15-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U2-P16",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Ways to go to school. Wu Binbin asks Mr Jones for directions to Fuxing Hospital. They discuss bikes, helmets, and traffic rules while looking at photos.",
+      "entry_probe_questions": [
+        "Do you know the word helmet?",
+        "Can you say: How can I get to the Fuxing Hospital?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U2-P16-D2",
+        "TB-G6S1U2-P16-D3",
+        "TB-G6S1U2-P16-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U2-P17",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Ways to go to school. Traffic lights rules are presented with images. Mike and Mrs Smith are at a crossing.",
+      "entry_probe_questions": [
+        "Do you know the word slow down?",
+        "Can you say: Slow down and stop at a yellow light."
+      ],
+      "priority_blocks": [
+        "TB-G6S1U2-P17-D1",
+        "TB-G6S1U2-P17-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U2-P18",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Ways to go to school. Robin is reading the book to Grandpa who is lying in bed.",
+      "entry_probe_questions": [
+        "Can you say: Grandpa, let me read this for you."
+      ],
+      "priority_blocks": [
+        "TB-G6S1U2-P18-D3",
+        "TB-G6S1U2-P18-D2",
+        "TB-G6S1U2-P18-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U2-P19",
+      "page_type": "grammar",
+      "page_intro_cn": "Theme: Ways to go to school. Activity to create a poster with safety suggestions.",
+      "entry_probe_questions": [
+        "Do you know the word suggestion?",
+        "Can you say: What suggestions will you give to your friends? Make a poster."
+      ],
+      "priority_blocks": [
+        "TB-G6S1U2-P19-D3",
+        "TB-G6S1U2-P19-D1",
+        "TB-G6S1U2-P19-D2",
+        "TB-G6S1U2-P19-D4"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U2-P20",
+      "page_type": "assessment",
+      "page_intro_cn": "Theme: Ways to go to school. Listening assessment with images showing different ways to go to places and traffic rules.",
+      "entry_probe_questions": [
+        "Do you know the word go to the park?",
+        "Can you say: Let's check"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U2-P20-D1",
+        "TB-G6S1U2-P20-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U2-P21",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Ways to go to school. Amy meets her friend Annie from the UK. They discuss the differences between China and the UK regarding food, traffic rules, and buses.",
+      "entry_probe_questions": [
+        "Do you know the word chopsticks?",
+        "Can you say: Chinese food is different from British food."
+      ],
+      "priority_blocks": [
+        "TB-G6S1U2-P21-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G6S1U2-P12-D1",
+      "page_uid": "TB-G6S1U2-P12",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U2-P12-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "A street scene near a subway station. A man stops a girl from crossing at a red light. Another man greets John. Key patterns: Don't go at the red light!; How do you go to school?",
+      "focus_vocabulary": [
+        "subway",
+        "traffic lights",
+        "red light",
+        "pay attention to"
+      ],
+      "core_patterns": [
+        "Don't go at the red light!",
+        "How do you go to school?",
+        "I often go by subway.",
+        "Good morning, John. How do you go to school?",
+        "Wait! Don't go at the red light!",
+        "Sorry."
+      ],
+      "allowed_answer_scope": [
+        "Wait! Don't go at the red light!",
+        "Sorry.",
+        "You must pay attention to the traffic lights.",
+        "I often go by subway."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word subway?",
+        "Can you say: Don't go at the red light!"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U2-P12-D1-goal"
+      ],
+      "branchable_topics": [
+        "subway",
+        "traffic lights",
+        "red light",
+        "pay attention to",
+        "Ways to go to school",
+        "Unit Two - Main Scene Part 1"
+      ],
+      "return_anchors": [
+        "Don't go at the red light!",
+        "How do you go to school?",
+        "I often go by subway."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P13-D1",
+      "page_uid": "TB-G6S1U2-P13",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U2-P13-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Amy and Mike are talking at the bicycle shed at school. Key patterns: How do you come to school?; I usually come on foot.",
+      "focus_vocabulary": [
+        "bike",
+        "come to school",
+        "on foot",
+        "usually"
+      ],
+      "core_patterns": [
+        "How do you come to school?",
+        "I usually come on foot.",
+        "Hi, Mike. Is this your bike?",
+        "Thanks. How do you come to school?",
+        "Nice!"
+      ],
+      "allowed_answer_scope": [
+        "Yes.",
+        "Nice!",
+        "I usually come on foot."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word bike?",
+        "Can you say: How do you come to school?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U2-P13-D1-goal"
+      ],
+      "branchable_topics": [
+        "bike",
+        "come to school",
+        "on foot",
+        "usually",
+        "Ways to go to school",
+        "Unit Two - Main Scene Part 2"
+      ],
+      "return_anchors": [
+        "How do you come to school?",
+        "I usually come on foot.",
+        "Hi, Mike. Is this your bike?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P14-D1",
+      "page_uid": "TB-G6S1U2-P14",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S1U2-P14-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Amy meets Mike at school this morning. Listen and tick or cross. Key patterns: Listen and tick or cross.",
+      "focus_vocabulary": [
+        "sports meet",
+        "by bus"
+      ],
+      "core_patterns": [
+        "Listen and tick or cross."
+      ],
+      "allowed_answer_scope": [
+        "Cross"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word sports meet?",
+        "Can you say: Listen and tick or cross."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U2-P14-D4",
+        "TB-G6S1U2-P14-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U2-P14-D1-goal"
+      ],
+      "branchable_topics": [
+        "sports meet",
+        "by bus",
+        "Ways to go to school",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and tick or cross."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P14-D2",
+      "page_uid": "TB-G6S1U2-P14",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U2-P14-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Mike, Amy and Mrs Smith are meeting at the school gate in the morning. Key patterns: How do you come to school?; Usually, I come on foot.",
+      "focus_vocabulary": [
+        "on foot",
+        "by bus",
+        "by bike",
+        "by car",
+        "walk",
+        "exercise"
+      ],
+      "core_patterns": [
+        "How do you come to school?",
+        "Usually, I come on foot.",
+        "I often come by bike.",
+        "Hi, children. You're early. How do you come to school?",
+        "How do you come to school, Mrs Smith? By car?",
+        "Good morning, Mrs Smith!"
+      ],
+      "allowed_answer_scope": [
+        "Good morning, Mrs Smith!",
+        "Usually, I come on foot. Sometimes I come by bus.",
+        "I often come by bike.",
+        "Sometimes, but I usually walk.",
+        "That's good exercise."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word on foot?",
+        "Can you say: How do you come to school?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U2-P14-D1",
+        "TB-G6S1U2-P14-D4",
+        "TB-G6S1U2-P14-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U2-P14-D2-goal"
+      ],
+      "branchable_topics": [
+        "on foot",
+        "by bus",
+        "by bike",
+        "by car",
+        "walk",
+        "exercise",
+        "Ways to go to school",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "How do you come to school?",
+        "Usually, I come on foot.",
+        "I often come by bike."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P14-D3",
+      "page_uid": "TB-G6S1U2-P14",
+      "page_type": "dialogue",
+      "block_type": "practice_speaking",
+      "source_refs": [
+        "TB-G6S1U2-P14-D3"
+      ],
+      "teaching_goal": "Work on the practice speaking activity.",
+      "teaching_summary": "A question based on the dialogue above. Key patterns: Answer the question.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Answer the question."
+      ],
+      "allowed_answer_scope": [
+        "Mike comes by bike. Amy usually comes on foot, sometimes by bus. Mrs Smith usually walks, sometimes comes by car."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Answer the question."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U2-P14-D3-goal"
+      ],
+      "branchable_topics": [
+        "Ways to go to school",
+        "Comprehension Check"
+      ],
+      "return_anchors": [
+        "Answer the question."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P14-D4",
+      "page_uid": "TB-G6S1U2-P14",
+      "page_type": "dialogue",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S1U2-P14-D4"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "A survey activity to ask classmates about their transportation methods. Key patterns: How do you come to school?; I usually/often/sometimes ...",
+      "focus_vocabulary": [
+        "usually",
+        "often",
+        "sometimes"
+      ],
+      "core_patterns": [
+        "How do you come to school?",
+        "I usually/often/sometimes ..."
+      ],
+      "allowed_answer_scope": [
+        "usually",
+        "often",
+        "sometimes"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word usually?",
+        "Can you say: How do you come to school?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U2-P14-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U2-P14-D4-goal"
+      ],
+      "branchable_topics": [
+        "usually",
+        "often",
+        "sometimes",
+        "Ways to go to school",
+        "What about your classmates and teachers? Do a survey."
+      ],
+      "return_anchors": [
+        "How do you come to school?",
+        "I usually/often/sometimes ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P15-D1",
+      "page_uid": "TB-G6S1U2-P15",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S1U2-P15-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Mrs Smith and students are talking about going to the nature park. The background shows various modes of transportation. Key patterns: How do we get there?; By bus.",
+      "focus_vocabulary": [
+        "on foot",
+        "by bus",
+        "by plane",
+        "by taxi",
+        "by ship",
+        "by subway",
+        "by train"
+      ],
+      "core_patterns": [
+        "How do we get there?",
+        "By bus.",
+        "Let's go to the nature park.",
+        "Hooray!"
+      ],
+      "allowed_answer_scope": [
+        "Let's go to the nature park.",
+        "Hooray!",
+        "By bus."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word on foot?",
+        "Can you say: How do we get there?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U2-P15-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U2-P15-D1-goal"
+      ],
+      "branchable_topics": [
+        "on foot",
+        "by bus",
+        "by plane",
+        "by taxi",
+        "by ship",
+        "by subway",
+        "by train",
+        "Ways to go to school"
+      ],
+      "return_anchors": [
+        "How do we get there?",
+        "By bus.",
+        "Let's go to the nature park."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P15-D2",
+      "page_uid": "TB-G6S1U2-P15",
+      "page_type": "vocabulary",
+      "block_type": "practice_speaking",
+      "source_refs": [
+        "TB-G6S1U2-P15-D2"
+      ],
+      "teaching_goal": "Work on the practice speaking activity.",
+      "teaching_summary": "A chart activity connecting places with transportation methods. Key patterns: How do you get to the USA from China?; By plane.",
+      "focus_vocabulary": [
+        "China",
+        "USA"
+      ],
+      "core_patterns": [
+        "How do you get to the USA from China?",
+        "By plane."
+      ],
+      "allowed_answer_scope": [
+        "By plane."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word China?",
+        "Can you say: How do you get to the USA from China?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U2-P15-D2-goal"
+      ],
+      "branchable_topics": [
+        "China",
+        "USA",
+        "Ways to go to school",
+        "Write and say"
+      ],
+      "return_anchors": [
+        "How do you get to the USA from China?",
+        "By plane."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P16-D1",
+      "page_uid": "TB-G6S1U2-P16",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S1U2-P16-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Two scenarios shown in magnifying glasses: children walking across a street and children sitting on a bus. Key patterns: What does Mrs Smith tell the children to do? Listen and tick.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What does Mrs Smith tell the children to do? Listen and tick."
+      ],
+      "allowed_answer_scope": [
+        "Unknown (Audio required)"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What does Mrs Smith tell the children to do? Listen and tick."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U2-P16-D1-goal"
+      ],
+      "branchable_topics": [
+        "Ways to go to school",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "What does Mrs Smith tell the children to do? Listen and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P16-D2",
+      "page_uid": "TB-G6S1U2-P16",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U2-P16-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Wu Binbin asks Mr Jones for directions to Fuxing Hospital. They discuss bikes, helmets, and traffic rules while looking at photos. Key patterns: How can I get to the Fuxing Hospital?; Take the No. 57 bus over there.",
+      "focus_vocabulary": [
+        "helmet",
+        "wear",
+        "pay attention to",
+        "traffic lights"
+      ],
+      "core_patterns": [
+        "How can I get to the Fuxing Hospital?",
+        "Take the No. 57 bus over there.",
+        "In the USA people on bikes must wear one.",
+        "Don't go at the red light!",
+        "I must pay attention to the traffic lights!",
+        "Mr Jones, how can I get to the Fuxing Hospital?"
+      ],
+      "allowed_answer_scope": [
+        "People on bikes must wear a helmet in the USA. / Don't go at the red light."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word helmet?",
+        "Can you say: How can I get to the Fuxing Hospital?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U2-P16-D3",
+        "TB-G6S1U2-P16-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U2-P16-D2-goal"
+      ],
+      "branchable_topics": [
+        "helmet",
+        "wear",
+        "pay attention to",
+        "traffic lights",
+        "Ways to go to school",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "How can I get to the Fuxing Hospital?",
+        "Take the No. 57 bus over there.",
+        "In the USA people on bikes must wear one."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P16-D3",
+      "page_uid": "TB-G6S1U2-P16",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S1U2-P16-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Students discuss the meaning and location of different traffic/safety signs. Key patterns: You must stop.; Don't touch the door.",
+      "focus_vocabulary": [
+        "stop",
+        "road",
+        "touch",
+        "subway",
+        "sign"
+      ],
+      "core_patterns": [
+        "You must stop.",
+        "Don't touch the door.",
+        "You can see this on the road/in the subway.",
+        "You must stop. You can see this on the road.",
+        "Don't touch the door. You can see this in the subway."
+      ],
+      "allowed_answer_scope": [
+        "You must stop. You can see this on the road.",
+        "Don't touch the door. You can see this in the subway."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word stop?",
+        "Can you say: You must stop."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U2-P16-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U2-P16-D3-goal"
+      ],
+      "branchable_topics": [
+        "stop",
+        "road",
+        "touch",
+        "subway",
+        "sign",
+        "Ways to go to school",
+        "Tell your partner: What do these signs mean? Where can you see them?"
+      ],
+      "return_anchors": [
+        "You must stop.",
+        "Don't touch the door.",
+        "You can see this on the road/in the subway."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P17-D1",
+      "page_uid": "TB-G6S1U2-P17",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S1U2-P17-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Traffic lights rules are presented with images. Mike and Mrs Smith are at a crossing. Key patterns: Slow down and stop at a yellow light.; Stop and wait at a red light.",
+      "focus_vocabulary": [
+        "slow down",
+        "stop",
+        "wait",
+        "go",
+        "traffic lights"
+      ],
+      "core_patterns": [
+        "Slow down and stop at a yellow light.",
+        "Stop and wait at a red light.",
+        "Go at a green light.",
+        "Look! The park is over there! Let's go!",
+        "Please wait! It's red now. We must stop and wait."
+      ],
+      "allowed_answer_scope": [
+        "Look! The park is over there! Let's go!",
+        "Please wait! It's red now. We must stop and wait."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word slow down?",
+        "Can you say: Slow down and stop at a yellow light."
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U2-P17-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U2-P17-D1-goal"
+      ],
+      "branchable_topics": [
+        "slow down",
+        "stop",
+        "wait",
+        "go",
+        "traffic lights",
+        "Ways to go to school",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Slow down and stop at a yellow light.",
+        "Stop and wait at a red light.",
+        "Go at a green light."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P17-D2",
+      "page_uid": "TB-G6S1U2-P17",
+      "page_type": "vocabulary",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S1U2-P17-D2"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "Students are playing a traffic light game. One student holds signs (red, yellow, green) and others follow the instructions. Key patterns: Slow down and stop!; Stop and wait!",
+      "focus_vocabulary": [
+        "slow down",
+        "stop",
+        "wait",
+        "go"
+      ],
+      "core_patterns": [
+        "Slow down and stop!",
+        "Stop and wait!",
+        "Let's go!"
+      ],
+      "allowed_answer_scope": [
+        "slow down",
+        "stop",
+        "wait",
+        "go"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word slow down?",
+        "Can you say: Slow down and stop!"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U2-P17-D2-goal"
+      ],
+      "branchable_topics": [
+        "slow down",
+        "stop",
+        "wait",
+        "go",
+        "Ways to go to school",
+        "Role-play"
+      ],
+      "return_anchors": [
+        "Slow down and stop!",
+        "Stop and wait!",
+        "Let's go!"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P18-D1",
+      "page_uid": "TB-G6S1U2-P18",
+      "page_type": "dialogue",
+      "block_type": "practice_speaking",
+      "source_refs": [
+        "TB-G6S1U2-P18-D1"
+      ],
+      "teaching_goal": "Work on the practice speaking activity.",
+      "teaching_summary": "Discussion prompt about ways to go to school Key patterns: How many ways can you think of to go to school?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "How many ways can you think of to go to school?"
+      ],
+      "allowed_answer_scope": [
+        "How many ways can you think of to go to school?"
+      ],
+      "entry_probe_questions": [
+        "Can you say: How many ways can you think of to go to school?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U2-P18-D1-goal"
+      ],
+      "branchable_topics": [
+        "Ways to go to school",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "How many ways can you think of to go to school?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P18-D2",
+      "page_uid": "TB-G6S1U2-P18",
+      "page_type": "dialogue",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S1U2-P18-D2"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "A passage introducing how children in different places go to school Key patterns: Some children go to school on foot/by...",
+      "focus_vocabulary": [
+        "on foot",
+        "by sled",
+        "by subway",
+        "by ferry",
+        "by plane",
+        "Munich",
+        "Germany",
+        "Alaska"
+      ],
+      "core_patterns": [
+        "Some children go to school on foot/by..."
+      ],
+      "allowed_answer_scope": [
+        "on foot",
+        "by sled",
+        "by subway",
+        "by ferry",
+        "by plane",
+        "Munich"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word on foot?",
+        "Can you say: Some children go to school on foot/by..."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U2-P18-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U2-P18-D2-goal"
+      ],
+      "branchable_topics": [
+        "on foot",
+        "by sled",
+        "by subway",
+        "by ferry",
+        "by plane",
+        "Munich",
+        "Germany",
+        "Alaska"
+      ],
+      "return_anchors": [
+        "Some children go to school on foot/by..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P18-D3",
+      "page_uid": "TB-G6S1U2-P18",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U2-P18-D3"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Robin is reading the book to Grandpa who is lying in bed. Key patterns: Grandpa, let me read this for you.; Thanks, Robin.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Grandpa, let me read this for you.",
+        "Thanks, Robin.",
+        "I don't go to school. I learn at home."
+      ],
+      "allowed_answer_scope": [
+        "Grandpa, let me read this for you.",
+        "Thanks, Robin.",
+        "I don't go to school. I learn at home."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Grandpa, let me read this for you."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U2-P18-D2",
+        "TB-G6S1U2-P18-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U2-P18-D3-goal"
+      ],
+      "branchable_topics": [
+        "Ways to go to school",
+        "Story Time"
+      ],
+      "return_anchors": [
+        "Grandpa, let me read this for you.",
+        "Thanks, Robin.",
+        "I don't go to school. I learn at home."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P19-D1",
+      "page_uid": "TB-G6S1U2-P19",
+      "page_type": "grammar",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S1U2-P19-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "Comprehension questions based on the text from the previous page (Page 18). Key patterns: Read and answer",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Read and answer"
+      ],
+      "allowed_answer_scope": [
+        "Read and answer"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Read and answer"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U2-P19-D2",
+        "TB-G6S1U2-P19-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U2-P19-D1-goal"
+      ],
+      "branchable_topics": [
+        "Ways to go to school",
+        "Read and answer"
+      ],
+      "return_anchors": [
+        "Read and answer"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P19-D2",
+      "page_uid": "TB-G6S1U2-P19",
+      "page_type": "grammar",
+      "block_type": "grammar_point",
+      "source_refs": [
+        "TB-G6S1U2-P19-D2"
+      ],
+      "teaching_goal": "Work on the grammar point activity.",
+      "teaching_summary": "A table showing traffic rules and safety suggestions using 'must' and 'Don't'. Key patterns: You must ...; Don't ...",
+      "focus_vocabulary": [
+        "pay attention",
+        "traffic lights",
+        "red light",
+        "sled",
+        "subway",
+        "mind the gap"
+      ],
+      "core_patterns": [
+        "You must ...",
+        "Don't ...",
+        "On foot: You must stop at a red light.",
+        "On foot: Don't go at a red light.",
+        "By sled: You must drive slowly.",
+        "By sled: Don't let the dogs run too fast."
+      ],
+      "allowed_answer_scope": [
+        "pay attention",
+        "traffic lights",
+        "red light",
+        "sled",
+        "subway",
+        "mind the gap"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word pay attention?",
+        "Can you say: You must ..."
+      ],
+      "repair_modes": [
+        "repeat",
+        "sentence_drill",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U2-P19-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U2-P19-D2-goal"
+      ],
+      "branchable_topics": [
+        "pay attention",
+        "traffic lights",
+        "red light",
+        "sled",
+        "subway",
+        "mind the gap",
+        "Ways to go to school",
+        "Pay attention!"
+      ],
+      "return_anchors": [
+        "You must ...",
+        "Don't ...",
+        "On foot: You must stop at a red light."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P19-D3",
+      "page_uid": "TB-G6S1U2-P19",
+      "page_type": "grammar",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S1U2-P19-D3"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "Activity to create a poster with safety suggestions. Key patterns: What suggestions will you give to your friends? Make a poster.",
+      "focus_vocabulary": [
+        "suggestion",
+        "poster"
+      ],
+      "core_patterns": [
+        "What suggestions will you give to your friends? Make a poster."
+      ],
+      "allowed_answer_scope": [
+        "suggestion",
+        "poster"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word suggestion?",
+        "Can you say: What suggestions will you give to your friends? Make a poster."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U2-P19-D1",
+        "TB-G6S1U2-P19-D2",
+        "TB-G6S1U2-P19-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U2-P19-D3-goal"
+      ],
+      "branchable_topics": [
+        "suggestion",
+        "poster",
+        "Ways to go to school",
+        "Make a poster"
+      ],
+      "return_anchors": [
+        "What suggestions will you give to your friends? Make a poster."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P19-D4",
+      "page_uid": "TB-G6S1U2-P19",
+      "page_type": "grammar",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G6S1U2-P19-D4"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "Practice linking sounds in sentences. Key patterns: Linking sounds",
+      "focus_vocabulary": [
+        "come and have a look",
+        "pictures of",
+        "stop at a red light"
+      ],
+      "core_patterns": [
+        "Linking sounds"
+      ],
+      "allowed_answer_scope": [
+        "come and have a look",
+        "pictures of",
+        "stop at a red light"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word come and have a look?",
+        "Can you say: Linking sounds"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U2-P19-D4-goal"
+      ],
+      "branchable_topics": [
+        "come and have a look",
+        "pictures of",
+        "stop at a red light",
+        "Ways to go to school",
+        "Tips for pronunciation"
+      ],
+      "return_anchors": [
+        "Linking sounds"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P20-D1",
+      "page_uid": "TB-G6S1U2-P20",
+      "page_type": "assessment",
+      "block_type": "assessment_quiz",
+      "source_refs": [
+        "TB-G6S1U2-P20-D1"
+      ],
+      "teaching_goal": "Check whether the learner can complete the unit review task.",
+      "teaching_summary": "Listening assessment with images showing different ways to go to places and traffic rules. Key patterns: Let's check",
+      "focus_vocabulary": [
+        "go to the park",
+        "go to work",
+        "go home",
+        "by bus",
+        "by subway"
+      ],
+      "core_patterns": [
+        "Let's check"
+      ],
+      "allowed_answer_scope": [
+        "go to the park",
+        "go to work",
+        "go home",
+        "by bus",
+        "by subway"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word go to the park?",
+        "Can you say: Let's check"
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U2-P20-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U2-P20-D1-goal"
+      ],
+      "branchable_topics": [
+        "go to the park",
+        "go to work",
+        "go home",
+        "by bus",
+        "by subway",
+        "Ways to go to school",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Let's check"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P20-D2",
+      "page_uid": "TB-G6S1U2-P20",
+      "page_type": "assessment",
+      "block_type": "practice_multiple_choice",
+      "source_refs": [
+        "TB-G6S1U2-P20-D2"
+      ],
+      "teaching_goal": "Work on the practice multiple choice activity.",
+      "teaching_summary": "A logic exercise to determine Mike's location based on the use of 'come' or 'go'. Key patterns: Come or go?; Where is Mike?",
+      "focus_vocabulary": [
+        "come",
+        "go",
+        "cinema",
+        "park",
+        "museum"
+      ],
+      "core_patterns": [
+        "Come or go?",
+        "Where is Mike?"
+      ],
+      "allowed_answer_scope": [
+        "Not at the cinema",
+        "In the park",
+        "At school",
+        "Not at the museum"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word come?",
+        "Can you say: Come or go?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U2-P20-D2-goal"
+      ],
+      "branchable_topics": [
+        "come",
+        "go",
+        "cinema",
+        "park",
+        "museum",
+        "Ways to go to school",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Come or go?",
+        "Where is Mike?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U2-P21-D1",
+      "page_uid": "TB-G6S1U2-P21",
+      "page_type": "reading",
+      "block_type": "story_time",
+      "source_refs": [
+        "TB-G6S1U2-P21-D1"
+      ],
+      "teaching_goal": "Read and retell the key story events.",
+      "teaching_summary": "Amy meets her friend Annie from the UK. They discuss the differences between China and the UK regarding food, traffic rules, and buses. Key patterns: Chinese food is different from British food.; In China, we must look left and then right before crossing the road.",
+      "focus_vocabulary": [
+        "chopsticks",
+        "cross the road",
+        "double-decker",
+        "look right",
+        "look left"
+      ],
+      "core_patterns": [
+        "Chinese food is different from British food.",
+        "In China, we must look left and then right before crossing the road.",
+        "In China, bus doors are on the right side.",
+        "Yes. Can you use chopsticks?",
+        "It's so good to see you, Annie!",
+        "You too, Amy. I missed you."
+      ],
+      "allowed_answer_scope": [
+        "It's so good to see you, Annie!",
+        "You too, Amy. I missed you.",
+        "Wow, Chinese food is so different from British food.",
+        "No, I can't.",
+        "Let's take a bus home. We must cross the road.",
+        "I see. We must look right before crossing the road."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word chopsticks?",
+        "Can you say: Chinese food is different from British food."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U2-P21-D1-goal"
+      ],
+      "branchable_topics": [
+        "chopsticks",
+        "cross the road",
+        "double-decker",
+        "look right",
+        "look left",
+        "Ways to go to school",
+        "Story time"
+      ],
+      "return_anchors": [
+        "Chinese food is different from British food.",
+        "In China, we must look left and then right before crossing the road.",
+        "In China, bus doors are on the right side."
+      ]
+    }
+  ]
+}

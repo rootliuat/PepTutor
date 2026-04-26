@@ -1,0 +1,2933 @@
+{
+  "pilot_id": "g5s1u1-general-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "U1",
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/01.五年级上册语料.js",
+    "app/knowledge/raw/05.五年级上册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 5 · Volume 1), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 5 · Volume 1), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 26,
+    "source_kind": "textbook_source_js",
+    "source_format": "js"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 1",
+      "word": "old",
+      "phonetic": "/əʊld/",
+      "chinese": "老的；年纪大的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U1-P4-D2",
+        "TB-G5S1U1-P4-D3",
+        "TB-G5S1U1-P5-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "young",
+      "phonetic": "/jʌŋ/",
+      "chinese": "年轻的；岁数不大的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U1-P4-D2",
+        "TB-G5S1U1-P4-D3",
+        "TB-G5S1U1-P5-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "funny",
+      "phonetic": "/'fʌni/",
+      "chinese": "滑稽的；可笑的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U1-P4-D2",
+        "TB-G5S1U1-P4-D3",
+        "TB-G5S1U1-P5-D1",
+        "TB-G5S1U1-P7-D3"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "kind",
+      "phonetic": "/kaɪnd/",
+      "chinese": "体贴的；慈祥的；宽容的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U1-P3-D1",
+        "TB-G5S1U1-P5-D1",
+        "TB-G5S1U1-P7-D2",
+        "TB-G5S1U1-P7-D3"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "strict",
+      "phonetic": "/strɪkt/",
+      "chinese": "要求严格的；严厉的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U1-P3-D1",
+        "TB-G5S1U1-P5-D1",
+        "TB-G5S1U1-P5-D3",
+        "TB-G5S1U1-P7-D2",
+        "TB-G5S1U1-P7-D3",
+        "TB-G5S1U1-P9-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "polite",
+      "phonetic": "/pə'laɪt/",
+      "chinese": "有礼貌的；客气的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U1-P2-D1",
+        "TB-G5S1U1-P8-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "hard-working",
+      "phonetic": "/ˌhɑːd'wɜːkɪŋ/",
+      "chinese": "工作努力的；辛勤的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U1-P2-D1",
+        "TB-G5S1U1-P8-D1",
+        "TB-G5S1U1-P9-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "helpful",
+      "phonetic": "/'helpfl/",
+      "chinese": "有用的；愿意帮忙的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U1-P8-D1",
+        "TB-G5S1U1-P9-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "clever",
+      "phonetic": "/'klevə(r)/",
+      "chinese": "聪明的；聪颖的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U1-P2-D1",
+        "TB-G5S1U1-P8-D1",
+        "TB-G5S1U1-P9-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "shy",
+      "phonetic": "/ʃaɪ/",
+      "chinese": "羞怯的；腼腆的；怕生的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U1-P8-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "know",
+      "phonetic": "/nəʊ/",
+      "chinese": "知道；了解",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 1",
+      "word": "our",
+      "phonetic": "/aʊə/",
+      "chinese": "我们的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 1",
+      "word": "Ms",
+      "phonetic": "/mɪz/",
+      "chinese": "（用于女子的姓氏或姓名前，不指明婚否）女士",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 1",
+      "word": "will",
+      "phonetic": "/wɪl/",
+      "chinese": "（谈及将来）将要",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 1",
+      "word": "sometimes",
+      "phonetic": "/'sʌmtaɪmz/",
+      "chinese": "有时；间或",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S1U1-P3-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "robot",
+      "phonetic": "/'rəʊbɒt/",
+      "chinese": "机器人",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S1U1-P9-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "him",
+      "phonetic": "/hɪm/",
+      "chinese": "（用作宾语或表语）他",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 1",
+      "word": "speak",
+      "phonetic": "/spiːk/",
+      "chinese": "会说；会讲（某种语言）；用（某种语言）说话",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 1",
+      "word": "finish",
+      "phonetic": "/'fɪnɪʃ/",
+      "chinese": "完成；做好",
+      "emphasized": false,
+      "linked_block_uids": []
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S1U1-P2-D1-goal",
+      "block_uid": "TB-G5S1U1-P2-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P3-D1-goal",
+      "block_uid": "TB-G5S1U1-P3-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P4-D1-goal",
+      "block_uid": "TB-G5S1U1-P4-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P4-D2-goal",
+      "block_uid": "TB-G5S1U1-P4-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P4-D3-goal",
+      "block_uid": "TB-G5S1U1-P4-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P5-D1-goal",
+      "block_uid": "TB-G5S1U1-P5-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P5-D2-goal",
+      "block_uid": "TB-G5S1U1-P5-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P5-D3-goal",
+      "block_uid": "TB-G5S1U1-P5-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P6-D1-goal",
+      "block_uid": "TB-G5S1U1-P6-D1",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P6-D2-goal",
+      "block_uid": "TB-G5S1U1-P6-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P6-D3-goal",
+      "block_uid": "TB-G5S1U1-P6-D3",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P6-D4-goal",
+      "block_uid": "TB-G5S1U1-P6-D4",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P7-D1-goal",
+      "block_uid": "TB-G5S1U1-P7-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P7-D2-goal",
+      "block_uid": "TB-G5S1U1-P7-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P7-D3-goal",
+      "block_uid": "TB-G5S1U1-P7-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P8-D1-goal",
+      "block_uid": "TB-G5S1U1-P8-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P8-D2-goal",
+      "block_uid": "TB-G5S1U1-P8-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P8-D3-goal",
+      "block_uid": "TB-G5S1U1-P8-D3",
+      "category": "practice_match",
+      "text": "Work on the practice match activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P9-D1-goal",
+      "block_uid": "TB-G5S1U1-P9-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P9-D2-goal",
+      "block_uid": "TB-G5S1U1-P9-D2",
+      "category": "practice_true_false",
+      "text": "Work on the practice true false activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P9-D3-goal",
+      "block_uid": "TB-G5S1U1-P9-D3",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P10-D1-goal",
+      "block_uid": "TB-G5S1U1-P10-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P10-D2-goal",
+      "block_uid": "TB-G5S1U1-P10-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P10-D3-goal",
+      "block_uid": "TB-G5S1U1-P10-D3",
+      "category": "practice_match",
+      "text": "Work on the practice match activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P10-D4-goal",
+      "block_uid": "TB-G5S1U1-P10-D4",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U1-P11-D1-goal",
+      "block_uid": "TB-G5S1U1-P11-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-am",
+      "atom_type": "word",
+      "text": "am",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P10-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-are",
+      "atom_type": "word",
+      "text": "are",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P10-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-baby",
+      "atom_type": "word",
+      "text": "baby",
+      "gloss": "婴儿",
+      "linked_blocks": [
+        "TB-G5S1U1-P6-D1",
+        "TB-G5S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-candy",
+      "atom_type": "word",
+      "text": "candy",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-clever",
+      "atom_type": "word",
+      "text": "clever",
+      "gloss": "聪明的；聪颖的",
+      "linked_blocks": [
+        "TB-G5S1U1-P2-D1",
+        "TB-G5S1U1-P8-D1",
+        "TB-G5S1U1-P9-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-family",
+      "atom_type": "word",
+      "text": "family",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-finish",
+      "atom_type": "word",
+      "text": "finish",
+      "gloss": "完成；做好",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-football-player",
+      "atom_type": "word",
+      "text": "football player",
+      "gloss": "足球运动员",
+      "linked_blocks": [
+        "TB-G5S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-friendly",
+      "atom_type": "word",
+      "text": "friendly",
+      "gloss": "友好的",
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D3",
+        "TB-G5S1U1-P7-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-funny",
+      "atom_type": "word",
+      "text": "funny",
+      "gloss": "滑稽的；可笑的",
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D2",
+        "TB-G5S1U1-P4-D3",
+        "TB-G5S1U1-P5-D1",
+        "TB-G5S1U1-P7-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-goals",
+      "atom_type": "word",
+      "text": "goals",
+      "gloss": "进球",
+      "linked_blocks": [
+        "TB-G5S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-happy",
+      "atom_type": "word",
+      "text": "happy",
+      "gloss": "高兴的",
+      "linked_blocks": [
+        "TB-G5S1U1-P6-D1",
+        "TB-G5S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-hard-working",
+      "atom_type": "word",
+      "text": "hard-working",
+      "gloss": "工作努力的；辛勤的",
+      "linked_blocks": [
+        "TB-G5S1U1-P2-D1",
+        "TB-G5S1U1-P8-D1",
+        "TB-G5S1U1-P9-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-head-teacher",
+      "atom_type": "word",
+      "text": "head teacher",
+      "gloss": "校长",
+      "linked_blocks": [
+        "TB-G5S1U1-P5-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-helpful",
+      "atom_type": "word",
+      "text": "helpful",
+      "gloss": "有用的；愿意帮忙的",
+      "linked_blocks": [
+        "TB-G5S1U1-P8-D1",
+        "TB-G5S1U1-P9-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-him",
+      "atom_type": "word",
+      "text": "him",
+      "gloss": "（用作宾语或表语）他",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-is",
+      "atom_type": "word",
+      "text": "is",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P10-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-kind",
+      "atom_type": "word",
+      "text": "kind",
+      "gloss": "体贴的；慈祥的；宽容的",
+      "linked_blocks": [
+        "TB-G5S1U1-P3-D1",
+        "TB-G5S1U1-P5-D1",
+        "TB-G5S1U1-P7-D2",
+        "TB-G5S1U1-P7-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-know",
+      "atom_type": "word",
+      "text": "know",
+      "gloss": "知道；了解",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-many",
+      "atom_type": "word",
+      "text": "many",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-mother",
+      "atom_type": "word",
+      "text": "mother",
+      "gloss": "妈妈",
+      "linked_blocks": [
+        "TB-G5S1U1-P7-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-ms",
+      "atom_type": "word",
+      "text": "Ms",
+      "gloss": "（用于女子的姓氏或姓名前，不指明婚否）女士",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-music-teacher",
+      "atom_type": "word",
+      "text": "music teacher",
+      "gloss": "音乐老师",
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-nice",
+      "atom_type": "word",
+      "text": "nice",
+      "gloss": "好的；令人愉快的",
+      "linked_blocks": [
+        "TB-G5S1U1-P7-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-old",
+      "atom_type": "word",
+      "text": "old",
+      "gloss": "老的；年纪大的",
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D2",
+        "TB-G5S1U1-P4-D3",
+        "TB-G5S1U1-P5-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-our",
+      "atom_type": "word",
+      "text": "our",
+      "gloss": "我们的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-pe-teacher",
+      "atom_type": "word",
+      "text": "PE teacher",
+      "gloss": "体育老师",
+      "linked_blocks": [
+        "TB-G5S1U1-P3-D1",
+        "TB-G5S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-polite",
+      "atom_type": "word",
+      "text": "polite",
+      "gloss": "有礼貌的；客气的",
+      "linked_blocks": [
+        "TB-G5S1U1-P2-D1",
+        "TB-G5S1U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-quiet",
+      "atom_type": "word",
+      "text": "quiet",
+      "gloss": "安静的",
+      "linked_blocks": [
+        "TB-G5S1U1-P2-D1",
+        "TB-G5S1U1-P4-D3",
+        "TB-G5S1U1-P7-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-robot",
+      "atom_type": "word",
+      "text": "robot",
+      "gloss": "机器人",
+      "linked_blocks": [
+        "TB-G5S1U1-P9-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-scores",
+      "atom_type": "word",
+      "text": "scores",
+      "gloss": "得分",
+      "linked_blocks": [
+        "TB-G5S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-short",
+      "atom_type": "word",
+      "text": "short",
+      "gloss": "矮的",
+      "linked_blocks": [
+        "TB-G5S1U1-P9-D1",
+        "TB-G5S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-shy",
+      "atom_type": "word",
+      "text": "shy",
+      "gloss": "羞怯的；腼腆的；怕生的",
+      "linked_blocks": [
+        "TB-G5S1U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sometimes",
+      "atom_type": "word",
+      "text": "sometimes",
+      "gloss": "有时；间或",
+      "linked_blocks": [
+        "TB-G5S1U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sorry",
+      "atom_type": "word",
+      "text": "sorry",
+      "gloss": "对不起的",
+      "linked_blocks": [
+        "TB-G5S1U1-P6-D1",
+        "TB-G5S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-speak",
+      "atom_type": "word",
+      "text": "speak",
+      "gloss": "会说；会讲（某种语言）；用（某种语言）说话",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-strict",
+      "atom_type": "word",
+      "text": "strict",
+      "gloss": "要求严格的；严厉的",
+      "linked_blocks": [
+        "TB-G5S1U1-P3-D1",
+        "TB-G5S1U1-P5-D1",
+        "TB-G5S1U1-P5-D3",
+        "TB-G5S1U1-P7-D2",
+        "TB-G5S1U1-P7-D3",
+        "TB-G5S1U1-P9-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-strong",
+      "atom_type": "word",
+      "text": "strong",
+      "gloss": "强壮的",
+      "linked_blocks": [
+        "TB-G5S1U1-P9-D1",
+        "TB-G5S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sunny",
+      "atom_type": "word",
+      "text": "sunny",
+      "gloss": "晴朗的",
+      "linked_blocks": [
+        "TB-G5S1U1-P6-D1",
+        "TB-G5S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-tall",
+      "atom_type": "word",
+      "text": "tall",
+      "gloss": "高的",
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D3",
+        "TB-G5S1U1-P5-D3",
+        "TB-G5S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-thin",
+      "atom_type": "word",
+      "text": "thin",
+      "gloss": "瘦的",
+      "linked_blocks": [
+        "TB-G5S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-will",
+      "atom_type": "word",
+      "text": "will",
+      "gloss": "（谈及将来）将要",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-windy",
+      "atom_type": "word",
+      "text": "windy",
+      "gloss": "有风的",
+      "linked_blocks": [
+        "TB-G5S1U1-P6-D1",
+        "TB-G5S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-young",
+      "atom_type": "word",
+      "text": "young",
+      "gloss": "年轻的；岁数不大的",
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D2",
+        "TB-G5S1U1-P4-D3",
+        "TB-G5S1U1-P5-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-ask-and-answer-about-people-s-identity-and-characteristics",
+      "atom_type": "sentence_pattern",
+      "text": "Ask and answer about people's identity and characteristics.",
+      "gloss": "询问并回答关于人物身份和性格特征的问题。",
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-i-join-you",
+      "atom_type": "sentence_pattern",
+      "text": "Can I join you?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-choose-and-write",
+      "atom_type": "sentence_pattern",
+      "text": "Choose and write.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P10-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-choose-one-sentence-from-above-and-write",
+      "atom_type": "sentence_pattern",
+      "text": "Choose one sentence from above and write.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P6-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-design-a-robot-of-your-own-draw-and-write-about-him-her",
+      "atom_type": "sentence_pattern",
+      "text": "Design a robot of your own. Draw and write about him/her.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P9-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-not-judge-people-by-their-appearance",
+      "atom_type": "sentence_pattern",
+      "text": "Do not judge people by their appearance.",
+      "gloss": "不要以貌取人。",
+      "linked_blocks": [
+        "TB-G5S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-know-mr-young",
+      "atom_type": "sentence_pattern",
+      "text": "Do you know Mr Young?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-know-her",
+      "atom_type": "sentence_pattern",
+      "text": "Do you know her?",
+      "gloss": "你认识她吗？",
+      "linked_blocks": [
+        "TB-G5S1U1-P7-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-s-hard-working",
+      "atom_type": "sentence_pattern",
+      "text": "He's hard-working.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P8-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-s-polite",
+      "atom_type": "sentence_pattern",
+      "text": "He's polite.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P8-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hello",
+      "atom_type": "sentence_pattern",
+      "text": "Hello.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hello-my-name-is-oliver",
+      "atom_type": "sentence_pattern",
+      "text": "Hello. My name is Oliver.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hey-ms-wang-will-be-our-new-chinese-teacher",
+      "atom_type": "sentence_pattern",
+      "text": "Hey, Ms Wang will be our new Chinese teacher.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P7-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-introduce-and-describe-people-using-adjectives",
+      "atom_type": "sentence_pattern",
+      "text": "Introduce and describe people using adjectives.",
+      "gloss": "学习介绍他人并使用形容词描述人物。",
+      "linked_blocks": [
+        "TB-G5S1U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-he-funny-yes-he-is",
+      "atom_type": "sentence_pattern",
+      "text": "Is he funny? Yes, he is.",
+      "gloss": "他有趣吗？是的，他很有趣。",
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-he-young",
+      "atom_type": "sentence_pattern",
+      "text": "Is he young?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D2",
+        "TB-G5S1U1-P5-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-he-young-no-he-isn-t-he-s-old",
+      "atom_type": "sentence_pattern",
+      "text": "Is he young? No, he isn't. He's old.",
+      "gloss": "他年轻吗？不，他不年轻。他年纪大了。",
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-he-young-yes-he-is",
+      "atom_type": "sentence_pattern",
+      "text": "Is he young? Yes, he is.",
+      "gloss": "他年轻吗？是的，他很年轻。",
+      "linked_blocks": [
+        "TB-G5S1U1-P5-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-she-kind",
+      "atom_type": "sentence_pattern",
+      "text": "Is she kind?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-she-strict",
+      "atom_type": "sentence_pattern",
+      "text": "Is she strict?",
+      "gloss": "她严格吗？",
+      "linked_blocks": [
+        "TB-G5S1U1-P3-D1",
+        "TB-G5S1U1-P7-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-she-he-yes-she-he-is-no-she-he-isn-t",
+      "atom_type": "sentence_pattern",
+      "text": "Is she/he ...? Yes, she/he is. / No, she/he isn't.",
+      "gloss": "她/他...吗？是的，她/他是。/ 不，她/他不是。",
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-learn",
+      "atom_type": "sentence_pattern",
+      "text": "Let's learn",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P5-D1",
+        "TB-G5S1U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-again-and-answer",
+      "atom_type": "sentence_pattern",
+      "text": "Listen again and answer.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P10-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P10-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-for-key-information-to-identify-a-person",
+      "atom_type": "sentence_pattern",
+      "text": "Listen for key information to identify a person.",
+      "gloss": "听取关键信息来辨认人物。",
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-number-and-say",
+      "atom_type": "sentence_pattern",
+      "text": "Listen, number and say.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-write-and-say",
+      "atom_type": "sentence_pattern",
+      "text": "Listen, write and say.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P6-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-miss-white",
+      "atom_type": "sentence_pattern",
+      "text": "Miss White.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-mr-jones",
+      "atom_type": "sentence_pattern",
+      "text": "Mr Jones.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P5-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-ms-wang-is-a-new-teacher-here-listen-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "Ms Wang is a new teacher here. Listen and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-ms-wang-will-be-our-new-chinese-teacher",
+      "atom_type": "sentence_pattern",
+      "text": "Ms Wang will be our new Chinese teacher.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-i-don-t-who-is-he",
+      "atom_type": "sentence_pattern",
+      "text": "No, I don't. Who is he?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-our-new-pe-teacher-will-come-today",
+      "atom_type": "sentence_pattern",
+      "text": "Our new PE teacher will come today!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-asking-what-s-like-about-different-people",
+      "atom_type": "sentence_pattern",
+      "text": "Practice asking 'What's ... like?' about different people.",
+      "gloss": "练习用“...是什么样的？”来询问不同人物的性格。",
+      "linked_blocks": [
+        "TB-G5S1U1-P7-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-and-understand-a-descriptive-text-about-a-character",
+      "atom_type": "sentence_pattern",
+      "text": "Read and understand a descriptive text about a character.",
+      "gloss": "阅读并理解一篇关于人物的描述性短文。",
+      "linked_blocks": [
+        "TB-G5S1U1-P9-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-really-what-s-he-like",
+      "atom_type": "sentence_pattern",
+      "text": "Really? What's he like?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-really-what-s-she-like",
+      "atom_type": "sentence_pattern",
+      "text": "Really? What's she like?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P7-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-she-s-kind",
+      "atom_type": "sentence_pattern",
+      "text": "She's kind.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P7-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-she-s-quiet",
+      "atom_type": "sentence_pattern",
+      "text": "She's quiet.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P7-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-she-s-the-head-teacher-she-s-tall-she-s-strict",
+      "atom_type": "sentence_pattern",
+      "text": "She's the head teacher. She's tall. She's strict.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P5-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-she-s-very-kind",
+      "atom_type": "sentence_pattern",
+      "text": "She's very kind.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-subject-verb-agreement-with-the-verb-to-be-am-is-are",
+      "atom_type": "sentence_pattern",
+      "text": "Subject-verb agreement with the verb 'to be' (am, is, are).",
+      "gloss": "主语与be动词 (am, is, are) 的人称一致性。",
+      "linked_blocks": [
+        "TB-G5S1U1-P10-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-that-is-wu-binbin-he-s-very-clever-he-s-polite-too",
+      "atom_type": "sentence_pattern",
+      "text": "That is Wu Binbin. He's very clever. He's polite, too.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-letter-y-at-the-end-of-a-word-can-sound-like-i",
+      "atom_type": "sentence_pattern",
+      "text": "The letter 'y' at the end of a word can sound like /i/.",
+      "gloss": "单词末尾的字母 'y' 可以发 /i/ 音。",
+      "linked_blocks": [
+        "TB-G5S1U1-P6-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-this-is-amy-she-s-quiet-she-s-very-hard-working",
+      "atom_type": "sentence_pattern",
+      "text": "This is Amy. She's quiet. She's very hard-working.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-this-is-that-is",
+      "atom_type": "sentence_pattern",
+      "text": "This is... / That is...",
+      "gloss": "这是... / 那是...",
+      "linked_blocks": [
+        "TB-G5S1U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-use-he-is-she-is-and-they-are-with-adjectives-to-describe-people",
+      "atom_type": "sentence_pattern",
+      "text": "Use 'He is', 'She is', and 'They are' with adjectives to describe people.",
+      "gloss": "使用 'He is', 'She is' 和 'They are' 配合形容词来描述人物。",
+      "linked_blocks": [
+        "TB-G5S1U1-P8-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-using-adjectives-to-describe-people-s-physical-characteristics",
+      "atom_type": "sentence_pattern",
+      "text": "Using adjectives to describe people's physical characteristics.",
+      "gloss": "使用形容词描述人的外貌特征。",
+      "linked_blocks": [
+        "TB-G5S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-have-a-new-pe-teacher-he-s-a-good-football-player",
+      "atom_type": "sentence_pattern",
+      "text": "We have a new PE teacher. He's a good football player.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-is-robin-like-read-and-tick-or-cross",
+      "atom_type": "sentence_pattern",
+      "text": "What is Robin like? Read and tick or cross.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P9-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-s-chen-jie-like",
+      "atom_type": "sentence_pattern",
+      "text": "What's Chen Jie like?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P7-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-s-wu-binbin-like",
+      "atom_type": "sentence_pattern",
+      "text": "What's Wu Binbin like?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P8-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-s-he-like",
+      "atom_type": "sentence_pattern",
+      "text": "What's he like?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P8-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-s-she-like",
+      "atom_type": "sentence_pattern",
+      "text": "What's she like?",
+      "gloss": "她是什么样的人？（用于询问性格特点）",
+      "linked_blocks": [
+        "TB-G5S1U1-P3-D1",
+        "TB-G5S1U1-P7-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-who-s-mrs-smith",
+      "atom_type": "sentence_pattern",
+      "text": "Who's Mrs Smith?",
+      "gloss": "史密斯夫人是谁？",
+      "linked_blocks": [
+        "TB-G5S1U1-P5-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-who-s-your-teacher",
+      "atom_type": "sentence_pattern",
+      "text": "Who's your ... teacher?",
+      "gloss": "你的...老师是谁？",
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-who-s-your-english-teacher",
+      "atom_type": "sentence_pattern",
+      "text": "Who's your English teacher?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-who-s-your-art-teacher",
+      "atom_type": "sentence_pattern",
+      "text": "Who's your art teacher?",
+      "gloss": "你的美术老师是谁？",
+      "linked_blocks": [
+        "TB-G5S1U1-P5-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-he-is",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, he is.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P5-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-she-is",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, she is.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P4-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-sometimes",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, sometimes.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-re-very-thin-and-so-short-can-you-play-football",
+      "atom_type": "sentence_pattern",
+      "text": "You're very thin and so short. Can you play football?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U1-P11-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S1U1-P2",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: What's he like?. 在教室里，老师正在向Oliver介绍新同学Amy和Wu Binbin，并描述了他们的性格特点。同学们之间在互相打招呼。",
+      "entry_probe_questions": [
+        "Do you know the word quiet?",
+        "Can you say: Introduce and describe people using adjectives."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U1-P2-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U1-P3",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: What's he like?. 在学校走廊，陈洁和约翰正在讨论新来的语文老师王老师，他们谈论了王老师的性格。同时，小松鼠兹普也提到了新来的体育老师。",
+      "entry_probe_questions": [
+        "Do you know the word kind?",
+        "Can you say: What's she like?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U1-P3-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U1-P4",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: What's he like?. 吴彬彬和奥利弗正在谈论他们的音乐老师杨老师（Mr Young），讨论了他的年龄和性格特点。",
+      "entry_probe_questions": [
+        "Do you know the word music teacher?",
+        "Can you say: Ask and answer about people's identity and characteristics."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U1-P4-D2",
+        "TB-G5S1U1-P4-D3",
+        "TB-G5S1U1-P4-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U1-P5",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: What's he like?. 通过展示五位不同科目老师的图片，学习描述人物性格和年龄的五个核心形容词。",
+      "entry_probe_questions": [
+        "Do you know the word old?",
+        "Can you say: Let's learn"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U1-P5-D1",
+        "TB-G5S1U1-P5-D2",
+        "TB-G5S1U1-P5-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U1-P6",
+      "page_type": "phonics",
+      "page_intro_cn": "Theme: Phonics: -y ending. 听录音，并按照听到的顺序为单词编号。",
+      "entry_probe_questions": [
+        "Do you know the word happy?",
+        "Can you say: Listen, number and say."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U1-P6-D2",
+        "TB-G5S1U1-P6-D3",
+        "TB-G5S1U1-P6-D1",
+        "TB-G5S1U1-P6-D4"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U1-P7",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: What's he like?. 在教室里，陈洁告诉约翰新来的语文老师王老师其实是她的妈妈，并和约翰讨论了王老师的性格特点。",
+      "entry_probe_questions": [
+        "Do you know the word kind?",
+        "Can you say: What's she like?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U1-P7-D2",
+        "TB-G5S1U1-P7-D3",
+        "TB-G5S1U1-P7-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U1-P8",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: What's he like?. 在一个教室场景中，通过展示不同学生的行为来学习五个新的描述性格的形容词。",
+      "entry_probe_questions": [
+        "Do you know the word polite?",
+        "Can you say: Let's learn"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U1-P8-D1",
+        "TB-G5S1U1-P8-D2",
+        "TB-G5S1U1-P8-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U1-P9",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Read and write about a character. 一篇关于机器人罗宾的日记体短文，介绍了它的来历、外貌、能力和性格特点。",
+      "entry_probe_questions": [
+        "Do you know the word robot?",
+        "Can you say: Read and understand a descriptive text about a character."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U1-P9-D1",
+        "TB-G5S1U1-P9-D2",
+        "TB-G5S1U1-P9-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U1-P10",
+      "page_type": "listening",
+      "page_intro_cn": "Theme: Unit 1 Check & Wrap-up. 学生通过听力辨别两位老师的职业，并圈出正确答案。",
+      "entry_probe_questions": [
+        "Can you say: Listen and circle."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U1-P10-D1",
+        "TB-G5S1U1-P10-D2",
+        "TB-G5S1U1-P10-D4",
+        "TB-G5S1U1-P10-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U1-P11",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Story time. 一个连环画故事，讲述了一群小动物在等待新体育老师时，遇到了一只又瘦又小的兔子。他们起初小看了兔子，但兔子在足球比赛中展示了惊人的球技，并最终揭示自己就是新来的体育老师。故事传达了不要以貌取人的道理。",
+      "entry_probe_questions": [
+        "Do you know the word PE teacher?",
+        "Can you say: Do not judge people by their appearance."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U1-P11-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S1U1-P2-D1",
+      "page_uid": "TB-G5S1U1-P2",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U1-P2-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "在教室里，老师正在向Oliver介绍新同学Amy和Wu Binbin，并描述了他们的性格特点。同学们之间在互相打招呼。 Key patterns: Introduce and describe people using adjectives.; This is... / That is...",
+      "focus_vocabulary": [
+        "quiet",
+        "hard-working",
+        "clever",
+        "polite"
+      ],
+      "core_patterns": [
+        "Introduce and describe people using adjectives.",
+        "This is... / That is...",
+        "This is Amy. She's quiet. She's very hard-working.",
+        "That is Wu Binbin. He's very clever. He's polite, too.",
+        "Hello. My name is Oliver.",
+        "Hello."
+      ],
+      "allowed_answer_scope": [
+        "This is Amy. She's quiet. She's very hard-working.",
+        "That is Wu Binbin. He's very clever. He's polite, too.",
+        "Hello. My name is Oliver.",
+        "Hi.",
+        "Hello."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word quiet?",
+        "Can you say: Introduce and describe people using adjectives."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U1-P2-D1-goal"
+      ],
+      "branchable_topics": [
+        "quiet",
+        "hard-working",
+        "clever",
+        "polite",
+        "What's he like?",
+        "Unit One"
+      ],
+      "return_anchors": [
+        "Introduce and describe people using adjectives.",
+        "This is... / That is...",
+        "This is Amy. She's quiet. She's very hard-working."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P3-D1",
+      "page_uid": "TB-G5S1U1-P3",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U1-P3-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "在学校走廊，陈洁和约翰正在讨论新来的语文老师王老师，他们谈论了王老师的性格。同时，小松鼠兹普也提到了新来的体育老师。 Key patterns: What's she like?; Is she strict?",
+      "focus_vocabulary": [
+        "kind",
+        "strict",
+        "sometimes",
+        "PE teacher"
+      ],
+      "core_patterns": [
+        "What's she like?",
+        "Is she strict?",
+        "Ms Wang will be our new Chinese teacher.",
+        "She's very kind.",
+        "Yes, sometimes.",
+        "We have a new PE teacher. He's a good football player."
+      ],
+      "allowed_answer_scope": [
+        "Ms Wang will be our new Chinese teacher.",
+        "She's very kind.",
+        "Yes, sometimes.",
+        "We have a new PE teacher. He's a good football player.",
+        "Cool!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word kind?",
+        "Can you say: What's she like?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U1-P3-D1-goal"
+      ],
+      "branchable_topics": [
+        "kind",
+        "strict",
+        "sometimes",
+        "PE teacher",
+        "What's he like?"
+      ],
+      "return_anchors": [
+        "What's she like?",
+        "Is she strict?",
+        "Ms Wang will be our new Chinese teacher."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P4-D1",
+      "page_uid": "TB-G5S1U1-P4",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U1-P4-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "学生需要根据听力内容，从三幅图中勾选出描述李老师（Mr Li）的正确图片。三幅图分别描绘了体育老师、数学老师和语文老师。 Key patterns: Listen for key information to identify a person.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen for key information to identify a person."
+      ],
+      "allowed_answer_scope": [
+        "Picture 2"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen for key information to identify a person."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U1-P4-D1-goal"
+      ],
+      "branchable_topics": [
+        "What's he like?",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen for key information to identify a person."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P4-D2",
+      "page_uid": "TB-G5S1U1-P4",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U1-P4-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "吴彬彬和奥利弗正在谈论他们的音乐老师杨老师（Mr Young），讨论了他的年龄和性格特点。 Key patterns: Ask and answer about people's identity and characteristics.; Is he young? No, he isn't. He's old.",
+      "focus_vocabulary": [
+        "music teacher",
+        "young",
+        "old",
+        "funny"
+      ],
+      "core_patterns": [
+        "Ask and answer about people's identity and characteristics.",
+        "Is he young? No, he isn't. He's old.",
+        "Is he funny? Yes, he is.",
+        "Do you know Mr Young?",
+        "No, I don't. Who is he?",
+        "Is he young?"
+      ],
+      "allowed_answer_scope": [
+        "He's our music teacher.",
+        "No, he isn't. He's old.",
+        "Yes, he is.",
+        "Great! I like funny teachers."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word music teacher?",
+        "Can you say: Ask and answer about people's identity and characteristics."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U1-P4-D3",
+        "TB-G5S1U1-P4-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U1-P4-D2-goal"
+      ],
+      "branchable_topics": [
+        "music teacher",
+        "young",
+        "old",
+        "funny",
+        "What's he like?",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "Ask and answer about people's identity and characteristics.",
+        "Is he young? No, he isn't. He's old.",
+        "Is he funny? Yes, he is."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P4-D3",
+      "page_uid": "TB-G5S1U1-P4",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U1-P4-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "提供了一个词汇库和一段示范对话，引导学生练习谈论自己的老师。示范对话以怀特老师（Miss White）为例。 Key patterns: Who's your ... teacher?; Is she/he ...? Yes, she/he is. / No, she/he isn't.",
+      "focus_vocabulary": [
+        "tall",
+        "funny",
+        "friendly",
+        "young",
+        "quiet",
+        "old"
+      ],
+      "core_patterns": [
+        "Who's your ... teacher?",
+        "Is she/he ...? Yes, she/he is. / No, she/he isn't.",
+        "Who's your English teacher?",
+        "Is she kind?",
+        "Miss White.",
+        "Yes, she is."
+      ],
+      "allowed_answer_scope": [
+        "Miss White.",
+        "Yes, she is."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word tall?",
+        "Can you say: Who's your ... teacher?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U1-P4-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U1-P4-D3-goal"
+      ],
+      "branchable_topics": [
+        "tall",
+        "funny",
+        "friendly",
+        "young",
+        "quiet",
+        "old",
+        "What's he like?",
+        "Talk about your teachers."
+      ],
+      "return_anchors": [
+        "Who's your ... teacher?",
+        "Is she/he ...? Yes, she/he is. / No, she/he isn't.",
+        "Who's your English teacher?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P5-D1",
+      "page_uid": "TB-G5S1U1-P5",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S1U1-P5-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "通过展示五位不同科目老师的图片，学习描述人物性格和年龄的五个核心形容词。 Key patterns: Let's learn",
+      "focus_vocabulary": [
+        "old",
+        "young",
+        "funny",
+        "kind",
+        "strict"
+      ],
+      "core_patterns": [
+        "Let's learn"
+      ],
+      "allowed_answer_scope": [
+        "old",
+        "young",
+        "funny",
+        "kind",
+        "strict"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word old?",
+        "Can you say: Let's learn"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U1-P5-D2",
+        "TB-G5S1U1-P5-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U1-P5-D1-goal"
+      ],
+      "branchable_topics": [
+        "old",
+        "young",
+        "funny",
+        "kind",
+        "strict",
+        "What's he like?",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Let's learn"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P5-D2",
+      "page_uid": "TB-G5S1U1-P5",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U1-P5-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "在学习新词汇后，提供一段示范对话，练习询问老师身份和特点。 Key patterns: Who's your art teacher?; Is he young? Yes, he is.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Who's your art teacher?",
+        "Is he young? Yes, he is.",
+        "Is he young?",
+        "Mr Jones.",
+        "Yes, he is."
+      ],
+      "allowed_answer_scope": [
+        "Mr Jones.",
+        "Yes, he is."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Who's your art teacher?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U1-P5-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U1-P5-D2-goal"
+      ],
+      "branchable_topics": [
+        "What's he like?",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Who's your art teacher?",
+        "Is he young? Yes, he is.",
+        "Is he young?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P5-D3",
+      "page_uid": "TB-G5S1U1-P5",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U1-P5-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "根据图片提示（校长史密斯夫人），进行一问一答的练习，巩固所学句型。 Key patterns: Who's Mrs Smith?; She's the head teacher. She's tall. She's strict.",
+      "focus_vocabulary": [
+        "head teacher",
+        "tall",
+        "strict"
+      ],
+      "core_patterns": [
+        "Who's Mrs Smith?",
+        "She's the head teacher. She's tall. She's strict."
+      ],
+      "allowed_answer_scope": [
+        "She's the head teacher. She's tall. She's strict."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word head teacher?",
+        "Can you say: Who's Mrs Smith?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U1-P5-D3-goal"
+      ],
+      "branchable_topics": [
+        "head teacher",
+        "tall",
+        "strict",
+        "What's he like?",
+        "Ask and answer"
+      ],
+      "return_anchors": [
+        "Who's Mrs Smith?",
+        "She's the head teacher. She's tall. She's strict."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P6-D1",
+      "page_uid": "TB-G5S1U1-P6",
+      "page_type": "phonics",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G5S1U1-P6-D1"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "学习以字母 'y' 结尾且发 /i/ 音的单词。指令为'读、听并跟唱'。 Key patterns: The letter 'y' at the end of a word can sound like /i/.",
+      "focus_vocabulary": [
+        "baby",
+        "happy",
+        "windy",
+        "sunny",
+        "sorry"
+      ],
+      "core_patterns": [
+        "The letter 'y' at the end of a word can sound like /i/."
+      ],
+      "allowed_answer_scope": [
+        "baby",
+        "happy",
+        "windy",
+        "sunny",
+        "sorry"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word baby?",
+        "Can you say: The letter 'y' at the end of a word can sound like /i/."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U1-P6-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U1-P6-D1-goal"
+      ],
+      "branchable_topics": [
+        "baby",
+        "happy",
+        "windy",
+        "sunny",
+        "sorry",
+        "Phonics: -y ending",
+        "Let's spell"
+      ],
+      "return_anchors": [
+        "The letter 'y' at the end of a word can sound like /i/."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P6-D2",
+      "page_uid": "TB-G5S1U1-P6",
+      "page_type": "phonics",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U1-P6-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，并按照听到的顺序为单词编号。 Key patterns: Listen, number and say.",
+      "focus_vocabulary": [
+        "happy",
+        "candy",
+        "many",
+        "windy",
+        "sunny",
+        "baby",
+        "sorry",
+        "family"
+      ],
+      "core_patterns": [
+        "Listen, number and say."
+      ],
+      "allowed_answer_scope": [
+        "1",
+        "6",
+        "7",
+        "2",
+        "4",
+        "3"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word happy?",
+        "Can you say: Listen, number and say."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U1-P6-D3",
+        "TB-G5S1U1-P6-D1",
+        "TB-G5S1U1-P6-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U1-P6-D2-goal"
+      ],
+      "branchable_topics": [
+        "happy",
+        "candy",
+        "many",
+        "windy",
+        "sunny",
+        "baby",
+        "sorry",
+        "family"
+      ],
+      "return_anchors": [
+        "Listen, number and say."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P6-D3",
+      "page_uid": "TB-G5S1U1-P6",
+      "page_type": "phonics",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U1-P6-D3"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，根据图片内容将正确的单词填入句子空格中。 Key patterns: Listen, write and say.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen, write and say."
+      ],
+      "allowed_answer_scope": [
+        "baby, happy",
+        "candy",
+        "sorry"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen, write and say."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U1-P6-D1",
+        "TB-G5S1U1-P6-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U1-P6-D3-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: -y ending",
+        "Let's spell"
+      ],
+      "return_anchors": [
+        "Listen, write and say."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P6-D4",
+      "page_uid": "TB-G5S1U1-P6",
+      "page_type": "phonics",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S1U1-P6-D4"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "从上一题完成的三个句子中任选一句，抄写在横线上。 Key patterns: Choose one sentence from above and write.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Choose one sentence from above and write."
+      ],
+      "allowed_answer_scope": [
+        "The baby is happy."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Choose one sentence from above and write."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U1-P6-D4-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: -y ending",
+        "Let's spell"
+      ],
+      "return_anchors": [
+        "Choose one sentence from above and write."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P7-D1",
+      "page_uid": "TB-G5S1U1-P7",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U1-P7-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "学生需要根据听力内容，勾选出描述新来的王老师性格的正确选项。 Key patterns: Ms Wang is a new teacher here. Listen and tick.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Ms Wang is a new teacher here. Listen and tick."
+      ],
+      "allowed_answer_scope": [
+        "friendly"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Ms Wang is a new teacher here. Listen and tick."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U1-P7-D1-goal"
+      ],
+      "branchable_topics": [
+        "What's he like?",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Ms Wang is a new teacher here. Listen and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P7-D2",
+      "page_uid": "TB-G5S1U1-P7",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U1-P7-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "在教室里，陈洁告诉约翰新来的语文老师王老师其实是她的妈妈，并和约翰讨论了王老师的性格特点。 Key patterns: What's she like?; Do you know her?",
+      "focus_vocabulary": [
+        "kind",
+        "strict",
+        "mother"
+      ],
+      "core_patterns": [
+        "What's she like?",
+        "Do you know her?",
+        "Really? What's she like?",
+        "Is she strict?",
+        "Hey, Ms Wang will be our new Chinese teacher.",
+        "She's kind."
+      ],
+      "allowed_answer_scope": [
+        "Hey, Ms Wang will be our new Chinese teacher.",
+        "She's kind.",
+        "Yes, sometimes.",
+        "Yes. She's my mother!",
+        "Haha. Cool!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word kind?",
+        "Can you say: What's she like?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U1-P7-D3",
+        "TB-G5S1U1-P7-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U1-P7-D2-goal"
+      ],
+      "branchable_topics": [
+        "kind",
+        "strict",
+        "mother",
+        "What's he like?",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "What's she like?",
+        "Do you know her?",
+        "Really? What's she like?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P7-D3",
+      "page_uid": "TB-G5S1U1-P7",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U1-P7-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "此部分提供词汇库和示例对话，鼓励学生与同伴练习讨论老师或朋友的性格特点。 Key patterns: Practice asking 'What's ... like?' about different people.; What's Chen Jie like?",
+      "focus_vocabulary": [
+        "funny",
+        "kind",
+        "quiet",
+        "strict",
+        "nice",
+        "friendly"
+      ],
+      "core_patterns": [
+        "Practice asking 'What's ... like?' about different people.",
+        "What's Chen Jie like?",
+        "She's quiet."
+      ],
+      "allowed_answer_scope": [
+        "She's quiet."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word funny?",
+        "Can you say: Practice asking 'What's ... like?' about different people."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U1-P7-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U1-P7-D3-goal"
+      ],
+      "branchable_topics": [
+        "funny",
+        "kind",
+        "quiet",
+        "strict",
+        "nice",
+        "friendly",
+        "What's he like?",
+        "What are your teachers/friends like? Talk with your partner."
+      ],
+      "return_anchors": [
+        "Practice asking 'What's ... like?' about different people.",
+        "What's Chen Jie like?",
+        "She's quiet."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P8-D1",
+      "page_uid": "TB-G5S1U1-P8",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S1U1-P8-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "在一个教室场景中，通过展示不同学生的行为来学习五个新的描述性格的形容词。 Key patterns: Let's learn",
+      "focus_vocabulary": [
+        "polite",
+        "shy",
+        "helpful",
+        "hard-working",
+        "clever"
+      ],
+      "core_patterns": [
+        "Let's learn"
+      ],
+      "allowed_answer_scope": [
+        "polite",
+        "shy",
+        "helpful",
+        "hard-working",
+        "clever"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word polite?",
+        "Can you say: Let's learn"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U1-P8-D2",
+        "TB-G5S1U1-P8-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U1-P8-D1-goal"
+      ],
+      "branchable_topics": [
+        "polite",
+        "shy",
+        "helpful",
+        "hard-working",
+        "clever",
+        "What's he like?",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Let's learn"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P8-D2",
+      "page_uid": "TB-G5S1U1-P8",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U1-P8-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "在学习新词汇后，提供一段示范对话，练习使用新学的形容词。 Key patterns: What's Wu Binbin like?; He's hard-working.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What's Wu Binbin like?",
+        "He's hard-working."
+      ],
+      "allowed_answer_scope": [
+        "He's hard-working."
+      ],
+      "entry_probe_questions": [
+        "Can you say: What's Wu Binbin like?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U1-P8-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U1-P8-D2-goal"
+      ],
+      "branchable_topics": [
+        "What's he like?",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "What's Wu Binbin like?",
+        "He's hard-working."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P8-D3",
+      "page_uid": "TB-G5S1U1-P8",
+      "page_type": "vocabulary",
+      "block_type": "practice_match",
+      "source_refs": [
+        "TB-G5S1U1-P8-D3"
+      ],
+      "teaching_goal": "Work on the practice match activity.",
+      "teaching_summary": "学生需要将四幅图片与四个描述性的句子进行匹配，并练习口头表达。活动包含一个示范对话。 Key patterns: Use 'He is', 'She is', and 'They are' with adjectives to describe people.; What's he like?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Use 'He is', 'She is', and 'They are' with adjectives to describe people.",
+        "What's he like?",
+        "He's polite."
+      ],
+      "allowed_answer_scope": [
+        "She is shy.",
+        "He is polite.",
+        "They are helpful.",
+        "They are hard-working."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Use 'He is', 'She is', and 'They are' with adjectives to describe people."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U1-P8-D3-goal"
+      ],
+      "branchable_topics": [
+        "What's he like?",
+        "Match and say"
+      ],
+      "return_anchors": [
+        "Use 'He is', 'She is', and 'They are' with adjectives to describe people.",
+        "What's he like?",
+        "He's polite."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P9-D1",
+      "page_uid": "TB-G5S1U1-P9",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S1U1-P9-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一篇关于机器人罗宾的日记体短文，介绍了它的来历、外貌、能力和性格特点。 Key patterns: Read and understand a descriptive text about a character.",
+      "focus_vocabulary": [
+        "robot",
+        "short",
+        "strong",
+        "clever",
+        "hard-working",
+        "helpful",
+        "strict"
+      ],
+      "core_patterns": [
+        "Read and understand a descriptive text about a character."
+      ],
+      "allowed_answer_scope": [
+        "robot",
+        "short",
+        "strong",
+        "clever",
+        "hard-working",
+        "helpful"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word robot?",
+        "Can you say: Read and understand a descriptive text about a character."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U1-P9-D2",
+        "TB-G5S1U1-P9-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U1-P9-D1-goal"
+      ],
+      "branchable_topics": [
+        "robot",
+        "short",
+        "strong",
+        "clever",
+        "hard-working",
+        "helpful",
+        "strict",
+        "Read and write about a character"
+      ],
+      "return_anchors": [
+        "Read and understand a descriptive text about a character."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P9-D2",
+      "page_uid": "TB-G5S1U1-P9",
+      "page_type": "reading",
+      "block_type": "practice_true_false",
+      "source_refs": [
+        "TB-G5S1U1-P9-D2"
+      ],
+      "teaching_goal": "Work on the practice true false activity.",
+      "teaching_summary": "根据阅读内容，判断表格中的形容词是否符合对罗宾的描述，并用勾或叉作答。 Key patterns: What is Robin like? Read and tick or cross.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What is Robin like? Read and tick or cross."
+      ],
+      "allowed_answer_scope": [
+        "X",
+        "√"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What is Robin like? Read and tick or cross."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U1-P9-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U1-P9-D2-goal"
+      ],
+      "branchable_topics": [
+        "Read and write about a character",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "What is Robin like? Read and tick or cross."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P9-D3",
+      "page_uid": "TB-G5S1U1-P9",
+      "page_type": "reading",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G5S1U1-P9-D3"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "一项写作任务，要求学生自己设计一个机器人，画出它的样子并写三句话来描述它。 Key patterns: Design a robot of your own. Draw and write about him/her.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Design a robot of your own. Draw and write about him/her."
+      ],
+      "allowed_answer_scope": [
+        "Design a robot of your own. Draw and write about him/her."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Design a robot of your own. Draw and write about him/her."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U1-P9-D3-goal"
+      ],
+      "branchable_topics": [
+        "Read and write about a character",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "Design a robot of your own. Draw and write about him/her."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P10-D1",
+      "page_uid": "TB-G5S1U1-P10",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U1-P10-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "学生通过听力辨别两位老师的职业，并圈出正确答案。 Key patterns: Listen and circle.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "science",
+        "music"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U1-P10-D2",
+        "TB-G5S1U1-P10-D4",
+        "TB-G5S1U1-P10-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U1-P10-D1-goal"
+      ],
+      "branchable_topics": [
+        "Unit 1 Check & Wrap-up",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P10-D2",
+      "page_uid": "TB-G5S1U1-P10",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U1-P10-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "学生再次听录音，回答关于两位老师性格特点的问题。 Key patterns: Listen again and answer.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen again and answer."
+      ],
+      "allowed_answer_scope": [
+        "She is strict.",
+        "He is kind."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen again and answer."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U1-P10-D4",
+        "TB-G5S1U1-P10-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U1-P10-D2-goal"
+      ],
+      "branchable_topics": [
+        "Unit 1 Check & Wrap-up",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Listen again and answer."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P10-D3",
+      "page_uid": "TB-G5S1U1-P10",
+      "page_type": "listening",
+      "block_type": "practice_match",
+      "source_refs": [
+        "TB-G5S1U1-P10-D3"
+      ],
+      "teaching_goal": "Work on the practice match activity.",
+      "teaching_summary": "通过连线练习，总结并巩固人称代词与be动词（am, is, are）的正确搭配关系。 Key patterns: Subject-verb agreement with the verb 'to be' (am, is, are).",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Subject-verb agreement with the verb 'to be' (am, is, are)."
+      ],
+      "allowed_answer_scope": [
+        "are",
+        "am",
+        "is"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Subject-verb agreement with the verb 'to be' (am, is, are)."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U1-P10-D3-goal"
+      ],
+      "branchable_topics": [
+        "Unit 1 Check & Wrap-up",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Subject-verb agreement with the verb 'to be' (am, is, are)."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P10-D4",
+      "page_uid": "TB-G5S1U1-P10",
+      "page_type": "listening",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G5S1U1-P10-D4"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "看图，根据主语选择正确的be动词（am, is, are）填空，完成句子。 Key patterns: Choose and write.",
+      "focus_vocabulary": [
+        "am",
+        "is",
+        "are"
+      ],
+      "core_patterns": [
+        "Choose and write."
+      ],
+      "allowed_answer_scope": [
+        "am",
+        "is",
+        "are"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word am?",
+        "Can you say: Choose and write."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U1-P10-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U1-P10-D4-goal"
+      ],
+      "branchable_topics": [
+        "am",
+        "is",
+        "are",
+        "Unit 1 Check & Wrap-up",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Choose and write."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U1-P11-D1",
+      "page_uid": "TB-G5S1U1-P11",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S1U1-P11-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一个连环画故事，讲述了一群小动物在等待新体育老师时，遇到了一只又瘦又小的兔子。他们起初小看了兔子，但兔子在足球比赛中展示了惊人的球技，并最终揭示自己就是新来的体育老师。故事传达了不要以貌取人的道理。 Key patterns: Do not judge people by their appearance.; Using adjectives to describe people's physical characteristics.",
+      "focus_vocabulary": [
+        "PE teacher",
+        "football player",
+        "tall",
+        "strong",
+        "thin",
+        "short",
+        "scores",
+        "goals"
+      ],
+      "core_patterns": [
+        "Do not judge people by their appearance.",
+        "Using adjectives to describe people's physical characteristics.",
+        "Really? What's he like?",
+        "Can I join you?",
+        "You're very thin and so short. Can you play football?",
+        "Our new PE teacher will come today!"
+      ],
+      "allowed_answer_scope": [
+        "Our new PE teacher will come today!",
+        "I only know he's a good football player.",
+        "He must be tall and strong!",
+        "Shoot!",
+        "Oh, no! I missed!",
+        "Sure. Let me show you."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word PE teacher?",
+        "Can you say: Do not judge people by their appearance."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U1-P11-D1-goal"
+      ],
+      "branchable_topics": [
+        "PE teacher",
+        "football player",
+        "tall",
+        "strong",
+        "thin",
+        "short",
+        "scores",
+        "goals"
+      ],
+      "return_anchors": [
+        "Do not judge people by their appearance.",
+        "Using adjectives to describe people's physical characteristics.",
+        "Really? What's he like?"
+      ]
+    }
+  ]
+}

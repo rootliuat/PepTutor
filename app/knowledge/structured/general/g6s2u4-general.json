@@ -1,0 +1,2527 @@
+{
+  "pilot_id": "g6s2u4-general-v1",
+  "scope": {
+    "grade": "G6",
+    "semester": "S2",
+    "unit": "U4",
+    "pages": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/04.六年级下册语料.json",
+    "app/knowledge/raw/08.六年级下册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 20,
+    "source_kind": "textbook_source_json",
+    "source_format": "json"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 4",
+      "word": "dining hall",
+      "phonetic": "/'daɪnɪŋ ˌhɔːl/",
+      "chinese": "饭厅",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U4-P35-D1",
+        "TB-G6S2U4-P40-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "grass",
+      "phonetic": "/ɡrɑːs/",
+      "chinese": "草坪",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U4-P35-D1",
+        "TB-G6S2U4-P40-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "gym",
+      "phonetic": "/dʒɪm/",
+      "chinese": "体育馆",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U4-P33-D1",
+        "TB-G6S2U4-P35-D1",
+        "TB-G6S2U4-P40-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "ago",
+      "phonetic": "/ə'ɡəʊ/",
+      "chinese": "以前",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U4-P35-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "cycling",
+      "phonetic": "/'saɪklɪŋ/",
+      "chinese": "骑自行车运动（或活动）",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U4-P36-D2",
+        "TB-G6S2U4-P37-D1",
+        "TB-G6S2U4-P40-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "go cycling",
+      "chinese": "去骑自行车",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U4-P37-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "ice-skate",
+      "phonetic": "/'aɪsskeɪt/",
+      "chinese": "滑冰",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U4-P37-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "badminton",
+      "phonetic": "/'bædmɪntən/",
+      "chinese": "羽毛球运动",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U4-P37-D1",
+        "TB-G6S2U4-P40-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "star",
+      "phonetic": "/stɑː(r)/",
+      "chinese": "星",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "easy",
+      "phonetic": "/'iːzi/",
+      "chinese": "容易的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "look up",
+      "chinese": "（在词典中或通过电脑）查阅",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "Internet",
+      "phonetic": "/'ɪntənet/",
+      "chinese": "互联网",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U4-P34-D2",
+        "TB-G6S2U4-P35-D2"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "different",
+      "phonetic": "/'dɪfrənt/",
+      "chinese": "不同的",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U4-P36-D2"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "active",
+      "phonetic": "/'æktɪv/",
+      "chinese": "积极的；活跃的",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U4-P36-D2"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "race",
+      "phonetic": "/reɪs/",
+      "chinese": "赛跑",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U4-P38-D2"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "nothing",
+      "phonetic": "/'nʌθɪŋ/",
+      "chinese": "没有什么",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "thought",
+      "phonetic": "/θɔːt/",
+      "chinese": "（think 的过去式）想",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "felt",
+      "phonetic": "/felt/",
+      "chinese": "（feel 的过去式）感觉",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "cheetah",
+      "phonetic": "/'tʃiːtə/",
+      "chinese": "猎豹",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U4-P38-D2"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "trip",
+      "phonetic": "/trɪp/",
+      "chinese": "绊倒",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "woke",
+      "phonetic": "/wəʊk/",
+      "chinese": "（wake 的过去式）醒",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U4-P39-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "dream",
+      "phonetic": "/driːm/",
+      "chinese": "梦",
+      "emphasized": false,
+      "linked_block_uids": []
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G6S2U4-P32-D1-goal",
+      "block_uid": "TB-G6S2U4-P32-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P33-D1-goal",
+      "block_uid": "TB-G6S2U4-P33-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P34-D1-goal",
+      "block_uid": "TB-G6S2U4-P34-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P34-D2-goal",
+      "block_uid": "TB-G6S2U4-P34-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P34-D3-goal",
+      "block_uid": "TB-G6S2U4-P34-D3",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P35-D1-goal",
+      "block_uid": "TB-G6S2U4-P35-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P35-D2-goal",
+      "block_uid": "TB-G6S2U4-P35-D2",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P36-D1-goal",
+      "block_uid": "TB-G6S2U4-P36-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P36-D2-goal",
+      "block_uid": "TB-G6S2U4-P36-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P36-D3-goal",
+      "block_uid": "TB-G6S2U4-P36-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P37-D1-goal",
+      "block_uid": "TB-G6S2U4-P37-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P37-D2-goal",
+      "block_uid": "TB-G6S2U4-P37-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P38-D1-goal",
+      "block_uid": "TB-G6S2U4-P38-D1",
+      "category": "practice_speaking",
+      "text": "Work on the practice speaking activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P38-D2-goal",
+      "block_uid": "TB-G6S2U4-P38-D2",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P38-D3-goal",
+      "block_uid": "TB-G6S2U4-P38-D3",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P39-D1-goal",
+      "block_uid": "TB-G6S2U4-P39-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P39-D2-goal",
+      "block_uid": "TB-G6S2U4-P39-D2",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P40-D1-goal",
+      "block_uid": "TB-G6S2U4-P40-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P40-D2-goal",
+      "block_uid": "TB-G6S2U4-P40-D2",
+      "category": "summary_wrap_up",
+      "text": "Review and consolidate the core language point.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U4-P41-D1-goal",
+      "block_uid": "TB-G6S2U4-P41-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-months-ago",
+      "atom_type": "word",
+      "text": "... months ago",
+      "gloss": "……个月前",
+      "linked_blocks": [
+        "TB-G6S2U4-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-years-ago",
+      "atom_type": "word",
+      "text": "... years ago",
+      "gloss": "……年前",
+      "linked_blocks": [
+        "TB-G6S2U4-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-active",
+      "atom_type": "word",
+      "text": "active",
+      "gloss": "积极的；活跃的",
+      "linked_blocks": [
+        "TB-G6S2U4-P36-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-ago",
+      "atom_type": "word",
+      "text": "ago",
+      "gloss": "以前",
+      "linked_blocks": [
+        "TB-G6S2U4-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-badminton",
+      "atom_type": "word",
+      "text": "badminton",
+      "gloss": "羽毛球运动",
+      "linked_blocks": [
+        "TB-G6S2U4-P37-D1",
+        "TB-G6S2U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-building",
+      "atom_type": "word",
+      "text": "building",
+      "gloss": "建筑物",
+      "linked_blocks": [
+        "TB-G6S2U4-P34-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-cavemen",
+      "atom_type": "word",
+      "text": "cavemen",
+      "gloss": "山顶洞人；穴居人",
+      "linked_blocks": [
+        "TB-G6S2U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-cheetah",
+      "atom_type": "word",
+      "text": "cheetah",
+      "gloss": "猎豹",
+      "linked_blocks": [
+        "TB-G6S2U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-computer-room",
+      "atom_type": "word",
+      "text": "computer room",
+      "gloss": "电脑室",
+      "linked_blocks": [
+        "TB-G6S2U4-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-cycling",
+      "atom_type": "word",
+      "text": "cycling",
+      "gloss": "骑自行车运动（或活动）",
+      "linked_blocks": [
+        "TB-G6S2U4-P36-D2",
+        "TB-G6S2U4-P37-D1",
+        "TB-G6S2U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-different",
+      "atom_type": "word",
+      "text": "different",
+      "gloss": "不同的",
+      "linked_blocks": [
+        "TB-G6S2U4-P36-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-dining-hall",
+      "atom_type": "word",
+      "text": "dining hall",
+      "gloss": "饭厅",
+      "linked_blocks": [
+        "TB-G6S2U4-P35-D1",
+        "TB-G6S2U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-drank",
+      "atom_type": "word",
+      "text": "drank",
+      "gloss": "喝（drink的过去式）",
+      "linked_blocks": [
+        "TB-G6S2U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-dream",
+      "atom_type": "word",
+      "text": "dream",
+      "gloss": "梦",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-easy",
+      "atom_type": "word",
+      "text": "easy",
+      "gloss": "容易的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-fell",
+      "atom_type": "word",
+      "text": "fell",
+      "gloss": "摔倒",
+      "linked_blocks": [
+        "TB-G6S2U4-P38-D2",
+        "TB-G6S2U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-felt",
+      "atom_type": "word",
+      "text": "felt",
+      "gloss": "（feel 的过去式）感觉",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-gave",
+      "atom_type": "word",
+      "text": "gave",
+      "gloss": "给（give的过去式）",
+      "linked_blocks": [
+        "TB-G6S2U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-go-cycling",
+      "atom_type": "word",
+      "text": "go cycling",
+      "gloss": "去骑自行车",
+      "linked_blocks": [
+        "TB-G6S2U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-grass",
+      "atom_type": "word",
+      "text": "grass",
+      "gloss": "草坪",
+      "linked_blocks": [
+        "TB-G6S2U4-P35-D1",
+        "TB-G6S2U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-gym",
+      "atom_type": "word",
+      "text": "gym",
+      "gloss": "体育馆",
+      "linked_blocks": [
+        "TB-G6S2U4-P33-D1",
+        "TB-G6S2U4-P35-D1",
+        "TB-G6S2U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-had",
+      "atom_type": "word",
+      "text": "had",
+      "gloss": "有（have的过去式）",
+      "linked_blocks": [
+        "TB-G6S2U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-healthy",
+      "atom_type": "word",
+      "text": "healthy",
+      "gloss": "健康的",
+      "linked_blocks": [
+        "TB-G6S2U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-house-robots",
+      "atom_type": "word",
+      "text": "house robots",
+      "gloss": "家用机器人",
+      "linked_blocks": [
+        "TB-G6S2U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-ice-skate",
+      "atom_type": "word",
+      "text": "ice-skate",
+      "gloss": "滑冰",
+      "linked_blocks": [
+        "TB-G6S2U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-ice-skating",
+      "atom_type": "word",
+      "text": "ice-skating",
+      "gloss": "滑冰",
+      "linked_blocks": [
+        "TB-G6S2U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-internet",
+      "atom_type": "word",
+      "text": "Internet",
+      "gloss": "互联网",
+      "linked_blocks": [
+        "TB-G6S2U4-P34-D2",
+        "TB-G6S2U4-P35-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-last-month",
+      "atom_type": "word",
+      "text": "last month",
+      "gloss": "上个月",
+      "linked_blocks": [
+        "TB-G6S2U4-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-last-year",
+      "atom_type": "word",
+      "text": "last year",
+      "gloss": "去年",
+      "linked_blocks": [
+        "TB-G6S2U4-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-library",
+      "atom_type": "word",
+      "text": "library",
+      "gloss": "图书馆",
+      "linked_blocks": [
+        "TB-G6S2U4-P33-D1",
+        "TB-G6S2U4-P34-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-look-up",
+      "atom_type": "word",
+      "text": "look up",
+      "gloss": "（在词典中或通过电脑）查阅",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-nothing",
+      "atom_type": "word",
+      "text": "nothing",
+      "gloss": "没有什么",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-play-badminton",
+      "atom_type": "word",
+      "text": "play badminton",
+      "gloss": "打羽毛球",
+      "linked_blocks": [
+        "TB-G6S2U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-race",
+      "atom_type": "word",
+      "text": "race",
+      "gloss": "赛跑",
+      "linked_blocks": [
+        "TB-G6S2U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-raw-meat",
+      "atom_type": "word",
+      "text": "raw meat",
+      "gloss": "生肉",
+      "linked_blocks": [
+        "TB-G6S2U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-star",
+      "atom_type": "word",
+      "text": "star",
+      "gloss": "星",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-tang-dynasty",
+      "atom_type": "word",
+      "text": "Tang dynasty",
+      "gloss": "唐朝",
+      "linked_blocks": [
+        "TB-G6S2U4-P35-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-thought",
+      "atom_type": "word",
+      "text": "thought",
+      "gloss": "（think 的过去式）想",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-trip",
+      "atom_type": "word",
+      "text": "trip",
+      "gloss": "绊倒",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-tripped",
+      "atom_type": "word",
+      "text": "tripped",
+      "gloss": "绊倒",
+      "linked_blocks": [
+        "TB-G6S2U4-P38-D2",
+        "TB-G6S2U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-whale",
+      "atom_type": "word",
+      "text": "whale",
+      "gloss": "鲸",
+      "linked_blocks": [
+        "TB-G6S2U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-woke",
+      "atom_type": "word",
+      "text": "woke",
+      "gloss": "（wake 的过去式）醒",
+      "linked_blocks": [
+        "TB-G6S2U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-woke-up",
+      "atom_type": "word",
+      "text": "woke up",
+      "gloss": "醒来（wake up的过去式）",
+      "linked_blocks": [
+        "TB-G6S2U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-worried",
+      "atom_type": "word",
+      "text": "worried",
+      "gloss": "担心的",
+      "linked_blocks": [
+        "TB-G6S2U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-1-it-was-an-egg-now",
+      "atom_type": "sentence_pattern",
+      "text": "1. It was an egg. Now ...",
+      "gloss": "1. 它过去是个蛋。现在……",
+      "linked_blocks": [
+        "TB-G6S2U4-P40-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-2-it-was-raining-now",
+      "atom_type": "sentence_pattern",
+      "text": "2. It was raining. Now ...",
+      "gloss": "2. 过去在下雨。现在……",
+      "linked_blocks": [
+        "TB-G6S2U4-P40-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-3-in-summer-the-tree-was-green-now",
+      "atom_type": "sentence_pattern",
+      "text": "3. In summer, the tree was green. Now ...",
+      "gloss": "3. 在夏天，树是绿色的。现在……",
+      "linked_blocks": [
+        "TB-G6S2U4-P40-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-4-there-was-a-building-before-now",
+      "atom_type": "sentence_pattern",
+      "text": "4. There was a building before. Now ...",
+      "gloss": "4. 以前这里有一栋楼。现在……",
+      "linked_blocks": [
+        "TB-G6S2U4-P40-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-5-the-cat-was-on-the-chair-now",
+      "atom_type": "sentence_pattern",
+      "text": "5. The cat was on the chair. Now ...",
+      "gloss": "5. 猫过去在椅子上。现在……",
+      "linked_blocks": [
+        "TB-G6S2U4-P40-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-at-that-time-there-were-no-gyms",
+      "atom_type": "sentence_pattern",
+      "text": "At that time, there were no gyms.",
+      "gloss": "那时，没有体育馆。",
+      "linked_blocks": [
+        "TB-G6S2U4-P35-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-before-i-was-quiet-now-i-m-very-active-in-class",
+      "atom_type": "sentence_pattern",
+      "text": "Before, I was quiet. Now, I'm very active in class.",
+      "gloss": "以前，我很安静。现在，我在课堂上很活跃。",
+      "linked_blocks": [
+        "TB-G6S2U4-P36-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-binbin-that-s-your-father",
+      "atom_type": "sentence_pattern",
+      "text": "Binbin, that's your father.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U4-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-changes-are-all-around-us-talk-about-the-changes-below",
+      "atom_type": "sentence_pattern",
+      "text": "Changes are all around us. Talk about the changes below.",
+      "gloss": "变化在我们周围无处不在。谈论下面的变化。",
+      "linked_blocks": [
+        "TB-G6S2U4-P40-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-could-you-see-stars-at-night",
+      "atom_type": "sentence_pattern",
+      "text": "Could you see stars at night?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U4-P34-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-cross-out-the-words-you-didn-t-hear",
+      "atom_type": "sentence_pattern",
+      "text": "Cross out the words you didn't hear.",
+      "gloss": "划掉你没有听到的单词。",
+      "linked_blocks": [
+        "TB-G6S2U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-about-now",
+      "atom_type": "sentence_pattern",
+      "text": "How about now?",
+      "gloss": "现在呢？",
+      "linked_blocks": [
+        "TB-G6S2U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-did-mike-change",
+      "atom_type": "sentence_pattern",
+      "text": "How did Mike change?",
+      "gloss": "迈克是如何改变的？",
+      "linked_blocks": [
+        "TB-G6S2U4-P36-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-do-you-know-that",
+      "atom_type": "sentence_pattern",
+      "text": "How do you know that?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U4-P34-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-couldn-t-run-fast-or-play-basketball-well",
+      "atom_type": "sentence_pattern",
+      "text": "I couldn't run fast or play basketball well.",
+      "gloss": "我跑不快，篮球也打得不好。",
+      "linked_blocks": [
+        "TB-G6S2U4-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-didn-t-like-pe-class-very-much",
+      "atom_type": "sentence_pattern",
+      "text": "I didn't like PE class very much.",
+      "gloss": "我不是很喜欢体育课。",
+      "linked_blocks": [
+        "TB-G6S2U4-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-didn-t-like-winter-before",
+      "atom_type": "sentence_pattern",
+      "text": "I didn't like winter before.",
+      "gloss": "我以前不喜欢冬天。",
+      "linked_blocks": [
+        "TB-G6S2U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-didn-t-like-winter-before-i-thought-it-was-too-cold-and-i-couldn-t-go-cycling",
+      "atom_type": "sentence_pattern",
+      "text": "I didn't like winter before. I thought it was too cold, and I couldn't go cycling.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-thought-it-was-too-cold-and-i-couldn-t-go-cycling",
+      "atom_type": "sentence_pattern",
+      "text": "I thought it was too cold, and I couldn't go cycling.",
+      "gloss": "我觉得太冷了，而且我不能去骑自行车。",
+      "linked_blocks": [
+        "TB-G6S2U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-was-short-so-i-couldn-t-ride-my-bike-well",
+      "atom_type": "sentence_pattern",
+      "text": "I was short, so I couldn't ride my bike well.",
+      "gloss": "我以前很矮，所以我自行车骑得不好。",
+      "linked_blocks": [
+        "TB-G6S2U4-P36-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-in-the-tang-dynasty",
+      "atom_type": "sentence_pattern",
+      "text": "In the Tang dynasty ...",
+      "gloss": "在唐朝……",
+      "linked_blocks": [
+        "TB-G6S2U4-P35-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-john-come-and-look-at-mike-s-old-photos",
+      "atom_type": "sentence_pattern",
+      "text": "John, come and look at Mike's old photos!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U4-P36-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-number-the-pictures",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and number the pictures.",
+      "gloss": "听音给图片标号。",
+      "linked_blocks": [
+        "TB-G6S2U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-tick-or-cross",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and tick or cross.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U4-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-to-a-dialogue-about-a-dream-and-fill-in-the-missing-past-tense-verbs",
+      "atom_type": "sentence_pattern",
+      "text": "Listen to a dialogue about a dream and fill in the missing past tense verbs.",
+      "gloss": "听一段关于梦的对话并填入缺失的过去式动词。",
+      "linked_blocks": [
+        "TB-G6S2U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-match-and-say",
+      "atom_type": "sentence_pattern",
+      "text": "Listen, match and say",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U4-P37-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-so-i-didn-t-like-pe-class-very-much-i-couldn-t-run-fast-or-play-basketball-well",
+      "atom_type": "sentence_pattern",
+      "text": "No, so I didn't like PE class very much. I couldn't run fast or play basketball well.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U4-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-now-i-love-to-ice-skate-so-i-like-winter",
+      "atom_type": "sentence_pattern",
+      "text": "Now I love to ice-skate, so I like winter.",
+      "gloss": "现在我喜欢滑冰，所以我喜欢冬天。",
+      "linked_blocks": [
+        "TB-G6S2U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-now-there-s-a-new-one-in-our-school",
+      "atom_type": "sentence_pattern",
+      "text": "Now there's a new one in our school.",
+      "gloss": "现在我们学校里有一个新的。",
+      "linked_blocks": [
+        "TB-G6S2U4-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-number-the-pictures",
+      "atom_type": "sentence_pattern",
+      "text": "Number the pictures.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-our-school-was-small",
+      "atom_type": "sentence_pattern",
+      "text": "Our school was small!",
+      "gloss": "我们的学校以前很小！",
+      "linked_blocks": [
+        "TB-G6S2U4-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-people-couldn-t-use-the-internet",
+      "atom_type": "sentence_pattern",
+      "text": "People couldn't use the Internet.",
+      "gloss": "人们不能使用互联网。",
+      "linked_blocks": [
+        "TB-G6S2U4-P35-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-people-didn-t-go-by-bus",
+      "atom_type": "sentence_pattern",
+      "text": "People didn't go by bus.",
+      "gloss": "人们不乘公交车出行。",
+      "linked_blocks": [
+        "TB-G6S2U4-P35-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-right-before-i-was-quiet-now-i-m-very-active-in-class-how-about-you",
+      "atom_type": "sentence_pattern",
+      "text": "Right. Before, I was quiet. Now, I'm very active in class. How about you?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U4-P36-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-tell-your-partner",
+      "atom_type": "sentence_pattern",
+      "text": "Tell your partner.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U4-P38-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-that-s-funny-mike-you-re-wearing-a-pink-t-shirt",
+      "atom_type": "sentence_pattern",
+      "text": "That's funny, Mike! You're wearing a pink T-shirt.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U4-P36-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-there-are",
+      "atom_type": "sentence_pattern",
+      "text": "There is ... / There are ...",
+      "gloss": "现在有……",
+      "linked_blocks": [
+        "TB-G6S2U4-P34-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-was-there-were",
+      "atom_type": "sentence_pattern",
+      "text": "There was ... / There were ...",
+      "gloss": "过去有……",
+      "linked_blocks": [
+        "TB-G6S2U4-P34-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-was-no-gym-either",
+      "atom_type": "sentence_pattern",
+      "text": "There was no gym either!",
+      "gloss": "以前也没有体育馆！",
+      "linked_blocks": [
+        "TB-G6S2U4-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-was-no-gym-in-my-school-thirty-years-ago",
+      "atom_type": "sentence_pattern",
+      "text": "There was no gym in my school thirty years ago.",
+      "gloss": "三十年前我的学校里没有体育馆。",
+      "linked_blocks": [
+        "TB-G6S2U4-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-was-no-library-in-my-old-school",
+      "atom_type": "sentence_pattern",
+      "text": "There was no library in my old school.",
+      "gloss": "我以前的学校里没有图书馆。",
+      "linked_blocks": [
+        "TB-G6S2U4-P34-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-were-no-computers-or-internet-in-my-time",
+      "atom_type": "sentence_pattern",
+      "text": "There were no computers or Internet in my time.",
+      "gloss": "我那个时候没有电脑或互联网。",
+      "linked_blocks": [
+        "TB-G6S2U4-P34-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-understand-a-narrative-story-in-the-past-tense",
+      "atom_type": "sentence_pattern",
+      "text": "Understand a narrative story in the past tense.",
+      "gloss": "理解一篇过去时的叙事故事。",
+      "linked_blocks": [
+        "TB-G6S2U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-understand-the-changes-in-human-life-and-the-environment-over-time",
+      "atom_type": "sentence_pattern",
+      "text": "Understand the changes in human life and the environment over time.",
+      "gloss": "理解人类生活和环境随时间的演变。",
+      "linked_blocks": [
+        "TB-G6S2U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-didn-t-have-a-library-and-there-weren-t-any-computer-rooms-at-all",
+      "atom_type": "sentence_pattern",
+      "text": "We didn't have a library, and there weren't any computer rooms at all.",
+      "gloss": "我们以前没有图书馆，而且根本没有任何电脑室。",
+      "linked_blocks": [
+        "TB-G6S2U4-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-should-help-the-earth-now-to-make-it-a-better-place",
+      "atom_type": "sentence_pattern",
+      "text": "We should help the earth now to make it a better place.",
+      "gloss": "我们现在应该保护地球，让它成为一个更好的地方。",
+      "linked_blocks": [
+        "TB-G6S2U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-is-it-like-now",
+      "atom_type": "sentence_pattern",
+      "text": "What is it like now?",
+      "gloss": "现在是什么样的？",
+      "linked_blocks": [
+        "TB-G6S2U4-P34-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-was-grandpa-s-school-like",
+      "atom_type": "sentence_pattern",
+      "text": "What was Grandpa's school like?",
+      "gloss": "爷爷的学校是什么样的？",
+      "linked_blocks": [
+        "TB-G6S2U4-P34-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-was-your-school-like-five-years-ago",
+      "atom_type": "sentence_pattern",
+      "text": "What was your school like five years ago?",
+      "gloss": "五年前你的学校是什么样的？",
+      "linked_blocks": [
+        "TB-G6S2U4-P34-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wow-a-library-there-was-no-library-in-my-old-school",
+      "atom_type": "sentence_pattern",
+      "text": "Wow, a library! There was no library in my old school.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U4-P34-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-write-sentences-about-an-interesting-dream-using-the-simple-past-tense",
+      "atom_type": "sentence_pattern",
+      "text": "Write sentences about an interesting dream using the simple past tense.",
+      "gloss": "运用一般过去时写几句关于一个有趣梦境的话。",
+      "linked_blocks": [
+        "TB-G6S2U4-P39-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-weren-t-very-big-then-mr-wu",
+      "atom_type": "sentence_pattern",
+      "text": "You weren't very big then, Mr Wu!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U4-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-weren-t-very-big-then",
+      "atom_type": "sentence_pattern",
+      "text": "You weren't very big then.",
+      "gloss": "你那时不是很大。",
+      "linked_blocks": [
+        "TB-G6S2U4-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-didn-t-like-cats",
+      "atom_type": "sentence_pattern",
+      "text": "didn't like cats/...",
+      "gloss": "不喜欢猫/……",
+      "linked_blocks": [
+        "TB-G6S2U4-P36-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-didn-t-like-eggs",
+      "atom_type": "sentence_pattern",
+      "text": "didn't like eggs/...",
+      "gloss": "不喜欢鸡蛋/……",
+      "linked_blocks": [
+        "TB-G6S2U4-P36-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-didn-t-like-maths",
+      "atom_type": "sentence_pattern",
+      "text": "didn't like maths/...",
+      "gloss": "不喜欢数学/……",
+      "linked_blocks": [
+        "TB-G6S2U4-P36-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-didn-t-wear-glasses",
+      "atom_type": "sentence_pattern",
+      "text": "didn't wear glasses/...",
+      "gloss": "不戴眼镜/……",
+      "linked_blocks": [
+        "TB-G6S2U4-P36-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-had-long-hair",
+      "atom_type": "sentence_pattern",
+      "text": "had long/... hair",
+      "gloss": "留着长/……头发",
+      "linked_blocks": [
+        "TB-G6S2U4-P36-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wasn-t-tall",
+      "atom_type": "sentence_pattern",
+      "text": "wasn't tall/...",
+      "gloss": "不高/……",
+      "linked_blocks": [
+        "TB-G6S2U4-P36-D3"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G6S2U4-P32",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Then and now. Grandpa, Wu Binbin, a woman and Mr Wu are looking at an old group photo on the wall.",
+      "entry_probe_questions": [
+        "Can you say: You weren't very big then."
+      ],
+      "priority_blocks": [
+        "TB-G6S2U4-P32-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U4-P33",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Then and now. Wu Binbin, a woman, and an old man are looking at a model of a school.",
+      "entry_probe_questions": [
+        "Do you know the word library?",
+        "Can you say: Our school was small!"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U4-P33-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U4-P34",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Then and now. Grandpa, Sarah and Wu Binbin are looking at pictures of the old and new school.",
+      "entry_probe_questions": [
+        "Do you know the word library?",
+        "Can you say: There was no library in my old school."
+      ],
+      "priority_blocks": [
+        "TB-G6S2U4-P34-D2",
+        "TB-G6S2U4-P34-D1",
+        "TB-G6S2U4-P34-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U4-P35",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Then and now. Wu Binbin and his father are looking at the school buildings, including a dining hall, a gym, and grass.",
+      "entry_probe_questions": [
+        "Do you know the word dining hall?",
+        "Can you say: There was no gym in my school thirty years ago."
+      ],
+      "priority_blocks": [
+        "TB-G6S2U4-P35-D1",
+        "TB-G6S2U4-P35-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U4-P36",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Then and now. Chen Jie, John and Mike are looking at Mike's old photos and talking about how they have changed.",
+      "entry_probe_questions": [
+        "Do you know the word different?",
+        "Can you say: Before, I was quiet. Now, I'm very active in class."
+      ],
+      "priority_blocks": [
+        "TB-G6S2U4-P36-D2",
+        "TB-G6S2U4-P36-D3",
+        "TB-G6S2U4-P36-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U4-P37",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Then and now. Illustrations of people doing different activities: cycling, ice-skating, and playing badminton. Below is a dialogue between Wu Binbin and Mike.",
+      "entry_probe_questions": [
+        "Do you know the word go cycling?",
+        "Can you say: I didn't like winter before."
+      ],
+      "priority_blocks": [
+        "TB-G6S2U4-P37-D1",
+        "TB-G6S2U4-P37-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U4-P38",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Then and now. A story about Wu Binbin's dream where he races with his father, Max, and a cheetah.",
+      "entry_probe_questions": [
+        "Do you know the word race?",
+        "Can you say: Understand a narrative story in the past tense."
+      ],
+      "priority_blocks": [
+        "TB-G6S2U4-P38-D2",
+        "TB-G6S2U4-P38-D3",
+        "TB-G6S2U4-P38-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U4-P39",
+      "page_type": "writing",
+      "page_intro_cn": "Theme: What a dream!. 吴斌斌坐在床上给妈妈讲他昨晚做的有趣的梦，妈妈坐在床边认真听。",
+      "entry_probe_questions": [
+        "Do you know the word had?",
+        "Can you say: Listen to a dialogue about a dream and fill in the missing past tense verbs."
+      ],
+      "priority_blocks": [
+        "TB-G6S2U4-P39-D1",
+        "TB-G6S2U4-P39-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U4-P40",
+      "page_type": "listening",
+      "page_intro_cn": "Theme: Changes are all around us.. 听力练习，要求学生听音频为三幅运动/休闲场景图片标号，并从给定的词汇列表中划掉音频中未提及的单词。",
+      "entry_probe_questions": [
+        "Do you know the word gym?",
+        "Can you say: Listen and number the pictures."
+      ],
+      "priority_blocks": [
+        "TB-G6S2U4-P40-D1",
+        "TB-G6S2U4-P40-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U4-P41",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Story time. Zip和Zoom通过观看三组关于过去、现在和未来的对比画面（人类烹饪方式的演变、地球环境的变化、鲸鱼生存状态的改变），讨论人类生活、环境保护及动物保护的主题。",
+      "entry_probe_questions": [
+        "Do you know the word cavemen?",
+        "Can you say: Understand the changes in human life and the environment over time."
+      ],
+      "priority_blocks": [
+        "TB-G6S2U4-P41-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G6S2U4-P32-D1",
+      "page_uid": "TB-G6S2U4-P32",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S2U4-P32-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Grandpa, Wu Binbin, a woman and Mr Wu are looking at an old group photo on the wall. Key patterns: You weren't very big then.; I didn't like PE class very much.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "You weren't very big then.",
+        "I didn't like PE class very much.",
+        "I couldn't run fast or play basketball well.",
+        "Binbin, that's your father.",
+        "You weren't very big then, Mr Wu!",
+        "No, so I didn't like PE class very much. I couldn't run fast or play basketball well."
+      ],
+      "allowed_answer_scope": [
+        "Binbin, that's your father.",
+        "Wow!",
+        "You weren't very big then, Mr Wu!",
+        "No, so I didn't like PE class very much. I couldn't run fast or play basketball well."
+      ],
+      "entry_probe_questions": [
+        "Can you say: You weren't very big then."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U4-P32-D1-goal"
+      ],
+      "branchable_topics": [
+        "Then and now",
+        "Unit Four"
+      ],
+      "return_anchors": [
+        "You weren't very big then.",
+        "I didn't like PE class very much.",
+        "I couldn't run fast or play basketball well."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P33-D1",
+      "page_uid": "TB-G6S2U4-P33",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S2U4-P33-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Wu Binbin, a woman, and an old man are looking at a model of a school. Key patterns: Our school was small!; We didn't have a library, and there weren't any computer rooms at all.",
+      "focus_vocabulary": [
+        "library",
+        "computer room",
+        "gym"
+      ],
+      "core_patterns": [
+        "Our school was small!",
+        "We didn't have a library, and there weren't any computer rooms at all.",
+        "There was no gym either!"
+      ],
+      "allowed_answer_scope": [
+        "Our school was small!",
+        "We didn't have a library, and there weren't any computer rooms at all.",
+        "There was no gym either!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word library?",
+        "Can you say: Our school was small!"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U4-P33-D1-goal"
+      ],
+      "branchable_topics": [
+        "library",
+        "computer room",
+        "gym",
+        "Then and now"
+      ],
+      "return_anchors": [
+        "Our school was small!",
+        "We didn't have a library, and there weren't any computer rooms at all.",
+        "There was no gym either!"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P34-D1",
+      "page_uid": "TB-G6S2U4-P34",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S2U4-P34-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Today, there is a guest visiting the school. Listen and tick or cross. Key patterns: Listen and tick or cross.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and tick or cross."
+      ],
+      "allowed_answer_scope": [
+        "Listen and tick or cross."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and tick or cross."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U4-P34-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U4-P34-D1-goal"
+      ],
+      "branchable_topics": [
+        "Then and now",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and tick or cross."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P34-D2",
+      "page_uid": "TB-G6S2U4-P34",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S2U4-P34-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Grandpa, Sarah and Wu Binbin are looking at pictures of the old and new school. Key patterns: There was no library in my old school.; There were no computers or Internet in my time.",
+      "focus_vocabulary": [
+        "library",
+        "building",
+        "Internet"
+      ],
+      "core_patterns": [
+        "There was no library in my old school.",
+        "There were no computers or Internet in my time.",
+        "What was Grandpa's school like?",
+        "Could you see stars at night?",
+        "How do you know that?",
+        "Wow, a library! There was no library in my old school."
+      ],
+      "allowed_answer_scope": [
+        "Wow, a library! There was no library in my old school.",
+        "Tell us about your school, please.",
+        "There was only one small building on a hill.",
+        "Yes, I liked the stars.",
+        "Me too. One day I'm going to visit the moon.",
+        "The Americans took about five days to get there in 1969."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word library?",
+        "Can you say: There was no library in my old school."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U4-P34-D1",
+        "TB-G6S2U4-P34-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U4-P34-D2-goal"
+      ],
+      "branchable_topics": [
+        "library",
+        "building",
+        "Internet",
+        "Then and now",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "There was no library in my old school.",
+        "There were no computers or Internet in my time.",
+        "What was Grandpa's school like?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P34-D3",
+      "page_uid": "TB-G6S2U4-P34",
+      "page_type": "dialogue",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S2U4-P34-D3"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "Students draw their school 5 years ago and now, then talk about the changes. Key patterns: What was your school like five years ago?; What is it like now?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What was your school like five years ago?",
+        "What is it like now?",
+        "There was ... / There were ...",
+        "There is ... / There are ..."
+      ],
+      "allowed_answer_scope": [
+        "What was your school like five years ago?",
+        "What is it like now?",
+        "There was ... / There were ...",
+        "There is ... / There are ..."
+      ],
+      "entry_probe_questions": [
+        "Can you say: What was your school like five years ago?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U4-P34-D3-goal"
+      ],
+      "branchable_topics": [
+        "Then and now",
+        "Draw and talk"
+      ],
+      "return_anchors": [
+        "What was your school like five years ago?",
+        "What is it like now?",
+        "There was ... / There were ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P35-D1",
+      "page_uid": "TB-G6S2U4-P35",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S2U4-P35-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Wu Binbin and his father are looking at the school buildings, including a dining hall, a gym, and grass. Key patterns: There was no gym in my school thirty years ago.; Now there's a new one in our school.",
+      "focus_vocabulary": [
+        "dining hall",
+        "grass",
+        "gym",
+        "... years ago",
+        "... months ago",
+        "last year",
+        "last month"
+      ],
+      "core_patterns": [
+        "There was no gym in my school thirty years ago.",
+        "Now there's a new one in our school."
+      ],
+      "allowed_answer_scope": [
+        "dining hall",
+        "grass",
+        "gym",
+        "... years ago",
+        "... months ago",
+        "last year"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word dining hall?",
+        "Can you say: There was no gym in my school thirty years ago."
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U4-P35-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U4-P35-D1-goal"
+      ],
+      "branchable_topics": [
+        "dining hall",
+        "grass",
+        "gym",
+        "... years ago",
+        "... months ago",
+        "last year",
+        "last month",
+        "Then and now"
+      ],
+      "return_anchors": [
+        "There was no gym in my school thirty years ago.",
+        "Now there's a new one in our school."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P35-D2",
+      "page_uid": "TB-G6S2U4-P35",
+      "page_type": "vocabulary",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S2U4-P35-D2"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "A picture of the Tang dynasty showing modern mistakes like a gym, a post office, a motel, a cafe, a cinema, a bus, and people using the Internet. Key patterns: In the Tang dynasty ...; At that time, there were no gyms.",
+      "focus_vocabulary": [
+        "Tang dynasty",
+        "Internet"
+      ],
+      "core_patterns": [
+        "In the Tang dynasty ...",
+        "At that time, there were no gyms.",
+        "People didn't go by bus.",
+        "People couldn't use the Internet."
+      ],
+      "allowed_answer_scope": [
+        "Tang dynasty",
+        "Internet"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word Tang dynasty?",
+        "Can you say: In the Tang dynasty ..."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U4-P35-D2-goal"
+      ],
+      "branchable_topics": [
+        "Tang dynasty",
+        "Internet",
+        "Then and now",
+        "Find the mistakes"
+      ],
+      "return_anchors": [
+        "In the Tang dynasty ...",
+        "At that time, there were no gyms.",
+        "People didn't go by bus."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P36-D1",
+      "page_uid": "TB-G6S2U4-P36",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S2U4-P36-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Mike's friends are visiting his home. Key patterns: Listen and circle.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "B. Mike's old photos.",
+        "A. Grade 1."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U4-P36-D1-goal"
+      ],
+      "branchable_topics": [
+        "Then and now",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P36-D2",
+      "page_uid": "TB-G6S2U4-P36",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S2U4-P36-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Chen Jie, John and Mike are looking at Mike's old photos and talking about how they have changed. Key patterns: Before, I was quiet. Now, I'm very active in class.; I was short, so I couldn't ride my bike well.",
+      "focus_vocabulary": [
+        "different",
+        "active",
+        "cycling"
+      ],
+      "core_patterns": [
+        "Before, I was quiet. Now, I'm very active in class.",
+        "I was short, so I couldn't ride my bike well.",
+        "How did Mike change?",
+        "Right. Before, I was quiet. Now, I'm very active in class. How about you?",
+        "John, come and look at Mike's old photos!",
+        "That's funny, Mike! You're wearing a pink T-shirt."
+      ],
+      "allowed_answer_scope": [
+        "John, come and look at Mike's old photos!",
+        "That's funny, Mike! You're wearing a pink T-shirt.",
+        "Yes, but I don't like pink now.",
+        "We are all different now!",
+        "Well, I was short, so I couldn't ride my bike well. Now, I go cycling every day. I like it very much.",
+        "That's good exercise."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word different?",
+        "Can you say: Before, I was quiet. Now, I'm very active in class."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U4-P36-D3",
+        "TB-G6S2U4-P36-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U4-P36-D2-goal"
+      ],
+      "branchable_topics": [
+        "different",
+        "active",
+        "cycling",
+        "Then and now",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "Before, I was quiet. Now, I'm very active in class.",
+        "I was short, so I couldn't ride my bike well.",
+        "How did Mike change?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P36-D3",
+      "page_uid": "TB-G6S2U4-P36",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S2U4-P36-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Students talk about how their friends or family members changed using the given phrases. Key patterns: wasn't tall/...; had long/... hair",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "wasn't tall/...",
+        "had long/... hair",
+        "didn't wear glasses/...",
+        "didn't like maths/...",
+        "didn't like cats/...",
+        "didn't like eggs/..."
+      ],
+      "allowed_answer_scope": [
+        "wasn't tall/...",
+        "had long/... hair",
+        "didn't wear glasses/...",
+        "didn't like maths/..."
+      ],
+      "entry_probe_questions": [
+        "Can you say: wasn't tall/..."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U4-P36-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U4-P36-D3-goal"
+      ],
+      "branchable_topics": [
+        "Then and now",
+        "Talk about your friends or family members. How did they change?"
+      ],
+      "return_anchors": [
+        "wasn't tall/...",
+        "had long/... hair",
+        "didn't wear glasses/..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P37-D1",
+      "page_uid": "TB-G6S2U4-P37",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S2U4-P37-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Illustrations of people doing different activities: cycling, ice-skating, and playing badminton. Below is a dialogue between Wu Binbin and Mike. Key patterns: I didn't like winter before.; I thought it was too cold, and I couldn't go cycling.",
+      "focus_vocabulary": [
+        "go cycling",
+        "ice-skate",
+        "play badminton"
+      ],
+      "core_patterns": [
+        "I didn't like winter before.",
+        "I thought it was too cold, and I couldn't go cycling.",
+        "How about now?",
+        "Now I love to ice-skate, so I like winter.",
+        "I didn't like winter before. I thought it was too cold, and I couldn't go cycling."
+      ],
+      "allowed_answer_scope": [
+        "I didn't like winter before. I thought it was too cold, and I couldn't go cycling.",
+        "Now I love to ice-skate, so I like winter."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word go cycling?",
+        "Can you say: I didn't like winter before."
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U4-P37-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U4-P37-D1-goal"
+      ],
+      "branchable_topics": [
+        "go cycling",
+        "ice-skate",
+        "play badminton",
+        "Then and now",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "I didn't like winter before.",
+        "I thought it was too cold, and I couldn't go cycling.",
+        "How about now?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P37-D2",
+      "page_uid": "TB-G6S2U4-P37",
+      "page_type": "vocabulary",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S2U4-P37-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "A matching exercise with pictures of items (swimming ring, bicycle, cooking pan, badminton rackets, piano, ice skates, erhu) and three people (Allen, Diana, Joe). Wu Binbin is pointing at the pictures and providing a sentence template. Key patterns: Listen, match and say",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen, match and say"
+      ],
+      "allowed_answer_scope": [
+        "Listen, match and say"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen, match and say"
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U4-P37-D2-goal"
+      ],
+      "branchable_topics": [
+        "Then and now",
+        "Listen, match and say"
+      ],
+      "return_anchors": [
+        "Listen, match and say"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P38-D1",
+      "page_uid": "TB-G6S2U4-P38",
+      "page_type": "reading",
+      "block_type": "practice_speaking",
+      "source_refs": [
+        "TB-G6S2U4-P38-D1"
+      ],
+      "teaching_goal": "Work on the practice speaking activity.",
+      "teaching_summary": "Pre-reading questions to discuss with a partner. Key patterns: Tell your partner.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Tell your partner."
+      ],
+      "allowed_answer_scope": [
+        "Tell your partner."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Tell your partner."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U4-P38-D1-goal"
+      ],
+      "branchable_topics": [
+        "Then and now",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "Tell your partner."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P38-D2",
+      "page_uid": "TB-G6S2U4-P38",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S2U4-P38-D2"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "A story about Wu Binbin's dream where he races with his father, Max, and a cheetah. Key patterns: Understand a narrative story in the past tense.",
+      "focus_vocabulary": [
+        "race",
+        "worried",
+        "cheetah",
+        "tripped",
+        "fell"
+      ],
+      "core_patterns": [
+        "Understand a narrative story in the past tense."
+      ],
+      "allowed_answer_scope": [
+        "race",
+        "worried",
+        "cheetah",
+        "tripped",
+        "fell"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word race?",
+        "Can you say: Understand a narrative story in the past tense."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U4-P38-D3",
+        "TB-G6S2U4-P38-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U4-P38-D2-goal"
+      ],
+      "branchable_topics": [
+        "race",
+        "worried",
+        "cheetah",
+        "tripped",
+        "fell",
+        "Then and now",
+        "What a dream!"
+      ],
+      "return_anchors": [
+        "Understand a narrative story in the past tense."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P38-D3",
+      "page_uid": "TB-G6S2U4-P38",
+      "page_type": "reading",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S2U4-P38-D3"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Students number the pictures according to the story sequence. Key patterns: Number the pictures.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Number the pictures."
+      ],
+      "allowed_answer_scope": [
+        "2",
+        "1",
+        "3"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Number the pictures."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U4-P38-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U4-P38-D3-goal"
+      ],
+      "branchable_topics": [
+        "Then and now",
+        "Number the pictures."
+      ],
+      "return_anchors": [
+        "Number the pictures."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P39-D1",
+      "page_uid": "TB-G6S2U4-P39",
+      "page_type": "writing",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S2U4-P39-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "吴斌斌坐在床上给妈妈讲他昨晚做的有趣的梦，妈妈坐在床边认真听。 Key patterns: Listen to a dialogue about a dream and fill in the missing past tense verbs.",
+      "focus_vocabulary": [
+        "had",
+        "gave",
+        "drank",
+        "tripped",
+        "fell",
+        "woke up"
+      ],
+      "core_patterns": [
+        "Listen to a dialogue about a dream and fill in the missing past tense verbs."
+      ],
+      "allowed_answer_scope": [
+        "had",
+        "gave",
+        "drank",
+        "tripped",
+        "fell",
+        "woke up"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word had?",
+        "Can you say: Listen to a dialogue about a dream and fill in the missing past tense verbs."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U4-P39-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U4-P39-D1-goal"
+      ],
+      "branchable_topics": [
+        "had",
+        "gave",
+        "drank",
+        "tripped",
+        "fell",
+        "woke up",
+        "What a dream!",
+        "Listen and fill in the blanks."
+      ],
+      "return_anchors": [
+        "Listen to a dialogue about a dream and fill in the missing past tense verbs."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P39-D2",
+      "page_uid": "TB-G6S2U4-P39",
+      "page_type": "writing",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G6S2U4-P39-D2"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "一个写作任务，要求学生在模拟手账本的页面上，运用过去时写出自己做过的一个有趣的梦。 Key patterns: Write sentences about an interesting dream using the simple past tense.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Write sentences about an interesting dream using the simple past tense."
+      ],
+      "allowed_answer_scope": [
+        "Write sentences about an interesting dream using the simple past tense."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Write sentences about an interesting dream using the simple past tense."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U4-P39-D2-goal"
+      ],
+      "branchable_topics": [
+        "What a dream!",
+        "Write about your dream"
+      ],
+      "return_anchors": [
+        "Write sentences about an interesting dream using the simple past tense."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P40-D1",
+      "page_uid": "TB-G6S2U4-P40",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S2U4-P40-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听力练习，要求学生听音频为三幅运动/休闲场景图片标号，并从给定的词汇列表中划掉音频中未提及的单词。 Key patterns: Listen and number the pictures.; Cross out the words you didn't hear.",
+      "focus_vocabulary": [
+        "gym",
+        "dining hall",
+        "grass",
+        "cycling",
+        "ice-skating",
+        "badminton"
+      ],
+      "core_patterns": [
+        "Listen and number the pictures.",
+        "Cross out the words you didn't hear."
+      ],
+      "allowed_answer_scope": [
+        "gym",
+        "dining hall",
+        "grass",
+        "cycling",
+        "ice-skating",
+        "badminton"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word gym?",
+        "Can you say: Listen and number the pictures."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U4-P40-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U4-P40-D1-goal"
+      ],
+      "branchable_topics": [
+        "gym",
+        "dining hall",
+        "grass",
+        "cycling",
+        "ice-skating",
+        "badminton",
+        "Changes are all around us.",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Listen and number the pictures.",
+        "Cross out the words you didn't hear."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P40-D2",
+      "page_uid": "TB-G6S2U4-P40",
+      "page_type": "listening",
+      "block_type": "summary_wrap_up",
+      "source_refs": [
+        "TB-G6S2U4-P40-D2"
+      ],
+      "teaching_goal": "Review and consolidate the core language point.",
+      "teaching_summary": "本单元复习环节。通过展示多组对比图片（如鸡蛋变母鸡、雨天变晴天、树叶四季变化等），引导学生运用一般过去时和一般现在时谈论周围事物的变化。 Key patterns: Changes are all around us. Talk about the changes below.; 1. It was an egg. Now ...",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Changes are all around us. Talk about the changes below.",
+        "1. It was an egg. Now ...",
+        "2. It was raining. Now ...",
+        "3. In summer, the tree was green. Now ...",
+        "4. There was a building before. Now ...",
+        "5. The cat was on the chair. Now ..."
+      ],
+      "allowed_answer_scope": [
+        "Changes are all around us. Talk about the changes below.",
+        "1. It was an egg. Now ...",
+        "2. It was raining. Now ...",
+        "3. In summer, the tree was green. Now ..."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Changes are all around us. Talk about the changes below."
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U4-P40-D2-goal"
+      ],
+      "branchable_topics": [
+        "Changes are all around us.",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Changes are all around us. Talk about the changes below.",
+        "1. It was an egg. Now ...",
+        "2. It was raining. Now ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U4-P41-D1",
+      "page_uid": "TB-G6S2U4-P41",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S2U4-P41-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "Zip和Zoom通过观看三组关于过去、现在和未来的对比画面（人类烹饪方式的演变、地球环境的变化、鲸鱼生存状态的改变），讨论人类生活、环境保护及动物保护的主题。 Key patterns: Understand the changes in human life and the environment over time.; We should help the earth now to make it a better place.",
+      "focus_vocabulary": [
+        "cavemen",
+        "raw meat",
+        "house robots",
+        "healthy",
+        "whale"
+      ],
+      "core_patterns": [
+        "Understand the changes in human life and the environment over time.",
+        "We should help the earth now to make it a better place."
+      ],
+      "allowed_answer_scope": [
+        "cavemen",
+        "raw meat",
+        "house robots",
+        "healthy",
+        "whale"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word cavemen?",
+        "Can you say: Understand the changes in human life and the environment over time."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U4-P41-D1-goal"
+      ],
+      "branchable_topics": [
+        "cavemen",
+        "raw meat",
+        "house robots",
+        "healthy",
+        "whale",
+        "Story time"
+      ],
+      "return_anchors": [
+        "Understand the changes in human life and the environment over time.",
+        "We should help the earth now to make it a better place."
+      ]
+    }
+  ]
+}

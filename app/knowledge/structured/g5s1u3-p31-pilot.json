@@ -1,0 +1,83 @@
+{
+  "pilot_id": "g5s1u3-p31-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "U3",
+    "pages": [31]
+  },
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S1U3-P31",
+      "page_type": "story",
+      "page_intro_cn": "这一页通过 Zoom 和 Zip 做沙拉的小故事，学习食物和表达自己想吃什么。重点句型包括 \"I'm hungry.\"、\"Let's make a salad.\" 和 \"I'd like a salad.\"。",
+      "entry_probe_questions": [
+        "What would Zoom like to eat?",
+        "Which vegetables do they use?"
+      ],
+      "assumed_prior_knowledge": [
+        {
+          "topic": "core Unit 3 food ordering and salad vocabulary",
+          "source": "unit_progression",
+          "confidence": "medium",
+          "verification_status": "unverified",
+          "verify_by_block_uid": "TB-G5S1U3-P31-D1",
+          "learning_target_uids": [
+            "LT-G5S1U3-P31-follow-story-meal",
+            "LT-G5S1U3-P31-retell-salad-story"
+          ]
+        }
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P31-D1"
+      ]
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S1U3-P31-D1",
+      "page_uid": "TB-G5S1U3-P31",
+      "page_type": "story",
+      "block_type": "story_block",
+      "source_refs": ["TB-G5S1U3-P31-D1"],
+      "teaching_goal": "Follow the salad story and reuse Unit 3 food language in context.",
+      "teaching_summary": "Zoom is hungry, asks for a salad, gathers vegetables on the farm with Zip, and enjoys a fresh healthy dinner.",
+      "focus_vocabulary": ["hungry", "salad", "tomatoes", "carrots", "onions", "vegetables", "fresh", "delicious", "healthy", "milk", "farm"],
+      "core_patterns": ["What would you like to eat?", "I'd like a salad.", "The vegetables are so fresh.", "It is healthy, too."],
+      "allowed_answer_scope": ["Zoom would like a salad.", "They use tomatoes, carrots, and onions.", "Dinner at the farm is great."],
+      "entry_probe_questions": ["What would Zoom like to eat?", "Which vegetables do they use?"],
+      "repair_modes": ["repeat", "choice_probe", "sentence_drill", "word_drill"],
+      "next_block_uids": [],
+      "learning_target_uids": ["LT-G5S1U3-P31-follow-story-meal", "LT-G5S1U3-P31-retell-salad-story"]
+      ,
+      "branchable_topics": ["salad", "vegetables", "farm"],
+      "return_anchors": ["I'd like a salad.", "What would you like to eat?", "The vegetables are so fresh."]
+    }
+  ],
+  "knowledge_atoms": [
+    { "atom_uid": "KA-G5S1U3-word-tomatoes", "atom_type": "word", "text": "tomatoes", "gloss": "plural tomato" },
+    { "atom_uid": "KA-G5S1U3-word-carrots", "atom_type": "word", "text": "carrots", "gloss": "plural carrot" },
+    { "atom_uid": "KA-G5S1U3-word-onions", "atom_type": "word", "text": "onions", "gloss": "plural onion" },
+    { "atom_uid": "KA-G5S1U3-word-farm", "atom_type": "word", "text": "farm", "gloss": "a farming place" }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S1U3-P31-follow-story-meal",
+      "category": "story_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner follows the story and answers key content questions.",
+        "shaky": "Learner follows the main idea but misses some details.",
+        "not_mastered": "Learner cannot track the story actions."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P31-retell-salad-story",
+      "category": "story_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner retells the salad story with support words.",
+        "shaky": "Learner retells only part of the story.",
+        "not_mastered": "Learner cannot retell the story."
+      }
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "pilot_id": "g5s1u3-p26-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "U3",
+    "pages": [26]
+  },
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S1U3-P26",
+      "page_type": "phonics",
+      "page_intro_cn": "Unit 3 page 26: the ow sound pattern. Distinguish the two common sounds, then do short listening and writing checks.",
+      "entry_probe_questions": [
+        "Can you read cow?",
+        "Can you hear the difference between cow and snow?"
+      ],
+      "assumed_prior_knowledge": [
+        {
+          "topic": "basic word reading and sound awareness from earlier phonics work",
+          "source": "grade_level_default",
+          "confidence": "low",
+          "verification_status": "unverified",
+          "verify_by_block_uid": "TB-G5S1U3-P26-D1",
+          "learning_target_uids": [
+            "LT-G5S1U3-P26-phonics-ow-contrast"
+          ]
+        }
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P26-D1",
+        "TB-G5S1U3-P26-D2",
+        "TB-G5S1U3-P26-D3",
+        "TB-G5S1U3-P26-D4"
+      ]
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S1U3-P26-D1",
+      "page_uid": "TB-G5S1U3-P26",
+      "page_type": "phonics",
+      "block_type": "phonics_core",
+      "source_refs": ["TB-G5S1U3-P26-D1"],
+      "teaching_goal": "Distinguish the two common ow sounds.",
+      "teaching_summary": "Introduce ow as in cow and ow as in snow with a small contrast set.",
+      "focus_vocabulary": ["cow", "flower", "down", "slow", "snow", "yellow", "window"],
+      "core_patterns": ["ow -> cow sound", "ow -> snow sound"],
+      "allowed_answer_scope": ["cow uses the cow sound", "snow uses the snow sound"],
+      "entry_probe_questions": ["Can you read cow?", "Can you read snow?"],
+      "repair_modes": ["repeat", "slow_read", "choice_probe"],
+      "next_block_uids": ["TB-G5S1U3-P26-D2", "TB-G5S1U3-P26-D3"],
+      "learning_target_uids": ["LT-G5S1U3-P26-phonics-ow-contrast"]
+      ,
+      "branchable_topics": ["ow sound", "cow", "snow"],
+      "return_anchors": ["ow -> cow sound", "ow -> snow sound"]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P26-D2",
+      "page_uid": "TB-G5S1U3-P26",
+      "page_type": "phonics",
+      "block_type": "listening_exercise",
+      "source_refs": ["TB-G5S1U3-P26-D2"],
+      "teaching_goal": "Pick the odd word out by ow sound.",
+      "teaching_summary": "Listen and circle the word with a different ow pronunciation.",
+      "focus_vocabulary": ["cow", "snow", "down", "window", "slow", "wow", "yellow"],
+      "core_patterns": ["Listen, circle and say"],
+      "allowed_answer_scope": ["snow", "window", "slow", "wow"],
+      "entry_probe_questions": ["Which word sounds different: cow, snow, down?"],
+      "repair_modes": ["repeat", "choice_probe"],
+      "next_block_uids": ["TB-G5S1U3-P26-D3"],
+      "learning_target_uids": ["LT-G5S1U3-P26-listening-ow-discrimination"]
+      ,
+      "branchable_topics": ["listening", "ow sound"],
+      "return_anchors": ["Listen, circle and say"]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P26-D3",
+      "page_uid": "TB-G5S1U3-P26",
+      "page_type": "phonics",
+      "block_type": "listening_exercise",
+      "source_refs": ["TB-G5S1U3-P26-D3"],
+      "teaching_goal": "Write target words from short ow sentences.",
+      "teaching_summary": "Listen and complete flower, down, and tomorrow in short prompts.",
+      "focus_vocabulary": ["flower", "down", "tomorrow"],
+      "core_patterns": ["I see a yellow ...", "Slow ...", "How about ..."],
+      "allowed_answer_scope": ["flower", "down", "tomorrow"],
+      "entry_probe_questions": ["Can you hear flower in I see a yellow flower?"],
+      "repair_modes": ["repeat", "word_drill", "choice_probe"],
+      "next_block_uids": ["TB-G5S1U3-P26-D4"],
+      "learning_target_uids": ["LT-G5S1U3-P26-write-ow-words"]
+      ,
+      "branchable_topics": ["flower", "down", "tomorrow"],
+      "return_anchors": ["I see a yellow ...", "Slow ...", "How about ..."]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P26-D4",
+      "page_uid": "TB-G5S1U3-P26",
+      "page_type": "phonics",
+      "block_type": "practice_write",
+      "source_refs": ["TB-G5S1U3-P26-D4"],
+      "teaching_goal": "Copy one correct sentence with an ow target word.",
+      "teaching_summary": "Use one short sentence from the page for controlled writing.",
+      "focus_vocabulary": ["yellow", "flower"],
+      "core_patterns": ["I see a yellow flower."],
+      "allowed_answer_scope": ["I see a yellow flower."],
+      "entry_probe_questions": ["Can you copy one short sentence correctly?"],
+      "repair_modes": ["slow_read", "word_drill"],
+      "next_block_uids": [],
+      "learning_target_uids": ["LT-G5S1U3-P26-copy-phonics-sentence"]
+      ,
+      "branchable_topics": ["yellow", "flower"],
+      "return_anchors": ["I see a yellow flower."]
+    }
+  ],
+  "knowledge_atoms": [
+    { "atom_uid": "KA-G5S1U3-phonics-ow-cow", "atom_type": "phonics_pattern", "text": "ow as in cow" },
+    { "atom_uid": "KA-G5S1U3-phonics-ow-snow", "atom_type": "phonics_pattern", "text": "ow as in snow" },
+    { "atom_uid": "KA-G5S1U3-word-flower", "atom_type": "word", "text": "flower", "gloss": "a flower item" },
+    { "atom_uid": "KA-G5S1U3-word-down", "atom_type": "word", "text": "down", "gloss": "toward a lower place" }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S1U3-P26-phonics-ow-contrast",
+      "category": "phonics_pattern",
+      "mastery_signal_examples": {
+        "mastered": "Learner distinguishes the two ow sounds correctly.",
+        "shaky": "Learner gets some contrast pairs right but not all.",
+        "not_mastered": "Learner cannot hear or produce the contrast."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P26-listening-ow-discrimination",
+      "category": "listening_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner finds the odd sound-out word correctly.",
+        "shaky": "Learner needs repetition for the contrast task.",
+        "not_mastered": "Learner cannot identify the different sound."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P26-write-ow-words",
+      "category": "phonics_pattern",
+      "mastery_signal_examples": {
+        "mastered": "Learner writes flower, down, and tomorrow correctly.",
+        "shaky": "Learner catches one or two words only.",
+        "not_mastered": "Learner cannot map the sounds to the written words."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P26-copy-phonics-sentence",
+      "category": "writing_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner copies one short sentence accurately.",
+        "shaky": "Learner copies most words but misses a target word.",
+        "not_mastered": "Learner cannot complete the sentence."
+      }
+    }
+  ]
+}

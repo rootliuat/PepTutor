@@ -1,0 +1,2992 @@
+{
+  "pilot_id": "g6s1u4-general-v1",
+  "scope": {
+    "grade": "G6",
+    "semester": "S1",
+    "unit": "U4",
+    "pages": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/03.六年级上册语料.json",
+    "app/knowledge/raw/07.六年级上册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 6 · Volume 1), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 6 · Volume 1), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 20,
+    "source_kind": "textbook_source_json",
+    "source_format": "json"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 4",
+      "word": "studies",
+      "phonetic": "/'stʌdiz/",
+      "chinese": "（study的第三人称单数形式）学习",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U4-P41-D1",
+        "TB-G6S1U4-P44-D2"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "puzzle",
+      "phonetic": "/'pʌzl/",
+      "chinese": "谜",
+      "emphasized": true,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "hiking",
+      "phonetic": "/'haɪkɪŋ/",
+      "chinese": "远足",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U4-P40-D2",
+        "TB-G6S1U4-P41-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "pen pal",
+      "phonetic": "/'pen pæl/",
+      "chinese": "笔友",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U4-P37-D1",
+        "TB-G6S1U4-P38-D1",
+        "TB-G6S1U4-P40-D1",
+        "TB-G6S1U4-P40-D2",
+        "TB-G6S1U4-P41-D1",
+        "TB-G6S1U4-P43-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "hobby",
+      "phonetic": "/'hɒbi/",
+      "chinese": "业余爱好",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U4-P38-D2",
+        "TB-G6S1U4-P42-D1",
+        "TB-G6S1U4-P43-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "jasmine",
+      "phonetic": "/'dʒæzmɪn/",
+      "chinese": "茉莉",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U4-P38-D2"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "idea",
+      "phonetic": "/aɪ'dɪə/",
+      "chinese": "想法；主意",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "Canberra",
+      "phonetic": "/'kænbərə/",
+      "chinese": "堪培拉（澳大利亚首都）",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U4-P40-D2"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "amazing",
+      "phonetic": "/ə'meɪzɪŋ/",
+      "chinese": "令人惊奇的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "shall",
+      "phonetic": "/ʃəl; ʃæl/",
+      "chinese": "表示征求意见",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "goal",
+      "phonetic": "/ɡəʊl/",
+      "chinese": "射门",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "join",
+      "phonetic": "/dʒɔɪn/",
+      "chinese": "加入",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "club",
+      "phonetic": "/klʌb/",
+      "chinese": "俱乐部",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U4-P42-D2",
+        "TB-G6S1U4-P43-D2"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "share",
+      "phonetic": "/ʃeə(r)/",
+      "chinese": "分享",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U4-P42-D2"
+      ]
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G6S1U4-P36-D1-goal",
+      "block_uid": "TB-G6S1U4-P36-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P37-D1-goal",
+      "block_uid": "TB-G6S1U4-P37-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P38-D1-goal",
+      "block_uid": "TB-G6S1U4-P38-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P38-D2-goal",
+      "block_uid": "TB-G6S1U4-P38-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P38-D3-goal",
+      "block_uid": "TB-G6S1U4-P38-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P39-D1-goal",
+      "block_uid": "TB-G6S1U4-P39-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P39-D2-goal",
+      "block_uid": "TB-G6S1U4-P39-D2",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P40-D1-goal",
+      "block_uid": "TB-G6S1U4-P40-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P40-D2-goal",
+      "block_uid": "TB-G6S1U4-P40-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P40-D3-goal",
+      "block_uid": "TB-G6S1U4-P40-D3",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P41-D1-goal",
+      "block_uid": "TB-G6S1U4-P41-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P41-D2-goal",
+      "block_uid": "TB-G6S1U4-P41-D2",
+      "category": "practice_speaking",
+      "text": "Work on the practice speaking activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P42-D1-goal",
+      "block_uid": "TB-G6S1U4-P42-D1",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P42-D2-goal",
+      "block_uid": "TB-G6S1U4-P42-D2",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P43-D1-goal",
+      "block_uid": "TB-G6S1U4-P43-D1",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P43-D2-goal",
+      "block_uid": "TB-G6S1U4-P43-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P43-D3-goal",
+      "block_uid": "TB-G6S1U4-P43-D3",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P44-D1-goal",
+      "block_uid": "TB-G6S1U4-P44-D1",
+      "category": "assessment_quiz",
+      "text": "Check whether the learner can complete the unit review task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P44-D2-goal",
+      "block_uid": "TB-G6S1U4-P44-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U4-P45-D1-goal",
+      "block_uid": "TB-G6S1U4-P45-D1",
+      "category": "story_time",
+      "text": "Read and retell the key story events.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-a-lot",
+      "atom_type": "word",
+      "text": "a lot",
+      "gloss": "很多；非常",
+      "linked_blocks": [
+        "TB-G6S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-amazing",
+      "atom_type": "word",
+      "text": "amazing",
+      "gloss": "令人惊奇的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-australia",
+      "atom_type": "word",
+      "text": "Australia",
+      "gloss": "澳大利亚",
+      "linked_blocks": [
+        "TB-G6S1U4-P40-D1",
+        "TB-G6S1U4-P40-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-basketball",
+      "atom_type": "word",
+      "text": "basketball",
+      "gloss": "篮球",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-bike",
+      "atom_type": "word",
+      "text": "bike",
+      "gloss": "自行车",
+      "linked_blocks": [
+        "TB-G6S1U4-P44-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-bus",
+      "atom_type": "word",
+      "text": "bus",
+      "gloss": "公共汽车",
+      "linked_blocks": [
+        "TB-G6S1U4-P44-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-bushy",
+      "atom_type": "word",
+      "text": "bushy",
+      "gloss": "浓密的",
+      "linked_blocks": [
+        "TB-G6S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-cake",
+      "atom_type": "word",
+      "text": "cake",
+      "gloss": "蛋糕",
+      "linked_blocks": [
+        "TB-G6S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-canberra",
+      "atom_type": "word",
+      "text": "Canberra",
+      "gloss": "堪培拉（澳大利亚首都）",
+      "linked_blocks": [
+        "TB-G6S1U4-P40-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-chat",
+      "atom_type": "word",
+      "text": "chat",
+      "gloss": "聊天",
+      "linked_blocks": [
+        "TB-G6S1U4-P40-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-chocolate",
+      "atom_type": "word",
+      "text": "chocolate",
+      "gloss": "巧克力",
+      "linked_blocks": [
+        "TB-G6S1U4-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-climbing-mountains",
+      "atom_type": "word",
+      "text": "climbing mountains",
+      "gloss": "爬山",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-club",
+      "atom_type": "word",
+      "text": "club",
+      "gloss": "俱乐部",
+      "linked_blocks": [
+        "TB-G6S1U4-P42-D2",
+        "TB-G6S1U4-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-cooking",
+      "atom_type": "word",
+      "text": "cooking",
+      "gloss": "做饭",
+      "linked_blocks": [
+        "TB-G6S1U4-P43-D2",
+        "TB-G6S1U4-P44-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-cooking-club",
+      "atom_type": "word",
+      "text": "cooking club",
+      "gloss": "烹饪俱乐部",
+      "linked_blocks": [
+        "TB-G6S1U4-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-cooks-chinese-food",
+      "atom_type": "word",
+      "text": "cooks Chinese food",
+      "gloss": "做中国菜",
+      "linked_blocks": [
+        "TB-G6S1U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-cow",
+      "atom_type": "word",
+      "text": "cow",
+      "gloss": "奶牛",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-dancing",
+      "atom_type": "word",
+      "text": "dancing",
+      "gloss": "跳舞",
+      "linked_blocks": [
+        "TB-G6S1U4-P39-D1",
+        "TB-G6S1U4-P42-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-dancing-class",
+      "atom_type": "word",
+      "text": "dancing class",
+      "gloss": "舞蹈课",
+      "linked_blocks": [
+        "TB-G6S1U4-P42-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-dining-hall",
+      "atom_type": "word",
+      "text": "dining hall",
+      "gloss": "餐厅",
+      "linked_blocks": [
+        "TB-G6S1U4-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-do-kung-fu",
+      "atom_type": "word",
+      "text": "do kung fu",
+      "gloss": "练功夫",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-do-the-dishes",
+      "atom_type": "word",
+      "text": "do the dishes",
+      "gloss": "洗碗",
+      "linked_blocks": [
+        "TB-G6S1U4-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-does",
+      "atom_type": "word",
+      "text": "does",
+      "gloss": "做（第三人称单数）",
+      "linked_blocks": [
+        "TB-G6S1U4-P41-D1",
+        "TB-G6S1U4-P44-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-does-word-puzzles",
+      "atom_type": "word",
+      "text": "does word puzzles",
+      "gloss": "猜字谜",
+      "linked_blocks": [
+        "TB-G6S1U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-doing-kung-fu",
+      "atom_type": "word",
+      "text": "doing kung fu",
+      "gloss": "练功夫",
+      "linked_blocks": [
+        "TB-G6S1U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-drawing-cartoons",
+      "atom_type": "word",
+      "text": "drawing cartoons",
+      "gloss": "画漫画",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-farm",
+      "atom_type": "word",
+      "text": "farm",
+      "gloss": "农场",
+      "linked_blocks": [
+        "TB-G6S1U4-P37-D1",
+        "TB-G6S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-flying-kites",
+      "atom_type": "word",
+      "text": "flying kites",
+      "gloss": "放风筝",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-football",
+      "atom_type": "word",
+      "text": "football",
+      "gloss": "足球",
+      "linked_blocks": [
+        "TB-G6S1U4-P39-D1",
+        "TB-G6S1U4-P42-D2",
+        "TB-G6S1U4-P44-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-football-club",
+      "atom_type": "word",
+      "text": "football club",
+      "gloss": "足球俱乐部",
+      "linked_blocks": [
+        "TB-G6S1U4-P42-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-for-sure",
+      "atom_type": "word",
+      "text": "for sure",
+      "gloss": "无疑；肯定",
+      "linked_blocks": [
+        "TB-G6S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-forest",
+      "atom_type": "word",
+      "text": "forest",
+      "gloss": "森林",
+      "linked_blocks": [
+        "TB-G6S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-gift",
+      "atom_type": "word",
+      "text": "gift",
+      "gloss": "礼物",
+      "linked_blocks": [
+        "TB-G6S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-goal",
+      "atom_type": "word",
+      "text": "goal",
+      "gloss": "射门",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-goes-hiking",
+      "atom_type": "word",
+      "text": "goes hiking",
+      "gloss": "去远足",
+      "linked_blocks": [
+        "TB-G6S1U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-he-lives-on-a-farm",
+      "atom_type": "word",
+      "text": "He lives on a farm.",
+      "gloss": "他住在农场里。",
+      "linked_blocks": [
+        "TB-G6S1U4-P43-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-hiking",
+      "atom_type": "word",
+      "text": "hiking",
+      "gloss": "远足",
+      "linked_blocks": [
+        "TB-G6S1U4-P40-D2",
+        "TB-G6S1U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hobbies",
+      "atom_type": "word",
+      "text": "hobbies",
+      "gloss": "爱好（复数）",
+      "linked_blocks": [
+        "TB-G6S1U4-P37-D1",
+        "TB-G6S1U4-P39-D1",
+        "TB-G6S1U4-P40-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-hobby",
+      "atom_type": "word",
+      "text": "hobby",
+      "gloss": "业余爱好",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D2",
+        "TB-G6S1U4-P42-D1",
+        "TB-G6S1U4-P43-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-i-like-dancing",
+      "atom_type": "word",
+      "text": "I like dancing.",
+      "gloss": "我喜欢跳舞。",
+      "linked_blocks": [
+        "TB-G6S1U4-P43-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-idea",
+      "atom_type": "word",
+      "text": "idea",
+      "gloss": "想法；主意",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-interested",
+      "atom_type": "word",
+      "text": "interested",
+      "gloss": "感兴趣的",
+      "linked_blocks": [
+        "TB-G6S1U4-P40-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-jasmine",
+      "atom_type": "word",
+      "text": "jasmine",
+      "gloss": "茉莉",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-jasmine-flower",
+      "atom_type": "word",
+      "text": "Jasmine Flower",
+      "gloss": "茉莉花（歌名）",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-join",
+      "atom_type": "word",
+      "text": "join",
+      "gloss": "加入",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-kung-fu",
+      "atom_type": "word",
+      "text": "kung fu",
+      "gloss": "功夫",
+      "linked_blocks": [
+        "TB-G6S1U4-P37-D1",
+        "TB-G6S1U4-P38-D2",
+        "TB-G6S1U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-listening-to-music",
+      "atom_type": "word",
+      "text": "listening to music",
+      "gloss": "听音乐",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-monkey-king",
+      "atom_type": "word",
+      "text": "Monkey King",
+      "gloss": "猴王",
+      "linked_blocks": [
+        "TB-G6S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-new-zealand",
+      "atom_type": "word",
+      "text": "New Zealand",
+      "gloss": "新西兰",
+      "linked_blocks": [
+        "TB-G6S1U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-notice-board",
+      "atom_type": "word",
+      "text": "notice board",
+      "gloss": "布告栏",
+      "linked_blocks": [
+        "TB-G6S1U4-P42-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-partner",
+      "atom_type": "word",
+      "text": "partner",
+      "gloss": "搭档",
+      "linked_blocks": [
+        "TB-G6S1U4-P42-D1",
+        "TB-G6S1U4-P42-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pen-pal",
+      "atom_type": "word",
+      "text": "pen pal",
+      "gloss": "笔友",
+      "linked_blocks": [
+        "TB-G6S1U4-P37-D1",
+        "TB-G6S1U4-P38-D1",
+        "TB-G6S1U4-P40-D1",
+        "TB-G6S1U4-P40-D2",
+        "TB-G6S1U4-P41-D1",
+        "TB-G6S1U4-P43-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-piano",
+      "atom_type": "word",
+      "text": "piano",
+      "gloss": "钢琴",
+      "linked_blocks": [
+        "TB-G6S1U4-P44-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-playground",
+      "atom_type": "word",
+      "text": "playground",
+      "gloss": "操场",
+      "linked_blocks": [
+        "TB-G6S1U4-P42-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-playing-football",
+      "atom_type": "word",
+      "text": "playing football",
+      "gloss": "踢足球",
+      "linked_blocks": [
+        "TB-G6S1U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-playing-sports",
+      "atom_type": "word",
+      "text": "playing sports",
+      "gloss": "做运动",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-playing-the-pipa",
+      "atom_type": "word",
+      "text": "playing the pipa",
+      "gloss": "弹琵琶",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-puzzle",
+      "atom_type": "word",
+      "text": "puzzle",
+      "gloss": "谜",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-read-stories",
+      "atom_type": "word",
+      "text": "read stories",
+      "gloss": "读故事",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-reading-stories",
+      "atom_type": "word",
+      "text": "reading stories",
+      "gloss": "读故事",
+      "linked_blocks": [
+        "TB-G6S1U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-ready",
+      "atom_type": "word",
+      "text": "ready",
+      "gloss": "准备好的",
+      "linked_blocks": [
+        "TB-G6S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-robot",
+      "atom_type": "word",
+      "text": "robot",
+      "gloss": "机器人",
+      "linked_blocks": [
+        "TB-G6S1U4-P42-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-salad",
+      "atom_type": "word",
+      "text": "salad",
+      "gloss": "沙拉",
+      "linked_blocks": [
+        "TB-G6S1U4-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-science-club",
+      "atom_type": "word",
+      "text": "science club",
+      "gloss": "科学俱乐部",
+      "linked_blocks": [
+        "TB-G6S1U4-P42-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-shall",
+      "atom_type": "word",
+      "text": "shall",
+      "gloss": "表示征求意见",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-share",
+      "atom_type": "word",
+      "text": "share",
+      "gloss": "分享",
+      "linked_blocks": [
+        "TB-G6S1U4-P42-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-shout",
+      "atom_type": "word",
+      "text": "shout",
+      "gloss": "大喊",
+      "linked_blocks": [
+        "TB-G6S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sing",
+      "atom_type": "word",
+      "text": "sing",
+      "gloss": "唱歌",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-singing",
+      "atom_type": "word",
+      "text": "singing",
+      "gloss": "唱歌",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D3",
+        "TB-G6S1U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-singing-english-songs",
+      "atom_type": "word",
+      "text": "singing English songs",
+      "gloss": "唱英文歌",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-sleeps",
+      "atom_type": "word",
+      "text": "sleeps",
+      "gloss": "睡觉（第三人称单数）",
+      "linked_blocks": [
+        "TB-G6S1U4-P44-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-south-island",
+      "atom_type": "word",
+      "text": "South Island",
+      "gloss": "南岛（新西兰）",
+      "linked_blocks": [
+        "TB-G6S1U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-squirrel",
+      "atom_type": "word",
+      "text": "squirrel",
+      "gloss": "松鼠",
+      "linked_blocks": [
+        "TB-G6S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-stories",
+      "atom_type": "word",
+      "text": "stories",
+      "gloss": "故事",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D2",
+        "TB-G6S1U4-P39-D1",
+        "TB-G6S1U4-P44-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-studies",
+      "atom_type": "word",
+      "text": "studies",
+      "gloss": "（study的第三人称单数形式）学习",
+      "linked_blocks": [
+        "TB-G6S1U4-P41-D1",
+        "TB-G6S1U4-P44-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-studies-chinese",
+      "atom_type": "word",
+      "text": "studies Chinese",
+      "gloss": "学中文",
+      "linked_blocks": [
+        "TB-G6S1U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-swim",
+      "atom_type": "word",
+      "text": "swim",
+      "gloss": "游泳",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-swimming",
+      "atom_type": "word",
+      "text": "swimming",
+      "gloss": "游泳",
+      "linked_blocks": [
+        "TB-G6S1U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sydney",
+      "atom_type": "word",
+      "text": "Sydney",
+      "gloss": "悉尼",
+      "linked_blocks": [
+        "TB-G6S1U4-P40-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-tail",
+      "atom_type": "word",
+      "text": "tail",
+      "gloss": "尾巴",
+      "linked_blocks": [
+        "TB-G6S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-tall",
+      "atom_type": "word",
+      "text": "tall",
+      "gloss": "高的",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-tea",
+      "atom_type": "word",
+      "text": "tea",
+      "gloss": "茶",
+      "linked_blocks": [
+        "TB-G6S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-teaches",
+      "atom_type": "word",
+      "text": "teaches",
+      "gloss": "教（第三人称单数）",
+      "linked_blocks": [
+        "TB-G6S1U4-P44-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-throw",
+      "atom_type": "word",
+      "text": "throw",
+      "gloss": "扔",
+      "linked_blocks": [
+        "TB-G6S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-watching-tv",
+      "atom_type": "word",
+      "text": "watching TV",
+      "gloss": "看电视",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-we-can-share",
+      "atom_type": "word",
+      "text": "We can share.",
+      "gloss": "我们可以分享。",
+      "linked_blocks": [
+        "TB-G6S1U4-P43-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-what-are-peter-s-hobbies",
+      "atom_type": "word",
+      "text": "What are Peter's hobbies?",
+      "gloss": "彼得的爱好是什么？",
+      "linked_blocks": [
+        "TB-G6S1U4-P43-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-word-puzzles",
+      "atom_type": "word",
+      "text": "word puzzles",
+      "gloss": "字谜",
+      "linked_blocks": [
+        "TB-G6S1U4-P40-D2",
+        "TB-G6S1U4-P41-D1",
+        "TB-G6S1U4-P41-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-cake-for-sure",
+      "atom_type": "sentence_pattern",
+      "text": "Cake, for sure!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-come-and-see-my-new-pen-pal-his-name-is-john-too",
+      "atom_type": "sentence_pattern",
+      "text": "Come and see my new pen pal. His name is John, too!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-the-four-people-in-the-text-want-pen-pals",
+      "atom_type": "sentence_pattern",
+      "text": "Do the four people in the text want pen pals?",
+      "gloss": "课文中的四个人想要笔友吗？",
+      "linked_blocks": [
+        "TB-G6S1U4-P43-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-want-to-learn-about-robots",
+      "atom_type": "sentence_pattern",
+      "text": "Do you want to learn about robots?",
+      "gloss": "你想了解机器人吗？",
+      "linked_blocks": [
+        "TB-G6S1U4-P42-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-does-oliver-do-word-puzzles-every-day",
+      "atom_type": "sentence_pattern",
+      "text": "Does Oliver do word puzzles every day?",
+      "gloss": "奥利弗每天都猜字谜吗？",
+      "linked_blocks": [
+        "TB-G6S1U4-P41-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-does-he-like-doing-word-puzzles-and-going-hiking",
+      "atom_type": "sentence_pattern",
+      "text": "Does he like doing word puzzles and going hiking?",
+      "gloss": "他喜欢猜字谜和去远足吗？",
+      "linked_blocks": [
+        "TB-G6S1U4-P40-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-does-he-live-in-china-too",
+      "atom_type": "sentence_pattern",
+      "text": "Does he live in China, too?",
+      "gloss": "他也住在中国吗？",
+      "linked_blocks": [
+        "TB-G6S1U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-does-he-live-in-sydney",
+      "atom_type": "sentence_pattern",
+      "text": "Does he live in Sydney?",
+      "gloss": "他住在悉尼吗？",
+      "linked_blocks": [
+        "TB-G6S1U4-P40-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-does-he-live-on-the-south-island",
+      "atom_type": "sentence_pattern",
+      "text": "Does he live on the South Island?",
+      "gloss": "他住在南岛吗？",
+      "linked_blocks": [
+        "TB-G6S1U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-also-likes-singing",
+      "atom_type": "sentence_pattern",
+      "text": "He also likes singing.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-likes-doing-kung-fu-and-swimming",
+      "atom_type": "sentence_pattern",
+      "text": "He likes doing kung fu and swimming.",
+      "gloss": "他喜欢练功夫和游泳。",
+      "linked_blocks": [
+        "TB-G6S1U4-P37-D1",
+        "TB-G6S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-likes-flying-kites-and-singing-english-songs",
+      "atom_type": "sentence_pattern",
+      "text": "He likes flying kites and singing English songs.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-likes-reading-stories",
+      "atom_type": "sentence_pattern",
+      "text": "He likes reading stories.",
+      "gloss": "他喜欢读故事。",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-likes-reading-stories-he-lives-on-a-farm-so-sometimes-he-reads-to-the-cows",
+      "atom_type": "sentence_pattern",
+      "text": "He likes reading stories. He lives on a farm, so sometimes he reads to the cows!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-likes-singing-and-dancing-very-much",
+      "atom_type": "sentence_pattern",
+      "text": "He likes singing and dancing very much.",
+      "gloss": "他非常喜欢唱歌和跳舞。",
+      "linked_blocks": [
+        "TB-G6S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-lives-in-australia-but-he-studies-chinese",
+      "atom_type": "sentence_pattern",
+      "text": "He lives in Australia, but he studies Chinese.",
+      "gloss": "他住在澳大利亚，但他学中文。",
+      "linked_blocks": [
+        "TB-G6S1U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-she-likes",
+      "atom_type": "sentence_pattern",
+      "text": "He/She likes ...",
+      "gloss": "他/她喜欢……",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hey-binbin-what-are-you-doing",
+      "atom_type": "sentence_pattern",
+      "text": "Hey, Binbin. What are you doing?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P40-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hey-zhang-peng-what-are-your-hobbies",
+      "atom_type": "sentence_pattern",
+      "text": "Hey, Zhang Peng, what are your hobbies?",
+      "gloss": "嘿，张鹏，你的爱好是什么？",
+      "linked_blocks": [
+        "TB-G6S1U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-many-hobbies-can-you-find-in-the-text",
+      "atom_type": "sentence_pattern",
+      "text": "How many hobbies can you find in the text?",
+      "gloss": "你在课文中能找到多少种爱好？",
+      "linked_blocks": [
+        "TB-G6S1U4-P43-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-also-like-singing-and-doing-kung-fu",
+      "atom_type": "sentence_pattern",
+      "text": "I also like singing and doing kung fu.",
+      "gloss": "我也喜欢唱歌和练功夫。",
+      "linked_blocks": [
+        "TB-G6S1U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-don-t-have-any-cake",
+      "atom_type": "sentence_pattern",
+      "text": "I don't have any cake.",
+      "gloss": "我没有任何蛋糕。",
+      "linked_blocks": [
+        "TB-G6S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-like-reading-stories",
+      "atom_type": "sentence_pattern",
+      "text": "I like reading stories.",
+      "gloss": "我喜欢读故事。",
+      "linked_blocks": [
+        "TB-G6S1U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-like-singing-and-dancing",
+      "atom_type": "sentence_pattern",
+      "text": "I like singing and dancing.",
+      "gloss": "我喜欢唱歌和跳舞。",
+      "linked_blocks": [
+        "TB-G6S1U4-P39-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-learning-english",
+      "atom_type": "sentence_pattern",
+      "text": "I'm learning English.",
+      "gloss": "我正在学习英语。",
+      "linked_blocks": [
+        "TB-G6S1U4-P40-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-very-interested-in-australia",
+      "atom_type": "sentence_pattern",
+      "text": "I'm very interested in Australia.",
+      "gloss": "我对澳大利亚非常感兴趣。",
+      "linked_blocks": [
+        "TB-G6S1U4-P40-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-join-our-football-club",
+      "atom_type": "sentence_pattern",
+      "text": "Join our football club!",
+      "gloss": "加入我们的足球俱乐部！",
+      "linked_blocks": [
+        "TB-G6S1U4-P42-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-check",
+      "atom_type": "sentence_pattern",
+      "text": "Let's check",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P44-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-read-together",
+      "atom_type": "sentence_pattern",
+      "text": "Let's read together!",
+      "gloss": "让我们一起阅读！",
+      "linked_blocks": [
+        "TB-G6S1U4-P42-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-my-best-friend-is-xu-wei",
+      "atom_type": "sentence_pattern",
+      "text": "My best friend is Xu Wei.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-he-doesn-t",
+      "atom_type": "sentence_pattern",
+      "text": "No, he doesn't.",
+      "gloss": "不，他不住在中国。",
+      "linked_blocks": [
+        "TB-G6S1U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-he-doesn-t-he-lives-in-australia-but-he-studies-chinese",
+      "atom_type": "sentence_pattern",
+      "text": "No, he doesn't. He lives in Australia, but he studies Chinese.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-he-doesn-t-he-lives-in-canberra",
+      "atom_type": "sentence_pattern",
+      "text": "No, he doesn't. He lives in Canberra.",
+      "gloss": "不，他不是。他住在堪培拉。",
+      "linked_blocks": [
+        "TB-G6S1U4-P40-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-oliver-this-is-my-pen-pal-peter-he-s-from-new-zealand",
+      "atom_type": "sentence_pattern",
+      "text": "Oliver, this is my pen pal Peter. He's from New Zealand.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-one-student-likes-singing",
+      "atom_type": "sentence_pattern",
+      "text": "One student likes singing.",
+      "gloss": "一个学生喜欢唱歌。",
+      "linked_blocks": [
+        "TB-G6S1U4-P39-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-really-does-he-live-in-china-too",
+      "atom_type": "sentence_pattern",
+      "text": "Really? Does he live in China, too?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-sentence-stress",
+      "atom_type": "sentence_pattern",
+      "text": "Sentence stress",
+      "gloss": "句子重音",
+      "linked_blocks": [
+        "TB-G6S1U4-P43-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-shall-we-dance",
+      "atom_type": "sentence_pattern",
+      "text": "Shall we dance?",
+      "gloss": "我们要跳舞吗？",
+      "linked_blocks": [
+        "TB-G6S1U4-P42-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-tea-s-ready",
+      "atom_type": "sentence_pattern",
+      "text": "Tea's ready!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-that-s-interesting",
+      "atom_type": "sentence_pattern",
+      "text": "That's interesting.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-monkey-king-likes-reading-books",
+      "atom_type": "sentence_pattern",
+      "text": "The Monkey King likes reading books.",
+      "gloss": "猴王喜欢看书。",
+      "linked_blocks": [
+        "TB-G6S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-third-person-singular-verb-forms",
+      "atom_type": "sentence_pattern",
+      "text": "Third person singular verb forms",
+      "gloss": "动词第三人称单数形式",
+      "linked_blocks": [
+        "TB-G6S1U4-P44-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-third-person-singular-verbs",
+      "atom_type": "sentence_pattern",
+      "text": "Third person singular verbs",
+      "gloss": "第三人称单数动词",
+      "linked_blocks": [
+        "TB-G6S1U4-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-two-students-like-dancing",
+      "atom_type": "sentence_pattern",
+      "text": "Two students like dancing.",
+      "gloss": "两个学生喜欢跳舞。",
+      "linked_blocks": [
+        "TB-G6S1U4-P39-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-a-great-story-is-it-true",
+      "atom_type": "sentence_pattern",
+      "text": "What a great story! Is it true?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-peter-s-hobbies",
+      "atom_type": "sentence_pattern",
+      "text": "What are Peter's hobbies?",
+      "gloss": "彼得的爱好是什么？",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-his-hobbies",
+      "atom_type": "sentence_pattern",
+      "text": "What are his hobbies?",
+      "gloss": "他的爱好是什么？",
+      "linked_blocks": [
+        "TB-G6S1U4-P37-D1",
+        "TB-G6S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-his-her-hobbies",
+      "atom_type": "sentence_pattern",
+      "text": "What are his/her hobbies?",
+      "gloss": "他/她的爱好是什么？",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-your-hobbies",
+      "atom_type": "sentence_pattern",
+      "text": "What are your hobbies?",
+      "gloss": "你的爱好是什么？",
+      "linked_blocks": [
+        "TB-G6S1U4-P39-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-do-the-two-johns-like",
+      "atom_type": "sentence_pattern",
+      "text": "What do the two Johns like?",
+      "gloss": "这两个约翰喜欢什么？",
+      "linked_blocks": [
+        "TB-G6S1U4-P40-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-do-you-like",
+      "atom_type": "sentence_pattern",
+      "text": "What do you like?",
+      "gloss": "你喜欢什么？",
+      "linked_blocks": [
+        "TB-G6S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-is-your-hobby",
+      "atom_type": "sentence_pattern",
+      "text": "What is your hobby?",
+      "gloss": "你的爱好是什么？",
+      "linked_blocks": [
+        "TB-G6S1U4-P42-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-who-is-your-best-friend",
+      "atom_type": "sentence_pattern",
+      "text": "Who is your best friend?",
+      "gloss": "谁是你最好的朋友？",
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-he-does",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, he does.",
+      "gloss": "是的，他是。",
+      "linked_blocks": [
+        "TB-G6S1U4-P37-D1",
+        "TB-G6S1U4-P40-D2",
+        "TB-G6S1U4-P41-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-he-does-he-lives-on-a-farm-look",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, he does. He lives on a farm. Look!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-what-do-you-like",
+      "atom_type": "sentence_pattern",
+      "text": "Yes. What do you like?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-like-tea-a-lot",
+      "atom_type": "sentence_pattern",
+      "text": "You like tea a lot!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-zac-liked-his-new-tail-and-so-did-all-the-other-squirrels",
+      "atom_type": "sentence_pattern",
+      "text": "Zac liked his new tail, and so did all the other squirrels.",
+      "gloss": "扎克喜欢他的新尾巴，其他所有的松鼠也喜欢。",
+      "linked_blocks": [
+        "TB-G6S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-zhang-peng-is-talking-with-oliver-about-his-pen-pal-listen-and-then-write-t-true-or-f-false",
+      "atom_type": "sentence_pattern",
+      "text": "Zhang Peng is talking with Oliver about his pen pal. Listen and then write T (true) or F (false).",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U4-P38-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G6S1U4-P36",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: I have a pen pal. This is the introductory scene for Unit 4. Inside a treehouse, Zip the squirrel and Zoom the bear are talking about their food and drink preferences.",
+      "entry_probe_questions": [
+        "Do you know the word tea?",
+        "Can you say: What do you like?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U4-P36-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U4-P37",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: I have a pen pal. Wu Binbin is introducing his pen pal Peter to Oliver. They are looking at photos and a computer screen showing a farm.",
+      "entry_probe_questions": [
+        "Do you know the word pen pal?",
+        "Can you say: What are his hobbies?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U4-P37-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U4-P38",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: I have a pen pal. Oliver and Zhang Peng are talking about Peter's hobbies. The illustration shows a boy reading to cows on a farm.",
+      "entry_probe_questions": [
+        "Do you know the word hobby?",
+        "Can you say: What are Peter's hobbies?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U4-P38-D2",
+        "TB-G6S1U4-P38-D3",
+        "TB-G6S1U4-P38-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U4-P39",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: I have a pen pal. Peter and Zhang Peng are discussing hobbies via video chat.",
+      "entry_probe_questions": [
+        "Do you know the word dancing?",
+        "Can you say: Hey, Zhang Peng, what are your hobbies?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U4-P39-D1",
+        "TB-G6S1U4-P39-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U4-P40",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: I have a pen pal. John and Wu Binbin are talking about Wu Binbin's new pen pal in Australia.",
+      "entry_probe_questions": [
+        "Do you know the word pen pal?",
+        "Can you say: Does he live in Sydney?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U4-P40-D2",
+        "TB-G6S1U4-P40-D1",
+        "TB-G6S1U4-P40-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U4-P41",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: I have a pen pal. John introduces his new pen pal to his brother. The section presents phrases about hobbies.",
+      "entry_probe_questions": [
+        "Do you know the word cooks Chinese food?",
+        "Can you say: Does he live in China, too?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U4-P41-D1",
+        "TB-G6S1U4-P41-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U4-P42",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: I have a pen pal. A notice board displaying four different club advertisements.",
+      "entry_probe_questions": [
+        "Do you know the word notice board?",
+        "Can you say: Shall we dance?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U4-P42-D2",
+        "TB-G6S1U4-P42-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U4-P43",
+      "page_type": "phonics",
+      "page_intro_cn": "Theme: I have a pen pal. An advertisement for a cooking club titled 'Let's cook!'. Students need to choose the correct verb forms.",
+      "entry_probe_questions": [
+        "Do you know the word cooking club?",
+        "Can you say: Third person singular verbs"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U4-P43-D2",
+        "TB-G6S1U4-P43-D3",
+        "TB-G6S1U4-P43-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U4-P44",
+      "page_type": "assessment",
+      "page_intro_cn": "Theme: I have a pen pal. Grammar practice: Read the text about Jane, underline verbs, and write their base forms.",
+      "entry_probe_questions": [
+        "Do you know the word studies?",
+        "Can you say: Third person singular verb forms"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U4-P44-D2",
+        "TB-G6S1U4-P44-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U4-P45",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: I have a pen pal. A story about a squirrel named Zac and the Monkey King, explaining why squirrels have bushy tails.",
+      "entry_probe_questions": [
+        "Do you know the word squirrel?",
+        "Can you say: He likes singing and dancing very much."
+      ],
+      "priority_blocks": [
+        "TB-G6S1U4-P45-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G6S1U4-P36-D1",
+      "page_uid": "TB-G6S1U4-P36",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U4-P36-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "This is the introductory scene for Unit 4. Inside a treehouse, Zip the squirrel and Zoom the bear are talking about their food and drink preferences. Key patterns: What do you like?; I don't have any cake.",
+      "focus_vocabulary": [
+        "tea",
+        "ready",
+        "cake",
+        "a lot",
+        "for sure"
+      ],
+      "core_patterns": [
+        "What do you like?",
+        "I don't have any cake.",
+        "Yes. What do you like?",
+        "Tea's ready!",
+        "You like tea a lot!",
+        "Cake, for sure!"
+      ],
+      "allowed_answer_scope": [
+        "Tea's ready!",
+        "You like tea a lot!",
+        "Cake, for sure!",
+        "Sorry, I don't have any cake."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word tea?",
+        "Can you say: What do you like?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U4-P36-D1-goal"
+      ],
+      "branchable_topics": [
+        "tea",
+        "ready",
+        "cake",
+        "a lot",
+        "for sure",
+        "I have a pen pal",
+        "Unit Four"
+      ],
+      "return_anchors": [
+        "What do you like?",
+        "I don't have any cake.",
+        "Yes. What do you like?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P37-D1",
+      "page_uid": "TB-G6S1U4-P37",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U4-P37-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Wu Binbin is introducing his pen pal Peter to Oliver. They are looking at photos and a computer screen showing a farm. Key patterns: What are his hobbies?; He likes doing kung fu and swimming.",
+      "focus_vocabulary": [
+        "pen pal",
+        "New Zealand",
+        "hobbies",
+        "kung fu",
+        "swimming",
+        "South Island",
+        "farm"
+      ],
+      "core_patterns": [
+        "What are his hobbies?",
+        "He likes doing kung fu and swimming.",
+        "Does he live on the South Island?",
+        "Yes, he does.",
+        "Oliver, this is my pen pal Peter. He's from New Zealand.",
+        "Yes, he does. He lives on a farm. Look!"
+      ],
+      "allowed_answer_scope": [
+        "Oliver, this is my pen pal Peter. He's from New Zealand.",
+        "He likes doing kung fu and swimming.",
+        "Yes, he does. He lives on a farm. Look!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word pen pal?",
+        "Can you say: What are his hobbies?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U4-P37-D1-goal"
+      ],
+      "branchable_topics": [
+        "pen pal",
+        "New Zealand",
+        "hobbies",
+        "kung fu",
+        "swimming",
+        "South Island",
+        "farm",
+        "I have a pen pal"
+      ],
+      "return_anchors": [
+        "What are his hobbies?",
+        "He likes doing kung fu and swimming.",
+        "Does he live on the South Island?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P38-D1",
+      "page_uid": "TB-G6S1U4-P38",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S1U4-P38-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Zhang Peng is talking with Oliver about his pen pal. Key patterns: Zhang Peng is talking with Oliver about his pen pal. Listen and then write T (true) or F (false).",
+      "focus_vocabulary": [
+        "pen pal",
+        "basketball",
+        "tall"
+      ],
+      "core_patterns": [
+        "Zhang Peng is talking with Oliver about his pen pal. Listen and then write T (true) or F (false)."
+      ],
+      "allowed_answer_scope": [
+        "F"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word pen pal?",
+        "Can you say: Zhang Peng is talking with Oliver about his pen pal. Listen and then write T (true) or F (false)."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U4-P38-D1-goal"
+      ],
+      "branchable_topics": [
+        "pen pal",
+        "basketball",
+        "tall",
+        "I have a pen pal",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Zhang Peng is talking with Oliver about his pen pal. Listen and then write T (true) or F (false)."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P38-D2",
+      "page_uid": "TB-G6S1U4-P38",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U4-P38-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Oliver and Zhang Peng are talking about Peter's hobbies. The illustration shows a boy reading to cows on a farm. Key patterns: What are Peter's hobbies?; He likes reading stories.",
+      "focus_vocabulary": [
+        "hobby",
+        "read stories",
+        "farm",
+        "cow",
+        "do kung fu",
+        "swim",
+        "sing",
+        "Jasmine Flower"
+      ],
+      "core_patterns": [
+        "What are Peter's hobbies?",
+        "He likes reading stories.",
+        "He likes doing kung fu and swimming.",
+        "He likes reading stories. He lives on a farm, so sometimes he reads to the cows!",
+        "That's interesting.",
+        "He also likes singing."
+      ],
+      "allowed_answer_scope": [
+        "He likes reading stories. He lives on a farm, so sometimes he reads to the cows!",
+        "That's interesting.",
+        "He likes doing kung fu and swimming.",
+        "He also likes singing.",
+        "Oh, you like singing, too.",
+        "Yes. I'm going to teach him the Chinese song \"Jasmine Flower\"!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word hobby?",
+        "Can you say: What are Peter's hobbies?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U4-P38-D3",
+        "TB-G6S1U4-P38-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U4-P38-D2-goal"
+      ],
+      "branchable_topics": [
+        "hobby",
+        "read stories",
+        "farm",
+        "cow",
+        "do kung fu",
+        "swim",
+        "sing",
+        "Jasmine Flower"
+      ],
+      "return_anchors": [
+        "What are Peter's hobbies?",
+        "He likes reading stories.",
+        "He likes doing kung fu and swimming."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P38-D3",
+      "page_uid": "TB-G6S1U4-P38",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S1U4-P38-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Students practice asking and answering about their best friend's hobbies. Key patterns: Who is your best friend?; What are his/her hobbies?",
+      "focus_vocabulary": [
+        "playing sports",
+        "climbing mountains",
+        "listening to music",
+        "watching TV",
+        "playing the pipa",
+        "drawing cartoons",
+        "flying kites",
+        "singing English songs"
+      ],
+      "core_patterns": [
+        "Who is your best friend?",
+        "What are his/her hobbies?",
+        "He/She likes ...",
+        "What are his hobbies?",
+        "My best friend is Xu Wei.",
+        "He likes flying kites and singing English songs."
+      ],
+      "allowed_answer_scope": [
+        "My best friend is Xu Wei.",
+        "He likes flying kites and singing English songs."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word playing sports?",
+        "Can you say: Who is your best friend?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U4-P38-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U4-P38-D3-goal"
+      ],
+      "branchable_topics": [
+        "playing sports",
+        "climbing mountains",
+        "listening to music",
+        "watching TV",
+        "playing the pipa",
+        "drawing cartoons",
+        "flying kites",
+        "singing English songs"
+      ],
+      "return_anchors": [
+        "Who is your best friend?",
+        "What are his/her hobbies?",
+        "He/She likes ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P39-D1",
+      "page_uid": "TB-G6S1U4-P39",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S1U4-P39-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Peter and Zhang Peng are discussing hobbies via video chat. Key patterns: Hey, Zhang Peng, what are your hobbies?; I like reading stories.",
+      "focus_vocabulary": [
+        "dancing",
+        "singing",
+        "reading stories",
+        "playing football",
+        "doing kung fu",
+        "hobbies"
+      ],
+      "core_patterns": [
+        "Hey, Zhang Peng, what are your hobbies?",
+        "I like reading stories.",
+        "I also like singing and doing kung fu."
+      ],
+      "allowed_answer_scope": [
+        "dancing",
+        "singing",
+        "reading stories",
+        "playing football",
+        "doing kung fu",
+        "hobbies"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word dancing?",
+        "Can you say: Hey, Zhang Peng, what are your hobbies?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U4-P39-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U4-P39-D1-goal"
+      ],
+      "branchable_topics": [
+        "dancing",
+        "singing",
+        "reading stories",
+        "playing football",
+        "doing kung fu",
+        "hobbies",
+        "I have a pen pal",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Hey, Zhang Peng, what are your hobbies?",
+        "I like reading stories.",
+        "I also like singing and doing kung fu."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P39-D2",
+      "page_uid": "TB-G6S1U4-P39",
+      "page_type": "vocabulary",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S1U4-P39-D2"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "Students interview classmates about hobbies, fill out a survey table, and report the results. Key patterns: What are your hobbies?; I like singing and dancing.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What are your hobbies?",
+        "I like singing and dancing.",
+        "Two students like dancing.",
+        "One student likes singing."
+      ],
+      "allowed_answer_scope": [
+        "What are your hobbies?",
+        "I like singing and dancing.",
+        "Two students like dancing.",
+        "One student likes singing."
+      ],
+      "entry_probe_questions": [
+        "Can you say: What are your hobbies?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U4-P39-D2-goal"
+      ],
+      "branchable_topics": [
+        "I have a pen pal",
+        "Do a survey"
+      ],
+      "return_anchors": [
+        "What are your hobbies?",
+        "I like singing and dancing.",
+        "Two students like dancing."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P40-D1",
+      "page_uid": "TB-G6S1U4-P40",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S1U4-P40-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "School is over. Miss White is talking to Wu Binbin. Listen and circle. Key patterns: Listen and circle.",
+      "focus_vocabulary": [
+        "pen pal",
+        "Australia"
+      ],
+      "core_patterns": [
+        "Listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "A pen pal",
+        "He is 12 years old"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word pen pal?",
+        "Can you say: Listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U4-P40-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U4-P40-D1-goal"
+      ],
+      "branchable_topics": [
+        "pen pal",
+        "Australia",
+        "I have a pen pal",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P40-D2",
+      "page_uid": "TB-G6S1U4-P40",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U4-P40-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "John and Wu Binbin are talking about Wu Binbin's new pen pal in Australia. Key patterns: Does he live in Sydney?; No, he doesn't. He lives in Canberra.",
+      "focus_vocabulary": [
+        "pen pal",
+        "Australia",
+        "Sydney",
+        "Canberra",
+        "word puzzles",
+        "hiking"
+      ],
+      "core_patterns": [
+        "Does he live in Sydney?",
+        "No, he doesn't. He lives in Canberra.",
+        "Does he like doing word puzzles and going hiking?",
+        "Yes, he does.",
+        "What do the two Johns like?",
+        "Hey, Binbin. What are you doing?"
+      ],
+      "allowed_answer_scope": [
+        "I'm writing an email to my new pen pal in Australia.",
+        "No, he doesn't. He lives in Canberra. His name is John, too.",
+        "Yes, he does.",
+        "Cool!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word pen pal?",
+        "Can you say: Does he live in Sydney?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U4-P40-D1",
+        "TB-G6S1U4-P40-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U4-P40-D2-goal"
+      ],
+      "branchable_topics": [
+        "pen pal",
+        "Australia",
+        "Sydney",
+        "Canberra",
+        "word puzzles",
+        "hiking",
+        "I have a pen pal",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "Does he live in Sydney?",
+        "No, he doesn't. He lives in Canberra.",
+        "Does he like doing word puzzles and going hiking?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P40-D3",
+      "page_uid": "TB-G6S1U4-P40",
+      "page_type": "dialogue",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G6S1U4-P40-D3"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "A writing task to fill in a message to John in Australia about hobbies and favorites. Key patterns: I'm very interested in Australia.; I'm learning English.",
+      "focus_vocabulary": [
+        "hobbies",
+        "interested",
+        "chat"
+      ],
+      "core_patterns": [
+        "I'm very interested in Australia.",
+        "I'm learning English."
+      ],
+      "allowed_answer_scope": [
+        "hobbies",
+        "interested",
+        "chat"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word hobbies?",
+        "Can you say: I'm very interested in Australia."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U4-P40-D3-goal"
+      ],
+      "branchable_topics": [
+        "hobbies",
+        "interested",
+        "chat",
+        "I have a pen pal",
+        "Talk about your hobbies"
+      ],
+      "return_anchors": [
+        "I'm very interested in Australia.",
+        "I'm learning English."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P41-D1",
+      "page_uid": "TB-G6S1U4-P41",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S1U4-P41-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "John introduces his new pen pal to his brother. The section presents phrases about hobbies. Key patterns: Does he live in China, too?; No, he doesn't.",
+      "focus_vocabulary": [
+        "cooks Chinese food",
+        "studies Chinese",
+        "does word puzzles",
+        "goes hiking",
+        "pen pal"
+      ],
+      "core_patterns": [
+        "Does he live in China, too?",
+        "No, he doesn't.",
+        "He lives in Australia, but he studies Chinese.",
+        "Really? Does he live in China, too?",
+        "Come and see my new pen pal. His name is John, too!",
+        "No, he doesn't. He lives in Australia, but he studies Chinese."
+      ],
+      "allowed_answer_scope": [
+        "Come and see my new pen pal. His name is John, too!",
+        "No, he doesn't. He lives in Australia, but he studies Chinese."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word cooks Chinese food?",
+        "Can you say: Does he live in China, too?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U4-P41-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U4-P41-D1-goal"
+      ],
+      "branchable_topics": [
+        "cooks Chinese food",
+        "studies Chinese",
+        "does word puzzles",
+        "goes hiking",
+        "pen pal",
+        "I have a pen pal",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Does he live in China, too?",
+        "No, he doesn't.",
+        "He lives in Australia, but he studies Chinese."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P41-D2",
+      "page_uid": "TB-G6S1U4-P41",
+      "page_type": "vocabulary",
+      "block_type": "practice_speaking",
+      "source_refs": [
+        "TB-G6S1U4-P41-D2"
+      ],
+      "teaching_goal": "Work on the practice speaking activity.",
+      "teaching_summary": "A matching and speaking exercise involving characters and their hobbies. Key patterns: Does Oliver do word puzzles every day?; Yes, he does.",
+      "focus_vocabulary": [
+        "word puzzles"
+      ],
+      "core_patterns": [
+        "Does Oliver do word puzzles every day?",
+        "Yes, he does."
+      ],
+      "allowed_answer_scope": [
+        "Yes, he does."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word word puzzles?",
+        "Can you say: Does Oliver do word puzzles every day?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U4-P41-D2-goal"
+      ],
+      "branchable_topics": [
+        "word puzzles",
+        "I have a pen pal",
+        "Listen, match and say"
+      ],
+      "return_anchors": [
+        "Does Oliver do word puzzles every day?",
+        "Yes, he does."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P42-D1",
+      "page_uid": "TB-G6S1U4-P42",
+      "page_type": "reading",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G6S1U4-P42-D1"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "A table for students to list their own hobbies and their partner's hobbies. Key patterns: What is your hobby?",
+      "focus_vocabulary": [
+        "hobby",
+        "partner"
+      ],
+      "core_patterns": [
+        "What is your hobby?"
+      ],
+      "allowed_answer_scope": [
+        "hobby",
+        "partner"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word hobby?",
+        "Can you say: What is your hobby?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U4-P42-D1-goal"
+      ],
+      "branchable_topics": [
+        "hobby",
+        "partner",
+        "I have a pen pal",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "What is your hobby?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P42-D2",
+      "page_uid": "TB-G6S1U4-P42",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S1U4-P42-D2"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "A notice board displaying four different club advertisements. Key patterns: Shall we dance?; Join our football club!",
+      "focus_vocabulary": [
+        "notice board",
+        "dancing class",
+        "partner",
+        "football club",
+        "playground",
+        "share",
+        "science club",
+        "robot"
+      ],
+      "core_patterns": [
+        "Shall we dance?",
+        "Join our football club!",
+        "Let's read together!",
+        "Do you want to learn about robots?"
+      ],
+      "allowed_answer_scope": [
+        "notice board",
+        "dancing class",
+        "partner",
+        "football club",
+        "playground",
+        "share"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word notice board?",
+        "Can you say: Shall we dance?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U4-P42-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U4-P42-D2-goal"
+      ],
+      "branchable_topics": [
+        "notice board",
+        "dancing class",
+        "partner",
+        "football club",
+        "playground",
+        "share",
+        "science club",
+        "robot"
+      ],
+      "return_anchors": [
+        "Shall we dance?",
+        "Join our football club!",
+        "Let's read together!"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P43-D1",
+      "page_uid": "TB-G6S1U4-P43",
+      "page_type": "phonics",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G6S1U4-P43-D1"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "Comprehension questions based on the previous reading text about pen pals and hobbies. Key patterns: Do the four people in the text want pen pals?; How many hobbies can you find in the text?",
+      "focus_vocabulary": [
+        "pen pal",
+        "hobby"
+      ],
+      "core_patterns": [
+        "Do the four people in the text want pen pals?",
+        "How many hobbies can you find in the text?"
+      ],
+      "allowed_answer_scope": [
+        "Yes, they do.",
+        "...",
+        "dancing"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word pen pal?",
+        "Can you say: Do the four people in the text want pen pals?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U4-P43-D1-goal"
+      ],
+      "branchable_topics": [
+        "pen pal",
+        "hobby",
+        "I have a pen pal",
+        "Read, answer and write"
+      ],
+      "return_anchors": [
+        "Do the four people in the text want pen pals?",
+        "How many hobbies can you find in the text?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P43-D2",
+      "page_uid": "TB-G6S1U4-P43",
+      "page_type": "phonics",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S1U4-P43-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "An advertisement for a cooking club titled 'Let's cook!'. Students need to choose the correct verb forms. Key patterns: Third person singular verbs",
+      "focus_vocabulary": [
+        "cooking club",
+        "chocolate",
+        "salad",
+        "do the dishes",
+        "dining hall"
+      ],
+      "core_patterns": [
+        "Third person singular verbs"
+      ],
+      "allowed_answer_scope": [
+        "talks",
+        "cooks",
+        "makes",
+        "does"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word cooking club?",
+        "Can you say: Third person singular verbs"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U4-P43-D3",
+        "TB-G6S1U4-P43-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U4-P43-D2-goal"
+      ],
+      "branchable_topics": [
+        "cooking club",
+        "chocolate",
+        "salad",
+        "do the dishes",
+        "dining hall",
+        "I have a pen pal",
+        "Finish this ad for a cooking club"
+      ],
+      "return_anchors": [
+        "Third person singular verbs"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P43-D3",
+      "page_uid": "TB-G6S1U4-P43",
+      "page_type": "phonics",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G6S1U4-P43-D3"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "Pronunciation practice focusing on sentence stress and rhythm. Key patterns: Sentence stress",
+      "focus_vocabulary": [
+        "We can share.",
+        "I like dancing.",
+        "He lives on a farm.",
+        "What are Peter's hobbies?"
+      ],
+      "core_patterns": [
+        "Sentence stress"
+      ],
+      "allowed_answer_scope": [
+        "We can share.",
+        "I like dancing.",
+        "He lives on a farm.",
+        "What are Peter's hobbies?"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word We can share.?",
+        "Can you say: Sentence stress"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U4-P43-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U4-P43-D3-goal"
+      ],
+      "branchable_topics": [
+        "We can share.",
+        "I like dancing.",
+        "He lives on a farm.",
+        "What are Peter's hobbies?",
+        "I have a pen pal",
+        "Tips for pronunciation"
+      ],
+      "return_anchors": [
+        "Sentence stress"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P44-D1",
+      "page_uid": "TB-G6S1U4-P44",
+      "page_type": "assessment",
+      "block_type": "assessment_quiz",
+      "source_refs": [
+        "TB-G6S1U4-P44-D1"
+      ],
+      "teaching_goal": "Check whether the learner can complete the unit review task.",
+      "teaching_summary": "Listening assessment about hobbies and daily activities. Key patterns: Let's check",
+      "focus_vocabulary": [
+        "football",
+        "piano",
+        "bus",
+        "bike",
+        "stories",
+        "cooking"
+      ],
+      "core_patterns": [
+        "Let's check"
+      ],
+      "allowed_answer_scope": [
+        "football",
+        "piano",
+        "bus",
+        "bike",
+        "stories",
+        "cooking"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word football?",
+        "Can you say: Let's check"
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U4-P44-D1-goal"
+      ],
+      "branchable_topics": [
+        "football",
+        "piano",
+        "bus",
+        "bike",
+        "stories",
+        "cooking",
+        "I have a pen pal",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Let's check"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P44-D2",
+      "page_uid": "TB-G6S1U4-P44",
+      "page_type": "assessment",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S1U4-P44-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Grammar practice: Read the text about Jane, underline verbs, and write their base forms. Key patterns: Third person singular verb forms",
+      "focus_vocabulary": [
+        "studies",
+        "does",
+        "teaches",
+        "sleeps"
+      ],
+      "core_patterns": [
+        "Third person singular verb forms"
+      ],
+      "allowed_answer_scope": [
+        "Underlined: has, loves, studies, does, teaches, sleeps",
+        "love",
+        "study",
+        "do",
+        "teach",
+        "have"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word studies?",
+        "Can you say: Third person singular verb forms"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U4-P44-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U4-P44-D2-goal"
+      ],
+      "branchable_topics": [
+        "studies",
+        "does",
+        "teaches",
+        "sleeps",
+        "I have a pen pal",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Third person singular verb forms"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U4-P45-D1",
+      "page_uid": "TB-G6S1U4-P45",
+      "page_type": "reading",
+      "block_type": "story_time",
+      "source_refs": [
+        "TB-G6S1U4-P45-D1"
+      ],
+      "teaching_goal": "Read and retell the key story events.",
+      "teaching_summary": "A story about a squirrel named Zac and the Monkey King, explaining why squirrels have bushy tails. Key patterns: He likes singing and dancing very much.; The Monkey King likes reading books.",
+      "focus_vocabulary": [
+        "squirrel",
+        "Monkey King",
+        "forest",
+        "gift",
+        "shout",
+        "throw",
+        "bushy",
+        "tail"
+      ],
+      "core_patterns": [
+        "He likes singing and dancing very much.",
+        "The Monkey King likes reading books.",
+        "Zac liked his new tail, and so did all the other squirrels.",
+        "What a great story! Is it true?"
+      ],
+      "allowed_answer_scope": [
+        "squirrel",
+        "Monkey King",
+        "forest",
+        "gift",
+        "shout",
+        "throw"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word squirrel?",
+        "Can you say: He likes singing and dancing very much."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U4-P45-D1-goal"
+      ],
+      "branchable_topics": [
+        "squirrel",
+        "Monkey King",
+        "forest",
+        "gift",
+        "shout",
+        "throw",
+        "bushy",
+        "tail"
+      ],
+      "return_anchors": [
+        "He likes singing and dancing very much.",
+        "The Monkey King likes reading books.",
+        "Zac liked his new tail, and so did all the other squirrels."
+      ]
+    }
+  ]
+}

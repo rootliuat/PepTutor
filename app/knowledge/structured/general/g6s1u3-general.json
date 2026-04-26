@@ -1,0 +1,3219 @@
+{
+  "pilot_id": "g6s1u3-general-v1",
+  "scope": {
+    "grade": "G6",
+    "semester": "S1",
+    "unit": "U3",
+    "pages": [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/03.六年级上册语料.json",
+    "app/knowledge/raw/07.六年级上册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 6 · Volume 1), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 6 · Volume 1), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 22,
+    "source_kind": "textbook_source_json",
+    "source_format": "json"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 3",
+      "word": "visit",
+      "phonetic": "/'vɪzɪt/",
+      "chinese": "拜访",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U3-P25-D1",
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "film",
+      "phonetic": "/fɪlm/",
+      "chinese": "电影",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U3-P23-D1",
+        "TB-G6S1U3-P24-D2",
+        "TB-G6S1U3-P25-D1",
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "see a film",
+      "chinese": "看电影",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U3-P23-D1",
+        "TB-G6S1U3-P24-D2",
+        "TB-G6S1U3-P25-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "trip",
+      "phonetic": "/trɪp/",
+      "chinese": "旅行",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U3-P25-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "take a trip",
+      "chinese": "去旅行",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U3-P25-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "supermarket",
+      "phonetic": "/'sjuːpəmɑːkɪt/",
+      "chinese": "超市",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U3-P25-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "evening",
+      "phonetic": "/'iːvnɪŋ/",
+      "chinese": "晚上；傍晚",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U3-P25-D1",
+        "TB-G6S1U3-P30-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "tonight",
+      "phonetic": "/tə'naɪt/",
+      "chinese": "在今晚",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U3-P25-D1",
+        "TB-G6S1U3-P29-D3"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "tomorrow",
+      "phonetic": "/tə'mɒrəʊ/",
+      "chinese": "明天",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U3-P24-D2",
+        "TB-G6S1U3-P29-D3",
+        "TB-G6S1U3-P30-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "next week",
+      "chinese": "下周",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "dictionary",
+      "phonetic": "/'dɪkʃənri/",
+      "chinese": "词典",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U3-P27-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "comic",
+      "phonetic": "/'kɒmɪk/",
+      "chinese": "滑稽的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U3-P23-D1",
+        "TB-G6S1U3-P26-D2",
+        "TB-G6S1U3-P27-D1",
+        "TB-G6S1U3-P27-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "comic book",
+      "chinese": "（儿童的）连环画册",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U3-P23-D1",
+        "TB-G6S1U3-P26-D2",
+        "TB-G6S1U3-P27-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "word",
+      "phonetic": "/wɜːd/",
+      "chinese": "单词",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U3-P27-D1",
+        "TB-G6S1U3-P27-D2",
+        "TB-G6S1U3-P30-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "word book",
+      "chinese": "单词书",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U3-P27-D1",
+        "TB-G6S1U3-P30-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "postcard",
+      "phonetic": "/'pəʊstkɑːd/",
+      "chinese": "明信片",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U3-P27-D1",
+        "TB-G6S1U3-P30-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "lesson",
+      "phonetic": "/'lesn/",
+      "chinese": "课",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U3-P24-D2",
+        "TB-G6S1U3-P29-D3"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "space",
+      "phonetic": "/speɪs/",
+      "chinese": "太空",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "travel",
+      "phonetic": "/'trævl/",
+      "chinese": "（尤指长途）旅行",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U3-P22-D1",
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "half",
+      "phonetic": "/hɑːf/",
+      "chinese": "一半",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "price",
+      "phonetic": "/praɪs/",
+      "chinese": "价格",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "Mid-Autumn Festival",
+      "phonetic": "/ˌmɪd 'ɔːtəm 'festɪvl/",
+      "chinese": "中秋节",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U3-P28-D2",
+        "TB-G6S1U3-P29-D1",
+        "TB-G6S1U3-P29-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "together",
+      "phonetic": "/tə'ɡeðə(r)/",
+      "chinese": "一起",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U3-P28-D1",
+        "TB-G6S1U3-P28-D2",
+        "TB-G6S1U3-P29-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "get together",
+      "chinese": "聚会",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U3-P28-D1",
+        "TB-G6S1U3-P28-D2",
+        "TB-G6S1U3-P29-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "mooncake",
+      "chinese": "月饼",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U3-P28-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "poem",
+      "phonetic": "/'pəʊɪm/",
+      "chinese": "诗",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U3-P28-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "moon",
+      "phonetic": "/muːn/",
+      "chinese": "月亮",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U3-P28-D2"
+      ]
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G6S1U3-P22-D1-goal",
+      "block_uid": "TB-G6S1U3-P22-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P23-D1-goal",
+      "block_uid": "TB-G6S1U3-P23-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P24-D1-goal",
+      "block_uid": "TB-G6S1U3-P24-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P24-D2-goal",
+      "block_uid": "TB-G6S1U3-P24-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P24-D3-goal",
+      "block_uid": "TB-G6S1U3-P24-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P25-D1-goal",
+      "block_uid": "TB-G6S1U3-P25-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P25-D2-goal",
+      "block_uid": "TB-G6S1U3-P25-D2",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P26-D1-goal",
+      "block_uid": "TB-G6S1U3-P26-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P26-D2-goal",
+      "block_uid": "TB-G6S1U3-P26-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P26-D3-goal",
+      "block_uid": "TB-G6S1U3-P26-D3",
+      "category": "practice_speaking",
+      "text": "Work on the practice speaking activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P26-D4-goal",
+      "block_uid": "TB-G6S1U3-P26-D4",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P27-D1-goal",
+      "block_uid": "TB-G6S1U3-P27-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P27-D2-goal",
+      "block_uid": "TB-G6S1U3-P27-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P28-D1-goal",
+      "block_uid": "TB-G6S1U3-P28-D1",
+      "category": "practice_speaking",
+      "text": "Work on the practice speaking activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P28-D2-goal",
+      "block_uid": "TB-G6S1U3-P28-D2",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P29-D1-goal",
+      "block_uid": "TB-G6S1U3-P29-D1",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P29-D2-goal",
+      "block_uid": "TB-G6S1U3-P29-D2",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P29-D3-goal",
+      "block_uid": "TB-G6S1U3-P29-D3",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P30-D1-goal",
+      "block_uid": "TB-G6S1U3-P30-D1",
+      "category": "assessment_quiz",
+      "text": "Check whether the learner can complete the unit review task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P30-D2-goal",
+      "block_uid": "TB-G6S1U3-P30-D2",
+      "category": "assessment_quiz",
+      "text": "Check whether the learner can complete the unit review task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P30-D3-goal",
+      "block_uid": "TB-G6S1U3-P30-D3",
+      "category": "summary_wrap_up",
+      "text": "Review and consolidate the core language point.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U3-P31-D1-goal",
+      "block_uid": "TB-G6S1U3-P31-D1",
+      "category": "story_time",
+      "text": "Read and retell the key story events.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-afraid",
+      "atom_type": "word",
+      "text": "afraid",
+      "gloss": "害怕",
+      "linked_blocks": [
+        "TB-G6S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-art-lesson",
+      "atom_type": "word",
+      "text": "art lesson",
+      "gloss": "美术课",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-aunt",
+      "atom_type": "word",
+      "text": "aunt",
+      "gloss": "姑姑/阿姨",
+      "linked_blocks": [
+        "TB-G6S1U3-P29-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-autumn",
+      "atom_type": "word",
+      "text": "autumn",
+      "gloss": "秋天",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-bookstore",
+      "atom_type": "word",
+      "text": "bookstore",
+      "gloss": "书店",
+      "linked_blocks": [
+        "TB-G6S1U3-P30-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-chang-e",
+      "atom_type": "word",
+      "text": "Chang'e",
+      "gloss": "嫦娥",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-christmas",
+      "atom_type": "word",
+      "text": "Christmas",
+      "gloss": "圣诞节",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-cinema",
+      "atom_type": "word",
+      "text": "cinema",
+      "gloss": "电影院",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D2",
+        "TB-G6S1U3-P30-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-comic",
+      "atom_type": "word",
+      "text": "comic",
+      "gloss": "滑稽的",
+      "linked_blocks": [
+        "TB-G6S1U3-P23-D1",
+        "TB-G6S1U3-P26-D2",
+        "TB-G6S1U3-P27-D1",
+        "TB-G6S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-comic-book",
+      "atom_type": "word",
+      "text": "comic book",
+      "gloss": "（儿童的）连环画册",
+      "linked_blocks": [
+        "TB-G6S1U3-P23-D1",
+        "TB-G6S1U3-P26-D2",
+        "TB-G6S1U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-comic-books",
+      "atom_type": "word",
+      "text": "comic books",
+      "gloss": "漫画书（复数）",
+      "linked_blocks": [
+        "TB-G6S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-dictionary",
+      "atom_type": "word",
+      "text": "dictionary",
+      "gloss": "词典",
+      "linked_blocks": [
+        "TB-G6S1U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-dinner",
+      "atom_type": "word",
+      "text": "dinner",
+      "gloss": "晚餐",
+      "linked_blocks": [
+        "TB-G6S1U3-P29-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-disturb",
+      "atom_type": "word",
+      "text": "disturb",
+      "gloss": "打扰",
+      "linked_blocks": [
+        "TB-G6S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-draw-pictures",
+      "atom_type": "word",
+      "text": "draw pictures",
+      "gloss": "画画",
+      "linked_blocks": [
+        "TB-G6S1U3-P22-D1",
+        "TB-G6S1U3-P24-D2",
+        "TB-G6S1U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-evening",
+      "atom_type": "word",
+      "text": "evening",
+      "gloss": "晚上；傍晚",
+      "linked_blocks": [
+        "TB-G6S1U3-P25-D1",
+        "TB-G6S1U3-P30-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-family",
+      "atom_type": "word",
+      "text": "family",
+      "gloss": "家庭",
+      "linked_blocks": [
+        "TB-G6S1U3-P29-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-film",
+      "atom_type": "word",
+      "text": "film",
+      "gloss": "电影",
+      "linked_blocks": [
+        "TB-G6S1U3-P23-D1",
+        "TB-G6S1U3-P24-D2",
+        "TB-G6S1U3-P25-D1",
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-fishing",
+      "atom_type": "word",
+      "text": "fishing",
+      "gloss": "钓鱼",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-get-together",
+      "atom_type": "word",
+      "text": "get together",
+      "gloss": "聚会",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D1",
+        "TB-G6S1U3-P28-D2",
+        "TB-G6S1U3-P29-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-go-for-a-picnic",
+      "atom_type": "word",
+      "text": "go for a picnic",
+      "gloss": "去野餐",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-go-ice-skating",
+      "atom_type": "word",
+      "text": "go ice-skating",
+      "gloss": "去滑冰",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-go-to-the-supermarket",
+      "atom_type": "word",
+      "text": "go to the supermarket",
+      "gloss": "去超市",
+      "linked_blocks": [
+        "TB-G6S1U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-going-to",
+      "atom_type": "word",
+      "text": "going to",
+      "gloss": "打算/将要",
+      "linked_blocks": [
+        "TB-G6S1U3-P30-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-grandma",
+      "atom_type": "word",
+      "text": "grandma",
+      "gloss": "祖母/外祖母",
+      "linked_blocks": [
+        "TB-G6S1U3-P29-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-half",
+      "atom_type": "word",
+      "text": "half",
+      "gloss": "一半",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-half-price",
+      "atom_type": "word",
+      "text": "half price",
+      "gloss": "半价",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-have-a-good-time",
+      "atom_type": "word",
+      "text": "have a good time",
+      "gloss": "玩得开心",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-holiday",
+      "atom_type": "word",
+      "text": "holiday",
+      "gloss": "节日",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-homework",
+      "atom_type": "word",
+      "text": "homework",
+      "gloss": "家庭作业",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-ice-cream",
+      "atom_type": "word",
+      "text": "ice cream",
+      "gloss": "冰激凌",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-learn",
+      "atom_type": "word",
+      "text": "learn",
+      "gloss": "学习",
+      "linked_blocks": [
+        "TB-G6S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-leaves",
+      "atom_type": "word",
+      "text": "leaves",
+      "gloss": "树叶",
+      "linked_blocks": [
+        "TB-G6S1U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-lesson",
+      "atom_type": "word",
+      "text": "lesson",
+      "gloss": "课",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D2",
+        "TB-G6S1U3-P29-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-look-for",
+      "atom_type": "word",
+      "text": "look for",
+      "gloss": "寻找",
+      "linked_blocks": [
+        "TB-G6S1U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-make-a-snowman",
+      "atom_type": "word",
+      "text": "make a snowman",
+      "gloss": "堆雪人",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-mars",
+      "atom_type": "word",
+      "text": "Mars",
+      "gloss": "火星",
+      "linked_blocks": [
+        "TB-G6S1U3-P22-D1",
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-mid-autumn-festival",
+      "atom_type": "word",
+      "text": "Mid-Autumn Festival",
+      "gloss": "中秋节",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D2",
+        "TB-G6S1U3-P29-D1",
+        "TB-G6S1U3-P29-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-moon",
+      "atom_type": "word",
+      "text": "moon",
+      "gloss": "月亮",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-mooncake",
+      "atom_type": "word",
+      "text": "mooncake",
+      "gloss": "月饼",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-national-day",
+      "atom_type": "word",
+      "text": "National Day",
+      "gloss": "国庆节",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-nature-park",
+      "atom_type": "word",
+      "text": "nature park",
+      "gloss": "自然公园",
+      "linked_blocks": [
+        "TB-G6S1U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-next-week",
+      "atom_type": "word",
+      "text": "next week",
+      "gloss": "下周",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-on-sale",
+      "atom_type": "word",
+      "text": "on sale",
+      "gloss": "特价出售",
+      "linked_blocks": [
+        "TB-G6S1U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-partner",
+      "atom_type": "word",
+      "text": "partner",
+      "gloss": "搭档",
+      "linked_blocks": [
+        "TB-G6S1U3-P29-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-plan",
+      "atom_type": "word",
+      "text": "plan",
+      "gloss": "计划",
+      "linked_blocks": [
+        "TB-G6S1U3-P23-D1",
+        "TB-G6S1U3-P29-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-poem",
+      "atom_type": "word",
+      "text": "poem",
+      "gloss": "诗",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pool",
+      "atom_type": "word",
+      "text": "pool",
+      "gloss": "水池；游泳池",
+      "linked_blocks": [
+        "TB-G6S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-post-office",
+      "atom_type": "word",
+      "text": "post office",
+      "gloss": "邮局",
+      "linked_blocks": [
+        "TB-G6S1U3-P30-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-postcard",
+      "atom_type": "word",
+      "text": "postcard",
+      "gloss": "明信片",
+      "linked_blocks": [
+        "TB-G6S1U3-P27-D1",
+        "TB-G6S1U3-P30-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-practise",
+      "atom_type": "word",
+      "text": "practise",
+      "gloss": "练习",
+      "linked_blocks": [
+        "TB-G6S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-price",
+      "atom_type": "word",
+      "text": "price",
+      "gloss": "价格",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-renmin-park",
+      "atom_type": "word",
+      "text": "Renmin Park",
+      "gloss": "人民公园",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-see-a-film",
+      "atom_type": "word",
+      "text": "see a film",
+      "gloss": "看电影",
+      "linked_blocks": [
+        "TB-G6S1U3-P23-D1",
+        "TB-G6S1U3-P24-D2",
+        "TB-G6S1U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-space",
+      "atom_type": "word",
+      "text": "space",
+      "gloss": "太空",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-space-travel",
+      "atom_type": "word",
+      "text": "space travel",
+      "gloss": "太空旅行",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-spring-festival",
+      "atom_type": "word",
+      "text": "Spring Festival",
+      "gloss": "春节",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-supermarket",
+      "atom_type": "word",
+      "text": "supermarket",
+      "gloss": "超市",
+      "linked_blocks": [
+        "TB-G6S1U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-swim",
+      "atom_type": "word",
+      "text": "swim",
+      "gloss": "游泳",
+      "linked_blocks": [
+        "TB-G6S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-swimming",
+      "atom_type": "word",
+      "text": "swimming",
+      "gloss": "游泳",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-take-a-trip",
+      "atom_type": "word",
+      "text": "take a trip",
+      "gloss": "去旅行",
+      "linked_blocks": [
+        "TB-G6S1U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-this-afternoon",
+      "atom_type": "word",
+      "text": "this afternoon",
+      "gloss": "今天下午",
+      "linked_blocks": [
+        "TB-G6S1U3-P25-D1",
+        "TB-G6S1U3-P26-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-this-evening",
+      "atom_type": "word",
+      "text": "this evening",
+      "gloss": "今天晚上",
+      "linked_blocks": [
+        "TB-G6S1U3-P25-D1",
+        "TB-G6S1U3-P30-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-this-morning",
+      "atom_type": "word",
+      "text": "this morning",
+      "gloss": "今天上午",
+      "linked_blocks": [
+        "TB-G6S1U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-together",
+      "atom_type": "word",
+      "text": "together",
+      "gloss": "一起",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D1",
+        "TB-G6S1U3-P28-D2",
+        "TB-G6S1U3-P29-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-tomorrow",
+      "atom_type": "word",
+      "text": "tomorrow",
+      "gloss": "明天",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D2",
+        "TB-G6S1U3-P29-D3",
+        "TB-G6S1U3-P30-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-tomorrow-afternoon",
+      "atom_type": "word",
+      "text": "tomorrow afternoon",
+      "gloss": "明天下午",
+      "linked_blocks": [
+        "TB-G6S1U3-P30-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-tonight",
+      "atom_type": "word",
+      "text": "tonight",
+      "gloss": "在今晚",
+      "linked_blocks": [
+        "TB-G6S1U3-P25-D1",
+        "TB-G6S1U3-P29-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-travel",
+      "atom_type": "word",
+      "text": "travel",
+      "gloss": "（尤指长途）旅行",
+      "linked_blocks": [
+        "TB-G6S1U3-P22-D1",
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-travel-to-mars",
+      "atom_type": "word",
+      "text": "Travel to Mars",
+      "gloss": "火星之旅",
+      "linked_blocks": [
+        "TB-G6S1U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-trip",
+      "atom_type": "word",
+      "text": "trip",
+      "gloss": "旅行",
+      "linked_blocks": [
+        "TB-G6S1U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-visit",
+      "atom_type": "word",
+      "text": "visit",
+      "gloss": "拜访",
+      "linked_blocks": [
+        "TB-G6S1U3-P25-D1",
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-visit-my-grandparents",
+      "atom_type": "word",
+      "text": "visit my grandparents",
+      "gloss": "看望我的祖父母",
+      "linked_blocks": [
+        "TB-G6S1U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-wash-clothes",
+      "atom_type": "word",
+      "text": "wash clothes",
+      "gloss": "洗衣服",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-weekend-plan",
+      "atom_type": "word",
+      "text": "weekend plan",
+      "gloss": "周末计划",
+      "linked_blocks": [
+        "TB-G6S1U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-what",
+      "atom_type": "word",
+      "text": "what",
+      "gloss": "什么",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-when",
+      "atom_type": "word",
+      "text": "when",
+      "gloss": "什么时候",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-where",
+      "atom_type": "word",
+      "text": "where",
+      "gloss": "哪里",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-word",
+      "atom_type": "word",
+      "text": "word",
+      "gloss": "单词",
+      "linked_blocks": [
+        "TB-G6S1U3-P27-D1",
+        "TB-G6S1U3-P27-D2",
+        "TB-G6S1U3-P30-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-word-book",
+      "atom_type": "word",
+      "text": "word book",
+      "gloss": "单词书",
+      "linked_blocks": [
+        "TB-G6S1U3-P27-D1",
+        "TB-G6S1U3-P30-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-word-books",
+      "atom_type": "word",
+      "text": "word books",
+      "gloss": "单词书（复数）",
+      "linked_blocks": [
+        "TB-G6S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-answer-the-question",
+      "atom_type": "sentence_pattern",
+      "text": "Answer the question.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-i-help-you",
+      "atom_type": "sentence_pattern",
+      "text": "Can I help you?",
+      "gloss": "我能为您做点什么吗？",
+      "linked_blocks": [
+        "TB-G6S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-cool-i-have-lots-of-comic-books-about-space-when-are-you-going",
+      "atom_type": "sentence_pattern",
+      "text": "Cool! I have lots of comic books about space. When are you going?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-have",
+      "atom_type": "sentence_pattern",
+      "text": "Do you have ...?",
+      "gloss": "你有……吗？",
+      "linked_blocks": [
+        "TB-G6S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-she-is-going-to",
+      "atom_type": "sentence_pattern",
+      "text": "He/She is going to ...",
+      "gloss": "他/她打算……",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-can-you-learn-to-swim-without-going-to-a-pool",
+      "atom_type": "sentence_pattern",
+      "text": "How can you learn to swim without going to a pool?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-going-to",
+      "atom_type": "sentence_pattern",
+      "text": "I'm going to ...",
+      "gloss": "我打算……",
+      "linked_blocks": [
+        "TB-G6S1U3-P29-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-going-to-buy-a-new-comic-book",
+      "atom_type": "sentence_pattern",
+      "text": "I'm going to buy a new comic book.",
+      "gloss": "我打算买一本新的漫画书。",
+      "linked_blocks": [
+        "TB-G6S1U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-going-to-draw-some-pictures",
+      "atom_type": "sentence_pattern",
+      "text": "I'm going to draw some pictures.",
+      "gloss": "我打算画一些画。",
+      "linked_blocks": [
+        "TB-G6S1U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-going-to-draw-some-pictures-what-about-you",
+      "atom_type": "sentence_pattern",
+      "text": "I'm going to draw some pictures. What about you?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-going-to-have-an-art-lesson",
+      "atom_type": "sentence_pattern",
+      "text": "I'm going to have an art lesson.",
+      "gloss": "我要去上一节美术课。",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-going-to-learn-how-to-swim",
+      "atom_type": "sentence_pattern",
+      "text": "I'm going to learn how to swim.",
+      "gloss": "我打算学习如何游泳。",
+      "linked_blocks": [
+        "TB-G6S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-going-to-look-for-some-beautiful-leaves",
+      "atom_type": "sentence_pattern",
+      "text": "I'm going to look for some beautiful leaves.",
+      "gloss": "我打算寻找一些漂亮的树叶。",
+      "linked_blocks": [
+        "TB-G6S1U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-going-to-see-a-film-tomorrow",
+      "atom_type": "sentence_pattern",
+      "text": "I'm going to see a film tomorrow.",
+      "gloss": "明天我要去看电影。",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-going-to-see-a-film",
+      "atom_type": "sentence_pattern",
+      "text": "I'm going to see a film.",
+      "gloss": "我打算去看电影。",
+      "linked_blocks": [
+        "TB-G6S1U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-going-to-visit-my-grandparents",
+      "atom_type": "sentence_pattern",
+      "text": "I'm going to visit my grandparents.",
+      "gloss": "我打算去看望我的祖父母。",
+      "linked_blocks": [
+        "TB-G6S1U3-P25-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-half-price-then",
+      "atom_type": "sentence_pattern",
+      "text": "It's half price then!",
+      "gloss": "那时候是半价！",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-john-is-going-to-buy-his-favourite-comic-book",
+      "atom_type": "sentence_pattern",
+      "text": "John is going to buy his favourite comic book.",
+      "gloss": "约翰打算去买他最喜欢的漫画书。",
+      "linked_blocks": [
+        "TB-G6S1U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-just-try-this-way-this-way-ok-now-can-you-do-it",
+      "atom_type": "sentence_pattern",
+      "text": "Just try. This way ... This way ... OK, now can you do it?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-learn-by-doing",
+      "atom_type": "sentence_pattern",
+      "text": "Learn by doing.",
+      "gloss": "从做中学。",
+      "linked_blocks": [
+        "TB-G6S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-answer",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and answer.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P30-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-mike-is-going-to-see-a-film",
+      "atom_type": "sentence_pattern",
+      "text": "Mike is going to see a film.",
+      "gloss": "迈克打算去看电影。",
+      "linked_blocks": [
+        "TB-G6S1U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-mike-is-going-to-see-a-film-john-is-going-to-buy-his-favourite-comic-book-hmm-what-am-i-going-to-do-this-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "Mike is going to see a film. John is going to buy his favourite comic book. Hmm, what am I going to do this weekend?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-my-aunt-is-going-to-make-mooncakes",
+      "atom_type": "sentence_pattern",
+      "text": "My aunt is going to make mooncakes.",
+      "gloss": "我的姑姑打算做月饼。",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-my-cousin-jack-is-going-to-visit-me-next-week",
+      "atom_type": "sentence_pattern",
+      "text": "My cousin Jack is going to visit me next week.",
+      "gloss": "我的表弟杰克下周要来看我。",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-my-family-are-going-to-get-together-and-have-a-big-dinner",
+      "atom_type": "sentence_pattern",
+      "text": "My family are going to get together and have a big dinner.",
+      "gloss": "我的家人打算聚在一起吃顿大餐。",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-ok-i-ll-teach-you",
+      "atom_type": "sentence_pattern",
+      "text": "OK. I'll teach you.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-sounds-great-i-m-going-to-see-a-film-tomorrow",
+      "atom_type": "sentence_pattern",
+      "text": "Sounds great! I'm going to see a film tomorrow.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-stress-on-the-first-syllable-e-g-lesson-dinner",
+      "atom_type": "sentence_pattern",
+      "text": "Stress on the first syllable (e.g., lesson, dinner)",
+      "gloss": "重音在第一个音节（如：lesson, dinner）",
+      "linked_blocks": [
+        "TB-G6S1U3-P29-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-stress-on-the-second-syllable-e-g-tonight-tomorrow",
+      "atom_type": "sentence_pattern",
+      "text": "Stress on the second syllable (e.g., tonight, tomorrow)",
+      "gloss": "重音在第二个音节（如：tonight, tomorrow）",
+      "linked_blocks": [
+        "TB-G6S1U3-P29-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-that-s-nice-where-are-you-going",
+      "atom_type": "sentence_pattern",
+      "text": "That's nice. Where are you going?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-they-are-going-to",
+      "atom_type": "sentence_pattern",
+      "text": "They are going to ...",
+      "gloss": "他们打算……",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-to-the-bookstore",
+      "atom_type": "sentence_pattern",
+      "text": "To the bookstore.",
+      "gloss": "去书店。",
+      "linked_blocks": [
+        "TB-G6S1U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-to-the-bookstore-i-m-going-to-buy-a-new-comic-book",
+      "atom_type": "sentence_pattern",
+      "text": "To the bookstore. I'm going to buy a new comic book.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-will-all-be-together-tonight",
+      "atom_type": "sentence_pattern",
+      "text": "We will all be together tonight.",
+      "gloss": "今晚我们将都聚在一起。",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-re-going-to-draw-some-pictures-in-renmin-park",
+      "atom_type": "sentence_pattern",
+      "text": "We're going to draw some pictures in Renmin Park.",
+      "gloss": "我们要去人民公园画画。",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-re-going-to-see-a-film-about-space-travel",
+      "atom_type": "sentence_pattern",
+      "text": "We're going to see a film about space travel!",
+      "gloss": "我们要去看一部关于太空旅行的电影！",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-am-i-going-to-do-this-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "What am I going to do this weekend?",
+      "gloss": "这个周末我打算做什么？",
+      "linked_blocks": [
+        "TB-G6S1U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-going-to-do",
+      "atom_type": "sentence_pattern",
+      "text": "What are ... going to do?",
+      "gloss": "……打算做什么？",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-these-holidays",
+      "atom_type": "sentence_pattern",
+      "text": "What are these holidays?",
+      "gloss": "这些是什么节日？",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-you-going-to-buy-sarah",
+      "atom_type": "sentence_pattern",
+      "text": "What are you going to buy, Sarah?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-you-going-to-buy",
+      "atom_type": "sentence_pattern",
+      "text": "What are you going to buy?",
+      "gloss": "你打算买什么？",
+      "linked_blocks": [
+        "TB-G6S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-you-going-to-do-for-mid-autumn-festival",
+      "atom_type": "sentence_pattern",
+      "text": "What are you going to do for Mid-Autumn Festival?",
+      "gloss": "中秋节你打算做什么？",
+      "linked_blocks": [
+        "TB-G6S1U3-P29-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-you-going-to-do-in-the-nature-park",
+      "atom_type": "sentence_pattern",
+      "text": "What are you going to do in the nature park?",
+      "gloss": "你打算在自然公园里做什么？",
+      "linked_blocks": [
+        "TB-G6S1U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-you-going-to-do-in-your-lesson",
+      "atom_type": "sentence_pattern",
+      "text": "What are you going to do in your lesson?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-you-going-to-do-there",
+      "atom_type": "sentence_pattern",
+      "text": "What are you going to do there?",
+      "gloss": "你要去那里做什么？",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-you-going-to-do-this-morning",
+      "atom_type": "sentence_pattern",
+      "text": "What are you going to do this morning?",
+      "gloss": "你今天上午打算做什么？",
+      "linked_blocks": [
+        "TB-G6S1U3-P25-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-you-going-to-do-today",
+      "atom_type": "sentence_pattern",
+      "text": "What are you going to do today?",
+      "gloss": "你今天打算做什么？",
+      "linked_blocks": [
+        "TB-G6S1U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-you-going-to-do-tomorrow",
+      "atom_type": "sentence_pattern",
+      "text": "What are you going to do tomorrow?",
+      "gloss": "你明天打算做什么？",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D2",
+        "TB-G6S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-you-going-to-do",
+      "atom_type": "sentence_pattern",
+      "text": "What are you going to do?",
+      "gloss": "你打算做什么？",
+      "linked_blocks": [
+        "TB-G6S1U3-P30-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-do-people-do-on-these-days",
+      "atom_type": "sentence_pattern",
+      "text": "What do people do on these days?",
+      "gloss": "人们在这些日子里做什么？",
+      "linked_blocks": [
+        "TB-G6S1U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-is-going-to-do",
+      "atom_type": "sentence_pattern",
+      "text": "What is ... going to do?",
+      "gloss": "……打算做什么？",
+      "linked_blocks": [
+        "TB-G6S1U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-are-you-going",
+      "atom_type": "sentence_pattern",
+      "text": "When are you going?",
+      "gloss": "你什么时候去？",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D4",
+        "TB-G6S1U3-P30-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-are-we-going",
+      "atom_type": "sentence_pattern",
+      "text": "Where are we going?",
+      "gloss": "我们要去哪里？",
+      "linked_blocks": [
+        "TB-G6S1U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-are-you-going-this-afternoon",
+      "atom_type": "sentence_pattern",
+      "text": "Where are you going this afternoon?",
+      "gloss": "今天下午你要去哪里？",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-are-you-going",
+      "atom_type": "sentence_pattern",
+      "text": "Where are you going?",
+      "gloss": "你打算去哪里？",
+      "linked_blocks": [
+        "TB-G6S1U3-P30-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-why-not-go-on-tuesday",
+      "atom_type": "sentence_pattern",
+      "text": "Why not go on Tuesday?",
+      "gloss": "为什么不在周二去呢？",
+      "linked_blocks": [
+        "TB-G6S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-here-they-are",
+      "atom_type": "sentence_pattern",
+      "text": "Yes! Here they are!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-do-you-have-comic-books",
+      "atom_type": "sentence_pattern",
+      "text": "Yes. Do you have comic books?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-be-going-to",
+      "atom_type": "sentence_pattern",
+      "text": "be going to",
+      "gloss": "打算/将要",
+      "linked_blocks": [
+        "TB-G6S1U3-P29-D1",
+        "TB-G6S1U3-P30-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-will",
+      "atom_type": "sentence_pattern",
+      "text": "will",
+      "gloss": "将要",
+      "linked_blocks": [
+        "TB-G6S1U3-P29-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G6S1U3-P22",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: My weekend plan. Chen Jie and Sarah are discussing their plans for the nature park. Below, Wu Binbin is looking at a schedule for 'Travel to Mars'.",
+      "entry_probe_questions": [
+        "Do you know the word nature park?",
+        "Can you say: What are you going to do in the nature park?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U3-P22-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U3-P23",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: My weekend plan. Wu Binbin is lying on a sofa, thinking about his weekend plans. A thought bubble shows a street scene with a cinema and a bookstore.",
+      "entry_probe_questions": [
+        "Do you know the word weekend plan?",
+        "Can you say: What am I going to do this weekend?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U3-P23-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U3-P24",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: My weekend plan. Mike and Sarah are talking on the phone about their plans for tomorrow.",
+      "entry_probe_questions": [
+        "Do you know the word tomorrow?",
+        "Can you say: What are you going to do tomorrow?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U3-P24-D2",
+        "TB-G6S1U3-P24-D3",
+        "TB-G6S1U3-P24-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U3-P25",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: My weekend plan. Sarah and Chen Jie are talking about their plans. There are illustrations of four activities and a list of time expressions.",
+      "entry_probe_questions": [
+        "Do you know the word visit my grandparents?",
+        "Can you say: What are you going to do today?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U3-P25-D1",
+        "TB-G6S1U3-P25-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U3-P26",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: My weekend plan. John and Amy are talking about John's cousin Jack and their plans to see a movie.",
+      "entry_probe_questions": [
+        "Do you know the word visit?",
+        "Can you say: My cousin Jack is going to visit me next week."
+      ],
+      "priority_blocks": [
+        "TB-G6S1U3-P26-D2",
+        "TB-G6S1U3-P26-D1",
+        "TB-G6S1U3-P26-D4",
+        "TB-G6S1U3-P26-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U3-P27",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: My weekend plan. Jack and John are walking past a cinema. They are talking about their destination.",
+      "entry_probe_questions": [
+        "Do you know the word dictionary?",
+        "Can you say: Where are we going?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U3-P27-D1",
+        "TB-G6S1U3-P27-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U3-P28",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: My weekend plan. A diary entry written by Wu Binbin about his plans for the Mid-Autumn Festival, including an acrostic poem about FAMILY.",
+      "entry_probe_questions": [
+        "Do you know the word Mid-Autumn Festival?",
+        "Can you say: My family are going to get together and have a big dinner."
+      ],
+      "priority_blocks": [
+        "TB-G6S1U3-P28-D2",
+        "TB-G6S1U3-P28-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U3-P29",
+      "page_type": "phonics",
+      "page_intro_cn": "Theme: My weekend plan. A table to organize information about Wu Binbin's family's plans for the Mid-Autumn Festival based on the text from the previous page.",
+      "entry_probe_questions": [
+        "Do you know the word Mid-Autumn Festival?",
+        "Can you say: be going to"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U3-P29-D1",
+        "TB-G6S1U3-P29-D3",
+        "TB-G6S1U3-P29-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U3-P30",
+      "page_type": "assessment",
+      "page_intro_cn": "Theme: My weekend plan. A sentence building game using Russian nesting dolls (Matryoshka) to practice the 'be going to' structure.",
+      "entry_probe_questions": [
+        "Do you know the word going to?",
+        "Can you say: What are you going to do?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U3-P30-D3",
+        "TB-G6S1U3-P30-D1",
+        "TB-G6S1U3-P30-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U3-P31",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: My weekend plan. Zoom plans to learn how to swim but tries to do it by watching TV. Zip encourages him to go to the pool and learn by practice.",
+      "entry_probe_questions": [
+        "Do you know the word disturb?",
+        "Can you say: What are you going to do tomorrow?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U3-P31-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G6S1U3-P22-D1",
+      "page_uid": "TB-G6S1U3-P22",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U3-P22-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Chen Jie and Sarah are discussing their plans for the nature park. Below, Wu Binbin is looking at a schedule for 'Travel to Mars'. Key patterns: What are you going to do in the nature park?; I'm going to draw some pictures.",
+      "focus_vocabulary": [
+        "nature park",
+        "draw pictures",
+        "look for",
+        "leaves",
+        "Travel to Mars"
+      ],
+      "core_patterns": [
+        "What are you going to do in the nature park?",
+        "I'm going to draw some pictures.",
+        "I'm going to look for some beautiful leaves.",
+        "I'm going to draw some pictures. What about you?"
+      ],
+      "allowed_answer_scope": [
+        "I'm going to look for some beautiful leaves."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word nature park?",
+        "Can you say: What are you going to do in the nature park?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U3-P22-D1-goal"
+      ],
+      "branchable_topics": [
+        "nature park",
+        "draw pictures",
+        "look for",
+        "leaves",
+        "Travel to Mars",
+        "My weekend plan",
+        "Main Scene"
+      ],
+      "return_anchors": [
+        "What are you going to do in the nature park?",
+        "I'm going to draw some pictures.",
+        "I'm going to look for some beautiful leaves."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P23-D1",
+      "page_uid": "TB-G6S1U3-P23",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U3-P23-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Wu Binbin is lying on a sofa, thinking about his weekend plans. A thought bubble shows a street scene with a cinema and a bookstore. Key patterns: What am I going to do this weekend?; Mike is going to see a film.",
+      "focus_vocabulary": [
+        "weekend plan",
+        "see a film",
+        "comic book",
+        "on sale"
+      ],
+      "core_patterns": [
+        "What am I going to do this weekend?",
+        "Mike is going to see a film.",
+        "John is going to buy his favourite comic book.",
+        "Mike is going to see a film. John is going to buy his favourite comic book. Hmm, what am I going to do this weekend?"
+      ],
+      "allowed_answer_scope": [
+        "weekend plan",
+        "see a film",
+        "comic book",
+        "on sale"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word weekend plan?",
+        "Can you say: What am I going to do this weekend?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U3-P23-D1-goal"
+      ],
+      "branchable_topics": [
+        "weekend plan",
+        "see a film",
+        "comic book",
+        "on sale",
+        "My weekend plan",
+        "Unit 3 My weekend plan"
+      ],
+      "return_anchors": [
+        "What am I going to do this weekend?",
+        "Mike is going to see a film.",
+        "John is going to buy his favourite comic book."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P24-D1",
+      "page_uid": "TB-G6S1U3-P24",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S1U3-P24-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "It's Saturday morning. Sarah is on the phone with Mike. Key patterns: Listen and circle.",
+      "focus_vocabulary": [
+        "swimming",
+        "homework",
+        "fishing"
+      ],
+      "core_patterns": [
+        "Listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "B. No, he can't.",
+        "A. He has homework to do."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word swimming?",
+        "Can you say: Listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U3-P24-D1-goal"
+      ],
+      "branchable_topics": [
+        "swimming",
+        "homework",
+        "fishing",
+        "My weekend plan",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P24-D2",
+      "page_uid": "TB-G6S1U3-P24",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U3-P24-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Mike and Sarah are talking on the phone about their plans for tomorrow. Key patterns: What are you going to do tomorrow?; I'm going to have an art lesson.",
+      "focus_vocabulary": [
+        "tomorrow",
+        "art lesson",
+        "draw pictures",
+        "Renmin Park",
+        "see a film",
+        "have a good time"
+      ],
+      "core_patterns": [
+        "What are you going to do tomorrow?",
+        "I'm going to have an art lesson.",
+        "We're going to draw some pictures in Renmin Park.",
+        "I'm going to see a film tomorrow.",
+        "What are you going to do in your lesson?",
+        "Sounds great! I'm going to see a film tomorrow."
+      ],
+      "allowed_answer_scope": [
+        "Sarah is going to have an art lesson. Mike is going to see a film."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word tomorrow?",
+        "Can you say: What are you going to do tomorrow?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U3-P24-D3",
+        "TB-G6S1U3-P24-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U3-P24-D2-goal"
+      ],
+      "branchable_topics": [
+        "tomorrow",
+        "art lesson",
+        "draw pictures",
+        "Renmin Park",
+        "see a film",
+        "have a good time",
+        "My weekend plan",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "What are you going to do tomorrow?",
+        "I'm going to have an art lesson.",
+        "We're going to draw some pictures in Renmin Park."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P24-D3",
+      "page_uid": "TB-G6S1U3-P24",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S1U3-P24-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Practice talking about weekend plans using the given phrases. Key patterns: What is ... going to do?; What are ... going to do?",
+      "focus_vocabulary": [
+        "go ice-skating",
+        "wash clothes",
+        "draw pictures",
+        "make a snowman",
+        "go for a picnic"
+      ],
+      "core_patterns": [
+        "What is ... going to do?",
+        "What are ... going to do?",
+        "He/She is going to ...",
+        "They are going to ..."
+      ],
+      "allowed_answer_scope": [
+        "go ice-skating",
+        "wash clothes",
+        "draw pictures",
+        "make a snowman",
+        "go for a picnic"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word go ice-skating?",
+        "Can you say: What is ... going to do?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U3-P24-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U3-P24-D3-goal"
+      ],
+      "branchable_topics": [
+        "go ice-skating",
+        "wash clothes",
+        "draw pictures",
+        "make a snowman",
+        "go for a picnic",
+        "My weekend plan",
+        "Talk about your plan and your friends' plans for the weekend"
+      ],
+      "return_anchors": [
+        "What is ... going to do?",
+        "What are ... going to do?",
+        "He/She is going to ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P25-D1",
+      "page_uid": "TB-G6S1U3-P25",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S1U3-P25-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Sarah and Chen Jie are talking about their plans. There are illustrations of four activities and a list of time expressions. Key patterns: What are you going to do today?; I'm going to see a film.",
+      "focus_vocabulary": [
+        "visit my grandparents",
+        "see a film",
+        "take a trip",
+        "go to the supermarket",
+        "this morning",
+        "this afternoon",
+        "this evening",
+        "tonight"
+      ],
+      "core_patterns": [
+        "What are you going to do today?",
+        "I'm going to see a film."
+      ],
+      "allowed_answer_scope": [
+        "I'm going to see a film."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word visit my grandparents?",
+        "Can you say: What are you going to do today?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U3-P25-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U3-P25-D1-goal"
+      ],
+      "branchable_topics": [
+        "visit my grandparents",
+        "see a film",
+        "take a trip",
+        "go to the supermarket",
+        "this morning",
+        "this afternoon",
+        "this evening",
+        "tonight"
+      ],
+      "return_anchors": [
+        "What are you going to do today?",
+        "I'm going to see a film."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P25-D2",
+      "page_uid": "TB-G6S1U3-P25",
+      "page_type": "vocabulary",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S1U3-P25-D2"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "Students make a weekend plan by filling in a table and sharing it with a partner. Key patterns: What are you going to do this morning?; I'm going to visit my grandparents.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What are you going to do this morning?",
+        "I'm going to visit my grandparents."
+      ],
+      "allowed_answer_scope": [
+        "What are you going to do this morning?",
+        "I'm going to visit my grandparents."
+      ],
+      "entry_probe_questions": [
+        "Can you say: What are you going to do this morning?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U3-P25-D2-goal"
+      ],
+      "branchable_topics": [
+        "My weekend plan",
+        "Make a plan"
+      ],
+      "return_anchors": [
+        "What are you going to do this morning?",
+        "I'm going to visit my grandparents."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P26-D1",
+      "page_uid": "TB-G6S1U3-P26",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S1U3-P26-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "John is on his way home. He sees Amy. Listen and answer. Key patterns: Listen and answer.",
+      "focus_vocabulary": [
+        "ice cream"
+      ],
+      "core_patterns": [
+        "Listen and answer."
+      ],
+      "allowed_answer_scope": [
+        "ice cream"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word ice cream?",
+        "Can you say: Listen and answer."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U3-P26-D4",
+        "TB-G6S1U3-P26-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U3-P26-D1-goal"
+      ],
+      "branchable_topics": [
+        "ice cream",
+        "My weekend plan",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and answer."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P26-D2",
+      "page_uid": "TB-G6S1U3-P26",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U3-P26-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "John and Amy are talking about John's cousin Jack and their plans to see a movie. Key patterns: My cousin Jack is going to visit me next week.; We're going to see a film about space travel!",
+      "focus_vocabulary": [
+        "visit",
+        "cinema",
+        "film",
+        "space travel",
+        "comic book",
+        "half price",
+        "Mars",
+        "next week"
+      ],
+      "core_patterns": [
+        "My cousin Jack is going to visit me next week.",
+        "We're going to see a film about space travel!",
+        "Why not go on Tuesday?",
+        "It's half price then!",
+        "That's nice. Where are you going?",
+        "Cool! I have lots of comic books about space. When are you going?"
+      ],
+      "allowed_answer_scope": [
+        "My cousin Jack is going to visit me next week.",
+        "We're going to the cinema. We're going to see a film about space travel!",
+        "Next Wednesday."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word visit?",
+        "Can you say: My cousin Jack is going to visit me next week."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U3-P26-D1",
+        "TB-G6S1U3-P26-D4",
+        "TB-G6S1U3-P26-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U3-P26-D2-goal"
+      ],
+      "branchable_topics": [
+        "visit",
+        "cinema",
+        "film",
+        "space travel",
+        "comic book",
+        "half price",
+        "Mars",
+        "next week"
+      ],
+      "return_anchors": [
+        "My cousin Jack is going to visit me next week.",
+        "We're going to see a film about space travel!",
+        "Why not go on Tuesday?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P26-D3",
+      "page_uid": "TB-G6S1U3-P26",
+      "page_type": "dialogue",
+      "block_type": "practice_speaking",
+      "source_refs": [
+        "TB-G6S1U3-P26-D3"
+      ],
+      "teaching_goal": "Work on the practice speaking activity.",
+      "teaching_summary": "A follow-up question based on the dialogue. Key patterns: Answer the question.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Answer the question."
+      ],
+      "allowed_answer_scope": [
+        "They are going to the cinema."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Answer the question."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U3-P26-D3-goal"
+      ],
+      "branchable_topics": [
+        "My weekend plan",
+        "Comprehension Check"
+      ],
+      "return_anchors": [
+        "Answer the question."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P26-D4",
+      "page_uid": "TB-G6S1U3-P26",
+      "page_type": "dialogue",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S1U3-P26-D4"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "A survey table to interview classmates about their future plans. Key patterns: Where are you going this afternoon?; What are you going to do there?",
+      "focus_vocabulary": [
+        "this afternoon",
+        "what",
+        "where",
+        "when"
+      ],
+      "core_patterns": [
+        "Where are you going this afternoon?",
+        "What are you going to do there?",
+        "When are you going?"
+      ],
+      "allowed_answer_scope": [
+        "this afternoon",
+        "what",
+        "where",
+        "when"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word this afternoon?",
+        "Can you say: Where are you going this afternoon?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U3-P26-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U3-P26-D4-goal"
+      ],
+      "branchable_topics": [
+        "this afternoon",
+        "what",
+        "where",
+        "when",
+        "My weekend plan",
+        "Interview your classmates and then give a report"
+      ],
+      "return_anchors": [
+        "Where are you going this afternoon?",
+        "What are you going to do there?",
+        "When are you going?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P27-D1",
+      "page_uid": "TB-G6S1U3-P27",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S1U3-P27-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Jack and John are walking past a cinema. They are talking about their destination. Key patterns: Where are we going?; To the bookstore.",
+      "focus_vocabulary": [
+        "dictionary",
+        "comic book",
+        "word book",
+        "postcard"
+      ],
+      "core_patterns": [
+        "Where are we going?",
+        "To the bookstore.",
+        "I'm going to buy a new comic book.",
+        "To the bookstore. I'm going to buy a new comic book."
+      ],
+      "allowed_answer_scope": [
+        "To the bookstore. I'm going to buy a new comic book."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word dictionary?",
+        "Can you say: Where are we going?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U3-P27-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U3-P27-D1-goal"
+      ],
+      "branchable_topics": [
+        "dictionary",
+        "comic book",
+        "word book",
+        "postcard",
+        "My weekend plan",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Where are we going?",
+        "To the bookstore.",
+        "I'm going to buy a new comic book."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P27-D2",
+      "page_uid": "TB-G6S1U3-P27",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S1U3-P27-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Students are role-playing a shopping scene in a bookstore. Key patterns: Can I help you?; Do you have ...?",
+      "focus_vocabulary": [
+        "comic books",
+        "word books"
+      ],
+      "core_patterns": [
+        "Can I help you?",
+        "Do you have ...?",
+        "What are you going to buy?",
+        "Yes. Do you have comic books?",
+        "What are you going to buy, Sarah?",
+        "Yes! Here they are!"
+      ],
+      "allowed_answer_scope": [
+        "Yes! Here they are!",
+        "I'm going to buy some word books."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word comic books?",
+        "Can you say: Can I help you?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U3-P27-D2-goal"
+      ],
+      "branchable_topics": [
+        "comic books",
+        "word books",
+        "My weekend plan",
+        "Role-play"
+      ],
+      "return_anchors": [
+        "Can I help you?",
+        "Do you have ...?",
+        "What are you going to buy?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P28-D1",
+      "page_uid": "TB-G6S1U3-P28",
+      "page_type": "reading",
+      "block_type": "practice_speaking",
+      "source_refs": [
+        "TB-G6S1U3-P28-D1"
+      ],
+      "teaching_goal": "Work on the practice speaking activity.",
+      "teaching_summary": "Discussion about holidays based on three photos: National Day, Spring Festival, and Christmas. Key patterns: What are these holidays?; What do people do on these days?",
+      "focus_vocabulary": [
+        "holiday",
+        "get together",
+        "National Day",
+        "Spring Festival",
+        "Christmas"
+      ],
+      "core_patterns": [
+        "What are these holidays?",
+        "What do people do on these days?"
+      ],
+      "allowed_answer_scope": [
+        "holiday",
+        "get together",
+        "National Day",
+        "Spring Festival",
+        "Christmas"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word holiday?",
+        "Can you say: What are these holidays?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U3-P28-D1-goal"
+      ],
+      "branchable_topics": [
+        "holiday",
+        "get together",
+        "National Day",
+        "Spring Festival",
+        "Christmas",
+        "My weekend plan",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "What are these holidays?",
+        "What do people do on these days?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P28-D2",
+      "page_uid": "TB-G6S1U3-P28",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S1U3-P28-D2"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "A diary entry written by Wu Binbin about his plans for the Mid-Autumn Festival, including an acrostic poem about FAMILY. Key patterns: My family are going to get together and have a big dinner.; My aunt is going to make mooncakes.",
+      "focus_vocabulary": [
+        "Mid-Autumn Festival",
+        "get together",
+        "mooncake",
+        "Chang'e",
+        "poem",
+        "moon",
+        "autumn"
+      ],
+      "core_patterns": [
+        "My family are going to get together and have a big dinner.",
+        "My aunt is going to make mooncakes.",
+        "We will all be together tonight."
+      ],
+      "allowed_answer_scope": [
+        "Mid-Autumn Festival",
+        "get together",
+        "mooncake",
+        "Chang'e",
+        "poem",
+        "moon"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word Mid-Autumn Festival?",
+        "Can you say: My family are going to get together and have a big dinner."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U3-P28-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U3-P28-D2-goal"
+      ],
+      "branchable_topics": [
+        "Mid-Autumn Festival",
+        "get together",
+        "mooncake",
+        "Chang'e",
+        "poem",
+        "moon",
+        "autumn",
+        "My weekend plan"
+      ],
+      "return_anchors": [
+        "My family are going to get together and have a big dinner.",
+        "My aunt is going to make mooncakes.",
+        "We will all be together tonight."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P29-D1",
+      "page_uid": "TB-G6S1U3-P29",
+      "page_type": "phonics",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S1U3-P29-D1"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "A table to organize information about Wu Binbin's family's plans for the Mid-Autumn Festival based on the text from the previous page. Key patterns: be going to; will",
+      "focus_vocabulary": [
+        "Mid-Autumn Festival",
+        "get together",
+        "family",
+        "aunt",
+        "grandma"
+      ],
+      "core_patterns": [
+        "be going to",
+        "will"
+      ],
+      "allowed_answer_scope": [
+        "His family will get together."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word Mid-Autumn Festival?",
+        "Can you say: be going to"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U3-P29-D3",
+        "TB-G6S1U3-P29-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U3-P29-D1-goal"
+      ],
+      "branchable_topics": [
+        "Mid-Autumn Festival",
+        "get together",
+        "family",
+        "aunt",
+        "grandma",
+        "My weekend plan",
+        "Read the text and fill in the table."
+      ],
+      "return_anchors": [
+        "be going to",
+        "will"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P29-D2",
+      "page_uid": "TB-G6S1U3-P29",
+      "page_type": "phonics",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G6S1U3-P29-D2"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "Students discuss their plans for Mid-Autumn Festival with a partner and write them down. Key patterns: What are you going to do for Mid-Autumn Festival?; I'm going to ...",
+      "focus_vocabulary": [
+        "Mid-Autumn Festival",
+        "partner",
+        "plan"
+      ],
+      "core_patterns": [
+        "What are you going to do for Mid-Autumn Festival?",
+        "I'm going to ..."
+      ],
+      "allowed_answer_scope": [
+        "Mid-Autumn Festival",
+        "partner",
+        "plan"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word Mid-Autumn Festival?",
+        "Can you say: What are you going to do for Mid-Autumn Festival?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U3-P29-D2-goal"
+      ],
+      "branchable_topics": [
+        "Mid-Autumn Festival",
+        "partner",
+        "plan",
+        "My weekend plan",
+        "Discuss with your partner"
+      ],
+      "return_anchors": [
+        "What are you going to do for Mid-Autumn Festival?",
+        "I'm going to ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P29-D3",
+      "page_uid": "TB-G6S1U3-P29",
+      "page_type": "phonics",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G6S1U3-P29-D3"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "Pronunciation practice focusing on word stress patterns (first syllable vs second syllable). Key patterns: Stress on the first syllable (e.g., lesson, dinner); Stress on the second syllable (e.g., tonight, tomorrow)",
+      "focus_vocabulary": [
+        "lesson",
+        "dinner",
+        "tonight",
+        "tomorrow"
+      ],
+      "core_patterns": [
+        "Stress on the first syllable (e.g., lesson, dinner)",
+        "Stress on the second syllable (e.g., tonight, tomorrow)"
+      ],
+      "allowed_answer_scope": [
+        "lesson",
+        "dinner",
+        "tonight",
+        "tomorrow"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word lesson?",
+        "Can you say: Stress on the first syllable (e.g., lesson, dinner)"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U3-P29-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U3-P29-D3-goal"
+      ],
+      "branchable_topics": [
+        "lesson",
+        "dinner",
+        "tonight",
+        "tomorrow",
+        "My weekend plan",
+        "Tips for pronunciation"
+      ],
+      "return_anchors": [
+        "Stress on the first syllable (e.g., lesson, dinner)",
+        "Stress on the second syllable (e.g., tonight, tomorrow)"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P30-D1",
+      "page_uid": "TB-G6S1U3-P30",
+      "page_type": "assessment",
+      "block_type": "assessment_quiz",
+      "source_refs": [
+        "TB-G6S1U3-P30-D1"
+      ],
+      "teaching_goal": "Check whether the learner can complete the unit review task.",
+      "teaching_summary": "Listen to the audio and tick the correct picture for each number. Key patterns: Listen and tick.",
+      "focus_vocabulary": [
+        "cinema",
+        "post office",
+        "word book",
+        "bookstore",
+        "postcard"
+      ],
+      "core_patterns": [
+        "Listen and tick."
+      ],
+      "allowed_answer_scope": [
+        "cinema",
+        "post office",
+        "word book",
+        "bookstore",
+        "postcard"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word cinema?",
+        "Can you say: Listen and tick."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U3-P30-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U3-P30-D1-goal"
+      ],
+      "branchable_topics": [
+        "cinema",
+        "post office",
+        "word book",
+        "bookstore",
+        "postcard",
+        "My weekend plan",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Listen and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P30-D2",
+      "page_uid": "TB-G6S1U3-P30",
+      "page_type": "assessment",
+      "block_type": "assessment_quiz",
+      "source_refs": [
+        "TB-G6S1U3-P30-D2"
+      ],
+      "teaching_goal": "Check whether the learner can complete the unit review task.",
+      "teaching_summary": "Listen to the audio again and complete the sentences. Key patterns: be going to",
+      "focus_vocabulary": [
+        "tomorrow afternoon",
+        "this evening"
+      ],
+      "core_patterns": [
+        "be going to"
+      ],
+      "allowed_answer_scope": [
+        "tomorrow afternoon",
+        "this evening"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word tomorrow afternoon?",
+        "Can you say: be going to"
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U3-P30-D2-goal"
+      ],
+      "branchable_topics": [
+        "tomorrow afternoon",
+        "this evening",
+        "My weekend plan",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "be going to"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P30-D3",
+      "page_uid": "TB-G6S1U3-P30",
+      "page_type": "assessment",
+      "block_type": "summary_wrap_up",
+      "source_refs": [
+        "TB-G6S1U3-P30-D3"
+      ],
+      "teaching_goal": "Review and consolidate the core language point.",
+      "teaching_summary": "A sentence building game using Russian nesting dolls (Matryoshka) to practice the 'be going to' structure. Key patterns: What are you going to do?; Where are you going?",
+      "focus_vocabulary": [
+        "going to"
+      ],
+      "core_patterns": [
+        "What are you going to do?",
+        "Where are you going?",
+        "When are you going?"
+      ],
+      "allowed_answer_scope": [
+        "going to"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word going to?",
+        "Can you say: What are you going to do?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U3-P30-D1",
+        "TB-G6S1U3-P30-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U3-P30-D3-goal"
+      ],
+      "branchable_topics": [
+        "going to",
+        "My weekend plan",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "What are you going to do?",
+        "Where are you going?",
+        "When are you going?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U3-P31-D1",
+      "page_uid": "TB-G6S1U3-P31",
+      "page_type": "reading",
+      "block_type": "story_time",
+      "source_refs": [
+        "TB-G6S1U3-P31-D1"
+      ],
+      "teaching_goal": "Read and retell the key story events.",
+      "teaching_summary": "Zoom plans to learn how to swim but tries to do it by watching TV. Zip encourages him to go to the pool and learn by practice. Key patterns: What are you going to do tomorrow?; I'm going to learn how to swim.",
+      "focus_vocabulary": [
+        "disturb",
+        "learn",
+        "swim",
+        "pool",
+        "afraid",
+        "practise"
+      ],
+      "core_patterns": [
+        "What are you going to do tomorrow?",
+        "I'm going to learn how to swim.",
+        "Learn by doing.",
+        "How can you learn to swim without going to a pool?",
+        "Just try. This way ... This way ... OK, now can you do it?",
+        "OK. I'll teach you."
+      ],
+      "allowed_answer_scope": [
+        "I'm going to learn how to swim.",
+        "OK. I'll teach you.",
+        "Please don't disturb me. I'm learning to swim.",
+        "Come on. Let's go to the swimming pool.",
+        "No! I'm afraid of water.",
+        "Just jump in! Catch this. Practise and you will learn."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word disturb?",
+        "Can you say: What are you going to do tomorrow?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U3-P31-D1-goal"
+      ],
+      "branchable_topics": [
+        "disturb",
+        "learn",
+        "swim",
+        "pool",
+        "afraid",
+        "practise",
+        "My weekend plan",
+        "Story time"
+      ],
+      "return_anchors": [
+        "What are you going to do tomorrow?",
+        "I'm going to learn how to swim.",
+        "Learn by doing."
+      ]
+    }
+  ]
+}

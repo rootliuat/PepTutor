@@ -1,0 +1,2681 @@
+{
+  "pilot_id": "g5s2u5-general-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S2",
+    "unit": "U5",
+    "pages": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/02.五年级下册语料.js",
+    "app/knowledge/raw/06.五年级下册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 5 · Volume 2), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 5 · Volume 2), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 21,
+    "source_kind": "textbook_source_js",
+    "source_format": "js"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 5",
+      "word": "mine",
+      "phonetic": "/maɪn/",
+      "chinese": "我的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U5-P46-D1",
+        "TB-G5S2U5-P47-D1",
+        "TB-G5S2U5-P48-D2",
+        "TB-G5S2U5-P54-D3"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "yours",
+      "phonetic": "/jɔːz/",
+      "chinese": "你（们）的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U5-P46-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "his",
+      "phonetic": "/hɪz/",
+      "chinese": "他的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U5-P46-D1",
+        "TB-G5S2U5-P48-D2",
+        "TB-G5S2U5-P54-D3"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "hers",
+      "phonetic": "/hɜːz/",
+      "chinese": "她的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U5-P54-D3"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "theirs",
+      "phonetic": "/ðeəz/",
+      "chinese": "他们的；她们的；它们的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U5-P47-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "ours",
+      "phonetic": "/ɑːz; 'aʊəz/",
+      "chinese": "我们的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U5-P48-D2"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "climbing",
+      "phonetic": "/'klaɪmɪŋ/",
+      "chinese": "（climb /klaɪm/ 的-ing形式）（正在）攀登；攀爬",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U5-P52-D1",
+        "TB-G5S2U5-P55-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "eating",
+      "phonetic": "/'iːtɪŋ/",
+      "chinese": "（eat的-ing形式）（正在）吃",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U5-P51-D2",
+        "TB-G5S2U5-P52-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "playing",
+      "phonetic": "/'pleɪɪŋ/",
+      "chinese": "（play的-ing形式）（正在）玩耍",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U5-P52-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "jumping",
+      "phonetic": "/'dʒʌmpɪŋ/",
+      "chinese": "（jump /dʒʌmp/ 的-ing形式）（正在）跳",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U5-P47-D1",
+        "TB-G5S2U5-P52-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "drinking",
+      "phonetic": "/'drɪŋkɪŋ/",
+      "chinese": "（drink的-ing形式）（正在）喝（水）",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U5-P51-D2",
+        "TB-G5S2U5-P52-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "sleeping",
+      "phonetic": "/'sliːpɪŋ/",
+      "chinese": "（sleep /sliːp/ 的-ing形式）（正在）睡觉",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U5-P52-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "each",
+      "phonetic": "/iːtʃ/",
+      "chinese": "每一；各个",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 5",
+      "word": "each other",
+      "chinese": "相互",
+      "emphasized": false,
+      "linked_block_uids": []
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S2U5-P46-D1-goal",
+      "block_uid": "TB-G5S2U5-P46-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P47-D1-goal",
+      "block_uid": "TB-G5S2U5-P47-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P48-D1-goal",
+      "block_uid": "TB-G5S2U5-P48-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P48-D2-goal",
+      "block_uid": "TB-G5S2U5-P48-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P48-D3-goal",
+      "block_uid": "TB-G5S2U5-P48-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P49-D1-goal",
+      "block_uid": "TB-G5S2U5-P49-D1",
+      "category": "grammar_point",
+      "text": "Work on the grammar point activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P49-D2-goal",
+      "block_uid": "TB-G5S2U5-P49-D2",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P50-D1-goal",
+      "block_uid": "TB-G5S2U5-P50-D1",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P50-D2-goal",
+      "block_uid": "TB-G5S2U5-P50-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P50-D3-goal",
+      "block_uid": "TB-G5S2U5-P50-D3",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P51-D1-goal",
+      "block_uid": "TB-G5S2U5-P51-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P51-D2-goal",
+      "block_uid": "TB-G5S2U5-P51-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P51-D3-goal",
+      "block_uid": "TB-G5S2U5-P51-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P52-D1-goal",
+      "block_uid": "TB-G5S2U5-P52-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P52-D2-goal",
+      "block_uid": "TB-G5S2U5-P52-D2",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P53-D1-goal",
+      "block_uid": "TB-G5S2U5-P53-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P53-D2-goal",
+      "block_uid": "TB-G5S2U5-P53-D2",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P54-D1-goal",
+      "block_uid": "TB-G5S2U5-P54-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P54-D2-goal",
+      "block_uid": "TB-G5S2U5-P54-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P54-D3-goal",
+      "block_uid": "TB-G5S2U5-P54-D3",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U5-P55-D1-goal",
+      "block_uid": "TB-G5S2U5-P55-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-carrots",
+      "atom_type": "word",
+      "text": "carrots",
+      "gloss": "胡萝卜",
+      "linked_blocks": [
+        "TB-G5S2U5-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-chen-jie",
+      "atom_type": "word",
+      "text": "Chen Jie",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-climbing",
+      "atom_type": "word",
+      "text": "climbing",
+      "gloss": "（climb /klaɪm/ 的-ing形式）（正在）攀登；攀爬",
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D1",
+        "TB-G5S2U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-copying",
+      "atom_type": "word",
+      "text": "copying",
+      "gloss": "模仿",
+      "linked_blocks": [
+        "TB-G5S2U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-drink",
+      "atom_type": "word",
+      "text": "drink",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-drinking",
+      "atom_type": "word",
+      "text": "drinking",
+      "gloss": "（drink的-ing形式）（正在）喝（水）",
+      "linked_blocks": [
+        "TB-G5S2U5-P51-D2",
+        "TB-G5S2U5-P52-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-each",
+      "atom_type": "word",
+      "text": "each",
+      "gloss": "每一；各个",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-each-other",
+      "atom_type": "word",
+      "text": "each other",
+      "gloss": "相互",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-eating",
+      "atom_type": "word",
+      "text": "eating",
+      "gloss": "（eat的-ing形式）（正在）吃",
+      "linked_blocks": [
+        "TB-G5S2U5-P51-D2",
+        "TB-G5S2U5-P52-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-fast",
+      "atom_type": "word",
+      "text": "fast",
+      "gloss": "快的",
+      "linked_blocks": [
+        "TB-G5S2U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-her",
+      "atom_type": "word",
+      "text": "her",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P54-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-hers",
+      "atom_type": "word",
+      "text": "hers",
+      "gloss": "她的",
+      "linked_blocks": [
+        "TB-G5S2U5-P54-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-his",
+      "atom_type": "word",
+      "text": "his",
+      "gloss": "他的",
+      "linked_blocks": [
+        "TB-G5S2U5-P46-D1",
+        "TB-G5S2U5-P48-D2",
+        "TB-G5S2U5-P54-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-ink",
+      "atom_type": "word",
+      "text": "ink",
+      "gloss": "墨水",
+      "linked_blocks": [
+        "TB-G5S2U5-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-is-reading",
+      "atom_type": "word",
+      "text": "is reading",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-is-running",
+      "atom_type": "word",
+      "text": "is running",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-john",
+      "atom_type": "word",
+      "text": "John",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-jumping",
+      "atom_type": "word",
+      "text": "jumping",
+      "gloss": "（jump /dʒʌmp/ 的-ing形式）（正在）跳",
+      "linked_blocks": [
+        "TB-G5S2U5-P47-D1",
+        "TB-G5S2U5-P52-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-kitchen",
+      "atom_type": "word",
+      "text": "kitchen",
+      "gloss": "厨房",
+      "linked_blocks": [
+        "TB-G5S2U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-long",
+      "atom_type": "word",
+      "text": "long",
+      "gloss": "长的",
+      "linked_blocks": [
+        "TB-G5S2U5-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-mike",
+      "atom_type": "word",
+      "text": "Mike",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-mine",
+      "atom_type": "word",
+      "text": "mine",
+      "gloss": "我的",
+      "linked_blocks": [
+        "TB-G5S2U5-P46-D1",
+        "TB-G5S2U5-P47-D1",
+        "TB-G5S2U5-P48-D2",
+        "TB-G5S2U5-P54-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-monkeys",
+      "atom_type": "word",
+      "text": "monkeys",
+      "gloss": "猴子",
+      "linked_blocks": [
+        "TB-G5S2U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-my",
+      "atom_type": "word",
+      "text": "my",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P54-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-oliver",
+      "atom_type": "word",
+      "text": "Oliver",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-our",
+      "atom_type": "word",
+      "text": "our",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P54-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-ours",
+      "atom_type": "word",
+      "text": "ours",
+      "gloss": "我们的",
+      "linked_blocks": [
+        "TB-G5S2U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-painting",
+      "atom_type": "word",
+      "text": "painting",
+      "gloss": "画",
+      "linked_blocks": [
+        "TB-G5S2U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pink",
+      "atom_type": "word",
+      "text": "pink",
+      "gloss": "粉色的",
+      "linked_blocks": [
+        "TB-G5S2U5-P50-D1",
+        "TB-G5S2U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-playing",
+      "atom_type": "word",
+      "text": "playing",
+      "gloss": "（play的-ing形式）（正在）玩耍",
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-quiet",
+      "atom_type": "word",
+      "text": "quiet",
+      "gloss": "安静的",
+      "linked_blocks": [
+        "TB-G5S2U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-rabbit",
+      "atom_type": "word",
+      "text": "rabbit",
+      "gloss": "兔子",
+      "linked_blocks": [
+        "TB-G5S2U5-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-ring",
+      "atom_type": "word",
+      "text": "ring",
+      "gloss": "响",
+      "linked_blocks": [
+        "TB-G5S2U5-P50-D1",
+        "TB-G5S2U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-sing",
+      "atom_type": "word",
+      "text": "sing",
+      "gloss": "唱",
+      "linked_blocks": [
+        "TB-G5S2U5-P50-D1",
+        "TB-G5S2U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-sleeping",
+      "atom_type": "word",
+      "text": "sleeping",
+      "gloss": "（sleep /sliːp/ 的-ing形式）（正在）睡觉",
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-song",
+      "atom_type": "word",
+      "text": "song",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-tail",
+      "atom_type": "word",
+      "text": "tail",
+      "gloss": "尾巴",
+      "linked_blocks": [
+        "TB-G5S2U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-taking-pictures",
+      "atom_type": "word",
+      "text": "taking pictures",
+      "gloss": "拍照",
+      "linked_blocks": [
+        "TB-G5S2U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-their",
+      "atom_type": "word",
+      "text": "their",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P54-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-theirs",
+      "atom_type": "word",
+      "text": "theirs",
+      "gloss": "他们的；她们的；它们的",
+      "linked_blocks": [
+        "TB-G5S2U5-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-thing",
+      "atom_type": "word",
+      "text": "thing",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-think",
+      "atom_type": "word",
+      "text": "think",
+      "gloss": "想",
+      "linked_blocks": [
+        "TB-G5S2U5-P50-D1",
+        "TB-G5S2U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-tiger",
+      "atom_type": "word",
+      "text": "tiger",
+      "gloss": "老虎",
+      "linked_blocks": [
+        "TB-G5S2U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-trunk",
+      "atom_type": "word",
+      "text": "trunk",
+      "gloss": "象鼻",
+      "linked_blocks": [
+        "TB-G5S2U5-P50-D1",
+        "TB-G5S2U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-whose",
+      "atom_type": "word",
+      "text": "whose",
+      "gloss": "谁的",
+      "linked_blocks": [
+        "TB-G5S2U5-P46-D1",
+        "TB-G5S2U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-wu-binbin",
+      "atom_type": "word",
+      "text": "Wu Binbin",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-young",
+      "atom_type": "word",
+      "text": "young",
+      "gloss": "年轻的",
+      "linked_blocks": [
+        "TB-G5S2U5-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-your",
+      "atom_type": "word",
+      "text": "your",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P54-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-yours",
+      "atom_type": "word",
+      "text": "yours",
+      "gloss": "你（们）的",
+      "linked_blocks": [
+        "TB-G5S2U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-zhang-peng",
+      "atom_type": "word",
+      "text": "Zhang Peng",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-ah-the-book-is-hers",
+      "atom_type": "sentence_pattern",
+      "text": "Ah! The book is hers.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-answer-the-questions",
+      "atom_type": "sentence_pattern",
+      "text": "Answer the questions.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P53-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-are-these-all-ours",
+      "atom_type": "sentence_pattern",
+      "text": "Are these all ours?",
+      "gloss": "这些都是我们的吗？",
+      "linked_blocks": [
+        "TB-G5S2U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-are-these-rabbits-eating",
+      "atom_type": "sentence_pattern",
+      "text": "Are these rabbits eating?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-i-play-with-him-now",
+      "atom_type": "sentence_pattern",
+      "text": "Can I play with him now?",
+      "gloss": "我现在能和它玩吗？",
+      "linked_blocks": [
+        "TB-G5S2U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-complete-the-sentences",
+      "atom_type": "sentence_pattern",
+      "text": "Complete the sentences.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P54-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-s-in-the-kitchen",
+      "atom_type": "sentence_pattern",
+      "text": "He's in the kitchen.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hey-whose-dog-is-this",
+      "atom_type": "sentence_pattern",
+      "text": "Hey! Whose dog is this?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-see-why-is-it-jumping",
+      "atom_type": "sentence_pattern",
+      "text": "I see. Why is it jumping?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-looking-at-a-bear-i-m-dancing-like-a-bear",
+      "atom_type": "sentence_pattern",
+      "text": "I'm looking at a bear. I'm dancing like a bear.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-looking-at-a-tiger-i-m-running-like-a-tiger",
+      "atom_type": "sentence_pattern",
+      "text": "I'm looking at a tiger. I'm running like a tiger.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-looking-at-an-elephant-i-m-walking-like-an-elephant",
+      "atom_type": "sentence_pattern",
+      "text": "I'm looking at an elephant. I'm walking like an elephant.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-looking-at-the-rabbits-i-m-eating-like-a-rabbit",
+      "atom_type": "sentence_pattern",
+      "text": "I'm looking at the rabbits. I'm eating like a rabbit.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-he-drinking-water",
+      "atom_type": "sentence_pattern",
+      "text": "Is he drinking water?",
+      "gloss": "它在喝水吗？",
+      "linked_blocks": [
+        "TB-G5S2U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-it-yours",
+      "atom_type": "sentence_pattern",
+      "text": "Is it yours?",
+      "gloss": "是你的吗？",
+      "linked_blocks": [
+        "TB-G5S2U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-the-dog-eating",
+      "atom_type": "sentence_pattern",
+      "text": "Is the dog eating?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P51-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-amy-s-book",
+      "atom_type": "sentence_pattern",
+      "text": "It's Amy's book.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-mike-s-it-s-his",
+      "atom_type": "sentence_pattern",
+      "text": "It's Mike's. It's his.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P48-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-zhang-peng-s",
+      "atom_type": "sentence_pattern",
+      "text": "It's Zhang Peng's.",
+      "gloss": "是张鹏的。",
+      "linked_blocks": [
+        "TB-G5S2U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-a-rabbit-it-s-mine",
+      "atom_type": "sentence_pattern",
+      "text": "It's a rabbit. It's mine.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-learn-the-difference-between-possessive-adjectives-my-your-his-her-its-our-their-and-possessive-pronouns-mine-yours-his-hers-its-ours-theirs",
+      "atom_type": "sentence_pattern",
+      "text": "Learn the difference between possessive adjectives (my, your, his, her, its, our, their) and possessive pronouns (mine, yours, his, hers, its, ours, theirs).",
+      "gloss": "学习形容词性物主代词和名词性物主代词的区别。",
+      "linked_blocks": [
+        "TB-G5S2U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-learn-the-final-consonant-blend-ng",
+      "atom_type": "sentence_pattern",
+      "text": "Learn the final consonant blend '-ng' /ŋ/.",
+      "gloss": "学习结尾辅音丛'-ng' /ŋ/的发音。",
+      "linked_blocks": [
+        "TB-G5S2U5-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-learn-the-final-consonant-blend-nk-k",
+      "atom_type": "sentence_pattern",
+      "text": "Learn the final consonant blend '-nk' /ŋk/.",
+      "gloss": "学习结尾辅音丛'-nk' /ŋk/的发音。",
+      "linked_blocks": [
+        "TB-G5S2U5-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-again-and-choose-the-right-answers",
+      "atom_type": "sentence_pattern",
+      "text": "Listen again and choose the right answers.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P54-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-number",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and number.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P54-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-tick-where-is-the-dog",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and tick. Where is the dog?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P51-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-tick-which-is-john-s-picture",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and tick. Which is John's picture?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P48-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-that-s-my-dog",
+      "atom_type": "sentence_pattern",
+      "text": "Look! That's my dog!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-mike-is-sleeping-at-school",
+      "atom_type": "sentence_pattern",
+      "text": "Mike is sleeping at school!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-mike-is-sleeping-at-school",
+      "atom_type": "sentence_pattern",
+      "text": "Mike is sleeping at school.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-mike-is-sleeping",
+      "atom_type": "sentence_pattern",
+      "text": "Mike is sleeping.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-he-isn-t-he-is",
+      "atom_type": "sentence_pattern",
+      "text": "No, he isn't. He is ...",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P51-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-he-isn-t-he-s-eating",
+      "atom_type": "sentence_pattern",
+      "text": "No, he isn't. He's eating.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-they-re-playing-with-each-other",
+      "atom_type": "sentence_pattern",
+      "text": "No. They're playing with each other.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-oh-fido-is-sleeping",
+      "atom_type": "sentence_pattern",
+      "text": "Oh, Fido is sleeping.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-oh-it-s-mine-he-s-sleeping-he-s-very-tired",
+      "atom_type": "sentence_pattern",
+      "text": "Oh, it's mine. He's sleeping. He's very tired.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-forming-sentences-in-the-present-continuous-tense",
+      "atom_type": "sentence_pattern",
+      "text": "Practice forming sentences in the present continuous tense.",
+      "gloss": "练习用现在进行时造句。",
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-the-present-continuous-tense",
+      "atom_type": "sentence_pattern",
+      "text": "Practice the present continuous tense.",
+      "gloss": "练习现在进行时态。",
+      "linked_blocks": [
+        "TB-G5S2U5-P50-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-using-the-present-continuous-tense-to-ask-and-answer-about-actions",
+      "atom_type": "sentence_pattern",
+      "text": "Practice using the present continuous tense to ask and answer about actions.",
+      "gloss": "练习使用现在进行时来问答正在进行的动作。",
+      "linked_blocks": [
+        "TB-G5S2U5-P51-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-write-and-listen",
+      "atom_type": "sentence_pattern",
+      "text": "Read, write and listen.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-robin-do-you-want-to-swim-like-a-fish",
+      "atom_type": "sentence_pattern",
+      "text": "Robin, do you want to swim like a fish?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-carrots-are-theirs",
+      "atom_type": "sentence_pattern",
+      "text": "The carrots are theirs.",
+      "gloss": "这些胡萝卜是他们的。",
+      "linked_blocks": [
+        "TB-G5S2U5-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-yellow-picture-is-mine-are-these-all-ours",
+      "atom_type": "sentence_pattern",
+      "text": "The yellow picture is mine. Are these all ours?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-they-are-mine",
+      "atom_type": "sentence_pattern",
+      "text": "They are mine.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P48-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-using-possessive-pronouns-mine-its-theirs",
+      "atom_type": "sentence_pattern",
+      "text": "Using possessive pronouns (mine, its, theirs).",
+      "gloss": "使用物主代词（mine, its, theirs）。",
+      "linked_blocks": [
+        "TB-G5S2U5-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-using-possessive-pronouns-mine-yours-his",
+      "atom_type": "sentence_pattern",
+      "text": "Using possessive pronouns (mine, yours, his).",
+      "gloss": "使用物主代词（mine, yours, his）。",
+      "linked_blocks": [
+        "TB-G5S2U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-they-doing",
+      "atom_type": "sentence_pattern",
+      "text": "What are they doing?",
+      "gloss": "它们在做什么？",
+      "linked_blocks": [
+        "TB-G5S2U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-you-doing-here-robin",
+      "atom_type": "sentence_pattern",
+      "text": "What are you doing here, Robin?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-s-that",
+      "atom_type": "sentence_pattern",
+      "text": "What's that?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-are-they",
+      "atom_type": "sentence_pattern",
+      "text": "Where are they?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-is-fido-now",
+      "atom_type": "sentence_pattern",
+      "text": "Where is Fido now?",
+      "gloss": "菲多现在在哪里？",
+      "linked_blocks": [
+        "TB-G5S2U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-is-it",
+      "atom_type": "sentence_pattern",
+      "text": "Where is it?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-whose-book-is-that",
+      "atom_type": "sentence_pattern",
+      "text": "Whose book is that?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-whose-book-is-this",
+      "atom_type": "sentence_pattern",
+      "text": "Whose book is this?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P48-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-whose-carrots-are-these",
+      "atom_type": "sentence_pattern",
+      "text": "Whose carrots are these?",
+      "gloss": "这些是谁的胡萝卜？",
+      "linked_blocks": [
+        "TB-G5S2U5-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-whose-dog-is-this",
+      "atom_type": "sentence_pattern",
+      "text": "Whose dog is this?",
+      "gloss": "这是谁的狗？",
+      "linked_blocks": [
+        "TB-G5S2U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-whose-is-it",
+      "atom_type": "sentence_pattern",
+      "text": "Whose is it?",
+      "gloss": "它是谁的？",
+      "linked_blocks": [
+        "TB-G5S2U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-whose-storybooks-are-these",
+      "atom_type": "sentence_pattern",
+      "text": "Whose storybooks are these?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P48-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-whose-tail-is-that",
+      "atom_type": "sentence_pattern",
+      "text": "Whose tail is that?",
+      "gloss": "那是谁的尾巴？",
+      "linked_blocks": [
+        "TB-G5S2U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-whose-tail-is-that-it-s-running-so-fast-is-it-the-tiger-s",
+      "atom_type": "sentence_pattern",
+      "text": "Whose tail is that? It's running so fast. Is it the tiger's?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-why-are-they-looking-at-us",
+      "atom_type": "sentence_pattern",
+      "text": "Why are they looking at us?",
+      "gloss": "它们为什么看着我们？",
+      "linked_blocks": [
+        "TB-G5S2U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wow-that-picture-of-beijing-is-beautiful-whose-is-it",
+      "atom_type": "sentence_pattern",
+      "text": "Wow! That picture of Beijing is beautiful. Whose is it?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wow-what-a-beautiful-painting-is-it-yours",
+      "atom_type": "sentence_pattern",
+      "text": "Wow! What a beautiful painting! Is it yours?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-it-s-your-dog-the-dog-is-yours",
+      "atom_type": "sentence_pattern",
+      "text": "Yes! It's your dog. The dog is yours.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-they-are",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, they are.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-can-you-take-him-to-the-park",
+      "atom_type": "sentence_pattern",
+      "text": "Yes. Can you take him to the park?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-he-s-so-cute",
+      "atom_type": "sentence_pattern",
+      "text": "Yes. He's so cute!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U5-P52-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S2U5-P46",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Whose dog is it?. 单元首页图。在公园里，迈克和陈洁讨论一只狗的主人。同时，小动物们也在讨论一幅画的主人。两个场景都围绕询问物品归属的主题展开。",
+      "entry_probe_questions": [
+        "Do you know the word whose?",
+        "Can you say: Whose dog is this?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U5-P46-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U5-P47",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Whose dog is it?. 约翰和吴彬彬在草地上看到一只兔子。他们讨论了这只兔子的归属、行为，以及旁边胡萝卜的归属。",
+      "entry_probe_questions": [
+        "Do you know the word rabbit?",
+        "Can you say: Whose carrots are these?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U5-P47-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U5-P48",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Possession. 陈洁和迈克正在看一些照片。他们讨论了这些照片的归属，提到了北京、上海等地的风景。",
+      "entry_probe_questions": [
+        "Do you know the word mine?",
+        "Can you say: Are these all ours?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U5-P48-D2",
+        "TB-G5S2U5-P48-D3",
+        "TB-G5S2U5-P48-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U5-P49",
+      "page_type": "grammar",
+      "page_intro_cn": "Theme: Possessive Adjectives and Pronouns. 通过一个“狗狗秀”的公告板，展示了不同物主代词和形容词性物主代词的对应关系。",
+      "entry_probe_questions": [
+        "Can you say: Learn the difference between possessive adjectives (my, your, his, her, its, our, their) and possessive pronouns (mine, yours, his, hers, its, ours, theirs)."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U5-P49-D1",
+        "TB-G5S2U5-P49-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U5-P50",
+      "page_type": "phonics",
+      "page_intro_cn": "Theme: Phonics: -ng / -nk. 根据单词结尾的发音，将词库中的单词分类填写到'-ng'和'-nk'两个组别中。",
+      "entry_probe_questions": [
+        "Do you know the word trunk?",
+        "Can you say: Read, write and listen."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U5-P50-D2",
+        "TB-G5S2U5-P50-D1",
+        "TB-G5S2U5-P50-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U5-P51",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Describing locations and actions. 山姆在陈洁家，他正在询问小狗菲多的位置和正在做的事情，并希望能和它玩耍。",
+      "entry_probe_questions": [
+        "Do you know the word kitchen?",
+        "Can you say: Where is Fido now?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U5-P51-D2",
+        "TB-G5S2U5-P51-D3",
+        "TB-G5S2U5-P51-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U5-P52",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Present Continuous Tense. 通过图卡展示了动物的各种动作，学习现在分词形式，并结合公园场景的对话进行练习。",
+      "entry_probe_questions": [
+        "Do you know the word climbing?",
+        "Can you say: Are these rabbits eating?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U5-P52-D1",
+        "TB-G5S2U5-P52-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U5-P53",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: At the Zoo. 莎拉和机器人在动物园。机器人罗宾兴奋地模仿各种动物的动作，如熊跳舞、兔子吃东西、老虎跑、大象走、猴子爬，还想学鸟飞翔。但当莎拉问它是否想像鱼一样游泳时，它表示拒绝。",
+      "entry_probe_questions": [
+        "Can you say: What are you doing here, Robin?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U5-P53-D1",
+        "TB-G5S2U5-P53-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U5-P54",
+      "page_type": "listening",
+      "page_intro_cn": "Theme: Unit 5 Check & Wrap-up. 听录音，根据听到的内容为四幅图片排序。",
+      "entry_probe_questions": [
+        "Can you say: Listen and number."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U5-P54-D1",
+        "TB-G5S2U5-P54-D2",
+        "TB-G5S2U5-P54-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U5-P55",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Story time. 一个连环画故事。小熊zoom和小松鼠zip在野外观察动物。他们先是看到了老虎，但被小熊zoom的喷嚏吓跑了。接着他们又发现了两只猴子，并开始给它们拍照。有趣的是，猴子们也在模仿他们，给他们“拍照”。",
+      "entry_probe_questions": [
+        "Do you know the word tiger?",
+        "Can you say: Whose tail is that?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U5-P55-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S2U5-P46-D1",
+      "page_uid": "TB-G5S2U5-P46",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U5-P46-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "单元首页图。在公园里，迈克和陈洁讨论一只狗的主人。同时，小动物们也在讨论一幅画的主人。两个场景都围绕询问物品归属的主题展开。 Key patterns: Whose dog is this?; Is it yours?",
+      "focus_vocabulary": [
+        "whose",
+        "mine",
+        "yours",
+        "his",
+        "painting"
+      ],
+      "core_patterns": [
+        "Whose dog is this?",
+        "Is it yours?",
+        "Using possessive pronouns (mine, yours, his).",
+        "Hey! Whose dog is this?",
+        "Wow! What a beautiful painting! Is it yours?",
+        "Oh, it's mine. He's sleeping. He's very tired."
+      ],
+      "allowed_answer_scope": [
+        "Oh, it's mine. He's sleeping. He's very tired.",
+        "No. It's his."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word whose?",
+        "Can you say: Whose dog is this?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U5-P46-D1-goal"
+      ],
+      "branchable_topics": [
+        "whose",
+        "mine",
+        "yours",
+        "his",
+        "painting",
+        "Whose dog is it?",
+        "Unit Five"
+      ],
+      "return_anchors": [
+        "Whose dog is this?",
+        "Is it yours?",
+        "Using possessive pronouns (mine, yours, his)."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P47-D1",
+      "page_uid": "TB-G5S2U5-P47",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U5-P47-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "约翰和吴彬彬在草地上看到一只兔子。他们讨论了这只兔子的归属、行为，以及旁边胡萝卜的归属。 Key patterns: Whose carrots are these?; The carrots are theirs.",
+      "focus_vocabulary": [
+        "rabbit",
+        "mine",
+        "jumping",
+        "carrots",
+        "theirs"
+      ],
+      "core_patterns": [
+        "Whose carrots are these?",
+        "The carrots are theirs.",
+        "Using possessive pronouns (mine, its, theirs).",
+        "What's that?",
+        "I see. Why is it jumping?",
+        "It's a rabbit. It's mine."
+      ],
+      "allowed_answer_scope": [
+        "It's a rabbit. It's mine.",
+        "It's playing with its friends.",
+        "The carrots are theirs."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word rabbit?",
+        "Can you say: Whose carrots are these?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U5-P47-D1-goal"
+      ],
+      "branchable_topics": [
+        "rabbit",
+        "mine",
+        "jumping",
+        "carrots",
+        "theirs",
+        "Whose dog is it?"
+      ],
+      "return_anchors": [
+        "Whose carrots are these?",
+        "The carrots are theirs.",
+        "Using possessive pronouns (mine, its, theirs)."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P48-D1",
+      "page_uid": "TB-G5S2U5-P48",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U5-P48-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听一段对话，根据内容判断哪一张是约翰的图片，并勾选。 Key patterns: Listen and tick. Which is John's picture?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and tick. Which is John's picture?"
+      ],
+      "allowed_answer_scope": [
+        "Picture 1"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and tick. Which is John's picture?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U5-P48-D1-goal"
+      ],
+      "branchable_topics": [
+        "Possession",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and tick. Which is John's picture?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P48-D2",
+      "page_uid": "TB-G5S2U5-P48",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U5-P48-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "陈洁和迈克正在看一些照片。他们讨论了这些照片的归属，提到了北京、上海等地的风景。 Key patterns: Are these all ours?; Whose is it?",
+      "focus_vocabulary": [
+        "mine",
+        "ours",
+        "whose",
+        "his"
+      ],
+      "core_patterns": [
+        "Are these all ours?",
+        "Whose is it?",
+        "It's Zhang Peng's.",
+        "The yellow picture is mine. Are these all ours?",
+        "Wow! That picture of Beijing is beautiful. Whose is it?",
+        "Yes, they are."
+      ],
+      "allowed_answer_scope": [
+        "Yes, they are.",
+        "It's Zhang Peng's.",
+        "Look! There is a picture of Shanghai, too.",
+        "It's Binbin's.",
+        "Oh, yes! It's his."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word mine?",
+        "Can you say: Are these all ours?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U5-P48-D3",
+        "TB-G5S2U5-P48-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U5-P48-D2-goal"
+      ],
+      "branchable_topics": [
+        "mine",
+        "ours",
+        "whose",
+        "his",
+        "Possession",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "Are these all ours?",
+        "Whose is it?",
+        "It's Zhang Peng's."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P48-D3",
+      "page_uid": "TB-G5S2U5-P48",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S2U5-P48-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "在教室场景中，学生们练习询问桌上书本的归属。 Key patterns: Whose storybooks are these?; Whose book is this?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Whose storybooks are these?",
+        "Whose book is this?",
+        "They are mine.",
+        "It's Mike's. It's his."
+      ],
+      "allowed_answer_scope": [
+        "They are mine.",
+        "It's Mike's. It's his."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Whose storybooks are these?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U5-P48-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U5-P48-D3-goal"
+      ],
+      "branchable_topics": [
+        "Possession",
+        "Ask and find out."
+      ],
+      "return_anchors": [
+        "Whose storybooks are these?",
+        "Whose book is this?",
+        "They are mine."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P49-D1",
+      "page_uid": "TB-G5S2U5-P49",
+      "page_type": "grammar",
+      "block_type": "grammar_point",
+      "source_refs": [
+        "TB-G5S2U5-P49-D1"
+      ],
+      "teaching_goal": "Work on the grammar point activity.",
+      "teaching_summary": "通过一个“狗狗秀”的公告板，展示了不同物主代词和形容词性物主代词的对应关系。 Key patterns: Learn the difference between possessive adjectives (my, your, his, her, its, our, their) and possessive pronouns (mine, yours, his, hers, its, ours, theirs).; Look! That's my dog!",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Learn the difference between possessive adjectives (my, your, his, her, its, our, their) and possessive pronouns (mine, yours, his, hers, its, ours, theirs).",
+        "Look! That's my dog!",
+        "Yes! It's your dog. The dog is yours."
+      ],
+      "allowed_answer_scope": [
+        "Look! That's my dog!",
+        "Yes! It's your dog. The dog is yours."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Learn the difference between possessive adjectives (my, your, his, her, its, our, their) and possessive pronouns (mine, yours, his, hers, its, ours, theirs)."
+      ],
+      "repair_modes": [
+        "repeat",
+        "sentence_drill",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U5-P49-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U5-P49-D1-goal"
+      ],
+      "branchable_topics": [
+        "Possessive Adjectives and Pronouns",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Learn the difference between possessive adjectives (my, your, his, her, its, our, their) and possessive pronouns (mine, yours, his, hers, its, ours, theirs).",
+        "Look! That's my dog!",
+        "Yes! It's your dog. The dog is yours."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P49-D2",
+      "page_uid": "TB-G5S2U5-P49",
+      "page_type": "grammar",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S2U5-P49-D2"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "一个表格填空练习，要求学生根据表格第一列的“物主”，分别使用形容词性物主代词和名词性物主代词完成两个句子。 Key patterns: Whose book is that?; It's Amy's book.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Whose book is that?",
+        "It's Amy's book.",
+        "Ah! The book is hers."
+      ],
+      "allowed_answer_scope": [
+        "It's her book. / The book is hers.",
+        "It's his book. / The book is his.",
+        "It's their book. / The book is theirs.",
+        "It's my book. / The book is mine.",
+        "It's our book. / The book is ours."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Whose book is that?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U5-P49-D2-goal"
+      ],
+      "branchable_topics": [
+        "Possessive Adjectives and Pronouns",
+        "Look, say and complete"
+      ],
+      "return_anchors": [
+        "Whose book is that?",
+        "It's Amy's book.",
+        "Ah! The book is hers."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P50-D1",
+      "page_uid": "TB-G5S2U5-P50",
+      "page_type": "phonics",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G5S2U5-P50-D1"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "学习鼻音辅音丛 '-ng' /ŋ/ 和 '-nk' /ŋk/ 在单词结尾的发音。 Key patterns: Learn the final consonant blend '-ng' /ŋ/.; Learn the final consonant blend '-nk' /ŋk/.",
+      "focus_vocabulary": [
+        "long",
+        "sing",
+        "ring",
+        "young",
+        "think",
+        "ink",
+        "trunk",
+        "pink"
+      ],
+      "core_patterns": [
+        "Learn the final consonant blend '-ng' /ŋ/.",
+        "Learn the final consonant blend '-nk' /ŋk/."
+      ],
+      "allowed_answer_scope": [
+        "long",
+        "sing",
+        "ring",
+        "young",
+        "think",
+        "ink"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word long?",
+        "Can you say: Learn the final consonant blend '-ng' /ŋ/."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U5-P50-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U5-P50-D1-goal"
+      ],
+      "branchable_topics": [
+        "long",
+        "sing",
+        "ring",
+        "young",
+        "think",
+        "ink",
+        "trunk",
+        "pink"
+      ],
+      "return_anchors": [
+        "Learn the final consonant blend '-ng' /ŋ/.",
+        "Learn the final consonant blend '-nk' /ŋk/."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P50-D2",
+      "page_uid": "TB-G5S2U5-P50",
+      "page_type": "phonics",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G5S2U5-P50-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "根据单词结尾的发音，将词库中的单词分类填写到'-ng'和'-nk'两个组别中。 Key patterns: Read, write and listen.",
+      "focus_vocabulary": [
+        "trunk",
+        "song",
+        "ring",
+        "think",
+        "sing",
+        "thing",
+        "drink",
+        "pink"
+      ],
+      "core_patterns": [
+        "Read, write and listen."
+      ],
+      "allowed_answer_scope": [
+        "song, ring, sing, thing, morning, long",
+        "trunk, think, drink, pink, thank, bank"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word trunk?",
+        "Can you say: Read, write and listen."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U5-P50-D1",
+        "TB-G5S2U5-P50-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U5-P50-D2-goal"
+      ],
+      "branchable_topics": [
+        "trunk",
+        "song",
+        "ring",
+        "think",
+        "sing",
+        "thing",
+        "drink",
+        "pink"
+      ],
+      "return_anchors": [
+        "Read, write and listen."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P50-D3",
+      "page_uid": "TB-G5S2U5-P50",
+      "page_type": "phonics",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S2U5-P50-D3"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "看图，听录音，并根据括号中的动词提示，使用现在进行时态完成句子。 Key patterns: Practice the present continuous tense.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice the present continuous tense."
+      ],
+      "allowed_answer_scope": [
+        "Zoom is eating.",
+        "He is jumping.",
+        "The monkey is drinking.",
+        "The girl is singing."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice the present continuous tense."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U5-P50-D3-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: -ng / -nk",
+        "Look, listen and write."
+      ],
+      "return_anchors": [
+        "Practice the present continuous tense."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P51-D1",
+      "page_uid": "TB-G5S2U5-P51",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U5-P51-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听一段对话，根据内容判断小狗在哪里，并勾选正确的图片。 Key patterns: Listen and tick. Where is the dog?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and tick. Where is the dog?"
+      ],
+      "allowed_answer_scope": [
+        "Picture 2"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and tick. Where is the dog?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U5-P51-D1-goal"
+      ],
+      "branchable_topics": [
+        "Describing locations and actions",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and tick. Where is the dog?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P51-D2",
+      "page_uid": "TB-G5S2U5-P51",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U5-P51-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "山姆在陈洁家，他正在询问小狗菲多的位置和正在做的事情，并希望能和它玩耍。 Key patterns: Where is Fido now?; Is he drinking water?",
+      "focus_vocabulary": [
+        "kitchen",
+        "drinking",
+        "eating"
+      ],
+      "core_patterns": [
+        "Where is Fido now?",
+        "Is he drinking water?",
+        "Can I play with him now?",
+        "Yes. Can you take him to the park?",
+        "He's in the kitchen.",
+        "No, he isn't. He's eating."
+      ],
+      "allowed_answer_scope": [
+        "He's in the kitchen.",
+        "No, he isn't. He's eating.",
+        "Of course! Fido, come here!",
+        "Woof, woof!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word kitchen?",
+        "Can you say: Where is Fido now?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U5-P51-D3",
+        "TB-G5S2U5-P51-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U5-P51-D2-goal"
+      ],
+      "branchable_topics": [
+        "kitchen",
+        "drinking",
+        "eating",
+        "Describing locations and actions",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "Where is Fido now?",
+        "Is he drinking water?",
+        "Can I play with him now?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P51-D3",
+      "page_uid": "TB-G5S2U5-P51",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S2U5-P51-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "看几张关于小狗的照片，练习用现在进行时提问和回答，描述小狗正在做的事情。 Key patterns: Practice using the present continuous tense to ask and answer about actions.; Is the dog eating?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice using the present continuous tense to ask and answer about actions.",
+        "Is the dog eating?",
+        "No, he isn't. He is ..."
+      ],
+      "allowed_answer_scope": [
+        "No, he isn't. He is ..."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice using the present continuous tense to ask and answer about actions."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U5-P51-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U5-P51-D3-goal"
+      ],
+      "branchable_topics": [
+        "Describing locations and actions",
+        "Look and say."
+      ],
+      "return_anchors": [
+        "Practice using the present continuous tense to ask and answer about actions.",
+        "Is the dog eating?",
+        "No, he isn't. He is ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P52-D1",
+      "page_uid": "TB-G5S2U5-P52",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S2U5-P52-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "通过图卡展示了动物的各种动作，学习现在分词形式，并结合公园场景的对话进行练习。 Key patterns: Are these rabbits eating?; Oh, Fido is sleeping.",
+      "focus_vocabulary": [
+        "climbing",
+        "drinking",
+        "eating",
+        "playing",
+        "sleeping",
+        "jumping"
+      ],
+      "core_patterns": [
+        "Are these rabbits eating?",
+        "Oh, Fido is sleeping.",
+        "Yes. He's so cute!",
+        "No. They're playing with each other."
+      ],
+      "allowed_answer_scope": [
+        "Oh, Fido is sleeping.",
+        "Yes. He's so cute!",
+        "No. They're playing with each other."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word climbing?",
+        "Can you say: Are these rabbits eating?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U5-P52-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U5-P52-D1-goal"
+      ],
+      "branchable_topics": [
+        "climbing",
+        "drinking",
+        "eating",
+        "playing",
+        "sleeping",
+        "jumping",
+        "Present Continuous Tense",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Are these rabbits eating?",
+        "Oh, Fido is sleeping.",
+        "Yes. He's so cute!"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P52-D2",
+      "page_uid": "TB-G5S2U5-P52",
+      "page_type": "vocabulary",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G5S2U5-P52-D2"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "一个句子接龙游戏。学生从三组词库（人名、动作、地点）中各选一个词，组成一个完整的句子，并轮流说出来。 Key patterns: Practice forming sentences in the present continuous tense.; Mike is sleeping.",
+      "focus_vocabulary": [
+        "Mike",
+        "Chen Jie",
+        "Oliver",
+        "Wu Binbin",
+        "John",
+        "Zhang Peng",
+        "is running",
+        "is reading"
+      ],
+      "core_patterns": [
+        "Practice forming sentences in the present continuous tense.",
+        "Mike is sleeping.",
+        "Mike is sleeping at school.",
+        "Mike is sleeping at school!"
+      ],
+      "allowed_answer_scope": [
+        "Mike is sleeping.",
+        "Mike is sleeping at school.",
+        "Mike is sleeping at school!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word Mike?",
+        "Can you say: Practice forming sentences in the present continuous tense."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U5-P52-D2-goal"
+      ],
+      "branchable_topics": [
+        "Mike",
+        "Chen Jie",
+        "Oliver",
+        "Wu Binbin",
+        "John",
+        "Zhang Peng",
+        "is running",
+        "is reading"
+      ],
+      "return_anchors": [
+        "Practice forming sentences in the present continuous tense.",
+        "Mike is sleeping.",
+        "Mike is sleeping at school."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P53-D1",
+      "page_uid": "TB-G5S2U5-P53",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S2U5-P53-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "莎拉和机器人在动物园。机器人罗宾兴奋地模仿各种动物的动作，如熊跳舞、兔子吃东西、老虎跑、大象走、猴子爬，还想学鸟飞翔。但当莎拉问它是否想像鱼一样游泳时，它表示拒绝。 Key patterns: What are you doing here, Robin?; Robin, do you want to swim like a fish?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What are you doing here, Robin?",
+        "Robin, do you want to swim like a fish?",
+        "I'm looking at a bear. I'm dancing like a bear.",
+        "I'm looking at the rabbits. I'm eating like a rabbit.",
+        "I'm looking at a tiger. I'm running like a tiger.",
+        "I'm looking at an elephant. I'm walking like an elephant."
+      ],
+      "allowed_answer_scope": [
+        "I'm looking at a bear. I'm dancing like a bear.",
+        "I'm looking at the rabbits. I'm eating like a rabbit.",
+        "I'm looking at a tiger. I'm running like a tiger.",
+        "I'm looking at an elephant. I'm walking like an elephant.",
+        "I'm looking at a monkey. I'm climbing like him.",
+        "I'm looking at a bird. I like flying. I want to be a bird!"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What are you doing here, Robin?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U5-P53-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U5-P53-D1-goal"
+      ],
+      "branchable_topics": [
+        "At the Zoo",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "What are you doing here, Robin?",
+        "Robin, do you want to swim like a fish?",
+        "I'm looking at a bear. I'm dancing like a bear."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P53-D2",
+      "page_uid": "TB-G5S2U5-P53",
+      "page_type": "reading",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S2U5-P53-D2"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "根据上面的阅读内容，回答问题。 Key patterns: Answer the questions.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Answer the questions."
+      ],
+      "allowed_answer_scope": [
+        "They are at the zoo.",
+        "dancing.",
+        "eating.",
+        "running.",
+        "walking."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Answer the questions."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U5-P53-D2-goal"
+      ],
+      "branchable_topics": [
+        "At the Zoo",
+        "Answer the questions."
+      ],
+      "return_anchors": [
+        "Answer the questions."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P54-D1",
+      "page_uid": "TB-G5S2U5-P54",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U5-P54-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，根据听到的内容为四幅图片排序。 Key patterns: Listen and number.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and number."
+      ],
+      "allowed_answer_scope": [
+        "3",
+        "2",
+        "4",
+        "1"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and number."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U5-P54-D2",
+        "TB-G5S2U5-P54-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U5-P54-D1-goal"
+      ],
+      "branchable_topics": [
+        "Unit 5 Check & Wrap-up",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Listen and number."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P54-D2",
+      "page_uid": "TB-G5S2U5-P54",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U5-P54-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "再次听录音，并根据听到的内容选择问题的正确答案。 Key patterns: Listen again and choose the right answers.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen again and choose the right answers."
+      ],
+      "allowed_answer_scope": [
+        "A",
+        "B"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen again and choose the right answers."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U5-P54-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U5-P54-D2-goal"
+      ],
+      "branchable_topics": [
+        "Unit 5 Check & Wrap-up",
+        "Listen again and choose the right answers."
+      ],
+      "return_anchors": [
+        "Listen again and choose the right answers."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P54-D3",
+      "page_uid": "TB-G5S2U5-P54",
+      "page_type": "listening",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G5S2U5-P54-D3"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "总结和巩固形容词性物主代词和名词性物主代词的用法。学生需要根据对话上下文，从给定的词库中选择正确的物主代词填空。 Key patterns: Complete the sentences.",
+      "focus_vocabulary": [
+        "his",
+        "her",
+        "my",
+        "their",
+        "our",
+        "your",
+        "hers",
+        "mine"
+      ],
+      "core_patterns": [
+        "Complete the sentences."
+      ],
+      "allowed_answer_scope": [
+        "hers",
+        "his",
+        "your, mine",
+        "his, their",
+        "your, our"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word his?",
+        "Can you say: Complete the sentences."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U5-P54-D3-goal"
+      ],
+      "branchable_topics": [
+        "his",
+        "her",
+        "my",
+        "their",
+        "our",
+        "your",
+        "hers",
+        "mine"
+      ],
+      "return_anchors": [
+        "Complete the sentences."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U5-P55-D1",
+      "page_uid": "TB-G5S2U5-P55",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S2U5-P55-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一个连环画故事。小熊zoom和小松鼠zip在野外观察动物。他们先是看到了老虎，但被小熊zoom的喷嚏吓跑了。接着他们又发现了两只猴子，并开始给它们拍照。有趣的是，猴子们也在模仿他们，给他们“拍照”。 Key patterns: Whose tail is that?; What are they doing?",
+      "focus_vocabulary": [
+        "tiger",
+        "quiet",
+        "tail",
+        "monkeys",
+        "climbing",
+        "fast",
+        "taking pictures",
+        "copying"
+      ],
+      "core_patterns": [
+        "Whose tail is that?",
+        "What are they doing?",
+        "Why are they looking at us?",
+        "Where is it?",
+        "Whose tail is that? It's running so fast. Is it the tiger's?",
+        "Where are they?"
+      ],
+      "allowed_answer_scope": [
+        "Here comes a tiger.",
+        "Shh. Be quiet.",
+        "Ah-choo!",
+        "Yes, it is.",
+        "I see two monkeys.",
+        "Shh. They're climbing."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word tiger?",
+        "Can you say: Whose tail is that?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U5-P55-D1-goal"
+      ],
+      "branchable_topics": [
+        "tiger",
+        "quiet",
+        "tail",
+        "monkeys",
+        "climbing",
+        "fast",
+        "taking pictures",
+        "copying"
+      ],
+      "return_anchors": [
+        "Whose tail is that?",
+        "What are they doing?",
+        "Why are they looking at us?"
+      ]
+    }
+  ]
+}

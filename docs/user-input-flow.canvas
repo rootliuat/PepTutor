@@ -1,0 +1,433 @@
+{
+  "nodes": [
+    {
+      "id": "g1000001",
+      "type": "group",
+      "x": -120,
+      "y": -80,
+      "width": 2680,
+      "height": 170,
+      "label": "用户",
+      "color": "5"
+    },
+    {
+      "id": "g1000002",
+      "type": "group",
+      "x": -120,
+      "y": 130,
+      "width": 2680,
+      "height": 190,
+      "label": "AIRI",
+      "color": "4"
+    },
+    {
+      "id": "g1000003",
+      "type": "group",
+      "x": -120,
+      "y": 360,
+      "width": 2680,
+      "height": 260,
+      "label": "LangGraph",
+      "color": "4"
+    },
+    {
+      "id": "g1000004",
+      "type": "group",
+      "x": -120,
+      "y": 660,
+      "width": 2680,
+      "height": 260,
+      "label": "教学策略层",
+      "color": "2"
+    },
+    {
+      "id": "g1000005",
+      "type": "group",
+      "x": -120,
+      "y": 960,
+      "width": 2680,
+      "height": 220,
+      "label": "LightRAG / SimpleMem / 模型层",
+      "color": "6"
+    },
+    {
+      "id": "g1000006",
+      "type": "group",
+      "x": 1940,
+      "y": 1220,
+      "width": 620,
+      "height": 260,
+      "label": "参考文档",
+      "color": "3"
+    },
+    {
+      "id": "n1000001",
+      "type": "text",
+      "x": 80,
+      "y": -20,
+      "width": 260,
+      "height": 80,
+      "text": "用户说话或输入文字",
+      "color": "5"
+    },
+    {
+      "id": "n1000002",
+      "type": "text",
+      "x": 80,
+      "y": 180,
+      "width": 320,
+      "height": 100,
+      "text": "接收语音或文本\n做输入标准化",
+      "color": "4"
+    },
+    {
+      "id": "n1000003",
+      "type": "text",
+      "x": 80,
+      "y": 420,
+      "width": 300,
+      "height": 110,
+      "text": "读取 LessonState\n确定当前页、当前 block、是否在等回答",
+      "color": "4"
+    },
+    {
+      "id": "n1000004",
+      "type": "text",
+      "x": 460,
+      "y": 420,
+      "width": 300,
+      "height": 120,
+      "text": "Turn Router 分类回合\nanswer_question / ask_knowledge /\nask_help / navigation / social / meta_learning",
+      "color": "4"
+    },
+    {
+      "id": "n1000005",
+      "type": "text",
+      "x": 860,
+      "y": 420,
+      "width": 300,
+      "height": 120,
+      "text": "如果当前在等学生作答\n优先进入本地判定链路\n默认不做全局检索",
+      "color": "2"
+    },
+    {
+      "id": "n1000006",
+      "type": "text",
+      "x": 200,
+      "y": 730,
+      "width": 320,
+      "height": 120,
+      "text": "本地优先判定\ncurrent block -> page -> unit\n给出 correct / acceptable / incorrect",
+      "color": "2"
+    },
+    {
+      "id": "n1000007",
+      "type": "text",
+      "x": 620,
+      "y": 730,
+      "width": 300,
+      "height": 120,
+      "text": "教学动作选择\nconfirm / hint / correct /\nfollow_up / review_prerequisite",
+      "color": "2"
+    },
+    {
+      "id": "n1000008",
+      "type": "text",
+      "x": 1040,
+      "y": 730,
+      "width": 300,
+      "height": 120,
+      "text": "如果是 ask_help\n优先降阶讲解\n而不是直接抛标准答案",
+      "color": "2"
+    },
+    {
+      "id": "n1000009",
+      "type": "text",
+      "x": 1460,
+      "y": 730,
+      "width": 300,
+      "height": 120,
+      "text": "如果是 navigation 或 social\n只做状态切换或简短社交回复",
+      "color": "2"
+    },
+    {
+      "id": "n1000010",
+      "type": "text",
+      "x": 200,
+      "y": 1020,
+      "width": 300,
+      "height": 110,
+      "text": "LightRAG\n范围受控检索\nblock -> page -> unit -> global",
+      "color": "5"
+    },
+    {
+      "id": "n1000011",
+      "type": "text",
+      "x": 620,
+      "y": 1020,
+      "width": 300,
+      "height": 110,
+      "text": "SimpleMem\n读取或写回学生长期记忆\nTeachingUnit / LearningCrystal",
+      "color": "6"
+    },
+    {
+      "id": "n1000012",
+      "type": "text",
+      "x": 1040,
+      "y": 1020,
+      "width": 300,
+      "height": 110,
+      "text": "模型层\n生成老师回复草案\n附带动作与语气标签",
+      "color": "3"
+    },
+    {
+      "id": "n1000013",
+      "type": "text",
+      "x": 1460,
+      "y": 1020,
+      "width": 320,
+      "height": 110,
+      "text": "AIRI 输出\n文字 / TTS / Live2D 表情动作",
+      "color": "4"
+    },
+    {
+      "id": "n1000014",
+      "type": "text",
+      "x": 1900,
+      "y": 1020,
+      "width": 300,
+      "height": 110,
+      "text": "用户看到结果\n进入下一轮课堂互动",
+      "color": "5"
+    },
+    {
+      "id": "n1000015",
+      "type": "text",
+      "x": 1880,
+      "y": 420,
+      "width": 340,
+      "height": 140,
+      "text": "知识问答单独链路\nask_knowledge 可直接触发\n范围受控教材检索",
+      "color": "5"
+    },
+    {
+      "id": "n1000016",
+      "type": "text",
+      "x": 1880,
+      "y": 730,
+      "width": 340,
+      "height": 140,
+      "text": "元学习链路\nmeta_learning 读取学生记忆\n总结强项、弱项、下一步建议",
+      "color": "6"
+    },
+    {
+      "id": "f1000001",
+      "type": "file",
+      "x": 2020,
+      "y": 1280,
+      "width": 420,
+      "height": 90,
+      "file": "docs/user-input-diagrams.md"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1000001",
+      "fromNode": "n1000001",
+      "fromSide": "bottom",
+      "toNode": "n1000002",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "输入"
+    },
+    {
+      "id": "e1000002",
+      "fromNode": "n1000002",
+      "fromSide": "bottom",
+      "toNode": "n1000003",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "传给编排层"
+    },
+    {
+      "id": "e1000003",
+      "fromNode": "n1000003",
+      "fromSide": "right",
+      "toNode": "n1000004",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "读状态后分类"
+    },
+    {
+      "id": "e1000004",
+      "fromNode": "n1000004",
+      "fromSide": "right",
+      "toNode": "n1000005",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "答题场景"
+    },
+    {
+      "id": "e1000005",
+      "fromNode": "n1000005",
+      "fromSide": "bottom",
+      "toNode": "n1000006",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "本地优先"
+    },
+    {
+      "id": "e1000006",
+      "fromNode": "n1000006",
+      "fromSide": "right",
+      "toNode": "n1000007",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "判定结果"
+    },
+    {
+      "id": "e1000007",
+      "fromNode": "n1000004",
+      "fromSide": "bottom",
+      "toNode": "n1000008",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "ask_help"
+    },
+    {
+      "id": "e1000008",
+      "fromNode": "n1000004",
+      "fromSide": "bottom",
+      "toNode": "n1000009",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "navigation / social"
+    },
+    {
+      "id": "e1000009",
+      "fromNode": "n1000004",
+      "fromSide": "right",
+      "toNode": "n1000015",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "ask_knowledge"
+    },
+    {
+      "id": "e1000010",
+      "fromNode": "n1000004",
+      "fromSide": "bottom",
+      "toNode": "n1000016",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "meta_learning"
+    },
+    {
+      "id": "e1000011",
+      "fromNode": "n1000007",
+      "fromSide": "bottom",
+      "toNode": "n1000010",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "上下文不足时检索"
+    },
+    {
+      "id": "e1000012",
+      "fromNode": "n1000008",
+      "fromSide": "bottom",
+      "toNode": "n1000012",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "组织讲解"
+    },
+    {
+      "id": "e1000013",
+      "fromNode": "n1000009",
+      "fromSide": "bottom",
+      "toNode": "n1000012",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "简短回复"
+    },
+    {
+      "id": "e1000014",
+      "fromNode": "n1000015",
+      "fromSide": "bottom",
+      "toNode": "n1000010",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "教材检索"
+    },
+    {
+      "id": "e1000015",
+      "fromNode": "n1000016",
+      "fromSide": "bottom",
+      "toNode": "n1000011",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "读学生记忆"
+    },
+    {
+      "id": "e1000016",
+      "fromNode": "n1000010",
+      "fromSide": "right",
+      "toNode": "n1000012",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "补充知识"
+    },
+    {
+      "id": "e1000017",
+      "fromNode": "n1000011",
+      "fromSide": "right",
+      "toNode": "n1000012",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "个性化"
+    },
+    {
+      "id": "e1000018",
+      "fromNode": "n1000012",
+      "fromSide": "right",
+      "toNode": "n1000013",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "老师回复"
+    },
+    {
+      "id": "e1000019",
+      "fromNode": "n1000012",
+      "fromSide": "left",
+      "toNode": "n1000011",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "必要时写回"
+    },
+    {
+      "id": "e1000020",
+      "fromNode": "n1000013",
+      "fromSide": "right",
+      "toNode": "n1000014",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "展示"
+    },
+    {
+      "id": "e1000021",
+      "fromNode": "n1000014",
+      "fromSide": "top",
+      "toNode": "n1000001",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "进入下一轮"
+    },
+    {
+      "id": "e1000022",
+      "fromNode": "f1000001",
+      "fromSide": "top",
+      "toNode": "n1000016",
+      "toSide": "right",
+      "toEnd": "arrow",
+      "label": "Mermaid 版本"
+    }
+  ]
+}

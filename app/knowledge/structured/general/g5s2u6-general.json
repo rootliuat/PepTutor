@@ -1,0 +1,2589 @@
+{
+  "pilot_id": "g5s2u6-general-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S2",
+    "unit": "U6",
+    "pages": [
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/02.五年级下册语料.js",
+    "app/knowledge/raw/06.五年级下册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 5 · Volume 2), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 5 · Volume 2), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 21,
+    "source_kind": "textbook_source_js",
+    "source_format": "js"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 6",
+      "word": "doing morning exercises",
+      "chinese": "（正在）做早操",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U6-P59-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "having ... class",
+      "chinese": "（正在）上……课",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U6-P59-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "eating lunch",
+      "chinese": "（正在）吃午饭",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U6-P56-D1",
+        "TB-G5S2U6-P58-D2",
+        "TB-G5S2U6-P59-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "reading a book",
+      "chinese": "（正在）看书",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U6-P59-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "listening to music",
+      "chinese": "（正在）听音乐",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U6-P57-D1",
+        "TB-G5S2U6-P59-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "keep",
+      "phonetic": "/kiːp/",
+      "chinese": "保持某种状态",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U6-P56-D1",
+        "TB-G5S2U6-P57-D1",
+        "TB-G5S2U6-P61-D2",
+        "TB-G5S2U6-P62-D1",
+        "TB-G5S2U6-P65-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "keep to the right",
+      "chinese": "靠右",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U6-P57-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "keep your desk clean",
+      "chinese": "保持你的课桌干净",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U6-P56-D1",
+        "TB-G5S2U6-P61-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "talk quietly",
+      "chinese": "小声讲话",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U6-P61-D2",
+        "TB-G5S2U6-P65-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "turn",
+      "phonetic": "/tɜːn/",
+      "chinese": "顺序",
+      "emphasized": true,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "take turns",
+      "chinese": "按顺序来",
+      "emphasized": true,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "bamboo",
+      "phonetic": "/ˌbæm'buː/",
+      "chinese": "竹子",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S2U6-P58-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "its",
+      "phonetic": "/ɪts/",
+      "chinese": "（指事物、动物或幼儿）它的；他的；她的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "show",
+      "phonetic": "/ʃəʊ/",
+      "chinese": "给人看",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "anything",
+      "phonetic": "/'eniθɪŋ/",
+      "chinese": "任何事物",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "else",
+      "phonetic": "/els/",
+      "chinese": "另外；其他",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "exhibition",
+      "phonetic": "/ˌeksɪ'bɪʃn/",
+      "chinese": "展览",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "say",
+      "phonetic": "/seɪ/",
+      "chinese": "说；讲",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "have a look",
+      "chinese": "看一看",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "sushi",
+      "phonetic": "/'suːʃi/",
+      "chinese": "寿司",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "teach",
+      "phonetic": "/tiːtʃ/",
+      "chinese": "教",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "sure",
+      "phonetic": "/ʃʊə(r)/",
+      "chinese": "（表示同意）当然",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "Canadian",
+      "phonetic": "/kə'neɪdiən/",
+      "chinese": "加拿大的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "Spanish",
+      "phonetic": "/'spænɪʃ/",
+      "chinese": "西班牙的",
+      "emphasized": false,
+      "linked_block_uids": []
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S2U6-P56-D1-goal",
+      "block_uid": "TB-G5S2U6-P56-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P57-D1-goal",
+      "block_uid": "TB-G5S2U6-P57-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P58-D1-goal",
+      "block_uid": "TB-G5S2U6-P58-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P58-D2-goal",
+      "block_uid": "TB-G5S2U6-P58-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P58-D3-goal",
+      "block_uid": "TB-G5S2U6-P58-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P59-D1-goal",
+      "block_uid": "TB-G5S2U6-P59-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P59-D2-goal",
+      "block_uid": "TB-G5S2U6-P59-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P60-D1-goal",
+      "block_uid": "TB-G5S2U6-P60-D1",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P60-D2-goal",
+      "block_uid": "TB-G5S2U6-P60-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P60-D3-goal",
+      "block_uid": "TB-G5S2U6-P60-D3",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P61-D1-goal",
+      "block_uid": "TB-G5S2U6-P61-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P61-D2-goal",
+      "block_uid": "TB-G5S2U6-P61-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P61-D3-goal",
+      "block_uid": "TB-G5S2U6-P61-D3",
+      "category": "practice_match",
+      "text": "Work on the practice match activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P62-D1-goal",
+      "block_uid": "TB-G5S2U6-P62-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P62-D2-goal",
+      "block_uid": "TB-G5S2U6-P62-D2",
+      "category": "practice_match",
+      "text": "Work on the practice match activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P63-D1-goal",
+      "block_uid": "TB-G5S2U6-P63-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P63-D2-goal",
+      "block_uid": "TB-G5S2U6-P63-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P64-D1-goal",
+      "block_uid": "TB-G5S2U6-P64-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P64-D2-goal",
+      "block_uid": "TB-G5S2U6-P64-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P64-D3-goal",
+      "block_uid": "TB-G5S2U6-P64-D3",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U6-P65-D1-goal",
+      "block_uid": "TB-G5S2U6-P65-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-anything",
+      "atom_type": "word",
+      "text": "anything",
+      "gloss": "任何事物",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-bamboo",
+      "atom_type": "word",
+      "text": "bamboo",
+      "gloss": "竹子",
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-canadian",
+      "atom_type": "word",
+      "text": "Canadian",
+      "gloss": "加拿大的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-classroom",
+      "atom_type": "word",
+      "text": "classroom",
+      "gloss": "教室",
+      "linked_blocks": [
+        "TB-G5S2U6-P57-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-clean-room",
+      "atom_type": "word",
+      "text": "clean ... room",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-cute",
+      "atom_type": "word",
+      "text": "cute",
+      "gloss": "可爱的",
+      "linked_blocks": [
+        "TB-G5S2U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-doing-morning-exercises",
+      "atom_type": "word",
+      "text": "doing morning exercises",
+      "gloss": "（正在）做早操",
+      "linked_blocks": [
+        "TB-G5S2U6-P59-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-drinking-water",
+      "atom_type": "word",
+      "text": "drinking water",
+      "gloss": "喝水",
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-eat-dinner",
+      "atom_type": "word",
+      "text": "eat dinner",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-eating-lunch",
+      "atom_type": "word",
+      "text": "eating lunch",
+      "gloss": "（正在）吃午饭",
+      "linked_blocks": [
+        "TB-G5S2U6-P56-D1",
+        "TB-G5S2U6-P58-D2",
+        "TB-G5S2U6-P59-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-elephants",
+      "atom_type": "word",
+      "text": "elephants",
+      "gloss": "大象",
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-else",
+      "atom_type": "word",
+      "text": "else",
+      "gloss": "另外；其他",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-exciting",
+      "atom_type": "word",
+      "text": "exciting",
+      "gloss": "令人兴奋的",
+      "linked_blocks": [
+        "TB-G5S2U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-exhibition",
+      "atom_type": "word",
+      "text": "exhibition",
+      "gloss": "展览",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-film",
+      "atom_type": "word",
+      "text": "film",
+      "gloss": "电影",
+      "linked_blocks": [
+        "TB-G5S2U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-gorilla",
+      "atom_type": "word",
+      "text": "gorilla",
+      "gloss": "大猩猩",
+      "linked_blocks": [
+        "TB-G5S2U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-have-class",
+      "atom_type": "word",
+      "text": "have ... class",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-have-a-look",
+      "atom_type": "word",
+      "text": "have a look",
+      "gloss": "看一看",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-having-class",
+      "atom_type": "word",
+      "text": "having ... class",
+      "gloss": "（正在）上……课",
+      "linked_blocks": [
+        "TB-G5S2U6-P59-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-he-she-is",
+      "atom_type": "word",
+      "text": "He/She is",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-i-am",
+      "atom_type": "word",
+      "text": "I am",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-its",
+      "atom_type": "word",
+      "text": "its",
+      "gloss": "（指事物、动物或幼儿）它的；他的；她的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-keep",
+      "atom_type": "word",
+      "text": "keep",
+      "gloss": "保持某种状态",
+      "linked_blocks": [
+        "TB-G5S2U6-P56-D1",
+        "TB-G5S2U6-P57-D1",
+        "TB-G5S2U6-P61-D2",
+        "TB-G5S2U6-P62-D1",
+        "TB-G5S2U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-keep-clean",
+      "atom_type": "word",
+      "text": "Keep clean!",
+      "gloss": "保持清洁！",
+      "linked_blocks": [
+        "TB-G5S2U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-keep-to-the-right",
+      "atom_type": "word",
+      "text": "keep to the right",
+      "gloss": "靠右",
+      "linked_blocks": [
+        "TB-G5S2U6-P57-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-keep-to-the-right",
+      "atom_type": "word",
+      "text": "Keep to the right.",
+      "gloss": "靠右行。",
+      "linked_blocks": [
+        "TB-G5S2U6-P62-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-keep-your-desk-clean",
+      "atom_type": "word",
+      "text": "keep your desk clean",
+      "gloss": "保持你的课桌干净",
+      "linked_blocks": [
+        "TB-G5S2U6-P56-D1",
+        "TB-G5S2U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-keep-your-desk-clean",
+      "atom_type": "word",
+      "text": "Keep your desk clean.",
+      "gloss": "保持课桌干净。",
+      "linked_blocks": [
+        "TB-G5S2U6-P62-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-listening-to-music",
+      "atom_type": "word",
+      "text": "listening to music",
+      "gloss": "（正在）听音乐",
+      "linked_blocks": [
+        "TB-G5S2U6-P57-D1",
+        "TB-G5S2U6-P59-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-monkey",
+      "atom_type": "word",
+      "text": "monkey",
+      "gloss": "猴子",
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-noise",
+      "atom_type": "word",
+      "text": "noise",
+      "gloss": "噪音",
+      "linked_blocks": [
+        "TB-G5S2U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pandas",
+      "atom_type": "word",
+      "text": "pandas",
+      "gloss": "熊猫",
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-popcorn",
+      "atom_type": "word",
+      "text": "popcorn",
+      "gloss": "爆米花",
+      "linked_blocks": [
+        "TB-G5S2U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-read-the-books",
+      "atom_type": "word",
+      "text": "read the books",
+      "gloss": "读书",
+      "linked_blocks": [
+        "TB-G5S2U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-reading-a-book",
+      "atom_type": "word",
+      "text": "reading a book",
+      "gloss": "（正在）看书",
+      "linked_blocks": [
+        "TB-G5S2U6-P59-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-say",
+      "atom_type": "word",
+      "text": "say",
+      "gloss": "说；讲",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-show",
+      "atom_type": "word",
+      "text": "show",
+      "gloss": "给人看",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-sign",
+      "atom_type": "word",
+      "text": "sign",
+      "gloss": "标志",
+      "linked_blocks": [
+        "TB-G5S2U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-spanish",
+      "atom_type": "word",
+      "text": "Spanish",
+      "gloss": "西班牙的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-sure",
+      "atom_type": "word",
+      "text": "sure",
+      "gloss": "（表示同意）当然",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-sushi",
+      "atom_type": "word",
+      "text": "sushi",
+      "gloss": "寿司",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-take-turns",
+      "atom_type": "word",
+      "text": "take turns",
+      "gloss": "按顺序来",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-talk-quietly",
+      "atom_type": "word",
+      "text": "talk quietly",
+      "gloss": "小声讲话",
+      "linked_blocks": [
+        "TB-G5S2U6-P61-D2",
+        "TB-G5S2U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-talk-quietly",
+      "atom_type": "word",
+      "text": "Talk quietly.",
+      "gloss": "小声说。",
+      "linked_blocks": [
+        "TB-G5S2U6-P62-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-teach",
+      "atom_type": "word",
+      "text": "teach",
+      "gloss": "教",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-they-are",
+      "atom_type": "word",
+      "text": "They are",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-turn",
+      "atom_type": "word",
+      "text": "turn",
+      "gloss": "顺序",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-we-are",
+      "atom_type": "word",
+      "text": "We are",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-what",
+      "atom_type": "word",
+      "text": "what",
+      "gloss": "什么",
+      "linked_blocks": [
+        "TB-G5S2U6-P60-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-when",
+      "atom_type": "word",
+      "text": "when",
+      "gloss": "什么时候",
+      "linked_blocks": [
+        "TB-G5S2U6-P60-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-where",
+      "atom_type": "word",
+      "text": "where",
+      "gloss": "哪里",
+      "linked_blocks": [
+        "TB-G5S2U6-P60-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-who",
+      "atom_type": "word",
+      "text": "who",
+      "gloss": "谁",
+      "linked_blocks": [
+        "TB-G5S2U6-P60-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-whose",
+      "atom_type": "word",
+      "text": "whose",
+      "gloss": "谁的",
+      "linked_blocks": [
+        "TB-G5S2U6-P60-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-work-quietly",
+      "atom_type": "word",
+      "text": "work quietly",
+      "gloss": "安静地工作",
+      "linked_blocks": [
+        "TB-G5S2U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-you-are",
+      "atom_type": "word",
+      "text": "You are",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-anything-else",
+      "atom_type": "sentence_pattern",
+      "text": "Anything else?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-are-you-cooking",
+      "atom_type": "sentence_pattern",
+      "text": "Are you cooking?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-are-you-from-china",
+      "atom_type": "sentence_pattern",
+      "text": "Are you from China?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-asking-and-answering-about-someone-s-location-and-current-activity",
+      "atom_type": "sentence_pattern",
+      "text": "Asking and answering about someone's location and current activity.",
+      "gloss": "询问和回答某人的位置和正在进行的活动。",
+      "linked_blocks": [
+        "TB-G5S2U6-P57-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-i-read-the-books-here",
+      "atom_type": "sentence_pattern",
+      "text": "Can I read the books here?",
+      "gloss": "我能在这里看书吗？",
+      "linked_blocks": [
+        "TB-G5S2U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-we-play-music-with-you",
+      "atom_type": "sentence_pattern",
+      "text": "Can we play music with you?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-we-use-your-crayons",
+      "atom_type": "sentence_pattern",
+      "text": "Can we use your crayons?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P62-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-distinguish-between-the-simple-present-and-present-continuous-tenses",
+      "atom_type": "sentence_pattern",
+      "text": "Distinguish between the simple present and present continuous tenses.",
+      "gloss": "区分一般现在时和现在进行时。",
+      "linked_blocks": [
+        "TB-G5S2U6-P64-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-see-any-elephants",
+      "atom_type": "sentence_pattern",
+      "text": "Do you see any elephants?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-dum-de-dum",
+      "atom_type": "sentence_pattern",
+      "text": "Dum-de-dum ...",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-fill-in-the-blanks",
+      "atom_type": "sentence_pattern",
+      "text": "Fill in the blanks.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P63-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-following-rules-in-a-classroom-or-library",
+      "atom_type": "sentence_pattern",
+      "text": "Following rules in a classroom or library.",
+      "gloss": "在教室或图书馆遵守规则。",
+      "linked_blocks": [
+        "TB-G5S2U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-giving-instructions-or-commands",
+      "atom_type": "sentence_pattern",
+      "text": "Giving instructions or commands.",
+      "gloss": "给出指令或命令。",
+      "linked_blocks": [
+        "TB-G5S2U6-P57-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-haha-look-they-re-eating-lunch-they-re-so-cute",
+      "atom_type": "sentence_pattern",
+      "text": "Haha. Look! They're eating lunch! They're so cute.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-haha-they-re-eating-lunch-they-re-so-cute",
+      "atom_type": "sentence_pattern",
+      "text": "Haha. They're eating lunch! They're so cute.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-is-talking-in-the-library",
+      "atom_type": "sentence_pattern",
+      "text": "He is talking in the library.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P62-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-love-the-film",
+      "atom_type": "sentence_pattern",
+      "text": "I love the film.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-eating-dinner",
+      "atom_type": "sentence_pattern",
+      "text": "I'm eating dinner.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-is-important-to-follow-the-rules-in-public-places-like-cinemas",
+      "atom_type": "sentence_pattern",
+      "text": "It is important to follow the rules in public places like cinemas.",
+      "gloss": "在电影院等公共场所遵守规则是很重要的。",
+      "linked_blocks": [
+        "TB-G5S2U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-7-30-p-m-what-s-chen-jie-doing",
+      "atom_type": "sentence_pattern",
+      "text": "It's 7:30 p.m. What's Chen Jie doing?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P59-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-so-big-and-strong",
+      "atom_type": "sentence_pattern",
+      "text": "It's so big and strong.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-keep-to-the-right-please",
+      "atom_type": "sentence_pattern",
+      "text": "Keep to the right, please.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P57-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-learn-the-pronunciation-of-the-wh-digraph-in-question-words",
+      "atom_type": "sentence_pattern",
+      "text": "Learn the pronunciation of the 'wh' digraph in question words.",
+      "gloss": "学习'wh'字母组合在疑问词中的发音。",
+      "linked_blocks": [
+        "TB-G5S2U6-P60-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-again-and-write",
+      "atom_type": "sentence_pattern",
+      "text": "Listen again and write.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P64-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P60-D2",
+        "TB-G5S2U6-P61-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D1",
+        "TB-G5S2U6-P64-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-at-the-pandas",
+      "atom_type": "sentence_pattern",
+      "text": "Look at the pandas.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-match-say-and-act",
+      "atom_type": "sentence_pattern",
+      "text": "Match, say and act.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P61-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-mike-is-listening-to-music",
+      "atom_type": "sentence_pattern",
+      "text": "Mike is listening to music.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P59-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-my-name-is-tom-what-s-your-name",
+      "atom_type": "sentence_pattern",
+      "text": "My name is Tom. What's your name?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-ni-hao-ni-zai-gan-shen-me-ne",
+      "atom_type": "sentence_pattern",
+      "text": "Ni hao. Ni zai gan shen me ne?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-ok-can-i-read-the-books-here",
+      "atom_type": "sentence_pattern",
+      "text": "OK. Can I read the books here?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-ok-take-turns",
+      "atom_type": "sentence_pattern",
+      "text": "OK. Take turns.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P62-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-oh-hello-what-are-you-doing",
+      "atom_type": "sentence_pattern",
+      "text": "Oh, hello. What are you doing?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-oh-yes-they-like-bamboo",
+      "atom_type": "sentence_pattern",
+      "text": "Oh, yes! They like bamboo.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-forming-wh-questions",
+      "atom_type": "sentence_pattern",
+      "text": "Practice forming 'wh-' questions.",
+      "gloss": "练习构造'wh-'特殊疑问句。",
+      "linked_blocks": [
+        "TB-G5S2U6-P60-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-she-s-listening-to-music-in-the-classroom",
+      "atom_type": "sentence_pattern",
+      "text": "She's listening to music in the classroom.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P57-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-she-s-listening-to-music-it-s-9-o-clock-what-are-the-students-doing",
+      "atom_type": "sentence_pattern",
+      "text": "She's listening to music. It's 9 o'clock. What are the students doing?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P59-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-shh-talk-quietly-i-m-john-i-can-show-you-the-english-books",
+      "atom_type": "sentence_pattern",
+      "text": "Shh. Talk quietly. I'm John. I can show you the English books.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-sorry-what-are-you-saying",
+      "atom_type": "sentence_pattern",
+      "text": "Sorry. What are you saying?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-talk-quietly-please",
+      "atom_type": "sentence_pattern",
+      "text": "Talk quietly, please.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P62-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-talk-quietly",
+      "atom_type": "sentence_pattern",
+      "text": "Talk quietly.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P62-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-using-imperative-sentences-to-give-commands",
+      "atom_type": "sentence_pattern",
+      "text": "Using imperative sentences to give commands.",
+      "gloss": "使用祈使句给出指令。",
+      "linked_blocks": [
+        "TB-G5S2U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-using-imperative-sentences-to-state-rules",
+      "atom_type": "sentence_pattern",
+      "text": "Using imperative sentences to state rules.",
+      "gloss": "使用祈使句陈述规则。",
+      "linked_blocks": [
+        "TB-G5S2U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-re-having-an-english-class",
+      "atom_type": "sentence_pattern",
+      "text": "We're having an English class.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-they-doing",
+      "atom_type": "sentence_pattern",
+      "text": "What are they doing?",
+      "gloss": "它们在做什么？",
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-s-that-noise",
+      "atom_type": "sentence_pattern",
+      "text": "What's that noise?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-s-the-little-monkey-doing",
+      "atom_type": "sentence_pattern",
+      "text": "What's the little monkey doing?",
+      "gloss": "小猴子在做什么？",
+      "linked_blocks": [
+        "TB-G5S2U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-is-amy",
+      "atom_type": "sentence_pattern",
+      "text": "Where is Amy?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P57-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-work-quietly",
+      "atom_type": "sentence_pattern",
+      "text": "Work quietly!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wow-the-gorilla-is-eating-a-banana",
+      "atom_type": "sentence_pattern",
+      "text": "Wow! The gorilla is eating a banana.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-they-are",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, they are!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-the-gorilla-is-great",
+      "atom_type": "sentence_pattern",
+      "text": "Yes. The gorilla is great!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U6-P65-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S2U6-P56",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Work quietly!. 单元首页图。页面展示了两个场景：上面是老师和学生在教室里看关于熊猫的视频，讨论熊猫的行为；下面是小松鼠提醒正在哼歌的小熊要保持安静和桌面整洁。两个场景都围绕“安静工作”和遵守规则的主题展开。",
+      "entry_probe_questions": [
+        "Do you know the word eating lunch?",
+        "Can you say: Following rules in a classroom or library."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U6-P56-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U6-P57",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Work quietly!. 在学校食堂，厨师提醒学生排队时靠右站。学生们在排队时讨论艾米在哪里，引出本单元关于描述人物正在做什么以及在哪里的主题。",
+      "entry_probe_questions": [
+        "Do you know the word keep to the right?",
+        "Can you say: Giving instructions or commands."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U6-P57-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U6-P58",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Describing animals' actions. 陈洁和迈克在动物园或看动物视频，他们讨论了熊猫、猴子和大象正在做什么。",
+      "entry_probe_questions": [
+        "Do you know the word pandas?",
+        "Can you say: What are they doing?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U6-P58-D2",
+        "TB-G5S2U6-P58-D3",
+        "TB-G5S2U6-P58-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U6-P59",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Daily Activities and Time. 通过展示陈洁一天中不同时间的活动，学习描述日常活动的动词短语，并练习询问某人正在做什么。",
+      "entry_probe_questions": [
+        "Do you know the word doing morning exercises?",
+        "Can you say: It's 7:30 p.m. What's Chen Jie doing?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U6-P59-D1",
+        "TB-G5S2U6-P59-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U6-P60",
+      "page_type": "phonics",
+      "page_intro_cn": "Theme: Phonics: wh. 听录音，并从每组两个单词中圈出听到的那一个。",
+      "entry_probe_questions": [
+        "Can you say: Listen and circle."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U6-P60-D2",
+        "TB-G5S2U6-P60-D1",
+        "TB-G5S2U6-P60-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U6-P61",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Library Rules. 汤姆和约翰在图书馆里对话。约翰提醒汤姆要保持安静，并帮助他找到了英语书。他还告诉了汤姆一些图书馆的规则。",
+      "entry_probe_questions": [
+        "Do you know the word talk quietly?",
+        "Can you say: Using imperative sentences to state rules."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U6-P61-D2",
+        "TB-G5S2U6-P61-D1",
+        "TB-G5S2U6-P61-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U6-P62",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Rules and Commands. 通过标志图片和课堂对话场景，学习一些常见的祈使句指令。",
+      "entry_probe_questions": [
+        "Do you know the word Keep to the right.?",
+        "Can you say: Can we use your crayons?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U6-P62-D1",
+        "TB-G5S2U6-P62-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U6-P63",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: The world robot exhibition. 一个连环画对话场景，描绘了莎拉和罗宾在世界机器人展上与来自不同国家的机器人互动。他们询问了机器人们正在做什么，并了解了它们的特长。",
+      "entry_probe_questions": [
+        "Can you say: Ni hao. Ni zai gan shen me ne?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U6-P63-D1",
+        "TB-G5S2U6-P63-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U6-P64",
+      "page_type": "writing",
+      "page_intro_cn": "Theme: Unit 6 Check & Wrap-up. 听录音，根据听到的内容，在每组图片中勾选出正确的活动。",
+      "entry_probe_questions": [
+        "Can you say: Listen and tick."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U6-P64-D1",
+        "TB-G5S2U6-P64-D2",
+        "TB-G5S2U6-P64-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U6-P65",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Story time. 一个关于在电影院遵守规则的连环画故事。小熊祖姆和小松鼠兹普在看电影时，祖姆吃爆米花的声音太大，被老虎提醒要保持安静。之后，他们又看到了“保持清洁”的标志，意识到了自己的错误。",
+      "entry_probe_questions": [
+        "Do you know the word film?",
+        "Can you say: It is important to follow the rules in public places like cinemas."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U6-P65-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S2U6-P56-D1",
+      "page_uid": "TB-G5S2U6-P56",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U6-P56-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "单元首页图。页面展示了两个场景：上面是老师和学生在教室里看关于熊猫的视频，讨论熊猫的行为；下面是小松鼠提醒正在哼歌的小熊要保持安静和桌面整洁。两个场景都围绕“安静工作”和遵守规则的主题展开。 Key patterns: Following rules in a classroom or library.; Using imperative sentences to give commands.",
+      "focus_vocabulary": [
+        "eating lunch",
+        "cute",
+        "work quietly",
+        "keep your desk clean"
+      ],
+      "core_patterns": [
+        "Following rules in a classroom or library.",
+        "Using imperative sentences to give commands.",
+        "Haha. Look! They're eating lunch! They're so cute.",
+        "Yes, they are!",
+        "Dum-de-dum ...",
+        "Work quietly!"
+      ],
+      "allowed_answer_scope": [
+        "Shh!",
+        "Haha. Look! They're eating lunch! They're so cute.",
+        "Yes, they are!",
+        "Dum-de-dum ...",
+        "Work quietly!",
+        "Zoom! Keep your desk clean!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word eating lunch?",
+        "Can you say: Following rules in a classroom or library."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U6-P56-D1-goal"
+      ],
+      "branchable_topics": [
+        "eating lunch",
+        "cute",
+        "work quietly",
+        "keep your desk clean",
+        "Work quietly!",
+        "Unit Six"
+      ],
+      "return_anchors": [
+        "Following rules in a classroom or library.",
+        "Using imperative sentences to give commands.",
+        "Haha. Look! They're eating lunch! They're so cute."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P57-D1",
+      "page_uid": "TB-G5S2U6-P57",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U6-P57-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "在学校食堂，厨师提醒学生排队时靠右站。学生们在排队时讨论艾米在哪里，引出本单元关于描述人物正在做什么以及在哪里的主题。 Key patterns: Giving instructions or commands.; Asking and answering about someone's location and current activity.",
+      "focus_vocabulary": [
+        "keep to the right",
+        "listening to music",
+        "classroom"
+      ],
+      "core_patterns": [
+        "Giving instructions or commands.",
+        "Asking and answering about someone's location and current activity.",
+        "Where is Amy?",
+        "Keep to the right, please.",
+        "She's listening to music in the classroom."
+      ],
+      "allowed_answer_scope": [
+        "Keep to the right, please.",
+        "She's listening to music in the classroom."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word keep to the right?",
+        "Can you say: Giving instructions or commands."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U6-P57-D1-goal"
+      ],
+      "branchable_topics": [
+        "keep to the right",
+        "listening to music",
+        "classroom",
+        "Work quietly!"
+      ],
+      "return_anchors": [
+        "Giving instructions or commands.",
+        "Asking and answering about someone's location and current activity.",
+        "Where is Amy?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P58-D1",
+      "page_uid": "TB-G5S2U6-P58",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U6-P58-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，根据听到的描述，在每组图片中勾选出正确的动物及其动作。 Key patterns: Listen and tick.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and tick."
+      ],
+      "allowed_answer_scope": [
+        "Picture 2"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and tick."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U6-P58-D1-goal"
+      ],
+      "branchable_topics": [
+        "Describing animals' actions",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P58-D2",
+      "page_uid": "TB-G5S2U6-P58",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U6-P58-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "陈洁和迈克在动物园或看动物视频，他们讨论了熊猫、猴子和大象正在做什么。 Key patterns: What are they doing?; What's the little monkey doing?",
+      "focus_vocabulary": [
+        "pandas",
+        "eating lunch",
+        "bamboo",
+        "monkey",
+        "elephants",
+        "drinking water"
+      ],
+      "core_patterns": [
+        "What are they doing?",
+        "What's the little monkey doing?",
+        "Do you see any elephants?",
+        "Look at the pandas.",
+        "Haha. They're eating lunch! They're so cute.",
+        "Oh, yes! They like bamboo."
+      ],
+      "allowed_answer_scope": [
+        "Look at the pandas.",
+        "Haha. They're eating lunch! They're so cute.",
+        "Oh, yes! They like bamboo.",
+        "It's playing with its mother!",
+        "Yes! Look there! The elephant is drinking water."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word pandas?",
+        "Can you say: What are they doing?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U6-P58-D3",
+        "TB-G5S2U6-P58-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U6-P58-D2-goal"
+      ],
+      "branchable_topics": [
+        "pandas",
+        "eating lunch",
+        "bamboo",
+        "monkey",
+        "elephants",
+        "drinking water",
+        "Describing animals' actions",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "What are they doing?",
+        "What's the little monkey doing?",
+        "Do you see any elephants?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P58-D3",
+      "page_uid": "TB-G5S2U6-P58",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S2U6-P58-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "提供主语和动词短语词库，引导学生练习使用现在进行时造句。 Key patterns: We're having an English class.; I'm eating dinner.",
+      "focus_vocabulary": [
+        "I am",
+        "He/She is",
+        "We are",
+        "You are",
+        "They are",
+        "have ... class",
+        "clean ... room",
+        "eat dinner"
+      ],
+      "core_patterns": [
+        "We're having an English class.",
+        "I'm eating dinner."
+      ],
+      "allowed_answer_scope": [
+        "We're having an English class.",
+        "I'm eating dinner."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word I am?",
+        "Can you say: We're having an English class."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U6-P58-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U6-P58-D3-goal"
+      ],
+      "branchable_topics": [
+        "I am",
+        "He/She is",
+        "We are",
+        "You are",
+        "They are",
+        "have ... class",
+        "clean ... room",
+        "eat dinner"
+      ],
+      "return_anchors": [
+        "We're having an English class.",
+        "I'm eating dinner."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P59-D1",
+      "page_uid": "TB-G5S2U6-P59",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S2U6-P59-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "通过展示陈洁一天中不同时间的活动，学习描述日常活动的动词短语，并练习询问某人正在做什么。 Key patterns: It's 7:30 p.m. What's Chen Jie doing?; She's listening to music. It's 9 o'clock. What are the students doing?",
+      "focus_vocabulary": [
+        "doing morning exercises",
+        "having ... class",
+        "eating lunch",
+        "reading a book",
+        "listening to music"
+      ],
+      "core_patterns": [
+        "It's 7:30 p.m. What's Chen Jie doing?",
+        "She's listening to music. It's 9 o'clock. What are the students doing?"
+      ],
+      "allowed_answer_scope": [
+        "doing morning exercises",
+        "having ... class",
+        "eating lunch",
+        "reading a book",
+        "listening to music"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word doing morning exercises?",
+        "Can you say: It's 7:30 p.m. What's Chen Jie doing?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U6-P59-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U6-P59-D1-goal"
+      ],
+      "branchable_topics": [
+        "doing morning exercises",
+        "having ... class",
+        "eating lunch",
+        "reading a book",
+        "listening to music",
+        "Daily Activities and Time",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "It's 7:30 p.m. What's Chen Jie doing?",
+        "She's listening to music. It's 9 o'clock. What are the students doing?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P59-D2",
+      "page_uid": "TB-G5S2U6-P59",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S2U6-P59-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "看一组描绘不同人物进行不同活动的图片，并练习用现在进行时描述他们在做什么。小熊祖姆提供了一个示范句。 Key patterns: Mike is listening to music.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Mike is listening to music."
+      ],
+      "allowed_answer_scope": [
+        "Mike is listening to music."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Mike is listening to music."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U6-P59-D2-goal"
+      ],
+      "branchable_topics": [
+        "Daily Activities and Time",
+        "Look and say"
+      ],
+      "return_anchors": [
+        "Mike is listening to music."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P60-D1",
+      "page_uid": "TB-G5S2U6-P60",
+      "page_type": "phonics",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G5S2U6-P60-D1"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "学习字母组合 'wh' 在疑问词中的发音。 Key patterns: Learn the pronunciation of the 'wh' digraph in question words.",
+      "focus_vocabulary": [
+        "what",
+        "when",
+        "where",
+        "whose",
+        "who"
+      ],
+      "core_patterns": [
+        "Learn the pronunciation of the 'wh' digraph in question words."
+      ],
+      "allowed_answer_scope": [
+        "what",
+        "when",
+        "where",
+        "whose",
+        "who"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word what?",
+        "Can you say: Learn the pronunciation of the 'wh' digraph in question words."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U6-P60-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U6-P60-D1-goal"
+      ],
+      "branchable_topics": [
+        "what",
+        "when",
+        "where",
+        "whose",
+        "who",
+        "Phonics: wh",
+        "Let's spell"
+      ],
+      "return_anchors": [
+        "Learn the pronunciation of the 'wh' digraph in question words."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P60-D2",
+      "page_uid": "TB-G5S2U6-P60",
+      "page_type": "phonics",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U6-P60-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，并从每组两个单词中圈出听到的那一个。 Key patterns: Listen and circle.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "what",
+        "when",
+        "whose",
+        "who",
+        "where"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U6-P60-D1",
+        "TB-G5S2U6-P60-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U6-P60-D2-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: wh",
+        "Listen and circle."
+      ],
+      "return_anchors": [
+        "Listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P60-D3",
+      "page_uid": "TB-G5S2U6-P60",
+      "page_type": "phonics",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S2U6-P60-D3"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "一个伙伴练习活动。学生需要向同伴提三个以'wh'开头的特殊疑问句，并把问题写下来。 Key patterns: Practice forming 'wh-' questions.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice forming 'wh-' questions."
+      ],
+      "allowed_answer_scope": [
+        "What colour is it?",
+        "When is your birthday?",
+        "Where are you going?",
+        "Whose book is this?"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice forming 'wh-' questions."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U6-P60-D3-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: wh",
+        "Ask your partner three \"wh\" questions and write them down."
+      ],
+      "return_anchors": [
+        "Practice forming 'wh-' questions."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P61-D1",
+      "page_uid": "TB-G5S2U6-P61",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U6-P61-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听一段对话，根据内容圈出在图书馆里听到的规则。 Key patterns: Listen and circle.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "Quiet, please!"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U6-P61-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U6-P61-D1-goal"
+      ],
+      "branchable_topics": [
+        "Library Rules",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P61-D2",
+      "page_uid": "TB-G5S2U6-P61",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U6-P61-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "汤姆和约翰在图书馆里对话。约翰提醒汤姆要保持安静，并帮助他找到了英语书。他还告诉了汤姆一些图书馆的规则。 Key patterns: Using imperative sentences to state rules.; Can I read the books here?",
+      "focus_vocabulary": [
+        "talk quietly",
+        "read the books",
+        "keep your desk clean"
+      ],
+      "core_patterns": [
+        "Using imperative sentences to state rules.",
+        "Can I read the books here?",
+        "My name is Tom. What's your name?",
+        "OK. Can I read the books here?",
+        "Anything else?",
+        "Shh. Talk quietly. I'm John. I can show you the English books."
+      ],
+      "allowed_answer_scope": [
+        "Shh. Talk quietly. I'm John. I can show you the English books.",
+        "Here they are.",
+        "Yes. Of course.",
+        "Yes. Keep your desk clean.",
+        "OK, I will. Thanks."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word talk quietly?",
+        "Can you say: Using imperative sentences to state rules."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U6-P61-D1",
+        "TB-G5S2U6-P61-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U6-P61-D2-goal"
+      ],
+      "branchable_topics": [
+        "talk quietly",
+        "read the books",
+        "keep your desk clean",
+        "Library Rules",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "Using imperative sentences to state rules.",
+        "Can I read the books here?",
+        "My name is Tom. What's your name?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P61-D3",
+      "page_uid": "TB-G5S2U6-P61",
+      "page_type": "dialogue",
+      "block_type": "practice_match",
+      "source_refs": [
+        "TB-G5S2U6-P61-D3"
+      ],
+      "teaching_goal": "Work on the practice match activity.",
+      "teaching_summary": "将三条祈使句指令与对应的场景图片进行匹配，并进行口头表达和动作模仿。 Key patterns: Match, say and act.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Match, say and act."
+      ],
+      "allowed_answer_scope": [
+        "Work quietly!",
+        "Talk quietly!",
+        "Keep your desk clean!"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Match, say and act."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U6-P61-D3-goal"
+      ],
+      "branchable_topics": [
+        "Library Rules",
+        "Match, say and act."
+      ],
+      "return_anchors": [
+        "Match, say and act."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P62-D1",
+      "page_uid": "TB-G5S2U6-P62",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S2U6-P62-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "通过标志图片和课堂对话场景，学习一些常见的祈使句指令。 Key patterns: Can we use your crayons?; OK. Take turns.",
+      "focus_vocabulary": [
+        "Keep to the right.",
+        "Keep your desk clean.",
+        "Talk quietly."
+      ],
+      "core_patterns": [
+        "Can we use your crayons?",
+        "OK. Take turns.",
+        "Talk quietly, please."
+      ],
+      "allowed_answer_scope": [
+        "OK. Take turns.",
+        "Talk quietly, please."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word Keep to the right.?",
+        "Can you say: Can we use your crayons?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U6-P62-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U6-P62-D1-goal"
+      ],
+      "branchable_topics": [
+        "Keep to the right.",
+        "Keep your desk clean.",
+        "Talk quietly.",
+        "Rules and Commands",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Can we use your crayons?",
+        "OK. Take turns.",
+        "Talk quietly, please."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P62-D2",
+      "page_uid": "TB-G5S2U6-P62",
+      "page_type": "vocabulary",
+      "block_type": "practice_match",
+      "source_refs": [
+        "TB-G5S2U6-P62-D2"
+      ],
+      "teaching_goal": "Work on the practice match activity.",
+      "teaching_summary": "将描述不同情景的句子与对应的祈使句指令进行匹配。 Key patterns: He is talking in the library.; Talk quietly.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "He is talking in the library.",
+        "Talk quietly."
+      ],
+      "allowed_answer_scope": [
+        "B. Talk quietly.",
+        "C. Take turns.",
+        "D. Keep your desk clean.",
+        "E. Work quietly.",
+        "A. Keep to the right."
+      ],
+      "entry_probe_questions": [
+        "Can you say: He is talking in the library."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U6-P62-D2-goal"
+      ],
+      "branchable_topics": [
+        "Rules and Commands",
+        "Look, match and say"
+      ],
+      "return_anchors": [
+        "He is talking in the library.",
+        "Talk quietly."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P63-D1",
+      "page_uid": "TB-G5S2U6-P63",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S2U6-P63-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一个连环画对话场景，描绘了莎拉和罗宾在世界机器人展上与来自不同国家的机器人互动。他们询问了机器人们正在做什么，并了解了它们的特长。 Key patterns: Ni hao. Ni zai gan shen me ne?; Sorry. What are you saying?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Ni hao. Ni zai gan shen me ne?",
+        "Sorry. What are you saying?",
+        "Oh, hello. What are you doing?",
+        "Are you cooking?",
+        "Can we play music with you?",
+        "Are you from China?"
+      ],
+      "allowed_answer_scope": [
+        "I'm speaking Chinese.",
+        "I'm drawing a picture. Have a look.",
+        "It's lovely.",
+        "Yes. I'm cooking rice. Asako is making sushi.",
+        "Sure. Please take turns.",
+        "Yes, I am."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Ni hao. Ni zai gan shen me ne?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U6-P63-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U6-P63-D1-goal"
+      ],
+      "branchable_topics": [
+        "The world robot exhibition",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "Ni hao. Ni zai gan shen me ne?",
+        "Sorry. What are you saying?",
+        "Oh, hello. What are you doing?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P63-D2",
+      "page_uid": "TB-G5S2U6-P63",
+      "page_type": "reading",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G5S2U6-P63-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "根据上面的对话内容，填写句子，描述不同机器人正在做的事情。 Key patterns: Fill in the blanks.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Fill in the blanks."
+      ],
+      "allowed_answer_scope": [
+        "drawing, making",
+        "playing, doing",
+        "listening"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Fill in the blanks."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U6-P63-D2-goal"
+      ],
+      "branchable_topics": [
+        "The world robot exhibition",
+        "Fill in the blanks."
+      ],
+      "return_anchors": [
+        "Fill in the blanks."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P64-D1",
+      "page_uid": "TB-G5S2U6-P64",
+      "page_type": "writing",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U6-P64-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，根据听到的内容，在每组图片中勾选出正确的活动。 Key patterns: Listen and tick.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and tick."
+      ],
+      "allowed_answer_scope": [
+        "Picture 2",
+        "Picture 1"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and tick."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U6-P64-D2",
+        "TB-G5S2U6-P64-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U6-P64-D1-goal"
+      ],
+      "branchable_topics": [
+        "Unit 6 Check & Wrap-up",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Listen and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P64-D2",
+      "page_uid": "TB-G5S2U6-P64",
+      "page_type": "writing",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U6-P64-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "再次听录音，并回答关于爷爷和陈洁正在做什么的问题。 Key patterns: Listen again and write.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen again and write."
+      ],
+      "allowed_answer_scope": [
+        "He is reading a book.",
+        "She is listening to music."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen again and write."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U6-P64-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U6-P64-D2-goal"
+      ],
+      "branchable_topics": [
+        "Unit 6 Check & Wrap-up",
+        "Listen again and write."
+      ],
+      "return_anchors": [
+        "Listen again and write."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P64-D3",
+      "page_uid": "TB-G5S2U6-P64",
+      "page_type": "writing",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S2U6-P64-D3"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "总结和巩固一般现在时和现在进行时的区别。学生需要根据图片和句子中的时间状语（如 'now', 'sometimes'）选择正确的动词时态填空。 Key patterns: Distinguish between the simple present and present continuous tenses.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Distinguish between the simple present and present continuous tenses."
+      ],
+      "allowed_answer_scope": [
+        "eat breakfast",
+        "am cleaning",
+        "are sleeping"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Distinguish between the simple present and present continuous tenses."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U6-P64-D3-goal"
+      ],
+      "branchable_topics": [
+        "Unit 6 Check & Wrap-up",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Distinguish between the simple present and present continuous tenses."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U6-P65-D1",
+      "page_uid": "TB-G5S2U6-P65",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S2U6-P65-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一个关于在电影院遵守规则的连环画故事。小熊祖姆和小松鼠兹普在看电影时，祖姆吃爆米花的声音太大，被老虎提醒要保持安静。之后，他们又看到了“保持清洁”的标志，意识到了自己的错误。 Key patterns: It is important to follow the rules in public places like cinemas.; What's that noise?",
+      "focus_vocabulary": [
+        "film",
+        "gorilla",
+        "noise",
+        "popcorn",
+        "exciting",
+        "talk quietly",
+        "sign",
+        "Keep clean!"
+      ],
+      "core_patterns": [
+        "It is important to follow the rules in public places like cinemas.",
+        "What's that noise?",
+        "I love the film.",
+        "Yes. The gorilla is great!",
+        "Wow! The gorilla is eating a banana.",
+        "It's so big and strong."
+      ],
+      "allowed_answer_scope": [
+        "I love the film.",
+        "Yes. The gorilla is great!",
+        "Wow! The gorilla is eating a banana.",
+        "It's so big and strong.",
+        "I'm eating popcorn.",
+        "It's so exciting!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word film?",
+        "Can you say: It is important to follow the rules in public places like cinemas."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U6-P65-D1-goal"
+      ],
+      "branchable_topics": [
+        "film",
+        "gorilla",
+        "noise",
+        "popcorn",
+        "exciting",
+        "talk quietly",
+        "sign",
+        "Keep clean!"
+      ],
+      "return_anchors": [
+        "It is important to follow the rules in public places like cinemas.",
+        "What's that noise?",
+        "I love the film."
+      ]
+    }
+  ]
+}

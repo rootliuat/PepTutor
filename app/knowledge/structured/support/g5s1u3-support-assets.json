@@ -1,0 +1,573 @@
+{
+  "asset_id": "g5s1u3-support-assets",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "U3",
+    "pages": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ]
+  },
+  "source_files": [
+    "raw_wordlist_g5s1",
+    "raw_useful_expressions_g5s1",
+    "structured_pilot_manifest_g5s1u3"
+  ],
+  "lexicon_entries": [
+    {
+      "entry_uid": "LEX-G5S1U3-sandwich",
+      "entry_type": "word",
+      "english": "sandwich",
+      "chinese": "三明治",
+      "phonetic": "/'sænwɪtʃ/",
+      "emphasized": true,
+      "source_refs": [
+        "raw_wordlist_g5s1"
+      ],
+      "page_refs": [
+        "p.24",
+        "p.25",
+        "p.27",
+        "p.30"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P24",
+        "TB-G5S1U3-P25",
+        "TB-G5S1U3-P27",
+        "TB-G5S1U3-P30"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P25-D2",
+        "TB-G5S1U3-P25-D3",
+        "TB-G5S1U3-P27-D2",
+        "TB-G5S1U3-P30-D1",
+        "TB-G5S1U3-P30-D3",
+        "TB-G5S1U3-P30-D4"
+      ]
+    },
+    {
+      "entry_uid": "LEX-G5S1U3-salad",
+      "entry_type": "word",
+      "english": "salad",
+      "chinese": "蔬菜沙拉；混合沙拉",
+      "phonetic": "/'sæləd/",
+      "emphasized": true,
+      "source_refs": [
+        "raw_wordlist_g5s1"
+      ],
+      "page_refs": [
+        "p.25",
+        "p.29",
+        "p.30",
+        "p.31"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P25",
+        "TB-G5S1U3-P29",
+        "TB-G5S1U3-P30",
+        "TB-G5S1U3-P31"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P29-D1",
+        "TB-G5S1U3-P29-D2",
+        "TB-G5S1U3-P30-D1",
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "entry_uid": "LEX-G5S1U3-hamburger",
+      "entry_type": "word",
+      "english": "hamburger",
+      "chinese": "汉堡包",
+      "phonetic": "/'hæmbɜːɡə/",
+      "emphasized": true,
+      "source_refs": [
+        "raw_wordlist_g5s1"
+      ],
+      "page_refs": [
+        "p.25",
+        "p.30"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P25",
+        "TB-G5S1U3-P30"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P25-D2",
+        "TB-G5S1U3-P25-D3",
+        "TB-G5S1U3-P30-D1",
+        "TB-G5S1U3-P30-D4"
+      ]
+    },
+    {
+      "entry_uid": "LEX-G5S1U3-ice-cream",
+      "entry_type": "phrase",
+      "english": "ice cream",
+      "chinese": "冰激凌",
+      "phonetic": "/ˌaɪs'kriːm/",
+      "emphasized": true,
+      "source_refs": [
+        "raw_wordlist_g5s1"
+      ],
+      "page_refs": [
+        "p.25",
+        "p.28",
+        "p.29"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P25",
+        "TB-G5S1U3-P28",
+        "TB-G5S1U3-P29"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P28-D2",
+        "TB-G5S1U3-P29-D1"
+      ]
+    },
+    {
+      "entry_uid": "LEX-G5S1U3-tea",
+      "entry_type": "word",
+      "english": "tea",
+      "chinese": "茶；茶水",
+      "phonetic": "/tiː/",
+      "emphasized": true,
+      "source_refs": [
+        "raw_wordlist_g5s1"
+      ],
+      "page_refs": [
+        "p.24",
+        "p.25",
+        "p.28",
+        "p.30"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P24",
+        "TB-G5S1U3-P25",
+        "TB-G5S1U3-P28",
+        "TB-G5S1U3-P30"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P25-D2",
+        "TB-G5S1U3-P25-D3",
+        "TB-G5S1U3-P28-D1",
+        "TB-G5S1U3-P30-D1",
+        "TB-G5S1U3-P30-D3"
+      ]
+    },
+    {
+      "entry_uid": "LEX-G5S1U3-fresh",
+      "entry_type": "word",
+      "english": "fresh",
+      "chinese": "新鲜的；刚摘的",
+      "phonetic": "/freʃ/",
+      "emphasized": true,
+      "source_refs": [
+        "raw_wordlist_g5s1"
+      ],
+      "page_refs": [
+        "p.28",
+        "p.31"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P28",
+        "TB-G5S1U3-P31"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P28-D1",
+        "TB-G5S1U3-P28-D3",
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "entry_uid": "LEX-G5S1U3-healthy",
+      "entry_type": "word",
+      "english": "healthy",
+      "chinese": "健康的",
+      "phonetic": "/'helθi/",
+      "emphasized": true,
+      "source_refs": [
+        "raw_wordlist_g5s1"
+      ],
+      "page_refs": [
+        "p.28",
+        "p.31"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P28",
+        "TB-G5S1U3-P31"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P28-D1",
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "entry_uid": "LEX-G5S1U3-delicious",
+      "entry_type": "word",
+      "english": "delicious",
+      "chinese": "美味的；可口的",
+      "phonetic": "/dɪ'lɪʃəs/",
+      "emphasized": true,
+      "source_refs": [
+        "raw_wordlist_g5s1"
+      ],
+      "page_refs": [
+        "p.27",
+        "p.28",
+        "p.31"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P27",
+        "TB-G5S1U3-P28",
+        "TB-G5S1U3-P31"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P27-D2",
+        "TB-G5S1U3-P28-D1",
+        "TB-G5S1U3-P28-D2",
+        "TB-G5S1U3-P28-D3",
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "entry_uid": "LEX-G5S1U3-hot",
+      "entry_type": "word",
+      "english": "hot",
+      "chinese": "辣的；辛辣的",
+      "phonetic": "/hɒt/",
+      "emphasized": true,
+      "source_refs": [
+        "raw_wordlist_g5s1"
+      ],
+      "page_refs": [
+        "p.28"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P28"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P28-D1",
+        "TB-G5S1U3-P28-D3"
+      ]
+    },
+    {
+      "entry_uid": "LEX-G5S1U3-sweet",
+      "entry_type": "word",
+      "english": "sweet",
+      "chinese": "含糖的；甜的",
+      "phonetic": "/swiːt/",
+      "emphasized": true,
+      "source_refs": [
+        "raw_wordlist_g5s1"
+      ],
+      "page_refs": [
+        "p.28",
+        "p.29"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P28",
+        "TB-G5S1U3-P29"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P28-D1",
+        "TB-G5S1U3-P28-D2",
+        "TB-G5S1U3-P28-D3",
+        "TB-G5S1U3-P29-D1"
+      ]
+    },
+    {
+      "entry_uid": "LEX-G5S1U3-drink",
+      "entry_type": "word",
+      "english": "drink",
+      "chinese": "喝；饮",
+      "phonetic": "/drɪŋk/",
+      "emphasized": true,
+      "source_refs": [
+        "raw_wordlist_g5s1"
+      ],
+      "page_refs": [
+        "p.24",
+        "p.25",
+        "p.27",
+        "p.30"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P24",
+        "TB-G5S1U3-P25",
+        "TB-G5S1U3-P27",
+        "TB-G5S1U3-P30"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P25-D3",
+        "TB-G5S1U3-P27-D3",
+        "TB-G5S1U3-P27-D1",
+        "TB-G5S1U3-P30-D1",
+        "TB-G5S1U3-P30-D2"
+      ]
+    },
+    {
+      "entry_uid": "LEX-G5S1U3-thirsty",
+      "entry_type": "word",
+      "english": "thirsty",
+      "chinese": "渴的；口渴的",
+      "phonetic": "/'θɜːsti/",
+      "emphasized": true,
+      "source_refs": [
+        "raw_wordlist_g5s1"
+      ],
+      "page_refs": [
+        "p.24"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P24"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P24-D2"
+      ]
+    },
+    {
+      "entry_uid": "LEX-G5S1U3-favourite",
+      "entry_type": "word",
+      "english": "favourite",
+      "chinese": "特别喜爱的",
+      "phonetic": "/'feɪvərɪt/",
+      "emphasized": true,
+      "source_refs": [
+        "raw_wordlist_g5s1"
+      ],
+      "page_refs": [
+        "p.27",
+        "p.28",
+        "p.29",
+        "p.30"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P27",
+        "TB-G5S1U3-P28",
+        "TB-G5S1U3-P29",
+        "TB-G5S1U3-P30"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P27-D2",
+        "TB-G5S1U3-P27-D3",
+        "TB-G5S1U3-P27-D1",
+        "TB-G5S1U3-P28-D2",
+        "TB-G5S1U3-P29-D1",
+        "TB-G5S1U3-P29-D3",
+        "TB-G5S1U3-P30-D2"
+      ]
+    },
+    {
+      "entry_uid": "LEX-G5S1U3-food",
+      "entry_type": "word",
+      "english": "food",
+      "chinese": "食物",
+      "phonetic": "/fuːd/",
+      "emphasized": true,
+      "source_refs": [
+        "raw_wordlist_g5s1"
+      ],
+      "page_refs": [
+        "p.24",
+        "p.25",
+        "p.27",
+        "p.28",
+        "p.29",
+        "p.30",
+        "p.31"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P24",
+        "TB-G5S1U3-P25",
+        "TB-G5S1U3-P27",
+        "TB-G5S1U3-P28",
+        "TB-G5S1U3-P29",
+        "TB-G5S1U3-P30",
+        "TB-G5S1U3-P31"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P24-D1",
+        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P25-D2",
+        "TB-G5S1U3-P25-D3",
+        "TB-G5S1U3-P27-D2",
+        "TB-G5S1U3-P27-D3",
+        "TB-G5S1U3-P28-D1",
+        "TB-G5S1U3-P28-D2",
+        "TB-G5S1U3-P28-D3",
+        "TB-G5S1U3-P29-D1",
+        "TB-G5S1U3-P29-D2",
+        "TB-G5S1U3-P29-D3",
+        "TB-G5S1U3-P30-D1",
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "entry_uid": "LEX-G5S1U3-dear",
+      "entry_type": "word",
+      "english": "Dear",
+      "chinese": "（用于信函抬头的名字或头衔前）亲爱的",
+      "phonetic": "/dɪə/",
+      "emphasized": false,
+      "source_refs": [
+        "raw_wordlist_g5s1"
+      ],
+      "page_refs": [],
+      "linked_page_uids": [],
+      "linked_block_uids": []
+    },
+    {
+      "entry_uid": "LEX-G5S1U3-onion",
+      "entry_type": "word",
+      "english": "onion",
+      "chinese": "洋葱；葱头",
+      "phonetic": "/'ʌnjən/",
+      "emphasized": false,
+      "source_refs": [
+        "raw_wordlist_g5s1"
+      ],
+      "page_refs": [
+        "p.29",
+        "p.30",
+        "p.31"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P29",
+        "TB-G5S1U3-P30",
+        "TB-G5S1U3-P31"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P29-D1",
+        "TB-G5S1U3-P29-D2",
+        "TB-G5S1U3-P30-D4",
+        "TB-G5S1U3-P31-D1"
+      ]
+    }
+  ],
+  "expression_entries": [
+    {
+      "entry_uid": "EXP-G5S1U3-what-would-you-like-to-eat",
+      "english": "What would you like to eat?",
+      "chinese": "你想吃什么？",
+      "page_refs": [
+        "p.24"
+      ],
+      "source_refs": [
+        "raw_useful_expressions_g5s1"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P24"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P24-D4"
+      ]
+    },
+    {
+      "entry_uid": "EXP-G5S1U3-a-sandwich-please",
+      "english": "A sandwich, please.",
+      "chinese": "请给我一个三明治。",
+      "page_refs": [
+        "p.24"
+      ],
+      "source_refs": [
+        "raw_useful_expressions_g5s1"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P24"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P24-D2"
+      ]
+    },
+    {
+      "entry_uid": "EXP-G5S1U3-what-would-you-like-to-drink",
+      "english": "What would you like to drink?",
+      "chinese": "你想喝什么？",
+      "page_refs": [
+        "p.24"
+      ],
+      "source_refs": [
+        "raw_useful_expressions_g5s1"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P24"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P24-D3"
+      ]
+    },
+    {
+      "entry_uid": "EXP-G5S1U3-id-like-some-water",
+      "english": "I'd like some water.",
+      "chinese": "我想喝点水。",
+      "page_refs": [
+        "p.24"
+      ],
+      "source_refs": [
+        "raw_useful_expressions_g5s1"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P24"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P24-D2"
+      ]
+    },
+    {
+      "entry_uid": "EXP-G5S1U3-what-is-your-favourite-food",
+      "english": "What's your favourite food?",
+      "chinese": "你最喜欢吃什么食物？",
+      "page_refs": [
+        "p.27"
+      ],
+      "source_refs": [
+        "raw_useful_expressions_g5s1"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P27"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P27-D2",
+        "TB-G5S1U3-P27-D3"
+      ]
+    },
+    {
+      "entry_uid": "EXP-G5S1U3-noodles-they-are-delicious",
+      "english": "Noodles. They're delicious.",
+      "chinese": "面条。面条很好吃。",
+      "page_refs": [
+        "p.27"
+      ],
+      "source_refs": [
+        "raw_useful_expressions_g5s1"
+      ],
+      "linked_page_uids": [
+        "TB-G5S1U3-P27"
+      ],
+      "linked_block_uids": [
+        "TB-G5S1U3-P27-D2"
+      ]
+    }
+  ]
+}

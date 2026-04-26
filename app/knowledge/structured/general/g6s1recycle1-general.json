@@ -1,0 +1,1037 @@
+{
+  "pilot_id": "g6s1recycle1-general-v1",
+  "scope": {
+    "grade": "G6",
+    "semester": "S1",
+    "unit": "Recycle1",
+    "pages": [
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/03.六年级上册语料.json",
+    "app/knowledge/raw/07.六年级上册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 6 · Volume 1), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 6 · Volume 1), People's Education Press (PEP)",
+    "page_count": 4,
+    "block_count": 10,
+    "source_kind": "textbook_source_json",
+    "source_format": "json"
+  },
+  "wordlist_entries": [],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G6S1Recycle1-P32-D1-goal",
+      "block_uid": "TB-G6S1Recycle1-P32-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1Recycle1-P32-D2-goal",
+      "block_uid": "TB-G6S1Recycle1-P32-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1Recycle1-P32-D3-goal",
+      "block_uid": "TB-G6S1Recycle1-P32-D3",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1Recycle1-P33-D1-goal",
+      "block_uid": "TB-G6S1Recycle1-P33-D1",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1Recycle1-P33-D2-goal",
+      "block_uid": "TB-G6S1Recycle1-P33-D2",
+      "category": "practice_true_false",
+      "text": "Work on the practice true false activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1Recycle1-P34-D1-goal",
+      "block_uid": "TB-G6S1Recycle1-P34-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1Recycle1-P34-D2-goal",
+      "block_uid": "TB-G6S1Recycle1-P34-D2",
+      "category": "practice_multiple_choice",
+      "text": "Work on the practice multiple choice activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1Recycle1-P35-D1-goal",
+      "block_uid": "TB-G6S1Recycle1-P35-D1",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1Recycle1-P35-D2-goal",
+      "block_uid": "TB-G6S1Recycle1-P35-D2",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1Recycle1-P35-D3-goal",
+      "block_uid": "TB-G6S1Recycle1-P35-D3",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-by-bus",
+      "atom_type": "word",
+      "text": "by bus",
+      "gloss": "乘公交车",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P32-D3",
+        "TB-G6S1Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-crossing",
+      "atom_type": "word",
+      "text": "crossing",
+      "gloss": "十字路口",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P33-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-cry",
+      "atom_type": "word",
+      "text": "cry",
+      "gloss": "哭",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-first",
+      "atom_type": "word",
+      "text": "first",
+      "gloss": "首先",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P32-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-go-straight",
+      "atom_type": "word",
+      "text": "go straight",
+      "gloss": "直行",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-grandparents",
+      "atom_type": "word",
+      "text": "grandparents",
+      "gloss": "祖父母",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hospital",
+      "atom_type": "word",
+      "text": "hospital",
+      "gloss": "医院",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hush",
+      "atom_type": "word",
+      "text": "hush",
+      "gloss": "嘘（安静）",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-looking-glass",
+      "atom_type": "word",
+      "text": "looking glass",
+      "gloss": "镜子",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-on-foot",
+      "atom_type": "word",
+      "text": "on foot",
+      "gloss": "步行",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P32-D3",
+        "TB-G6S1Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-police-station",
+      "atom_type": "word",
+      "text": "police station",
+      "gloss": "警察局",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P33-D2",
+        "TB-G6S1Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-ring",
+      "atom_type": "word",
+      "text": "ring",
+      "gloss": "戒指",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-stop",
+      "atom_type": "word",
+      "text": "stop",
+      "gloss": "停",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-street",
+      "atom_type": "word",
+      "text": "street",
+      "gloss": "街道",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-supermarket",
+      "atom_type": "word",
+      "text": "supermarket",
+      "gloss": "超市",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sweetest",
+      "atom_type": "word",
+      "text": "sweetest",
+      "gloss": "最可爱的；最甜蜜的",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-then",
+      "atom_type": "word",
+      "text": "then",
+      "gloss": "然后",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P32-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-traffic-lights",
+      "atom_type": "word",
+      "text": "traffic lights",
+      "gloss": "交通信号灯",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-transportation",
+      "atom_type": "word",
+      "text": "transportation",
+      "gloss": "交通方式",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P35-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-turn",
+      "atom_type": "word",
+      "text": "turn",
+      "gloss": "转弯",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P32-D1",
+        "TB-G6S1Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-turn-left",
+      "atom_type": "word",
+      "text": "turn left",
+      "gloss": "左转",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-turn-right",
+      "atom_type": "word",
+      "text": "turn right",
+      "gloss": "右转",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-visit",
+      "atom_type": "word",
+      "text": "visit",
+      "gloss": "拜访",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-are-you-mrs-zhang",
+      "atom_type": "sentence_pattern",
+      "text": "Are you Mrs Zhang?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P35-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-go-turn",
+      "atom_type": "sentence_pattern",
+      "text": "Go ... Turn ...",
+      "gloss": "走…… 转……",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-can-i-get-there",
+      "atom_type": "sentence_pattern",
+      "text": "How can I get there?",
+      "gloss": "我该怎么去那里？",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-go-to",
+      "atom_type": "sentence_pattern",
+      "text": "Let's go to ...",
+      "gloss": "我们去……",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-again-and-answer",
+      "atom_type": "sentence_pattern",
+      "text": "Listen again and answer.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P32-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-at-these-pictures-and-fill-in-the-blanks",
+      "atom_type": "sentence_pattern",
+      "text": "Look at these pictures and fill in the blanks.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P32-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-now-listen-and-tick-or-cross",
+      "atom_type": "sentence_pattern",
+      "text": "Now listen and tick or cross.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P33-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-papa-s-going-to-buy-you",
+      "atom_type": "sentence_pattern",
+      "text": "Papa's going to buy you ...",
+      "gloss": "爸爸打算给你买……",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Read and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P34-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-answer-and-do",
+      "atom_type": "sentence_pattern",
+      "text": "Read, answer and do.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P35-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-stop-don-t-go-at",
+      "atom_type": "sentence_pattern",
+      "text": "Stop! Don't go at ...!",
+      "gloss": "停！不要在……走！",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-thank-you-so-much",
+      "atom_type": "sentence_pattern",
+      "text": "Thank you so much!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P35-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-then-go-straight",
+      "atom_type": "sentence_pattern",
+      "text": "Then go straight.",
+      "gloss": "然后直行。",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-turn-left-right-at",
+      "atom_type": "sentence_pattern",
+      "text": "Turn left/right at ...",
+      "gloss": "在……左转/右转",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wu-binbin-is-going-to-visit-his-grandparents",
+      "atom_type": "sentence_pattern",
+      "text": "Wu Binbin is going to visit his grandparents.",
+      "gloss": "吴彬彬打算去拜访他的祖父母。",
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-i-am",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, I am.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1Recycle1-P35-D3"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G6S1Recycle1-P32",
+      "page_type": "listening",
+      "page_intro_cn": "Theme: Visiting Grandma and Grandpa. Wu Binbin is going to visit his grandparents. Students need to listen to the directions and choose the correct road signs.",
+      "entry_probe_questions": [
+        "Do you know the word visit?",
+        "Can you say: Wu Binbin is going to visit his grandparents."
+      ],
+      "priority_blocks": [
+        "TB-G6S1Recycle1-P32-D1",
+        "TB-G6S1Recycle1-P32-D3",
+        "TB-G6S1Recycle1-P32-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1Recycle1-P33",
+      "page_type": "practice",
+      "page_intro_cn": "Theme: Recycle 1. Binbin and Robin see a little boy crying on the street. The pictures show: 1. The boy running at a red light and Binbin stopping him. 2. The boy thinking about a restaurant. 3. Robin showing the boy a map.",
+      "entry_probe_questions": [
+        "Do you know the word street?",
+        "Can you say: Stop! Don't go at ...!"
+      ],
+      "priority_blocks": [
+        "TB-G6S1Recycle1-P33-D1",
+        "TB-G6S1Recycle1-P33-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1Recycle1-P34",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Recycle 1. The little boy is waiting for his mother. Robin is singing a song to him.",
+      "entry_probe_questions": [
+        "Do you know the word hush?",
+        "Can you say: Papa's going to buy you ..."
+      ],
+      "priority_blocks": [
+        "TB-G6S1Recycle1-P34-D1",
+        "TB-G6S1Recycle1-P34-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1Recycle1-P35",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Recycle 1. The mother arrives at the police station and meets the police officer and her son.",
+      "entry_probe_questions": [
+        "Can you say: Are you Mrs Zhang?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1Recycle1-P35-D3",
+        "TB-G6S1Recycle1-P35-D2",
+        "TB-G6S1Recycle1-P35-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G6S1Recycle1-P32-D1",
+      "page_uid": "TB-G6S1Recycle1-P32",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S1Recycle1-P32-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Wu Binbin is going to visit his grandparents. Students need to listen to the directions and choose the correct road signs. Key patterns: Wu Binbin is going to visit his grandparents.",
+      "focus_vocabulary": [
+        "visit",
+        "grandparents",
+        "go straight",
+        "turn left",
+        "turn right",
+        "traffic lights"
+      ],
+      "core_patterns": [
+        "Wu Binbin is going to visit his grandparents."
+      ],
+      "allowed_answer_scope": [
+        "visit",
+        "grandparents",
+        "go straight",
+        "turn left",
+        "turn right",
+        "traffic lights"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word visit?",
+        "Can you say: Wu Binbin is going to visit his grandparents."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1Recycle1-P32-D3",
+        "TB-G6S1Recycle1-P32-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1Recycle1-P32-D1-goal"
+      ],
+      "branchable_topics": [
+        "visit",
+        "grandparents",
+        "go straight",
+        "turn left",
+        "turn right",
+        "traffic lights",
+        "Visiting Grandma and Grandpa"
+      ],
+      "return_anchors": [
+        "Wu Binbin is going to visit his grandparents."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1Recycle1-P32-D2",
+      "page_uid": "TB-G6S1Recycle1-P32",
+      "page_type": "listening",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S1Recycle1-P32-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Students fill in the blanks with direction words based on the pictures. Key patterns: Look at these pictures and fill in the blanks.",
+      "focus_vocabulary": [
+        "first",
+        "then"
+      ],
+      "core_patterns": [
+        "Look at these pictures and fill in the blanks."
+      ],
+      "allowed_answer_scope": [
+        "go straight",
+        "turn left/right",
+        "turn left/go straight"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word first?",
+        "Can you say: Look at these pictures and fill in the blanks."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1Recycle1-P32-D2-goal"
+      ],
+      "branchable_topics": [
+        "first",
+        "then",
+        "Visiting Grandma and Grandpa",
+        "Look at these pictures and fill in the blanks."
+      ],
+      "return_anchors": [
+        "Look at these pictures and fill in the blanks."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1Recycle1-P32-D3",
+      "page_uid": "TB-G6S1Recycle1-P32",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S1Recycle1-P32-D3"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Wu Binbin and Robin are looking at a map on Robin's screen. Key patterns: Listen again and answer.",
+      "focus_vocabulary": [
+        "by bus",
+        "on foot"
+      ],
+      "core_patterns": [
+        "Listen again and answer."
+      ],
+      "allowed_answer_scope": [
+        "by bus",
+        "on foot"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word by bus?",
+        "Can you say: Listen again and answer."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1Recycle1-P32-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1Recycle1-P32-D3-goal"
+      ],
+      "branchable_topics": [
+        "by bus",
+        "on foot",
+        "Visiting Grandma and Grandpa",
+        "Listen again and answer."
+      ],
+      "return_anchors": [
+        "Listen again and answer."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1Recycle1-P33-D1",
+      "page_uid": "TB-G6S1Recycle1-P33",
+      "page_type": "practice",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S1Recycle1-P33-D1"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "Binbin and Robin see a little boy crying on the street. The pictures show: 1. The boy running at a red light and Binbin stopping him. 2. The boy thinking about a restaurant. 3. Robin showing the boy a map. Key patterns: Stop! Don't go at ...!; Let's go to ...",
+      "focus_vocabulary": [
+        "street",
+        "cry",
+        "stop",
+        "turn"
+      ],
+      "core_patterns": [
+        "Stop! Don't go at ...!",
+        "Let's go to ...",
+        "Go ... Turn ..."
+      ],
+      "allowed_answer_scope": [
+        "street",
+        "cry",
+        "stop",
+        "turn"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word street?",
+        "Can you say: Stop! Don't go at ...!"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1Recycle1-P33-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1Recycle1-P33-D1-goal"
+      ],
+      "branchable_topics": [
+        "street",
+        "cry",
+        "stop",
+        "turn",
+        "Recycle 1",
+        "Look and guess"
+      ],
+      "return_anchors": [
+        "Stop! Don't go at ...!",
+        "Let's go to ...",
+        "Go ... Turn ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1Recycle1-P33-D2",
+      "page_uid": "TB-G6S1Recycle1-P33",
+      "page_type": "practice",
+      "block_type": "practice_true_false",
+      "source_refs": [
+        "TB-G6S1Recycle1-P33-D2"
+      ],
+      "teaching_goal": "Work on the practice true false activity.",
+      "teaching_summary": "Listening exercise based on the story of the boy. Key patterns: Now listen and tick or cross.",
+      "focus_vocabulary": [
+        "police station",
+        "crossing"
+      ],
+      "core_patterns": [
+        "Now listen and tick or cross."
+      ],
+      "allowed_answer_scope": [
+        "False (Based on visual context of restaurant)",
+        "False (Based on visual context of squirrel pointing left)"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word police station?",
+        "Can you say: Now listen and tick or cross."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1Recycle1-P33-D2-goal"
+      ],
+      "branchable_topics": [
+        "police station",
+        "crossing",
+        "Recycle 1",
+        "Listen and tick or cross"
+      ],
+      "return_anchors": [
+        "Now listen and tick or cross."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1Recycle1-P34-D1",
+      "page_uid": "TB-G6S1Recycle1-P34",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S1Recycle1-P34-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "The little boy is waiting for his mother. Robin is singing a song to him. Key patterns: Papa's going to buy you ...",
+      "focus_vocabulary": [
+        "hush",
+        "looking glass",
+        "sweetest",
+        "ring"
+      ],
+      "core_patterns": [
+        "Papa's going to buy you ..."
+      ],
+      "allowed_answer_scope": [
+        "hush",
+        "looking glass",
+        "sweetest",
+        "ring"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word hush?",
+        "Can you say: Papa's going to buy you ..."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S1Recycle1-P34-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1Recycle1-P34-D1-goal"
+      ],
+      "branchable_topics": [
+        "hush",
+        "looking glass",
+        "sweetest",
+        "ring",
+        "Recycle 1",
+        "Listen and read the song aloud"
+      ],
+      "return_anchors": [
+        "Papa's going to buy you ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1Recycle1-P34-D2",
+      "page_uid": "TB-G6S1Recycle1-P34",
+      "page_type": "reading",
+      "block_type": "practice_multiple_choice",
+      "source_refs": [
+        "TB-G6S1Recycle1-P34-D2"
+      ],
+      "teaching_goal": "Work on the practice multiple choice activity.",
+      "teaching_summary": "Comprehension questions based on the song. Key patterns: Read and circle.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Read and circle."
+      ],
+      "allowed_answer_scope": [
+        "For a sad kid",
+        "Be quiet"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Read and circle."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1Recycle1-P34-D2-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 1",
+        "Read and circle"
+      ],
+      "return_anchors": [
+        "Read and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1Recycle1-P35-D1",
+      "page_uid": "TB-G6S1Recycle1-P35",
+      "page_type": "dialogue",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S1Recycle1-P35-D1"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "A police officer is talking to the boy's mother on the phone. A map shows the location of the police station, supermarket, and hospital. Key patterns: How can I get there?; Turn left/right at ...",
+      "focus_vocabulary": [
+        "police station",
+        "hospital",
+        "supermarket",
+        "on foot",
+        "by bus"
+      ],
+      "core_patterns": [
+        "How can I get there?",
+        "Turn left/right at ...",
+        "Then go straight."
+      ],
+      "allowed_answer_scope": [
+        "get there",
+        "hospital",
+        "Turn left; go straight; next to"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word police station?",
+        "Can you say: How can I get there?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1Recycle1-P35-D1-goal"
+      ],
+      "branchable_topics": [
+        "police station",
+        "hospital",
+        "supermarket",
+        "on foot",
+        "by bus",
+        "Recycle 1",
+        "The little boy's mother is on the phone. Look at the map and fill in the blanks."
+      ],
+      "return_anchors": [
+        "How can I get there?",
+        "Turn left/right at ...",
+        "Then go straight."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1Recycle1-P35-D2",
+      "page_uid": "TB-G6S1Recycle1-P35",
+      "page_type": "dialogue",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S1Recycle1-P35-D2"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "Comprehension questions based on the dialogue and map. Key patterns: Read, answer and do.",
+      "focus_vocabulary": [
+        "transportation"
+      ],
+      "core_patterns": [
+        "Read, answer and do."
+      ],
+      "allowed_answer_scope": [
+        "She can go on foot.",
+        "by bus, on foot (Students write other modes like by bike, by car, etc.)"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word transportation?",
+        "Can you say: Read, answer and do."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1Recycle1-P35-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1Recycle1-P35-D2-goal"
+      ],
+      "branchable_topics": [
+        "transportation",
+        "Recycle 1",
+        "Read, answer and do"
+      ],
+      "return_anchors": [
+        "Read, answer and do."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1Recycle1-P35-D3",
+      "page_uid": "TB-G6S1Recycle1-P35",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1Recycle1-P35-D3"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "The mother arrives at the police station and meets the police officer and her son. Key patterns: Are you Mrs Zhang?; Yes, I am.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Are you Mrs Zhang?",
+        "Yes, I am.",
+        "Thank you so much!"
+      ],
+      "allowed_answer_scope": [
+        "Yes, I am.",
+        "Thank you so much!"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Are you Mrs Zhang?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1Recycle1-P35-D2",
+        "TB-G6S1Recycle1-P35-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1Recycle1-P35-D3-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 1",
+        "Listen and read aloud"
+      ],
+      "return_anchors": [
+        "Are you Mrs Zhang?",
+        "Yes, I am.",
+        "Thank you so much!"
+      ]
+    }
+  ]
+}

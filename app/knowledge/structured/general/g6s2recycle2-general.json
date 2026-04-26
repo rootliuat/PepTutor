@@ -1,0 +1,1157 @@
+{
+  "pilot_id": "g6s2recycle2-general-v1",
+  "scope": {
+    "grade": "G6",
+    "semester": "S2",
+    "unit": "Recycle2",
+    "pages": [
+      48,
+      49,
+      50,
+      51
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/04.六年级下册语料.json",
+    "app/knowledge/raw/08.六年级下册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+    "page_count": 4,
+    "block_count": 11,
+    "source_kind": "textbook_source_json",
+    "source_format": "json"
+  },
+  "wordlist_entries": [],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G6S2Recycle2-P48-D1-goal",
+      "block_uid": "TB-G6S2Recycle2-P48-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle2-P48-D2-goal",
+      "block_uid": "TB-G6S2Recycle2-P48-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle2-P48-D3-goal",
+      "block_uid": "TB-G6S2Recycle2-P48-D3",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle2-P48-D4-goal",
+      "block_uid": "TB-G6S2Recycle2-P48-D4",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle2-P49-D1-goal",
+      "block_uid": "TB-G6S2Recycle2-P49-D1",
+      "category": "picture_scene",
+      "text": "Work on the picture scene activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle2-P49-D2-goal",
+      "block_uid": "TB-G6S2Recycle2-P49-D2",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle2-P49-D3-goal",
+      "block_uid": "TB-G6S2Recycle2-P49-D3",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle2-P49-D4-goal",
+      "block_uid": "TB-G6S2Recycle2-P49-D4",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle2-P50-D1-goal",
+      "block_uid": "TB-G6S2Recycle2-P50-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle2-P50-D2-goal",
+      "block_uid": "TB-G6S2Recycle2-P50-D2",
+      "category": "picture_scene",
+      "text": "Work on the picture scene activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle2-P51-D1-goal",
+      "block_uid": "TB-G6S2Recycle2-P51-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-a-e",
+      "atom_type": "word",
+      "text": "a-e",
+      "gloss": "字母组合 a-e",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-ai",
+      "atom_type": "word",
+      "text": "ai",
+      "gloss": "字母组合 ai",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-america",
+      "atom_type": "word",
+      "text": "America",
+      "gloss": "美国",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P51-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-ar",
+      "atom_type": "word",
+      "text": "ar",
+      "gloss": "字母组合 ar",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-br",
+      "atom_type": "word",
+      "text": "br",
+      "gloss": "辅音组合 br",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-brown-bread",
+      "atom_type": "word",
+      "text": "brown bread",
+      "gloss": "黑面包",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-cake",
+      "atom_type": "word",
+      "text": "cake",
+      "gloss": "蛋糕",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-ch",
+      "atom_type": "word",
+      "text": "ch",
+      "gloss": "字母组合 ch",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-cheese",
+      "atom_type": "word",
+      "text": "cheese",
+      "gloss": "奶酪",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-chocolates",
+      "atom_type": "word",
+      "text": "chocolates",
+      "gloss": "巧克力",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-cl",
+      "atom_type": "word",
+      "text": "cl",
+      "gloss": "辅音组合 cl",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-ea",
+      "atom_type": "word",
+      "text": "ea",
+      "gloss": "字母组合 ea",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-ee",
+      "atom_type": "word",
+      "text": "ee",
+      "gloss": "字母组合 ee",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-farewell-party",
+      "atom_type": "word",
+      "text": "farewell party",
+      "gloss": "告别派对",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P48-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-fr",
+      "atom_type": "word",
+      "text": "fr",
+      "gloss": "辅音组合 fr",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-fresh-fruit",
+      "atom_type": "word",
+      "text": "fresh fruit",
+      "gloss": "新鲜水果",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-good-luck",
+      "atom_type": "word",
+      "text": "Good luck!",
+      "gloss": "祝你好运！",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-have-a-good-trip",
+      "atom_type": "word",
+      "text": "Have a good trip!",
+      "gloss": "旅途愉快！",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-i-e",
+      "atom_type": "word",
+      "text": "i-e",
+      "gloss": "字母组合 i-e",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-invitation",
+      "atom_type": "word",
+      "text": "invitation",
+      "gloss": "邀请函",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P48-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-keep-in-touch",
+      "atom_type": "word",
+      "text": "Keep in touch.",
+      "gloss": "保持联系。",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-milk",
+      "atom_type": "word",
+      "text": "milk",
+      "gloss": "牛奶",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-news",
+      "atom_type": "word",
+      "text": "news",
+      "gloss": "消息",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P51-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-ng",
+      "atom_type": "word",
+      "text": "ng",
+      "gloss": "字母组合 ng",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-or",
+      "atom_type": "word",
+      "text": "or",
+      "gloss": "字母组合 or",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-orange-juice",
+      "atom_type": "word",
+      "text": "orange juice",
+      "gloss": "橙汁",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-ow",
+      "atom_type": "word",
+      "text": "ow",
+      "gloss": "字母组合 ow",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pl",
+      "atom_type": "word",
+      "text": "pl",
+      "gloss": "辅音组合 pl",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-prizes",
+      "atom_type": "word",
+      "text": "prizes",
+      "gloss": "奖品",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P48-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-promise",
+      "atom_type": "word",
+      "text": "promise",
+      "gloss": "承诺；保证",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P51-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sh",
+      "atom_type": "word",
+      "text": "sh",
+      "gloss": "字母组合 sh",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-take-care",
+      "atom_type": "word",
+      "text": "Take care.",
+      "gloss": "保重。",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-tea-bags",
+      "atom_type": "word",
+      "text": "tea bags",
+      "gloss": "茶包",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-th",
+      "atom_type": "word",
+      "text": "th",
+      "gloss": "字母组合 th",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-write-soon",
+      "atom_type": "word",
+      "text": "Write soon.",
+      "gloss": "早点写信。",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-create-a-personal-party-shopping-list",
+      "atom_type": "sentence_pattern",
+      "text": "Create a personal party shopping list.",
+      "gloss": "创建个人的派对购物清单。",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-design-your-own-invitation-card",
+      "atom_type": "sentence_pattern",
+      "text": "Design your own invitation card.",
+      "gloss": "设计你自己的邀请卡。",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P48-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-express-positive-feelings-and-wishes-for-a-farewell-party",
+      "atom_type": "sentence_pattern",
+      "text": "Express positive feelings and wishes for a farewell party.",
+      "gloss": "表达告别派对上的积极情感和祝愿。",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-group-words-based-on-consonant-blends-and-digraphs-cl-pl-br-fr-ch-sh-th-ng-nk",
+      "atom_type": "sentence_pattern",
+      "text": "Group words based on consonant blends and digraphs (cl, pl, br, fr, ch, sh, th, ng, nk).",
+      "gloss": "根据辅音连缀和辅音字母组合对单词进行分类 (cl, pl, br, fr, ch, sh, th, ng, nk)。",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-identify-and-list-words-with-specific-vowel-patterns-a-e-i-e-ar-or-ee-ea-ai-ow-oo",
+      "atom_type": "sentence_pattern",
+      "text": "Identify and list words with specific vowel patterns: a-e, i-e, ar, or, ee, ea, ai, ow, oo.",
+      "gloss": "识别并列出带有特定元音组合规律的单词：a-e, i-e, ar, or, ee, ea, ai, ow, oo。",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-identify-and-match-vocabulary-related-to-party-food-drinks-and-supplies",
+      "atom_type": "sentence_pattern",
+      "text": "Identify and match vocabulary related to party food, drinks, and supplies.",
+      "gloss": "识别并匹配与派对食物、饮料和用品相关的词汇。",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-learn-and-use-different-expressions-to-say-goodbye-to-others",
+      "atom_type": "sentence_pattern",
+      "text": "Learn and use different expressions to say goodbye to others.",
+      "gloss": "学习并使用不同的表达方式向他人道别。",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-for-specific-information-about-people-s-attendance",
+      "atom_type": "sentence_pattern",
+      "text": "Listen for specific information about people's attendance.",
+      "gloss": "听取关于人们出席情况的具体信息。",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-understand-the-details-of-an-invitation-letter-including-time-place-and-activities",
+      "atom_type": "sentence_pattern",
+      "text": "Understand the details of an invitation letter, including time, place, and activities.",
+      "gloss": "理解邀请函的细节，包括时间、地点和活动内容。",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P48-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-understand-the-story-and-expressions-used-for-parting-and-sharing-news",
+      "atom_type": "sentence_pattern",
+      "text": "Understand the story and expressions used for parting and sharing news.",
+      "gloss": "理解故事内容以及用于离别和分享消息的表达。",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P51-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-use-be-going-to-and-will-to-talk-about-future-events",
+      "atom_type": "sentence_pattern",
+      "text": "Use 'be going to' and 'will' to talk about future events.",
+      "gloss": "使用'be going to'和'will'谈论未来的计划和事件。",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P48-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-write-a-reply-to-an-invitation-letter-using-future-tenses",
+      "atom_type": "sentence_pattern",
+      "text": "Write a reply to an invitation letter using future tenses.",
+      "gloss": "运用将来时写一封邀请函的回复。",
+      "linked_blocks": [
+        "TB-G6S2Recycle2-P48-D3"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G6S2Recycle2-P48",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Mike's surprise. 听力练习，要求学生听音频并在打算去参加派对的人物名字旁边打勾。",
+      "entry_probe_questions": [
+        "Can you say: Listen for specific information about people's attendance."
+      ],
+      "priority_blocks": [
+        "TB-G6S2Recycle2-P48-D2",
+        "TB-G6S2Recycle2-P48-D4",
+        "TB-G6S2Recycle2-P48-D1",
+        "TB-G6S2Recycle2-P48-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2Recycle2-P49",
+      "page_type": "phonics",
+      "page_intro_cn": "Theme: A farewell party. 一个开放性的活动，鼓励学生结合所学词汇，为自己的派对列出一份物品清单。",
+      "entry_probe_questions": [
+        "Can you say: Create a personal party shopping list."
+      ],
+      "priority_blocks": [
+        "TB-G6S2Recycle2-P49-D4",
+        "TB-G6S2Recycle2-P49-D2",
+        "TB-G6S2Recycle2-P49-D3",
+        "TB-G6S2Recycle2-P49-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2Recycle2-P50",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Farewell. 一首歌谣，表达了在告别派对上，大家不唱悲伤的歌，而是要尽情唱歌、跳舞、玩耍，度过快乐的一天。",
+      "entry_probe_questions": [
+        "Can you say: Express positive feelings and wishes for a farewell party."
+      ],
+      "priority_blocks": [
+        "TB-G6S2Recycle2-P50-D1",
+        "TB-G6S2Recycle2-P50-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2Recycle2-P51",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Story time. Zip 和 Zoom 在池塘边和草地上依依惜别。Zip 告诉 Zoom 自己要跟父亲去美国，并将上七年级，两人互相承诺保持联系并互道保重。",
+      "entry_probe_questions": [
+        "Do you know the word news?",
+        "Can you say: Understand the story and expressions used for parting and sharing news."
+      ],
+      "priority_blocks": [
+        "TB-G6S2Recycle2-P51-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G6S2Recycle2-P48-D1",
+      "page_uid": "TB-G6S2Recycle2-P48",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S2Recycle2-P48-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "迈克收到学校发出的一封告别派对邀请函，内容包含派对的背景、时间、地点以及丰富的活动安排和奖项设置。 Key patterns: Understand the details of an invitation letter, including time, place, and activities.; Use 'be going to' and 'will' to talk about future events.",
+      "focus_vocabulary": [
+        "invitation",
+        "farewell party",
+        "prizes"
+      ],
+      "core_patterns": [
+        "Understand the details of an invitation letter, including time, place, and activities.",
+        "Use 'be going to' and 'will' to talk about future events."
+      ],
+      "allowed_answer_scope": [
+        "invitation",
+        "farewell party",
+        "prizes"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word invitation?",
+        "Can you say: Understand the details of an invitation letter, including time, place, and activities."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S2Recycle2-P48-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2Recycle2-P48-D1-goal"
+      ],
+      "branchable_topics": [
+        "invitation",
+        "farewell party",
+        "prizes",
+        "Mike's surprise",
+        "Day 7 Mike's surprise"
+      ],
+      "return_anchors": [
+        "Understand the details of an invitation letter, including time, place, and activities.",
+        "Use 'be going to' and 'will' to talk about future events."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle2-P48-D2",
+      "page_uid": "TB-G6S2Recycle2-P48",
+      "page_type": "reading",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S2Recycle2-P48-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听力练习，要求学生听音频并在打算去参加派对的人物名字旁边打勾。 Key patterns: Listen for specific information about people's attendance.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen for specific information about people's attendance."
+      ],
+      "allowed_answer_scope": [
+        "Listen for specific information about people's attendance."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen for specific information about people's attendance."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2Recycle2-P48-D4",
+        "TB-G6S2Recycle2-P48-D1",
+        "TB-G6S2Recycle2-P48-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2Recycle2-P48-D2-goal"
+      ],
+      "branchable_topics": [
+        "Mike's surprise",
+        "Who is going to the party? Listen and tick."
+      ],
+      "return_anchors": [
+        "Listen for specific information about people's attendance."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle2-P48-D3",
+      "page_uid": "TB-G6S2Recycle2-P48",
+      "page_type": "reading",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G6S2Recycle2-P48-D3"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "写作任务，要求学生回复邀请函，说明自己是否会参加派对以及打算在派对上做什么。 Key patterns: Write a reply to an invitation letter using future tenses.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Write a reply to an invitation letter using future tenses."
+      ],
+      "allowed_answer_scope": [
+        "Write a reply to an invitation letter using future tenses."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Write a reply to an invitation letter using future tenses."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2Recycle2-P48-D3-goal"
+      ],
+      "branchable_topics": [
+        "Mike's surprise",
+        "Write a reply. Are you going to go to the party? What will you do at the party?"
+      ],
+      "return_anchors": [
+        "Write a reply to an invitation letter using future tenses."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle2-P48-D4",
+      "page_uid": "TB-G6S2Recycle2-P48",
+      "page_type": "reading",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S2Recycle2-P48-D4"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "拓展活动，仿照页面中的样式设计一张自己的邀请函。 Key patterns: Design your own invitation card.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Design your own invitation card."
+      ],
+      "allowed_answer_scope": [
+        "Design your own invitation card."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Design your own invitation card."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2Recycle2-P48-D1",
+        "TB-G6S2Recycle2-P48-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2Recycle2-P48-D4-goal"
+      ],
+      "branchable_topics": [
+        "Mike's surprise",
+        "Now design your own invitation!"
+      ],
+      "return_anchors": [
+        "Design your own invitation card."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle2-P49-D1",
+      "page_uid": "TB-G6S2Recycle2-P49",
+      "page_type": "phonics",
+      "block_type": "picture_scene",
+      "source_refs": [
+        "TB-G6S2Recycle2-P49-D1"
+      ],
+      "teaching_goal": "Work on the picture scene activity.",
+      "teaching_summary": "展示了一个正在准备中的告别派对现场，包含各种食物、饮料、餐具以及派对用品。右侧列出了对应的单词列表供学生观察和匹配。 Key patterns: Identify and match vocabulary related to party food, drinks, and supplies.",
+      "focus_vocabulary": [
+        "brown bread",
+        "cheese",
+        "cake",
+        "fresh fruit",
+        "milk",
+        "orange juice",
+        "tea bags",
+        "chocolates"
+      ],
+      "core_patterns": [
+        "Identify and match vocabulary related to party food, drinks, and supplies."
+      ],
+      "allowed_answer_scope": [
+        "brown bread",
+        "cheese",
+        "cake",
+        "fresh fruit",
+        "milk",
+        "orange juice"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word brown bread?",
+        "Can you say: Identify and match vocabulary related to party food, drinks, and supplies."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2Recycle2-P49-D1-goal"
+      ],
+      "branchable_topics": [
+        "brown bread",
+        "cheese",
+        "cake",
+        "fresh fruit",
+        "milk",
+        "orange juice",
+        "tea bags",
+        "chocolates"
+      ],
+      "return_anchors": [
+        "Identify and match vocabulary related to party food, drinks, and supplies."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle2-P49-D2",
+      "page_uid": "TB-G6S2Recycle2-P49",
+      "page_type": "phonics",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G6S2Recycle2-P49-D2"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "自然拼读复习练习，要求学生从上方词汇表中找出符合特定辅音连缀或辅音字母组合发音规则的单词填入表格。 Key patterns: Group words based on consonant blends and digraphs (cl, pl, br, fr, ch, sh, th, ng, nk).",
+      "focus_vocabulary": [
+        "cl",
+        "pl",
+        "br",
+        "fr",
+        "ch",
+        "sh",
+        "th",
+        "ng"
+      ],
+      "core_patterns": [
+        "Group words based on consonant blends and digraphs (cl, pl, br, fr, ch, sh, th, ng, nk)."
+      ],
+      "allowed_answer_scope": [
+        "cl",
+        "pl",
+        "br",
+        "fr",
+        "ch",
+        "sh"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word cl?",
+        "Can you say: Group words based on consonant blends and digraphs (cl, pl, br, fr, ch, sh, th, ng, nk)."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2Recycle2-P49-D3",
+        "TB-G6S2Recycle2-P49-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2Recycle2-P49-D2-goal"
+      ],
+      "branchable_topics": [
+        "cl",
+        "pl",
+        "br",
+        "fr",
+        "ch",
+        "sh",
+        "th",
+        "ng"
+      ],
+      "return_anchors": [
+        "Group words based on consonant blends and digraphs (cl, pl, br, fr, ch, sh, th, ng, nk)."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle2-P49-D3",
+      "page_uid": "TB-G6S2Recycle2-P49",
+      "page_type": "phonics",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G6S2Recycle2-P49-D3"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "自然拼读拓展任务，引导学生复习并寻找符合特定元音及元音字母组合发音规则的单词。 Key patterns: Identify and list words with specific vowel patterns: a-e, i-e, ar, or, ee, ea, ai, ow, oo.",
+      "focus_vocabulary": [
+        "a-e",
+        "i-e",
+        "ar",
+        "or",
+        "ee",
+        "ea",
+        "ai",
+        "ow"
+      ],
+      "core_patterns": [
+        "Identify and list words with specific vowel patterns: a-e, i-e, ar, or, ee, ea, ai, ow, oo."
+      ],
+      "allowed_answer_scope": [
+        "a-e",
+        "i-e",
+        "ar",
+        "or",
+        "ee",
+        "ea"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word a-e?",
+        "Can you say: Identify and list words with specific vowel patterns: a-e, i-e, ar, or, ee, ea, ai, ow, oo."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2Recycle2-P49-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2Recycle2-P49-D3-goal"
+      ],
+      "branchable_topics": [
+        "a-e",
+        "i-e",
+        "ar",
+        "or",
+        "ee",
+        "ea",
+        "ai",
+        "ow"
+      ],
+      "return_anchors": [
+        "Identify and list words with specific vowel patterns: a-e, i-e, ar, or, ee, ea, ai, ow, oo."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle2-P49-D4",
+      "page_uid": "TB-G6S2Recycle2-P49",
+      "page_type": "phonics",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S2Recycle2-P49-D4"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "一个开放性的活动，鼓励学生结合所学词汇，为自己的派对列出一份物品清单。 Key patterns: Create a personal party shopping list.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Create a personal party shopping list."
+      ],
+      "allowed_answer_scope": [
+        "Create a personal party shopping list."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Create a personal party shopping list."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2Recycle2-P49-D2",
+        "TB-G6S2Recycle2-P49-D3",
+        "TB-G6S2Recycle2-P49-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2Recycle2-P49-D4-goal"
+      ],
+      "branchable_topics": [
+        "A farewell party",
+        "Now make your own list of things for the party!"
+      ],
+      "return_anchors": [
+        "Create a personal party shopping list."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle2-P50-D1",
+      "page_uid": "TB-G6S2Recycle2-P50",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S2Recycle2-P50-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一首歌谣，表达了在告别派对上，大家不唱悲伤的歌，而是要尽情唱歌、跳舞、玩耍，度过快乐的一天。 Key patterns: Express positive feelings and wishes for a farewell party.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Express positive feelings and wishes for a farewell party."
+      ],
+      "allowed_answer_scope": [
+        "Express positive feelings and wishes for a farewell party."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Express positive feelings and wishes for a farewell party."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S2Recycle2-P50-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2Recycle2-P50-D1-goal"
+      ],
+      "branchable_topics": [
+        "Farewell",
+        "Read the chant."
+      ],
+      "return_anchors": [
+        "Express positive feelings and wishes for a farewell party."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle2-P50-D2",
+      "page_uid": "TB-G6S2Recycle2-P50",
+      "page_type": "reading",
+      "block_type": "picture_scene",
+      "source_refs": [
+        "TB-G6S2Recycle2-P50-D2"
+      ],
+      "teaching_goal": "Work on the picture scene activity.",
+      "teaching_summary": "在一个教室场景中，老师和同学们正在互相道别，展示了英语中多种表达再见和祝愿的方式。 Key patterns: Learn and use different expressions to say goodbye to others.",
+      "focus_vocabulary": [
+        "Write soon.",
+        "Have a good trip!",
+        "Keep in touch.",
+        "Take care.",
+        "Good luck!"
+      ],
+      "core_patterns": [
+        "Learn and use different expressions to say goodbye to others."
+      ],
+      "allowed_answer_scope": [
+        "Write soon.",
+        "Have a good trip!",
+        "Keep in touch.",
+        "Take care.",
+        "Good luck!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word Write soon.?",
+        "Can you say: Learn and use different expressions to say goodbye to others."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2Recycle2-P50-D2-goal"
+      ],
+      "branchable_topics": [
+        "Write soon.",
+        "Have a good trip!",
+        "Keep in touch.",
+        "Take care.",
+        "Good luck!",
+        "Farewell",
+        "Read the many ways to say goodbye."
+      ],
+      "return_anchors": [
+        "Learn and use different expressions to say goodbye to others."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle2-P51-D1",
+      "page_uid": "TB-G6S2Recycle2-P51",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S2Recycle2-P51-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "Zip 和 Zoom 在池塘边和草地上依依惜别。Zip 告诉 Zoom 自己要跟父亲去美国，并将上七年级，两人互相承诺保持联系并互道保重。 Key patterns: Understand the story and expressions used for parting and sharing news.",
+      "focus_vocabulary": [
+        "news",
+        "America",
+        "promise"
+      ],
+      "core_patterns": [
+        "Understand the story and expressions used for parting and sharing news."
+      ],
+      "allowed_answer_scope": [
+        "news",
+        "America",
+        "promise"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word news?",
+        "Can you say: Understand the story and expressions used for parting and sharing news."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2Recycle2-P51-D1-goal"
+      ],
+      "branchable_topics": [
+        "news",
+        "America",
+        "promise",
+        "Story time"
+      ],
+      "return_anchors": [
+        "Understand the story and expressions used for parting and sharing news."
+      ]
+    }
+  ]
+}

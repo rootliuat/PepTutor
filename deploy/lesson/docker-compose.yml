@@ -1,0 +1,25 @@
+name: peptutor-lesson
+
+services:
+  peptutor-backend:
+    build:
+      context: ../../backend/LightRAG
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend.env
+    restart: unless-stopped
+    volumes:
+      - ./data/rag_storage:/app/data/rag_storage
+      - ./data/inputs:/app/data/inputs
+
+  peptutor-web:
+    build:
+      context: ../../frontend/airi
+      dockerfile: apps/stage-web/Dockerfile
+    env_file:
+      - ./frontend.env
+    depends_on:
+      - peptutor-backend
+    ports:
+      - "${PEPTUTOR_FRONTEND_PORT:-8080}:80"
+    restart: unless-stopped

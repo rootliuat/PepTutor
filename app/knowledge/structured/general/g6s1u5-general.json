@@ -1,0 +1,3191 @@
+{
+  "pilot_id": "g6s1u5-general-v1",
+  "scope": {
+    "grade": "G6",
+    "semester": "S1",
+    "unit": "U5",
+    "pages": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/03.六年级上册语料.json",
+    "app/knowledge/raw/07.六年级上册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 6 · Volume 1), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 6 · Volume 1), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 24,
+    "source_kind": "textbook_source_json",
+    "source_format": "json"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 5",
+      "word": "factory",
+      "phonetic": "/'fæktri/",
+      "chinese": "工厂",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U5-P49-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "worker",
+      "phonetic": "/'wɜːkə(r)/",
+      "chinese": "工人",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U5-P49-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "postman",
+      "phonetic": "/'pəʊstmən/",
+      "chinese": "邮递员",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U5-P49-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "businessman",
+      "phonetic": "/'bɪznəsmæn/",
+      "chinese": "商人；企业家",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U5-P46-D1",
+        "TB-G6S1U5-P48-D2",
+        "TB-G6S1U5-P49-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "police officer",
+      "phonetic": "/pə'liːs 'ɒfɪsə(r)/",
+      "chinese": "警察",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U5-P49-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "fisherman",
+      "phonetic": "/'fɪʃəmən/",
+      "chinese": "渔民",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U5-P50-D1",
+        "TB-G6S1U5-P50-D2",
+        "TB-G6S1U5-P51-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "scientist",
+      "phonetic": "/'saɪəntɪst/",
+      "chinese": "科学家",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U5-P51-D1",
+        "TB-G6S1U5-P52-D2"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "pilot",
+      "phonetic": "/'paɪlət/",
+      "chinese": "飞行员",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U5-P47-D1",
+        "TB-G6S1U5-P51-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "coach",
+      "phonetic": "/kəʊtʃ/",
+      "chinese": "教练",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U5-P51-D1",
+        "TB-G6S1U5-P52-D2",
+        "TB-G6S1U5-P53-D2"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "country",
+      "phonetic": "/'kʌntri/",
+      "chinese": "国家",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U5-P48-D2"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "head teacher",
+      "chinese": "校长",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U5-P46-D1",
+        "TB-G6S1U5-P48-D2"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "sea",
+      "phonetic": "/siː/",
+      "chinese": "大海",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U5-P47-D1",
+        "TB-G6S1U5-P50-D2",
+        "TB-G6S1U5-P51-D2"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "stay",
+      "phonetic": "/steɪ/",
+      "chinese": "保持",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 5",
+      "word": "university",
+      "phonetic": "/ˌjuːnɪ'vɜːsəti/",
+      "chinese": "大学",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U5-P51-D1",
+        "TB-G6S1U5-P51-D2",
+        "TB-G6S1U5-P53-D2"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "gym",
+      "phonetic": "/dʒɪm/",
+      "chinese": "体育馆",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U5-P51-D2",
+        "TB-G6S1U5-P52-D2",
+        "TB-G6S1U5-P54-D2"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "if",
+      "phonetic": "/ɪf/",
+      "chinese": "如果",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U5-P53-D4"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "reporter",
+      "phonetic": "/rɪ'pɔːtə(r)/",
+      "chinese": "记者",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U5-P52-D2",
+        "TB-G6S1U5-P53-D4"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "use",
+      "phonetic": "/juːz/",
+      "chinese": "使用",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 5",
+      "word": "type",
+      "phonetic": "/taɪp/",
+      "chinese": "打字",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U5-P52-D2"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "quickly",
+      "phonetic": "/'kwɪkli/",
+      "chinese": "迅速地",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U5-P52-D2"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "secretary",
+      "phonetic": "/'sekrətri/",
+      "chinese": "秘书",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U5-P52-D2"
+      ]
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G6S1U5-P46-D1-goal",
+      "block_uid": "TB-G6S1U5-P46-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P47-D1-goal",
+      "block_uid": "TB-G6S1U5-P47-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P48-D1-goal",
+      "block_uid": "TB-G6S1U5-P48-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P48-D2-goal",
+      "block_uid": "TB-G6S1U5-P48-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P48-D3-goal",
+      "block_uid": "TB-G6S1U5-P48-D3",
+      "category": "practice_speaking",
+      "text": "Work on the practice speaking activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P48-D4-goal",
+      "block_uid": "TB-G6S1U5-P48-D4",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P49-D1-goal",
+      "block_uid": "TB-G6S1U5-P49-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P49-D2-goal",
+      "block_uid": "TB-G6S1U5-P49-D2",
+      "category": "practice_matching",
+      "text": "Work on the practice matching activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P50-D1-goal",
+      "block_uid": "TB-G6S1U5-P50-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P50-D2-goal",
+      "block_uid": "TB-G6S1U5-P50-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P50-D3-goal",
+      "block_uid": "TB-G6S1U5-P50-D3",
+      "category": "practice_speaking",
+      "text": "Work on the practice speaking activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P50-D4-goal",
+      "block_uid": "TB-G6S1U5-P50-D4",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P51-D1-goal",
+      "block_uid": "TB-G6S1U5-P51-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P51-D2-goal",
+      "block_uid": "TB-G6S1U5-P51-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P52-D1-goal",
+      "block_uid": "TB-G6S1U5-P52-D1",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P52-D2-goal",
+      "block_uid": "TB-G6S1U5-P52-D2",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P53-D1-goal",
+      "block_uid": "TB-G6S1U5-P53-D1",
+      "category": "practice_multiple_choice",
+      "text": "Work on the practice multiple choice activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P53-D2-goal",
+      "block_uid": "TB-G6S1U5-P53-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P53-D3-goal",
+      "block_uid": "TB-G6S1U5-P53-D3",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P53-D4-goal",
+      "block_uid": "TB-G6S1U5-P53-D4",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P54-D1-goal",
+      "block_uid": "TB-G6S1U5-P54-D1",
+      "category": "assessment_quiz",
+      "text": "Check whether the learner can complete the unit review task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P54-D2-goal",
+      "block_uid": "TB-G6S1U5-P54-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P54-D3-goal",
+      "block_uid": "TB-G6S1U5-P54-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U5-P55-D1-goal",
+      "block_uid": "TB-G6S1U5-P55-D1",
+      "category": "story_time",
+      "text": "Read and retell the key story events.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-at-sea",
+      "atom_type": "word",
+      "text": "at sea",
+      "gloss": "在海上",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-australia",
+      "atom_type": "word",
+      "text": "Australia",
+      "gloss": "澳大利亚",
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-bee-farmer",
+      "atom_type": "word",
+      "text": "bee farmer",
+      "gloss": "养蜂人",
+      "linked_blocks": [
+        "TB-G6S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-boat",
+      "atom_type": "word",
+      "text": "boat",
+      "gloss": "船",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-bus",
+      "atom_type": "word",
+      "text": "bus",
+      "gloss": "公共汽车",
+      "linked_blocks": [
+        "TB-G6S1U5-P54-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-businessman",
+      "atom_type": "word",
+      "text": "businessman",
+      "gloss": "商人；企业家",
+      "linked_blocks": [
+        "TB-G6S1U5-P46-D1",
+        "TB-G6S1U5-P48-D2",
+        "TB-G6S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-businesswoman",
+      "atom_type": "word",
+      "text": "businesswoman",
+      "gloss": "女商人",
+      "linked_blocks": [
+        "TB-G6S1U5-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-by-bike",
+      "atom_type": "word",
+      "text": "by bike",
+      "gloss": "骑自行车",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-camp",
+      "atom_type": "word",
+      "text": "camp",
+      "gloss": "营地",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-car",
+      "atom_type": "word",
+      "text": "car",
+      "gloss": "小汽车",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-career",
+      "atom_type": "word",
+      "text": "career",
+      "gloss": "职业",
+      "linked_blocks": [
+        "TB-G6S1U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-cat",
+      "atom_type": "word",
+      "text": "cat",
+      "gloss": "猫",
+      "linked_blocks": [
+        "TB-G6S1U5-P54-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-cleaner",
+      "atom_type": "word",
+      "text": "cleaner",
+      "gloss": "清洁工",
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-coach",
+      "atom_type": "word",
+      "text": "coach",
+      "gloss": "教练",
+      "linked_blocks": [
+        "TB-G6S1U5-P51-D1",
+        "TB-G6S1U5-P52-D2",
+        "TB-G6S1U5-P53-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-compare",
+      "atom_type": "word",
+      "text": "compare",
+      "gloss": "比较",
+      "linked_blocks": [
+        "TB-G6S1U5-P52-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-computer-game-tester",
+      "atom_type": "word",
+      "text": "computer game tester",
+      "gloss": "电脑游戏测试员",
+      "linked_blocks": [
+        "TB-G6S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-country",
+      "atom_type": "word",
+      "text": "country",
+      "gloss": "国家",
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-dancer",
+      "atom_type": "word",
+      "text": "dancer",
+      "gloss": "舞者",
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-different",
+      "atom_type": "word",
+      "text": "different",
+      "gloss": "不同的",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-factory",
+      "atom_type": "word",
+      "text": "factory",
+      "gloss": "工厂",
+      "linked_blocks": [
+        "TB-G6S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-factory-worker",
+      "atom_type": "word",
+      "text": "factory worker",
+      "gloss": "工厂工人",
+      "linked_blocks": [
+        "TB-G6S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-father",
+      "atom_type": "word",
+      "text": "father",
+      "gloss": "父亲",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D4",
+        "TB-G6S1U5-P54-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-fisherman",
+      "atom_type": "word",
+      "text": "fisherman",
+      "gloss": "渔民",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D1",
+        "TB-G6S1U5-P50-D2",
+        "TB-G6S1U5-P51-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-fisherwoman",
+      "atom_type": "word",
+      "text": "fisherwoman",
+      "gloss": "渔民（女）",
+      "linked_blocks": [
+        "TB-G6S1U5-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-football-player",
+      "atom_type": "word",
+      "text": "football player",
+      "gloss": "足球运动员",
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-form",
+      "atom_type": "word",
+      "text": "form",
+      "gloss": "表格",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-gym",
+      "atom_type": "word",
+      "text": "gym",
+      "gloss": "体育馆",
+      "linked_blocks": [
+        "TB-G6S1U5-P51-D2",
+        "TB-G6S1U5-P52-D2",
+        "TB-G6S1U5-P54-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-hard",
+      "atom_type": "word",
+      "text": "hard",
+      "gloss": "努力地",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-he-is-good-at-football-ping-pong-and-basketball",
+      "atom_type": "word",
+      "text": "He is good at football//, ping-pong//and basketball.",
+      "gloss": "他擅长足球、乒乓球和篮球。",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-head-teacher",
+      "atom_type": "word",
+      "text": "head teacher",
+      "gloss": "校长",
+      "linked_blocks": [
+        "TB-G6S1U5-P46-D1",
+        "TB-G6S1U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-healthy",
+      "atom_type": "word",
+      "text": "healthy",
+      "gloss": "健康的",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-hobbies",
+      "atom_type": "word",
+      "text": "hobbies",
+      "gloss": "爱好",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-if",
+      "atom_type": "word",
+      "text": "if",
+      "gloss": "如果",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-if-you-like-sports-you-can-be-a-coach-a-sports-reporter-or-a-pe-teacher",
+      "atom_type": "word",
+      "text": "If you like sports//, you can be a coach//, a sports reporter//, or a PE teacher.",
+      "gloss": "如果你喜欢运动，你可以成为一名教练、体育记者或体育老师。",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-information",
+      "atom_type": "word",
+      "text": "information",
+      "gloss": "信息",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-job",
+      "atom_type": "word",
+      "text": "job",
+      "gloss": "工作",
+      "linked_blocks": [
+        "TB-G6S1U5-P52-D1",
+        "TB-G6S1U5-P54-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-jobs",
+      "atom_type": "word",
+      "text": "jobs",
+      "gloss": "工作",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-life",
+      "atom_type": "word",
+      "text": "life",
+      "gloss": "生活",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-lion-tamer",
+      "atom_type": "word",
+      "text": "lion tamer",
+      "gloss": "驯兽师",
+      "linked_blocks": [
+        "TB-G6S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-list",
+      "atom_type": "word",
+      "text": "list",
+      "gloss": "列出",
+      "linked_blocks": [
+        "TB-G6S1U5-P52-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-look-like",
+      "atom_type": "word",
+      "text": "look like",
+      "gloss": "看起来像",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-magician-s-assistant",
+      "atom_type": "word",
+      "text": "magician's assistant",
+      "gloss": "魔术师助手",
+      "linked_blocks": [
+        "TB-G6S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-mother",
+      "atom_type": "word",
+      "text": "mother",
+      "gloss": "母亲",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-nut-cracker",
+      "atom_type": "word",
+      "text": "nut cracker",
+      "gloss": "剥坚果的人（双关语：胡桃夹子）",
+      "linked_blocks": [
+        "TB-G6S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-nuts",
+      "atom_type": "word",
+      "text": "nuts",
+      "gloss": "发疯的（双关语：坚果）",
+      "linked_blocks": [
+        "TB-G6S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-parents-day",
+      "atom_type": "word",
+      "text": "Parents' Day",
+      "gloss": "家长日",
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pause",
+      "atom_type": "word",
+      "text": "pause",
+      "gloss": "停顿",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pe-teacher",
+      "atom_type": "word",
+      "text": "PE teacher",
+      "gloss": "体育老师",
+      "linked_blocks": [
+        "TB-G6S1U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pet-hospital",
+      "atom_type": "word",
+      "text": "pet hospital",
+      "gloss": "宠物医院",
+      "linked_blocks": [
+        "TB-G6S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pilot",
+      "atom_type": "word",
+      "text": "pilot",
+      "gloss": "飞行员",
+      "linked_blocks": [
+        "TB-G6S1U5-P47-D1",
+        "TB-G6S1U5-P51-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-plane",
+      "atom_type": "word",
+      "text": "plane",
+      "gloss": "飞机",
+      "linked_blocks": [
+        "TB-G6S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-police-officer",
+      "atom_type": "word",
+      "text": "police officer",
+      "gloss": "警察",
+      "linked_blocks": [
+        "TB-G6S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-post-office",
+      "atom_type": "word",
+      "text": "post office",
+      "gloss": "邮局",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-postman",
+      "atom_type": "word",
+      "text": "postman",
+      "gloss": "邮递员",
+      "linked_blocks": [
+        "TB-G6S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-quickly",
+      "atom_type": "word",
+      "text": "quickly",
+      "gloss": "迅速地",
+      "linked_blocks": [
+        "TB-G6S1U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-reporter",
+      "atom_type": "word",
+      "text": "reporter",
+      "gloss": "记者",
+      "linked_blocks": [
+        "TB-G6S1U5-P52-D2",
+        "TB-G6S1U5-P53-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-rescue",
+      "atom_type": "word",
+      "text": "rescue",
+      "gloss": "救援",
+      "linked_blocks": [
+        "TB-G6S1U5-P47-D1",
+        "TB-G6S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-scientist",
+      "atom_type": "word",
+      "text": "scientist",
+      "gloss": "科学家",
+      "linked_blocks": [
+        "TB-G6S1U5-P51-D1",
+        "TB-G6S1U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-sea",
+      "atom_type": "word",
+      "text": "sea",
+      "gloss": "大海",
+      "linked_blocks": [
+        "TB-G6S1U5-P47-D1",
+        "TB-G6S1U5-P50-D2",
+        "TB-G6S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-secretary",
+      "atom_type": "word",
+      "text": "secretary",
+      "gloss": "秘书",
+      "linked_blocks": [
+        "TB-G6S1U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-signature",
+      "atom_type": "word",
+      "text": "signature",
+      "gloss": "签名",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-singer",
+      "atom_type": "word",
+      "text": "singer",
+      "gloss": "歌手",
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-sports-reporter",
+      "atom_type": "word",
+      "text": "sports reporter",
+      "gloss": "体育记者",
+      "linked_blocks": [
+        "TB-G6S1U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-stay",
+      "atom_type": "word",
+      "text": "stay",
+      "gloss": "保持",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-stung",
+      "atom_type": "word",
+      "text": "stung",
+      "gloss": "被蛰",
+      "linked_blocks": [
+        "TB-G6S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-taxi",
+      "atom_type": "word",
+      "text": "taxi",
+      "gloss": "出租车",
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D4",
+        "TB-G6S1U5-P50-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-taxi-driver",
+      "atom_type": "word",
+      "text": "taxi driver",
+      "gloss": "出租车司机",
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-title",
+      "atom_type": "word",
+      "text": "title",
+      "gloss": "标题",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-type",
+      "atom_type": "word",
+      "text": "type",
+      "gloss": "打字",
+      "linked_blocks": [
+        "TB-G6S1U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-uncle",
+      "atom_type": "word",
+      "text": "uncle",
+      "gloss": "叔叔/舅舅",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D1",
+        "TB-G6S1U5-P54-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-university",
+      "atom_type": "word",
+      "text": "university",
+      "gloss": "大学",
+      "linked_blocks": [
+        "TB-G6S1U5-P51-D1",
+        "TB-G6S1U5-P51-D2",
+        "TB-G6S1U5-P53-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-unusual",
+      "atom_type": "word",
+      "text": "unusual",
+      "gloss": "不寻常的",
+      "linked_blocks": [
+        "TB-G6S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-use",
+      "atom_type": "word",
+      "text": "use",
+      "gloss": "使用",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-work",
+      "atom_type": "word",
+      "text": "work",
+      "gloss": "工作",
+      "linked_blocks": [
+        "TB-G6S1U5-P47-D1",
+        "TB-G6S1U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-worker",
+      "atom_type": "word",
+      "text": "worker",
+      "gloss": "工人",
+      "linked_blocks": [
+        "TB-G6S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-writer",
+      "atom_type": "word",
+      "text": "writer",
+      "gloss": "作家",
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-pause",
+      "atom_type": "sentence_pattern",
+      "text": "// = pause",
+      "gloss": "// = 停顿",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-and-what-does-your-mother-do",
+      "atom_type": "sentence_pattern",
+      "text": "And what does your mother do?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-answer-the-question",
+      "atom_type": "sentence_pattern",
+      "text": "Answer the question.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-choose-a-title-for-the-text",
+      "atom_type": "sentence_pattern",
+      "text": "Choose a title for the text.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-cool-i-m-going-to-be-a-head-teacher-one-day-what-about-you",
+      "atom_type": "sentence_pattern",
+      "text": "Cool! I'm going to be a head teacher one day. What about you?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-goes-to-work-by-bike",
+      "atom_type": "sentence_pattern",
+      "text": "He goes to work by bike.",
+      "gloss": "他骑自行车去上班。",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-is-a",
+      "atom_type": "sentence_pattern",
+      "text": "He is a ...",
+      "gloss": "他是一名……",
+      "linked_blocks": [
+        "TB-G6S1U5-P54-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-wants-to-work-in-a-gym",
+      "atom_type": "sentence_pattern",
+      "text": "He wants to work in a gym.",
+      "gloss": "他想在体育馆工作。",
+      "linked_blocks": [
+        "TB-G6S1U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-works-at-sea",
+      "atom_type": "sentence_pattern",
+      "text": "He works at sea.",
+      "gloss": "他在海上工作。",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-works-near-the-sea",
+      "atom_type": "sentence_pattern",
+      "text": "He works near the sea.",
+      "gloss": "他在海边工作。",
+      "linked_blocks": [
+        "TB-G6S1U5-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-s-a-businessman",
+      "atom_type": "sentence_pattern",
+      "text": "He's a businessman.",
+      "gloss": "他是位商人。",
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D2",
+        "TB-G6S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-about-a",
+      "atom_type": "sentence_pattern",
+      "text": "How about a ...?",
+      "gloss": "……怎么样？",
+      "linked_blocks": [
+        "TB-G6S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-about-a-lion-tamer",
+      "atom_type": "sentence_pattern",
+      "text": "How about a lion tamer?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-does-go-to",
+      "atom_type": "sentence_pattern",
+      "text": "How does ... go to ...?",
+      "gloss": "……怎么去……？",
+      "linked_blocks": [
+        "TB-G6S1U5-P54-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-does-he-go-to-work",
+      "atom_type": "sentence_pattern",
+      "text": "How does he go to work?",
+      "gloss": "他怎么去上班？",
+      "linked_blocks": [
+        "TB-G6S1U5-P47-D1",
+        "TB-G6S1U5-P50-D2",
+        "TB-G6S1U5-P50-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-does-he-she-go-to-work",
+      "atom_type": "sentence_pattern",
+      "text": "How does he/she go to work?",
+      "gloss": "他/她怎么去上班？",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-see-how-does-he-go-to-work-by-boat",
+      "atom_type": "sentence_pattern",
+      "text": "I see. How does he go to work? By boat?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-want-to-be-a",
+      "atom_type": "sentence_pattern",
+      "text": "I want to be a ...",
+      "gloss": "我想成为一名……",
+      "linked_blocks": [
+        "TB-G6S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-going-to-be-a",
+      "atom_type": "sentence_pattern",
+      "text": "I'm going to be a ...",
+      "gloss": "我要成为一名……",
+      "linked_blocks": [
+        "TB-G6S1U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-going-to-be-a-businessman-my-father-is-a-businessman",
+      "atom_type": "sentence_pattern",
+      "text": "I'm going to be a businessman! My father is a businessman.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-if-you-like-sports-you-can-be-a-coach",
+      "atom_type": "sentence_pattern",
+      "text": "If you like sports, you can be a coach.",
+      "gloss": "如果你喜欢体育运动，你可以成为一名教练。",
+      "linked_blocks": [
+        "TB-G6S1U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-your-father-a-postman",
+      "atom_type": "sentence_pattern",
+      "text": "Is your father a postman?",
+      "gloss": "你父亲是邮递员吗？",
+      "linked_blocks": [
+        "TB-G6S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-your-father-here-today",
+      "atom_type": "sentence_pattern",
+      "text": "Is your father here today?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-list-five-jobs-compare-with-your-partner-how-many-different-jobs-are-there-in-both-lists",
+      "atom_type": "sentence_pattern",
+      "text": "List five jobs. Compare with your partner. How many different jobs are there in both lists?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P52-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-mary-has-a-cat",
+      "atom_type": "sentence_pattern",
+      "text": "Mary has a cat.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P54-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-my-aunt-is-a-scientist",
+      "atom_type": "sentence_pattern",
+      "text": "My aunt is a scientist.",
+      "gloss": "我的阿姨是一位科学家。",
+      "linked_blocks": [
+        "TB-G6S1U5-P51-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-my-father-is-a-pilot",
+      "atom_type": "sentence_pattern",
+      "text": "My father is a pilot.",
+      "gloss": "我父亲是一名飞行员。",
+      "linked_blocks": [
+        "TB-G6S1U5-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-he-isn-t",
+      "atom_type": "sentence_pattern",
+      "text": "No, he isn't.",
+      "gloss": "不，他不是。",
+      "linked_blocks": [
+        "TB-G6S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-she-is-a-head-teacher",
+      "atom_type": "sentence_pattern",
+      "text": "She is a head teacher.",
+      "gloss": "她是一位校长。",
+      "linked_blocks": [
+        "TB-G6S1U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-she-wants-to-work-in-an-office",
+      "atom_type": "sentence_pattern",
+      "text": "She wants to work in an office.",
+      "gloss": "她想在办公室工作。",
+      "linked_blocks": [
+        "TB-G6S1U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-she-works-at-a-university",
+      "atom_type": "sentence_pattern",
+      "text": "She works at a university.",
+      "gloss": "她在大学工作。",
+      "linked_blocks": [
+        "TB-G6S1U5-P51-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-she-s-a-businesswoman",
+      "atom_type": "sentence_pattern",
+      "text": "She's a businesswoman.",
+      "gloss": "她是个女商人。",
+      "linked_blocks": [
+        "TB-G6S1U5-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-she-s-a-head-teacher",
+      "atom_type": "sentence_pattern",
+      "text": "She's a head teacher.",
+      "gloss": "她是位校长。",
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-sorry-i-didn-t-hear-you",
+      "atom_type": "sentence_pattern",
+      "text": "Sorry, I didn't hear you.",
+      "gloss": "对不起，我没听见你说什么。",
+      "linked_blocks": [
+        "TB-G6S1U5-P54-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-sorry-i-didn-t-hear-you-what-does-mary-have",
+      "atom_type": "sentence_pattern",
+      "text": "Sorry, I didn't hear you. What does Mary have?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P54-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-today-is-parents-day-who-will-come-listen-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Today is Parents' Day. Who will come? Listen and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-should-study-hard-and-stay-healthy",
+      "atom_type": "sentence_pattern",
+      "text": "We should study hard and stay healthy.",
+      "gloss": "我们应该努力学习并保持健康。",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-well-what-do-you-want-to-be",
+      "atom_type": "sentence_pattern",
+      "text": "Well, what do you want to be?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-does-do",
+      "atom_type": "sentence_pattern",
+      "text": "What does ... do?",
+      "gloss": "……是做什么的？",
+      "linked_blocks": [
+        "TB-G6S1U5-P54-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-does-have",
+      "atom_type": "sentence_pattern",
+      "text": "What does ... have?",
+      "gloss": "……有什么？",
+      "linked_blocks": [
+        "TB-G6S1U5-P54-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-does-jiao-jie-s-mother-do",
+      "atom_type": "sentence_pattern",
+      "text": "What does Jiao Jie's mother do?",
+      "gloss": "交洁的妈妈是做什么的？",
+      "linked_blocks": [
+        "TB-G6S1U5-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-does-he-do",
+      "atom_type": "sentence_pattern",
+      "text": "What does he do?",
+      "gloss": "他是做什么的？",
+      "linked_blocks": [
+        "TB-G6S1U5-P47-D1",
+        "TB-G6S1U5-P48-D2",
+        "TB-G6S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-does-he-she-do",
+      "atom_type": "sentence_pattern",
+      "text": "What does he/she do?",
+      "gloss": "他/她是做什么的？",
+      "linked_blocks": [
+        "TB-G6S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-does-he-she-like",
+      "atom_type": "sentence_pattern",
+      "text": "What does he/she like?",
+      "gloss": "他/她喜欢什么？",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-does-he-she-want-to-be",
+      "atom_type": "sentence_pattern",
+      "text": "What does he/she want to be?",
+      "gloss": "他/她想成为什么？",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-does-your-father-mother-do",
+      "atom_type": "sentence_pattern",
+      "text": "What does your father/mother do?",
+      "gloss": "你父亲/母亲是做什么的？",
+      "linked_blocks": [
+        "TB-G6S1U5-P48-D4",
+        "TB-G6S1U5-P53-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-does-your-mother-do-oliver",
+      "atom_type": "sentence_pattern",
+      "text": "What does your mother do, Oliver?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-does-your-mother-do",
+      "atom_type": "sentence_pattern",
+      "text": "What does your mother do?",
+      "gloss": "你妈妈是做什么的？",
+      "linked_blocks": [
+        "TB-G6S1U5-P46-D1",
+        "TB-G6S1U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-other-unusual-jobs-can-you-think-of",
+      "atom_type": "sentence_pattern",
+      "text": "What other unusual jobs can you think of?",
+      "gloss": "你还能想到什么其他不寻常的工作？",
+      "linked_blocks": [
+        "TB-G6S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-does-work",
+      "atom_type": "sentence_pattern",
+      "text": "Where does ... work?",
+      "gloss": "……在哪里工作？",
+      "linked_blocks": [
+        "TB-G6S1U5-P54-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-does-mike-s-uncle-work",
+      "atom_type": "sentence_pattern",
+      "text": "Where does Mike's uncle work?",
+      "gloss": "迈克的叔叔在哪里工作？",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-does-he-work",
+      "atom_type": "sentence_pattern",
+      "text": "Where does he work?",
+      "gloss": "他在哪里工作？",
+      "linked_blocks": [
+        "TB-G6S1U5-P47-D1",
+        "TB-G6S1U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-does-he-she-work",
+      "atom_type": "sentence_pattern",
+      "text": "Where does he/she work?",
+      "gloss": "他/她在哪里工作？",
+      "linked_blocks": [
+        "TB-G6S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-does-she-work",
+      "atom_type": "sentence_pattern",
+      "text": "Where does she work?",
+      "gloss": "她在哪里工作？",
+      "linked_blocks": [
+        "TB-G6S1U5-P51-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-does-your-father-mother-work",
+      "atom_type": "sentence_pattern",
+      "text": "Where does your father/mother work?",
+      "gloss": "你父亲/母亲在哪里工作？",
+      "linked_blocks": [
+        "TB-G6S1U5-P50-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-is-he-she-going-to-work",
+      "atom_type": "sentence_pattern",
+      "text": "Where is he/she going to work?",
+      "gloss": "他/她打算在哪里工作？",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-which-job-do-you-want-to-do",
+      "atom_type": "sentence_pattern",
+      "text": "Which job do you want to do?",
+      "gloss": "你想做什么工作？",
+      "linked_blocks": [
+        "TB-G6S1U5-P53-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wow-where-does-he-work",
+      "atom_type": "sentence_pattern",
+      "text": "Wow! Where does he work?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-what-other-unusual-jobs-can-you-think-of",
+      "atom_type": "sentence_pattern",
+      "text": "Yes. What other unusual jobs can you think of?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U5-P55-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G6S1U5-P46",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: What does he do?. Sarah and Oliver are standing in front of a school display board titled 'Career Day'. They are discussing their parents' jobs and their own future career plans.",
+      "entry_probe_questions": [
+        "Do you know the word head teacher?",
+        "Can you say: What does your mother do?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U5-P46-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U5-P47",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: What does he do?. In the classroom, Sarah, Oliver, and Wu Binbin are discussing their parents' jobs. Sarah imagines her father, a rescue pilot, standing by a helicopter on the beach.",
+      "entry_probe_questions": [
+        "Do you know the word pilot?",
+        "Can you say: What does he do?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U5-P47-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U5-P48",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: What does he do?. Sarah and Oliver are talking about their parents' jobs. Oliver imagines his father at the airport.",
+      "entry_probe_questions": [
+        "Do you know the word businessman?",
+        "Can you say: What does he do?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U5-P48-D2",
+        "TB-G6S1U5-P48-D4",
+        "TB-G6S1U5-P48-D1",
+        "TB-G6S1U5-P48-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U5-P49",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: What does he do?. A 'Career Day' display board showing pictures of different professions. Zhang Peng and Oliver are talking about Oliver's father.",
+      "entry_probe_questions": [
+        "Do you know the word factory worker?",
+        "Can you say: Is your father a postman?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U5-P49-D1",
+        "TB-G6S1U5-P49-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U5-P50",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: What does he do?. Mike and Xiao Yu are talking about Mike's uncle who is a fisherman.",
+      "entry_probe_questions": [
+        "Do you know the word fisherman?",
+        "Can you say: Where does he work?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U5-P50-D2",
+        "TB-G6S1U5-P50-D4",
+        "TB-G6S1U5-P50-D1",
+        "TB-G6S1U5-P50-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U5-P51",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: What does he do?. Oliver and Wu Binbin are talking about jobs. There are four flashcards showing different professions.",
+      "entry_probe_questions": [
+        "Do you know the word fisherman?",
+        "Can you say: My aunt is a scientist."
+      ],
+      "priority_blocks": [
+        "TB-G6S1U5-P51-D1",
+        "TB-G6S1U5-P51-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U5-P52",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: What does he do?. Passages about Hu Bin, Sarah, and Robin describing their interests, skills, and career aspirations.",
+      "entry_probe_questions": [
+        "Do you know the word gym?",
+        "Can you say: He wants to work in a gym."
+      ],
+      "priority_blocks": [
+        "TB-G6S1U5-P52-D2",
+        "TB-G6S1U5-P52-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U5-P53",
+      "page_type": "phonics",
+      "page_intro_cn": "Theme: What does he do?. A table to organize information about Hu Bin, Sarah, and Robin regarding their likes, desired jobs, and work locations.",
+      "entry_probe_questions": [
+        "Do you know the word coach?",
+        "Can you say: What does he/she like?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U5-P53-D2",
+        "TB-G6S1U5-P53-D4",
+        "TB-G6S1U5-P53-D1",
+        "TB-G6S1U5-P53-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U5-P54",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: What does he do?. Students play a game called 'I didn't hear you' to practice asking questions.",
+      "entry_probe_questions": [
+        "Can you say: Sorry, I didn't hear you."
+      ],
+      "priority_blocks": [
+        "TB-G6S1U5-P54-D3",
+        "TB-G6S1U5-P54-D2",
+        "TB-G6S1U5-P54-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U5-P55",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: What does he do?. Zoom and Zip are watching TV and discussing various unusual jobs.",
+      "entry_probe_questions": [
+        "Do you know the word unusual?",
+        "Can you say: What other unusual jobs can you think of?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U5-P55-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G6S1U5-P46-D1",
+      "page_uid": "TB-G6S1U5-P46",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U5-P46-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Sarah and Oliver are standing in front of a school display board titled 'Career Day'. They are discussing their parents' jobs and their own future career plans. Key patterns: What does your mother do?; She is a head teacher.",
+      "focus_vocabulary": [
+        "head teacher",
+        "businessman",
+        "career"
+      ],
+      "core_patterns": [
+        "What does your mother do?",
+        "She is a head teacher.",
+        "I'm going to be a ...",
+        "What does your mother do, Oliver?",
+        "Cool! I'm going to be a head teacher one day. What about you?",
+        "I'm going to be a businessman! My father is a businessman."
+      ],
+      "allowed_answer_scope": [
+        "She is a head teacher.",
+        "I'm going to be a businessman! My father is a businessman."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word head teacher?",
+        "Can you say: What does your mother do?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U5-P46-D1-goal"
+      ],
+      "branchable_topics": [
+        "head teacher",
+        "businessman",
+        "career",
+        "What does he do?",
+        "Career Day"
+      ],
+      "return_anchors": [
+        "What does your mother do?",
+        "She is a head teacher.",
+        "I'm going to be a ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P47-D1",
+      "page_uid": "TB-G6S1U5-P47",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U5-P47-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "In the classroom, Sarah, Oliver, and Wu Binbin are discussing their parents' jobs. Sarah imagines her father, a rescue pilot, standing by a helicopter on the beach. Key patterns: What does he do?; My father is a pilot.",
+      "focus_vocabulary": [
+        "pilot",
+        "rescue",
+        "sea",
+        "fisherwoman",
+        "work"
+      ],
+      "core_patterns": [
+        "What does he do?",
+        "My father is a pilot.",
+        "Where does he work?",
+        "He works near the sea.",
+        "How does he go to work?",
+        "Wow! Where does he work?"
+      ],
+      "allowed_answer_scope": [
+        "My father is a pilot.",
+        "He works near the sea.",
+        "No. By car!",
+        "Hey! My mother works near the sea too. She is a fisherwoman."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word pilot?",
+        "Can you say: What does he do?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U5-P47-D1-goal"
+      ],
+      "branchable_topics": [
+        "pilot",
+        "rescue",
+        "sea",
+        "fisherwoman",
+        "work",
+        "What does he do?",
+        "Main Scene"
+      ],
+      "return_anchors": [
+        "What does he do?",
+        "My father is a pilot.",
+        "Where does he work?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P48-D1",
+      "page_uid": "TB-G6S1U5-P48",
+      "page_type": "vocabulary",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S1U5-P48-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Listening exercise about Sarah's parents on Parents' Day. Key patterns: Today is Parents' Day. Who will come? Listen and circle.",
+      "focus_vocabulary": [
+        "Parents' Day"
+      ],
+      "core_patterns": [
+        "Today is Parents' Day. Who will come? Listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "Parents' Day"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word Parents' Day?",
+        "Can you say: Today is Parents' Day. Who will come? Listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U5-P48-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U5-P48-D1-goal"
+      ],
+      "branchable_topics": [
+        "Parents' Day",
+        "What does he do?",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Today is Parents' Day. Who will come? Listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P48-D2",
+      "page_uid": "TB-G6S1U5-P48",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U5-P48-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Sarah and Oliver are talking about their parents' jobs. Oliver imagines his father at the airport. Key patterns: What does he do?; He's a businessman.",
+      "focus_vocabulary": [
+        "businessman",
+        "head teacher",
+        "Australia",
+        "country"
+      ],
+      "core_patterns": [
+        "What does he do?",
+        "He's a businessman.",
+        "What does your mother do?",
+        "She's a head teacher.",
+        "Is your father here today?",
+        "And what does your mother do?"
+      ],
+      "allowed_answer_scope": [
+        "No. He's in Australia.",
+        "He's a businessman. He often goes to other countries.",
+        "She's a head teacher.",
+        "That's nice.",
+        "Yeah. She'll be here today!",
+        "No, I want to be a businessman."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word businessman?",
+        "Can you say: What does he do?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U5-P48-D4",
+        "TB-G6S1U5-P48-D1",
+        "TB-G6S1U5-P48-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U5-P48-D2-goal"
+      ],
+      "branchable_topics": [
+        "businessman",
+        "head teacher",
+        "Australia",
+        "country",
+        "What does he do?",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "What does he do?",
+        "He's a businessman.",
+        "What does your mother do?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P48-D3",
+      "page_uid": "TB-G6S1U5-P48",
+      "page_type": "vocabulary",
+      "block_type": "practice_speaking",
+      "source_refs": [
+        "TB-G6S1U5-P48-D3"
+      ],
+      "teaching_goal": "Work on the practice speaking activity.",
+      "teaching_summary": "Question based on the dialogue between Sarah and Oliver. Key patterns: Answer the question.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Answer the question."
+      ],
+      "allowed_answer_scope": [
+        "His father is a businessman. His mother is a head teacher."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Answer the question."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U5-P48-D3-goal"
+      ],
+      "branchable_topics": [
+        "What does he do?",
+        "Comprehension Check"
+      ],
+      "return_anchors": [
+        "Answer the question."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P48-D4",
+      "page_uid": "TB-G6S1U5-P48",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S1U5-P48-D4"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Vocabulary about jobs with icons. Key patterns: What does your father/mother do?",
+      "focus_vocabulary": [
+        "taxi driver",
+        "cleaner",
+        "writer",
+        "singer",
+        "dancer",
+        "football player"
+      ],
+      "core_patterns": [
+        "What does your father/mother do?"
+      ],
+      "allowed_answer_scope": [
+        "taxi driver",
+        "cleaner",
+        "writer",
+        "singer",
+        "dancer",
+        "football player"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word taxi driver?",
+        "Can you say: What does your father/mother do?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U5-P48-D1",
+        "TB-G6S1U5-P48-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U5-P48-D4-goal"
+      ],
+      "branchable_topics": [
+        "taxi driver",
+        "cleaner",
+        "writer",
+        "singer",
+        "dancer",
+        "football player",
+        "What does he do?",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "What does your father/mother do?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P49-D1",
+      "page_uid": "TB-G6S1U5-P49",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S1U5-P49-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "A 'Career Day' display board showing pictures of different professions. Zhang Peng and Oliver are talking about Oliver's father. Key patterns: Is your father a postman?; No, he isn't.",
+      "focus_vocabulary": [
+        "factory worker",
+        "postman",
+        "businessman",
+        "police officer"
+      ],
+      "core_patterns": [
+        "Is your father a postman?",
+        "No, he isn't.",
+        "What does he do?",
+        "He's a businessman."
+      ],
+      "allowed_answer_scope": [
+        "No, he isn't.",
+        "He's a businessman."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word factory worker?",
+        "Can you say: Is your father a postman?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U5-P49-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U5-P49-D1-goal"
+      ],
+      "branchable_topics": [
+        "factory worker",
+        "postman",
+        "businessman",
+        "police officer",
+        "What does he do?",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Is your father a postman?",
+        "No, he isn't.",
+        "What does he do?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P49-D2",
+      "page_uid": "TB-G6S1U5-P49",
+      "page_type": "vocabulary",
+      "block_type": "practice_matching",
+      "source_refs": [
+        "TB-G6S1U5-P49-D2"
+      ],
+      "teaching_goal": "Work on the practice matching activity.",
+      "teaching_summary": "Students listen to audio to match parents with their jobs, and then practice the dialogue. Key patterns: What does Jiao Jie's mother do?; She's a businesswoman.",
+      "focus_vocabulary": [
+        "businesswoman"
+      ],
+      "core_patterns": [
+        "What does Jiao Jie's mother do?",
+        "She's a businesswoman."
+      ],
+      "allowed_answer_scope": [
+        "businesswoman",
+        "postman/police officer/factory worker (Audio required)"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word businesswoman?",
+        "Can you say: What does Jiao Jie's mother do?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U5-P49-D2-goal"
+      ],
+      "branchable_topics": [
+        "businesswoman",
+        "What does he do?",
+        "Listen, match and say"
+      ],
+      "return_anchors": [
+        "What does Jiao Jie's mother do?",
+        "She's a businesswoman."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P50-D1",
+      "page_uid": "TB-G6S1U5-P50",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S1U5-P50-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Mike and Xiao Yu are going home now. Mike sees a man coming towards them. Key patterns: Listen and circle.",
+      "focus_vocabulary": [
+        "uncle",
+        "look like",
+        "fisherman"
+      ],
+      "core_patterns": [
+        "Listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "A",
+        "B"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word uncle?",
+        "Can you say: Listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U5-P50-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U5-P50-D1-goal"
+      ],
+      "branchable_topics": [
+        "uncle",
+        "look like",
+        "fisherman",
+        "What does he do?",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P50-D2",
+      "page_uid": "TB-G6S1U5-P50",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U5-P50-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Mike and Xiao Yu are talking about Mike's uncle who is a fisherman. Key patterns: Where does he work?; He works at sea.",
+      "focus_vocabulary": [
+        "fisherman",
+        "work",
+        "at sea",
+        "boat",
+        "by bike",
+        "healthy",
+        "life",
+        "hard"
+      ],
+      "core_patterns": [
+        "Where does he work?",
+        "He works at sea.",
+        "How does he go to work?",
+        "He goes to work by bike.",
+        "We should study hard and stay healthy.",
+        "I see. How does he go to work? By boat?"
+      ],
+      "allowed_answer_scope": [
+        "My uncle is a fisherman.",
+        "He works at sea. He sees lots of fish every day!",
+        "No. He works on a boat. He goes to work by bike.",
+        "He has a very healthy life.",
+        "Yes. He works very hard and stays healthy.",
+        "We should study hard and stay healthy, too."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word fisherman?",
+        "Can you say: Where does he work?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U5-P50-D4",
+        "TB-G6S1U5-P50-D1",
+        "TB-G6S1U5-P50-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U5-P50-D2-goal"
+      ],
+      "branchable_topics": [
+        "fisherman",
+        "work",
+        "at sea",
+        "boat",
+        "by bike",
+        "healthy",
+        "life",
+        "hard"
+      ],
+      "return_anchors": [
+        "Where does he work?",
+        "He works at sea.",
+        "How does he go to work?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P50-D3",
+      "page_uid": "TB-G6S1U5-P50",
+      "page_type": "dialogue",
+      "block_type": "practice_speaking",
+      "source_refs": [
+        "TB-G6S1U5-P50-D3"
+      ],
+      "teaching_goal": "Work on the practice speaking activity.",
+      "teaching_summary": "Questions based on the dialogue about Mike's uncle. Key patterns: Where does Mike's uncle work?; How does he go to work?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Where does Mike's uncle work?",
+        "How does he go to work?"
+      ],
+      "allowed_answer_scope": [
+        "He works at sea.",
+        "He goes to work by bike."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Where does Mike's uncle work?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U5-P50-D3-goal"
+      ],
+      "branchable_topics": [
+        "What does he do?",
+        "Comprehension Questions"
+      ],
+      "return_anchors": [
+        "Where does Mike's uncle work?",
+        "How does he go to work?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P50-D4",
+      "page_uid": "TB-G6S1U5-P50",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S1U5-P50-D4"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Students practice asking and answering about their parents' jobs and commute modes using the pictures provided. Key patterns: Where does your father/mother work?; How does he/she go to work?",
+      "focus_vocabulary": [
+        "father",
+        "mother",
+        "post office",
+        "car",
+        "taxi"
+      ],
+      "core_patterns": [
+        "Where does your father/mother work?",
+        "How does he/she go to work?"
+      ],
+      "allowed_answer_scope": [
+        "father",
+        "mother",
+        "post office",
+        "car",
+        "taxi"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word father?",
+        "Can you say: Where does your father/mother work?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U5-P50-D1",
+        "TB-G6S1U5-P50-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U5-P50-D4-goal"
+      ],
+      "branchable_topics": [
+        "father",
+        "mother",
+        "post office",
+        "car",
+        "taxi",
+        "What does he do?",
+        "Talk about your parents"
+      ],
+      "return_anchors": [
+        "Where does your father/mother work?",
+        "How does he/she go to work?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P51-D1",
+      "page_uid": "TB-G6S1U5-P51",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S1U5-P51-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Oliver and Wu Binbin are talking about jobs. There are four flashcards showing different professions. Key patterns: My aunt is a scientist.; Where does she work?",
+      "focus_vocabulary": [
+        "fisherman",
+        "scientist",
+        "pilot",
+        "coach",
+        "university"
+      ],
+      "core_patterns": [
+        "My aunt is a scientist.",
+        "Where does she work?",
+        "She works at a university."
+      ],
+      "allowed_answer_scope": [
+        "fisherman",
+        "scientist",
+        "pilot",
+        "coach",
+        "university"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word fisherman?",
+        "Can you say: My aunt is a scientist."
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U5-P51-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U5-P51-D1-goal"
+      ],
+      "branchable_topics": [
+        "fisherman",
+        "scientist",
+        "pilot",
+        "coach",
+        "university",
+        "What does he do?",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "My aunt is a scientist.",
+        "Where does she work?",
+        "She works at a university."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P51-D2",
+      "page_uid": "TB-G6S1U5-P51",
+      "page_type": "vocabulary",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S1U5-P51-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Students fill in the blanks to describe jobs and workplaces based on pictures and a word bank. Key patterns: What does he/she do?; Where does he/she work?",
+      "focus_vocabulary": [
+        "university",
+        "gym",
+        "sea",
+        "plane",
+        "rescue",
+        "pet hospital"
+      ],
+      "core_patterns": [
+        "What does he/she do?",
+        "Where does he/she work?"
+      ],
+      "allowed_answer_scope": [
+        "Example given",
+        "scientist, university",
+        "fisherman, sea",
+        "coach, gym",
+        "pilot, plane"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word university?",
+        "Can you say: What does he/she do?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U5-P51-D2-goal"
+      ],
+      "branchable_topics": [
+        "university",
+        "gym",
+        "sea",
+        "plane",
+        "rescue",
+        "pet hospital",
+        "What does he do?",
+        "Write and discuss"
+      ],
+      "return_anchors": [
+        "What does he/she do?",
+        "Where does he/she work?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P52-D1",
+      "page_uid": "TB-G6S1U5-P52",
+      "page_type": "reading",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G6S1U5-P52-D1"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "Pre-reading activity: listing jobs and comparing with a partner. Key patterns: List five jobs. Compare with your partner. How many different jobs are there in both lists?",
+      "focus_vocabulary": [
+        "job",
+        "list",
+        "compare"
+      ],
+      "core_patterns": [
+        "List five jobs. Compare with your partner. How many different jobs are there in both lists?"
+      ],
+      "allowed_answer_scope": [
+        "job",
+        "list",
+        "compare"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word job?",
+        "Can you say: List five jobs. Compare with your partner. How many different jobs are there in both lists?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U5-P52-D1-goal"
+      ],
+      "branchable_topics": [
+        "job",
+        "list",
+        "compare",
+        "What does he do?",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "List five jobs. Compare with your partner. How many different jobs are there in both lists?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P52-D2",
+      "page_uid": "TB-G6S1U5-P52",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S1U5-P52-D2"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "Passages about Hu Bin, Sarah, and Robin describing their interests, skills, and career aspirations. Key patterns: He wants to work in a gym.; If you like sports, you can be a coach.",
+      "focus_vocabulary": [
+        "gym",
+        "coach",
+        "sports reporter",
+        "PE teacher",
+        "type",
+        "quickly",
+        "secretary",
+        "scientist"
+      ],
+      "core_patterns": [
+        "He wants to work in a gym.",
+        "If you like sports, you can be a coach.",
+        "She wants to work in an office."
+      ],
+      "allowed_answer_scope": [
+        "gym",
+        "coach",
+        "sports reporter",
+        "PE teacher",
+        "type",
+        "quickly"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word gym?",
+        "Can you say: He wants to work in a gym."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U5-P52-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U5-P52-D2-goal"
+      ],
+      "branchable_topics": [
+        "gym",
+        "coach",
+        "sports reporter",
+        "PE teacher",
+        "type",
+        "quickly",
+        "secretary",
+        "scientist"
+      ],
+      "return_anchors": [
+        "He wants to work in a gym.",
+        "If you like sports, you can be a coach.",
+        "She wants to work in an office."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P53-D1",
+      "page_uid": "TB-G6S1U5-P53",
+      "page_type": "phonics",
+      "block_type": "practice_multiple_choice",
+      "source_refs": [
+        "TB-G6S1U5-P53-D1"
+      ],
+      "teaching_goal": "Work on the practice multiple choice activity.",
+      "teaching_summary": "Reading comprehension exercise to choose the best title for the text. Key patterns: Choose a title for the text.",
+      "focus_vocabulary": [
+        "title",
+        "hobbies",
+        "jobs"
+      ],
+      "core_patterns": [
+        "Choose a title for the text."
+      ],
+      "allowed_answer_scope": [
+        "Hobbies and jobs"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word title?",
+        "Can you say: Choose a title for the text."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U5-P53-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U5-P53-D1-goal"
+      ],
+      "branchable_topics": [
+        "title",
+        "hobbies",
+        "jobs",
+        "What does he do?",
+        "Choose a title"
+      ],
+      "return_anchors": [
+        "Choose a title for the text."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P53-D2",
+      "page_uid": "TB-G6S1U5-P53",
+      "page_type": "phonics",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S1U5-P53-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "A table to organize information about Hu Bin, Sarah, and Robin regarding their likes, desired jobs, and work locations. Key patterns: What does he/she like?; What does he/she want to be?",
+      "focus_vocabulary": [
+        "coach",
+        "university"
+      ],
+      "core_patterns": [
+        "What does he/she like?",
+        "What does he/she want to be?",
+        "Where is he/she going to work?"
+      ],
+      "allowed_answer_scope": [
+        "Unknown (Refer to text)",
+        "coach",
+        "university"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word coach?",
+        "Can you say: What does he/she like?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U5-P53-D4",
+        "TB-G6S1U5-P53-D1",
+        "TB-G6S1U5-P53-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U5-P53-D2-goal"
+      ],
+      "branchable_topics": [
+        "coach",
+        "university",
+        "What does he do?",
+        "Fill in the table"
+      ],
+      "return_anchors": [
+        "What does he/she like?",
+        "What does he/she want to be?",
+        "Where is he/she going to work?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P53-D3",
+      "page_uid": "TB-G6S1U5-P53",
+      "page_type": "phonics",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G6S1U5-P53-D3"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "A registration form for the Real World Camp where students fill in their desired job and parents' information. Key patterns: Which job do you want to do?; What does your father/mother do?",
+      "focus_vocabulary": [
+        "camp",
+        "different",
+        "form",
+        "information",
+        "signature"
+      ],
+      "core_patterns": [
+        "Which job do you want to do?",
+        "What does your father/mother do?"
+      ],
+      "allowed_answer_scope": [
+        "camp",
+        "different",
+        "form",
+        "information",
+        "signature"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word camp?",
+        "Can you say: Which job do you want to do?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U5-P53-D3-goal"
+      ],
+      "branchable_topics": [
+        "camp",
+        "different",
+        "form",
+        "information",
+        "signature",
+        "What does he do?",
+        "Real World Camp Form"
+      ],
+      "return_anchors": [
+        "Which job do you want to do?",
+        "What does your father/mother do?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P53-D4",
+      "page_uid": "TB-G6S1U5-P53",
+      "page_type": "phonics",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G6S1U5-P53-D4"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "Pronunciation practice focusing on pausing in sentences. Key patterns: // = pause",
+      "focus_vocabulary": [
+        "pause",
+        "reporter",
+        "He is good at football//, ping-pong//and basketball.",
+        "If you like sports//, you can be a coach//, a sports reporter//, or a PE teacher."
+      ],
+      "core_patterns": [
+        "// = pause"
+      ],
+      "allowed_answer_scope": [
+        "pause",
+        "reporter",
+        "He is good at football//, ping-pong//and basketball.",
+        "If you like sports//, you can be a coach//, a sports reporter//, or a PE teacher."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word pause?",
+        "Can you say: // = pause"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U5-P53-D1",
+        "TB-G6S1U5-P53-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U5-P53-D4-goal"
+      ],
+      "branchable_topics": [
+        "pause",
+        "reporter",
+        "He is good at football//, ping-pong//and basketball.",
+        "If you like sports//, you can be a coach//, a sports reporter//, or a PE teacher.",
+        "What does he do?",
+        "Tips for pronunciation"
+      ],
+      "return_anchors": [
+        "// = pause"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P54-D1",
+      "page_uid": "TB-G6S1U5-P54",
+      "page_type": "dialogue",
+      "block_type": "assessment_quiz",
+      "source_refs": [
+        "TB-G6S1U5-P54-D1"
+      ],
+      "teaching_goal": "Check whether the learner can complete the unit review task.",
+      "teaching_summary": "Listening assessment with matching and answering questions about family members' jobs. Key patterns: What does ... do?; He is a ...",
+      "focus_vocabulary": [
+        "father",
+        "uncle",
+        "job"
+      ],
+      "core_patterns": [
+        "What does ... do?",
+        "He is a ..."
+      ],
+      "allowed_answer_scope": [
+        "father",
+        "uncle",
+        "job"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word father?",
+        "Can you say: What does ... do?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U5-P54-D1-goal"
+      ],
+      "branchable_topics": [
+        "father",
+        "uncle",
+        "job",
+        "What does he do?",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "What does ... do?",
+        "He is a ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P54-D2",
+      "page_uid": "TB-G6S1U5-P54",
+      "page_type": "dialogue",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S1U5-P54-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Grammar practice converting statements into questions. Key patterns: What does ... have?; How does ... go to ...?",
+      "focus_vocabulary": [
+        "cat",
+        "bus",
+        "gym"
+      ],
+      "core_patterns": [
+        "What does ... have?",
+        "How does ... go to ...?",
+        "Where does ... work?"
+      ],
+      "allowed_answer_scope": [
+        "does, have",
+        "does, go",
+        "does, work"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word cat?",
+        "Can you say: What does ... have?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U5-P54-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U5-P54-D2-goal"
+      ],
+      "branchable_topics": [
+        "cat",
+        "bus",
+        "gym",
+        "What does he do?",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "What does ... have?",
+        "How does ... go to ...?",
+        "Where does ... work?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P54-D3",
+      "page_uid": "TB-G6S1U5-P54",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S1U5-P54-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Students play a game called 'I didn't hear you' to practice asking questions. Key patterns: Sorry, I didn't hear you.; Sorry, I didn't hear you. What does Mary have?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Sorry, I didn't hear you.",
+        "Sorry, I didn't hear you. What does Mary have?",
+        "Mary has a cat."
+      ],
+      "allowed_answer_scope": [
+        "Mary has a cat."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Sorry, I didn't hear you."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U5-P54-D2",
+        "TB-G6S1U5-P54-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U5-P54-D3-goal"
+      ],
+      "branchable_topics": [
+        "What does he do?",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Sorry, I didn't hear you.",
+        "Sorry, I didn't hear you. What does Mary have?",
+        "Mary has a cat."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U5-P55-D1",
+      "page_uid": "TB-G6S1U5-P55",
+      "page_type": "reading",
+      "block_type": "story_time",
+      "source_refs": [
+        "TB-G6S1U5-P55-D1"
+      ],
+      "teaching_goal": "Read and retell the key story events.",
+      "teaching_summary": "Zoom and Zip are watching TV and discussing various unusual jobs. Key patterns: What other unusual jobs can you think of?; How about a ...?",
+      "focus_vocabulary": [
+        "unusual",
+        "lion tamer",
+        "bee farmer",
+        "stung",
+        "computer game tester",
+        "magician's assistant",
+        "nut cracker",
+        "nuts"
+      ],
+      "core_patterns": [
+        "What other unusual jobs can you think of?",
+        "How about a ...?",
+        "I want to be a ...",
+        "Yes. What other unusual jobs can you think of?",
+        "How about a lion tamer?",
+        "Well, what do you want to be?"
+      ],
+      "allowed_answer_scope": [
+        "Wow! What a great job!",
+        "Oh, no. Too dangerous!",
+        "Hmm. Maybe a bee farmer will get stung. That's not for me.",
+        "Maybe you can be a computer game tester. You can play games and work at home.",
+        "I like to study. I don't like computer games.",
+        "Oh, no. I don't like that."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word unusual?",
+        "Can you say: What other unusual jobs can you think of?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U5-P55-D1-goal"
+      ],
+      "branchable_topics": [
+        "unusual",
+        "lion tamer",
+        "bee farmer",
+        "stung",
+        "computer game tester",
+        "magician's assistant",
+        "nut cracker",
+        "nuts"
+      ],
+      "return_anchors": [
+        "What other unusual jobs can you think of?",
+        "How about a ...?",
+        "I want to be a ..."
+      ]
+    }
+  ]
+}

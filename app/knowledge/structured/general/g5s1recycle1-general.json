@@ -1,0 +1,960 @@
+{
+  "pilot_id": "g5s1recycle1-general-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "Recycle1",
+    "pages": [
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/01.五年级上册语料.js",
+    "app/knowledge/raw/05.五年级上册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 5 · Volume 1), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 5 · Volume 1), People's Education Press (PEP)",
+    "page_count": 4,
+    "block_count": 9,
+    "source_kind": "textbook_source_js",
+    "source_format": "js"
+  },
+  "wordlist_entries": [],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S1Recycle1-P32-D1-goal",
+      "block_uid": "TB-G5S1Recycle1-P32-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle1-P33-D1-goal",
+      "block_uid": "TB-G5S1Recycle1-P33-D1",
+      "category": "picture_scene",
+      "text": "Work on the picture scene activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle1-P33-D2-goal",
+      "block_uid": "TB-G5S1Recycle1-P33-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle1-P33-D3-goal",
+      "block_uid": "TB-G5S1Recycle1-P33-D3",
+      "category": "practice_true_false",
+      "text": "Work on the practice true false activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle1-P34-D1-goal",
+      "block_uid": "TB-G5S1Recycle1-P34-D1",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle1-P34-D2-goal",
+      "block_uid": "TB-G5S1Recycle1-P34-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle1-P35-D1-goal",
+      "block_uid": "TB-G5S1Recycle1-P35-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle1-P35-D2-goal",
+      "block_uid": "TB-G5S1Recycle1-P35-D2",
+      "category": "practice_match",
+      "text": "Work on the practice match activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle1-P35-D3-goal",
+      "block_uid": "TB-G5S1Recycle1-P35-D3",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-bananas",
+      "atom_type": "word",
+      "text": "bananas",
+      "gloss": "香蕉",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-beef",
+      "atom_type": "word",
+      "text": "beef",
+      "gloss": "牛肉",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-chicken",
+      "atom_type": "word",
+      "text": "chicken",
+      "gloss": "鸡肉",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-english",
+      "atom_type": "word",
+      "text": "English",
+      "gloss": "英语",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-friday",
+      "atom_type": "word",
+      "text": "Friday",
+      "gloss": "星期五",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hamburgers",
+      "atom_type": "word",
+      "text": "hamburgers",
+      "gloss": "汉堡包",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-maths",
+      "atom_type": "word",
+      "text": "maths",
+      "gloss": "数学",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-milk",
+      "atom_type": "word",
+      "text": "milk",
+      "gloss": "牛奶",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-monday",
+      "atom_type": "word",
+      "text": "Monday",
+      "gloss": "星期一",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-potatoes",
+      "atom_type": "word",
+      "text": "potatoes",
+      "gloss": "土豆",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-salad",
+      "atom_type": "word",
+      "text": "salad",
+      "gloss": "沙拉",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sandwiches",
+      "atom_type": "word",
+      "text": "sandwiches",
+      "gloss": "三明治",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-science",
+      "atom_type": "word",
+      "text": "science",
+      "gloss": "科学",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-thursday",
+      "atom_type": "word",
+      "text": "Thursday",
+      "gloss": "星期四",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-tuesday",
+      "atom_type": "word",
+      "text": "Tuesday",
+      "gloss": "星期二",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-wednesday",
+      "atom_type": "word",
+      "text": "Wednesday",
+      "gloss": "星期三",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-a-hamburger-please",
+      "atom_type": "sentence_pattern",
+      "text": "A hamburger, please.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-a-sandwich-please-it-s-my-favourite-food-thanks",
+      "atom_type": "sentence_pattern",
+      "text": "A sandwich, please. It's my favourite food. Thanks.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-after-lunch-we-have-a-reading-class-with-mr-reed-what-a-friendly-school",
+      "atom_type": "sentence_pattern",
+      "text": "After lunch, we have a reading class with Mr Reed. What a friendly school!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-chen-jie-meets-some-new-friends-at-willow-primary-school-listen-to-the-dialogues-and-fill-in-the-table",
+      "atom_type": "sentence_pattern",
+      "text": "Chen Jie meets some new friends at Willow Primary School. Listen to the dialogues and fill in the table.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-david-is-my-new-friend-he-is-clever-and-hard-working-he-is-funny-too-his-favourite-class-is-english-the-teacher-ms-brown-is-very-helpful",
+      "atom_type": "sentence_pattern",
+      "text": "David is my new friend. He is clever and hard-working. He is funny, too. His favourite class is English. The teacher, Ms Brown, is very helpful.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-find-friends-for-the-words-in-the-diary",
+      "atom_type": "sentence_pattern",
+      "text": "Find \"friends\" for the words in the diary.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P35-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hi-welcome-what-would-you-like-to-eat",
+      "atom_type": "sentence_pattern",
+      "text": "Hi. Welcome! What would you like to eat?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-to-the-dialogues-again-circle-the-right-answers",
+      "atom_type": "sentence_pattern",
+      "text": "Listen to the dialogues again. Circle the right answers.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P33-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-at-that-picture-that-s-ms-zhang-our-chinese-teacher",
+      "atom_type": "sentence_pattern",
+      "text": "Look at that picture. That's Ms Zhang, our Chinese teacher.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-at-the-schedule-above-tick-or-cross",
+      "atom_type": "sentence_pattern",
+      "text": "Look at the schedule above. Tick or cross.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P33-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-monday-it-is-sunny-today-i-am-at-willow-primary-school-it-is-so-pretty-there-are-many-yellow-flowers",
+      "atom_type": "sentence_pattern",
+      "text": "Monday\nIt is sunny today. I am at Willow Primary School. It is so pretty. There are many yellow flowers.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-oh-we-don-t-have-tea-today-we-have-tea-on-wednesdays-and-we-have-milk-today",
+      "atom_type": "sentence_pattern",
+      "text": "Oh, we don't have tea today. We have tea on Wednesdays and we have milk today.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-ordering-food",
+      "atom_type": "sentence_pattern",
+      "text": "Practice ordering food.",
+      "gloss": "练习点餐。",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-rearrange-the-words-write-down-the-sentences",
+      "atom_type": "sentence_pattern",
+      "text": "Rearrange the words. Write down the sentences.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P35-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-review-how-to-ask-about-and-describe-people-especially-teachers",
+      "atom_type": "sentence_pattern",
+      "text": "Review how to ask about and describe people, especially teachers.",
+      "gloss": "复习如何询问和描述人物，特别是老师。",
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-tea-please",
+      "atom_type": "sentence_pattern",
+      "text": "Tea, please.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-teachers-and-students-often-eat-lunch-at-school-some-of-them-have-beef-and-drink-tea-some-love-green-beans-and-ice-cream-the-food-is-delicious",
+      "atom_type": "sentence_pattern",
+      "text": "Teachers and students often eat lunch at school. Some of them have beef and drink tea. Some love green beans and ice cream. The food is delicious!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-that-s-fine-i-ll-have-milk",
+      "atom_type": "sentence_pattern",
+      "text": "That's fine. I'll have milk.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-these-are-my-teachers",
+      "atom_type": "sentence_pattern",
+      "text": "These are my teachers.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-would-you-like-to-drink",
+      "atom_type": "sentence_pattern",
+      "text": "What would you like to drink?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-would-you-like-to-eat",
+      "atom_type": "sentence_pattern",
+      "text": "What would you like to eat?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P34-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-s-she-like-is-she-kind",
+      "atom_type": "sentence_pattern",
+      "text": "What's she like? Is she kind?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-who-s-your-chinese-teacher",
+      "atom_type": "sentence_pattern",
+      "text": "Who's your Chinese teacher?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-she-s-very-kind-but-she-s-strict-sometimes",
+      "atom_type": "sentence_pattern",
+      "text": "Yes. She's very kind, but she's strict sometimes.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle1-P32-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S1Recycle1-P32",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Recycle 1 - Chen Jie at Willow Primary School. 陈洁正在访问英国的柳树小学。大卫是该校的学生，他向陈洁介绍学校公告栏上的老师照片。此部分旨在复习如何询问和描述人物。",
+      "entry_probe_questions": [
+        "Can you say: Review how to ask about and describe people, especially teachers."
+      ],
+      "priority_blocks": [
+        "TB-G5S1Recycle1-P32-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1Recycle1-P33",
+      "page_type": "listening",
+      "page_intro_cn": "Theme: Recycle 1 - School Schedule. 再次听对话，根据内容选择问题的正确答案，考察学生对人物喜好的听力理解能力。",
+      "entry_probe_questions": [
+        "Can you say: Listen to the dialogues again. Circle the right answers."
+      ],
+      "priority_blocks": [
+        "TB-G5S1Recycle1-P33-D2",
+        "TB-G5S1Recycle1-P33-D1",
+        "TB-G5S1Recycle1-P33-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1Recycle1-P34",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Recycle 1 - Ordering Lunch. 一个角色扮演活动，让学生和同伴练习点餐。学生还需要在盘子上画出自己想吃的食物。",
+      "entry_probe_questions": [
+        "Can you say: Practice ordering food."
+      ],
+      "priority_blocks": [
+        "TB-G5S1Recycle1-P34-D2",
+        "TB-G5S1Recycle1-P34-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1Recycle1-P35",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Recycle 1 - Reading and Writing Practice. 阅读陈洁的一篇日记，内容涉及她在柳树小学的见闻，包括学校环境、新朋友、老师、午餐和课程。学生需要为日记的每个段落选择一个最合适的小标题。",
+      "entry_probe_questions": [
+        "Can you say: Monday\nIt is sunny today. I am at Willow Primary School. It is so pretty. There are many yellow flowers."
+      ],
+      "priority_blocks": [
+        "TB-G5S1Recycle1-P35-D1",
+        "TB-G5S1Recycle1-P35-D2",
+        "TB-G5S1Recycle1-P35-D3"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S1Recycle1-P32-D1",
+      "page_uid": "TB-G5S1Recycle1-P32",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S1Recycle1-P32-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "陈洁正在访问英国的柳树小学。大卫是该校的学生，他向陈洁介绍学校公告栏上的老师照片。此部分旨在复习如何询问和描述人物。 Key patterns: Review how to ask about and describe people, especially teachers.; Who's your Chinese teacher?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Review how to ask about and describe people, especially teachers.",
+        "Who's your Chinese teacher?",
+        "What's she like? Is she kind?",
+        "These are my teachers.",
+        "Look at that picture. That's Ms Zhang, our Chinese teacher.",
+        "Yes. She's very kind, but she's strict sometimes."
+      ],
+      "allowed_answer_scope": [
+        "These are my teachers.",
+        "Look at that picture. That's Ms Zhang, our Chinese teacher.",
+        "Yes. She's very kind, but she's strict sometimes."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Review how to ask about and describe people, especially teachers."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1Recycle1-P32-D1-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 1 - Chen Jie at Willow Primary School",
+        "Recycle 1"
+      ],
+      "return_anchors": [
+        "Review how to ask about and describe people, especially teachers.",
+        "Who's your Chinese teacher?",
+        "What's she like? Is she kind?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle1-P33-D1",
+      "page_uid": "TB-G5S1Recycle1-P33",
+      "page_type": "listening",
+      "block_type": "picture_scene",
+      "source_refs": [
+        "TB-G5S1Recycle1-P33-D1"
+      ],
+      "teaching_goal": "Work on the picture scene activity.",
+      "teaching_summary": "一个详细的周课程表，展示了从周一到周五的各科安排，作为后续听力和阅读练习的材料。 Key patterns: Chen Jie meets some new friends at Willow Primary School. Listen to the dialogues and fill in the table.",
+      "focus_vocabulary": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "English",
+        "maths",
+        "science"
+      ],
+      "core_patterns": [
+        "Chen Jie meets some new friends at Willow Primary School. Listen to the dialogues and fill in the table."
+      ],
+      "allowed_answer_scope": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "English"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word Monday?",
+        "Can you say: Chen Jie meets some new friends at Willow Primary School. Listen to the dialogues and fill in the table."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [
+        "TB-G5S1Recycle1-P33-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1Recycle1-P33-D1-goal"
+      ],
+      "branchable_topics": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "English",
+        "maths",
+        "science"
+      ],
+      "return_anchors": [
+        "Chen Jie meets some new friends at Willow Primary School. Listen to the dialogues and fill in the table."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle1-P33-D2",
+      "page_uid": "TB-G5S1Recycle1-P33",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1Recycle1-P33-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "再次听对话，根据内容选择问题的正确答案，考察学生对人物喜好的听力理解能力。 Key patterns: Listen to the dialogues again. Circle the right answers.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen to the dialogues again. Circle the right answers."
+      ],
+      "allowed_answer_scope": [
+        "B",
+        "A"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen to the dialogues again. Circle the right answers."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1Recycle1-P33-D1",
+        "TB-G5S1Recycle1-P33-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1Recycle1-P33-D2-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 1 - School Schedule",
+        "Listen to the dialogues again. Circle the right answers."
+      ],
+      "return_anchors": [
+        "Listen to the dialogues again. Circle the right answers."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle1-P33-D3",
+      "page_uid": "TB-G5S1Recycle1-P33",
+      "page_type": "listening",
+      "block_type": "practice_true_false",
+      "source_refs": [
+        "TB-G5S1Recycle1-P33-D3"
+      ],
+      "teaching_goal": "Work on the practice true false activity.",
+      "teaching_summary": "根据页面上方的课程表，判断四个陈述句的对错。 Key patterns: Look at the schedule above. Tick or cross.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Look at the schedule above. Tick or cross."
+      ],
+      "allowed_answer_scope": [
+        "✗",
+        "✓"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Look at the schedule above. Tick or cross."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1Recycle1-P33-D3-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 1 - School Schedule",
+        "Look at the schedule above. Tick or cross."
+      ],
+      "return_anchors": [
+        "Look at the schedule above. Tick or cross."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle1-P34-D1",
+      "page_uid": "TB-G5S1Recycle1-P34",
+      "page_type": "dialogue",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G5S1Recycle1-P34-D1"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "陈洁在周一的午餐时间在食堂点餐。学生需要根据给出的周一至周五的菜单，阅读对话并填空。 Key patterns: Hi. Welcome! What would you like to eat?; What would you like to drink?",
+      "focus_vocabulary": [
+        "bananas",
+        "potatoes",
+        "beef",
+        "sandwiches",
+        "milk",
+        "salad",
+        "hamburgers",
+        "chicken"
+      ],
+      "core_patterns": [
+        "Hi. Welcome! What would you like to eat?",
+        "What would you like to drink?",
+        "A sandwich, please. It's my favourite food. Thanks.",
+        "Tea, please.",
+        "Oh, we don't have tea today. We have tea on Wednesdays and we have milk today.",
+        "That's fine. I'll have milk."
+      ],
+      "allowed_answer_scope": [
+        "favourite",
+        "drink",
+        "Wednesdays, milk"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word bananas?",
+        "Can you say: Hi. Welcome! What would you like to eat?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1Recycle1-P34-D1-goal"
+      ],
+      "branchable_topics": [
+        "bananas",
+        "potatoes",
+        "beef",
+        "sandwiches",
+        "milk",
+        "salad",
+        "hamburgers",
+        "chicken"
+      ],
+      "return_anchors": [
+        "Hi. Welcome! What would you like to eat?",
+        "What would you like to drink?",
+        "A sandwich, please. It's my favourite food. Thanks."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle1-P34-D2",
+      "page_uid": "TB-G5S1Recycle1-P34",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1Recycle1-P34-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "一个角色扮演活动，让学生和同伴练习点餐。学生还需要在盘子上画出自己想吃的食物。 Key patterns: Practice ordering food.; What would you like to eat?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice ordering food.",
+        "What would you like to eat?",
+        "A hamburger, please."
+      ],
+      "allowed_answer_scope": [
+        "A hamburger, please."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice ordering food."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1Recycle1-P34-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1Recycle1-P34-D2-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 1 - Ordering Lunch",
+        "Role-play with your partner. Draw your food on the plate."
+      ],
+      "return_anchors": [
+        "Practice ordering food.",
+        "What would you like to eat?",
+        "A hamburger, please."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle1-P35-D1",
+      "page_uid": "TB-G5S1Recycle1-P35",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S1Recycle1-P35-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "阅读陈洁的一篇日记，内容涉及她在柳树小学的见闻，包括学校环境、新朋友、老师、午餐和课程。学生需要为日记的每个段落选择一个最合适的小标题。 Key patterns: Monday\nIt is sunny today. I am at Willow Primary School. It is so pretty. There are many yellow flowers.; David is my new friend. He is clever and hard-working. He is funny, too. His favourite class is English. The teacher, Ms Brown, is very helpful.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Monday\nIt is sunny today. I am at Willow Primary School. It is so pretty. There are many yellow flowers.",
+        "David is my new friend. He is clever and hard-working. He is funny, too. His favourite class is English. The teacher, Ms Brown, is very helpful.",
+        "Teachers and students often eat lunch at school. Some of them have beef and drink tea. Some love green beans and ice cream. The food is delicious!",
+        "After lunch, we have a reading class with Mr Reed. What a friendly school!"
+      ],
+      "allowed_answer_scope": [
+        "Monday\nIt is sunny today. I am at Willow Primary School. It is so pretty. There are many yellow flowers.",
+        "David is my new friend. He is clever and hard-working. He is funny, too. His favourite class is English. The teacher, Ms Brown, is very helpful.",
+        "Teachers and students often eat lunch at school. Some of them have beef and drink tea. Some love green beans and ice cream. The food is delicious!",
+        "After lunch, we have a reading class with Mr Reed. What a friendly school!"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Monday\nIt is sunny today. I am at Willow Primary School. It is so pretty. There are many yellow flowers."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S1Recycle1-P35-D2",
+        "TB-G5S1Recycle1-P35-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1Recycle1-P35-D1-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 1 - Reading and Writing Practice",
+        "Read Chen Jie's diary. Write the letters in the boxes."
+      ],
+      "return_anchors": [
+        "Monday\nIt is sunny today. I am at Willow Primary School. It is so pretty. There are many yellow flowers.",
+        "David is my new friend. He is clever and hard-working. He is funny, too. His favourite class is English. The teacher, Ms Brown, is very helpful.",
+        "Teachers and students often eat lunch at school. Some of them have beef and drink tea. Some love green beans and ice cream. The food is delicious!"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle1-P35-D2",
+      "page_uid": "TB-G5S1Recycle1-P35",
+      "page_type": "reading",
+      "block_type": "practice_match",
+      "source_refs": [
+        "TB-G5S1Recycle1-P35-D2"
+      ],
+      "teaching_goal": "Work on the practice match activity.",
+      "teaching_summary": "词汇搭配练习。学生需要为给出的五个单词在日记中找到与之搭配的另一个词，并写在气泡框中。 Key patterns: Find \"friends\" for the words in the diary.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Find \"friends\" for the words in the diary."
+      ],
+      "allowed_answer_scope": [
+        "day",
+        "school",
+        "noodles (or implied eat)",
+        "flowers",
+        "lunch",
+        "yellow"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Find \"friends\" for the words in the diary."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [
+        "TB-G5S1Recycle1-P35-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1Recycle1-P35-D2-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 1 - Reading and Writing Practice",
+        "Find \"friends\" for the words in the diary."
+      ],
+      "return_anchors": [
+        "Find \"friends\" for the words in the diary."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle1-P35-D3",
+      "page_uid": "TB-G5S1Recycle1-P35",
+      "page_type": "reading",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S1Recycle1-P35-D3"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "连词成句练习。学生需要将打乱顺序的词语重新排列，组成通顺正确的句子。 Key patterns: Rearrange the words. Write down the sentences.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Rearrange the words. Write down the sentences."
+      ],
+      "allowed_answer_scope": [
+        "Do you often watch TV on the weekend?",
+        "They often do homework on Saturdays.",
+        "We often read books on Sundays."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Rearrange the words. Write down the sentences."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1Recycle1-P35-D3-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 1 - Reading and Writing Practice",
+        "Rearrange the words. Write down the sentences."
+      ],
+      "return_anchors": [
+        "Rearrange the words. Write down the sentences."
+      ]
+    }
+  ]
+}

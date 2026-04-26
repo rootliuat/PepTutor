@@ -1,0 +1,173 @@
+{
+  "pilot_id": "g5s1u3-p28-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "U3",
+    "pages": [28]
+  },
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S1U3-P28",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Unit 3 page 28: describe food with fresh, healthy, delicious, hot, and sweet.",
+      "entry_probe_questions": [
+        "Do you know sweet?",
+        "Can you say: Ice cream is sweet?"
+      ],
+      "assumed_prior_knowledge": [
+        {
+          "topic": "favourite food talk from page 27",
+          "source": "unit_progression",
+          "confidence": "medium",
+          "verification_status": "unverified",
+          "verify_by_block_uid": "TB-G5S1U3-P28-D2",
+          "learning_target_uids": [
+            "LT-G5S1U3-P28-pattern-food-plus-adjective"
+          ]
+        }
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P28-D1",
+        "TB-G5S1U3-P28-D2",
+        "TB-G5S1U3-P28-D3"
+      ]
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S1U3-P28-D1",
+      "page_uid": "TB-G5S1U3-P28",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": ["TB-G5S1U3-P28-D1"],
+      "teaching_goal": "Learn the core adjectives for describing food.",
+      "teaching_summary": "Teach fresh, healthy, delicious, hot, and sweet as short description words.",
+      "focus_vocabulary": ["fresh", "healthy", "delicious", "hot", "sweet"],
+      "core_patterns": [],
+      "allowed_answer_scope": ["fresh", "healthy", "delicious", "hot", "sweet"],
+      "entry_probe_questions": ["Do you know sweet?", "Can you tell me one food that is hot?"],
+      "repair_modes": ["repeat", "word_drill", "choice_probe"],
+      "next_block_uids": ["TB-G5S1U3-P28-D2", "TB-G5S1U3-P28-D3"],
+      "learning_target_uids": [
+        "LT-G5S1U3-P28-word-fresh",
+        "LT-G5S1U3-P28-word-healthy",
+        "LT-G5S1U3-P28-word-delicious",
+        "LT-G5S1U3-P28-word-hot",
+        "LT-G5S1U3-P28-word-sweet"
+      ],
+      "branchable_topics": ["fresh", "healthy", "delicious", "hot", "sweet"],
+      "return_anchors": ["fresh", "healthy", "sweet"]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P28-D2",
+      "page_uid": "TB-G5S1U3-P28",
+      "page_type": "vocabulary",
+      "block_type": "sentence_pattern_practice",
+      "source_refs": ["TB-G5S1U3-P28-D2"],
+      "teaching_goal": "Use adjective words to describe favourite food.",
+      "teaching_summary": "Model answer: Ice cream. It is sweet.",
+      "focus_vocabulary": ["ice cream", "sweet"],
+      "core_patterns": ["What is your favourite food?", "It is sweet."],
+      "allowed_answer_scope": ["Ice cream. It is sweet.", "Fish is delicious."],
+      "entry_probe_questions": ["Can you say: Ice cream is sweet?"],
+      "repair_modes": ["slow_read", "sentence_drill"],
+      "next_block_uids": ["TB-G5S1U3-P28-D3"],
+      "learning_target_uids": ["LT-G5S1U3-P28-pattern-food-plus-adjective"]
+      ,
+      "branchable_topics": ["favourite food", "adjective", "ice cream"],
+      "return_anchors": ["What is your favourite food?", "It is sweet."]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P28-D3",
+      "page_uid": "TB-G5S1U3-P28",
+      "page_type": "vocabulary",
+      "block_type": "practice_write",
+      "source_refs": ["TB-G5S1U3-P28-D3"],
+      "teaching_goal": "Choose the correct adjective from a food picture and say it aloud.",
+      "teaching_summary": "Look, write and say with hot, fresh, delicious, and sweet.",
+      "focus_vocabulary": ["hot", "fresh", "delicious", "sweet"],
+      "core_patterns": ["They are ...", "It is very ..."],
+      "allowed_answer_scope": ["hot", "fresh", "delicious", "sweet"],
+      "entry_probe_questions": ["What adjective matches this picture?"],
+      "repair_modes": ["choice_probe", "word_drill"],
+      "next_block_uids": [],
+      "learning_target_uids": ["LT-G5S1U3-P28-picture-to-adjective"]
+      ,
+      "branchable_topics": ["picture", "adjective"],
+      "return_anchors": ["They are ...", "It is very ..."]
+    }
+  ],
+  "knowledge_atoms": [
+    { "atom_uid": "KA-G5S1U3-word-fresh", "atom_type": "word", "text": "fresh", "gloss": "new and good to eat" },
+    { "atom_uid": "KA-G5S1U3-word-healthy", "atom_type": "word", "text": "healthy", "gloss": "good for your body" },
+    { "atom_uid": "KA-G5S1U3-word-delicious", "atom_type": "word", "text": "delicious", "gloss": "very good to eat" },
+    { "atom_uid": "KA-G5S1U3-word-hot", "atom_type": "word", "text": "hot", "gloss": "spicy or very warm" },
+    { "atom_uid": "KA-G5S1U3-word-sweet", "atom_type": "word", "text": "sweet", "gloss": "sugary taste" }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S1U3-P28-word-fresh",
+      "category": "word",
+      "mastery_signal_examples": {
+        "mastered": "Learner understands and uses fresh correctly.",
+        "shaky": "Learner recognizes the word but cannot use it in context.",
+        "not_mastered": "Learner does not know the meaning."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P28-word-healthy",
+      "category": "word",
+      "mastery_signal_examples": {
+        "mastered": "Learner understands and uses healthy correctly.",
+        "shaky": "Learner recognizes the word but cannot use it in context.",
+        "not_mastered": "Learner does not know the meaning."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P28-word-delicious",
+      "category": "word",
+      "mastery_signal_examples": {
+        "mastered": "Learner understands and uses delicious correctly.",
+        "shaky": "Learner recognizes the word but cannot use it in context.",
+        "not_mastered": "Learner does not know the meaning."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P28-word-hot",
+      "category": "word",
+      "mastery_signal_examples": {
+        "mastered": "Learner understands and uses hot correctly for food.",
+        "shaky": "Learner recognizes the word but applies it inconsistently.",
+        "not_mastered": "Learner does not know the meaning."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P28-word-sweet",
+      "category": "word",
+      "mastery_signal_examples": {
+        "mastered": "Learner understands and uses sweet correctly.",
+        "shaky": "Learner recognizes the word but cannot say the full description sentence.",
+        "not_mastered": "Learner does not know the meaning."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P28-pattern-food-plus-adjective",
+      "category": "sentence_pattern",
+      "mastery_signal_examples": {
+        "mastered": "Learner says a full food plus adjective sentence.",
+        "shaky": "Learner can name the food or adjective but not both together.",
+        "not_mastered": "Learner cannot describe the food."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P28-picture-to-adjective",
+      "category": "vocabulary_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner maps the picture to the correct adjective.",
+        "shaky": "Learner needs options before choosing the adjective.",
+        "not_mastered": "Learner cannot match the picture to a word."
+      }
+    }
+  ]
+}

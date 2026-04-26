@@ -1,0 +1,3141 @@
+{
+  "pilot_id": "g5s2u3-general-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S2",
+    "unit": "U3",
+    "pages": [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/02.五年级下册语料.js",
+    "app/knowledge/raw/06.五年级下册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 5 · Volume 2), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 5 · Volume 2), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 23,
+    "source_kind": "textbook_source_js",
+    "source_format": "js"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 3",
+      "word": "January",
+      "phonetic": "/'dʒænjuəri/",
+      "chinese": "一月",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U3-P22-D1",
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "February",
+      "phonetic": "/'februəri/",
+      "chinese": "二月",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U3-P22-D1",
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "March",
+      "phonetic": "/mɑːtʃ/",
+      "chinese": "三月",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U3-P22-D1",
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "April",
+      "phonetic": "/'eɪprəl/",
+      "chinese": "四月",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U3-P22-D1",
+        "TB-G5S2U3-P24-D2",
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "May",
+      "phonetic": "/meɪ/",
+      "chinese": "五月",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U3-P22-D1",
+        "TB-G5S2U3-P24-D2",
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "June",
+      "phonetic": "/dʒuːn/",
+      "chinese": "六月",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U3-P22-D1",
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "July",
+      "phonetic": "/dʒu'laɪ/",
+      "chinese": "七月",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U3-P23-D1",
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "August",
+      "phonetic": "/'ɔːɡəst/",
+      "chinese": "八月",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U3-P23-D1",
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "September",
+      "phonetic": "/sep'tembə(r)/",
+      "chinese": "九月",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U3-P23-D1",
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "October",
+      "phonetic": "/ɒk'təʊbə(r)/",
+      "chinese": "十月",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U3-P23-D1",
+        "TB-G5S2U3-P27-D2",
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "November",
+      "phonetic": "/nəʊ'vembə(r)/",
+      "chinese": "十一月",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U3-P23-D1",
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "December",
+      "phonetic": "/dɪ'sembə(r)/",
+      "chinese": "十二月",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S2U3-P23-D1",
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "few",
+      "phonetic": "/fjuː/",
+      "chinese": "不多；很少",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "a few",
+      "chinese": "一些",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "thing",
+      "phonetic": "/θɪŋ/",
+      "chinese": "事情",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "meet",
+      "phonetic": "/miːt/",
+      "chinese": "集会；开会",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S2U3-P24-D2",
+        "TB-G5S2U3-P24-D3"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "sports meet",
+      "chinese": "运动会",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S2U3-P24-D2",
+        "TB-G5S2U3-P24-D3"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "trip",
+      "phonetic": "/trɪp/",
+      "chinese": "旅行",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S2U3-P23-D2",
+        "TB-G5S2U3-P24-D2",
+        "TB-G5S2U3-P24-D3",
+        "TB-G5S2U3-P27-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "year",
+      "phonetic": "/jɪə(r)/",
+      "chinese": "年",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "plant",
+      "phonetic": "/plɑːnt/",
+      "chinese": "种植",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "contest",
+      "phonetic": "/'kɒntest/",
+      "chinese": "比赛；竞赛",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S2U3-P23-D2",
+        "TB-G5S2U3-P24-D3"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "labour",
+      "phonetic": "/'leɪbə(r)/",
+      "chinese": "劳动",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "Labour Day",
+      "chinese": "劳动节",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "the Great Wall",
+      "chinese": "长城",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S2U3-P27-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "national",
+      "phonetic": "/'næʃnəl/",
+      "chinese": "国家的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "National Day",
+      "chinese": "国庆节",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "American",
+      "phonetic": "/ə'merɪkən/",
+      "chinese": "美国的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "Thanksgiving",
+      "phonetic": "/ˌθæŋks'ɡɪvɪŋ/",
+      "chinese": "感恩节",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "Christmas",
+      "phonetic": "/'krɪsməs/",
+      "chinese": "圣诞节",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "game",
+      "phonetic": "/ɡeɪm/",
+      "chinese": "游戏",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "riddle",
+      "phonetic": "/'rɪdl/",
+      "chinese": "谜；谜语",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "act",
+      "phonetic": "/ækt/",
+      "chinese": "扮演",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "act out",
+      "chinese": "把……表演出来",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "RSVP",
+      "chinese": "（用于请柬）请赐复",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "by",
+      "phonetic": "/baɪ/",
+      "chinese": "在……之前",
+      "emphasized": false,
+      "linked_block_uids": []
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S2U3-P22-D1-goal",
+      "block_uid": "TB-G5S2U3-P22-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P23-D1-goal",
+      "block_uid": "TB-G5S2U3-P23-D1",
+      "category": "picture_scene",
+      "text": "Work on the picture scene activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P23-D2-goal",
+      "block_uid": "TB-G5S2U3-P23-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P24-D1-goal",
+      "block_uid": "TB-G5S2U3-P24-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P24-D2-goal",
+      "block_uid": "TB-G5S2U3-P24-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P24-D3-goal",
+      "block_uid": "TB-G5S2U3-P24-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P25-D1-goal",
+      "block_uid": "TB-G5S2U3-P25-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P25-D2-goal",
+      "block_uid": "TB-G5S2U3-P25-D2",
+      "category": "practice_true_false",
+      "text": "Work on the practice true false activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P26-D1-goal",
+      "block_uid": "TB-G5S2U3-P26-D1",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P26-D2-goal",
+      "block_uid": "TB-G5S2U3-P26-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P26-D3-goal",
+      "block_uid": "TB-G5S2U3-P26-D3",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P27-D1-goal",
+      "block_uid": "TB-G5S2U3-P27-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P27-D2-goal",
+      "block_uid": "TB-G5S2U3-P27-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P27-D3-goal",
+      "block_uid": "TB-G5S2U3-P27-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P28-D1-goal",
+      "block_uid": "TB-G5S2U3-P28-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P28-D2-goal",
+      "block_uid": "TB-G5S2U3-P28-D2",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P29-D1-goal",
+      "block_uid": "TB-G5S2U3-P29-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P29-D2-goal",
+      "block_uid": "TB-G5S2U3-P29-D2",
+      "category": "practice_true_false",
+      "text": "Work on the practice true false activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P29-D3-goal",
+      "block_uid": "TB-G5S2U3-P29-D3",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P30-D1-goal",
+      "block_uid": "TB-G5S2U3-P30-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P30-D2-goal",
+      "block_uid": "TB-G5S2U3-P30-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P30-D3-goal",
+      "block_uid": "TB-G5S2U3-P30-D3",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2U3-P31-D1-goal",
+      "block_uid": "TB-G5S2U3-P31-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-a-few",
+      "atom_type": "word",
+      "text": "a few",
+      "gloss": "一些",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-act",
+      "atom_type": "word",
+      "text": "act",
+      "gloss": "扮演",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-act-out",
+      "atom_type": "word",
+      "text": "act out",
+      "gloss": "把……表演出来",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-american",
+      "atom_type": "word",
+      "text": "American",
+      "gloss": "美国的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-april",
+      "atom_type": "word",
+      "text": "April",
+      "gloss": "四月",
+      "linked_blocks": [
+        "TB-G5S2U3-P22-D1",
+        "TB-G5S2U3-P24-D2",
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-april-apr",
+      "atom_type": "word",
+      "text": "April (Apr.)",
+      "gloss": "四月",
+      "linked_blocks": [
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-august",
+      "atom_type": "word",
+      "text": "August",
+      "gloss": "八月",
+      "linked_blocks": [
+        "TB-G5S2U3-P23-D1",
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-august-aug",
+      "atom_type": "word",
+      "text": "August (Aug.)",
+      "gloss": "八月",
+      "linked_blocks": [
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-autumn",
+      "atom_type": "word",
+      "text": "autumn",
+      "gloss": "秋天",
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-by",
+      "atom_type": "word",
+      "text": "by",
+      "gloss": "在……之前",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-cheap",
+      "atom_type": "word",
+      "text": "cheap",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P26-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-chicken",
+      "atom_type": "word",
+      "text": "chicken",
+      "gloss": "鸡",
+      "linked_blocks": [
+        "TB-G5S2U3-P26-D1",
+        "TB-G5S2U3-P26-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-china",
+      "atom_type": "word",
+      "text": "China",
+      "gloss": "中国",
+      "linked_blocks": [
+        "TB-G5S2U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-chinese-maths-test",
+      "atom_type": "word",
+      "text": "Chinese/maths/... test",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-christmas",
+      "atom_type": "word",
+      "text": "Christmas",
+      "gloss": "圣诞节",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-contest",
+      "atom_type": "word",
+      "text": "contest",
+      "gloss": "比赛；竞赛",
+      "linked_blocks": [
+        "TB-G5S2U3-P23-D2",
+        "TB-G5S2U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-cook",
+      "atom_type": "word",
+      "text": "cook",
+      "gloss": "做饭",
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-dance",
+      "atom_type": "word",
+      "text": "dance",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P29-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-december",
+      "atom_type": "word",
+      "text": "December",
+      "gloss": "十二月",
+      "linked_blocks": [
+        "TB-G5S2U3-P23-D1",
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-december-dec",
+      "atom_type": "word",
+      "text": "December (Dec.)",
+      "gloss": "十二月",
+      "linked_blocks": [
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-early-planning",
+      "atom_type": "word",
+      "text": "early planning",
+      "gloss": "早期规划",
+      "linked_blocks": [
+        "TB-G5S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-eat-noodles-a-birthday-cake",
+      "atom_type": "word",
+      "text": "eat noodles/a birthday cake",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P29-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-english-party",
+      "atom_type": "word",
+      "text": "English party",
+      "gloss": "英语派对",
+      "linked_blocks": [
+        "TB-G5S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-february",
+      "atom_type": "word",
+      "text": "February",
+      "gloss": "二月",
+      "linked_blocks": [
+        "TB-G5S2U3-P22-D1",
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-february-feb",
+      "atom_type": "word",
+      "text": "February (Feb.)",
+      "gloss": "二月",
+      "linked_blocks": [
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-few",
+      "atom_type": "word",
+      "text": "few",
+      "gloss": "不多；很少",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-fish",
+      "atom_type": "word",
+      "text": "fish",
+      "gloss": "鱼",
+      "linked_blocks": [
+        "TB-G5S2U3-P26-D1",
+        "TB-G5S2U3-P26-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-fresh",
+      "atom_type": "word",
+      "text": "fresh",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P26-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-game",
+      "atom_type": "word",
+      "text": "game",
+      "gloss": "游戏",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-grape-valley",
+      "atom_type": "word",
+      "text": "Grape Valley",
+      "gloss": "葡萄沟",
+      "linked_blocks": [
+        "TB-G5S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-huangshan-mountain",
+      "atom_type": "word",
+      "text": "Huangshan Mountain",
+      "gloss": "黄山",
+      "linked_blocks": [
+        "TB-G5S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-january",
+      "atom_type": "word",
+      "text": "January",
+      "gloss": "一月",
+      "linked_blocks": [
+        "TB-G5S2U3-P22-D1",
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-january-jan",
+      "atom_type": "word",
+      "text": "January (Jan.)",
+      "gloss": "一月",
+      "linked_blocks": [
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-july",
+      "atom_type": "word",
+      "text": "July",
+      "gloss": "七月",
+      "linked_blocks": [
+        "TB-G5S2U3-P23-D1",
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-july-jul",
+      "atom_type": "word",
+      "text": "July (Jul.)",
+      "gloss": "七月",
+      "linked_blocks": [
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-june",
+      "atom_type": "word",
+      "text": "June",
+      "gloss": "六月",
+      "linked_blocks": [
+        "TB-G5S2U3-P22-D1",
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-june-jun",
+      "atom_type": "word",
+      "text": "June (Jun.)",
+      "gloss": "六月",
+      "linked_blocks": [
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-labour",
+      "atom_type": "word",
+      "text": "labour",
+      "gloss": "劳动",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-labour-day",
+      "atom_type": "word",
+      "text": "Labour Day",
+      "gloss": "劳动节",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-lunch",
+      "atom_type": "word",
+      "text": "lunch",
+      "gloss": "午餐",
+      "linked_blocks": [
+        "TB-G5S2U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-make-a-card",
+      "atom_type": "word",
+      "text": "make a card",
+      "gloss": "制作一张卡片",
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-make-a-wish",
+      "atom_type": "word",
+      "text": "make a wish",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P29-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-march",
+      "atom_type": "word",
+      "text": "March",
+      "gloss": "三月",
+      "linked_blocks": [
+        "TB-G5S2U3-P22-D1",
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-march-mar",
+      "atom_type": "word",
+      "text": "March (Mar.)",
+      "gloss": "三月",
+      "linked_blocks": [
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-maths-test",
+      "atom_type": "word",
+      "text": "maths test",
+      "gloss": "数学考试",
+      "linked_blocks": [
+        "TB-G5S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-may",
+      "atom_type": "word",
+      "text": "May",
+      "gloss": "五月",
+      "linked_blocks": [
+        "TB-G5S2U3-P22-D1",
+        "TB-G5S2U3-P24-D2",
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-meet",
+      "atom_type": "word",
+      "text": "meet",
+      "gloss": "集会；开会",
+      "linked_blocks": [
+        "TB-G5S2U3-P24-D2",
+        "TB-G5S2U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-national",
+      "atom_type": "word",
+      "text": "national",
+      "gloss": "国家的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-national-day",
+      "atom_type": "word",
+      "text": "National Day",
+      "gloss": "国庆节",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-new-year-s-day",
+      "atom_type": "word",
+      "text": "New Year's Day",
+      "gloss": "元旦",
+      "linked_blocks": [
+        "TB-G5S2U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-nice",
+      "atom_type": "word",
+      "text": "nice",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P26-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-november",
+      "atom_type": "word",
+      "text": "November",
+      "gloss": "十一月",
+      "linked_blocks": [
+        "TB-G5S2U3-P23-D1",
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-november-nov",
+      "atom_type": "word",
+      "text": "November (Nov.)",
+      "gloss": "十一月",
+      "linked_blocks": [
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-october",
+      "atom_type": "word",
+      "text": "October",
+      "gloss": "十月",
+      "linked_blocks": [
+        "TB-G5S2U3-P23-D1",
+        "TB-G5S2U3-P27-D2",
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-october-oct",
+      "atom_type": "word",
+      "text": "October (Oct.)",
+      "gloss": "十月",
+      "linked_blocks": [
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-plant",
+      "atom_type": "word",
+      "text": "plant",
+      "gloss": "种植",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-play-games",
+      "atom_type": "word",
+      "text": "play games",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P29-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-play-the-pipa-for-her",
+      "atom_type": "word",
+      "text": "play the pipa for her",
+      "gloss": "为她弹琵琶",
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-riddle",
+      "atom_type": "word",
+      "text": "riddle",
+      "gloss": "谜；谜语",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-rsvp",
+      "atom_type": "word",
+      "text": "RSVP",
+      "gloss": "（用于请柬）请赐复",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-say-thank-you",
+      "atom_type": "word",
+      "text": "say \"Thank you\"",
+      "gloss": "说“谢谢你”",
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-school-trip",
+      "atom_type": "word",
+      "text": "school trip",
+      "gloss": "学校旅行",
+      "linked_blocks": [
+        "TB-G5S2U3-P23-D2",
+        "TB-G5S2U3-P24-D2",
+        "TB-G5S2U3-P24-D3",
+        "TB-G5S2U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-september",
+      "atom_type": "word",
+      "text": "September",
+      "gloss": "九月",
+      "linked_blocks": [
+        "TB-G5S2U3-P23-D1",
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-september-sept",
+      "atom_type": "word",
+      "text": "September (Sept.)",
+      "gloss": "九月",
+      "linked_blocks": [
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sheep",
+      "atom_type": "word",
+      "text": "sheep",
+      "gloss": "羊",
+      "linked_blocks": [
+        "TB-G5S2U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-shirt",
+      "atom_type": "word",
+      "text": "shirt",
+      "gloss": "衬衫",
+      "linked_blocks": [
+        "TB-G5S2U3-P26-D1",
+        "TB-G5S2U3-P26-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-short",
+      "atom_type": "word",
+      "text": "short",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P26-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-shorts",
+      "atom_type": "word",
+      "text": "shorts",
+      "gloss": "短裤",
+      "linked_blocks": [
+        "TB-G5S2U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sing-the-birthday-song",
+      "atom_type": "word",
+      "text": "sing the birthday song",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P29-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-sing-to-her",
+      "atom_type": "word",
+      "text": "sing to her",
+      "gloss": "唱歌给她听",
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-singing-contest",
+      "atom_type": "word",
+      "text": "singing contest",
+      "gloss": "歌唱比赛",
+      "linked_blocks": [
+        "TB-G5S2U3-P23-D2",
+        "TB-G5S2U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-sports-meet",
+      "atom_type": "word",
+      "text": "sports meet",
+      "gloss": "运动会",
+      "linked_blocks": [
+        "TB-G5S2U3-P24-D2",
+        "TB-G5S2U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-study-hard",
+      "atom_type": "word",
+      "text": "study hard",
+      "gloss": "努力学习",
+      "linked_blocks": [
+        "TB-G5S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-summer-vacation",
+      "atom_type": "word",
+      "text": "summer vacation",
+      "gloss": "暑假",
+      "linked_blocks": [
+        "TB-G5S2U3-P22-D1",
+        "TB-G5S2U3-P23-D1",
+        "TB-G5S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-summer-vacation-plan",
+      "atom_type": "word",
+      "text": "summer vacation plan",
+      "gloss": "暑假计划",
+      "linked_blocks": [
+        "TB-G5S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-teacher",
+      "atom_type": "word",
+      "text": "teacher",
+      "gloss": "老师",
+      "linked_blocks": [
+        "TB-G5S2U3-P26-D1",
+        "TB-G5S2U3-P26-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-teachers-day",
+      "atom_type": "word",
+      "text": "Teachers' Day",
+      "gloss": "教师节",
+      "linked_blocks": [
+        "TB-G5S2U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-tell-her-a-story",
+      "atom_type": "word",
+      "text": "tell her a story",
+      "gloss": "给她讲一个故事",
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-thanksgiving",
+      "atom_type": "word",
+      "text": "Thanksgiving",
+      "gloss": "感恩节",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-the-great-wall",
+      "atom_type": "word",
+      "text": "the Great Wall",
+      "gloss": "长城",
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-thing",
+      "atom_type": "word",
+      "text": "thing",
+      "gloss": "事情",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-trip",
+      "atom_type": "word",
+      "text": "trip",
+      "gloss": "旅行",
+      "linked_blocks": [
+        "TB-G5S2U3-P23-D2",
+        "TB-G5S2U3-P24-D2",
+        "TB-G5S2U3-P24-D3",
+        "TB-G5S2U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-visit-my-grandparents",
+      "atom_type": "word",
+      "text": "visit my grandparents",
+      "gloss": "看望我的祖父母",
+      "linked_blocks": [
+        "TB-G5S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-write-her-a-letter",
+      "atom_type": "word",
+      "text": "write her a letter",
+      "gloss": "给她写一封信",
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-year",
+      "atom_type": "word",
+      "text": "year",
+      "gloss": "年",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-pattern-choose-write-and-say",
+      "atom_type": "sentence_pattern",
+      "text": "Choose, write and say.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P26-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-cool",
+      "atom_type": "sentence_pattern",
+      "text": "Cool!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-english-party-when-april-12th-7-p-m-where-gym-what-you-will-play-games-you-will-read-riddles-you-will-act-out-stories-you-will-meet-robin-the-robot-he-is-a-great-english-teacher-rsvp-will-you-come-to-the-party-please-send-an-email-by-march-23rd",
+      "atom_type": "sentence_pattern",
+      "text": "English Party\nWHEN: April 12th, 7 p.m.\nWHERE: Gym\nWHAT: You will play games. You will read riddles. You will act out stories. You will meet Robin the Robot. He is a great English teacher!\nRSVP: Will you come to the party? Please send an email by March 23rd.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P29-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-great-when-is-the-trip-this-year",
+      "atom_type": "sentence_pattern",
+      "text": "Great! When is the trip this year?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hooray-for-may",
+      "atom_type": "sentence_pattern",
+      "text": "Hooray for May!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P23-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-like-autumn-too-we-usually-have-a-school-trip-in-autumn",
+      "atom_type": "sentence_pattern",
+      "text": "I like autumn, too. We usually have a school trip in autumn.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-like-autumn-i-really-like-the-colours",
+      "atom_type": "sentence_pattern",
+      "text": "I like autumn. I really like the colours.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-ll-cook-for-my-mother-what-about-you",
+      "atom_type": "sentence_pattern",
+      "text": "I'll cook for my mother. What about you?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-ll-make-a-card",
+      "atom_type": "sentence_pattern",
+      "text": "I'll make a card.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-the-singing-contest-in-may-too",
+      "atom_type": "sentence_pattern",
+      "text": "Is the singing contest in May, too?",
+      "gloss": "歌唱比赛也在五月吗？",
+      "linked_blocks": [
+        "TB-G5S2U3-P23-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-important-to-focus-on-immediate-tasks-before-long-term-plans",
+      "atom_type": "sentence_pattern",
+      "text": "It's important to focus on immediate tasks before long-term plans.",
+      "gloss": "在考虑长期计划之前，专注于眼前的任务很重要。",
+      "linked_blocks": [
+        "TB-G5S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-in",
+      "atom_type": "sentence_pattern",
+      "text": "It's in ...",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P25-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-in-april-we-have-a-school-trip-too",
+      "atom_type": "sentence_pattern",
+      "text": "It's in April. We have a school trip, too.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-in-july-and-august",
+      "atom_type": "sentence_pattern",
+      "text": "It's in July and August.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-in-march",
+      "atom_type": "sentence_pattern",
+      "text": "It's in March.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P22-D1",
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-in-may",
+      "atom_type": "sentence_pattern",
+      "text": "It's in May.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P23-D2",
+        "TB-G5S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-in-october-we-ll-go-to-the-great-wall",
+      "atom_type": "sentence_pattern",
+      "text": "It's in October. We'll go to the Great Wall.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-in-september",
+      "atom_type": "sentence_pattern",
+      "text": "It's in September.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P28-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-usually-in-june-my-mum-will-make-zongzi-then-i-hope-you-can-come-and-share-some-with-us",
+      "atom_type": "sentence_pattern",
+      "text": "It's usually in June. My mum will make zongzi then. I hope you can come and share some with us.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-usually-in-may",
+      "atom_type": "sentence_pattern",
+      "text": "It's usually in May.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-usually-in-september-or-october-i-ll-eat-mooncakes-with-my-family",
+      "atom_type": "sentence_pattern",
+      "text": "It's usually in September or October. I'll eat mooncakes with my family.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-learn-the-consonant-digraph-ch-t-as-in-china",
+      "atom_type": "sentence_pattern",
+      "text": "Learn the consonant digraph 'ch' /tʃ/ as in 'China'.",
+      "gloss": "学习辅音字母组合 'ch' /tʃ/ 的发音，如 'China'。",
+      "linked_blocks": [
+        "TB-G5S2U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-learn-the-consonant-digraph-sh-as-in-sheep",
+      "atom_type": "sentence_pattern",
+      "text": "Learn the consonant digraph 'sh' /ʃ/ as in 'sheep'.",
+      "gloss": "学习辅音字母组合 'sh' /ʃ/ 的发音，如 'sheep'。",
+      "linked_blocks": [
+        "TB-G5S2U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-again-and-answer-the-questions",
+      "atom_type": "sentence_pattern",
+      "text": "Listen again and answer the questions.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P30-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P30-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-number-and-say",
+      "atom_type": "sentence_pattern",
+      "text": "Listen, number and say.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-at-my-summer-vacation-plan",
+      "atom_type": "sentence_pattern",
+      "text": "Look at my summer vacation plan!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-and-tick-or-cross",
+      "atom_type": "sentence_pattern",
+      "text": "Read and tick or cross.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P29-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-that-s-very-kind-of-you",
+      "atom_type": "sentence_pattern",
+      "text": "That's very kind of you.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-this-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "This weekend?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-use-at-for-specific-times-e-g-at-7-o-clock",
+      "atom_type": "sentence_pattern",
+      "text": "Use 'at' for specific times (e.g., at 7 o'clock).",
+      "gloss": "用'at'表示具体时刻（例如：at 7 o'clock）。",
+      "linked_blocks": [
+        "TB-G5S2U3-P30-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-use-in-for-months-e-g-in-march",
+      "atom_type": "sentence_pattern",
+      "text": "Use 'in' for months (e.g., in March).",
+      "gloss": "用'in'表示月份（例如：in March）。",
+      "linked_blocks": [
+        "TB-G5S2U3-P30-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-use-on-for-days-of-the-week-e-g-on-tuesdays",
+      "atom_type": "sentence_pattern",
+      "text": "Use 'on' for days of the week (e.g., on Tuesdays).",
+      "gloss": "用'on'表示星期几（例如：on Tuesdays）。",
+      "linked_blocks": [
+        "TB-G5S2U3-P30-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-using-will-to-talk-about-future-plans",
+      "atom_type": "sentence_pattern",
+      "text": "Using 'will' to talk about future plans.",
+      "gloss": "使用'will'来谈论未来计划。",
+      "linked_blocks": [
+        "TB-G5S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-have-a-few-fun-things-in-spring-after-the-sports-meet-we-have-an-english-party",
+      "atom_type": "sentence_pattern",
+      "text": "We have a few fun things in spring. After the sports meet, we have an English party.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-ll-go-to-the-great-wall",
+      "atom_type": "sentence_pattern",
+      "text": "We'll go to the Great Wall.",
+      "gloss": "我们将要去长城。",
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-will-oliver-have-listen-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "What will Oliver have? Listen and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-will-you-do-if-you-have-a-birthday-party-write-three-sentences",
+      "atom_type": "sentence_pattern",
+      "text": "What will you do if you have a birthday party? Write three sentences.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P29-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-will-you-do-there",
+      "atom_type": "sentence_pattern",
+      "text": "What will you do there?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-is-dragon-boat-festival",
+      "atom_type": "sentence_pattern",
+      "text": "When is Dragon Boat Festival?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-is-mid-autumn-festival",
+      "atom_type": "sentence_pattern",
+      "text": "When is Mid-Autumn Festival?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-is-mother-s-day",
+      "atom_type": "sentence_pattern",
+      "text": "When is Mother's Day?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P25-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-is-teachers-day",
+      "atom_type": "sentence_pattern",
+      "text": "When is Teachers' Day?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P28-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-is-tree-planting-day",
+      "atom_type": "sentence_pattern",
+      "text": "When is Tree Planting Day?",
+      "gloss": "植树节是什么时候？",
+      "linked_blocks": [
+        "TB-G5S2U3-P22-D1",
+        "TB-G5S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-is-that",
+      "atom_type": "sentence_pattern",
+      "text": "When is that?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-is-the-party",
+      "atom_type": "sentence_pattern",
+      "text": "When is the party?",
+      "gloss": "派对是什么时候？",
+      "linked_blocks": [
+        "TB-G5S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-is-the-school-trip-this-year",
+      "atom_type": "sentence_pattern",
+      "text": "When is the school trip this year?",
+      "gloss": "今年的学校旅行是什么时候？",
+      "linked_blocks": [
+        "TB-G5S2U3-P23-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-is-the-singing-contest",
+      "atom_type": "sentence_pattern",
+      "text": "When is the singing contest?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-is-the-summer-vacation",
+      "atom_type": "sentence_pattern",
+      "text": "When is the summer vacation?",
+      "gloss": "暑假是什么时候？",
+      "linked_blocks": [
+        "TB-G5S2U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-is-the-trip-this-year",
+      "atom_type": "sentence_pattern",
+      "text": "When is the trip this year?",
+      "gloss": "今年的旅行是什么时候？",
+      "linked_blocks": [
+        "TB-G5S2U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-who-will-go-to-the-sports-meet-next-week-listen-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "Who will go to the sports meet next week? Listen and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P24-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-have-a-great-plan-but-what-will-you-do-this-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "You have a great plan, but what will you do this weekend?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2U3-P31-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S2U3-P22",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: My school calendar. 单元首页图。两个学生正在看一个校历展板，上面列出了一月到六月的月份和相关的节日活动。他们讨论了植树节和端午节的时间，引出本单元关于月份、节日和日期的主题。",
+      "entry_probe_questions": [
+        "Do you know the word summer vacation?",
+        "Can you say: When is the summer vacation?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U3-P22-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U3-P23",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: My school calendar. 两个女孩在讨论学校的活动安排，她们询问了学校旅行和歌唱比赛的时间。",
+      "entry_probe_questions": [
+        "Do you know the word school trip?",
+        "Can you say: When is the school trip this year?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U3-P23-D2",
+        "TB-G5S2U3-P23-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U3-P24",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: School Events Calendar. 迈克和张鹏在讨论春季的学校活动，包括运动会、英语派对和学校旅行，并询问了这些活动的具体月份。",
+      "entry_probe_questions": [
+        "Do you know the word sports meet?",
+        "Can you say: When is the party?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U3-P24-D2",
+        "TB-G5S2U3-P24-D3",
+        "TB-G5S2U3-P24-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U3-P25",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Months and Festivals. 通过一个日历图示，展示了一月到六月的月份名称、缩写以及每个月份对应的节日和活动。",
+      "entry_probe_questions": [
+        "Do you know the word January (Jan.)?",
+        "Can you say: When is Tree Planting Day?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U3-P25-D1",
+        "TB-G5S2U3-P25-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U3-P26",
+      "page_type": "phonics",
+      "page_intro_cn": "Theme: Phonics: ch / sh. 听录音，并按照听到的顺序为词组编号。",
+      "entry_probe_questions": [
+        "Can you say: Listen, number and say."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U3-P26-D2",
+        "TB-G5S2U3-P26-D1",
+        "TB-G5S2U3-P26-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U3-P27",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Future Plans and Events. 奥利弗和陈洁在讨论他们对秋天的喜爱以及学校在秋季的活动安排，特别是去长城的学校旅行。",
+      "entry_probe_questions": [
+        "Do you know the word autumn?",
+        "Can you say: When is the trip this year?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U3-P27-D2",
+        "TB-G5S2U3-P27-D3",
+        "TB-G5S2U3-P27-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U3-P28",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Months and Festivals. 通过一个日历图示，展示了七月到十二月的月份名称、缩写以及每个月份对应的节日和活动。",
+      "entry_probe_questions": [
+        "Do you know the word July (Jul.)?",
+        "Can you say: When is Mid-Autumn Festival?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2U3-P28-D1",
+        "TB-G5S2U3-P28-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U3-P29",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Party Invitation and Future Plans. 一封关于英语派对的邀请函，详细说明了派对的时间、地点、活动内容，并要求受邀者通过电子邮件回复。",
+      "entry_probe_questions": [
+        "Can you say: English Party\nWHEN: April 12th, 7 p.m.\nWHERE: Gym\nWHAT: You will play games. You will read riddles. You will act out stories. You will meet Robin the Robot. He is a great English teacher!\nRSVP: Will you come to the party? Please send an email by March 23rd."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U3-P29-D1",
+        "TB-G5S2U3-P29-D2",
+        "TB-G5S2U3-P29-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U3-P30",
+      "page_type": "listening",
+      "page_intro_cn": "Theme: Unit 3 Check & Wrap-up. 听录音，根据对话内容圈出表格中每个活动的正确月份。",
+      "entry_probe_questions": [
+        "Can you say: Listen and circle."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U3-P30-D1",
+        "TB-G5S2U3-P30-D2",
+        "TB-G5S2U3-P30-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2U3-P31",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Story time. 一个连环画故事。小熊祖姆正在制定暑假计划，包括七月去新疆看望祖父母，八月去黄山。小松鼠兹普提醒他，在考虑遥远的暑假之前，他需要先为下周一的数学考试做准备。",
+      "entry_probe_questions": [
+        "Do you know the word summer vacation plan?",
+        "Can you say: It's important to focus on immediate tasks before long-term plans."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U3-P31-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S2U3-P22-D1",
+      "page_uid": "TB-G5S2U3-P22",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U3-P22-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "单元首页图。两个学生正在看一个校历展板，上面列出了一月到六月的月份和相关的节日活动。他们讨论了植树节和端午节的时间，引出本单元关于月份、节日和日期的主题。 Key patterns: When is the summer vacation?; When is Tree Planting Day?",
+      "focus_vocabulary": [
+        "summer vacation",
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "New Year's Day"
+      ],
+      "core_patterns": [
+        "When is the summer vacation?",
+        "When is Tree Planting Day?",
+        "When is Dragon Boat Festival?",
+        "It's in March.",
+        "It's usually in June. My mum will make zongzi then. I hope you can come and share some with us.",
+        "That's very kind of you."
+      ],
+      "allowed_answer_scope": [
+        "It's in March.",
+        "It's usually in June. My mum will make zongzi then. I hope you can come and share some with us.",
+        "That's very kind of you."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word summer vacation?",
+        "Can you say: When is the summer vacation?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U3-P22-D1-goal"
+      ],
+      "branchable_topics": [
+        "summer vacation",
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "New Year's Day"
+      ],
+      "return_anchors": [
+        "When is the summer vacation?",
+        "When is Tree Planting Day?",
+        "When is Dragon Boat Festival?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P23-D1",
+      "page_uid": "TB-G5S2U3-P23",
+      "page_type": "dialogue",
+      "block_type": "picture_scene",
+      "source_refs": [
+        "TB-G5S2U3-P23-D1"
+      ],
+      "teaching_goal": "Work on the picture scene activity.",
+      "teaching_summary": "页面展示了七月到十二月的校历，列出了这些月份的节日和活动。 Key patterns: It's in July and August.",
+      "focus_vocabulary": [
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+        "summer vacation",
+        "Teachers' Day"
+      ],
+      "core_patterns": [
+        "It's in July and August."
+      ],
+      "allowed_answer_scope": [
+        "It's in July and August."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word July?",
+        "Can you say: It's in July and August."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U3-P23-D1-goal"
+      ],
+      "branchable_topics": [
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+        "summer vacation",
+        "Teachers' Day"
+      ],
+      "return_anchors": [
+        "It's in July and August."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P23-D2",
+      "page_uid": "TB-G5S2U3-P23",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U3-P23-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "两个女孩在讨论学校的活动安排，她们询问了学校旅行和歌唱比赛的时间。 Key patterns: When is the school trip this year?; Is the singing contest in May, too?",
+      "focus_vocabulary": [
+        "school trip",
+        "singing contest"
+      ],
+      "core_patterns": [
+        "When is the school trip this year?",
+        "Is the singing contest in May, too?",
+        "It's in May.",
+        "Hooray for May!"
+      ],
+      "allowed_answer_scope": [
+        "It's in May.",
+        "Yes.",
+        "Hooray for May!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word school trip?",
+        "Can you say: When is the school trip this year?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U3-P23-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U3-P23-D2-goal"
+      ],
+      "branchable_topics": [
+        "school trip",
+        "singing contest",
+        "My school calendar"
+      ],
+      "return_anchors": [
+        "When is the school trip this year?",
+        "Is the singing contest in May, too?",
+        "It's in May."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P24-D1",
+      "page_uid": "TB-G5S2U3-P24",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U3-P24-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听一段对话，根据内容判断下周谁会去参加运动会，并勾选正确的选项。 Key patterns: Who will go to the sports meet next week? Listen and tick.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Who will go to the sports meet next week? Listen and tick."
+      ],
+      "allowed_answer_scope": [
+        "Zhang Peng's parents"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Who will go to the sports meet next week? Listen and tick."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U3-P24-D1-goal"
+      ],
+      "branchable_topics": [
+        "School Events Calendar",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Who will go to the sports meet next week? Listen and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P24-D2",
+      "page_uid": "TB-G5S2U3-P24",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U3-P24-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "迈克和张鹏在讨论春季的学校活动，包括运动会、英语派对和学校旅行，并询问了这些活动的具体月份。 Key patterns: When is the party?; When is that?",
+      "focus_vocabulary": [
+        "sports meet",
+        "English party",
+        "school trip",
+        "April",
+        "May"
+      ],
+      "core_patterns": [
+        "When is the party?",
+        "When is that?",
+        "We have a few fun things in spring. After the sports meet, we have an English party.",
+        "It's in April. We have a school trip, too.",
+        "It's in May.",
+        "Cool!"
+      ],
+      "allowed_answer_scope": [
+        "We have a few fun things in spring. After the sports meet, we have an English party.",
+        "It's in April. We have a school trip, too.",
+        "It's in May.",
+        "Cool!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word sports meet?",
+        "Can you say: When is the party?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U3-P24-D3",
+        "TB-G5S2U3-P24-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U3-P24-D2-goal"
+      ],
+      "branchable_topics": [
+        "sports meet",
+        "English party",
+        "school trip",
+        "April",
+        "May",
+        "School Events Calendar",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "When is the party?",
+        "When is that?",
+        "We have a few fun things in spring. After the sports meet, we have an English party."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P24-D3",
+      "page_uid": "TB-G5S2U3-P24",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S2U3-P24-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "提供一个包含各种学校活动的词汇库和一段示范对话，引导学生练习询问和讨论活动的时间。 Key patterns: When is the singing contest?; It's usually in May.",
+      "focus_vocabulary": [
+        "school trip",
+        "sports meet",
+        "Chinese/maths/... test",
+        "singing contest"
+      ],
+      "core_patterns": [
+        "When is the singing contest?",
+        "It's usually in May."
+      ],
+      "allowed_answer_scope": [
+        "It's usually in May."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word school trip?",
+        "Can you say: When is the singing contest?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U3-P24-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U3-P24-D3-goal"
+      ],
+      "branchable_topics": [
+        "school trip",
+        "sports meet",
+        "Chinese/maths/... test",
+        "singing contest",
+        "School Events Calendar",
+        "Write and talk."
+      ],
+      "return_anchors": [
+        "When is the singing contest?",
+        "It's usually in May."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P25-D1",
+      "page_uid": "TB-G5S2U3-P25",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S2U3-P25-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "通过一个日历图示，展示了一月到六月的月份名称、缩写以及每个月份对应的节日和活动。 Key patterns: When is Tree Planting Day?; It's in March.",
+      "focus_vocabulary": [
+        "January (Jan.)",
+        "February (Feb.)",
+        "March (Mar.)",
+        "April (Apr.)",
+        "May",
+        "June (Jun.)"
+      ],
+      "core_patterns": [
+        "When is Tree Planting Day?",
+        "It's in March."
+      ],
+      "allowed_answer_scope": [
+        "It's in March."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word January (Jan.)?",
+        "Can you say: When is Tree Planting Day?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U3-P25-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U3-P25-D1-goal"
+      ],
+      "branchable_topics": [
+        "January (Jan.)",
+        "February (Feb.)",
+        "March (Mar.)",
+        "April (Apr.)",
+        "May",
+        "June (Jun.)",
+        "Months and Festivals",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "When is Tree Planting Day?",
+        "It's in March."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P25-D2",
+      "page_uid": "TB-G5S2U3-P25",
+      "page_type": "vocabulary",
+      "block_type": "practice_true_false",
+      "source_refs": [
+        "TB-G5S2U3-P25-D2"
+      ],
+      "teaching_goal": "Work on the practice true false activity.",
+      "teaching_summary": "根据日历信息，判断关于节日和活动时间的五个陈述句是否正确。如果错误，需要改正月份。 Key patterns: When is Mother's Day?; It's in ...",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "When is Mother's Day?",
+        "It's in ..."
+      ],
+      "allowed_answer_scope": [
+        "这题错误画叉 March",
+        "这题错误画叉 January and February",
+        "这题正确 打勾",
+        "这题错误画叉 答案是：June"
+      ],
+      "entry_probe_questions": [
+        "Can you say: When is Mother's Day?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U3-P25-D2-goal"
+      ],
+      "branchable_topics": [
+        "Months and Festivals",
+        "Read and say"
+      ],
+      "return_anchors": [
+        "When is Mother's Day?",
+        "It's in ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P26-D1",
+      "page_uid": "TB-G5S2U3-P26",
+      "page_type": "phonics",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G5S2U3-P26-D1"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "学习字母组合 'ch' 和 'sh' 在单词中的发音。 Key patterns: Learn the consonant digraph 'ch' /tʃ/ as in 'China'.; Learn the consonant digraph 'sh' /ʃ/ as in 'sheep'.",
+      "focus_vocabulary": [
+        "China",
+        "chicken",
+        "lunch",
+        "teacher",
+        "sheep",
+        "fish",
+        "shirt",
+        "shorts"
+      ],
+      "core_patterns": [
+        "Learn the consonant digraph 'ch' /tʃ/ as in 'China'.",
+        "Learn the consonant digraph 'sh' /ʃ/ as in 'sheep'."
+      ],
+      "allowed_answer_scope": [
+        "China",
+        "chicken",
+        "lunch",
+        "teacher",
+        "sheep",
+        "fish"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word China?",
+        "Can you say: Learn the consonant digraph 'ch' /tʃ/ as in 'China'."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U3-P26-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U3-P26-D1-goal"
+      ],
+      "branchable_topics": [
+        "China",
+        "chicken",
+        "lunch",
+        "teacher",
+        "sheep",
+        "fish",
+        "shirt",
+        "shorts"
+      ],
+      "return_anchors": [
+        "Learn the consonant digraph 'ch' /tʃ/ as in 'China'.",
+        "Learn the consonant digraph 'sh' /ʃ/ as in 'sheep'."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P26-D2",
+      "page_uid": "TB-G5S2U3-P26",
+      "page_type": "phonics",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U3-P26-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，并按照听到的顺序为词组编号。 Key patterns: Listen, number and say.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen, number and say."
+      ],
+      "allowed_answer_scope": [
+        "1",
+        "3",
+        "4",
+        "2",
+        "5"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen, number and say."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U3-P26-D1",
+        "TB-G5S2U3-P26-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U3-P26-D2-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: ch / sh",
+        "Listen, number and say."
+      ],
+      "return_anchors": [
+        "Listen, number and say."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P26-D3",
+      "page_uid": "TB-G5S2U3-P26",
+      "page_type": "phonics",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S2U3-P26-D3"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "从两组词库中各选一个词，组成通顺的句子并写下来。 Key patterns: Choose, write and say.",
+      "focus_vocabulary": [
+        "teacher",
+        "chicken",
+        "fish",
+        "shirt",
+        "short",
+        "fresh",
+        "cheap",
+        "nice"
+      ],
+      "core_patterns": [
+        "Choose, write and say."
+      ],
+      "allowed_answer_scope": [
+        "The teacher is nice.",
+        "The chicken is fresh.",
+        "The fish is cheap.",
+        "The shirt is short."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word teacher?",
+        "Can you say: Choose, write and say."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U3-P26-D3-goal"
+      ],
+      "branchable_topics": [
+        "teacher",
+        "chicken",
+        "fish",
+        "shirt",
+        "short",
+        "fresh",
+        "cheap",
+        "nice"
+      ],
+      "return_anchors": [
+        "Choose, write and say."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P27-D1",
+      "page_uid": "TB-G5S2U3-P27",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U3-P27-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听一段对话，根据内容判断奥利弗将会有什么，并勾选正确的选项。 Key patterns: What will Oliver have? Listen and tick.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What will Oliver have? Listen and tick."
+      ],
+      "allowed_answer_scope": [
+        "A birthday party."
+      ],
+      "entry_probe_questions": [
+        "Can you say: What will Oliver have? Listen and tick."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U3-P27-D1-goal"
+      ],
+      "branchable_topics": [
+        "Future Plans and Events",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "What will Oliver have? Listen and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P27-D2",
+      "page_uid": "TB-G5S2U3-P27",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U3-P27-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "奥利弗和陈洁在讨论他们对秋天的喜爱以及学校在秋季的活动安排，特别是去长城的学校旅行。 Key patterns: When is the trip this year?; We'll go to the Great Wall.",
+      "focus_vocabulary": [
+        "autumn",
+        "school trip",
+        "October",
+        "the Great Wall"
+      ],
+      "core_patterns": [
+        "When is the trip this year?",
+        "We'll go to the Great Wall.",
+        "Great! When is the trip this year?",
+        "I like autumn. I really like the colours.",
+        "I like autumn, too. We usually have a school trip in autumn.",
+        "It's in October. We'll go to the Great Wall."
+      ],
+      "allowed_answer_scope": [
+        "I like autumn. I really like the colours.",
+        "I like autumn, too. We usually have a school trip in autumn.",
+        "It's in October. We'll go to the Great Wall.",
+        "Cool! I love the Great Wall!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word autumn?",
+        "Can you say: When is the trip this year?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U3-P27-D3",
+        "TB-G5S2U3-P27-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U3-P27-D2-goal"
+      ],
+      "branchable_topics": [
+        "autumn",
+        "school trip",
+        "October",
+        "the Great Wall",
+        "Future Plans and Events",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "When is the trip this year?",
+        "We'll go to the Great Wall.",
+        "Great! When is the trip this year?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P27-D3",
+      "page_uid": "TB-G5S2U3-P27",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S2U3-P27-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "提供一个词汇库和示范对话，引导学生讨论并写下他们将在母亲节为妈妈做的事情。 Key patterns: I'll cook for my mother. What about you?; I'll make a card.",
+      "focus_vocabulary": [
+        "cook",
+        "make a card",
+        "sing to her",
+        "say \"Thank you\"",
+        "write her a letter",
+        "tell her a story",
+        "play the pipa for her"
+      ],
+      "core_patterns": [
+        "I'll cook for my mother. What about you?",
+        "I'll make a card."
+      ],
+      "allowed_answer_scope": [
+        "I'll make a card."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word cook?",
+        "Can you say: I'll cook for my mother. What about you?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U3-P27-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U3-P27-D3-goal"
+      ],
+      "branchable_topics": [
+        "cook",
+        "make a card",
+        "sing to her",
+        "say \"Thank you\"",
+        "write her a letter",
+        "tell her a story",
+        "play the pipa for her",
+        "Future Plans and Events"
+      ],
+      "return_anchors": [
+        "I'll cook for my mother. What about you?",
+        "I'll make a card."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P28-D1",
+      "page_uid": "TB-G5S2U3-P28",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S2U3-P28-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "通过一个日历图示，展示了七月到十二月的月份名称、缩写以及每个月份对应的节日和活动。 Key patterns: When is Mid-Autumn Festival?; It's usually in September or October. I'll eat mooncakes with my family.",
+      "focus_vocabulary": [
+        "July (Jul.)",
+        "August (Aug.)",
+        "September (Sept.)",
+        "October (Oct.)",
+        "November (Nov.)",
+        "December (Dec.)"
+      ],
+      "core_patterns": [
+        "When is Mid-Autumn Festival?",
+        "It's usually in September or October. I'll eat mooncakes with my family."
+      ],
+      "allowed_answer_scope": [
+        "It's usually in September or October. I'll eat mooncakes with my family."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word July (Jul.)?",
+        "Can you say: When is Mid-Autumn Festival?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U3-P28-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U3-P28-D1-goal"
+      ],
+      "branchable_topics": [
+        "July (Jul.)",
+        "August (Aug.)",
+        "September (Sept.)",
+        "October (Oct.)",
+        "November (Nov.)",
+        "December (Dec.)",
+        "Months and Festivals",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "When is Mid-Autumn Festival?",
+        "It's usually in September or October. I'll eat mooncakes with my family."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P28-D2",
+      "page_uid": "TB-G5S2U3-P28",
+      "page_type": "vocabulary",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S2U3-P28-D2"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "一个问答和填空练习。学生需要根据常识或日历信息，回答关于不同节日所在月份的问题，并完成句子。 Key patterns: When is Teachers' Day?; It's in September.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "When is Teachers' Day?",
+        "It's in September."
+      ],
+      "allowed_answer_scope": [
+        "September",
+        "January",
+        "October",
+        "November",
+        "December",
+        "June"
+      ],
+      "entry_probe_questions": [
+        "Can you say: When is Teachers' Day?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U3-P28-D2-goal"
+      ],
+      "branchable_topics": [
+        "Months and Festivals",
+        "Ask and write"
+      ],
+      "return_anchors": [
+        "When is Teachers' Day?",
+        "It's in September."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P29-D1",
+      "page_uid": "TB-G5S2U3-P29",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S2U3-P29-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一封关于英语派对的邀请函，详细说明了派对的时间、地点、活动内容，并要求受邀者通过电子邮件回复。 Key patterns: English Party\nWHEN: April 12th, 7 p.m.\nWHERE: Gym\nWHAT: You will play games. You will read riddles. You will act out stories. You will meet Robin the Robot. He is a great English teacher!\nRSVP: Will you come to the party? Please send an email by March 23rd.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "English Party\nWHEN: April 12th, 7 p.m.\nWHERE: Gym\nWHAT: You will play games. You will read riddles. You will act out stories. You will meet Robin the Robot. He is a great English teacher!\nRSVP: Will you come to the party? Please send an email by March 23rd."
+      ],
+      "allowed_answer_scope": [
+        "English Party\nWHEN: April 12th, 7 p.m.\nWHERE: Gym\nWHAT: You will play games. You will read riddles. You will act out stories. You will meet Robin the Robot. He is a great English teacher!\nRSVP: Will you come to the party? Please send an email by March 23rd."
+      ],
+      "entry_probe_questions": [
+        "Can you say: English Party\nWHEN: April 12th, 7 p.m.\nWHERE: Gym\nWHAT: You will play games. You will read riddles. You will act out stories. You will meet Robin the Robot. He is a great English teacher!\nRSVP: Will you come to the party? Please send an email by March 23rd."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U3-P29-D2",
+        "TB-G5S2U3-P29-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U3-P29-D1-goal"
+      ],
+      "branchable_topics": [
+        "Party Invitation and Future Plans",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "English Party\nWHEN: April 12th, 7 p.m.\nWHERE: Gym\nWHAT: You will play games. You will read riddles. You will act out stories. You will meet Robin the Robot. He is a great English teacher!\nRSVP: Will you come to the party? Please send an email by March 23rd."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P29-D2",
+      "page_uid": "TB-G5S2U3-P29",
+      "page_type": "reading",
+      "block_type": "practice_true_false",
+      "source_refs": [
+        "TB-G5S2U3-P29-D2"
+      ],
+      "teaching_goal": "Work on the practice true false activity.",
+      "teaching_summary": "根据邀请函的内容，判断四个陈述句的对错。 Key patterns: Read and tick or cross.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Read and tick or cross."
+      ],
+      "allowed_answer_scope": [
+        "这题错误画叉",
+        "这题正确打勾"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Read and tick or cross."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U3-P29-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U3-P29-D2-goal"
+      ],
+      "branchable_topics": [
+        "Party Invitation and Future Plans",
+        "Read and tick or cross."
+      ],
+      "return_anchors": [
+        "Read and tick or cross."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P29-D3",
+      "page_uid": "TB-G5S2U3-P29",
+      "page_type": "reading",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G5S2U3-P29-D3"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "一项写作任务，要求学生写三句话，描述如果自己举办生日派对将会做些什么。旁边提供了一个活动词库供参考。 Key patterns: What will you do if you have a birthday party? Write three sentences.",
+      "focus_vocabulary": [
+        "dance",
+        "play games",
+        "make a wish",
+        "sing the birthday song",
+        "eat noodles/a birthday cake"
+      ],
+      "core_patterns": [
+        "What will you do if you have a birthday party? Write three sentences."
+      ],
+      "allowed_answer_scope": [
+        "dance",
+        "play games",
+        "make a wish",
+        "sing the birthday song",
+        "eat noodles/a birthday cake"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word dance?",
+        "Can you say: What will you do if you have a birthday party? Write three sentences."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U3-P29-D3-goal"
+      ],
+      "branchable_topics": [
+        "dance",
+        "play games",
+        "make a wish",
+        "sing the birthday song",
+        "eat noodles/a birthday cake",
+        "Party Invitation and Future Plans",
+        "What will you do if you have a birthday party? Write three sentences."
+      ],
+      "return_anchors": [
+        "What will you do if you have a birthday party? Write three sentences."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P30-D1",
+      "page_uid": "TB-G5S2U3-P30",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U3-P30-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，根据对话内容圈出表格中每个活动的正确月份。 Key patterns: Listen and circle.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "April",
+        "May",
+        "September"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U3-P30-D2",
+        "TB-G5S2U3-P30-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U3-P30-D1-goal"
+      ],
+      "branchable_topics": [
+        "Unit 3 Check & Wrap-up",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P30-D2",
+      "page_uid": "TB-G5S2U3-P30",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U3-P30-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "再次听录音，并回答关于学生们在特定月份将要做什么的问题。 Key patterns: Listen again and answer the questions.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen again and answer the questions."
+      ],
+      "allowed_answer_scope": [
+        "They will have a singing contest.",
+        "They will have a Christmas party."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen again and answer the questions."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U3-P30-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U3-P30-D2-goal"
+      ],
+      "branchable_topics": [
+        "Unit 3 Check & Wrap-up",
+        "Listen again and answer the questions."
+      ],
+      "return_anchors": [
+        "Listen again and answer the questions."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P30-D3",
+      "page_uid": "TB-G5S2U3-P30",
+      "page_type": "listening",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G5S2U3-P30-D3"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "总结和巩固时间介词'in', 'at', 'on'的用法。学生需要根据句子内容选择正确的介词填空。 Key patterns: Use 'in' for months (e.g., in March).; Use 'at' for specific times (e.g., at 7 o'clock).",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Use 'in' for months (e.g., in March).",
+        "Use 'at' for specific times (e.g., at 7 o'clock).",
+        "Use 'on' for days of the week (e.g., on Tuesdays)."
+      ],
+      "allowed_answer_scope": [
+        "in",
+        "at",
+        "on"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Use 'in' for months (e.g., in March)."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U3-P30-D3-goal"
+      ],
+      "branchable_topics": [
+        "Unit 3 Check & Wrap-up",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Use 'in' for months (e.g., in March).",
+        "Use 'at' for specific times (e.g., at 7 o'clock).",
+        "Use 'on' for days of the week (e.g., on Tuesdays)."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U3-P31-D1",
+      "page_uid": "TB-G5S2U3-P31",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S2U3-P31-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一个连环画故事。小熊祖姆正在制定暑假计划，包括七月去新疆看望祖父母，八月去黄山。小松鼠兹普提醒他，在考虑遥远的暑假之前，他需要先为下周一的数学考试做准备。 Key patterns: It's important to focus on immediate tasks before long-term plans.; Using 'will' to talk about future plans.",
+      "focus_vocabulary": [
+        "summer vacation plan",
+        "early planning",
+        "visit my grandparents",
+        "Grape Valley",
+        "Huangshan Mountain",
+        "maths test",
+        "study hard"
+      ],
+      "core_patterns": [
+        "It's important to focus on immediate tasks before long-term plans.",
+        "Using 'will' to talk about future plans.",
+        "What will you do there?",
+        "You have a great plan, but what will you do this weekend?",
+        "This weekend?",
+        "Look at my summer vacation plan!"
+      ],
+      "allowed_answer_scope": [
+        "Look at my summer vacation plan!",
+        "It's April now. The summer vacation is still three months away.",
+        "Early planning is always good.",
+        "In July I'll visit my grandparents. They live in Xinjiang.",
+        "We'll go to Grape Valley. The grapes there are very sweet! Grapes are my favourite fruit!",
+        "In August, I'll go to Huangshan Mountain. The trees there are very famous. The clouds are beautiful!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word summer vacation plan?",
+        "Can you say: It's important to focus on immediate tasks before long-term plans."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U3-P31-D1-goal"
+      ],
+      "branchable_topics": [
+        "summer vacation plan",
+        "early planning",
+        "visit my grandparents",
+        "Grape Valley",
+        "Huangshan Mountain",
+        "maths test",
+        "study hard",
+        "Story time"
+      ],
+      "return_anchors": [
+        "It's important to focus on immediate tasks before long-term plans.",
+        "Using 'will' to talk about future plans.",
+        "What will you do there?"
+      ]
+    }
+  ]
+}

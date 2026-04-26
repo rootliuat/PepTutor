@@ -1,0 +1,169 @@
+{
+  "pilot_id": "g5s1u3-p27-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "U3",
+    "pages": [27]
+  },
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S1U3-P27",
+      "page_type": "dialogue",
+      "page_intro_cn": "Unit 3 page 27: ask about favourite food and connect the answer to a menu.",
+      "entry_probe_questions": [
+        "Can you ask: What is your favourite food?",
+        "Can you answer with one food you like?"
+      ],
+      "assumed_prior_knowledge": [
+        {
+          "topic": "food ordering words from pages 24 to 25",
+          "source": "unit_progression",
+          "confidence": "medium",
+          "verification_status": "unverified",
+          "verify_by_block_uid": "TB-G5S1U3-P27-D2",
+          "learning_target_uids": [
+            "LT-G5S1U3-P27-pattern-favourite-food",
+            "LT-G5S1U3-P27-answer-food-plus-adjective"
+          ]
+        }
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P27-D2",
+        "TB-G5S1U3-P27-D3",
+        "TB-G5S1U3-P27-D1"
+      ]
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S1U3-P27-D1",
+      "page_uid": "TB-G5S1U3-P27",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": ["TB-G5S1U3-P27-D1"],
+      "teaching_goal": "Identify favourite drinks from a short listening task.",
+      "teaching_summary": "Match Zhang Peng and Sarah to milk and grape juice.",
+      "focus_vocabulary": ["milk", "grape juice"],
+      "core_patterns": ["favourite drink"],
+      "allowed_answer_scope": ["Zhang Peng -> milk", "Sarah -> grape juice"],
+      "entry_probe_questions": ["Can you hear milk in the dialogue?"],
+      "repair_modes": ["repeat", "choice_probe"],
+      "next_block_uids": ["TB-G5S1U3-P27-D2"],
+      "learning_target_uids": ["LT-G5S1U3-P27-listening-favourite-drink"]
+      ,
+      "branchable_topics": ["milk", "grape juice", "favourite drink"],
+      "return_anchors": ["favourite drink"]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P27-D2",
+      "page_uid": "TB-G5S1U3-P27",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": ["TB-G5S1U3-P27-D2"],
+      "teaching_goal": "Ask and answer about favourite food.",
+      "teaching_summary": "Sarah and Zhang Peng talk about favourite food and connect it to today's menu.",
+      "focus_vocabulary": ["favourite food", "beef noodles", "fish sandwich", "tomato soup", "delicious"],
+      "core_patterns": ["What is your favourite food?", "Noodles.", "They are delicious."],
+      "allowed_answer_scope": ["What is your favourite food?", "My favourite food is noodles.", "It is delicious."],
+      "entry_probe_questions": ["Can you ask: What is your favourite food?", "What food do you like most?"],
+      "repair_modes": ["repeat", "word_drill", "sentence_drill"],
+      "next_block_uids": ["TB-G5S1U3-P27-D3", "TB-G5S1U3-P27-D1"],
+      "learning_target_uids": ["LT-G5S1U3-P27-pattern-favourite-food", "LT-G5S1U3-P27-answer-food-plus-adjective"]
+      ,
+      "branchable_topics": ["favourite food", "menu", "delicious"],
+      "return_anchors": ["What is your favourite food?", "My favourite food is ..."]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P27-D3",
+      "page_uid": "TB-G5S1U3-P27",
+      "page_type": "dialogue",
+      "block_type": "extension_task",
+      "source_refs": ["TB-G5S1U3-P27-D3"],
+      "teaching_goal": "Ask a friend about favourite food and drink and report it back.",
+      "teaching_summary": "Simple survey task with one food question, one drink question, and a short report sentence.",
+      "focus_vocabulary": ["favourite food", "favourite drink"],
+      "core_patterns": ["What is your favourite food?", "What is your favourite drink?", "Her favourite food is ..."],
+      "allowed_answer_scope": ["His favourite food is fish.", "Her favourite drink is milk."],
+      "entry_probe_questions": ["Can you tell me one sentence about your friend's favourite food?"],
+      "repair_modes": ["choice_probe", "sentence_drill"],
+      "next_block_uids": [],
+      "learning_target_uids": ["LT-G5S1U3-P27-survey-report"]
+      ,
+      "branchable_topics": ["favourite food", "favourite drink", "survey"],
+      "return_anchors": ["What is your favourite food?", "What is your favourite drink?", "Her favourite food is ..."]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P27-D4",
+      "page_uid": "TB-G5S1U3-P27",
+      "page_type": "dialogue",
+      "block_type": "branch_extension",
+      "source_refs": ["unit_progression_breakfast_extension"],
+      "teaching_goal": "Briefly answer whether noodles or eggs can be breakfast food, then return to the ordering task.",
+      "teaching_summary": "短分支：围绕 breakfast 这个话题，用 noodles 和 eggs 说一句简单早餐表达，然后回到当前点餐任务。",
+      "focus_vocabulary": ["breakfast", "noodles", "eggs"],
+      "core_patterns": ["I'd like noodles for breakfast.", "I'd like eggs for breakfast."],
+      "allowed_answer_scope": ["I'd like noodles for breakfast.", "I'd like eggs for breakfast."],
+      "entry_probe_questions": ["Can you say one breakfast food?"],
+      "repair_modes": ["choice_probe", "word_drill", "sentence_drill"],
+      "next_block_uids": [],
+      "learning_target_uids": ["LT-G5S1U3-P27-breakfast-extension"],
+      "branchable_topics": ["breakfast", "noodles", "eggs"],
+      "return_anchors": []
+    }
+  ],
+  "knowledge_atoms": [
+    { "atom_uid": "KA-G5S1U3-word-favourite", "atom_type": "word", "text": "favourite", "gloss": "liked the most" },
+    { "atom_uid": "KA-G5S1U3-word-delicious", "atom_type": "word", "text": "delicious", "gloss": "very good to eat" },
+    { "atom_uid": "KA-G5S1U3-word-milk", "atom_type": "word", "text": "milk", "gloss": "a drink item" },
+    { "atom_uid": "KA-G5S1U3-word-grape-juice", "atom_type": "phrase", "text": "grape juice", "gloss": "a drink item" },
+    { "atom_uid": "KA-G5S1U3-pattern-favourite-food", "atom_type": "sentence_pattern", "text": "What is your favourite food?" }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S1U3-P27-listening-favourite-drink",
+      "category": "listening_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner matches each speaker to the correct drink.",
+        "shaky": "Learner matches one drink correctly.",
+        "not_mastered": "Learner cannot identify the drinks."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P27-pattern-favourite-food",
+      "category": "sentence_pattern",
+      "mastery_signal_examples": {
+        "mastered": "Learner asks and answers the favourite food question smoothly.",
+        "shaky": "Learner can ask or answer but not both without help.",
+        "not_mastered": "Learner cannot use the question-answer pair."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P27-answer-food-plus-adjective",
+      "category": "sentence_pattern",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives a food plus adjective comment.",
+        "shaky": "Learner gives the food only or the adjective only.",
+        "not_mastered": "Learner cannot describe the food."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P27-survey-report",
+      "category": "dialogue_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner asks two questions and reports one result.",
+        "shaky": "Learner completes the survey with sentence support.",
+        "not_mastered": "Learner cannot ask or report the target information."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P27-breakfast-extension",
+      "category": "dialogue_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives one simple breakfast sentence and returns to the main task.",
+        "shaky": "Learner can name breakfast food but needs sentence support.",
+        "not_mastered": "Learner cannot connect noodles or eggs to a breakfast sentence."
+      }
+    }
+  ]
+}

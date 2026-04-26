@@ -1,0 +1,1485 @@
+{
+  "pilot_id": "g6s2recycle1-general-v1",
+  "scope": {
+    "grade": "G6",
+    "semester": "S2",
+    "unit": "Recycle1",
+    "pages": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/04.六年级下册语料.json",
+    "app/knowledge/raw/08.六年级下册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+    "page_count": 6,
+    "block_count": 14,
+    "source_kind": "textbook_source_json",
+    "source_format": "json"
+  },
+  "wordlist_entries": [],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G6S2Recycle1-P42-D1-goal",
+      "block_uid": "TB-G6S2Recycle1-P42-D1",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle1-P42-D2-goal",
+      "block_uid": "TB-G6S2Recycle1-P42-D2",
+      "category": "picture_scene",
+      "text": "Work on the picture scene activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle1-P42-D3-goal",
+      "block_uid": "TB-G6S2Recycle1-P42-D3",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle1-P43-D1-goal",
+      "block_uid": "TB-G6S2Recycle1-P43-D1",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle1-P43-D2-goal",
+      "block_uid": "TB-G6S2Recycle1-P43-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle1-P44-D1-goal",
+      "block_uid": "TB-G6S2Recycle1-P44-D1",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle1-P44-D2-goal",
+      "block_uid": "TB-G6S2Recycle1-P44-D2",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle1-P45-D1-goal",
+      "block_uid": "TB-G6S2Recycle1-P45-D1",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle1-P45-D2-goal",
+      "block_uid": "TB-G6S2Recycle1-P45-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle1-P46-D1-goal",
+      "block_uid": "TB-G6S2Recycle1-P46-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle1-P46-D2-goal",
+      "block_uid": "TB-G6S2Recycle1-P46-D2",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle1-P47-D1-goal",
+      "block_uid": "TB-G6S2Recycle1-P47-D1",
+      "category": "picture_scene",
+      "text": "Work on the picture scene activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle1-P47-D2-goal",
+      "block_uid": "TB-G6S2Recycle1-P47-D2",
+      "category": "practice_true_false",
+      "text": "Work on the practice true false activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2Recycle1-P47-D3-goal",
+      "block_uid": "TB-G6S2Recycle1-P47-D3",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-a",
+      "atom_type": "word",
+      "text": "a",
+      "gloss": "一个",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P42-D1",
+        "TB-G6S2Recycle1-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-a-red-bag",
+      "atom_type": "word",
+      "text": "a red bag",
+      "gloss": "一个红色的包",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-after-that",
+      "atom_type": "word",
+      "text": "after that",
+      "gloss": "在那之后",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-an",
+      "atom_type": "word",
+      "text": "an",
+      "gloss": "一个（用于元音音素开头的单词前）",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P42-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-apple",
+      "atom_type": "word",
+      "text": "apple",
+      "gloss": "苹果",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P42-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-bigger",
+      "atom_type": "word",
+      "text": "bigger",
+      "gloss": "更大的",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P45-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-biggest",
+      "atom_type": "word",
+      "text": "biggest",
+      "gloss": "最大的",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P45-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-cake",
+      "atom_type": "word",
+      "text": "cake",
+      "gloss": "蛋糕",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P42-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-candy",
+      "atom_type": "word",
+      "text": "candy",
+      "gloss": "糖果",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-difficult",
+      "atom_type": "word",
+      "text": "difficult",
+      "gloss": "困难的",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-do-the-cleaning",
+      "atom_type": "word",
+      "text": "do the cleaning",
+      "gloss": "打扫卫生",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P44-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-drive",
+      "atom_type": "word",
+      "text": "drive",
+      "gloss": "驾驶",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-egg",
+      "atom_type": "word",
+      "text": "egg",
+      "gloss": "鸡蛋",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P42-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-farmers-market",
+      "atom_type": "word",
+      "text": "farmers' market",
+      "gloss": "农贸市场",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P43-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-favourite",
+      "atom_type": "word",
+      "text": "favourite",
+      "gloss": "最喜欢的",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-finally",
+      "atom_type": "word",
+      "text": "finally",
+      "gloss": "最后",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-go-fishing",
+      "atom_type": "word",
+      "text": "go fishing",
+      "gloss": "去钓鱼",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P44-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-gym",
+      "atom_type": "word",
+      "text": "gym",
+      "gloss": "体育馆",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-have-some-juice",
+      "atom_type": "word",
+      "text": "have some juice",
+      "gloss": "喝一些果汁",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P44-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-horse",
+      "atom_type": "word",
+      "text": "horse",
+      "gloss": "马",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P42-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-jacket",
+      "atom_type": "word",
+      "text": "jacket",
+      "gloss": "夹克",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P42-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-long-hair",
+      "atom_type": "word",
+      "text": "long hair",
+      "gloss": "长发",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-next",
+      "atom_type": "word",
+      "text": "next",
+      "gloss": "接下来",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-noisy",
+      "atom_type": "word",
+      "text": "noisy",
+      "gloss": "吵闹的",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-orange",
+      "atom_type": "word",
+      "text": "orange",
+      "gloss": "橘子",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P42-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-play-music",
+      "atom_type": "word",
+      "text": "play music",
+      "gloss": "演奏音乐",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P44-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-shoes",
+      "atom_type": "word",
+      "text": "shoes",
+      "gloss": "鞋子",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P42-D3",
+        "TB-G6S2Recycle1-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-shopping-list",
+      "atom_type": "word",
+      "text": "shopping list",
+      "gloss": "购物清单",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P43-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-short",
+      "atom_type": "word",
+      "text": "short",
+      "gloss": "矮的",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-skip-rope",
+      "atom_type": "word",
+      "text": "skip rope",
+      "gloss": "跳绳",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-smaller",
+      "atom_type": "word",
+      "text": "smaller",
+      "gloss": "更小的",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P45-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-smallest",
+      "atom_type": "word",
+      "text": "smallest",
+      "gloss": "最小的",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P45-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-some",
+      "atom_type": "word",
+      "text": "some",
+      "gloss": "一些",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P42-D1",
+        "TB-G6S2Recycle1-P44-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-tall",
+      "atom_type": "word",
+      "text": "tall",
+      "gloss": "高的",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-then",
+      "atom_type": "word",
+      "text": "then",
+      "gloss": "然后",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-thin",
+      "atom_type": "word",
+      "text": "thin",
+      "gloss": "瘦的",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-tomato",
+      "atom_type": "word",
+      "text": "tomato",
+      "gloss": "西红柿",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P42-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-white-shoes",
+      "atom_type": "word",
+      "text": "white shoes",
+      "gloss": "白色的鞋子",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-young",
+      "atom_type": "word",
+      "text": "young",
+      "gloss": "年轻的",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-bill-is-my-new-friend-he-s-short-and-heavy",
+      "atom_type": "sentence_pattern",
+      "text": "Bill is my new friend. He's short and heavy.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-brainstorm-and-organize-ideas-using-a-mind-map-for-a-shopping-trip",
+      "atom_type": "sentence_pattern",
+      "text": "Brainstorm and organize ideas using a mind map for a shopping trip.",
+      "gloss": "使用思维导图对购物之旅进行头脑风暴和组织想法。",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P43-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-categorize-vocabulary-into-groups-e-g-fruit-food-clothes-animals-vegetables",
+      "atom_type": "sentence_pattern",
+      "text": "Categorize vocabulary into groups (e.g., Fruit, Food, Clothes, Animals, Vegetables).",
+      "gloss": "将词汇按类别分组（如：水果、食物、衣服、动物、蔬菜）。",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P42-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-compare-sizes-using-comparatives-and-superlatives",
+      "atom_type": "sentence_pattern",
+      "text": "Compare sizes using comparatives and superlatives.",
+      "gloss": "使用比较级和最高级比较大小。",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P45-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-comprehend-past-present-and-future-statements-based-on-visual-cues",
+      "atom_type": "sentence_pattern",
+      "text": "Comprehend past, present, and future statements based on visual cues.",
+      "gloss": "根据视觉提示理解关于过去、现在和未来的陈述。",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P47-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-describe-ongoing-actions-using-the-present-continuous-tense",
+      "atom_type": "sentence_pattern",
+      "text": "Describe ongoing actions using the present continuous tense.",
+      "gloss": "使用现在进行时描述正在进行的动作。",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P44-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-describe-people-s-appearance-using-adjectives",
+      "atom_type": "sentence_pattern",
+      "text": "Describe people's appearance using adjectives.",
+      "gloss": "使用形容词描述人物外貌。",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-guess-is-this-bigger-or-smaller-than-the-elephant",
+      "atom_type": "sentence_pattern",
+      "text": "Guess! Is this bigger or smaller than the elephant?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P45-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-think-it-s-bigger-than-the-elephant",
+      "atom_type": "sentence_pattern",
+      "text": "I think it's bigger than the elephant.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P45-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-identify-and-name-items-in-the-picture",
+      "atom_type": "sentence_pattern",
+      "text": "Identify and name items in the picture.",
+      "gloss": "识别并说出图片中的物品名称。",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P42-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-identify-factual-errors-based-on-a-reading-passage",
+      "atom_type": "sentence_pattern",
+      "text": "Identify factual errors based on a reading passage.",
+      "gloss": "根据阅读材料识别事实错误。",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P46-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-an-elephant-it-s-big",
+      "atom_type": "sentence_pattern",
+      "text": "It's an elephant. It's big.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P45-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-the-other-card-is-a-whale",
+      "atom_type": "sentence_pattern",
+      "text": "Look. The other card is a whale.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P45-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-it-isn-t-it-s-smaller-look-it-s-a-tiger",
+      "atom_type": "sentence_pattern",
+      "text": "No, it isn't. It's smaller. Look. It's a tiger.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P45-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-collocations-with-go-do-play-and-have",
+      "atom_type": "sentence_pattern",
+      "text": "Practice collocations with go, do, play, and have.",
+      "gloss": "练习与go, do, play, have搭配的词组。",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P44-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-talk-about-school-life-subjects-and-favorite-classes",
+      "atom_type": "sentence_pattern",
+      "text": "Talk about school life, subjects, and favorite classes.",
+      "gloss": "谈论学校生活、科目和最喜欢的课程。",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-understand-people-s-changes-in-habits-and-appearances-over-time",
+      "atom_type": "sentence_pattern",
+      "text": "Understand people's changes in habits and appearances over time.",
+      "gloss": "了解人们随时间在习惯和外貌上的变化。",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-use-correct-articles-a-an-and-quantifiers-some-with-nouns",
+      "atom_type": "sentence_pattern",
+      "text": "Use correct articles (a/an) and quantifiers (some) with nouns.",
+      "gloss": "正确使用冠词(a/an)和量词(some)修饰名词。",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P42-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-use-past-tense-verbs-to-describe-daily-activities",
+      "atom_type": "sentence_pattern",
+      "text": "Use past tense verbs to describe daily activities.",
+      "gloss": "使用过去式动词描述日常活动。",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-use-the-simple-present-tense-to-describe-daily-routines-and-activities",
+      "atom_type": "sentence_pattern",
+      "text": "Use the simple present tense to describe daily routines and activities.",
+      "gloss": "使用一般现在时描述日常活动。",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P44-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-use-time-sequence-words-then-after-that-next-finally",
+      "atom_type": "sentence_pattern",
+      "text": "Use time sequence words: then, after that, next, finally.",
+      "gloss": "使用时间顺序词：然后、在那之后、接下来、最后。",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-write-about-personal-changes-using-past-present-and-future-tenses",
+      "atom_type": "sentence_pattern",
+      "text": "Write about personal changes using past, present, and future tenses.",
+      "gloss": "运用过去时、现在时和将来时写下个人的变化。",
+      "linked_blocks": [
+        "TB-G6S2Recycle1-P47-D3"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G6S2Recycle1-P42",
+      "page_type": "picture",
+      "page_intro_cn": "Theme: A beautiful farm. 单词分类练习，学生需要为给定的单词分组命名（如水果类），并尝试添加更多单词。",
+      "entry_probe_questions": [
+        "Do you know the word apple?",
+        "Can you say: Categorize vocabulary into groups (e.g., Fruit, Food, Clothes, Animals, Vegetables)."
+      ],
+      "priority_blocks": [
+        "TB-G6S2Recycle1-P42-D3",
+        "TB-G6S2Recycle1-P42-D1",
+        "TB-G6S2Recycle1-P42-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2Recycle1-P43",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Farmers' market. 根据给定的形容词和名词短语，描述图片中Bill和Mrs Booth的外貌和穿着特征。",
+      "entry_probe_questions": [
+        "Do you know the word short?",
+        "Can you say: Describe people's appearance using adjectives."
+      ],
+      "priority_blocks": [
+        "TB-G6S2Recycle1-P43-D2",
+        "TB-G6S2Recycle1-P43-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2Recycle1-P44",
+      "page_type": "writing",
+      "page_intro_cn": "Theme: Life on the farm. 从环形字母串中圈出单词，并根据图片提示完成一般现在时的句子，描述人们每天在农场上做的事情。",
+      "entry_probe_questions": [
+        "Do you know the word go fishing?",
+        "Can you say: Use the simple present tense to describe daily routines and activities."
+      ],
+      "priority_blocks": [
+        "TB-G6S2Recycle1-P44-D1",
+        "TB-G6S2Recycle1-P44-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2Recycle1-P45",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Mike's day on the farm. 迈克和比尔在玩动物卡片猜谜游戏，通过对比大象、老虎和鲸鱼的大小，练习形容词的比较级和最高级。",
+      "entry_probe_questions": [
+        "Do you know the word bigger?",
+        "Can you say: Compare sizes using comparatives and superlatives."
+      ],
+      "priority_blocks": [
+        "TB-G6S2Recycle1-P45-D2",
+        "TB-G6S2Recycle1-P45-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2Recycle1-P46",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Mike's school life. 迈克制作了一份关于自己学校生活的PPT（幻灯片），展示了他一周的课程安排及各科的活动内容。",
+      "entry_probe_questions": [
+        "Do you know the word favourite?",
+        "Can you say: Talk about school life, subjects, and favorite classes."
+      ],
+      "priority_blocks": [
+        "TB-G6S2Recycle1-P46-D1",
+        "TB-G6S2Recycle1-P46-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2Recycle1-P47",
+      "page_type": "writing",
+      "page_intro_cn": "Theme: Bill's poster. 展示了比尔制作的一张海报，分为5岁时、现在（12岁）以及未来三个阶段的画像，通过笑脸和哭脸图标标示了他不同阶段的喜好和变化。",
+      "entry_probe_questions": [
+        "Do you know the word skip rope?",
+        "Can you say: Understand people's changes in habits and appearances over time."
+      ],
+      "priority_blocks": [
+        "TB-G6S2Recycle1-P47-D1",
+        "TB-G6S2Recycle1-P47-D2",
+        "TB-G6S2Recycle1-P47-D3"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G6S2Recycle1-P42-D1",
+      "page_uid": "TB-G6S2Recycle1-P42",
+      "page_type": "picture",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S2Recycle1-P42-D1"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "麦克参观农场，练习使用不定冠词 a, an 和数量词 some 描述农场上的物品和动物。 Key patterns: Use correct articles (a/an) and quantifiers (some) with nouns.",
+      "focus_vocabulary": [
+        "a",
+        "an",
+        "some"
+      ],
+      "core_patterns": [
+        "Use correct articles (a/an) and quantifiers (some) with nouns."
+      ],
+      "allowed_answer_scope": [
+        "a",
+        "an",
+        "some"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word a?",
+        "Can you say: Use correct articles (a/an) and quantifiers (some) with nouns."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2Recycle1-P42-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2Recycle1-P42-D1-goal"
+      ],
+      "branchable_topics": [
+        "a",
+        "an",
+        "some",
+        "A beautiful farm",
+        "Day 1 A beautiful farm"
+      ],
+      "return_anchors": [
+        "Use correct articles (a/an) and quantifiers (some) with nouns."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle1-P42-D2",
+      "page_uid": "TB-G6S2Recycle1-P42",
+      "page_type": "picture",
+      "block_type": "picture_scene",
+      "source_refs": [
+        "TB-G6S2Recycle1-P42-D2"
+      ],
+      "teaching_goal": "Work on the picture scene activity.",
+      "teaching_summary": "农场场景图，桌上有苹果、西红柿、橘子、梨和鸡蛋，椅子上有雨伞和夹克，远处栅栏里有绵羊、奶牛和马。 Key patterns: Identify and name items in the picture.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Identify and name items in the picture."
+      ],
+      "allowed_answer_scope": [
+        "Identify and name items in the picture."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Identify and name items in the picture."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2Recycle1-P42-D2-goal"
+      ],
+      "branchable_topics": [
+        "A beautiful farm",
+        "What else can you see?"
+      ],
+      "return_anchors": [
+        "Identify and name items in the picture."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle1-P42-D3",
+      "page_uid": "TB-G6S2Recycle1-P42",
+      "page_type": "picture",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S2Recycle1-P42-D3"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "单词分类练习，学生需要为给定的单词分组命名（如水果类），并尝试添加更多单词。 Key patterns: Categorize vocabulary into groups (e.g., Fruit, Food, Clothes, Animals, Vegetables).",
+      "focus_vocabulary": [
+        "apple",
+        "orange",
+        "egg",
+        "cake",
+        "jacket",
+        "shoes",
+        "horse",
+        "tomato"
+      ],
+      "core_patterns": [
+        "Categorize vocabulary into groups (e.g., Fruit, Food, Clothes, Animals, Vegetables)."
+      ],
+      "allowed_answer_scope": [
+        "apple",
+        "orange",
+        "egg",
+        "cake",
+        "jacket",
+        "shoes"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word apple?",
+        "Can you say: Categorize vocabulary into groups (e.g., Fruit, Food, Clothes, Animals, Vegetables)."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2Recycle1-P42-D1",
+        "TB-G6S2Recycle1-P42-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2Recycle1-P42-D3-goal"
+      ],
+      "branchable_topics": [
+        "apple",
+        "orange",
+        "egg",
+        "cake",
+        "jacket",
+        "shoes",
+        "horse",
+        "tomato"
+      ],
+      "return_anchors": [
+        "Categorize vocabulary into groups (e.g., Fruit, Food, Clothes, Animals, Vegetables)."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle1-P43-D1",
+      "page_uid": "TB-G6S2Recycle1-P43",
+      "page_type": "dialogue",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S2Recycle1-P43-D1"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "完成关于去农贸市场购物的思维导图（mind map），涵盖时间、地点、同伴、交通方式、预算和购物清单等要素。 Key patterns: Brainstorm and organize ideas using a mind map for a shopping trip.",
+      "focus_vocabulary": [
+        "farmers' market",
+        "shopping list"
+      ],
+      "core_patterns": [
+        "Brainstorm and organize ideas using a mind map for a shopping trip."
+      ],
+      "allowed_answer_scope": [
+        "farmers' market",
+        "shopping list"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word farmers' market?",
+        "Can you say: Brainstorm and organize ideas using a mind map for a shopping trip."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2Recycle1-P43-D1-goal"
+      ],
+      "branchable_topics": [
+        "farmers' market",
+        "shopping list",
+        "Farmers' market",
+        "Day 2 Farmers' market"
+      ],
+      "return_anchors": [
+        "Brainstorm and organize ideas using a mind map for a shopping trip."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle1-P43-D2",
+      "page_uid": "TB-G6S2Recycle1-P43",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S2Recycle1-P43-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "根据给定的形容词和名词短语，描述图片中Bill和Mrs Booth的外貌和穿着特征。 Key patterns: Describe people's appearance using adjectives.; Bill is my new friend. He's short and heavy.",
+      "focus_vocabulary": [
+        "short",
+        "tall",
+        "thin",
+        "young",
+        "long hair",
+        "a red bag",
+        "white shoes"
+      ],
+      "core_patterns": [
+        "Describe people's appearance using adjectives.",
+        "Bill is my new friend. He's short and heavy."
+      ],
+      "allowed_answer_scope": [
+        "Bill is my new friend. He's short and heavy."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word short?",
+        "Can you say: Describe people's appearance using adjectives."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2Recycle1-P43-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2Recycle1-P43-D2-goal"
+      ],
+      "branchable_topics": [
+        "short",
+        "tall",
+        "thin",
+        "young",
+        "long hair",
+        "a red bag",
+        "white shoes",
+        "Farmers' market"
+      ],
+      "return_anchors": [
+        "Describe people's appearance using adjectives.",
+        "Bill is my new friend. He's short and heavy."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle1-P44-D1",
+      "page_uid": "TB-G6S2Recycle1-P44",
+      "page_type": "writing",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S2Recycle1-P44-D1"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "从环形字母串中圈出单词，并根据图片提示完成一般现在时的句子，描述人们每天在农场上做的事情。 Key patterns: Use the simple present tense to describe daily routines and activities.; Practice collocations with go, do, play, and have.",
+      "focus_vocabulary": [
+        "go fishing",
+        "do the cleaning",
+        "play music",
+        "have some juice"
+      ],
+      "core_patterns": [
+        "Use the simple present tense to describe daily routines and activities.",
+        "Practice collocations with go, do, play, and have."
+      ],
+      "allowed_answer_scope": [
+        "fishing",
+        "cleaning",
+        "music",
+        "juice"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word go fishing?",
+        "Can you say: Use the simple present tense to describe daily routines and activities."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2Recycle1-P44-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2Recycle1-P44-D1-goal"
+      ],
+      "branchable_topics": [
+        "go fishing",
+        "do the cleaning",
+        "play music",
+        "have some juice",
+        "Life on the farm",
+        "Day 3 Life on the farm"
+      ],
+      "return_anchors": [
+        "Use the simple present tense to describe daily routines and activities.",
+        "Practice collocations with go, do, play, and have."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle1-P44-D2",
+      "page_uid": "TB-G6S2Recycle1-P44",
+      "page_type": "writing",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G6S2Recycle1-P44-D2"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "观察一张展示人们在农场上娱乐活动的综合场景图，使用现在进行时写出描述他们正在做什么的句子。 Key patterns: Describe ongoing actions using the present continuous tense.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Describe ongoing actions using the present continuous tense."
+      ],
+      "allowed_answer_scope": [
+        "Describe ongoing actions using the present continuous tense."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Describe ongoing actions using the present continuous tense."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2Recycle1-P44-D2-goal"
+      ],
+      "branchable_topics": [
+        "Life on the farm",
+        "These people are having fun on the farm. Write down three sentences about what they are doing."
+      ],
+      "return_anchors": [
+        "Describe ongoing actions using the present continuous tense."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle1-P45-D1",
+      "page_uid": "TB-G6S2Recycle1-P45",
+      "page_type": "dialogue",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S2Recycle1-P45-D1"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "看图填空，练习使用一般过去时描述迈克在农场一天的活动轨迹。 Key patterns: Use past tense verbs to describe daily activities.; Use time sequence words: then, after that, next, finally.",
+      "focus_vocabulary": [
+        "then",
+        "after that",
+        "next",
+        "finally"
+      ],
+      "core_patterns": [
+        "Use past tense verbs to describe daily activities.",
+        "Use time sequence words: then, after that, next, finally."
+      ],
+      "allowed_answer_scope": [
+        "then",
+        "after that",
+        "next",
+        "finally"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word then?",
+        "Can you say: Use past tense verbs to describe daily activities."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2Recycle1-P45-D1-goal"
+      ],
+      "branchable_topics": [
+        "then",
+        "after that",
+        "next",
+        "finally",
+        "Mike's day on the farm",
+        "Day 4 Mike's day on the farm: What did Mike do on the farm?"
+      ],
+      "return_anchors": [
+        "Use past tense verbs to describe daily activities.",
+        "Use time sequence words: then, after that, next, finally."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle1-P45-D2",
+      "page_uid": "TB-G6S2Recycle1-P45",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S2Recycle1-P45-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "迈克和比尔在玩动物卡片猜谜游戏，通过对比大象、老虎和鲸鱼的大小，练习形容词的比较级和最高级。 Key patterns: Compare sizes using comparatives and superlatives.; Guess! Is this bigger or smaller than the elephant?",
+      "focus_vocabulary": [
+        "bigger",
+        "smaller",
+        "biggest",
+        "smallest"
+      ],
+      "core_patterns": [
+        "Compare sizes using comparatives and superlatives.",
+        "Guess! Is this bigger or smaller than the elephant?",
+        "It's an elephant. It's big.",
+        "I think it's bigger than the elephant.",
+        "No, it isn't. It's smaller. Look. It's a tiger.",
+        "Look. The other card is a whale."
+      ],
+      "allowed_answer_scope": [
+        "It's an elephant. It's big.",
+        "I think it's bigger than the elephant.",
+        "No, it isn't. It's smaller. Look. It's a tiger.",
+        "Look. The other card is a whale.",
+        "So the whale is the biggest, and the tiger is the smallest."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word bigger?",
+        "Can you say: Compare sizes using comparatives and superlatives."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2Recycle1-P45-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2Recycle1-P45-D2-goal"
+      ],
+      "branchable_topics": [
+        "bigger",
+        "smaller",
+        "biggest",
+        "smallest",
+        "Mike's day on the farm",
+        "Now read about Mike and Bill's game."
+      ],
+      "return_anchors": [
+        "Compare sizes using comparatives and superlatives.",
+        "Guess! Is this bigger or smaller than the elephant?",
+        "It's an elephant. It's big."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle1-P46-D1",
+      "page_uid": "TB-G6S2Recycle1-P46",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S2Recycle1-P46-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "迈克制作了一份关于自己学校生活的PPT（幻灯片），展示了他一周的课程安排及各科的活动内容。 Key patterns: Talk about school life, subjects, and favorite classes.",
+      "focus_vocabulary": [
+        "favourite",
+        "difficult",
+        "noisy",
+        "gym"
+      ],
+      "core_patterns": [
+        "Talk about school life, subjects, and favorite classes."
+      ],
+      "allowed_answer_scope": [
+        "favourite",
+        "difficult",
+        "noisy",
+        "gym"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word favourite?",
+        "Can you say: Talk about school life, subjects, and favorite classes."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S2Recycle1-P46-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2Recycle1-P46-D1-goal"
+      ],
+      "branchable_topics": [
+        "favourite",
+        "difficult",
+        "noisy",
+        "gym",
+        "Mike's school life",
+        "Day 5 Mike and his new friends: Part 1 - Mike's PPT about his school life."
+      ],
+      "return_anchors": [
+        "Talk about school life, subjects, and favorite classes."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle1-P46-D2",
+      "page_uid": "TB-G6S2Recycle1-P46",
+      "page_type": "reading",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G6S2Recycle1-P46-D2"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "比尔向朋友复述迈克的学校生活，学生需要仔细阅读这段复述，并根据上一部分的PPT内容找出并划出错误的信息。 Key patterns: Identify factual errors based on a reading passage.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Identify factual errors based on a reading passage."
+      ],
+      "allowed_answer_scope": [
+        "English",
+        "very difficult",
+        "basketball"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Identify factual errors based on a reading passage."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2Recycle1-P46-D2-goal"
+      ],
+      "branchable_topics": [
+        "Mike's school life",
+        "Bill told his friends about Mike. Read and underline the mistakes."
+      ],
+      "return_anchors": [
+        "Identify factual errors based on a reading passage."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle1-P47-D1",
+      "page_uid": "TB-G6S2Recycle1-P47",
+      "page_type": "writing",
+      "block_type": "picture_scene",
+      "source_refs": [
+        "TB-G6S2Recycle1-P47-D1"
+      ],
+      "teaching_goal": "Work on the picture scene activity.",
+      "teaching_summary": "展示了比尔制作的一张海报，分为5岁时、现在（12岁）以及未来三个阶段的画像，通过笑脸和哭脸图标标示了他不同阶段的喜好和变化。 Key patterns: Understand people's changes in habits and appearances over time.",
+      "focus_vocabulary": [
+        "skip rope",
+        "candy",
+        "drive"
+      ],
+      "core_patterns": [
+        "Understand people's changes in habits and appearances over time."
+      ],
+      "allowed_answer_scope": [
+        "skip rope",
+        "candy",
+        "drive"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word skip rope?",
+        "Can you say: Understand people's changes in habits and appearances over time."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [
+        "TB-G6S2Recycle1-P47-D2",
+        "TB-G6S2Recycle1-P47-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2Recycle1-P47-D1-goal"
+      ],
+      "branchable_topics": [
+        "skip rope",
+        "candy",
+        "drive",
+        "Bill's poster",
+        "Look at Bill's poster."
+      ],
+      "return_anchors": [
+        "Understand people's changes in habits and appearances over time."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle1-P47-D2",
+      "page_uid": "TB-G6S2Recycle1-P47",
+      "page_type": "writing",
+      "block_type": "practice_true_false",
+      "source_refs": [
+        "TB-G6S2Recycle1-P47-D2"
+      ],
+      "teaching_goal": "Work on the practice true false activity.",
+      "teaching_summary": "根据比尔的海报内容进行阅读理解判断，打勾（正确）或打叉（错误）。 Key patterns: Comprehend past, present, and future statements based on visual cues.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Comprehend past, present, and future statements based on visual cues."
+      ],
+      "allowed_answer_scope": [
+        "Tick",
+        "Cross"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Comprehend past, present, and future statements based on visual cues."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [
+        "TB-G6S2Recycle1-P47-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2Recycle1-P47-D2-goal"
+      ],
+      "branchable_topics": [
+        "Bill's poster",
+        "Read and tick or cross."
+      ],
+      "return_anchors": [
+        "Comprehend past, present, and future statements based on visual cues."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2Recycle1-P47-D3",
+      "page_uid": "TB-G6S2Recycle1-P47",
+      "page_type": "writing",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G6S2Recycle1-P47-D3"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "一个绘画与写作的拓展任务，要求学生设计自己的海报，展示并描述自己过去（Before）、现在（Now）和未来（In the future）的模样和喜好。 Key patterns: Write about personal changes using past, present, and future tenses.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Write about personal changes using past, present, and future tenses."
+      ],
+      "allowed_answer_scope": [
+        "Write about personal changes using past, present, and future tenses."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Write about personal changes using past, present, and future tenses."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2Recycle1-P47-D3-goal"
+      ],
+      "branchable_topics": [
+        "Bill's poster",
+        "Design your own poster."
+      ],
+      "return_anchors": [
+        "Write about personal changes using past, present, and future tenses."
+      ]
+    }
+  ]
+}

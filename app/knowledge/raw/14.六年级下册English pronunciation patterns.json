@@ -1,0 +1,142 @@
+[
+  {
+    "metadata": {
+      "book": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "Recycle2",
+      "page": 49,
+      "theme": "A farewell party",
+      "uid": "PP-G6S2Recycle2-P49",
+      "source_page_uid": "TB-G6S2Recycle2-P49"
+    },
+    "content_blocks": [
+      {
+        "section_title": "Group the words. Can you write more?",
+        "type": "practice_write",
+        "uid": "PP-G6S2Recycle2-P49-D1",
+        "source_block_uid": "TB-G6S2Recycle2-P49-D2",
+        "scene_description": "六下 Recycle 2 第49页的语音分类练习，学生需要根据辅音连缀和辅音字母组合对页面词汇进行归类。",
+        "focus_vocabulary": [],
+        "key_points": [
+          {
+            "english": "Group the words according to their consonant clusters and digraphs.",
+            "chinese": "根据辅音连缀和辅音字母组合将单词分类。"
+          }
+        ],
+        "instructions": "Group the words. Can you write more?",
+        "questions": [
+          {
+            "q": "Words with 'cl'",
+            "a": "clock"
+          },
+          {
+            "q": "Words with 'pl'",
+            "a": "plates"
+          },
+          {
+            "q": "Words with 'br'",
+            "a": "brown bread"
+          },
+          {
+            "q": "Words with 'fr'",
+            "a": "fresh fruit"
+          },
+          {
+            "q": "Words with 'ch'",
+            "a": "cheese, chocolates"
+          },
+          {
+            "q": "Words with 'sh'",
+            "a": "English books"
+          },
+          {
+            "q": "Words with 'th'",
+            "a": "maths books"
+          },
+          {
+            "q": "Words with 'ng'",
+            "a": "ping-pong balls, English books"
+          },
+          {
+            "q": "Words with 'nk'",
+            "a": "pink party hats"
+          }
+        ],
+        "word_bank": [],
+        "personalization_prompt": null,
+        "student_response_template": null
+      },
+      {
+        "section_title": "Find words with the following patterns.",
+        "type": "phonics",
+        "uid": "PP-G6S2Recycle2-P49-D2",
+        "source_block_uid": "TB-G6S2Recycle2-P49-D3",
+        "scene_description": "六下 Recycle 2 第49页的语音拓展练习，要求学生根据给定的元音及元音字母组合规律继续寻找例词。",
+        "focus_vocabulary": [],
+        "key_points": [
+          {
+            "english": "Find words with the following patterns: a-e, i-e, ar, or, ee, ea, ai, ow, oo.",
+            "chinese": "找出具有以下拼读规律的单词：a-e, i-e, ar, or, ee, ea, ai, ow, oo。"
+          }
+        ],
+        "items": [
+          {
+            "word": "a-e",
+            "chinese": "字母组合 a-e",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "i-e",
+            "chinese": "字母组合 i-e",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "ar",
+            "chinese": "字母组合 ar",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "or",
+            "chinese": "字母组合 or",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "ee",
+            "chinese": "字母组合 ee",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "ea",
+            "chinese": "字母组合 ea",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "ai",
+            "chinese": "字母组合 ai",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "ow",
+            "chinese": "字母组合 ow",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "oo",
+            "chinese": "字母组合 oo",
+            "phonetic": null,
+            "example": null
+          }
+        ]
+      }
+    ]
+  }
+]

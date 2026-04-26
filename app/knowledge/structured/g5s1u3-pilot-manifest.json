@@ -1,0 +1,33 @@
+{
+  "pilot_id": "g5s1u3-manual-pilot-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "U3",
+    "pages": [24, 25, 26, 27, 28, 29, 30, 31]
+  },
+  "files": [
+    "app/knowledge/structured/g5s1u3-p24-p25-pilot.json",
+    "app/knowledge/structured/g5s1u3-p26-pilot.json",
+    "app/knowledge/structured/g5s1u3-p27-pilot.json",
+    "app/knowledge/structured/g5s1u3-p28-pilot.json",
+    "app/knowledge/structured/g5s1u3-p29-pilot.json",
+    "app/knowledge/structured/g5s1u3-p30-pilot.json",
+    "app/knowledge/structured/g5s1u3-p31-pilot.json"
+  ],
+  "page_types": {
+    "24": "dialogue",
+    "25": "vocabulary",
+    "26": "phonics",
+    "27": "dialogue",
+    "28": "vocabulary",
+    "29": "reading",
+    "30": "review",
+    "31": "story"
+  },
+  "priority_scenes": [
+    "dialogue teaching",
+    "error correction",
+    "interactive follow-up"
+  ]
+}

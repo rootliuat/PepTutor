@@ -1,0 +1,3311 @@
+{
+  "pilot_id": "g5s1u2-general-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "U2",
+    "pages": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/01.五年级上册语料.js",
+    "app/knowledge/raw/05.五年级上册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 5 · Volume 1), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 5 · Volume 1), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 27,
+    "source_kind": "textbook_source_js",
+    "source_format": "js"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 2",
+      "word": "Monday",
+      "phonetic": "/'mʌndeɪ/",
+      "chinese": "星期一",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P15-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "Tuesday",
+      "phonetic": "/'tjuːzdeɪ/",
+      "chinese": "星期二",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P15-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "Wednesday",
+      "phonetic": "/'wenzdeɪ/",
+      "chinese": "星期三",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P15-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "Thursday",
+      "phonetic": "/'θɜːzdeɪ/",
+      "chinese": "星期四",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P13-D1",
+        "TB-G5S1U2-P15-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "Friday",
+      "phonetic": "/'fraɪdeɪ/",
+      "chinese": "星期五",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P13-D1",
+        "TB-G5S1U2-P15-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "Saturday",
+      "phonetic": "/'sætədeɪ/",
+      "chinese": "星期六",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P13-D1",
+        "TB-G5S1U2-P15-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "Sunday",
+      "phonetic": "/'sʌndeɪ/",
+      "chinese": "星期日",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P13-D1",
+        "TB-G5S1U2-P15-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "weekend",
+      "phonetic": "/ˌwiːk'end/",
+      "chinese": "周末",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P13-D1",
+        "TB-G5S1U2-P15-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "wash",
+      "phonetic": "/wɒʃ/",
+      "chinese": "洗",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "wash my clothes",
+      "chinese": "洗我的衣服",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "watch",
+      "phonetic": "/wɒtʃ/",
+      "chinese": "看",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "watch TV",
+      "chinese": "看电视",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "do",
+      "phonetic": "/də; duː/",
+      "chinese": "做；干",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "do homework",
+      "chinese": "做作业",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "read",
+      "phonetic": "/riːd/",
+      "chinese": "看；读",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P13-D1",
+        "TB-G5S1U2-P16-D1",
+        "TB-G5S1U2-P17-D2",
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "read books",
+      "chinese": "看书",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P13-D1",
+        "TB-G5S1U2-P17-D2",
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "play",
+      "phonetic": "/pleɪ/",
+      "chinese": "踢；玩；参加（体育运动）",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P12-D1",
+        "TB-G5S1U2-P17-D2",
+        "TB-G5S1U2-P17-D3",
+        "TB-G5S1U2-P18-D1",
+        "TB-G5S1U2-P18-D3",
+        "TB-G5S1U2-P19-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "play football",
+      "chinese": "踢足球",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U2-P17-D2",
+        "TB-G5S1U2-P17-D3",
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "cooking",
+      "phonetic": "/'kʊkɪŋ/",
+      "chinese": "烹饪；烹调",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S1U2-P14-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "often",
+      "phonetic": "/'ɒfn/",
+      "chinese": "时常；常常",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "park",
+      "phonetic": "/pɑːk/",
+      "chinese": "公园",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "tired",
+      "phonetic": "/'taɪəd/",
+      "chinese": "疲倦的",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S1U2-P19-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "sport",
+      "phonetic": "/spɔːt/",
+      "chinese": "体育运动",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "play sports",
+      "chinese": "做体育运动",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S1U2-P12-D1",
+        "TB-G5S1U2-P19-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "should",
+      "phonetic": "/ʃəd; ʃʊd/",
+      "chinese": "（常用于纠正别人）应该，应当",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "every",
+      "phonetic": "/'evri/",
+      "chinese": "每一个，每个",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "day",
+      "phonetic": "/deɪ/",
+      "chinese": "一天；一日",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "schedule",
+      "phonetic": "/'ʃedjuːl/",
+      "chinese": "工作计划；日程安排",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S1U2-P19-D1"
+      ]
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S1U2-P12-D1-goal",
+      "block_uid": "TB-G5S1U2-P12-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P13-D1-goal",
+      "block_uid": "TB-G5S1U2-P13-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P14-D1-goal",
+      "block_uid": "TB-G5S1U2-P14-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P14-D2-goal",
+      "block_uid": "TB-G5S1U2-P14-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P14-D3-goal",
+      "block_uid": "TB-G5S1U2-P14-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P15-D1-goal",
+      "block_uid": "TB-G5S1U2-P15-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P15-D2-goal",
+      "block_uid": "TB-G5S1U2-P15-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P15-D3-goal",
+      "block_uid": "TB-G5S1U2-P15-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P16-D1-goal",
+      "block_uid": "TB-G5S1U2-P16-D1",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P16-D2-goal",
+      "block_uid": "TB-G5S1U2-P16-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P16-D3-goal",
+      "block_uid": "TB-G5S1U2-P16-D3",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P16-D4-goal",
+      "block_uid": "TB-G5S1U2-P16-D4",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P17-D1-goal",
+      "block_uid": "TB-G5S1U2-P17-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P17-D2-goal",
+      "block_uid": "TB-G5S1U2-P17-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P17-D3-goal",
+      "block_uid": "TB-G5S1U2-P17-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P18-D1-goal",
+      "block_uid": "TB-G5S1U2-P18-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P18-D2-goal",
+      "block_uid": "TB-G5S1U2-P18-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P18-D3-goal",
+      "block_uid": "TB-G5S1U2-P18-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P19-D1-goal",
+      "block_uid": "TB-G5S1U2-P19-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P19-D2-goal",
+      "block_uid": "TB-G5S1U2-P19-D2",
+      "category": "picture_scene",
+      "text": "Work on the picture scene activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P19-D3-goal",
+      "block_uid": "TB-G5S1U2-P19-D3",
+      "category": "practice_true_false",
+      "text": "Work on the practice true false activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P19-D4-goal",
+      "block_uid": "TB-G5S1U2-P19-D4",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P20-D1-goal",
+      "block_uid": "TB-G5S1U2-P20-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P20-D2-goal",
+      "block_uid": "TB-G5S1U2-P20-D2",
+      "category": "practice_choice",
+      "text": "Work on the practice choice activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P20-D3-goal",
+      "block_uid": "TB-G5S1U2-P20-D3",
+      "category": "summary_wrap_up",
+      "text": "Review and consolidate the core language point.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P20-D4-goal",
+      "block_uid": "TB-G5S1U2-P20-D4",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U2-P21-D1-goal",
+      "block_uid": "TB-G5S1U2-P21-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-a-box-of-crayons",
+      "atom_type": "word",
+      "text": "a box of crayons",
+      "gloss": "一盒蜡笔",
+      "linked_blocks": [
+        "TB-G5S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-advice",
+      "atom_type": "word",
+      "text": "advice",
+      "gloss": "建议",
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-art",
+      "atom_type": "word",
+      "text": "art",
+      "gloss": "美术",
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-beef",
+      "atom_type": "word",
+      "text": "beef",
+      "gloss": "牛肉",
+      "linked_blocks": [
+        "TB-G5S1U2-P16-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-chinese",
+      "atom_type": "word",
+      "text": "Chinese",
+      "gloss": "语文",
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-clean-my-room",
+      "atom_type": "word",
+      "text": "clean my room",
+      "gloss": "打扫我的房间",
+      "linked_blocks": [
+        "TB-G5S1U2-P18-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-cooking",
+      "atom_type": "word",
+      "text": "cooking",
+      "gloss": "烹饪；烹调",
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-cooking-class",
+      "atom_type": "word",
+      "text": "cooking class",
+      "gloss": "烹饪课",
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-day",
+      "atom_type": "word",
+      "text": "day",
+      "gloss": "一天；一日",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-do",
+      "atom_type": "word",
+      "text": "do",
+      "gloss": "做；干",
+      "linked_blocks": [
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-do-homework",
+      "atom_type": "word",
+      "text": "do homework",
+      "gloss": "做作业",
+      "linked_blocks": [
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-draw-pictures",
+      "atom_type": "word",
+      "text": "draw pictures",
+      "gloss": "画画",
+      "linked_blocks": [
+        "TB-G5S1U2-P18-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-eat",
+      "atom_type": "word",
+      "text": "eat",
+      "gloss": "吃",
+      "linked_blocks": [
+        "TB-G5S1U2-P16-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-english",
+      "atom_type": "word",
+      "text": "English",
+      "gloss": "英语",
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D1",
+        "TB-G5S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-enough-money",
+      "atom_type": "word",
+      "text": "enough money",
+      "gloss": "足够的钱",
+      "linked_blocks": [
+        "TB-G5S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-every",
+      "atom_type": "word",
+      "text": "every",
+      "gloss": "每一个，每个",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-feet",
+      "atom_type": "word",
+      "text": "feet",
+      "gloss": "脚（复数）",
+      "linked_blocks": [
+        "TB-G5S1U2-P16-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-football",
+      "atom_type": "word",
+      "text": "football",
+      "gloss": "足球",
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D2",
+        "TB-G5S1U2-P17-D3",
+        "TB-G5S1U2-P18-D1",
+        "TB-G5S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-fri",
+      "atom_type": "word",
+      "text": "Fri.",
+      "gloss": "周五（足球）",
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-friday",
+      "atom_type": "word",
+      "text": "Friday",
+      "gloss": "星期五",
+      "linked_blocks": [
+        "TB-G5S1U2-P13-D1",
+        "TB-G5S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-listen-to-music",
+      "atom_type": "word",
+      "text": "listen to music",
+      "gloss": "听音乐",
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-maths",
+      "atom_type": "word",
+      "text": "maths",
+      "gloss": "数学",
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-meet",
+      "atom_type": "word",
+      "text": "meet",
+      "gloss": "遇见",
+      "linked_blocks": [
+        "TB-G5S1U2-P16-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-mon",
+      "atom_type": "word",
+      "text": "Mon.",
+      "gloss": "周一（足球）",
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-monday",
+      "atom_type": "word",
+      "text": "Monday",
+      "gloss": "星期一",
+      "linked_blocks": [
+        "TB-G5S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-music",
+      "atom_type": "word",
+      "text": "music",
+      "gloss": "音乐",
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D2",
+        "TB-G5S1U2-P17-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-notebooks",
+      "atom_type": "word",
+      "text": "notebooks",
+      "gloss": "笔记本",
+      "linked_blocks": [
+        "TB-G5S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-often",
+      "atom_type": "word",
+      "text": "often",
+      "gloss": "时常；常常",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-on-fridays",
+      "atom_type": "word",
+      "text": "on Fridays",
+      "gloss": "在星期五",
+      "linked_blocks": [
+        "TB-G5S1U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-on-the-weekend",
+      "atom_type": "word",
+      "text": "on the weekend",
+      "gloss": "在周末",
+      "linked_blocks": [
+        "TB-G5S1U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-park",
+      "atom_type": "word",
+      "text": "park",
+      "gloss": "公园",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-pe",
+      "atom_type": "word",
+      "text": "PE",
+      "gloss": "体育",
+      "linked_blocks": [
+        "TB-G5S1U2-P12-D1",
+        "TB-G5S1U2-P14-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pe-class",
+      "atom_type": "word",
+      "text": "PE class",
+      "gloss": "体育课",
+      "linked_blocks": [
+        "TB-G5S1U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pencils",
+      "atom_type": "word",
+      "text": "pencils",
+      "gloss": "铅笔",
+      "linked_blocks": [
+        "TB-G5S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-play",
+      "atom_type": "word",
+      "text": "play",
+      "gloss": "踢；玩；参加（体育运动）",
+      "linked_blocks": [
+        "TB-G5S1U2-P12-D1",
+        "TB-G5S1U2-P17-D2",
+        "TB-G5S1U2-P17-D3",
+        "TB-G5S1U2-P18-D1",
+        "TB-G5S1U2-P18-D3",
+        "TB-G5S1U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-play-football",
+      "atom_type": "word",
+      "text": "play football",
+      "gloss": "踢足球",
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D2",
+        "TB-G5S1U2-P17-D3",
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-play-ping-pong",
+      "atom_type": "word",
+      "text": "play ping-pong",
+      "gloss": "打乒乓球",
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-play-sports",
+      "atom_type": "word",
+      "text": "play sports",
+      "gloss": "做体育运动",
+      "linked_blocks": [
+        "TB-G5S1U2-P12-D1",
+        "TB-G5S1U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-play-the-pipa",
+      "atom_type": "word",
+      "text": "play the pipa",
+      "gloss": "弹琵琶",
+      "linked_blocks": [
+        "TB-G5S1U2-P18-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-read",
+      "atom_type": "word",
+      "text": "read",
+      "gloss": "看；读",
+      "linked_blocks": [
+        "TB-G5S1U2-P13-D1",
+        "TB-G5S1U2-P16-D1",
+        "TB-G5S1U2-P17-D2",
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-read-books",
+      "atom_type": "word",
+      "text": "read books",
+      "gloss": "看书",
+      "linked_blocks": [
+        "TB-G5S1U2-P13-D1",
+        "TB-G5S1U2-P17-D2",
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-ruler",
+      "atom_type": "word",
+      "text": "ruler",
+      "gloss": "尺子",
+      "linked_blocks": [
+        "TB-G5S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sat",
+      "atom_type": "word",
+      "text": "Sat.",
+      "gloss": "周六（乒乓球）",
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-saturday",
+      "atom_type": "word",
+      "text": "Saturday",
+      "gloss": "星期六",
+      "linked_blocks": [
+        "TB-G5S1U2-P13-D1",
+        "TB-G5S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-schedule",
+      "atom_type": "word",
+      "text": "schedule",
+      "gloss": "工作计划；日程安排",
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-school-year",
+      "atom_type": "word",
+      "text": "school year",
+      "gloss": "学年",
+      "linked_blocks": [
+        "TB-G5S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-shopping",
+      "atom_type": "word",
+      "text": "shopping",
+      "gloss": "购物",
+      "linked_blocks": [
+        "TB-G5S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-should",
+      "atom_type": "word",
+      "text": "should",
+      "gloss": "（常用于纠正别人）应该，应当",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-sleep",
+      "atom_type": "word",
+      "text": "sleep",
+      "gloss": "睡觉",
+      "linked_blocks": [
+        "TB-G5S1U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sport",
+      "atom_type": "word",
+      "text": "sport",
+      "gloss": "体育运动",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-storybook",
+      "atom_type": "word",
+      "text": "storybook",
+      "gloss": "故事书",
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-sun",
+      "atom_type": "word",
+      "text": "Sun.",
+      "gloss": "周日（跑步）",
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-sunday",
+      "atom_type": "word",
+      "text": "Sunday",
+      "gloss": "星期日",
+      "linked_blocks": [
+        "TB-G5S1U2-P13-D1",
+        "TB-G5S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-tea",
+      "atom_type": "word",
+      "text": "tea",
+      "gloss": "茶",
+      "linked_blocks": [
+        "TB-G5S1U2-P16-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-thur",
+      "atom_type": "word",
+      "text": "Thur.",
+      "gloss": "周四（乒乓球）",
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-thursday",
+      "atom_type": "word",
+      "text": "Thursday",
+      "gloss": "星期四",
+      "linked_blocks": [
+        "TB-G5S1U2-P13-D1",
+        "TB-G5S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-tired",
+      "atom_type": "word",
+      "text": "tired",
+      "gloss": "疲倦的",
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-tues",
+      "atom_type": "word",
+      "text": "Tues.",
+      "gloss": "周二（乒乓球）",
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-tuesday",
+      "atom_type": "word",
+      "text": "Tuesday",
+      "gloss": "星期二",
+      "linked_blocks": [
+        "TB-G5S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-wash",
+      "atom_type": "word",
+      "text": "wash",
+      "gloss": "洗",
+      "linked_blocks": [
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-wash-my-clothes",
+      "atom_type": "word",
+      "text": "wash my clothes",
+      "gloss": "洗我的衣服",
+      "linked_blocks": [
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-watch",
+      "atom_type": "word",
+      "text": "watch",
+      "gloss": "看",
+      "linked_blocks": [
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-watch-tv",
+      "atom_type": "word",
+      "text": "watch TV",
+      "gloss": "看电视",
+      "linked_blocks": [
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-wed",
+      "atom_type": "word",
+      "text": "Wed.",
+      "gloss": "周三（篮球）",
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-wednesday",
+      "atom_type": "word",
+      "text": "Wednesday",
+      "gloss": "星期三",
+      "linked_blocks": [
+        "TB-G5S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-weekend",
+      "atom_type": "word",
+      "text": "weekend",
+      "gloss": "周末",
+      "linked_blocks": [
+        "TB-G5S1U2-P13-D1",
+        "TB-G5S1U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-ask-and-answer-about-weekend-activities",
+      "atom_type": "sentence_pattern",
+      "text": "Ask and answer about weekend activities.",
+      "gloss": "询问和回答关于周末活动的问题。",
+      "linked_blocks": [
+        "TB-G5S1U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-choose-one-sentence-from-above-and-write",
+      "atom_type": "sentence_pattern",
+      "text": "Choose one sentence from above and write.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P16-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-complete-the-words",
+      "atom_type": "sentence_pattern",
+      "text": "Complete the words.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P20-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-compound-words-are-formed-by-joining-two-smaller-words-together",
+      "atom_type": "sentence_pattern",
+      "text": "Compound words are formed by joining two smaller words together.",
+      "gloss": "复合词由两个较小的单词组合而成。",
+      "linked_blocks": [
+        "TB-G5S1U2-P20-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-often",
+      "atom_type": "sentence_pattern",
+      "text": "Do you often ...?",
+      "gloss": "你经常...吗？",
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-often-listen-to-music",
+      "atom_type": "sentence_pattern",
+      "text": "Do you often listen to music?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-often-play-ping-pong-on-the-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "Do you often play ping-pong on the weekend?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-often-play-sports",
+      "atom_type": "sentence_pattern",
+      "text": "Do you often play sports?",
+      "gloss": "你经常做运动吗？",
+      "linked_blocks": [
+        "TB-G5S1U2-P12-D1",
+        "TB-G5S1U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-often-read-books-in-this-park",
+      "atom_type": "sentence_pattern",
+      "text": "Do you often read books in this park?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-often-read-books-on-the-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "Do you often read books on the weekend?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-often-wash-your-clothes-on-the-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "Do you often wash your clothes on the weekend?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-often",
+      "atom_type": "sentence_pattern",
+      "text": "Do you often...?",
+      "gloss": "你经常...吗？",
+      "linked_blocks": [
+        "TB-G5S1U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-great-what-do-you-have-on-thursdays",
+      "atom_type": "sentence_pattern",
+      "text": "Great! What do you have on Thursdays?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hi-sarah-what-s-that",
+      "atom_type": "sentence_pattern",
+      "text": "Hi, Sarah. What's that?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-have-chinese-english-maths-and-music",
+      "atom_type": "sentence_pattern",
+      "text": "I have Chinese, English, maths and music.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P15-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-have-pe-music-science-and-english",
+      "atom_type": "sentence_pattern",
+      "text": "I have PE, music, science and English.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P15-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-have-pe",
+      "atom_type": "sentence_pattern",
+      "text": "I have PE.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-have-a-pe-class",
+      "atom_type": "sentence_pattern",
+      "text": "I have a PE class.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-have-a-basketball-class",
+      "atom_type": "sentence_pattern",
+      "text": "I have a basketball class.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-have-a-football-class",
+      "atom_type": "sentence_pattern",
+      "text": "I have a football class.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-have-a-ping-pong-class",
+      "atom_type": "sentence_pattern",
+      "text": "I have a ping-pong class.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-need-some-notebooks-and-pencils",
+      "atom_type": "sentence_pattern",
+      "text": "I need some notebooks and pencils.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-often",
+      "atom_type": "sentence_pattern",
+      "text": "I often ...",
+      "gloss": "我经常...",
+      "linked_blocks": [
+        "TB-G5S1U2-P18-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-often-do-homework-watch-tv-and-draw-pictures-on-the-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "I often do homework, watch TV and draw pictures on the weekend.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P18-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-often-read-books-on-the-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "I often read books on the weekend.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P18-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-often-wash-my-clothes-clean-my-room-and-play-the-pipa-on-the-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "I often wash my clothes, clean my room and play the pipa on the weekend.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P18-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-ll-help",
+      "atom_type": "sentence_pattern",
+      "text": "I'll help.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-he-strict",
+      "atom_type": "sentence_pattern",
+      "text": "Is he strict?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-it-friday",
+      "atom_type": "sentence_pattern",
+      "text": "Is it Friday?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P15-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-it-monday",
+      "atom_type": "sentence_pattern",
+      "text": "Is it Monday?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P15-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-is-saturday-morning-zhang-peng-calls-oliver-listen-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "It is Saturday morning. Zhang Peng calls Oliver. Listen and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-a-new-school-year-i-need-to-do-some-shopping",
+      "atom_type": "sentence_pattern",
+      "text": "It's a new school year. I need to do some shopping.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-a-storybook",
+      "atom_type": "sentence_pattern",
+      "text": "It's a storybook.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-learn-to-purchase-school-supplies-based-on-the-class-schedule",
+      "atom_type": "sentence_pattern",
+      "text": "Learn to purchase school supplies based on the class schedule.",
+      "gloss": "学会根据课程表购买学习用品。",
+      "linked_blocks": [
+        "TB-G5S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-learn",
+      "atom_type": "sentence_pattern",
+      "text": "Let's learn",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P15-D1",
+        "TB-G5S1U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-fill-in-the-blank",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and fill in the blank.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-number",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and number.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P20-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-repeat-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Listen, repeat and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-write-and-say",
+      "atom_type": "sentence_pattern",
+      "text": "Listen, write and say.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-i-don-t",
+      "atom_type": "sentence_pattern",
+      "text": "No, I don't.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-i-don-t-do-you-often-play-football-here",
+      "atom_type": "sentence_pattern",
+      "text": "No, I don't. Do you often play football here?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-i-don-t-i-don-t-like-sports",
+      "atom_type": "sentence_pattern",
+      "text": "No, I don't. I don't like sports.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P12-D1",
+        "TB-G5S1U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-but-i-often-sleep",
+      "atom_type": "sentence_pattern",
+      "text": "No, but I often sleep!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-he-s-funny-what-do-you-do-on-thursdays-grandpa",
+      "atom_type": "sentence_pattern",
+      "text": "No. He's funny. What do you do on Thursdays, Grandpa?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-oh-i-love-music-who-s-your-music-teacher",
+      "atom_type": "sentence_pattern",
+      "text": "Oh, I love music! Who's your music teacher?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-asking-and-answering-about-weekly-schedules",
+      "atom_type": "sentence_pattern",
+      "text": "Practice asking and answering about weekly schedules.",
+      "gloss": "练习询问和回答关于周课表的问题。",
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-guessing-the-day-of-the-week-based-on-the-schedule",
+      "atom_type": "sentence_pattern",
+      "text": "Practice guessing the day of the week based on the schedule.",
+      "gloss": "根据课程安排练习猜测星期几。",
+      "linked_blocks": [
+        "TB-G5S1U2-P15-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Read and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P20-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-schedule",
+      "atom_type": "sentence_pattern",
+      "text": "Schedule",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-letter-combinations-ee-and-ea-often-make-the-long-i-sound",
+      "atom_type": "sentence_pattern",
+      "text": "The letter combinations 'ee' and 'ea' often make the long /i:/ sound.",
+      "gloss": "字母组合 'ee' 和 'ea' 通常发长音 /i:/。",
+      "linked_blocks": [
+        "TB-G5S1U2-P16-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-tick-or-cross",
+      "atom_type": "sentence_pattern",
+      "text": "Tick or cross.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-understand-the-concept-of-budgeting-and-having-enough-money",
+      "atom_type": "sentence_pattern",
+      "text": "Understand the concept of budgeting and having enough money.",
+      "gloss": "理解预算和钱是否足够的概念。",
+      "linked_blocks": [
+        "TB-G5S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-have",
+      "atom_type": "sentence_pattern",
+      "text": "We have ...",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-have-english-on-mondays-and-wednesdays",
+      "atom_type": "sentence_pattern",
+      "text": "We have English on Mondays and Wednesdays.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-about-you",
+      "atom_type": "sentence_pattern",
+      "text": "What about you?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P18-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-do-we-have-on-wednesdays",
+      "atom_type": "sentence_pattern",
+      "text": "What do we have on Wednesdays?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-do-you-do-on-thursdays",
+      "atom_type": "sentence_pattern",
+      "text": "What do you do on Thursdays?",
+      "gloss": "你星期四做什么？",
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-do-you-have-on-fridays",
+      "atom_type": "sentence_pattern",
+      "text": "What do you have on Fridays?",
+      "gloss": "你星期五有什么课？",
+      "linked_blocks": [
+        "TB-G5S1U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-do-you-have-on-mondays",
+      "atom_type": "sentence_pattern",
+      "text": "What do you have on Mondays?",
+      "gloss": "你星期一有什么课？",
+      "linked_blocks": [
+        "TB-G5S1U2-P15-D2",
+        "TB-G5S1U2-P19-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-do-you-have-on-thursdays",
+      "atom_type": "sentence_pattern",
+      "text": "What do you have on Thursdays?",
+      "gloss": "你星期四有什么课？",
+      "linked_blocks": [
+        "TB-G5S1U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-do-you-have-on-tuesdays",
+      "atom_type": "sentence_pattern",
+      "text": "What do you have on Tuesdays?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-do-you-have-on-wednesdays",
+      "atom_type": "sentence_pattern",
+      "text": "What do you have on Wednesdays?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-do-you-often-do-on-the-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "What do you often do on the weekend?",
+      "gloss": "你周末经常做什么？",
+      "linked_blocks": [
+        "TB-G5S1U2-P18-D3",
+        "TB-G5S1U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-i-do",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, I do.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D3",
+        "TB-G5S1U2-P18-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-i-do-no-i-don-t",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, I do. / No, I don't.",
+      "gloss": "是的，我做。/不，我不做。",
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-i-do-i-like-this-park-very-much",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, I do. I like this park very much.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-look-tired-what-do-you-have-on-fridays",
+      "atom_type": "sentence_pattern",
+      "text": "You look tired. What do you have on Fridays?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-should-play-sports-every-day",
+      "atom_type": "sentence_pattern",
+      "text": "You should play sports every day.",
+      "gloss": "你应该每天做运动。",
+      "linked_blocks": [
+        "TB-G5S1U2-P19-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S1U2-P12",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: My week. 单元首页图。吴彬彬疲惫地躺在沙发上，机器人罗宾与他讨论周五的课程以及是否喜欢运动。周围的照片展示了周一（语文课，黑板上写着古诗“春风又绿江南岸，明月何时照我还？”）、周二（数学课，黑板上写着“2.8+52.6=”）、周三（美术课）的场景，引出本单元关于星期和课程的主题。",
+      "entry_probe_questions": [
+        "Do you know the word on Fridays?",
+        "Can you say: What do you have on Fridays?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U2-P12-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U2-P13",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: My week. 页面延续了“我的一周”主题，通过图片展示了周四至周日的活动场景，包括上课、打篮球、休息和阅读。中心对话是小松鼠Zip和小熊Zoom讨论周末的习惯，引出关于周末活动的问答。",
+      "entry_probe_questions": [
+        "Do you know the word on the weekend?",
+        "Can you say: Ask and answer about weekend activities."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U2-P13-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U2-P14",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: My week. 约翰和爷爷对话。约翰向爷爷介绍自己周四的课程，并谈论了他的音乐老师。随后，约翰也询问了爷爷在周四的活动。",
+      "entry_probe_questions": [
+        "Do you know the word maths?",
+        "Can you say: What do you have on Thursdays?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U2-P14-D2",
+        "TB-G5S1U2-P14-D3",
+        "TB-G5S1U2-P14-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U2-P15",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: My week. 展示了一张从周一到周日的周课程表，介绍了星期、课程和周末等相关词汇。",
+      "entry_probe_questions": [
+        "Do you know the word Monday?",
+        "Can you say: Let's learn"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U2-P15-D1",
+        "TB-G5S1U2-P15-D2",
+        "TB-G5S1U2-P15-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U2-P16",
+      "page_type": "phonics",
+      "page_intro_cn": "Theme: Phonics: ee / ea. 听录音，跟读，并圈出每组中发音的元音字母组合与其他两个不同的单词。",
+      "entry_probe_questions": [
+        "Can you say: Listen, repeat and circle."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U2-P16-D2",
+        "TB-G5S1U2-P16-D3",
+        "TB-G5S1U2-P16-D1",
+        "TB-G5S1U2-P16-D4"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U2-P17",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Weekend activities. 周六下午，张鹏在公园里遇到了正在看书的莎拉。他们讨论了各自在公园里经常做的活动。",
+      "entry_probe_questions": [
+        "Do you know the word storybook?",
+        "Can you say: Do you often ...?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U2-P17-D2",
+        "TB-G5S1U2-P17-D3",
+        "TB-G5S1U2-P17-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U2-P18",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Weekend activities. 通过图卡展示了五种常见的周末活动，学习相关动词短语。",
+      "entry_probe_questions": [
+        "Do you know the word wash my clothes?",
+        "Can you say: Let's learn"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U2-P18-D1",
+        "TB-G5S1U2-P18-D2",
+        "TB-G5S1U2-P18-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U2-P19",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Reading, comprehension and writing. 一段对话，讲述了机器人罗宾看到吴彬彬很累，便询问他平时的活动安排。在得知吴彬彬不爱运动后，罗宾给了他一些建议，并为他制定了一个新的运动时间表。",
+      "entry_probe_questions": [
+        "Do you know the word tired?",
+        "Can you say: You should play sports every day."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U2-P19-D1",
+        "TB-G5S1U2-P19-D4",
+        "TB-G5S1U2-P19-D2",
+        "TB-G5S1U2-P19-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U2-P20",
+      "page_type": "listening",
+      "page_intro_cn": "Theme: Unit 2 Check & Wrap-up. 学生听录音，根据听到的课程或活动安排，为四张时间表图片排序编号。",
+      "entry_probe_questions": [
+        "Can you say: Listen and number."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U2-P20-D1",
+        "TB-G5S1U2-P20-D3",
+        "TB-G5S1U2-P20-D4",
+        "TB-G5S1U2-P20-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U2-P21",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Story time. 一个连环画故事，讲述了新学年开始，小熊祖姆和小松鼠兹普根据他们的课程表去购物买文具。然而，在挑选完所有必需品后，他们发现钱不够买一个新足球。",
+      "entry_probe_questions": [
+        "Do you know the word school year?",
+        "Can you say: Learn to purchase school supplies based on the class schedule."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U2-P21-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S1U2-P12-D1",
+      "page_uid": "TB-G5S1U2-P12",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U2-P12-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "单元首页图。吴彬彬疲惫地躺在沙发上，机器人罗宾与他讨论周五的课程以及是否喜欢运动。周围的照片展示了周一（语文课，黑板上写着古诗“春风又绿江南岸，明月何时照我还？”）、周二（数学课，黑板上写着“2.8+52.6=”）、周三（美术课）的场景，引出本单元关于星期和课程的主题。 Key patterns: What do you have on Fridays?; Do you often play sports?",
+      "focus_vocabulary": [
+        "on Fridays",
+        "PE class",
+        "play sports"
+      ],
+      "core_patterns": [
+        "What do you have on Fridays?",
+        "Do you often play sports?",
+        "I have a PE class.",
+        "No, I don't. I don't like sports."
+      ],
+      "allowed_answer_scope": [
+        "I have a PE class.",
+        "No, I don't. I don't like sports."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word on Fridays?",
+        "Can you say: What do you have on Fridays?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U2-P12-D1-goal"
+      ],
+      "branchable_topics": [
+        "on Fridays",
+        "PE class",
+        "play sports",
+        "My week",
+        "Unit Two"
+      ],
+      "return_anchors": [
+        "What do you have on Fridays?",
+        "Do you often play sports?",
+        "I have a PE class."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P13-D1",
+      "page_uid": "TB-G5S1U2-P13",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U2-P13-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "页面延续了“我的一周”主题，通过图片展示了周四至周日的活动场景，包括上课、打篮球、休息和阅读。中心对话是小松鼠Zip和小熊Zoom讨论周末的习惯，引出关于周末活动的问答。 Key patterns: Ask and answer about weekend activities.; Do you often...?",
+      "focus_vocabulary": [
+        "on the weekend",
+        "read books",
+        "sleep",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "core_patterns": [
+        "Ask and answer about weekend activities.",
+        "Do you often...?",
+        "Do you often read books on the weekend?",
+        "No, but I often sleep!"
+      ],
+      "allowed_answer_scope": [
+        "No, but I often sleep!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word on the weekend?",
+        "Can you say: Ask and answer about weekend activities."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U2-P13-D1-goal"
+      ],
+      "branchable_topics": [
+        "on the weekend",
+        "read books",
+        "sleep",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "My week"
+      ],
+      "return_anchors": [
+        "Ask and answer about weekend activities.",
+        "Do you often...?",
+        "Do you often read books on the weekend?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P14-D1",
+      "page_uid": "TB-G5S1U2-P14",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U2-P14-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "学生需要听录音，了解约翰在星期三有哪些课程，并从词汇标签中选择正确的课程填入句子中。 Key patterns: Listen and fill in the blank.",
+      "focus_vocabulary": [
+        "art",
+        "Chinese",
+        "English",
+        "PE"
+      ],
+      "core_patterns": [
+        "Listen and fill in the blank."
+      ],
+      "allowed_answer_scope": [
+        "art and PE"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word art?",
+        "Can you say: Listen and fill in the blank."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U2-P14-D1-goal"
+      ],
+      "branchable_topics": [
+        "art",
+        "Chinese",
+        "English",
+        "PE",
+        "My week",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and fill in the blank."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P14-D2",
+      "page_uid": "TB-G5S1U2-P14",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U2-P14-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "约翰和爷爷对话。约翰向爷爷介绍自己周四的课程，并谈论了他的音乐老师。随后，约翰也询问了爷爷在周四的活动。 Key patterns: What do you have on Thursdays?; What do you do on Thursdays?",
+      "focus_vocabulary": [
+        "maths",
+        "English",
+        "music",
+        "cooking class"
+      ],
+      "core_patterns": [
+        "What do you have on Thursdays?",
+        "What do you do on Thursdays?",
+        "Great! What do you have on Thursdays?",
+        "Oh, I love music! Who's your music teacher?",
+        "Is he strict?",
+        "No. He's funny. What do you do on Thursdays, Grandpa?"
+      ],
+      "allowed_answer_scope": [
+        "Grandpa! Look at my picture.",
+        "I have maths, English and music.",
+        "Mr Young.",
+        "Oh, I have a cooking class with your grandma!",
+        "Haha!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word maths?",
+        "Can you say: What do you have on Thursdays?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P14-D3",
+        "TB-G5S1U2-P14-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P14-D2-goal"
+      ],
+      "branchable_topics": [
+        "maths",
+        "English",
+        "music",
+        "cooking class",
+        "My week",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "What do you have on Thursdays?",
+        "What do you do on Thursdays?",
+        "Great! What do you have on Thursdays?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P14-D3",
+      "page_uid": "TB-G5S1U2-P14",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U2-P14-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "提供一个对话框架，鼓励学生练习询问和回答关于星期三和星期四的课程安排。 Key patterns: Practice asking and answering about weekly schedules.; What do we have on Wednesdays?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice asking and answering about weekly schedules.",
+        "What do we have on Wednesdays?",
+        "We have ..."
+      ],
+      "allowed_answer_scope": [
+        "We have ..."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice asking and answering about weekly schedules."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P14-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P14-D3-goal"
+      ],
+      "branchable_topics": [
+        "My week",
+        "What do we have on Wednesdays and Thursdays?"
+      ],
+      "return_anchors": [
+        "Practice asking and answering about weekly schedules.",
+        "What do we have on Wednesdays?",
+        "We have ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P15-D1",
+      "page_uid": "TB-G5S1U2-P15",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S1U2-P15-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "展示了一张从周一到周日的周课程表，介绍了星期、课程和周末等相关词汇。 Key patterns: Let's learn",
+      "focus_vocabulary": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "weekend"
+      ],
+      "core_patterns": [
+        "Let's learn"
+      ],
+      "allowed_answer_scope": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word Monday?",
+        "Can you say: Let's learn"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P15-D2",
+        "TB-G5S1U2-P15-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P15-D1-goal"
+      ],
+      "branchable_topics": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "weekend"
+      ],
+      "return_anchors": [
+        "Let's learn"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P15-D2",
+      "page_uid": "TB-G5S1U2-P15",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U2-P15-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "机器人罗宾和吴彬彬根据课程表进行问答练习，询问周一的课程安排。 Key patterns: What do you have on Mondays?; I have Chinese, English, maths and music.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What do you have on Mondays?",
+        "I have Chinese, English, maths and music."
+      ],
+      "allowed_answer_scope": [
+        "I have Chinese, English, maths and music."
+      ],
+      "entry_probe_questions": [
+        "Can you say: What do you have on Mondays?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P15-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P15-D2-goal"
+      ],
+      "branchable_topics": [
+        "My week",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "What do you have on Mondays?",
+        "I have Chinese, English, maths and music."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P15-D3",
+      "page_uid": "TB-G5S1U2-P15",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U2-P15-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "一个伙伴游戏，一个学生说出某天的课程，另一个学生根据课程表猜测是星期几。 Key patterns: Practice guessing the day of the week based on the schedule.; Is it Monday?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice guessing the day of the week based on the schedule.",
+        "Is it Monday?",
+        "Is it Friday?",
+        "I have PE, music, science and English."
+      ],
+      "allowed_answer_scope": [
+        "I have PE, music, science and English.",
+        "No.",
+        "Yes!"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice guessing the day of the week based on the schedule."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U2-P15-D3-goal"
+      ],
+      "branchable_topics": [
+        "My week",
+        "Let's play"
+      ],
+      "return_anchors": [
+        "Practice guessing the day of the week based on the schedule.",
+        "Is it Monday?",
+        "Is it Friday?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P16-D1",
+      "page_uid": "TB-G5S1U2-P16",
+      "page_type": "phonics",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G5S1U2-P16-D1"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "学习字母组合 'ee' 和 'ea' 在单词中的发音，它们通常都发长音 /i:/。 Key patterns: The letter combinations 'ee' and 'ea' often make the long /i:/ sound.",
+      "focus_vocabulary": [
+        "feet",
+        "beef",
+        "meet",
+        "tea",
+        "read",
+        "eat"
+      ],
+      "core_patterns": [
+        "The letter combinations 'ee' and 'ea' often make the long /i:/ sound."
+      ],
+      "allowed_answer_scope": [
+        "feet",
+        "beef",
+        "meet",
+        "tea",
+        "read",
+        "eat"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word feet?",
+        "Can you say: The letter combinations 'ee' and 'ea' often make the long /i:/ sound."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P16-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P16-D1-goal"
+      ],
+      "branchable_topics": [
+        "feet",
+        "beef",
+        "meet",
+        "tea",
+        "read",
+        "eat",
+        "Phonics: ee / ea",
+        "Let's spell"
+      ],
+      "return_anchors": [
+        "The letter combinations 'ee' and 'ea' often make the long /i:/ sound."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P16-D2",
+      "page_uid": "TB-G5S1U2-P16",
+      "page_type": "phonics",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U2-P16-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，跟读，并圈出每组中发音的元音字母组合与其他两个不同的单词。 Key patterns: Listen, repeat and circle.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen, repeat and circle."
+      ],
+      "allowed_answer_scope": [
+        "read",
+        "see",
+        "repeat"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen, repeat and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P16-D3",
+        "TB-G5S1U2-P16-D1",
+        "TB-G5S1U2-P16-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P16-D2-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: ee / ea",
+        "Let's spell"
+      ],
+      "return_anchors": [
+        "Listen, repeat and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P16-D3",
+      "page_uid": "TB-G5S1U2-P16",
+      "page_type": "phonics",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U2-P16-D3"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，看图，将合适的单词填入句子中。 Key patterns: Listen, write and say.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen, write and say."
+      ],
+      "allowed_answer_scope": [
+        "read",
+        "beef, tea",
+        "Feed"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen, write and say."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P16-D1",
+        "TB-G5S1U2-P16-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P16-D3-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: ee / ea",
+        "Let's spell"
+      ],
+      "return_anchors": [
+        "Listen, write and say."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P16-D4",
+      "page_uid": "TB-G5S1U2-P16",
+      "page_type": "phonics",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S1U2-P16-D4"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "从上面完成的三个句子中选择一个抄写下来。 Key patterns: Choose one sentence from above and write.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Choose one sentence from above and write."
+      ],
+      "allowed_answer_scope": [
+        "I like to read by the sea."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Choose one sentence from above and write."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U2-P16-D4-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: ee / ea",
+        "Let's spell"
+      ],
+      "return_anchors": [
+        "Choose one sentence from above and write."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P17-D1",
+      "page_uid": "TB-G5S1U2-P17",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U2-P17-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听一段张鹏和奥利弗在周六早上的通话，根据内容判断奥利弗正在做什么，并勾选正确的图片。 Key patterns: It is Saturday morning. Zhang Peng calls Oliver. Listen and tick.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "It is Saturday morning. Zhang Peng calls Oliver. Listen and tick."
+      ],
+      "allowed_answer_scope": [
+        "Picture 1"
+      ],
+      "entry_probe_questions": [
+        "Can you say: It is Saturday morning. Zhang Peng calls Oliver. Listen and tick."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U2-P17-D1-goal"
+      ],
+      "branchable_topics": [
+        "Weekend activities",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "It is Saturday morning. Zhang Peng calls Oliver. Listen and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P17-D2",
+      "page_uid": "TB-G5S1U2-P17",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U2-P17-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "周六下午，张鹏在公园里遇到了正在看书的莎拉。他们讨论了各自在公园里经常做的活动。 Key patterns: Do you often ...?; Hi, Sarah. What's that?",
+      "focus_vocabulary": [
+        "storybook",
+        "read books",
+        "play football"
+      ],
+      "core_patterns": [
+        "Do you often ...?",
+        "Hi, Sarah. What's that?",
+        "Do you often read books in this park?",
+        "No, I don't. Do you often play football here?",
+        "It's a storybook.",
+        "Yes, I do. I like this park very much."
+      ],
+      "allowed_answer_scope": [
+        "It's a storybook.",
+        "Yes, I do. I like this park very much.",
+        "Me too."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word storybook?",
+        "Can you say: Do you often ...?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P17-D3",
+        "TB-G5S1U2-P17-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P17-D2-goal"
+      ],
+      "branchable_topics": [
+        "storybook",
+        "read books",
+        "play football",
+        "Weekend activities",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "Do you often ...?",
+        "Hi, Sarah. What's that?",
+        "Do you often read books in this park?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P17-D3",
+      "page_uid": "TB-G5S1U2-P17",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U2-P17-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "提供词汇表和示例对话，引导学生练习询问和回答关于周末活动的频率。 Key patterns: Yes, I do. / No, I don't.; Do you often play ping-pong on the weekend?",
+      "focus_vocabulary": [
+        "play ping-pong",
+        "play football",
+        "listen to music"
+      ],
+      "core_patterns": [
+        "Yes, I do. / No, I don't.",
+        "Do you often play ping-pong on the weekend?",
+        "Do you often listen to music?",
+        "Yes, I do.",
+        "No, I don't."
+      ],
+      "allowed_answer_scope": [
+        "Yes, I do.",
+        "No, I don't."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word play ping-pong?",
+        "Can you say: Yes, I do. / No, I don't."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P17-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P17-D3-goal"
+      ],
+      "branchable_topics": [
+        "play ping-pong",
+        "play football",
+        "listen to music",
+        "Weekend activities",
+        "Ask and answer"
+      ],
+      "return_anchors": [
+        "Yes, I do. / No, I don't.",
+        "Do you often play ping-pong on the weekend?",
+        "Do you often listen to music?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P18-D1",
+      "page_uid": "TB-G5S1U2-P18",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S1U2-P18-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "通过图卡展示了五种常见的周末活动，学习相关动词短语。 Key patterns: Let's learn",
+      "focus_vocabulary": [
+        "wash my clothes",
+        "watch TV",
+        "do homework",
+        "read books",
+        "play football"
+      ],
+      "core_patterns": [
+        "Let's learn"
+      ],
+      "allowed_answer_scope": [
+        "wash my clothes",
+        "watch TV",
+        "do homework",
+        "read books",
+        "play football"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word wash my clothes?",
+        "Can you say: Let's learn"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P18-D2",
+        "TB-G5S1U2-P18-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P18-D1-goal"
+      ],
+      "branchable_topics": [
+        "wash my clothes",
+        "watch TV",
+        "do homework",
+        "read books",
+        "play football",
+        "Weekend activities",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Let's learn"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P18-D2",
+      "page_uid": "TB-G5S1U2-P18",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U2-P18-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "提供一个简短的问答示例，练习使用新学的词汇谈论周末活动。 Key patterns: Do you often wash your clothes on the weekend?; Yes, I do.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Do you often wash your clothes on the weekend?",
+        "Yes, I do."
+      ],
+      "allowed_answer_scope": [
+        "Yes, I do."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Do you often wash your clothes on the weekend?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P18-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P18-D2-goal"
+      ],
+      "branchable_topics": [
+        "Weekend activities",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Do you often wash your clothes on the weekend?",
+        "Yes, I do."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P18-D3",
+      "page_uid": "TB-G5S1U2-P18",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U2-P18-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "小组活动任务。学生需要互相询问周末经常做什么，并提供了三位同学的回答作为示例。最后，小动物们的对话框引导学生进行自由问答。 Key patterns: What do you often do on the weekend?; I often ...",
+      "focus_vocabulary": [
+        "draw pictures",
+        "clean my room",
+        "play the pipa"
+      ],
+      "core_patterns": [
+        "What do you often do on the weekend?",
+        "I often ...",
+        "What about you?",
+        "I often do homework, watch TV and draw pictures on the weekend.",
+        "I often wash my clothes, clean my room and play the pipa on the weekend.",
+        "I often read books on the weekend."
+      ],
+      "allowed_answer_scope": [
+        "I often do homework, watch TV and draw pictures on the weekend.",
+        "I often wash my clothes, clean my room and play the pipa on the weekend.",
+        "I often read books on the weekend.",
+        "I often ..."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word draw pictures?",
+        "Can you say: What do you often do on the weekend?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U2-P18-D3-goal"
+      ],
+      "branchable_topics": [
+        "draw pictures",
+        "clean my room",
+        "play the pipa",
+        "Weekend activities",
+        "Group work"
+      ],
+      "return_anchors": [
+        "What do you often do on the weekend?",
+        "I often ...",
+        "What about you?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P19-D1",
+      "page_uid": "TB-G5S1U2-P19",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S1U2-P19-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一段对话，讲述了机器人罗宾看到吴彬彬很累，便询问他平时的活动安排。在得知吴彬彬不爱运动后，罗宾给了他一些建议，并为他制定了一个新的运动时间表。 Key patterns: You should play sports every day.; You look tired. What do you have on Fridays?",
+      "focus_vocabulary": [
+        "tired",
+        "play sports",
+        "schedule",
+        "advice"
+      ],
+      "core_patterns": [
+        "You should play sports every day.",
+        "You look tired. What do you have on Fridays?",
+        "Do you often play sports?",
+        "What do you often do on the weekend?",
+        "I have PE.",
+        "No, I don't. I don't like sports."
+      ],
+      "allowed_answer_scope": [
+        "I have PE.",
+        "No, I don't. I don't like sports.",
+        "I often watch TV. Sometimes I read books.",
+        "You should play sports every day. Here is a new schedule for you."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word tired?",
+        "Can you say: You should play sports every day."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P19-D4",
+        "TB-G5S1U2-P19-D2",
+        "TB-G5S1U2-P19-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P19-D1-goal"
+      ],
+      "branchable_topics": [
+        "tired",
+        "play sports",
+        "schedule",
+        "advice",
+        "Reading, comprehension and writing",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "You should play sports every day.",
+        "You look tired. What do you have on Fridays?",
+        "Do you often play sports?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P19-D2",
+      "page_uid": "TB-G5S1U2-P19",
+      "page_type": "reading",
+      "block_type": "picture_scene",
+      "source_refs": [
+        "TB-G5S1U2-P19-D2"
+      ],
+      "teaching_goal": "Work on the picture scene activity.",
+      "teaching_summary": "罗宾为吴彬彬制定的新运动时间表，用图片表示每天的运动项目。 Key patterns: Schedule",
+      "focus_vocabulary": [
+        "Mon.",
+        "Tues.",
+        "Wed.",
+        "Thur.",
+        "Fri.",
+        "Sat.",
+        "Sun."
+      ],
+      "core_patterns": [
+        "Schedule"
+      ],
+      "allowed_answer_scope": [
+        "Mon.",
+        "Tues.",
+        "Wed.",
+        "Thur.",
+        "Fri.",
+        "Sat."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word Mon.?",
+        "Can you say: Schedule"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P19-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P19-D2-goal"
+      ],
+      "branchable_topics": [
+        "Mon.",
+        "Tues.",
+        "Wed.",
+        "Thur.",
+        "Fri.",
+        "Sat.",
+        "Sun.",
+        "Reading, comprehension and writing"
+      ],
+      "return_anchors": [
+        "Schedule"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P19-D3",
+      "page_uid": "TB-G5S1U2-P19",
+      "page_type": "reading",
+      "block_type": "practice_true_false",
+      "source_refs": [
+        "TB-G5S1U2-P19-D3"
+      ],
+      "teaching_goal": "Work on the practice true false activity.",
+      "teaching_summary": "根据初始对话内容，判断三个陈述句的对错，并打勾或画叉。 Key patterns: Tick or cross.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Tick or cross."
+      ],
+      "allowed_answer_scope": [
+        "✓",
+        "✗"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Tick or cross."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U2-P19-D3-goal"
+      ],
+      "branchable_topics": [
+        "Reading, comprehension and writing",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "Tick or cross."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P19-D4",
+      "page_uid": "TB-G5S1U2-P19",
+      "page_type": "reading",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G5S1U2-P19-D4"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "根据罗宾制定的新时间表，补全莎拉和吴彬彬的对话。 Key patterns: What do you have on Mondays?; What do you have on Tuesdays?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What do you have on Mondays?",
+        "What do you have on Tuesdays?",
+        "What do you have on Wednesdays?",
+        "I have a football class.",
+        "I have a ping-pong class.",
+        "I have a basketball class."
+      ],
+      "allowed_answer_scope": [
+        "I have a ping-pong class.",
+        "What do you have on Wednesdays"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What do you have on Mondays?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P19-D2",
+        "TB-G5S1U2-P19-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P19-D4-goal"
+      ],
+      "branchable_topics": [
+        "Reading, comprehension and writing",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "What do you have on Mondays?",
+        "What do you have on Tuesdays?",
+        "What do you have on Wednesdays?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P20-D1",
+      "page_uid": "TB-G5S1U2-P20",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U2-P20-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "学生听录音，根据听到的课程或活动安排，为四张时间表图片排序编号。 Key patterns: Listen and number.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and number."
+      ],
+      "allowed_answer_scope": [
+        "2",
+        "1",
+        "4",
+        "3"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and number."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P20-D3",
+        "TB-G5S1U2-P20-D4",
+        "TB-G5S1U2-P20-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P20-D1-goal"
+      ],
+      "branchable_topics": [
+        "Unit 2 Check & Wrap-up",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Listen and number."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P20-D2",
+      "page_uid": "TB-G5S1U2-P20",
+      "page_type": "listening",
+      "block_type": "practice_choice",
+      "source_refs": [
+        "TB-G5S1U2-P20-D2"
+      ],
+      "teaching_goal": "Work on the practice choice activity.",
+      "teaching_summary": "学生阅读关于周末活动的三个问题，并圈出'Yes'或'No'。这是一个个性化问答练习。 Key patterns: Read and circle.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Read and circle."
+      ],
+      "allowed_answer_scope": [
+        "Yes",
+        "No"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Read and circle."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U2-P20-D2-goal"
+      ],
+      "branchable_topics": [
+        "Unit 2 Check & Wrap-up",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Read and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P20-D3",
+      "page_uid": "TB-G5S1U2-P20",
+      "page_type": "listening",
+      "block_type": "summary_wrap_up",
+      "source_refs": [
+        "TB-G5S1U2-P20-D3"
+      ],
+      "teaching_goal": "Review and consolidate the core language point.",
+      "teaching_summary": "总结复合词的构成方法，通过示例展示两个单词如何组合成一个新词。 Key patterns: Compound words are formed by joining two smaller words together.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Compound words are formed by joining two smaller words together."
+      ],
+      "allowed_answer_scope": [
+        "Compound words are formed by joining two smaller words together."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Compound words are formed by joining two smaller words together."
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P20-D4",
+        "TB-G5S1U2-P20-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P20-D3-goal"
+      ],
+      "branchable_topics": [
+        "Unit 2 Check & Wrap-up",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Compound words are formed by joining two smaller words together."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P20-D4",
+      "page_uid": "TB-G5S1U2-P20",
+      "page_type": "listening",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G5S1U2-P20-D4"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "根据复合词的构成规则，补全表格中的单词。 Key patterns: Complete the words.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Complete the words."
+      ],
+      "allowed_answer_scope": [
+        "Saturday",
+        "bedroom",
+        "Wednesday",
+        "Thursday",
+        "bathroom",
+        "Sunday"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Complete the words."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U2-P20-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U2-P20-D4-goal"
+      ],
+      "branchable_topics": [
+        "Unit 2 Check & Wrap-up",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Complete the words."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U2-P21-D1",
+      "page_uid": "TB-G5S1U2-P21",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S1U2-P21-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一个连环画故事，讲述了新学年开始，小熊祖姆和小松鼠兹普根据他们的课程表去购物买文具。然而，在挑选完所有必需品后，他们发现钱不够买一个新足球。 Key patterns: Learn to purchase school supplies based on the class schedule.; Understand the concept of budgeting and having enough money.",
+      "focus_vocabulary": [
+        "school year",
+        "shopping",
+        "notebooks",
+        "pencils",
+        "ruler",
+        "a box of crayons",
+        "football",
+        "enough money"
+      ],
+      "core_patterns": [
+        "Learn to purchase school supplies based on the class schedule.",
+        "Understand the concept of budgeting and having enough money.",
+        "It's a new school year. I need to do some shopping.",
+        "I'll help.",
+        "We have English on Mondays and Wednesdays.",
+        "I need some notebooks and pencils."
+      ],
+      "allowed_answer_scope": [
+        "It's a new school year. I need to do some shopping.",
+        "I'll help.",
+        "We have English on Mondays and Wednesdays.",
+        "I need some notebooks and pencils.",
+        "We have maths on Tuesdays.",
+        "I need a ruler."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word school year?",
+        "Can you say: Learn to purchase school supplies based on the class schedule."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U2-P21-D1-goal"
+      ],
+      "branchable_topics": [
+        "school year",
+        "shopping",
+        "notebooks",
+        "pencils",
+        "ruler",
+        "a box of crayons",
+        "football",
+        "enough money"
+      ],
+      "return_anchors": [
+        "Learn to purchase school supplies based on the class schedule.",
+        "Understand the concept of budgeting and having enough money.",
+        "It's a new school year. I need to do some shopping."
+      ]
+    }
+  ]
+}

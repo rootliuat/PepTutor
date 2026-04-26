@@ -1,0 +1,1611 @@
+[
+  {
+    "metadata": {
+      "book": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "U4",
+      "page": 39,
+      "theme": "What a dream!",
+      "uid": "TB-G6S2U4-P39"
+    },
+    "content_blocks": [
+      {
+        "section_title": "Listen and fill in the blanks.",
+        "type": "listening_exercise",
+        "uid": "TB-G6S2U4-P39-D1",
+        "scene_description": "吴斌斌坐在床上给妈妈讲他昨晚做的有趣的梦，妈妈坐在床边认真听。",
+        "focus_vocabulary": [
+          {
+            "word": "had",
+            "chinese": "有（have的过去式）"
+          },
+          {
+            "word": "gave",
+            "chinese": "给（give的过去式）"
+          },
+          {
+            "word": "drank",
+            "chinese": "喝（drink的过去式）"
+          },
+          {
+            "word": "tripped",
+            "chinese": "绊倒（trip的过去式）"
+          },
+          {
+            "word": "fell",
+            "chinese": "摔倒（fall的过去式）"
+          },
+          {
+            "word": "woke up",
+            "chinese": "醒来（wake up的过去式）"
+          }
+        ],
+        "key_points": [
+          {
+            "english": "Listen to a dialogue about a dream and fill in the missing past tense verbs.",
+            "chinese": "听一段关于梦的对话并填入缺失的过去式动词。"
+          }
+        ],
+        "exercise_type": "fill_blank",
+        "audio_file": null,
+        "instructions": "Wu Binbin is telling his mother about the dream. Listen and fill in the blanks.",
+        "questions": [
+          {
+            "q": "Wu Binbin: Mum, I _____ an interesting dream last night.",
+            "a": null
+          },
+          {
+            "q": "Mum: What did you dream about?\nWu Binbin: I had a race with Dad and Max, but I _____ _____ _____.",
+            "a": null
+          },
+          {
+            "q": "Mum: What happened then?\nWu Binbin: Robin _____ me some water.",
+            "a": null
+          },
+          {
+            "q": "I _____ it and then could run very fast. Suddenly I tripped and fell. Then I woke up.",
+            "a": null
+          }
+        ],
+        "word_bank": [],
+        "personalization_prompt": null,
+        "student_response_template": null
+      },
+      {
+        "section_title": "Write about your dream",
+        "type": "writing_prompt",
+        "uid": "TB-G6S2U4-P39-D2",
+        "scene_description": "一个写作任务，要求学生在模拟手账本的页面上，运用过去时写出自己做过的一个有趣的梦。",
+        "focus_vocabulary": [],
+        "key_points": [
+          {
+            "english": "Write sentences about an interesting dream using the simple past tense.",
+            "chinese": "运用一般过去时写几句关于一个有趣梦境的话。"
+          }
+        ],
+        "instructions": "Did you have an interesting dream? Tell your dream to your partner. Then write several sentences about it.",
+        "paragraphs": [
+          {
+            "english": "I had a dream last night. In my dream, I ...",
+            "chinese": "昨晚我做了一个梦。在我的梦里，我……"
+          },
+          {
+            "english": "What a dream!",
+            "chinese": "多么奇妙的梦啊！"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "book": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "U4",
+      "page": 40,
+      "theme": "Changes are all around us.",
+      "uid": "TB-G6S2U4-P40"
+    },
+    "content_blocks": [
+      {
+        "section_title": "Let's check",
+        "type": "listening_exercise",
+        "uid": "TB-G6S2U4-P40-D1",
+        "scene_description": "听力练习，要求学生听音频为三幅运动/休闲场景图片标号，并从给定的词汇列表中划掉音频中未提及的单词。",
+        "focus_vocabulary": [
+          {
+            "word": "gym",
+            "chinese": "体育馆"
+          },
+          {
+            "word": "dining hall",
+            "chinese": "饭厅；食堂"
+          },
+          {
+            "word": "grass",
+            "chinese": "草坪；草地"
+          },
+          {
+            "word": "cycling",
+            "chinese": "骑自行车运动"
+          },
+          {
+            "word": "ice-skating",
+            "chinese": "滑冰"
+          },
+          {
+            "word": "badminton",
+            "chinese": "羽毛球"
+          }
+        ],
+        "key_points": [
+          {
+            "english": "Listen and number the pictures.",
+            "chinese": "听音给图片标号。"
+          },
+          {
+            "english": "Cross out the words you didn't hear.",
+            "chinese": "划掉你没有听到的单词。"
+          }
+        ],
+        "exercise_type": "numbering",
+        "audio_file": null,
+        "instructions": "Listen and number. Cross out the words you didn't hear.",
+        "questions": [],
+        "word_bank": [
+          "gym",
+          "dining hall",
+          "grass",
+          "cycling",
+          "ice-skating",
+          "badminton"
+        ],
+        "personalization_prompt": null,
+        "student_response_template": null
+      },
+      {
+        "section_title": "Let's wrap it up",
+        "type": "summary_wrap_up",
+        "uid": "TB-G6S2U4-P40-D2",
+        "scene_description": "本单元复习环节。通过展示多组对比图片（如鸡蛋变母鸡、雨天变晴天、树叶四季变化等），引导学生运用一般过去时和一般现在时谈论周围事物的变化。",
+        "focus_vocabulary": [],
+        "key_points": [
+          {
+            "english": "Changes are all around us. Talk about the changes below.",
+            "chinese": "变化在我们周围无处不在。谈论下面的变化。"
+          },
+          {
+            "english": "1. It was an egg. Now ...",
+            "chinese": "1. 它过去是个蛋。现在……"
+          },
+          {
+            "english": "2. It was raining. Now ...",
+            "chinese": "2. 过去在下雨。现在……"
+          },
+          {
+            "english": "3. In summer, the tree was green. Now ...",
+            "chinese": "3. 在夏天，树是绿色的。现在……"
+          },
+          {
+            "english": "4. There was a building before. Now ...",
+            "chinese": "4. 以前这里有一栋楼。现在……"
+          },
+          {
+            "english": "5. The cat was on the chair. Now ...",
+            "chinese": "5. 猫过去在椅子上。现在……"
+          },
+          {
+            "english": "Chen Jie was short. Now she is 1.5 metres tall.",
+            "chinese": "陈洁过去很矮。现在她1.5米高。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "book": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "U4",
+      "page": 41,
+      "theme": "Story time",
+      "uid": "TB-G6S2U4-P41"
+    },
+    "content_blocks": [
+      {
+        "section_title": "Story time",
+        "type": "reading_passage",
+        "subtype": "story_dialogue",
+        "uid": "TB-G6S2U4-P41-D1",
+        "scene_description": "Zip和Zoom通过观看三组关于过去、现在和未来的对比画面（人类烹饪方式的演变、地球环境的变化、鲸鱼生存状态的改变），讨论人类生活、环境保护及动物保护的主题。",
+        "focus_vocabulary": [
+          {
+            "word": "cavemen",
+            "chinese": "山顶洞人；穴居人"
+          },
+          {
+            "word": "raw meat",
+            "chinese": "生肉"
+          },
+          {
+            "word": "house robots",
+            "chinese": "家用机器人"
+          },
+          {
+            "word": "healthy",
+            "chinese": "健康的"
+          },
+          {
+            "word": "whale",
+            "chinese": "鲸"
+          }
+        ],
+        "key_points": [
+          {
+            "english": "Understand the changes in human life and the environment over time.",
+            "chinese": "理解人类生活和环境随时间的演变。"
+          },
+          {
+            "english": "We should help the earth now to make it a better place.",
+            "chinese": "我们现在应该保护地球，让它成为一个更好的地方。"
+          }
+        ],
+        "paragraphs": [
+          {
+            "english": "Cavemen often ate raw meat. They didn't cook their food.",
+            "chinese": "穴居人经常吃生肉。他们不烹饪食物。"
+          },
+          {
+            "english": "Now there are many things to help you cook.",
+            "chinese": "现在有许多东西可以帮助你烹饪。"
+          },
+          {
+            "english": "In 2050, there will be house robots. They will cook, clean and wash the dishes.",
+            "chinese": "在2050年，将会有家用机器人。它们将会做饭、打扫卫生和洗碗。"
+          },
+          {
+            "english": "Zip: Oh, cavemen didn't cook their meat?",
+            "chinese": "Zip：哦，穴居人不烹饪他们的肉吗？"
+          },
+          {
+            "english": "Zoom: It's OK. They didn't do the dishes either!",
+            "chinese": "Zoom：没关系。他们也不洗碗！"
+          },
+          {
+            "english": "There were many trees, and there were many clean rivers.",
+            "chinese": "过去有许多树，也有许多干净的河流。"
+          },
+          {
+            "english": "Now, there are more and more buildings.",
+            "chinese": "现在，建筑越来越多了。"
+          },
+          {
+            "english": "We should help the earth now, so birds will have homes and the forests will be healthy and green again.",
+            "chinese": "我们现在应该帮助地球，这样鸟儿就会有家，森林也会再次变得健康和翠绿。"
+          },
+          {
+            "english": "Zip: Look! How beautiful the world was! Oh! What will the birds do?",
+            "chinese": "Zip：看！世界过去多美啊！哦！鸟儿们该怎么办？"
+          },
+          {
+            "english": "Zoom: Don't worry. People will help them.",
+            "chinese": "Zoom：别担心。人们会帮助它们的。"
+          },
+          {
+            "english": "Before humans lived on the earth, whales already lived in the sea.",
+            "chinese": "在人类在地球上生活之前，鲸鱼就已经生活在海里了。"
+          },
+          {
+            "english": "Now, there are not many whales.",
+            "chinese": "现在，鲸鱼不多了。"
+          },
+          {
+            "english": "If we change now, whales and humans will have a bright future.",
+            "chinese": "如果我们现在改变，鲸鱼和人类将会有一个光明的未来。"
+          },
+          {
+            "english": "Zip: Heal the world!",
+            "chinese": "Zip：治愈世界！"
+          },
+          {
+            "english": "Zoom: Make it a better place!",
+            "chinese": "Zoom：让它成为一个更好的地方！"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "book": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "Recycle1",
+      "page": 42,
+      "theme": "A beautiful farm",
+      "uid": "TB-G6S2Recycle1-P42"
+    },
+    "content_blocks": [
+      {
+        "section_title": "Day 1 A beautiful farm",
+        "type": "practice_fill_blank",
+        "uid": "TB-G6S2Recycle1-P42-D1",
+        "scene_description": "麦克参观农场，练习使用不定冠词 a, an 和数量词 some 描述农场上的物品和动物。",
+        "focus_vocabulary": [
+          {
+            "word": "a",
+            "chinese": "一个"
+          },
+          {
+            "word": "an",
+            "chinese": "一个（用于元音音素开头的单词前）"
+          },
+          {
+            "word": "some",
+            "chinese": "一些"
+          }
+        ],
+        "key_points": [
+          {
+            "english": "Use correct articles (a/an) and quantifiers (some) with nouns.",
+            "chinese": "正确使用冠词(a/an)和量词(some)修饰名词。"
+          }
+        ],
+        "instructions": "Mike visited a farm. What can you see on the farm?",
+        "questions": [
+          {
+            "q": "___ pear",
+            "a": "a"
+          },
+          {
+            "q": "___ umbrella",
+            "a": "an"
+          },
+          {
+            "q": "___ jacket",
+            "a": "a"
+          },
+          {
+            "q": "___ apples",
+            "a": "some"
+          },
+          {
+            "q": "___ egg",
+            "a": "an"
+          },
+          {
+            "q": "___ horses",
+            "a": "some"
+          },
+          {
+            "q": "___ orange",
+            "a": "an"
+          },
+          {
+            "q": "___ tomatoes",
+            "a": "some"
+          }
+        ],
+        "word_bank": [
+          "a",
+          "an",
+          "some"
+        ],
+        "personalization_prompt": null,
+        "student_response_template": null
+      },
+      {
+        "section_title": "What else can you see?",
+        "type": "picture_scene",
+        "uid": "TB-G6S2Recycle1-P42-D2",
+        "scene_description": "农场场景图，桌上有苹果、西红柿、橘子、梨和鸡蛋，椅子上有雨伞和夹克，远处栅栏里有绵羊、奶牛和马。",
+        "focus_vocabulary": [],
+        "key_points": [
+          {
+            "english": "Identify and name items in the picture.",
+            "chinese": "识别并说出图片中的物品名称。"
+          }
+        ],
+        "image_captions": [
+          "What else can you see?"
+        ]
+      },
+      {
+        "section_title": "Can you name the groups of words?",
+        "type": "extension_task",
+        "uid": "TB-G6S2Recycle1-P42-D3",
+        "scene_description": "单词分类练习，学生需要为给定的单词分组命名（如水果类），并尝试添加更多单词。",
+        "focus_vocabulary": [
+          {
+            "word": "apple",
+            "chinese": "苹果"
+          },
+          {
+            "word": "orange",
+            "chinese": "橘子"
+          },
+          {
+            "word": "egg",
+            "chinese": "鸡蛋"
+          },
+          {
+            "word": "cake",
+            "chinese": "蛋糕"
+          },
+          {
+            "word": "jacket",
+            "chinese": "夹克"
+          },
+          {
+            "word": "shoes",
+            "chinese": "鞋子"
+          },
+          {
+            "word": "horse",
+            "chinese": "马"
+          },
+          {
+            "word": "tomato",
+            "chinese": "西红柿"
+          }
+        ],
+        "key_points": [
+          {
+            "english": "Categorize vocabulary into groups (e.g., Fruit, Food, Clothes, Animals, Vegetables).",
+            "chinese": "将词汇按类别分组（如：水果、食物、衣服、动物、蔬菜）。"
+          }
+        ],
+        "instructions": "Can you name the groups of words? Can you think of one more word group? Can you add more words to the groups?",
+        "task_description": "Name the categories for the provided word lists and expand them with your own words."
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "book": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "Recycle1",
+      "page": 43,
+      "theme": "Farmers' market",
+      "uid": "TB-G6S2Recycle1-P43"
+    },
+    "content_blocks": [
+      {
+        "section_title": "Day 2 Farmers' market",
+        "type": "extension_task",
+        "uid": "TB-G6S2Recycle1-P43-D1",
+        "scene_description": "完成关于去农贸市场购物的思维导图（mind map），涵盖时间、地点、同伴、交通方式、预算和购物清单等要素。",
+        "focus_vocabulary": [
+          {
+            "word": "farmers' market",
+            "chinese": "农贸市场"
+          },
+          {
+            "word": "shopping list",
+            "chinese": "购物清单"
+          }
+        ],
+        "key_points": [
+          {
+            "english": "Brainstorm and organize ideas using a mind map for a shopping trip.",
+            "chinese": "使用思维导图对购物之旅进行头脑风暴和组织想法。"
+          }
+        ],
+        "instructions": "Mrs Booth and Bill want to go shopping. Help them finish their mind map.",
+        "task_description": "Now make a new word map with your partner."
+      },
+      {
+        "section_title": "Mike met new friends. Help him talk about them.",
+        "type": "dialogue_practice",
+        "uid": "TB-G6S2Recycle1-P43-D2",
+        "scene_description": "根据给定的形容词和名词短语，描述图片中Bill和Mrs Booth的外貌和穿着特征。",
+        "focus_vocabulary": [
+          {
+            "word": "short",
+            "chinese": "矮的"
+          },
+          {
+            "word": "tall",
+            "chinese": "高的"
+          },
+          {
+            "word": "thin",
+            "chinese": "瘦的"
+          },
+          {
+            "word": "young",
+            "chinese": "年轻的"
+          },
+          {
+            "word": "long hair",
+            "chinese": "长发"
+          },
+          {
+            "word": "a red bag",
+            "chinese": "一个红色的包"
+          },
+          {
+            "word": "white shoes",
+            "chinese": "白色的鞋子"
+          }
+        ],
+        "key_points": [
+          {
+            "english": "Describe people's appearance using adjectives.",
+            "chinese": "使用形容词描述人物外貌。"
+          }
+        ],
+        "instructions": "Mike met new friends. Help him talk about them.",
+        "student_response_template": "... is my new friend. ... is ...",
+        "dialogues": [
+          {
+            "speaker": "Mike",
+            "english": "Bill is my new friend. He's short and heavy.",
+            "chinese": "比尔是我的新朋友。他又矮又壮。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "book": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "Recycle1",
+      "page": 44,
+      "theme": "Life on the farm",
+      "uid": "TB-G6S2Recycle1-P44"
+    },
+    "content_blocks": [
+      {
+        "section_title": "Day 3 Life on the farm",
+        "type": "practice_fill_blank",
+        "uid": "TB-G6S2Recycle1-P44-D1",
+        "scene_description": "从环形字母串中圈出单词，并根据图片提示完成一般现在时的句子，描述人们每天在农场上做的事情。",
+        "focus_vocabulary": [
+          {
+            "word": "go fishing",
+            "chinese": "去钓鱼"
+          },
+          {
+            "word": "do the cleaning",
+            "chinese": "打扫卫生"
+          },
+          {
+            "word": "play music",
+            "chinese": "演奏音乐"
+          },
+          {
+            "word": "have some juice",
+            "chinese": "喝一些果汁"
+          }
+        ],
+        "key_points": [
+          {
+            "english": "Use the simple present tense to describe daily routines and activities.",
+            "chinese": "使用一般现在时描述日常活动。"
+          },
+          {
+            "english": "Practice collocations with go, do, play, and have.",
+            "chinese": "练习与go, do, play, have搭配的词组。"
+          }
+        ],
+        "instructions": "These are things people often do on the farm. Circle the words in the puzzle. Write down what he, she or they do every day.",
+        "questions": [
+          {
+            "q": "He goes _____.",
+            "a": "fishing"
+          },
+          {
+            "q": "She does the _____.",
+            "a": "cleaning"
+          },
+          {
+            "q": "He plays _____.",
+            "a": "music"
+          },
+          {
+            "q": "They have some _____.",
+            "a": "juice"
+          }
+        ],
+        "word_bank": [],
+        "personalization_prompt": null,
+        "student_response_template": null
+      },
+      {
+        "section_title": "These people are having fun on the farm. Write down three sentences about what they are doing.",
+        "type": "writing_prompt",
+        "uid": "TB-G6S2Recycle1-P44-D2",
+        "scene_description": "观察一张展示人们在农场上娱乐活动的综合场景图，使用现在进行时写出描述他们正在做什么的句子。",
+        "focus_vocabulary": [],
+        "key_points": [
+          {
+            "english": "Describe ongoing actions using the present continuous tense.",
+            "chinese": "使用现在进行时描述正在进行的动作。"
+          }
+        ],
+        "instructions": "These people are having fun on the farm. Write down three sentences about what they are doing.",
+        "paragraphs": [
+          {
+            "english": "Bill is playing ping-pong.",
+            "chinese": "比尔正在打乒乓球。"
+          }
+        ],
+        "student_response_template": "... is ...ing."
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "book": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "Recycle1",
+      "page": 45,
+      "theme": "Mike's day on the farm",
+      "uid": "TB-G6S2Recycle1-P45"
+    },
+    "content_blocks": [
+      {
+        "section_title": "Day 4 Mike's day on the farm: What did Mike do on the farm?",
+        "type": "practice_fill_blank",
+        "uid": "TB-G6S2Recycle1-P45-D1",
+        "scene_description": "看图填空，练习使用一般过去时描述迈克在农场一天的活动轨迹。",
+        "focus_vocabulary": [
+          {
+            "word": "then",
+            "chinese": "然后"
+          },
+          {
+            "word": "after that",
+            "chinese": "在那之后"
+          },
+          {
+            "word": "next",
+            "chinese": "接下来"
+          },
+          {
+            "word": "finally",
+            "chinese": "最后"
+          }
+        ],
+        "key_points": [
+          {
+            "english": "Use past tense verbs to describe daily activities.",
+            "chinese": "使用过去式动词描述日常活动。"
+          },
+          {
+            "english": "Use time sequence words: then, after that, next, finally.",
+            "chinese": "使用时间顺序词：然后、在那之后、接下来、最后。"
+          }
+        ],
+        "instructions": "What did Mike do on the farm? Can you retell what Mike did on Saturday?",
+        "questions": [
+          {
+            "q": "Saturday was a busy day for me. In the morning, I got up early. Then I _______________.",
+            "a": null
+          },
+          {
+            "q": "After that, I _______________.",
+            "a": null
+          },
+          {
+            "q": "Next, I _______________.",
+            "a": null
+          },
+          {
+            "q": "In the afternoon, I _______________.",
+            "a": null
+          },
+          {
+            "q": "In the evening, I _______________.",
+            "a": null
+          },
+          {
+            "q": "Finally, I _______________ at 10 p.m.",
+            "a": null
+          }
+        ],
+        "word_bank": [],
+        "personalization_prompt": null,
+        "student_response_template": null
+      },
+      {
+        "section_title": "Now read about Mike and Bill's game.",
+        "type": "dialogue_core",
+        "uid": "TB-G6S2Recycle1-P45-D2",
+        "scene_description": "迈克和比尔在玩动物卡片猜谜游戏，通过对比大象、老虎和鲸鱼的大小，练习形容词的比较级和最高级。",
+        "focus_vocabulary": [
+          {
+            "word": "bigger",
+            "chinese": "更大的"
+          },
+          {
+            "word": "smaller",
+            "chinese": "更小的"
+          },
+          {
+            "word": "biggest",
+            "chinese": "最大的"
+          },
+          {
+            "word": "smallest",
+            "chinese": "最小的"
+          }
+        ],
+        "key_points": [
+          {
+            "english": "Compare sizes using comparatives and superlatives.",
+            "chinese": "使用比较级和最高级比较大小。"
+          }
+        ],
+        "dialogues": [
+          {
+            "speaker": "Bill",
+            "english": "It's an elephant. It's big.",
+            "chinese": "这是一头大象。它很大。"
+          },
+          {
+            "speaker": "Bill",
+            "english": "Guess! Is this bigger or smaller than the elephant?",
+            "chinese": "猜猜看！这个比大象大还是小？"
+          },
+          {
+            "speaker": "Mike",
+            "english": "I think it's bigger than the elephant.",
+            "chinese": "我认为它比大象大。"
+          },
+          {
+            "speaker": "Bill",
+            "english": "No, it isn't. It's smaller. Look. It's a tiger.",
+            "chinese": "不，不是的。它更小。看。这是一只老虎。"
+          },
+          {
+            "speaker": "Bill",
+            "english": "Look. The other card is a whale.",
+            "chinese": "看。另一张卡片是鲸鱼。"
+          },
+          {
+            "speaker": "Mike",
+            "english": "So the whale is the biggest, and the tiger is the smallest.",
+            "chinese": "所以鲸鱼是最大的，老虎是最小的。"
+          }
+        ],
+        "image_captions": [
+          "1. Show one picture.",
+          "2. Get another picture, but don't turn it over.",
+          "3. Show the last picture."
+        ]
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "book": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "Recycle1",
+      "page": 46,
+      "theme": "Mike's school life",
+      "uid": "TB-G6S2Recycle1-P46"
+    },
+    "content_blocks": [
+      {
+        "section_title": "Day 5 Mike and his new friends: Part 1 - Mike's PPT about his school life.",
+        "type": "reading_passage",
+        "subtype": "narrative",
+        "uid": "TB-G6S2Recycle1-P46-D1",
+        "scene_description": "迈克制作了一份关于自己学校生活的PPT（幻灯片），展示了他一周的课程安排及各科的活动内容。",
+        "focus_vocabulary": [
+          {
+            "word": "favourite",
+            "chinese": "最喜欢的"
+          },
+          {
+            "word": "difficult",
+            "chinese": "困难的"
+          },
+          {
+            "word": "noisy",
+            "chinese": "吵闹的"
+          },
+          {
+            "word": "gym",
+            "chinese": "体育馆"
+          }
+        ],
+        "key_points": [
+          {
+            "english": "Talk about school life, subjects, and favorite classes.",
+            "chinese": "谈论学校生活、科目和最喜欢的课程。"
+          }
+        ],
+        "paragraphs": [
+          {
+            "english": "I go to school from Monday to Friday. My favourite day is Monday.",
+            "chinese": "我从星期一到星期五上学。我最喜欢的一天是星期一。"
+          },
+          {
+            "english": "On Monday I have maths, English, music and PE. I like PE best.",
+            "chinese": "星期一我有数学、英语、音乐和体育课。我最喜欢体育课。"
+          },
+          {
+            "english": "Maths is my first class. I often answer maths questions. Sometimes they're difficult.",
+            "chinese": "数学是我的第一节课。我经常回答数学问题。有时候它们很难。"
+          },
+          {
+            "english": "In English class, I read many English stories, and I like to speak English with my friends.",
+            "chinese": "在英语课上，我读很多英语故事，而且我喜欢和朋友们说英语。"
+          },
+          {
+            "english": "I play the piano or sing songs in music class. This is very noisy and often great fun.",
+            "chinese": "在音乐课上我弹钢琴或唱歌。这很吵闹但通常非常有趣。"
+          },
+          {
+            "english": "In the afternoon I have PE class. I sometimes play football or exercise in the gym. I'm not good at running, but I like football best!",
+            "chinese": "下午我有体育课。我有时踢足球或在体育馆锻炼。我不擅长跑步，但我最喜欢足球！"
+          }
+        ],
+        "comprehension_questions": []
+      },
+      {
+        "section_title": "Bill told his friends about Mike. Read and underline the mistakes.",
+        "type": "practice_write",
+        "uid": "TB-G6S2Recycle1-P46-D2",
+        "scene_description": "比尔向朋友复述迈克的学校生活，学生需要仔细阅读这段复述，并根据上一部分的PPT内容找出并划出错误的信息。",
+        "focus_vocabulary": [],
+        "key_points": [
+          {
+            "english": "Identify factual errors based on a reading passage.",
+            "chinese": "根据阅读材料识别事实错误。"
+          }
+        ],
+        "instructions": "Read and underline the mistakes.",
+        "questions": [
+          {
+            "q": "1. Mike likes Monday best. His favourite class is English.",
+            "a": "English"
+          },
+          {
+            "q": "2. English is his first class on Monday. He reads many English stories, and he likes to speak English with his friends.",
+            "a": "English"
+          },
+          {
+            "q": "3. In the maths class, Mike often answers very difficult maths questions.",
+            "a": "very difficult"
+          },
+          {
+            "q": "4a. In the PE class, Mike sometimes plays basketball or exercises in the gym.",
+            "a": "basketball"
+          },
+          {
+            "q": "4b. He likes basketball best.",
+            "a": "basketball"
+          }
+        ],
+        "word_bank": [],
+        "personalization_prompt": null,
+        "student_response_template": null
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "book": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "Recycle1",
+      "page": 47,
+      "theme": "Bill's poster",
+      "uid": "TB-G6S2Recycle1-P47"
+    },
+    "content_blocks": [
+      {
+        "section_title": "Look at Bill's poster.",
+        "type": "picture_scene",
+        "uid": "TB-G6S2Recycle1-P47-D1",
+        "scene_description": "展示了比尔制作的一张海报，分为5岁时、现在（12岁）以及未来三个阶段的画像，通过笑脸和哭脸图标标示了他不同阶段的喜好和变化。",
+        "focus_vocabulary": [
+          {
+            "word": "skip rope",
+            "chinese": "跳绳"
+          },
+          {
+            "word": "candy",
+            "chinese": "糖果"
+          },
+          {
+            "word": "drive",
+            "chinese": "驾驶"
+          }
+        ],
+        "key_points": [
+          {
+            "english": "Understand people's changes in habits and appearances over time.",
+            "chinese": "了解人们随时间在习惯和外貌上的变化。"
+          }
+        ],
+        "image_captions": [
+          "Age: 5. Likes: candy, basketball. Dislikes: skip rope.",
+          "This is me! Age: 12. Likes: music, storybooks. Dislikes: swim.",
+          "Age: ? (Future). Likes: drive a red car, wear a yellow hat."
+        ]
+      },
+      {
+        "section_title": "Read and tick or cross.",
+        "type": "practice_true_false",
+        "uid": "TB-G6S2Recycle1-P47-D2",
+        "scene_description": "根据比尔的海报内容进行阅读理解判断，打勾（正确）或打叉（错误）。",
+        "focus_vocabulary": [],
+        "key_points": [
+          {
+            "english": "Comprehend past, present, and future statements based on visual cues.",
+            "chinese": "根据视觉提示理解关于过去、现在和未来的陈述。"
+          }
+        ],
+        "instructions": "Read and tick or cross.",
+        "questions": [
+          {
+            "q": "1. Bill liked candy.",
+            "a": "Tick"
+          },
+          {
+            "q": "2. Bill is taller than before.",
+            "a": "Tick"
+          },
+          {
+            "q": "3. Bill will wear a red hat to work.",
+            "a": "Cross"
+          },
+          {
+            "q": "4. Bill likes to read storybooks.",
+            "a": "Tick"
+          },
+          {
+            "q": "5. Bill was smaller before.",
+            "a": "Tick"
+          },
+          {
+            "q": "6. Bill will be thinner than he is now.",
+            "a": "Cross"
+          }
+        ],
+        "word_bank": [],
+        "personalization_prompt": null,
+        "student_response_template": null
+      },
+      {
+        "section_title": "Design your own poster.",
+        "type": "writing_prompt",
+        "uid": "TB-G6S2Recycle1-P47-D3",
+        "scene_description": "一个绘画与写作的拓展任务，要求学生设计自己的海报，展示并描述自己过去（Before）、现在（Now）和未来（In the future）的模样和喜好。",
+        "focus_vocabulary": [],
+        "key_points": [
+          {
+            "english": "Write about personal changes using past, present, and future tenses.",
+            "chinese": "运用过去时、现在时和将来时写下个人的变化。"
+          }
+        ],
+        "instructions": "Design your own poster.",
+        "student_response_template": "Before / Now / In the future"
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "book": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "Recycle2",
+      "page": 48,
+      "theme": "Mike's surprise",
+      "uid": "TB-G6S2Recycle2-P48"
+    },
+    "content_blocks": [
+      {
+        "section_title": "Day 7 Mike's surprise",
+        "type": "reading_passage",
+        "subtype": "narrative",
+        "uid": "TB-G6S2Recycle2-P48-D1",
+        "scene_description": "迈克收到学校发出的一封告别派对邀请函，内容包含派对的背景、时间、地点以及丰富的活动安排和奖项设置。",
+        "focus_vocabulary": [
+          {
+            "word": "invitation",
+            "chinese": "邀请函"
+          },
+          {
+            "word": "farewell party",
+            "chinese": "告别派对"
+          },
+          {
+            "word": "prizes",
+            "chinese": "奖品"
+          }
+        ],
+        "key_points": [
+          {
+            "english": "Understand the details of an invitation letter, including time, place, and activities.",
+            "chinese": "理解邀请函的细节，包括时间、地点和活动内容。"
+          },
+          {
+            "english": "Use 'be going to' and 'will' to talk about future events.",
+            "chinese": "使用'be going to'和'will'谈论未来的计划和事件。"
+          }
+        ],
+        "paragraphs": [
+          {
+            "english": "Dear Friends,",
+            "chinese": "亲爱的朋友们，"
+          },
+          {
+            "english": "It is time to leave our school. We are all going to middle school soon, so we will say goodbye to each other. We are going to have a farewell party. You can bring your friends.",
+            "chinese": "是时候离开我们的学校了。我们很快都要上中学了，所以我们将向彼此道别。我们要举办一个告别派对。你可以带上你的朋友。"
+          },
+          {
+            "english": "Place: Our music room    Time: Friday 3 p.m.",
+            "chinese": "地点：我们的音乐教室    时间：星期五下午3点"
+          },
+          {
+            "english": "Activities:",
+            "chinese": "活动："
+          },
+          {
+            "english": "We will draw pictures and sing songs. We are going to give prizes for the best pictures. We are going to have cake, candy and juice, too. Yum!",
+            "chinese": "我们将画画和唱歌。我们将为最好的画作颁发奖品。我们还会有蛋糕、糖果和果汁。真好吃！"
+          },
+          {
+            "english": "We will also give many prizes to our good students. For example, who helped others the most? Who studied hard? Who wrote the best story?",
+            "chinese": "我们也将颁发许多奖项给我们的好学生。例如，谁帮助别人最多？谁学习努力？谁写了最好的故事？"
+          },
+          {
+            "english": "We will listen to music, play games and dance. It will be great fun.",
+            "chinese": "我们将听音乐、玩游戏和跳舞。那将会很有趣。"
+          },
+          {
+            "english": "See you at the party!",
+            "chinese": "派对上见！"
+          }
+        ],
+        "comprehension_questions": []
+      },
+      {
+        "section_title": "Who is going to the party? Listen and tick.",
+        "type": "listening_exercise",
+        "uid": "TB-G6S2Recycle2-P48-D2",
+        "scene_description": "听力练习，要求学生听音频并在打算去参加派对的人物名字旁边打勾。",
+        "focus_vocabulary": [],
+        "key_points": [
+          {
+            "english": "Listen for specific information about people's attendance.",
+            "chinese": "听取关于人们出席情况的具体信息。"
+          }
+        ],
+        "exercise_type": "multiple_choice",
+        "audio_file": null,
+        "instructions": "Who is going to the party? Listen and tick.",
+        "questions": [
+          {
+            "q": "Mike",
+            "a": null
+          },
+          {
+            "q": "Robin",
+            "a": null
+          },
+          {
+            "q": "John",
+            "a": null
+          },
+          {
+            "q": "Zhang Peng",
+            "a": null
+          },
+          {
+            "q": "Wu Binbin",
+            "a": null
+          }
+        ],
+        "word_bank": [],
+        "personalization_prompt": null,
+        "student_response_template": null
+      },
+      {
+        "section_title": "Write a reply. Are you going to go to the party? What will you do at the party?",
+        "type": "writing_prompt",
+        "uid": "TB-G6S2Recycle2-P48-D3",
+        "scene_description": "写作任务，要求学生回复邀请函，说明自己是否会参加派对以及打算在派对上做什么。",
+        "focus_vocabulary": [],
+        "key_points": [
+          {
+            "english": "Write a reply to an invitation letter using future tenses.",
+            "chinese": "运用将来时写一封邀请函的回复。"
+          }
+        ],
+        "example_answer": null,
+        "student_response_template": "Dear ________,\nThank you for your invitation. I am going to ________ on ________.\nI will ________________________________________________\n________________________________________________\nBest wishes,\n________",
+        "instructions": "Write a reply. Are you going to go to the party? What will you do at the party?"
+      },
+      {
+        "section_title": "Now design your own invitation!",
+        "type": "extension_task",
+        "uid": "TB-G6S2Recycle2-P48-D4",
+        "scene_description": "拓展活动，仿照页面中的样式设计一张自己的邀请函。",
+        "focus_vocabulary": [],
+        "key_points": [
+          {
+            "english": "Design your own invitation card.",
+            "chinese": "设计你自己的邀请卡。"
+          }
+        ],
+        "instructions": "Now design your own invitation!",
+        "task_description": "Create an invitation for your own party or event."
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "book": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "Recycle2",
+      "page": 49,
+      "theme": "A farewell party",
+      "uid": "TB-G6S2Recycle2-P49"
+    },
+    "content_blocks": [
+      {
+        "section_title": "Day 8 A farewell party",
+        "type": "picture_scene",
+        "uid": "TB-G6S2Recycle2-P49-D1",
+        "scene_description": "展示了一个正在准备中的告别派对现场，包含各种食物、饮料、餐具以及派对用品。右侧列出了对应的单词列表供学生观察和匹配。",
+        "focus_vocabulary": [
+          {
+            "word": "brown bread",
+            "chinese": "黑面包"
+          },
+          {
+            "word": "cheese",
+            "chinese": "奶酪"
+          },
+          {
+            "word": "cake",
+            "chinese": "蛋糕"
+          },
+          {
+            "word": "fresh fruit",
+            "chinese": "新鲜水果"
+          },
+          {
+            "word": "milk",
+            "chinese": "牛奶"
+          },
+          {
+            "word": "orange juice",
+            "chinese": "橙汁"
+          },
+          {
+            "word": "tea bags",
+            "chinese": "茶包"
+          },
+          {
+            "word": "chocolates",
+            "chinese": "巧克力"
+          },
+          {
+            "word": "plates",
+            "chinese": "盘子"
+          },
+          {
+            "word": "knives",
+            "chinese": "刀子"
+          },
+          {
+            "word": "forks",
+            "chinese": "叉子"
+          },
+          {
+            "word": "English books",
+            "chinese": "英语书"
+          },
+          {
+            "word": "maths books",
+            "chinese": "数学书"
+          },
+          {
+            "word": "pink party hats",
+            "chinese": "粉色的派对帽"
+          },
+          {
+            "word": "prizes",
+            "chinese": "奖品"
+          },
+          {
+            "word": "paints",
+            "chinese": "颜料"
+          },
+          {
+            "word": "balloons",
+            "chinese": "气球"
+          },
+          {
+            "word": "ping-pong balls",
+            "chinese": "乒乓球"
+          },
+          {
+            "word": "clock",
+            "chinese": "钟"
+          }
+        ],
+        "key_points": [
+          {
+            "english": "Identify and match vocabulary related to party food, drinks, and supplies.",
+            "chinese": "识别并匹配与派对食物、饮料和用品相关的词汇。"
+          }
+        ],
+        "image_captions": [
+          "Farewell Party"
+        ]
+      },
+      {
+        "section_title": "Group the words. Can you write more?",
+        "type": "phonics",
+        "uid": "TB-G6S2Recycle2-P49-D2",
+        "scene_description": "自然拼读复习练习，要求学生从上方词汇表中找出符合特定辅音连缀或辅音字母组合发音规则的单词填入表格。",
+        "focus_vocabulary": [],
+        "key_points": [
+          {
+            "english": "Group words based on consonant blends and digraphs (cl, pl, br, fr, ch, sh, th, ng, nk).",
+            "chinese": "根据辅音连缀和辅音字母组合对单词进行分类 (cl, pl, br, fr, ch, sh, th, ng, nk)。"
+          }
+        ],
+        "instructions": "Group the words. Can you write more?",
+        "word_bank": [],
+        "personalization_prompt": null,
+        "student_response_template": null,
+        "items": [
+          {
+            "word": "cl",
+            "chinese": "辅音组合 cl",
+            "phonetic": null,
+            "example": "clock"
+          },
+          {
+            "word": "pl",
+            "chinese": "辅音组合 pl",
+            "phonetic": null,
+            "example": "plates"
+          },
+          {
+            "word": "br",
+            "chinese": "辅音组合 br",
+            "phonetic": null,
+            "example": "brown bread"
+          },
+          {
+            "word": "fr",
+            "chinese": "辅音组合 fr",
+            "phonetic": null,
+            "example": "fresh fruit"
+          },
+          {
+            "word": "ch",
+            "chinese": "字母组合 ch",
+            "phonetic": null,
+            "example": "cheese / chocolates"
+          },
+          {
+            "word": "sh",
+            "chinese": "字母组合 sh",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "th",
+            "chinese": "字母组合 th",
+            "phonetic": null,
+            "example": "maths"
+          },
+          {
+            "word": "ng",
+            "chinese": "字母组合 ng",
+            "phonetic": null,
+            "example": "English / orange / ping-pong"
+          },
+          {
+            "word": "nk",
+            "chinese": "字母组合 nk",
+            "phonetic": null,
+            "example": "pink"
+          }
+        ]
+      },
+      {
+        "section_title": "Find words with the following patterns.",
+        "type": "phonics",
+        "uid": "TB-G6S2Recycle2-P49-D3",
+        "scene_description": "自然拼读拓展任务，引导学生复习并寻找符合特定元音及元音字母组合发音规则的单词。",
+        "focus_vocabulary": [],
+        "key_points": [
+          {
+            "english": "Identify and list words with specific vowel patterns: a-e, i-e, ar, or, ee, ea, ai, ow, oo.",
+            "chinese": "识别并列出带有特定元音组合规律的单词：a-e, i-e, ar, or, ee, ea, ai, ow, oo。"
+          }
+        ],
+        "items": [
+          {
+            "word": "a-e",
+            "chinese": "字母组合 a-e",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "i-e",
+            "chinese": "字母组合 i-e",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "ar",
+            "chinese": "字母组合 ar",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "or",
+            "chinese": "字母组合 or",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "ee",
+            "chinese": "字母组合 ee",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "ea",
+            "chinese": "字母组合 ea",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "ai",
+            "chinese": "字母组合 ai",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "ow",
+            "chinese": "字母组合 ow",
+            "phonetic": null,
+            "example": null
+          },
+          {
+            "word": "oo",
+            "chinese": "字母组合 oo",
+            "phonetic": null,
+            "example": null
+          }
+        ]
+      },
+      {
+        "section_title": "Now make your own list of things for the party!",
+        "type": "extension_task",
+        "uid": "TB-G6S2Recycle2-P49-D4",
+        "scene_description": "一个开放性的活动，鼓励学生结合所学词汇，为自己的派对列出一份物品清单。",
+        "focus_vocabulary": [],
+        "key_points": [
+          {
+            "english": "Create a personal party shopping list.",
+            "chinese": "创建个人的派对购物清单。"
+          }
+        ],
+        "instructions": "Now make your own list of things for the party!",
+        "task_description": "Think about what you need for a party and write down your own list of items."
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "book": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "Recycle2",
+      "page": 50,
+      "theme": "Farewell",
+      "uid": "TB-G6S2Recycle2-P50"
+    },
+    "content_blocks": [
+      {
+        "section_title": "Read the chant.",
+        "type": "reading_passage",
+        "subtype": "chant",
+        "uid": "TB-G6S2Recycle2-P50-D1",
+        "scene_description": "一首歌谣，表达了在告别派对上，大家不唱悲伤的歌，而是要尽情唱歌、跳舞、玩耍，度过快乐的一天。",
+        "focus_vocabulary": [],
+        "key_points": [
+          {
+            "english": "Express positive feelings and wishes for a farewell party.",
+            "chinese": "表达告别派对上的积极情感和祝愿。"
+          }
+        ],
+        "paragraphs": [
+          {
+            "english": "The party is on Friday.",
+            "chinese": "派对在星期五。"
+          },
+          {
+            "english": "It's time to say goodbye.",
+            "chinese": "是时候说再见了。"
+          },
+          {
+            "english": "We won't sing any sad songs,",
+            "chinese": "我们不会唱任何悲伤的歌，"
+          },
+          {
+            "english": "And we'll have lots of fun.",
+            "chinese": "我们将会有很多乐趣。"
+          },
+          {
+            "english": "The party is on Friday.",
+            "chinese": "派对在星期五。"
+          },
+          {
+            "english": "We'll dance and sing and play.",
+            "chinese": "我们将跳舞、唱歌和玩耍。"
+          },
+          {
+            "english": "Don't be late for the party.",
+            "chinese": "参加派对不要迟到。"
+          },
+          {
+            "english": "We'll have a happy, happy day.",
+            "chinese": "我们将度过快乐的一天。"
+          }
+        ],
+        "comprehension_questions": []
+      },
+      {
+        "section_title": "Read the many ways to say goodbye.",
+        "type": "picture_scene",
+        "uid": "TB-G6S2Recycle2-P50-D2",
+        "scene_description": "在一个教室场景中，老师和同学们正在互相道别，展示了英语中多种表达再见和祝愿的方式。",
+        "focus_vocabulary": [
+          {
+            "word": "Write soon.",
+            "chinese": "早点写信。"
+          },
+          {
+            "word": "Have a good trip!",
+            "chinese": "旅途愉快！"
+          },
+          {
+            "word": "Keep in touch.",
+            "chinese": "保持联系。"
+          },
+          {
+            "word": "Take care.",
+            "chinese": "保重。"
+          },
+          {
+            "word": "Good luck!",
+            "chinese": "祝你好运！"
+          }
+        ],
+        "key_points": [
+          {
+            "english": "Learn and use different expressions to say goodbye to others.",
+            "chinese": "学习并使用不同的表达方式向他人道别。"
+          }
+        ],
+        "image_captions": [
+          "Students and a teacher saying goodbye in the classroom."
+        ]
+      }
+    ]
+  },
+  {
+    "metadata": {
+      "book": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "Recycle2",
+      "page": 51,
+      "theme": "Story time",
+      "uid": "TB-G6S2Recycle2-P51"
+    },
+    "content_blocks": [
+      {
+        "section_title": "Story time",
+        "type": "reading_passage",
+        "subtype": "story_dialogue",
+        "uid": "TB-G6S2Recycle2-P51-D1",
+        "scene_description": "Zip 和 Zoom 在池塘边和草地上依依惜别。Zip 告诉 Zoom 自己要跟父亲去美国，并将上七年级，两人互相承诺保持联系并互道保重。",
+        "focus_vocabulary": [
+          {
+            "word": "news",
+            "chinese": "消息"
+          },
+          {
+            "word": "America",
+            "chinese": "美国"
+          },
+          {
+            "word": "promise",
+            "chinese": "承诺；保证"
+          }
+        ],
+        "key_points": [
+          {
+            "english": "Understand the story and expressions used for parting and sharing news.",
+            "chinese": "理解故事内容以及用于离别和分享消息的表达。"
+          }
+        ],
+        "paragraphs": [
+          {
+            "english": "Zip: I have some good news and some bad news.",
+            "chinese": "Zip: 我有一些好消息和一些坏消息。"
+          },
+          {
+            "english": "Zoom: What is it?",
+            "chinese": "Zoom: 是什么事？"
+          },
+          {
+            "english": "Zip: I'm going away for a long time.",
+            "chinese": "Zip: 我要离开很长一段时间。"
+          },
+          {
+            "english": "Zoom: I'm sorry to hear that.",
+            "chinese": "Zoom: 听到这个我很难过。"
+          },
+          {
+            "english": "Zoom: Where are you going?",
+            "chinese": "Zoom: 你要去哪里？"
+          },
+          {
+            "english": "Zip: America. My father has a new job there.",
+            "chinese": "Zip: 美国。我爸爸在那边有一份新工作。"
+          },
+          {
+            "english": "Zoom: That is good news for your father. It's sad news for me.",
+            "chinese": "Zoom: 这对你爸爸来说是个好消息。对我来说是个坏消息。"
+          },
+          {
+            "english": "Zip: Me too.",
+            "chinese": "Zip: 我也是。"
+          },
+          {
+            "english": "Zoom: Are you going to a new school?",
+            "chinese": "Zoom: 你要去新学校吗？"
+          },
+          {
+            "english": "Zip: I'm going to a new middle school. I'll be in Grade 7.",
+            "chinese": "Zip: 我要去一所新的中学。我将上七年级。"
+          },
+          {
+            "english": "Zoom: Will you promise to write to me?",
+            "chinese": "Zoom: 你能答应给我写信吗？"
+          },
+          {
+            "english": "Zip: Of course.",
+            "chinese": "Zip: 当然。"
+          },
+          {
+            "english": "Zoom: Take care.",
+            "chinese": "Zoom: 保重。"
+          },
+          {
+            "english": "Zip: Take care.",
+            "chinese": "Zip: 保重。"
+          }
+        ]
+      }
+    ]
+  }
+]

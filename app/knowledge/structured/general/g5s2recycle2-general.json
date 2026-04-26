@@ -1,0 +1,833 @@
+{
+  "pilot_id": "g5s2recycle2-general-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S2",
+    "unit": "Recycle2",
+    "pages": [
+      66,
+      67,
+      68,
+      69
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/02.五年级下册语料.js",
+    "app/knowledge/raw/06.五年级下册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 5 · Volume 2), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 5 · Volume 2), People's Education Press (PEP)",
+    "page_count": 4,
+    "block_count": 9,
+    "source_kind": "textbook_source_js",
+    "source_format": "js"
+  },
+  "wordlist_entries": [],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S2Recycle2-P66-D1-goal",
+      "block_uid": "TB-G5S2Recycle2-P66-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2Recycle2-P66-D2-goal",
+      "block_uid": "TB-G5S2Recycle2-P66-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2Recycle2-P66-D3-goal",
+      "block_uid": "TB-G5S2Recycle2-P66-D3",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2Recycle2-P67-D1-goal",
+      "block_uid": "TB-G5S2Recycle2-P67-D1",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2Recycle2-P67-D2-goal",
+      "block_uid": "TB-G5S2Recycle2-P67-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2Recycle2-P68-D1-goal",
+      "block_uid": "TB-G5S2Recycle2-P68-D1",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2Recycle2-P68-D2-goal",
+      "block_uid": "TB-G5S2Recycle2-P68-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2Recycle2-P69-D1-goal",
+      "block_uid": "TB-G5S2Recycle2-P69-D1",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2Recycle2-P69-D2-goal",
+      "block_uid": "TB-G5S2Recycle2-P69-D2",
+      "category": "practice_match",
+      "text": "Work on the practice match activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-drink",
+      "atom_type": "word",
+      "text": "drink",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P68-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-eat",
+      "atom_type": "word",
+      "text": "eat",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P68-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-her-hers",
+      "atom_type": "word",
+      "text": "her/hers",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-his-his",
+      "atom_type": "word",
+      "text": "his/his",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-jump",
+      "atom_type": "word",
+      "text": "jump",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P68-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-my-mine",
+      "atom_type": "word",
+      "text": "my/mine",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-our-ours",
+      "atom_type": "word",
+      "text": "our/ours",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-play",
+      "atom_type": "word",
+      "text": "play",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P68-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-run",
+      "atom_type": "word",
+      "text": "run",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P68-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-sleep",
+      "atom_type": "word",
+      "text": "sleep",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P68-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-their-theirs",
+      "atom_type": "word",
+      "text": "their/theirs",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-your-yours",
+      "atom_type": "word",
+      "text": "your/yours",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-in-i-m",
+      "atom_type": "sentence_pattern",
+      "text": "I'm in ... I'm ...",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P68-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-on-june-1st",
+      "atom_type": "sentence_pattern",
+      "text": "It's on June 1st.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P67-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-to-dialogue-2-and-tick-the-right-picture-what-are-the-children-doing",
+      "atom_type": "sentence_pattern",
+      "text": "Listen to dialogue 2 and tick the right picture. What are the children doing?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P66-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-to-dialogues-1-and-4-choose-the-right-answers",
+      "atom_type": "sentence_pattern",
+      "text": "Listen to dialogues 1 and 4. Choose the right answers.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P66-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-at-mike-s-photo-fill-in-the-blanks",
+      "atom_type": "sentence_pattern",
+      "text": "Look at Mike's photo. Fill in the blanks.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P68-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-mike-is-at-summer-camp-what-will-he-do-listen-and-match",
+      "atom_type": "sentence_pattern",
+      "text": "Mike is at summer camp. What will he do? Listen and match.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P66-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-monkeys-monkeys-and-monkeys-tell-me-when-your-birthday-comes",
+      "atom_type": "sentence_pattern",
+      "text": "Monkeys, monkeys and monkeys. Tell me when your birthday comes.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P67-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-pandas-pandas-and-pandas-tell-me-when-children-s-day-comes",
+      "atom_type": "sentence_pattern",
+      "text": "Pandas, pandas and pandas. Tell me when Children's Day comes.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P67-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-asking-and-answering-about-dates-of-holidays-and-events",
+      "atom_type": "sentence_pattern",
+      "text": "Practice asking and answering about dates of holidays and events.",
+      "gloss": "练习问答关于节日和事件的日期。",
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P67-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-the-chant-and-write-the-months-in-the-correct-column",
+      "atom_type": "sentence_pattern",
+      "text": "Read the chant and write the months in the correct column.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P67-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-the-sentences-find-friends-for-the-words-in-this-table",
+      "atom_type": "sentence_pattern",
+      "text": "Read the sentences. Find \"friends\" for the words in this table.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P69-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-this-is-fido-s-the-green-one-is-his",
+      "atom_type": "sentence_pattern",
+      "text": "This is Fido's. The green one is his.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-are-you-what-are-you-doing-which-season-is-it",
+      "atom_type": "sentence_pattern",
+      "text": "Where are you? What are you doing? Which season is it?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P68-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-is-mine",
+      "atom_type": "sentence_pattern",
+      "text": "Where is mine?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-whose-water-bottle-is-this",
+      "atom_type": "sentence_pattern",
+      "text": "Whose water bottle is this?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yours-is-over-there-the-red-one-is-yours",
+      "atom_type": "sentence_pattern",
+      "text": "Yours is over there. The red one is yours.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle2-P69-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S2Recycle2-P66",
+      "page_type": "listening",
+      "page_intro_cn": "Theme: Recycle 2 - Mike's summer camp. 听录音，了解迈克在夏令营不同日期的活动安排，并将日期与对应的活动图片进行匹配。",
+      "entry_probe_questions": [
+        "Can you say: Mike is at summer camp. What will he do? Listen and match."
+      ],
+      "priority_blocks": [
+        "TB-G5S2Recycle2-P66-D1",
+        "TB-G5S2Recycle2-P66-D2",
+        "TB-G5S2Recycle2-P66-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2Recycle2-P67",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Recycle 2 - Months and Dates. 一个关于动物和日期的游戏。学生们轮流说出类似“熊猫，熊猫，告诉我儿童节是什么时候”的句子，被问到的学生需要回答正确的日期。",
+      "entry_probe_questions": [
+        "Can you say: Practice asking and answering about dates of holidays and events."
+      ],
+      "priority_blocks": [
+        "TB-G5S2Recycle2-P67-D2",
+        "TB-G5S2Recycle2-P67-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2Recycle2-P68",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Recycle 2 - Describing Scenes and Actions. 一个口语游戏。一个学生向同伴展示一张有趣地方的图片，并想象自己身处其中。同伴根据一系列提示问题（你在哪？你在做什么？等）进行提问，展示图片的学生进行回答。",
+      "entry_probe_questions": [
+        "Can you say: Where are you? What are you doing? Which season is it?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2Recycle2-P68-D1",
+        "TB-G5S2Recycle2-P68-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2Recycle2-P69",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Recycle 2 - Possessives and Phonics. 兹普和祖姆正在为朋友们准备礼物。这个活动要求学生们选择礼物，并和同伴练习使用物主代词和形容词性物主代词来描述物品的归属。",
+      "entry_probe_questions": [
+        "Do you know the word our/ours?",
+        "Can you say: Whose water bottle is this?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2Recycle2-P69-D1",
+        "TB-G5S2Recycle2-P69-D2"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S2Recycle2-P66-D1",
+      "page_uid": "TB-G5S2Recycle2-P66",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2Recycle2-P66-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，了解迈克在夏令营不同日期的活动安排，并将日期与对应的活动图片进行匹配。 Key patterns: Mike is at summer camp. What will he do? Listen and match.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Mike is at summer camp. What will he do? Listen and match."
+      ],
+      "allowed_answer_scope": [
+        "1st",
+        "6th",
+        "12th",
+        "11th"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Mike is at summer camp. What will he do? Listen and match."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2Recycle2-P66-D2",
+        "TB-G5S2Recycle2-P66-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2Recycle2-P66-D1-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 2 - Mike's summer camp",
+        "Mike's summer camp"
+      ],
+      "return_anchors": [
+        "Mike is at summer camp. What will he do? Listen and match."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2Recycle2-P66-D2",
+      "page_uid": "TB-G5S2Recycle2-P66",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2Recycle2-P66-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听第二段对话，并根据内容勾选出描述孩子们正在做什么的正确图片。 Key patterns: Listen to dialogue 2 and tick the right picture. What are the children doing?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen to dialogue 2 and tick the right picture. What are the children doing?"
+      ],
+      "allowed_answer_scope": [
+        "Picture 2"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen to dialogue 2 and tick the right picture. What are the children doing?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2Recycle2-P66-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2Recycle2-P66-D2-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 2 - Mike's summer camp",
+        "Listen to dialogue 2 and tick the right picture."
+      ],
+      "return_anchors": [
+        "Listen to dialogue 2 and tick the right picture. What are the children doing?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2Recycle2-P66-D3",
+      "page_uid": "TB-G5S2Recycle2-P66",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2Recycle2-P66-D3"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听第一段和第四段对话，并选择问题的正确答案。 Key patterns: Listen to dialogues 1 and 4. Choose the right answers.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen to dialogues 1 and 4. Choose the right answers."
+      ],
+      "allowed_answer_scope": [
+        "B"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen to dialogues 1 and 4. Choose the right answers."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2Recycle2-P66-D3-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 2 - Mike's summer camp",
+        "Listen to dialogues 1 and 4. Choose the right answers."
+      ],
+      "return_anchors": [
+        "Listen to dialogues 1 and 4. Choose the right answers."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2Recycle2-P67-D1",
+      "page_uid": "TB-G5S2Recycle2-P67",
+      "page_type": "dialogue",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S2Recycle2-P67-D1"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "阅读一首关于月份天数的英文歌谣，并根据歌谣内容，将十二个月份分类填写到“28/29天”、“30天”和“31天”的表格中。 Key patterns: Read the chant and write the months in the correct column.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Read the chant and write the months in the correct column."
+      ],
+      "allowed_answer_scope": [
+        "February",
+        "September, April, June, November",
+        "January, March, May, July, August, October, December"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Read the chant and write the months in the correct column."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2Recycle2-P67-D1-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 2 - Months and Dates",
+        "Read the chant and write the months in the correct column."
+      ],
+      "return_anchors": [
+        "Read the chant and write the months in the correct column."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2Recycle2-P67-D2",
+      "page_uid": "TB-G5S2Recycle2-P67",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S2Recycle2-P67-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "一个关于动物和日期的游戏。学生们轮流说出类似“熊猫，熊猫，告诉我儿童节是什么时候”的句子，被问到的学生需要回答正确的日期。 Key patterns: Practice asking and answering about dates of holidays and events.; Pandas, pandas and pandas. Tell me when Children's Day comes.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice asking and answering about dates of holidays and events.",
+        "Pandas, pandas and pandas. Tell me when Children's Day comes.",
+        "It's on June 1st.",
+        "Monkeys, monkeys and monkeys. Tell me when your birthday comes."
+      ],
+      "allowed_answer_scope": [
+        "Pandas, pandas and pandas. Tell me when Children's Day comes.",
+        "It's on June 1st.",
+        "Monkeys, monkeys and monkeys. Tell me when your birthday comes."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice asking and answering about dates of holidays and events."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2Recycle2-P67-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2Recycle2-P67-D2-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 2 - Months and Dates",
+        "A game: Animals and dates"
+      ],
+      "return_anchors": [
+        "Practice asking and answering about dates of holidays and events.",
+        "Pandas, pandas and pandas. Tell me when Children's Day comes.",
+        "It's on June 1st."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2Recycle2-P68-D1",
+      "page_uid": "TB-G5S2Recycle2-P68",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S2Recycle2-P68-D1"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "一个口语游戏。一个学生向同伴展示一张有趣地方的图片，并想象自己身处其中。同伴根据一系列提示问题（你在哪？你在做什么？等）进行提问，展示图片的学生进行回答。 Key patterns: Where are you? What are you doing? Which season is it?; I'm in ... I'm ...",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Where are you? What are you doing? Which season is it?",
+        "I'm in ... I'm ..."
+      ],
+      "allowed_answer_scope": [
+        "I'm in ... I'm ..."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Where are you? What are you doing? Which season is it?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2Recycle2-P68-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2Recycle2-P68-D1-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 2 - Describing Scenes and Actions",
+        "Let's play the game \"I'm in the picture\"."
+      ],
+      "return_anchors": [
+        "Where are you? What are you doing? Which season is it?",
+        "I'm in ... I'm ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2Recycle2-P68-D2",
+      "page_uid": "TB-G5S2Recycle2-P68",
+      "page_type": "dialogue",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G5S2Recycle2-P68-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "看一张迈克的照片，并阅读一段描述照片内容的文字。学生需要从词库中选择合适的动词，以现在进行时的形式填空。 Key patterns: Look at Mike's photo. Fill in the blanks.",
+      "focus_vocabulary": [
+        "drink",
+        "eat",
+        "jump",
+        "play",
+        "run",
+        "sleep"
+      ],
+      "core_patterns": [
+        "Look at Mike's photo. Fill in the blanks."
+      ],
+      "allowed_answer_scope": [
+        "playing",
+        "jumping, running",
+        "They are jumping."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word drink?",
+        "Can you say: Look at Mike's photo. Fill in the blanks."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2Recycle2-P68-D2-goal"
+      ],
+      "branchable_topics": [
+        "drink",
+        "eat",
+        "jump",
+        "play",
+        "run",
+        "sleep",
+        "Recycle 2 - Describing Scenes and Actions",
+        "Look at Mike's photo. Fill in the blanks."
+      ],
+      "return_anchors": [
+        "Look at Mike's photo. Fill in the blanks."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2Recycle2-P69-D1",
+      "page_uid": "TB-G5S2Recycle2-P69",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S2Recycle2-P69-D1"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "兹普和祖姆正在为朋友们准备礼物。这个活动要求学生们选择礼物，并和同伴练习使用物主代词和形容词性物主代词来描述物品的归属。 Key patterns: Whose water bottle is this?; Where is mine?",
+      "focus_vocabulary": [
+        "our/ours",
+        "their/theirs",
+        "his/his",
+        "her/hers",
+        "my/mine",
+        "your/yours"
+      ],
+      "core_patterns": [
+        "Whose water bottle is this?",
+        "Where is mine?",
+        "This is Fido's. The green one is his.",
+        "Yours is over there. The red one is yours."
+      ],
+      "allowed_answer_scope": [
+        "This is Fido's. The green one is his.",
+        "Yours is over there. The red one is yours."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word our/ours?",
+        "Can you say: Whose water bottle is this?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2Recycle2-P69-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2Recycle2-P69-D1-goal"
+      ],
+      "branchable_topics": [
+        "our/ours",
+        "their/theirs",
+        "his/his",
+        "her/hers",
+        "my/mine",
+        "your/yours",
+        "Recycle 2 - Possessives and Phonics",
+        "Recycle 2"
+      ],
+      "return_anchors": [
+        "Whose water bottle is this?",
+        "Where is mine?",
+        "This is Fido's. The green one is his."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2Recycle2-P69-D2",
+      "page_uid": "TB-G5S2Recycle2-P69",
+      "page_type": "dialogue",
+      "block_type": "practice_match",
+      "source_refs": [
+        "TB-G5S2Recycle2-P69-D2"
+      ],
+      "teaching_goal": "Work on the practice match activity.",
+      "teaching_summary": "一个语音辨析和拼写练习。学生需要阅读两组问答句，并从中找出与表格中单词押韵或发音相似的词。 Key patterns: Read the sentences. Find \"friends\" for the words in this table.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Read the sentences. Find \"friends\" for the words in this table."
+      ],
+      "allowed_answer_scope": [
+        "tree",
+        "then",
+        "think/drink",
+        "song"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Read the sentences. Find \"friends\" for the words in this table."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2Recycle2-P69-D2-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 2 - Possessives and Phonics",
+        "Read the sentences. Find \"friends\" for the words in this table."
+      ],
+      "return_anchors": [
+        "Read the sentences. Find \"friends\" for the words in this table."
+      ]
+    }
+  ]
+}

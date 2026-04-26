@@ -1,0 +1,159 @@
+{
+  "pilot_id": "g5s1u3-p30-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "U3",
+    "pages": [30]
+  },
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S1U3-P30",
+      "page_type": "review",
+      "page_intro_cn": "Unit 3 page 30: listening review plus plural nouns with s and es.",
+      "entry_probe_questions": [
+        "Can you tell me one drink from this unit?",
+        "What is the plural of sandwich?"
+      ],
+      "assumed_prior_knowledge": [
+        {
+          "topic": "core Unit 3 food words plus basic plural awareness",
+          "source": "unit_progression",
+          "confidence": "medium",
+          "verification_status": "unverified",
+          "verify_by_block_uid": "TB-G5S1U3-P30-D3",
+          "learning_target_uids": [
+            "LT-G5S1U3-P30-grammar-plural-nouns"
+          ]
+        }
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P30-D1",
+        "TB-G5S1U3-P30-D2",
+        "TB-G5S1U3-P30-D3",
+        "TB-G5S1U3-P30-D4"
+      ]
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S1U3-P30-D1",
+      "page_uid": "TB-G5S1U3-P30",
+      "page_type": "review",
+      "block_type": "listening_exercise",
+      "source_refs": ["TB-G5S1U3-P30-D1"],
+      "teaching_goal": "Review unit listening for a meal choice.",
+      "teaching_summary": "Choose the set of food and drink Amy would like.",
+      "focus_vocabulary": ["sandwich", "salad", "tea", "hamburger", "milk"],
+      "core_patterns": ["What would Amy like?"],
+      "allowed_answer_scope": ["Picture 3", "salad, sandwich, and milk"],
+      "entry_probe_questions": ["Which meal does Amy choose?"],
+      "repair_modes": ["repeat", "choice_probe"],
+      "next_block_uids": ["TB-G5S1U3-P30-D2"],
+      "learning_target_uids": ["LT-G5S1U3-P30-review-listening-meal"]
+      ,
+      "branchable_topics": ["meal choice", "listening review"],
+      "return_anchors": ["What would Amy like?"]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P30-D2",
+      "page_uid": "TB-G5S1U3-P30",
+      "page_type": "review",
+      "block_type": "listening_exercise",
+      "source_refs": ["TB-G5S1U3-P30-D2"],
+      "teaching_goal": "Review favourite drink from listening.",
+      "teaching_summary": "Fill in Amy's favourite drink.",
+      "focus_vocabulary": ["milk"],
+      "core_patterns": ["Her favourite drink is ..."],
+      "allowed_answer_scope": ["milk"],
+      "entry_probe_questions": ["What is Amy's favourite drink?"],
+      "repair_modes": ["repeat", "choice_probe"],
+      "next_block_uids": ["TB-G5S1U3-P30-D3"],
+      "learning_target_uids": ["LT-G5S1U3-P30-review-favourite-drink"]
+      ,
+      "branchable_topics": ["favourite drink", "milk"],
+      "return_anchors": ["Her favourite drink is ..."]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P30-D3",
+      "page_uid": "TB-G5S1U3-P30",
+      "page_type": "review",
+      "block_type": "grammar_point",
+      "source_refs": ["TB-G5S1U3-P30-D3"],
+      "teaching_goal": "Review plural nouns with s and es.",
+      "teaching_summary": "Teach add s and add es with banana and sandwich as anchor examples.",
+      "focus_vocabulary": ["bananas", "sandwiches"],
+      "core_patterns": ["noun + s", "noun + es"],
+      "allowed_answer_scope": ["bananas", "sandwiches"],
+      "entry_probe_questions": ["What is the plural of sandwich?", "What is the plural of banana?"],
+      "repair_modes": ["repeat", "word_drill", "choice_probe"],
+      "next_block_uids": ["TB-G5S1U3-P30-D4"],
+      "learning_target_uids": ["LT-G5S1U3-P30-grammar-plural-nouns"]
+      ,
+      "branchable_topics": ["plural nouns", "s", "es"],
+      "return_anchors": ["noun + s", "noun + es"]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P30-D4",
+      "page_uid": "TB-G5S1U3-P30",
+      "page_type": "review",
+      "block_type": "practice_fill_blank",
+      "source_refs": ["TB-G5S1U3-P30-D4"],
+      "teaching_goal": "Apply plural noun rules to a mixed word list.",
+      "teaching_summary": "Write plurals for banana, onion, sandwich, tomato, box, class, and related words.",
+      "focus_vocabulary": ["bananas", "pears", "carrots", "noodles", "hamburgers", "onions", "sandwiches", "potatoes", "tomatoes", "dresses", "boxes", "classes"],
+      "core_patterns": ["plural noun form"],
+      "allowed_answer_scope": ["bananas", "sandwiches", "tomatoes", "boxes", "classes"],
+      "entry_probe_questions": ["Can you change tomato into the plural form?"],
+      "repair_modes": ["word_drill", "choice_probe"],
+      "next_block_uids": [],
+      "learning_target_uids": ["LT-G5S1U3-P30-apply-plural-rules"]
+      ,
+      "branchable_topics": ["plural nouns", "spelling"],
+      "return_anchors": ["plural noun form"]
+    }
+  ],
+  "knowledge_atoms": [
+    { "atom_uid": "KA-G5S1U3-grammar-plural-s", "atom_type": "grammar_hint", "text": "regular plural adds s" },
+    { "atom_uid": "KA-G5S1U3-grammar-plural-es", "atom_type": "grammar_hint", "text": "some nouns add es" },
+    { "atom_uid": "KA-G5S1U3-word-tomatoes", "atom_type": "word", "text": "tomatoes", "gloss": "plural tomato" }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S1U3-P30-review-listening-meal",
+      "category": "review_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner chooses the correct meal from listening.",
+        "shaky": "Learner needs repetition before choosing.",
+        "not_mastered": "Learner cannot identify the meal."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P30-review-favourite-drink",
+      "category": "review_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner recalls milk as the correct answer.",
+        "shaky": "Learner identifies the drink after options or repetition.",
+        "not_mastered": "Learner cannot identify the drink."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P30-grammar-plural-nouns",
+      "category": "grammar_hint",
+      "mastery_signal_examples": {
+        "mastered": "Learner explains or applies the s and es rule correctly.",
+        "shaky": "Learner gets some plurals right but not all.",
+        "not_mastered": "Learner cannot apply the plural rule."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P30-apply-plural-rules",
+      "category": "review_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner writes the target plural forms correctly.",
+        "shaky": "Learner gets regular forms right but misses es forms.",
+        "not_mastered": "Learner cannot produce the plural forms."
+      }
+    }
+  ]
+}

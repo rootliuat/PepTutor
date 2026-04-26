@@ -1,0 +1,2900 @@
+{
+  "pilot_id": "g5s1u5-general-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "U5",
+    "pages": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/01.五年级上册语料.js",
+    "app/knowledge/raw/05.五年级上册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 5 · Volume 1), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 5 · Volume 1), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 25,
+    "source_kind": "textbook_source_js",
+    "source_format": "js"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 5",
+      "word": "clock",
+      "phonetic": "/klɒk/",
+      "chinese": "时钟；钟",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U5-P49-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "plant",
+      "phonetic": "/plɑːnt/",
+      "chinese": "植物",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U5-P49-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "bottle",
+      "phonetic": "/'bɒtl/",
+      "chinese": "瓶子",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U5-P49-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "water bottle",
+      "chinese": "水瓶",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U5-P49-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "bike",
+      "phonetic": "/baɪk/",
+      "chinese": "自行车；脚踏车",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U5-P49-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "photo",
+      "phonetic": "/'fəʊtəʊ/",
+      "chinese": "照片；相片",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U5-P46-D1",
+        "TB-G5S1U5-P48-D2",
+        "TB-G5S1U5-P49-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "front",
+      "phonetic": "/frʌnt/",
+      "chinese": "正面",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U5-P51-D2",
+        "TB-G5S1U5-P52-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "in front of",
+      "chinese": "在……前面",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U5-P51-D2",
+        "TB-G5S1U5-P52-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "between",
+      "phonetic": "/bɪ'twiːn/",
+      "chinese": "在……中间",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U5-P52-D1",
+        "TB-G5S1U5-P55-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "above",
+      "phonetic": "/ə'bʌv/",
+      "chinese": "在（或向）……上面",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U5-P52-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "beside",
+      "phonetic": "/bɪ'saɪd/",
+      "chinese": "在旁边（附近）",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U5-P47-D1",
+        "TB-G5S1U5-P52-D1",
+        "TB-G5S1U5-P55-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "behind",
+      "phonetic": "/bɪ'haɪnd/",
+      "chinese": "在（或向）……后面",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U5-P52-D1",
+        "TB-G5S1U5-P53-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "there",
+      "phonetic": "/ðeə/",
+      "chinese": "（表示存在或发生）",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 5",
+      "word": "grandparent",
+      "phonetic": "/'grænpeərənt/",
+      "chinese": "祖父；祖母；外祖父；外祖母",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 5",
+      "word": "their",
+      "phonetic": "/ðeə/",
+      "chinese": "他们的；她们的；它们的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 5",
+      "word": "house",
+      "phonetic": "/haʊs/",
+      "chinese": "房屋；房子；住宅",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 5",
+      "word": "lot",
+      "phonetic": "/lɒt/",
+      "chinese": "大量；许多",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 5",
+      "word": "lots of",
+      "chinese": "大量；许多",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 5",
+      "word": "flower",
+      "phonetic": "/'flaʊə/",
+      "chinese": "花；花朵",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 5",
+      "word": "move",
+      "phonetic": "/muːv/",
+      "chinese": "搬家",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 5",
+      "word": "dirty",
+      "phonetic": "/'dɜːti/",
+      "chinese": "肮脏的",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S1U5-P53-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "everywhere",
+      "phonetic": "/'evriweə(r)/",
+      "chinese": "处处；到处",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S1U5-P53-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "mouse",
+      "phonetic": "/maʊs/",
+      "chinese": "老鼠",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S1U5-P53-D1"
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "word": "live",
+      "phonetic": "/lɪv/",
+      "chinese": "住；居住",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 5",
+      "word": "nature",
+      "phonetic": "/'neɪtʃə(r)/",
+      "chinese": "自然界；大自然",
+      "emphasized": false,
+      "linked_block_uids": []
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S1U5-P46-D1-goal",
+      "block_uid": "TB-G5S1U5-P46-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P47-D1-goal",
+      "block_uid": "TB-G5S1U5-P47-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P48-D1-goal",
+      "block_uid": "TB-G5S1U5-P48-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P48-D2-goal",
+      "block_uid": "TB-G5S1U5-P48-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P48-D3-goal",
+      "block_uid": "TB-G5S1U5-P48-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P49-D1-goal",
+      "block_uid": "TB-G5S1U5-P49-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P49-D2-goal",
+      "block_uid": "TB-G5S1U5-P49-D2",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P50-D1-goal",
+      "block_uid": "TB-G5S1U5-P50-D1",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P50-D2-goal",
+      "block_uid": "TB-G5S1U5-P50-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P50-D3-goal",
+      "block_uid": "TB-G5S1U5-P50-D3",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P50-D4-goal",
+      "block_uid": "TB-G5S1U5-P50-D4",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P51-D1-goal",
+      "block_uid": "TB-G5S1U5-P51-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P51-D2-goal",
+      "block_uid": "TB-G5S1U5-P51-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P51-D3-goal",
+      "block_uid": "TB-G5S1U5-P51-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P52-D1-goal",
+      "block_uid": "TB-G5S1U5-P52-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P52-D2-goal",
+      "block_uid": "TB-G5S1U5-P52-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P52-D3-goal",
+      "block_uid": "TB-G5S1U5-P52-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P53-D1-goal",
+      "block_uid": "TB-G5S1U5-P53-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P53-D2-goal",
+      "block_uid": "TB-G5S1U5-P53-D2",
+      "category": "practice_choice",
+      "text": "Work on the practice choice activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P53-D3-goal",
+      "block_uid": "TB-G5S1U5-P53-D3",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P54-D1-goal",
+      "block_uid": "TB-G5S1U5-P54-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P54-D2-goal",
+      "block_uid": "TB-G5S1U5-P54-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P54-D3-goal",
+      "block_uid": "TB-G5S1U5-P54-D3",
+      "category": "practice_match",
+      "text": "Work on the practice match activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P54-D4-goal",
+      "block_uid": "TB-G5S1U5-P54-D4",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U5-P55-D1-goal",
+      "block_uid": "TB-G5S1U5-P55-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-above",
+      "atom_type": "word",
+      "text": "above",
+      "gloss": "在（或向）……上面",
+      "linked_blocks": [
+        "TB-G5S1U5-P52-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-banana",
+      "atom_type": "word",
+      "text": "banana",
+      "gloss": "香蕉",
+      "linked_blocks": [
+        "TB-G5S1U5-P48-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-bed",
+      "atom_type": "word",
+      "text": "bed",
+      "gloss": "床",
+      "linked_blocks": [
+        "TB-G5S1U5-P47-D1",
+        "TB-G5S1U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-behind",
+      "atom_type": "word",
+      "text": "behind",
+      "gloss": "在（或向）……后面",
+      "linked_blocks": [
+        "TB-G5S1U5-P52-D1",
+        "TB-G5S1U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-beside",
+      "atom_type": "word",
+      "text": "beside",
+      "gloss": "在旁边（附近）",
+      "linked_blocks": [
+        "TB-G5S1U5-P47-D1",
+        "TB-G5S1U5-P52-D1",
+        "TB-G5S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-between",
+      "atom_type": "word",
+      "text": "between",
+      "gloss": "在……中间",
+      "linked_blocks": [
+        "TB-G5S1U5-P52-D1",
+        "TB-G5S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-bike",
+      "atom_type": "word",
+      "text": "bike",
+      "gloss": "自行车；脚踏车",
+      "linked_blocks": [
+        "TB-G5S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-birthday",
+      "atom_type": "word",
+      "text": "birthday",
+      "gloss": "生日",
+      "linked_blocks": [
+        "TB-G5S1U5-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-bottle",
+      "atom_type": "word",
+      "text": "bottle",
+      "gloss": "瓶子",
+      "linked_blocks": [
+        "TB-G5S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-can",
+      "atom_type": "word",
+      "text": "can",
+      "gloss": "易拉罐",
+      "linked_blocks": [
+        "TB-G5S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-catches",
+      "atom_type": "word",
+      "text": "catches",
+      "gloss": "接住",
+      "linked_blocks": [
+        "TB-G5S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-clock",
+      "atom_type": "word",
+      "text": "clock",
+      "gloss": "时钟；钟",
+      "linked_blocks": [
+        "TB-G5S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-computer",
+      "atom_type": "word",
+      "text": "computer",
+      "gloss": "电脑",
+      "linked_blocks": [
+        "TB-G5S1U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-crayons",
+      "atom_type": "word",
+      "text": "crayons",
+      "gloss": "蜡笔",
+      "linked_blocks": [
+        "TB-G5S1U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-desk",
+      "atom_type": "word",
+      "text": "desk",
+      "gloss": "书桌",
+      "linked_blocks": [
+        "TB-G5S1U5-P47-D1",
+        "TB-G5S1U5-P48-D2",
+        "TB-G5S1U5-P48-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-dirty",
+      "atom_type": "word",
+      "text": "dirty",
+      "gloss": "肮脏的",
+      "linked_blocks": [
+        "TB-G5S1U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-draw",
+      "atom_type": "word",
+      "text": "draw",
+      "gloss": "画",
+      "linked_blocks": [
+        "TB-G5S1U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-everywhere",
+      "atom_type": "word",
+      "text": "everywhere",
+      "gloss": "处处；到处",
+      "linked_blocks": [
+        "TB-G5S1U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-floor",
+      "atom_type": "word",
+      "text": "floor",
+      "gloss": "地板",
+      "linked_blocks": [
+        "TB-G5S1U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-flower",
+      "atom_type": "word",
+      "text": "flower",
+      "gloss": "花；花朵",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-flowers",
+      "atom_type": "word",
+      "text": "flowers",
+      "gloss": "花",
+      "linked_blocks": [
+        "TB-G5S1U5-P46-D1",
+        "TB-G5S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-front",
+      "atom_type": "word",
+      "text": "front",
+      "gloss": "正面",
+      "linked_blocks": [
+        "TB-G5S1U5-P51-D2",
+        "TB-G5S1U5-P52-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-garden",
+      "atom_type": "word",
+      "text": "garden",
+      "gloss": "花园",
+      "linked_blocks": [
+        "TB-G5S1U5-P46-D1",
+        "TB-G5S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-grandparent",
+      "atom_type": "word",
+      "text": "grandparent",
+      "gloss": "祖父；祖母；外祖父；外祖母",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-house",
+      "atom_type": "word",
+      "text": "house",
+      "gloss": "房屋；房子；住宅",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-hurry",
+      "atom_type": "word",
+      "text": "hurry",
+      "gloss": "快点",
+      "linked_blocks": [
+        "TB-G5S1U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-in-front-of",
+      "atom_type": "word",
+      "text": "in front of",
+      "gloss": "在……前面",
+      "linked_blocks": [
+        "TB-G5S1U5-P51-D2",
+        "TB-G5S1U5-P52-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-kicks",
+      "atom_type": "word",
+      "text": "kicks",
+      "gloss": "踢",
+      "linked_blocks": [
+        "TB-G5S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-live",
+      "atom_type": "word",
+      "text": "live",
+      "gloss": "住；居住",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-living-room",
+      "atom_type": "word",
+      "text": "living room",
+      "gloss": "客厅",
+      "linked_blocks": [
+        "TB-G5S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-lot",
+      "atom_type": "word",
+      "text": "lot",
+      "gloss": "大量；许多",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-lots-of",
+      "atom_type": "word",
+      "text": "lots of",
+      "gloss": "大量；许多",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-monday",
+      "atom_type": "word",
+      "text": "Monday",
+      "gloss": "星期一",
+      "linked_blocks": [
+        "TB-G5S1U5-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-mouse",
+      "atom_type": "word",
+      "text": "mouse",
+      "gloss": "老鼠",
+      "linked_blocks": [
+        "TB-G5S1U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-move",
+      "atom_type": "word",
+      "text": "move",
+      "gloss": "搬家",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-nature",
+      "atom_type": "word",
+      "text": "nature",
+      "gloss": "自然界；大自然",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-naughty",
+      "atom_type": "word",
+      "text": "naughty",
+      "gloss": "淘气的",
+      "linked_blocks": [
+        "TB-G5S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-nice",
+      "atom_type": "word",
+      "text": "nice",
+      "gloss": "好的；漂亮的",
+      "linked_blocks": [
+        "TB-G5S1U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-on",
+      "atom_type": "word",
+      "text": "on",
+      "gloss": "在...上面",
+      "linked_blocks": [
+        "TB-G5S1U5-P48-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-over",
+      "atom_type": "word",
+      "text": "over",
+      "gloss": "在...上方",
+      "linked_blocks": [
+        "TB-G5S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-paint",
+      "atom_type": "word",
+      "text": "paint",
+      "gloss": "油漆；绘画",
+      "linked_blocks": [
+        "TB-G5S1U5-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pencils",
+      "atom_type": "word",
+      "text": "pencils",
+      "gloss": "铅笔",
+      "linked_blocks": [
+        "TB-G5S1U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-photo",
+      "atom_type": "word",
+      "text": "photo",
+      "gloss": "照片；相片",
+      "linked_blocks": [
+        "TB-G5S1U5-P46-D1",
+        "TB-G5S1U5-P48-D2",
+        "TB-G5S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pictures",
+      "atom_type": "word",
+      "text": "pictures",
+      "gloss": "图画；照片",
+      "linked_blocks": [
+        "TB-G5S1U5-P46-D1",
+        "TB-G5S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-plant",
+      "atom_type": "word",
+      "text": "plant",
+      "gloss": "植物",
+      "linked_blocks": [
+        "TB-G5S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-plants",
+      "atom_type": "word",
+      "text": "plants",
+      "gloss": "植物",
+      "linked_blocks": [
+        "TB-G5S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-plate",
+      "atom_type": "word",
+      "text": "plate",
+      "gloss": "盘子",
+      "linked_blocks": [
+        "TB-G5S1U5-P48-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pretty",
+      "atom_type": "word",
+      "text": "pretty",
+      "gloss": "漂亮的",
+      "linked_blocks": [
+        "TB-G5S1U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-rainbow",
+      "atom_type": "word",
+      "text": "rainbow",
+      "gloss": "彩虹",
+      "linked_blocks": [
+        "TB-G5S1U5-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-rainy",
+      "atom_type": "word",
+      "text": "rainy",
+      "gloss": "下雨的",
+      "linked_blocks": [
+        "TB-G5S1U5-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-river",
+      "atom_type": "word",
+      "text": "river",
+      "gloss": "河",
+      "linked_blocks": [
+        "TB-G5S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-room",
+      "atom_type": "word",
+      "text": "room",
+      "gloss": "房间",
+      "linked_blocks": [
+        "TB-G5S1U5-P47-D1",
+        "TB-G5S1U5-P48-D2",
+        "TB-G5S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-say",
+      "atom_type": "word",
+      "text": "say",
+      "gloss": "说",
+      "linked_blocks": [
+        "TB-G5S1U5-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-their",
+      "atom_type": "word",
+      "text": "their",
+      "gloss": "他们的；她们的；它们的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-there",
+      "atom_type": "word",
+      "text": "there",
+      "gloss": "（表示存在或发生）",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-wait",
+      "atom_type": "word",
+      "text": "wait",
+      "gloss": "等待",
+      "linked_blocks": [
+        "TB-G5S1U5-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-water-bottle",
+      "atom_type": "word",
+      "text": "water bottle",
+      "gloss": "水瓶",
+      "linked_blocks": [
+        "TB-G5S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-way",
+      "atom_type": "word",
+      "text": "way",
+      "gloss": "路",
+      "linked_blocks": [
+        "TB-G5S1U5-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-a-naughty-bear-kicks-the-can",
+      "atom_type": "sentence_pattern",
+      "text": "A naughty bear kicks the can.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-choose-one-sentence-from-above-and-write",
+      "atom_type": "sentence_pattern",
+      "text": "Choose one sentence from above and write.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P50-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-combine-there-is-are-with-prepositions-of-place-to-describe-locations",
+      "atom_type": "sentence_pattern",
+      "text": "Combine 'There is/are' with prepositions of place to describe locations.",
+      "gloss": "结合'There is/are'句型与方位介词来描述位置。",
+      "linked_blocks": [
+        "TB-G5S1U5-P54-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-complete-the-sentences",
+      "atom_type": "sentence_pattern",
+      "text": "Complete the sentences.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P54-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-describe-a-messy-room-using-there-are",
+      "atom_type": "sentence_pattern",
+      "text": "Describe a messy room using 'There are...'",
+      "gloss": "使用'There are...'句型描述一个凌乱的房间。",
+      "linked_blocks": [
+        "TB-G5S1U5-P53-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-haha",
+      "atom_type": "sentence_pattern",
+      "text": "Haha!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-in-front-of-the-dog",
+      "atom_type": "sentence_pattern",
+      "text": "It's in front of the dog.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-learn",
+      "atom_type": "sentence_pattern",
+      "text": "Let's learn",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P52-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-again-and-write",
+      "atom_type": "sentence_pattern",
+      "text": "Listen again and write.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P54-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-read-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Listen, read and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P50-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-listen-and-write",
+      "atom_type": "sentence_pattern",
+      "text": "Look, listen and write.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P50-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-my-computer-is-here-on-the-desk",
+      "atom_type": "sentence_pattern",
+      "text": "My computer is here on the desk.",
+      "gloss": "我的电脑在书桌上。",
+      "linked_blocks": [
+        "TB-G5S1U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-my-father-can-draw-very-well",
+      "atom_type": "sentence_pattern",
+      "text": "My father can draw very well.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-describing-a-scene-using-there-are",
+      "atom_type": "sentence_pattern",
+      "text": "Practice describing a scene using 'There are...'",
+      "gloss": "练习使用 'There are...' 句型描述场景。",
+      "linked_blocks": [
+        "TB-G5S1U5-P51-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-describing-the-location-of-objects-in-a-picture-using-prepositions",
+      "atom_type": "sentence_pattern",
+      "text": "Practice describing the location of objects in a picture using prepositions.",
+      "gloss": "练习使用介词描述图片中物品的位置。",
+      "linked_blocks": [
+        "TB-G5S1U5-P52-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-using-there-is-a-an-and-and-to-list-multiple-items",
+      "atom_type": "sentence_pattern",
+      "text": "Practice using 'There is a/an...' and 'and' to list multiple items.",
+      "gloss": "练习使用'There is a/an...'和'and'来列举多个物品。",
+      "linked_blocks": [
+        "TB-G5S1U5-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-sorry-i-m-busy",
+      "atom_type": "sentence_pattern",
+      "text": "Sorry. I'm busy.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-thanks",
+      "atom_type": "sentence_pattern",
+      "text": "Thanks.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-that-s-my-grandma-s-garden-there-are-many-pretty-flowers-in-it",
+      "atom_type": "sentence_pattern",
+      "text": "That's my grandma's garden. There are many pretty flowers in it.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-importance-of-recycling-and-helping-others",
+      "atom_type": "sentence_pattern",
+      "text": "The importance of recycling and helping others.",
+      "gloss": "垃圾回收和帮助他人的重要性。",
+      "linked_blocks": [
+        "TB-G5S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-letter-combinations-ai-and-ay-often-make-the-e-sound",
+      "atom_type": "sentence_pattern",
+      "text": "The letter combinations 'ai' and 'ay' often make the /eɪ/ sound.",
+      "gloss": "字母组合 'ai' 和 'ay' 通常发 /eɪ/ 音。",
+      "linked_blocks": [
+        "TB-G5S1U5-P50-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-are-many-pretty-flowers-in-it",
+      "atom_type": "sentence_pattern",
+      "text": "There are many pretty flowers in it.",
+      "gloss": "里面有很多漂亮的花。",
+      "linked_blocks": [
+        "TB-G5S1U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-are-so-many-pictures-here",
+      "atom_type": "sentence_pattern",
+      "text": "There are so many pictures here.",
+      "gloss": "这里有这么多画。",
+      "linked_blocks": [
+        "TB-G5S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-are-so-many-pictures",
+      "atom_type": "sentence_pattern",
+      "text": "There are so many pictures!",
+      "gloss": "有这么多图画！",
+      "linked_blocks": [
+        "TB-G5S1U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-are-so-many-plants-here-too",
+      "atom_type": "sentence_pattern",
+      "text": "There are so many plants here, too.",
+      "gloss": "这里也有很多植物。",
+      "linked_blocks": [
+        "TB-G5S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-are-some-fish",
+      "atom_type": "sentence_pattern",
+      "text": "There are some fish.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P51-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-are-two-dogs-in-the-picture",
+      "atom_type": "sentence_pattern",
+      "text": "There are two dogs in the picture.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P51-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-a-banana-on-the-plate",
+      "atom_type": "sentence_pattern",
+      "text": "There is a banana on the plate.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P48-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-a-big-bed",
+      "atom_type": "sentence_pattern",
+      "text": "There is a big bed.",
+      "gloss": "有一张大床。",
+      "linked_blocks": [
+        "TB-G5S1U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-a-can-beside-the-river-he-is-sad",
+      "atom_type": "sentence_pattern",
+      "text": "There is a can beside the river. He is sad.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-a-clock-and-a-plant-in-my-room",
+      "atom_type": "sentence_pattern",
+      "text": "There is a clock and a plant in my room.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-a-clock-in-my-room",
+      "atom_type": "sentence_pattern",
+      "text": "There is a clock in my room.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-a-clock-a-plant-and-a-photo-in-my-room",
+      "atom_type": "sentence_pattern",
+      "text": "There is a clock, a plant and a photo in my room.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P49-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-a-desk-beside-the-bed",
+      "atom_type": "sentence_pattern",
+      "text": "There is a desk beside the bed.",
+      "gloss": "床旁边有一张书桌。",
+      "linked_blocks": [
+        "TB-G5S1U5-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-a-desk-in-the-picture",
+      "atom_type": "sentence_pattern",
+      "text": "There is a desk in the picture.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P48-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-a-nice-photo-too",
+      "atom_type": "sentence_pattern",
+      "text": "There is a nice photo, too.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-a-plate-on-the-desk",
+      "atom_type": "sentence_pattern",
+      "text": "There is a plate on the desk.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P48-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-a-tree-in-front-of-the-house",
+      "atom_type": "sentence_pattern",
+      "text": "There is a tree in front of the house.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P52-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-they-re-my-grandmother-s-plants-my-grandparents-have-a-garden-in-front-of-their-house-there-are-lots-of-flowers-in-it",
+      "atom_type": "sentence_pattern",
+      "text": "They're my grandmother's plants. My grandparents have a garden in front of their house. There are lots of flowers in it.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-this-is-my-room-there-is-a-clock-a",
+      "atom_type": "sentence_pattern",
+      "text": "This is my room. There is a clock, a ...",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P49-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-this-is-the-living-room",
+      "atom_type": "sentence_pattern",
+      "text": "This is the living room.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-using-there-is-to-describe-objects-in-a-picture",
+      "atom_type": "sentence_pattern",
+      "text": "Using 'There is...' to describe objects in a picture.",
+      "gloss": "使用'There is...'句型描述图片中的物品。",
+      "linked_blocks": [
+        "TB-G5S1U5-P48-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-using-prepositions-of-place-to-describe-locations",
+      "atom_type": "sentence_pattern",
+      "text": "Using prepositions of place to describe locations.",
+      "gloss": "使用方位介词描述位置。",
+      "linked_blocks": [
+        "TB-G5S1U5-P55-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-a-nice-photo",
+      "atom_type": "sentence_pattern",
+      "text": "What a nice photo!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P46-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-is-in-zhang-peng-s-bedroom-listen-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "What is in Zhang Peng's bedroom? Listen and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P48-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-is-in-the-living-room-listen-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "What is in the living room? Listen and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P51-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-is-in-the-room-listen-and-tick-or-cross",
+      "atom_type": "sentence_pattern",
+      "text": "What is in the room? Listen and tick or cross.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P54-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-is-in-your-room-write-three-sentences",
+      "atom_type": "sentence_pattern",
+      "text": "What is in your room? Write three sentences.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P53-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-s-in-the-room",
+      "atom_type": "sentence_pattern",
+      "text": "What's in the room?",
+      "gloss": "房间里有什么？",
+      "linked_blocks": [
+        "TB-G5S1U5-P47-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-is-the-ball",
+      "atom_type": "sentence_pattern",
+      "text": "Where is the ball?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P52-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-which-is-mr-jones-room-read-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "Which is Mr Jones' room? Read and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P53-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wow-there-are-so-many-pictures-here",
+      "atom_type": "sentence_pattern",
+      "text": "Wow! There are so many pictures here.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-i-like-my-bed",
+      "atom_type": "sentence_pattern",
+      "text": "Yes. I like my bed.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P48-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-my-father-can-draw-very-well",
+      "atom_type": "sentence_pattern",
+      "text": "Yes. My father can draw very well.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P51-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-your-room-is-really-nice",
+      "atom_type": "sentence_pattern",
+      "text": "Your room is really nice!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U5-P48-D2"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S1U5-P46",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Describing a room or place. 单元首页图。孩子们在张鹏的家里，欣赏墙上的画和照片。张鹏向朋友们介绍他父亲画的画和他奶奶的花园。这个场景引出了本单元关于描述地点和物品的主题。",
+      "entry_probe_questions": [
+        "Do you know the word pictures?",
+        "Can you say: There are so many pictures!"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U5-P46-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U5-P47",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: There is a big bed. 小松鼠兹普和小熊祖姆正在观察一间卧室。兹普询问房间里有什么，祖姆描述了房间内物品的位置关系，引出本单元关于用 'There be' 句型和方位介词描述房间的核心内容。",
+      "entry_probe_questions": [
+        "Do you know the word room?",
+        "Can you say: What's in the room?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U5-P47-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U5-P48",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Describing a bedroom. 莎拉和迈克在张鹏的卧室里，他们赞美房间很漂亮，并讨论了房间里的床、照片和电脑。",
+      "entry_probe_questions": [
+        "Do you know the word room?",
+        "Can you say: There is a big bed."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U5-P48-D2",
+        "TB-G5S1U5-P48-D3",
+        "TB-G5S1U5-P48-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U5-P49",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Describing a room. 通过一张卧室的图片，学习描述房间内常见物品的五个核心词汇。",
+      "entry_probe_questions": [
+        "Do you know the word clock?",
+        "Can you say: This is my room. There is a clock, a ..."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U5-P49-D1",
+        "TB-G5S1U5-P49-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U5-P50",
+      "page_type": "phonics",
+      "page_intro_cn": "Theme: Phonics: ai / ay. 听录音，跟读，并圈出每组中发音的元音字母组合与其他两个不同的单词。",
+      "entry_probe_questions": [
+        "Can you say: Listen, read and circle."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U5-P50-D2",
+        "TB-G5S1U5-P50-D3",
+        "TB-G5S1U5-P50-D1",
+        "TB-G5S1U5-P50-D4"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U5-P51",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Describing a living room. 张鹏向迈克和莎拉介绍自己的客厅。他们讨论了墙上的画、室内的植物以及祖父母花园里的花。",
+      "entry_probe_questions": [
+        "Do you know the word living room?",
+        "Can you say: There are so many pictures here."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U5-P51-D2",
+        "TB-G5S1U5-P51-D3",
+        "TB-G5S1U5-P51-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U5-P52",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Prepositions of place. 通过展示小狗和球的位置关系，学习五个表示方位的介词。",
+      "entry_probe_questions": [
+        "Do you know the word in front of?",
+        "Can you say: Let's learn"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U5-P52-D1",
+        "TB-G5S1U5-P52-D2",
+        "TB-G5S1U5-P52-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U5-P53",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Describing a room and asking for help. 一封彬彬的美术老师琼斯先生写给机器人罗宾的求助邮件。邮件中描述了他刚搬进的旧房子非常脏乱，并提到了电脑后面有只老鼠，请求罗宾快来帮忙。",
+      "entry_probe_questions": [
+        "Do you know the word dirty?",
+        "Can you say: Describe a messy room using 'There are...'"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U5-P53-D1",
+        "TB-G5S1U5-P53-D2",
+        "TB-G5S1U5-P53-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U5-P54",
+      "page_type": "writing",
+      "page_intro_cn": "Theme: Unit 5 Check & Wrap-up. 学生听录音，根据听到的内容，判断房间里有哪些物品，并在相应的图片上打勾或画叉。",
+      "entry_probe_questions": [
+        "Can you say: What is in the room? Listen and tick or cross."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U5-P54-D1",
+        "TB-G5S1U5-P54-D2",
+        "TB-G5S1U5-P54-D3",
+        "TB-G5S1U5-P54-D4"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U5-P55",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Story time. 一个关于垃圾回收和互助的连环画故事。一个易拉罐想回家（回收箱），但被各种动物忽视或踢开，最终在鱼先生鱼太太和小熊祖姆的帮助下，成功回到了回收箱里。",
+      "entry_probe_questions": [
+        "Do you know the word can?",
+        "Can you say: The importance of recycling and helping others."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U5-P55-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S1U5-P46-D1",
+      "page_uid": "TB-G5S1U5-P46",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U5-P46-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "单元首页图。孩子们在张鹏的家里，欣赏墙上的画和照片。张鹏向朋友们介绍他父亲画的画和他奶奶的花园。这个场景引出了本单元关于描述地点和物品的主题。 Key patterns: There are so many pictures!; There are many pretty flowers in it.",
+      "focus_vocabulary": [
+        "pictures",
+        "draw",
+        "photo",
+        "garden",
+        "pretty",
+        "flowers"
+      ],
+      "core_patterns": [
+        "There are so many pictures!",
+        "There are many pretty flowers in it.",
+        "My father can draw very well.",
+        "What a nice photo!",
+        "That's my grandma's garden. There are many pretty flowers in it."
+      ],
+      "allowed_answer_scope": [
+        "There are so many pictures!",
+        "My father can draw very well.",
+        "What a nice photo!",
+        "That's my grandma's garden. There are many pretty flowers in it."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word pictures?",
+        "Can you say: There are so many pictures!"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U5-P46-D1-goal"
+      ],
+      "branchable_topics": [
+        "pictures",
+        "draw",
+        "photo",
+        "garden",
+        "pretty",
+        "flowers",
+        "Describing a room or place",
+        "Unit Five"
+      ],
+      "return_anchors": [
+        "There are so many pictures!",
+        "There are many pretty flowers in it.",
+        "My father can draw very well."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P47-D1",
+      "page_uid": "TB-G5S1U5-P47",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U5-P47-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "小松鼠兹普和小熊祖姆正在观察一间卧室。兹普询问房间里有什么，祖姆描述了房间内物品的位置关系，引出本单元关于用 'There be' 句型和方位介词描述房间的核心内容。 Key patterns: What's in the room?; There is a desk beside the bed.",
+      "focus_vocabulary": [
+        "room",
+        "desk",
+        "beside",
+        "bed"
+      ],
+      "core_patterns": [
+        "What's in the room?",
+        "There is a desk beside the bed."
+      ],
+      "allowed_answer_scope": [
+        "There is a desk beside the bed."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word room?",
+        "Can you say: What's in the room?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U5-P47-D1-goal"
+      ],
+      "branchable_topics": [
+        "room",
+        "desk",
+        "beside",
+        "bed",
+        "There is a big bed"
+      ],
+      "return_anchors": [
+        "What's in the room?",
+        "There is a desk beside the bed."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P48-D1",
+      "page_uid": "TB-G5S1U5-P48",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U5-P48-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，根据内容判断张鹏的卧室里有什么物品，并勾选正确的图片。 Key patterns: What is in Zhang Peng's bedroom? Listen and tick.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What is in Zhang Peng's bedroom? Listen and tick."
+      ],
+      "allowed_answer_scope": [
+        "Picture 2"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What is in Zhang Peng's bedroom? Listen and tick."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U5-P48-D1-goal"
+      ],
+      "branchable_topics": [
+        "Describing a bedroom",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "What is in Zhang Peng's bedroom? Listen and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P48-D2",
+      "page_uid": "TB-G5S1U5-P48",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U5-P48-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "莎拉和迈克在张鹏的卧室里，他们赞美房间很漂亮，并讨论了房间里的床、照片和电脑。 Key patterns: There is a big bed.; My computer is here on the desk.",
+      "focus_vocabulary": [
+        "room",
+        "nice",
+        "bed",
+        "photo",
+        "computer",
+        "desk"
+      ],
+      "core_patterns": [
+        "There is a big bed.",
+        "My computer is here on the desk.",
+        "Your room is really nice!",
+        "Thanks.",
+        "Yes. I like my bed.",
+        "There is a nice photo, too."
+      ],
+      "allowed_answer_scope": [
+        "Your room is really nice!",
+        "There is a big bed.",
+        "Yes. I like my bed.",
+        "There is a nice photo, too.",
+        "Wow! You look cool!",
+        "Thank you. Hey, my computer is here on the desk. Let's play!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word room?",
+        "Can you say: There is a big bed."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U5-P48-D3",
+        "TB-G5S1U5-P48-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U5-P48-D2-goal"
+      ],
+      "branchable_topics": [
+        "room",
+        "nice",
+        "bed",
+        "photo",
+        "computer",
+        "desk",
+        "Describing a bedroom",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "There is a big bed.",
+        "My computer is here on the desk.",
+        "Your room is really nice!"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P48-D3",
+      "page_uid": "TB-G5S1U5-P48",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U5-P48-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "提供一张书桌的图片，并给出几个示范句子，引导学生练习使用 'There is...' 和介词短语来描述图片内容。 Key patterns: Using 'There is...' to describe objects in a picture.; There is a desk in the picture.",
+      "focus_vocabulary": [
+        "desk",
+        "plate",
+        "banana",
+        "on"
+      ],
+      "core_patterns": [
+        "Using 'There is...' to describe objects in a picture.",
+        "There is a desk in the picture.",
+        "There is a plate on the desk.",
+        "There is a banana on the plate."
+      ],
+      "allowed_answer_scope": [
+        "There is a desk in the picture.",
+        "There is a plate on the desk.",
+        "There is a banana on the plate."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word desk?",
+        "Can you say: Using 'There is...' to describe objects in a picture."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U5-P48-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U5-P48-D3-goal"
+      ],
+      "branchable_topics": [
+        "desk",
+        "plate",
+        "banana",
+        "on",
+        "Describing a bedroom",
+        "Describe the picture."
+      ],
+      "return_anchors": [
+        "Using 'There is...' to describe objects in a picture.",
+        "There is a desk in the picture.",
+        "There is a plate on the desk."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P49-D1",
+      "page_uid": "TB-G5S1U5-P49",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S1U5-P49-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "通过一张卧室的图片，学习描述房间内常见物品的五个核心词汇。 Key patterns: This is my room. There is a clock, a ...",
+      "focus_vocabulary": [
+        "clock",
+        "photo",
+        "plant",
+        "bike",
+        "water bottle"
+      ],
+      "core_patterns": [
+        "This is my room. There is a clock, a ..."
+      ],
+      "allowed_answer_scope": [
+        "This is my room. There is a clock, a ..."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word clock?",
+        "Can you say: This is my room. There is a clock, a ..."
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U5-P49-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U5-P49-D1-goal"
+      ],
+      "branchable_topics": [
+        "clock",
+        "photo",
+        "plant",
+        "bike",
+        "water bottle",
+        "Describing a room",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "This is my room. There is a clock, a ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P49-D2",
+      "page_uid": "TB-G5S1U5-P49",
+      "page_type": "vocabulary",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G5S1U5-P49-D2"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "一个记忆链游戏。第一个学生说出房间里的一个物品，第二个学生重复并增加一个物品，以此类推，锻炼记忆力和口语表达能力。 Key patterns: Practice using 'There is a/an...' and 'and' to list multiple items.; There is a clock in my room.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice using 'There is a/an...' and 'and' to list multiple items.",
+        "There is a clock in my room.",
+        "There is a clock and a plant in my room.",
+        "There is a clock, a plant and a photo in my room."
+      ],
+      "allowed_answer_scope": [
+        "There is a clock in my room.",
+        "There is a clock and a plant in my room.",
+        "There is a clock, a plant and a photo in my room."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice using 'There is a/an...' and 'and' to list multiple items."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U5-P49-D2-goal"
+      ],
+      "branchable_topics": [
+        "Describing a room",
+        "Let's play"
+      ],
+      "return_anchors": [
+        "Practice using 'There is a/an...' and 'and' to list multiple items.",
+        "There is a clock in my room.",
+        "There is a clock and a plant in my room."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P50-D1",
+      "page_uid": "TB-G5S1U5-P50",
+      "page_type": "phonics",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G5S1U5-P50-D1"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "学习字母组合 'ai' 和 'ay' 在单词中的发音，它们通常都发 /eɪ/ 音。 Key patterns: The letter combinations 'ai' and 'ay' often make the /eɪ/ sound.",
+      "focus_vocabulary": [
+        "rainy",
+        "rainbow",
+        "paint",
+        "wait",
+        "say",
+        "way",
+        "birthday",
+        "Monday"
+      ],
+      "core_patterns": [
+        "The letter combinations 'ai' and 'ay' often make the /eɪ/ sound."
+      ],
+      "allowed_answer_scope": [
+        "rainy",
+        "rainbow",
+        "paint",
+        "wait",
+        "say",
+        "way"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word rainy?",
+        "Can you say: The letter combinations 'ai' and 'ay' often make the /eɪ/ sound."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U5-P50-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U5-P50-D1-goal"
+      ],
+      "branchable_topics": [
+        "rainy",
+        "rainbow",
+        "paint",
+        "wait",
+        "say",
+        "way",
+        "birthday",
+        "Monday"
+      ],
+      "return_anchors": [
+        "The letter combinations 'ai' and 'ay' often make the /eɪ/ sound."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P50-D2",
+      "page_uid": "TB-G5S1U5-P50",
+      "page_type": "phonics",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U5-P50-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，跟读，并圈出每组中发音的元音字母组合与其他两个不同的单词。 Key patterns: Listen, read and circle.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen, read and circle."
+      ],
+      "allowed_answer_scope": [
+        "always",
+        "wait",
+        "paint",
+        "rain"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen, read and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U5-P50-D3",
+        "TB-G5S1U5-P50-D1",
+        "TB-G5S1U5-P50-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U5-P50-D2-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: ai / ay",
+        "Let's spell"
+      ],
+      "return_anchors": [
+        "Listen, read and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P50-D3",
+      "page_uid": "TB-G5S1U5-P50",
+      "page_type": "phonics",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U5-P50-D3"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "看图、听录音并填写句子。图片分别描绘了下雨天、画彩虹和一个日历。 Key patterns: Look, listen and write.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Look, listen and write."
+      ],
+      "allowed_answer_scope": [
+        "Today, rainy",
+        "paint, rainbow",
+        "My birthday, Monday"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Look, listen and write."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U5-P50-D1",
+        "TB-G5S1U5-P50-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U5-P50-D3-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: ai / ay",
+        "Look, listen and write."
+      ],
+      "return_anchors": [
+        "Look, listen and write."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P50-D4",
+      "page_uid": "TB-G5S1U5-P50",
+      "page_type": "phonics",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S1U5-P50-D4"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "从上面完成的三个句子中选择一句抄写下来。 Key patterns: Choose one sentence from above and write.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Choose one sentence from above and write."
+      ],
+      "allowed_answer_scope": [
+        "Today is a rainy day."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Choose one sentence from above and write."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U5-P50-D4-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: ai / ay",
+        "Choose one sentence from above and write."
+      ],
+      "return_anchors": [
+        "Choose one sentence from above and write."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P51-D1",
+      "page_uid": "TB-G5S1U5-P51",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U5-P51-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，根据内容判断客厅里有什么，并勾选正确的选项。 Key patterns: What is in the living room? Listen and tick.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What is in the living room? Listen and tick."
+      ],
+      "allowed_answer_scope": [
+        "Some pictures."
+      ],
+      "entry_probe_questions": [
+        "Can you say: What is in the living room? Listen and tick."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U5-P51-D1-goal"
+      ],
+      "branchable_topics": [
+        "Describing a living room",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "What is in the living room? Listen and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P51-D2",
+      "page_uid": "TB-G5S1U5-P51",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U5-P51-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "张鹏向迈克和莎拉介绍自己的客厅。他们讨论了墙上的画、室内的植物以及祖父母花园里的花。 Key patterns: There are so many pictures here.; There are so many plants here, too.",
+      "focus_vocabulary": [
+        "living room",
+        "pictures",
+        "plants",
+        "garden",
+        "in front of",
+        "flowers"
+      ],
+      "core_patterns": [
+        "There are so many pictures here.",
+        "There are so many plants here, too.",
+        "This is the living room.",
+        "Wow! There are so many pictures here.",
+        "Yes. My father can draw very well.",
+        "They're my grandmother's plants. My grandparents have a garden in front of their house. There are lots of flowers in it."
+      ],
+      "allowed_answer_scope": [
+        "This is the living room.",
+        "Wow! There are so many pictures here.",
+        "Yes. My father can draw very well.",
+        "There are so many plants here, too.",
+        "They're my grandmother's plants. My grandparents have a garden in front of their house. There are lots of flowers in it.",
+        "Cool!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word living room?",
+        "Can you say: There are so many pictures here."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U5-P51-D3",
+        "TB-G5S1U5-P51-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U5-P51-D2-goal"
+      ],
+      "branchable_topics": [
+        "living room",
+        "pictures",
+        "plants",
+        "garden",
+        "in front of",
+        "flowers",
+        "Describing a living room",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "There are so many pictures here.",
+        "There are so many plants here, too.",
+        "This is the living room."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P51-D3",
+      "page_uid": "TB-G5S1U5-P51",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U5-P51-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "引导学生观察客厅图片，并用'There are...'句型描述图片中看到的其他物品，如狗和鱼。 Key patterns: Practice describing a scene using 'There are...'; There are two dogs in the picture.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice describing a scene using 'There are...'",
+        "There are two dogs in the picture.",
+        "There are some fish."
+      ],
+      "allowed_answer_scope": [
+        "There are two dogs in the picture.",
+        "There are some fish."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice describing a scene using 'There are...'"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U5-P51-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U5-P51-D3-goal"
+      ],
+      "branchable_topics": [
+        "Describing a living room",
+        "Look at the picture above. What else do you see in it?"
+      ],
+      "return_anchors": [
+        "Practice describing a scene using 'There are...'",
+        "There are two dogs in the picture.",
+        "There are some fish."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P52-D1",
+      "page_uid": "TB-G5S1U5-P52",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S1U5-P52-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "通过展示小狗和球的位置关系，学习五个表示方位的介词。 Key patterns: Let's learn",
+      "focus_vocabulary": [
+        "in front of",
+        "beside",
+        "between",
+        "behind",
+        "above"
+      ],
+      "core_patterns": [
+        "Let's learn"
+      ],
+      "allowed_answer_scope": [
+        "in front of",
+        "beside",
+        "between",
+        "behind",
+        "above"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word in front of?",
+        "Can you say: Let's learn"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U5-P52-D2",
+        "TB-G5S1U5-P52-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U5-P52-D1-goal"
+      ],
+      "branchable_topics": [
+        "in front of",
+        "beside",
+        "between",
+        "behind",
+        "above",
+        "Prepositions of place",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Let's learn"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P52-D2",
+      "page_uid": "TB-G5S1U5-P52",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U5-P52-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "在词汇学习部分下方，提供了一段简短的问答对话，练习使用新学的介词描述物品位置。 Key patterns: Where is the ball?; It's in front of the dog.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Where is the ball?",
+        "It's in front of the dog."
+      ],
+      "allowed_answer_scope": [
+        "It's in front of the dog."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Where is the ball?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U5-P52-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U5-P52-D2-goal"
+      ],
+      "branchable_topics": [
+        "Prepositions of place",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Where is the ball?",
+        "It's in front of the dog."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P52-D3",
+      "page_uid": "TB-G5S1U5-P52",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U5-P52-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "观察一幅房子和院子的图片，并用所学的介词和'There is/are...'句型描述图中物品的位置关系。提供了一个示范句。 Key patterns: Practice describing the location of objects in a picture using prepositions.; There is a tree in front of the house.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice describing the location of objects in a picture using prepositions.",
+        "There is a tree in front of the house."
+      ],
+      "allowed_answer_scope": [
+        "There is a tree in front of the house."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice describing the location of objects in a picture using prepositions."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U5-P52-D3-goal"
+      ],
+      "branchable_topics": [
+        "Prepositions of place",
+        "Find and say"
+      ],
+      "return_anchors": [
+        "Practice describing the location of objects in a picture using prepositions.",
+        "There is a tree in front of the house."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P53-D1",
+      "page_uid": "TB-G5S1U5-P53",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S1U5-P53-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一封彬彬的美术老师琼斯先生写给机器人罗宾的求助邮件。邮件中描述了他刚搬进的旧房子非常脏乱，并提到了电脑后面有只老鼠，请求罗宾快来帮忙。 Key patterns: Describe a messy room using 'There are...'",
+      "focus_vocabulary": [
+        "dirty",
+        "pencils",
+        "crayons",
+        "floor",
+        "everywhere",
+        "mouse",
+        "behind",
+        "hurry"
+      ],
+      "core_patterns": [
+        "Describe a messy room using 'There are...'"
+      ],
+      "allowed_answer_scope": [
+        "dirty",
+        "pencils",
+        "crayons",
+        "floor",
+        "everywhere",
+        "mouse"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word dirty?",
+        "Can you say: Describe a messy room using 'There are...'"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U5-P53-D2",
+        "TB-G5S1U5-P53-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U5-P53-D1-goal"
+      ],
+      "branchable_topics": [
+        "dirty",
+        "pencils",
+        "crayons",
+        "floor",
+        "everywhere",
+        "mouse",
+        "behind",
+        "hurry"
+      ],
+      "return_anchors": [
+        "Describe a messy room using 'There are...'"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P53-D2",
+      "page_uid": "TB-G5S1U5-P53",
+      "page_type": "reading",
+      "block_type": "practice_choice",
+      "source_refs": [
+        "TB-G5S1U5-P53-D2"
+      ],
+      "teaching_goal": "Work on the practice choice activity.",
+      "teaching_summary": "根据邮件内容，从两幅描绘凌乱房间的图片中，勾选出符合琼斯先生房间描述的那一幅（即电脑后面有老鼠）。 Key patterns: Which is Mr Jones' room? Read and tick.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Which is Mr Jones' room? Read and tick."
+      ],
+      "allowed_answer_scope": [
+        "Picture 2"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Which is Mr Jones' room? Read and tick."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U5-P53-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U5-P53-D2-goal"
+      ],
+      "branchable_topics": [
+        "Describing a room and asking for help",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "Which is Mr Jones' room? Read and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P53-D3",
+      "page_uid": "TB-G5S1U5-P53",
+      "page_type": "reading",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G5S1U5-P53-D3"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "一项写作任务，要求学生用三句话描述自己的房间里有什么。 Key patterns: What is in your room? Write three sentences.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What is in your room? Write three sentences."
+      ],
+      "allowed_answer_scope": [
+        "What is in your room? Write three sentences."
+      ],
+      "entry_probe_questions": [
+        "Can you say: What is in your room? Write three sentences."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U5-P53-D3-goal"
+      ],
+      "branchable_topics": [
+        "Describing a room and asking for help",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "What is in your room? Write three sentences."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P54-D1",
+      "page_uid": "TB-G5S1U5-P54",
+      "page_type": "writing",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U5-P54-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "学生听录音，根据听到的内容，判断房间里有哪些物品，并在相应的图片上打勾或画叉。 Key patterns: What is in the room? Listen and tick or cross.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What is in the room? Listen and tick or cross."
+      ],
+      "allowed_answer_scope": [
+        "打勾",
+        "画叉"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What is in the room? Listen and tick or cross."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U5-P54-D2",
+        "TB-G5S1U5-P54-D3",
+        "TB-G5S1U5-P54-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U5-P54-D1-goal"
+      ],
+      "branchable_topics": [
+        "Unit 5 Check & Wrap-up",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "What is in the room? Listen and tick or cross."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P54-D2",
+      "page_uid": "TB-G5S1U5-P54",
+      "page_type": "writing",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U5-P54-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "再次听录音，并根据听到的内容完成句子，考察对物品位置的听力理解能力。 Key patterns: Listen again and write.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen again and write."
+      ],
+      "allowed_answer_scope": [
+        "plant",
+        "pictures"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen again and write."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U5-P54-D3",
+        "TB-G5S1U5-P54-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U5-P54-D2-goal"
+      ],
+      "branchable_topics": [
+        "Unit 5 Check & Wrap-up",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Listen again and write."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P54-D3",
+      "page_uid": "TB-G5S1U5-P54",
+      "page_type": "writing",
+      "block_type": "practice_match",
+      "source_refs": [
+        "TB-G5S1U5-P54-D3"
+      ],
+      "teaching_goal": "Work on the practice match activity.",
+      "teaching_summary": "通过图片和连线，总结'There is / There are'句型与方位介词的综合运用。 Key patterns: Combine 'There is/are' with prepositions of place to describe locations.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Combine 'There is/are' with prepositions of place to describe locations."
+      ],
+      "allowed_answer_scope": [
+        "Combine 'There is/are' with prepositions of place to describe locations."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Combine 'There is/are' with prepositions of place to describe locations."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U5-P54-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U5-P54-D3-goal"
+      ],
+      "branchable_topics": [
+        "Unit 5 Check & Wrap-up",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Combine 'There is/are' with prepositions of place to describe locations."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P54-D4",
+      "page_uid": "TB-G5S1U5-P54",
+      "page_type": "writing",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S1U5-P54-D4"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "根据上一部分的图片和连线提示，完成三个描述物品位置的句子。 Key patterns: Complete the sentences.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Complete the sentences."
+      ],
+      "allowed_answer_scope": [
+        "There is a cat in front of the table.",
+        "a water bottle behind the table.",
+        "some photos above the table."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Complete the sentences."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U5-P54-D4-goal"
+      ],
+      "branchable_topics": [
+        "Unit 5 Check & Wrap-up",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Complete the sentences."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U5-P55-D1",
+      "page_uid": "TB-G5S1U5-P55",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S1U5-P55-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一个关于垃圾回收和互助的连环画故事。一个易拉罐想回家（回收箱），但被各种动物忽视或踢开，最终在鱼先生鱼太太和小熊祖姆的帮助下，成功回到了回收箱里。 Key patterns: The importance of recycling and helping others.; Using prepositions of place to describe locations.",
+      "focus_vocabulary": [
+        "can",
+        "beside",
+        "river",
+        "naughty",
+        "kicks",
+        "over",
+        "between",
+        "catches"
+      ],
+      "core_patterns": [
+        "The importance of recycling and helping others.",
+        "Using prepositions of place to describe locations.",
+        "There is a can beside the river. He is sad.",
+        "Sorry. I'm busy.",
+        "A naughty bear kicks the can.",
+        "Haha!"
+      ],
+      "allowed_answer_scope": [
+        "There is a can beside the river. He is sad.",
+        "Sorry. I'm busy.",
+        "A naughty bear kicks the can.",
+        "Haha!",
+        "Oh, no!",
+        "The can flies over Rabbit and Monkey."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word can?",
+        "Can you say: The importance of recycling and helping others."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U5-P55-D1-goal"
+      ],
+      "branchable_topics": [
+        "can",
+        "beside",
+        "river",
+        "naughty",
+        "kicks",
+        "over",
+        "between",
+        "catches"
+      ],
+      "return_anchors": [
+        "The importance of recycling and helping others.",
+        "Using prepositions of place to describe locations.",
+        "There is a can beside the river. He is sad."
+      ]
+    }
+  ]
+}

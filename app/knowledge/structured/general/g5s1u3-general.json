@@ -1,0 +1,2782 @@
+{
+  "pilot_id": "g5s1u3-general-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "U3",
+    "pages": [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/01.五年级上册语料.js",
+    "app/knowledge/raw/05.五年级上册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 5 · Volume 1), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 5 · Volume 1), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 26,
+    "source_kind": "textbook_source_js",
+    "source_format": "js"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 3",
+      "word": "sandwich",
+      "phonetic": "/'sænwɪtʃ/",
+      "chinese": "三明治",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U3-P22-D1",
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "salad",
+      "phonetic": "/'sæləd/",
+      "chinese": "蔬菜沙拉；混合沙拉",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U3-P22-D1",
+        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P29-D1",
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "hamburger",
+      "phonetic": "/'hæmbɜːɡə/",
+      "chinese": "汉堡包",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U3-P25-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "ice cream",
+      "phonetic": "/ˌaɪs'kriːm/",
+      "chinese": "冰激凌",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P29-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "tea",
+      "phonetic": "/tiː/",
+      "chinese": "茶；茶水",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P25-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "fresh",
+      "phonetic": "/freʃ/",
+      "chinese": "新鲜的；刚摘的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U3-P28-D1",
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "healthy",
+      "phonetic": "/'helθi/",
+      "chinese": "健康的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U3-P23-D1",
+        "TB-G5S1U3-P28-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "delicious",
+      "phonetic": "/dɪ'lɪʃəs/",
+      "chinese": "美味的；可口的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U3-P22-D1",
+        "TB-G5S1U3-P27-D2",
+        "TB-G5S1U3-P28-D1",
+        "TB-G5S1U3-P29-D1",
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "hot",
+      "phonetic": "/hɒt/",
+      "chinese": "辣的；辛辣的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U3-P28-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "sweet",
+      "phonetic": "/swiːt/",
+      "chinese": "含糖的；甜的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U3-P23-D1",
+        "TB-G5S1U3-P28-D1",
+        "TB-G5S1U3-P29-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "drink",
+      "phonetic": "/drɪŋk/",
+      "chinese": "喝；饮",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U3-P24-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "thirsty",
+      "phonetic": "/'θɜːsti/",
+      "chinese": "渴的；口渴的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U3-P24-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "favourite",
+      "phonetic": "/'feɪvərɪt/",
+      "chinese": "特别喜爱的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U3-P22-D1",
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "food",
+      "phonetic": "/fuːd/",
+      "chinese": "食物",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U3-P22-D1",
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "Dear",
+      "phonetic": "/dɪə/",
+      "chinese": "（用于信函抬头的名字或头衔前）亲爱的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "onion",
+      "phonetic": "/'ʌnjən/",
+      "chinese": "洋葱；葱头",
+      "emphasized": false,
+      "linked_block_uids": []
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S1U3-P22-D1-goal",
+      "block_uid": "TB-G5S1U3-P22-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P23-D1-goal",
+      "block_uid": "TB-G5S1U3-P23-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P24-D1-goal",
+      "block_uid": "TB-G5S1U3-P24-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P24-D2-goal",
+      "block_uid": "TB-G5S1U3-P24-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P24-D3-goal",
+      "block_uid": "TB-G5S1U3-P24-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P25-D1-goal",
+      "block_uid": "TB-G5S1U3-P25-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P25-D2-goal",
+      "block_uid": "TB-G5S1U3-P25-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P25-D3-goal",
+      "block_uid": "TB-G5S1U3-P25-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P26-D1-goal",
+      "block_uid": "TB-G5S1U3-P26-D1",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P26-D2-goal",
+      "block_uid": "TB-G5S1U3-P26-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P26-D3-goal",
+      "block_uid": "TB-G5S1U3-P26-D3",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P26-D4-goal",
+      "block_uid": "TB-G5S1U3-P26-D4",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P27-D1-goal",
+      "block_uid": "TB-G5S1U3-P27-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P27-D2-goal",
+      "block_uid": "TB-G5S1U3-P27-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P27-D3-goal",
+      "block_uid": "TB-G5S1U3-P27-D3",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P28-D1-goal",
+      "block_uid": "TB-G5S1U3-P28-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P28-D2-goal",
+      "block_uid": "TB-G5S1U3-P28-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P28-D3-goal",
+      "block_uid": "TB-G5S1U3-P28-D3",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P29-D1-goal",
+      "block_uid": "TB-G5S1U3-P29-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P29-D2-goal",
+      "block_uid": "TB-G5S1U3-P29-D2",
+      "category": "practice_choice",
+      "text": "Work on the practice choice activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P29-D3-goal",
+      "block_uid": "TB-G5S1U3-P29-D3",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P30-D1-goal",
+      "block_uid": "TB-G5S1U3-P30-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P30-D2-goal",
+      "block_uid": "TB-G5S1U3-P30-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P30-D3-goal",
+      "block_uid": "TB-G5S1U3-P30-D3",
+      "category": "grammar_point",
+      "text": "Work on the grammar point activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P30-D4-goal",
+      "block_uid": "TB-G5S1U3-P30-D4",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P31-D1-goal",
+      "block_uid": "TB-G5S1U3-P31-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-beef",
+      "atom_type": "word",
+      "text": "beef",
+      "gloss": "牛肉",
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P27-D2",
+        "TB-G5S1U3-P29-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-beef-noodles",
+      "atom_type": "word",
+      "text": "beef noodles",
+      "gloss": "牛肉面",
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-birthday",
+      "atom_type": "word",
+      "text": "birthday",
+      "gloss": "生日",
+      "linked_blocks": [
+        "TB-G5S1U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-bread",
+      "atom_type": "word",
+      "text": "bread",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D1",
+        "TB-G5S1U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-carrots",
+      "atom_type": "word",
+      "text": "carrots",
+      "gloss": "胡萝卜",
+      "linked_blocks": [
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-chicken",
+      "atom_type": "word",
+      "text": "chicken",
+      "gloss": "鸡肉",
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D1",
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P29-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-chicken-and-bread",
+      "atom_type": "word",
+      "text": "chicken and bread",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-cow",
+      "atom_type": "word",
+      "text": "cow",
+      "gloss": "奶牛",
+      "linked_blocks": [
+        "TB-G5S1U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-dear",
+      "atom_type": "word",
+      "text": "Dear",
+      "gloss": "（用于信函抬头的名字或头衔前）亲爱的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-delicious",
+      "atom_type": "word",
+      "text": "delicious",
+      "gloss": "美味的；可口的",
+      "linked_blocks": [
+        "TB-G5S1U3-P22-D1",
+        "TB-G5S1U3-P27-D2",
+        "TB-G5S1U3-P28-D1",
+        "TB-G5S1U3-P29-D1",
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-down",
+      "atom_type": "word",
+      "text": "down",
+      "gloss": "向下",
+      "linked_blocks": [
+        "TB-G5S1U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-drink",
+      "atom_type": "word",
+      "text": "drink",
+      "gloss": "喝；饮",
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-favourite",
+      "atom_type": "word",
+      "text": "favourite",
+      "gloss": "特别喜爱的",
+      "linked_blocks": [
+        "TB-G5S1U3-P22-D1",
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-favourite-food",
+      "atom_type": "word",
+      "text": "favourite food",
+      "gloss": "最喜欢的食物",
+      "linked_blocks": [
+        "TB-G5S1U3-P22-D1",
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-fish",
+      "atom_type": "word",
+      "text": "fish",
+      "gloss": "鱼",
+      "linked_blocks": [
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-fish-sandwich",
+      "atom_type": "word",
+      "text": "fish sandwich",
+      "gloss": "鱼肉三明治",
+      "linked_blocks": [
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-flower",
+      "atom_type": "word",
+      "text": "flower",
+      "gloss": "花",
+      "linked_blocks": [
+        "TB-G5S1U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-food",
+      "atom_type": "word",
+      "text": "food",
+      "gloss": "食物",
+      "linked_blocks": [
+        "TB-G5S1U3-P22-D1",
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-fresh",
+      "atom_type": "word",
+      "text": "fresh",
+      "gloss": "新鲜的；刚摘的",
+      "linked_blocks": [
+        "TB-G5S1U3-P28-D1",
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hamburger",
+      "atom_type": "word",
+      "text": "hamburger",
+      "gloss": "汉堡包",
+      "linked_blocks": [
+        "TB-G5S1U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-healthy",
+      "atom_type": "word",
+      "text": "healthy",
+      "gloss": "健康的",
+      "linked_blocks": [
+        "TB-G5S1U3-P23-D1",
+        "TB-G5S1U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hot",
+      "atom_type": "word",
+      "text": "hot",
+      "gloss": "辣的；辛辣的",
+      "linked_blocks": [
+        "TB-G5S1U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hungry",
+      "atom_type": "word",
+      "text": "hungry",
+      "gloss": "饿的",
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-ice-cream",
+      "atom_type": "word",
+      "text": "ice cream",
+      "gloss": "冰激凌",
+      "linked_blocks": [
+        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P29-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-milk",
+      "atom_type": "word",
+      "text": "milk",
+      "gloss": "牛奶",
+      "linked_blocks": [
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-noodles",
+      "atom_type": "word",
+      "text": "noodles",
+      "gloss": "面条",
+      "linked_blocks": [
+        "TB-G5S1U3-P23-D1",
+        "TB-G5S1U3-P24-D1",
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-onion",
+      "atom_type": "word",
+      "text": "onion",
+      "gloss": "洋葱；葱头",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-onions",
+      "atom_type": "word",
+      "text": "onions",
+      "gloss": "洋葱",
+      "linked_blocks": [
+        "TB-G5S1U3-P29-D1",
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-orange-juice",
+      "atom_type": "word",
+      "text": "orange juice",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-rice-and-vegetables",
+      "atom_type": "word",
+      "text": "rice and vegetables",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-salad",
+      "atom_type": "word",
+      "text": "salad",
+      "gloss": "蔬菜沙拉；混合沙拉",
+      "linked_blocks": [
+        "TB-G5S1U3-P22-D1",
+        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P29-D1",
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sandwich",
+      "atom_type": "word",
+      "text": "sandwich",
+      "gloss": "三明治",
+      "linked_blocks": [
+        "TB-G5S1U3-P22-D1",
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-slow",
+      "atom_type": "word",
+      "text": "slow",
+      "gloss": "慢的",
+      "linked_blocks": [
+        "TB-G5S1U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-snow",
+      "atom_type": "word",
+      "text": "snow",
+      "gloss": "雪",
+      "linked_blocks": [
+        "TB-G5S1U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sweet",
+      "atom_type": "word",
+      "text": "sweet",
+      "gloss": "含糖的；甜的",
+      "linked_blocks": [
+        "TB-G5S1U3-P23-D1",
+        "TB-G5S1U3-P28-D1",
+        "TB-G5S1U3-P29-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-tea",
+      "atom_type": "word",
+      "text": "tea",
+      "gloss": "茶；茶水",
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-thirsty",
+      "atom_type": "word",
+      "text": "thirsty",
+      "gloss": "渴的；口渴的",
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-tomato-soup",
+      "atom_type": "word",
+      "text": "tomato soup",
+      "gloss": "番茄汤",
+      "linked_blocks": [
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-tomatoes",
+      "atom_type": "word",
+      "text": "tomatoes",
+      "gloss": "西红柿",
+      "linked_blocks": [
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-vegetable",
+      "atom_type": "word",
+      "text": "vegetable",
+      "gloss": "蔬菜",
+      "linked_blocks": [
+        "TB-G5S1U3-P29-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-vegetables",
+      "atom_type": "word",
+      "text": "vegetables",
+      "gloss": "蔬菜",
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-water",
+      "atom_type": "word",
+      "text": "water",
+      "gloss": "水",
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-window",
+      "atom_type": "word",
+      "text": "window",
+      "gloss": "窗户",
+      "linked_blocks": [
+        "TB-G5S1U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-wow",
+      "atom_type": "word",
+      "text": "wow",
+      "gloss": "哇",
+      "linked_blocks": [
+        "TB-G5S1U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-yellow",
+      "atom_type": "word",
+      "text": "yellow",
+      "gloss": "黄色的",
+      "linked_blocks": [
+        "TB-G5S1U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-s-favourite-food-is-her-his-favourite-drink-is",
+      "atom_type": "sentence_pattern",
+      "text": "'s favourite food is... Her/His favourite drink is...",
+      "gloss": "...最喜欢的食物是...。她/他最喜欢的饮料是...",
+      "linked_blocks": [
+        "TB-G5S1U3-P27-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-a-sandwich-please",
+      "atom_type": "sentence_pattern",
+      "text": "A sandwich, please.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-choose-one-sentence-from-above-and-write",
+      "atom_type": "sentence_pattern",
+      "text": "Choose one sentence from above and write.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P26-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-don-t-eat-too-much",
+      "atom_type": "sentence_pattern",
+      "text": "Don't eat too much!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-expressing-food-likes-and-dislikes",
+      "atom_type": "sentence_pattern",
+      "text": "Expressing food likes and dislikes.",
+      "gloss": "表达对食物的喜好与不喜好。",
+      "linked_blocks": [
+        "TB-G5S1U3-P29-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-expressing-opinions-about-food",
+      "atom_type": "sentence_pattern",
+      "text": "Expressing opinions about food.",
+      "gloss": "表达对食物的看法。",
+      "linked_blocks": [
+        "TB-G5S1U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-fill-in-the-table",
+      "atom_type": "sentence_pattern",
+      "text": "Fill in the table.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P30-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-fish",
+      "atom_type": "sentence_pattern",
+      "text": "Fish.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-great",
+      "atom_type": "sentence_pattern",
+      "text": "Great!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-happy-birthday",
+      "atom_type": "sentence_pattern",
+      "text": "Happy birthday!",
+      "gloss": "生日快乐！",
+      "linked_blocks": [
+        "TB-G5S1U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-here-you-are-chicken-ice-cream",
+      "atom_type": "sentence_pattern",
+      "text": "Here you are! Chicken ice cream!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P29-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-here-you-are",
+      "atom_type": "sentence_pattern",
+      "text": "Here you are.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-love-ice-cream-it-s-sweet-what-about-you",
+      "atom_type": "sentence_pattern",
+      "text": "I love ice cream. It's sweet. What about you?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P28-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-d-like-a-salad",
+      "atom_type": "sentence_pattern",
+      "text": "I'd like a salad.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-d-like-a-sandwich-a-hot-dog-a-hamburger",
+      "atom_type": "sentence_pattern",
+      "text": "I'd like a sandwich, a hot dog, a hamburger ...",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P25-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-d-like-a-sandwich-please",
+      "atom_type": "sentence_pattern",
+      "text": "I'd like a sandwich, please.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P25-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-d-like-some-noodles",
+      "atom_type": "sentence_pattern",
+      "text": "I'd like some noodles.",
+      "gloss": "我想要一些面条。",
+      "linked_blocks": [
+        "TB-G5S1U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-d-like-some-tea",
+      "atom_type": "sentence_pattern",
+      "text": "I'd like some tea.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P25-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-d-like-some-water-i-m-thirsty",
+      "atom_type": "sentence_pattern",
+      "text": "I'd like some water. I'm thirsty!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-hungry",
+      "atom_type": "sentence_pattern",
+      "text": "I'm hungry.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-ice-cream-it-s-sweet",
+      "atom_type": "sentence_pattern",
+      "text": "Ice cream. It's sweet!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P28-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-learn-vocabulary-for-vegetables-and-describing-food",
+      "atom_type": "sentence_pattern",
+      "text": "Learn vocabulary for vegetables and describing food.",
+      "gloss": "学习关于蔬菜和描述食物的词汇。",
+      "linked_blocks": [
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-learn",
+      "atom_type": "sentence_pattern",
+      "text": "Let's learn",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-circle-and-say",
+      "atom_type": "sentence_pattern",
+      "text": "Listen, circle and say.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-write-and-say",
+      "atom_type": "sentence_pattern",
+      "text": "Listen, write and say.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P26-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-problem-i-have-tomatoes-carrots-and-onions",
+      "atom_type": "sentence_pattern",
+      "text": "No problem. I have tomatoes, carrots, and onions.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-noodles-i-love-beef-noodles-they-re-delicious-what-s-your-favourite-food",
+      "atom_type": "sentence_pattern",
+      "text": "Noodles. I love beef noodles. They're delicious. What's your favourite food?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-oh-no",
+      "atom_type": "sentence_pattern",
+      "text": "Oh, no!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P29-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-plural-nouns-ending-in-s-x-ch-sh-add-es",
+      "atom_type": "sentence_pattern",
+      "text": "Plural nouns ending in s, x, ch, sh: add -es.",
+      "gloss": "以s, x, ch, sh结尾的名词变复数：加-es。",
+      "linked_blocks": [
+        "TB-G5S1U3-P30-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-asking-and-answering-about-food-and-drink-preferences",
+      "atom_type": "sentence_pattern",
+      "text": "Practice asking and answering about food and drink preferences.",
+      "gloss": "练习询问和回答关于食物和饮料的偏好。",
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-ordering-food-and-drinks-in-a-restaurant-setting",
+      "atom_type": "sentence_pattern",
+      "text": "Practice ordering food and drinks in a restaurant setting.",
+      "gloss": "练习在餐厅场景中点餐。",
+      "linked_blocks": [
+        "TB-G5S1U3-P25-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-regular-plural-nouns-add-s",
+      "atom_type": "sentence_pattern",
+      "text": "Regular plural nouns: add -s.",
+      "gloss": "规则名词复数：加-s。",
+      "linked_blocks": [
+        "TB-G5S1U3-P30-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-salad",
+      "atom_type": "sentence_pattern",
+      "text": "Salad.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-salad-it-s-healthy",
+      "atom_type": "sentence_pattern",
+      "text": "Salad. It's healthy.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-sarah-is-hungry-what-would-she-like-to-eat-listen-and-fill-in-the-blanks",
+      "atom_type": "sentence_pattern",
+      "text": "Sarah is hungry. What would she like to eat? Listen and fill in the blanks.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-letter-combination-ow-can-also-make-the-sound-as-in-slow",
+      "atom_type": "sentence_pattern",
+      "text": "The letter combination 'ow' can also make the /əʊ/ sound, as in 'slow'.",
+      "gloss": "字母组合 'ow' 也可以发 /əʊ/ 音，如 'slow'。",
+      "linked_blocks": [
+        "TB-G5S1U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-letter-combination-ow-can-make-the-a-sound-as-in-cow",
+      "atom_type": "sentence_pattern",
+      "text": "The letter combination 'ow' can make the /aʊ/ sound, as in 'cow'.",
+      "gloss": "字母组合 'ow' 可以发 /aʊ/ 音，如 'cow'。",
+      "linked_blocks": [
+        "TB-G5S1U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-sandwich-is-delicious",
+      "atom_type": "sentence_pattern",
+      "text": "The sandwich is delicious.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-understand-a-story-about-preparing-a-healthy-meal",
+      "atom_type": "sentence_pattern",
+      "text": "Understand a story about preparing a healthy meal.",
+      "gloss": "理解一个关于准备健康餐食的故事。",
+      "linked_blocks": [
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-very-sweet-yum",
+      "atom_type": "sentence_pattern",
+      "text": "Very sweet. Yum!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-well-let-s-see-we-have-beef-noodles-and-fish-sandwiches-today",
+      "atom_type": "sentence_pattern",
+      "text": "Well, let's see. We have beef noodles and fish sandwiches today.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-can-they-both-eat-read-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "What can they both eat? Read and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P29-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-is-amy-s-favourite-drink-fill-in-the-blank",
+      "atom_type": "sentence_pattern",
+      "text": "What is Amy's favourite drink? Fill in the blank.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P30-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-would-amy-like-listen-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "What would Amy like? Listen and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P30-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-would-you-like-to-drink",
+      "atom_type": "sentence_pattern",
+      "text": "What would you like to drink?",
+      "gloss": "你想喝什么？",
+      "linked_blocks": [
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P25-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-would-you-like-to-eat",
+      "atom_type": "sentence_pattern",
+      "text": "What would you like to eat?",
+      "gloss": "你想吃点什么？",
+      "linked_blocks": [
+        "TB-G5S1U3-P23-D1",
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P25-D2",
+        "TB-G5S1U3-P25-D3",
+        "TB-G5S1U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-would-you-like-to-eat-write-to-robin-please",
+      "atom_type": "sentence_pattern",
+      "text": "What would you like to eat? Write to Robin, please.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P29-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-s-your-favourite-food",
+      "atom_type": "sentence_pattern",
+      "text": "What's your favourite food?",
+      "gloss": "你最喜欢的食物是什么？",
+      "linked_blocks": [
+        "TB-G5S1U3-P22-D1",
+        "TB-G5S1U3-P27-D2",
+        "TB-G5S1U3-P28-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-zhang-peng-and-sarah-are-thirsty-listen-and-match",
+      "atom_type": "sentence_pattern",
+      "text": "Zhang Peng and Sarah are thirsty. Listen and match.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U3-P27-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S1U3-P22",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: What would you like?. 单元首页图。一个家庭正在共进晚餐。妈妈询问女儿最喜欢的食物，爸爸则在品尝三明治。这个场景引出了本单元关于食物和喜好的主题。",
+      "entry_probe_questions": [
+        "Do you know the word favourite food?",
+        "Can you say: What's your favourite food?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P22-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U3-P23",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: What would you like?. 在一家餐厅或食堂，孩子们正在排队点餐。他们讨论想吃什么食物，其中一个孩子因为过生日而想吃面条。小熊祖姆和小松鼠兹普也在一旁对食物发表评论。",
+      "entry_probe_questions": [
+        "Do you know the word sweet?",
+        "Can you say: What would you like to eat?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P23-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U3-P24",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: What would you like?. 展示了两个家庭场景的对话。第一个场景中，妈妈询问刚回家的爸爸想吃什么。第二个场景中，莎拉询问口渴的爸爸想喝什么。",
+      "entry_probe_questions": [
+        "Do you know the word hungry?",
+        "Can you say: What would you like to eat?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P24-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U3-P25",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Ordering food and drinks. 在餐厅场景中，一位女士向一个小女孩介绍桌上的各种食物和饮料，引出本课的核心词汇。",
+      "entry_probe_questions": [
+        "Do you know the word tea?",
+        "Can you say: Let's learn"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P25-D2",
+        "TB-G5S1U3-P25-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U3-P26",
+      "page_type": "phonics",
+      "page_intro_cn": "Theme: Phonics: ow. 听录音，圈出每组中'ow'发音与其他两个不同的单词。",
+      "entry_probe_questions": [
+        "Can you say: Listen, circle and say."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P26-D2",
+        "TB-G5S1U3-P26-D3",
+        "TB-G5S1U3-P26-D1",
+        "TB-G5S1U3-P26-D4"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U3-P27",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Favourite food and drink. 张鹏和莎拉看着当天的菜单，讨论各自最喜欢的食物，并看看菜单上有什么可点的。",
+      "entry_probe_questions": [
+        "Do you know the word favourite food?",
+        "Can you say: What's your favourite food?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P27-D2",
+        "TB-G5S1U3-P27-D1",
+        "TB-G5S1U3-P27-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U3-P28",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Describing food. 通过五个小插图，展示了描述食物特性的五个形容词。",
+      "entry_probe_questions": [
+        "Do you know the word fresh?",
+        "Can you say: Let's learn"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P28-D1",
+        "TB-G5S1U3-P28-D2",
+        "TB-G5S1U3-P28-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U3-P29",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Food preferences and cooking. 机器人罗宾要为大家做饭，彬彬和爷爷分别给罗宾写了便条，说明自己的食物偏好。但罗宾似乎误解了他们的意思，做出了一道“鸡肉冰淇淋”。",
+      "entry_probe_questions": [
+        "Do you know the word ice cream?",
+        "Can you say: Expressing food likes and dislikes."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P29-D1",
+        "TB-G5S1U3-P29-D2",
+        "TB-G5S1U3-P29-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U3-P30",
+      "page_type": "grammar",
+      "page_intro_cn": "Theme: Unit 3 Check & Wrap-up. 学生听录音，根据听到的内容，勾选出艾米想吃的套餐。",
+      "entry_probe_questions": [
+        "Can you say: What would Amy like? Listen and tick."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P30-D1",
+        "TB-G5S1U3-P30-D2",
+        "TB-G5S1U3-P30-D3",
+        "TB-G5S1U3-P30-D4"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U3-P31",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Story time. 一个连环画故事。小熊zoom饿了，想吃沙拉。小松鼠zip带它到农场的菜园里摘取新鲜蔬菜。它们一起清洗和准备食材，制作了一份健康又美味的沙拉，并配上新鲜的牛奶，在农场享用了一顿丰盛的晚餐。",
+      "entry_probe_questions": [
+        "Do you know the word hungry?",
+        "Can you say: Understand a story about preparing a healthy meal."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P31-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S1U3-P22-D1",
+      "page_uid": "TB-G5S1U3-P22",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U3-P22-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "单元首页图。一个家庭正在共进晚餐。妈妈询问女儿最喜欢的食物，爸爸则在品尝三明治。这个场景引出了本单元关于食物和喜好的主题。 Key patterns: What's your favourite food?; Expressing opinions about food.",
+      "focus_vocabulary": [
+        "favourite food",
+        "salad",
+        "sandwich",
+        "delicious"
+      ],
+      "core_patterns": [
+        "What's your favourite food?",
+        "Expressing opinions about food.",
+        "Salad.",
+        "The sandwich is delicious."
+      ],
+      "allowed_answer_scope": [
+        "Salad.",
+        "The sandwich is delicious."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word favourite food?",
+        "Can you say: What's your favourite food?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U3-P22-D1-goal"
+      ],
+      "branchable_topics": [
+        "favourite food",
+        "salad",
+        "sandwich",
+        "delicious",
+        "What would you like?",
+        "Unit Three"
+      ],
+      "return_anchors": [
+        "What's your favourite food?",
+        "Expressing opinions about food.",
+        "Salad."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P23-D1",
+      "page_uid": "TB-G5S1U3-P23",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U3-P23-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "在一家餐厅或食堂，孩子们正在排队点餐。他们讨论想吃什么食物，其中一个孩子因为过生日而想吃面条。小熊祖姆和小松鼠兹普也在一旁对食物发表评论。 Key patterns: What would you like to eat?; I'd like some noodles.",
+      "focus_vocabulary": [
+        "sweet",
+        "healthy",
+        "noodles",
+        "birthday"
+      ],
+      "core_patterns": [
+        "What would you like to eat?",
+        "I'd like some noodles.",
+        "Happy birthday!",
+        "Very sweet. Yum!",
+        "Don't eat too much!",
+        "Salad. It's healthy."
+      ],
+      "allowed_answer_scope": [
+        "Very sweet. Yum!",
+        "Don't eat too much!",
+        "Salad. It's healthy.",
+        "I'd like some noodles. It's my birthday today.",
+        "Happy birthday!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word sweet?",
+        "Can you say: What would you like to eat?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U3-P23-D1-goal"
+      ],
+      "branchable_topics": [
+        "sweet",
+        "healthy",
+        "noodles",
+        "birthday",
+        "What would you like?"
+      ],
+      "return_anchors": [
+        "What would you like to eat?",
+        "I'd like some noodles.",
+        "Happy birthday!"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P24-D1",
+      "page_uid": "TB-G5S1U3-P24",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U3-P24-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "学生听录音，了解莎拉饿了想吃什么，并从词汇标签中选择正确的食物填入句子。 Key patterns: Sarah is hungry. What would she like to eat? Listen and fill in the blanks.",
+      "focus_vocabulary": [
+        "bread",
+        "noodles",
+        "chicken"
+      ],
+      "core_patterns": [
+        "Sarah is hungry. What would she like to eat? Listen and fill in the blanks."
+      ],
+      "allowed_answer_scope": [
+        "bread, noodles"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word bread?",
+        "Can you say: Sarah is hungry. What would she like to eat? Listen and fill in the blanks."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U3-P24-D1-goal"
+      ],
+      "branchable_topics": [
+        "bread",
+        "noodles",
+        "chicken",
+        "What would you like?",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Sarah is hungry. What would she like to eat? Listen and fill in the blanks."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P24-D2",
+      "page_uid": "TB-G5S1U3-P24",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U3-P24-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "展示了两个家庭场景的对话。第一个场景中，妈妈询问刚回家的爸爸想吃什么。第二个场景中，莎拉询问口渴的爸爸想喝什么。 Key patterns: What would you like to eat?; What would you like to drink?",
+      "focus_vocabulary": [
+        "hungry",
+        "sandwich",
+        "drink",
+        "water",
+        "thirsty"
+      ],
+      "core_patterns": [
+        "What would you like to eat?",
+        "What would you like to drink?",
+        "I'm hungry.",
+        "A sandwich, please.",
+        "I'd like some water. I'm thirsty!",
+        "Here you are."
+      ],
+      "allowed_answer_scope": [
+        "I'm hungry.",
+        "A sandwich, please.",
+        "I'd like some water. I'm thirsty!",
+        "Here you are."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word hungry?",
+        "Can you say: What would you like to eat?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P24-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P24-D2-goal"
+      ],
+      "branchable_topics": [
+        "hungry",
+        "sandwich",
+        "drink",
+        "water",
+        "thirsty",
+        "What would you like?",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "What would you like to eat?",
+        "What would you like to drink?",
+        "I'm hungry."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P24-D3",
+      "page_uid": "TB-G5S1U3-P24",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U3-P24-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "提供一个包含多种食物和饮料词汇的场景，鼓励学生练习询问和回答“你想吃/喝什么？”。 Key patterns: Practice asking and answering about food and drink preferences.; What would you like to eat?",
+      "focus_vocabulary": [
+        "chicken and bread",
+        "rice and vegetables",
+        "water",
+        "orange juice",
+        "beef noodles",
+        "tea"
+      ],
+      "core_patterns": [
+        "Practice asking and answering about food and drink preferences.",
+        "What would you like to eat?",
+        "What would you like to drink?"
+      ],
+      "allowed_answer_scope": [
+        "chicken and bread",
+        "rice and vegetables",
+        "water",
+        "orange juice",
+        "beef noodles",
+        "tea"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word chicken and bread?",
+        "Can you say: Practice asking and answering about food and drink preferences."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P24-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P24-D3-goal"
+      ],
+      "branchable_topics": [
+        "chicken and bread",
+        "rice and vegetables",
+        "water",
+        "orange juice",
+        "beef noodles",
+        "tea",
+        "What would you like?",
+        "Ask and answer"
+      ],
+      "return_anchors": [
+        "Practice asking and answering about food and drink preferences.",
+        "What would you like to eat?",
+        "What would you like to drink?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P25-D1",
+      "page_uid": "TB-G5S1U3-P25",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S1U3-P25-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "在餐厅场景中，一位女士向一个小女孩介绍桌上的各种食物和饮料，引出本课的核心词汇。 Key patterns: Let's learn",
+      "focus_vocabulary": [
+        "tea",
+        "ice cream",
+        "sandwich",
+        "hamburger",
+        "salad"
+      ],
+      "core_patterns": [
+        "Let's learn"
+      ],
+      "allowed_answer_scope": [
+        "tea",
+        "ice cream",
+        "sandwich",
+        "hamburger",
+        "salad"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word tea?",
+        "Can you say: Let's learn"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P25-D2",
+        "TB-G5S1U3-P25-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P25-D1-goal"
+      ],
+      "branchable_topics": [
+        "tea",
+        "ice cream",
+        "sandwich",
+        "hamburger",
+        "salad",
+        "Ordering food and drinks",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Let's learn"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P25-D2",
+      "page_uid": "TB-G5S1U3-P25",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U3-P25-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "在词汇学习场景中，提供了一个简短的对话示例，练习点餐的问答。 Key patterns: What would you like to eat?; I'd like a sandwich, please.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What would you like to eat?",
+        "I'd like a sandwich, please."
+      ],
+      "allowed_answer_scope": [
+        "I'd like a sandwich, please."
+      ],
+      "entry_probe_questions": [
+        "Can you say: What would you like to eat?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P25-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P25-D2-goal"
+      ],
+      "branchable_topics": [
+        "Ordering food and drinks",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "What would you like to eat?",
+        "I'd like a sandwich, please."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P25-D3",
+      "page_uid": "TB-G5S1U3-P25",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U3-P25-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "角色扮演活动。学生需要扮演服务员和顾客，填写点餐单，并进行点餐对话。提供了对话模板和点餐单模板。 Key patterns: Practice ordering food and drinks in a restaurant setting.; What would you like to eat?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice ordering food and drinks in a restaurant setting.",
+        "What would you like to eat?",
+        "What would you like to drink?",
+        "I'd like a sandwich, a hot dog, a hamburger ...",
+        "I'd like some tea."
+      ],
+      "allowed_answer_scope": [
+        "I'd like a sandwich, a hot dog, a hamburger ...",
+        "I'd like some tea."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice ordering food and drinks in a restaurant setting."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U3-P25-D3-goal"
+      ],
+      "branchable_topics": [
+        "Ordering food and drinks",
+        "Role-play"
+      ],
+      "return_anchors": [
+        "Practice ordering food and drinks in a restaurant setting.",
+        "What would you like to eat?",
+        "What would you like to drink?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P26-D1",
+      "page_uid": "TB-G5S1U3-P26",
+      "page_type": "phonics",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G5S1U3-P26-D1"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "学习字母组合 'ow' 的两种常见发音：/aʊ/ 和 /əʊ/。 Key patterns: The letter combination 'ow' can make the /aʊ/ sound, as in 'cow'.; The letter combination 'ow' can also make the /əʊ/ sound, as in 'slow'.",
+      "focus_vocabulary": [
+        "cow",
+        "flower",
+        "wow",
+        "down",
+        "slow",
+        "snow",
+        "yellow",
+        "window"
+      ],
+      "core_patterns": [
+        "The letter combination 'ow' can make the /aʊ/ sound, as in 'cow'.",
+        "The letter combination 'ow' can also make the /əʊ/ sound, as in 'slow'."
+      ],
+      "allowed_answer_scope": [
+        "cow",
+        "flower",
+        "wow",
+        "down",
+        "slow",
+        "snow"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word cow?",
+        "Can you say: The letter combination 'ow' can make the /aʊ/ sound, as in 'cow'."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P26-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P26-D1-goal"
+      ],
+      "branchable_topics": [
+        "cow",
+        "flower",
+        "wow",
+        "down",
+        "slow",
+        "snow",
+        "yellow",
+        "window"
+      ],
+      "return_anchors": [
+        "The letter combination 'ow' can make the /aʊ/ sound, as in 'cow'.",
+        "The letter combination 'ow' can also make the /əʊ/ sound, as in 'slow'."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P26-D2",
+      "page_uid": "TB-G5S1U3-P26",
+      "page_type": "phonics",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U3-P26-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，圈出每组中'ow'发音与其他两个不同的单词。 Key patterns: Listen, circle and say.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen, circle and say."
+      ],
+      "allowed_answer_scope": [
+        "snow",
+        "window",
+        "slow",
+        "wow"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen, circle and say."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P26-D3",
+        "TB-G5S1U3-P26-D1",
+        "TB-G5S1U3-P26-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P26-D2-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: ow",
+        "Let's spell"
+      ],
+      "return_anchors": [
+        "Listen, circle and say."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P26-D3",
+      "page_uid": "TB-G5S1U3-P26",
+      "page_type": "phonics",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U3-P26-D3"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，根据图片和听到的内容，将正确的单词填入句子中。图片包含一朵黄花，一个写有“减速慢行”的标志，和一个日历。 Key patterns: Listen, write and say.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen, write and say."
+      ],
+      "allowed_answer_scope": [
+        "flower",
+        "down",
+        "tomorrow"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen, write and say."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P26-D1",
+        "TB-G5S1U3-P26-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P26-D3-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: ow",
+        "Let's spell"
+      ],
+      "return_anchors": [
+        "Listen, write and say."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P26-D4",
+      "page_uid": "TB-G5S1U3-P26",
+      "page_type": "phonics",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S1U3-P26-D4"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "从上面完成的三个句子中选择一句抄写下来。 Key patterns: Choose one sentence from above and write.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Choose one sentence from above and write."
+      ],
+      "allowed_answer_scope": [
+        "I see a yellow flower."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Choose one sentence from above and write."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U3-P26-D4-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: ow",
+        "Let's spell"
+      ],
+      "return_anchors": [
+        "Choose one sentence from above and write."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P27-D1",
+      "page_uid": "TB-G5S1U3-P27",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U3-P27-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "学生听录音，了解张鹏和莎拉口渴了想喝什么，然后将人物与对应的饮料连线匹配。 Key patterns: Zhang Peng and Sarah are thirsty. Listen and match.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Zhang Peng and Sarah are thirsty. Listen and match."
+      ],
+      "allowed_answer_scope": [
+        "milk",
+        "grape juice"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Zhang Peng and Sarah are thirsty. Listen and match."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P27-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P27-D1-goal"
+      ],
+      "branchable_topics": [
+        "Favourite food and drink",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Zhang Peng and Sarah are thirsty. Listen and match."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P27-D2",
+      "page_uid": "TB-G5S1U3-P27",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U3-P27-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "张鹏和莎拉看着当天的菜单，讨论各自最喜欢的食物，并看看菜单上有什么可点的。 Key patterns: What's your favourite food?; Noodles. I love beef noodles. They're delicious. What's your favourite food?",
+      "focus_vocabulary": [
+        "favourite food",
+        "beef noodles",
+        "fish sandwich",
+        "tomato soup",
+        "milk",
+        "fish",
+        "delicious"
+      ],
+      "core_patterns": [
+        "What's your favourite food?",
+        "Noodles. I love beef noodles. They're delicious. What's your favourite food?",
+        "Fish.",
+        "Well, let's see. We have beef noodles and fish sandwiches today.",
+        "Great!"
+      ],
+      "allowed_answer_scope": [
+        "Fish.",
+        "Well, let's see. We have beef noodles and fish sandwiches today.",
+        "Great!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word favourite food?",
+        "Can you say: What's your favourite food?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P27-D1",
+        "TB-G5S1U3-P27-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P27-D2-goal"
+      ],
+      "branchable_topics": [
+        "favourite food",
+        "beef noodles",
+        "fish sandwich",
+        "tomato soup",
+        "milk",
+        "fish",
+        "delicious",
+        "Favourite food and drink"
+      ],
+      "return_anchors": [
+        "What's your favourite food?",
+        "Noodles. I love beef noodles. They're delicious. What's your favourite food?",
+        "Fish."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P27-D3",
+      "page_uid": "TB-G5S1U3-P27",
+      "page_type": "dialogue",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G5S1U3-P27-D3"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "一项课堂调查活动，学生需要询问朋友们最喜欢的食物和饮料，并将结果填入表格中。小熊提供了回答范例。 Key patterns: 's favourite food is... Her/His favourite drink is...",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "'s favourite food is... Her/His favourite drink is..."
+      ],
+      "allowed_answer_scope": [
+        "'s favourite food is... Her/His favourite drink is..."
+      ],
+      "entry_probe_questions": [
+        "Can you say: 's favourite food is... Her/His favourite drink is..."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U3-P27-D3-goal"
+      ],
+      "branchable_topics": [
+        "Favourite food and drink",
+        "Ask your friends about their favourite food and drink."
+      ],
+      "return_anchors": [
+        "'s favourite food is... Her/His favourite drink is..."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P28-D1",
+      "page_uid": "TB-G5S1U3-P28",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S1U3-P28-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "通过五个小插图，展示了描述食物特性的五个形容词。 Key patterns: Let's learn",
+      "focus_vocabulary": [
+        "fresh",
+        "healthy",
+        "delicious",
+        "hot",
+        "sweet"
+      ],
+      "core_patterns": [
+        "Let's learn"
+      ],
+      "allowed_answer_scope": [
+        "fresh",
+        "healthy",
+        "delicious",
+        "hot",
+        "sweet"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word fresh?",
+        "Can you say: Let's learn"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P28-D2",
+        "TB-G5S1U3-P28-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P28-D1-goal"
+      ],
+      "branchable_topics": [
+        "fresh",
+        "healthy",
+        "delicious",
+        "hot",
+        "sweet",
+        "Describing food",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Let's learn"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P28-D2",
+      "page_uid": "TB-G5S1U3-P28",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U3-P28-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "在词汇学习部分下方，提供了一个简短的问答对话，练习询问最喜欢的食物并用新学的形容词描述它。 Key patterns: What's your favourite food?; Ice cream. It's sweet!",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What's your favourite food?",
+        "Ice cream. It's sweet!"
+      ],
+      "allowed_answer_scope": [
+        "Ice cream. It's sweet!"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What's your favourite food?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P28-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P28-D2-goal"
+      ],
+      "branchable_topics": [
+        "Describing food",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "What's your favourite food?",
+        "Ice cream. It's sweet!"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P28-D3",
+      "page_uid": "TB-G5S1U3-P28",
+      "page_type": "vocabulary",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S1U3-P28-D3"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "看图写单词，用本课学习的形容词描述图片中的食物。小熊的对话框提供了额外的口语练习提示。 Key patterns: I love ice cream. It's sweet. What about you?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "I love ice cream. It's sweet. What about you?"
+      ],
+      "allowed_answer_scope": [
+        "hot",
+        "fresh",
+        "delicious",
+        "sweet"
+      ],
+      "entry_probe_questions": [
+        "Can you say: I love ice cream. It's sweet. What about you?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U3-P28-D3-goal"
+      ],
+      "branchable_topics": [
+        "Describing food",
+        "Look, write and say"
+      ],
+      "return_anchors": [
+        "I love ice cream. It's sweet. What about you?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P29-D1",
+      "page_uid": "TB-G5S1U3-P29",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S1U3-P29-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "机器人罗宾要为大家做饭，彬彬和爷爷分别给罗宾写了便条，说明自己的食物偏好。但罗宾似乎误解了他们的意思，做出了一道“鸡肉冰淇淋”。 Key patterns: Expressing food likes and dislikes.; Here you are! Chicken ice cream!",
+      "focus_vocabulary": [
+        "ice cream",
+        "sweet",
+        "beef",
+        "chicken",
+        "onions",
+        "vegetable",
+        "salad",
+        "delicious"
+      ],
+      "core_patterns": [
+        "Expressing food likes and dislikes.",
+        "Here you are! Chicken ice cream!",
+        "Oh, no!"
+      ],
+      "allowed_answer_scope": [
+        "Here you are! Chicken ice cream!",
+        "Oh, no!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word ice cream?",
+        "Can you say: Expressing food likes and dislikes."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P29-D2",
+        "TB-G5S1U3-P29-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P29-D1-goal"
+      ],
+      "branchable_topics": [
+        "ice cream",
+        "sweet",
+        "beef",
+        "chicken",
+        "onions",
+        "vegetable",
+        "salad",
+        "delicious"
+      ],
+      "return_anchors": [
+        "Expressing food likes and dislikes.",
+        "Here you are! Chicken ice cream!",
+        "Oh, no!"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P29-D2",
+      "page_uid": "TB-G5S1U3-P29",
+      "page_type": "reading",
+      "block_type": "practice_choice",
+      "source_refs": [
+        "TB-G5S1U3-P29-D2"
+      ],
+      "teaching_goal": "Work on the practice choice activity.",
+      "teaching_summary": "根据彬彬和爷爷的便条内容，从三组食物图片中勾选出他们两人都能吃的食物。 Key patterns: What can they both eat? Read and tick.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What can they both eat? Read and tick."
+      ],
+      "allowed_answer_scope": [
+        "Chicken and onions"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What can they both eat? Read and tick."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P29-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P29-D2-goal"
+      ],
+      "branchable_topics": [
+        "Food preferences and cooking",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "What can they both eat? Read and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P29-D3",
+      "page_uid": "TB-G5S1U3-P29",
+      "page_type": "reading",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G5S1U3-P29-D3"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "一项写作任务，要求学生模仿便条的格式，给罗宾写一封信，告诉他自己想吃什么，并说明自己的食物偏好。 Key patterns: What would you like to eat? Write to Robin, please.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What would you like to eat? Write to Robin, please."
+      ],
+      "allowed_answer_scope": [
+        "What would you like to eat? Write to Robin, please."
+      ],
+      "entry_probe_questions": [
+        "Can you say: What would you like to eat? Write to Robin, please."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U3-P29-D3-goal"
+      ],
+      "branchable_topics": [
+        "Food preferences and cooking",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "What would you like to eat? Write to Robin, please."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P30-D1",
+      "page_uid": "TB-G5S1U3-P30",
+      "page_type": "grammar",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U3-P30-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "学生听录音，根据听到的内容，勾选出艾米想吃的套餐。 Key patterns: What would Amy like? Listen and tick.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What would Amy like? Listen and tick."
+      ],
+      "allowed_answer_scope": [
+        "Picture 3"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What would Amy like? Listen and tick."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P30-D2",
+        "TB-G5S1U3-P30-D3",
+        "TB-G5S1U3-P30-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P30-D1-goal"
+      ],
+      "branchable_topics": [
+        "Unit 3 Check & Wrap-up",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "What would Amy like? Listen and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P30-D2",
+      "page_uid": "TB-G5S1U3-P30",
+      "page_type": "grammar",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U3-P30-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "根据上一题的听力内容，填写艾米最喜欢的饮料。 Key patterns: What is Amy's favourite drink? Fill in the blank.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What is Amy's favourite drink? Fill in the blank."
+      ],
+      "allowed_answer_scope": [
+        "milk"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What is Amy's favourite drink? Fill in the blank."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P30-D3",
+        "TB-G5S1U3-P30-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P30-D2-goal"
+      ],
+      "branchable_topics": [
+        "Unit 3 Check & Wrap-up",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "What is Amy's favourite drink? Fill in the blank."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P30-D3",
+      "page_uid": "TB-G5S1U3-P30",
+      "page_type": "grammar",
+      "block_type": "grammar_point",
+      "source_refs": [
+        "TB-G5S1U3-P30-D3"
+      ],
+      "teaching_goal": "Work on the grammar point activity.",
+      "teaching_summary": "总结名词变复数的两种基本规则：直接加-s和加-es。 Key patterns: Regular plural nouns: add -s.; Plural nouns ending in s, x, ch, sh: add -es.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Regular plural nouns: add -s.",
+        "Plural nouns ending in s, x, ch, sh: add -es."
+      ],
+      "allowed_answer_scope": [
+        "Regular plural nouns: add -s.",
+        "Plural nouns ending in s, x, ch, sh: add -es."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Regular plural nouns: add -s."
+      ],
+      "repair_modes": [
+        "repeat",
+        "sentence_drill",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P30-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P30-D3-goal"
+      ],
+      "branchable_topics": [
+        "Unit 3 Check & Wrap-up",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Regular plural nouns: add -s.",
+        "Plural nouns ending in s, x, ch, sh: add -es."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P30-D4",
+      "page_uid": "TB-G5S1U3-P30",
+      "page_type": "grammar",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G5S1U3-P30-D4"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "根据名词变复数的规则，填写表格，写出给定单词的复数形式。 Key patterns: Fill in the table.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Fill in the table."
+      ],
+      "allowed_answer_scope": [
+        "bananas",
+        "pears",
+        "carrots",
+        "noodles",
+        "hamburgers",
+        "onions"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Fill in the table."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U3-P30-D4-goal"
+      ],
+      "branchable_topics": [
+        "Unit 3 Check & Wrap-up",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Fill in the table."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P31-D1",
+      "page_uid": "TB-G5S1U3-P31",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S1U3-P31-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一个连环画故事。小熊zoom饿了，想吃沙拉。小松鼠zip带它到农场的菜园里摘取新鲜蔬菜。它们一起清洗和准备食材，制作了一份健康又美味的沙拉，并配上新鲜的牛奶，在农场享用了一顿丰盛的晚餐。 Key patterns: Understand a story about preparing a healthy meal.; Learn vocabulary for vegetables and describing food.",
+      "focus_vocabulary": [
+        "hungry",
+        "salad",
+        "tomatoes",
+        "carrots",
+        "onions",
+        "vegetables",
+        "fresh",
+        "delicious"
+      ],
+      "core_patterns": [
+        "Understand a story about preparing a healthy meal.",
+        "Learn vocabulary for vegetables and describing food.",
+        "What would you like to eat?",
+        "I'm hungry.",
+        "I'd like a salad.",
+        "No problem. I have tomatoes, carrots, and onions."
+      ],
+      "allowed_answer_scope": [
+        "I'm hungry.",
+        "I'd like a salad.",
+        "No problem. I have tomatoes, carrots, and onions.",
+        "The vegetables are so fresh!",
+        "They're delicious, too.",
+        "Please clean the vegetables."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word hungry?",
+        "Can you say: Understand a story about preparing a healthy meal."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U3-P31-D1-goal"
+      ],
+      "branchable_topics": [
+        "hungry",
+        "salad",
+        "tomatoes",
+        "carrots",
+        "onions",
+        "vegetables",
+        "fresh",
+        "delicious"
+      ],
+      "return_anchors": [
+        "Understand a story about preparing a healthy meal.",
+        "Learn vocabulary for vegetables and describing food.",
+        "What would you like to eat?"
+      ]
+    }
+  ]
+}

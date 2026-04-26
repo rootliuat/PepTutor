@@ -1,0 +1,16 @@
+{
+  "kind": "peptutor_general_qdrant_ingest_report",
+  "generated_at": "2026-04-07T22:44:45.685165+00:00",
+  "manifest_path": "app/knowledge/structured/general/general-manifest.json",
+  "qdrant_location": "/root/my-project/PepTutor/app/knowledge/structured/vector/qdrant",
+  "collection_name": "peptutor_teaching_blocks",
+  "workspace": "default",
+  "record_count": 579,
+  "stored_point_count": 579,
+  "embedding": {
+    "binding": "openai",
+    "model": "text-embedding-v4",
+    "host": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "embedding_dim": 1024
+  }
+}

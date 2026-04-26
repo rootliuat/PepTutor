@@ -1,0 +1,977 @@
+{
+  "pilot_id": "g5s1recycle2-general-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "Recycle2",
+    "pages": [
+      66,
+      67,
+      68,
+      69
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/01.五年级上册语料.js",
+    "app/knowledge/raw/05.五年级上册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 5 · Volume 1), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 5 · Volume 1), People's Education Press (PEP)",
+    "page_count": 3,
+    "block_count": 10,
+    "source_kind": "textbook_source_js",
+    "source_format": "js"
+  },
+  "wordlist_entries": [],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S1Recycle2-P66-D1-goal",
+      "block_uid": "TB-G5S1Recycle2-P66-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle2-P66-D2-goal",
+      "block_uid": "TB-G5S1Recycle2-P66-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle2-P66-D3-goal",
+      "block_uid": "TB-G5S1Recycle2-P66-D3",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle2-P66-D4-goal",
+      "block_uid": "TB-G5S1Recycle2-P66-D4",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle2-P67-D1-goal",
+      "block_uid": "TB-G5S1Recycle2-P67-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle2-P67-D2-goal",
+      "block_uid": "TB-G5S1Recycle2-P67-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle2-P68-69-D1-goal",
+      "block_uid": "TB-G5S1Recycle2-P68-69-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle2-P68-69-D2-goal",
+      "block_uid": "TB-G5S1Recycle2-P68-69-D2",
+      "category": "practice_numbering",
+      "text": "Work on the practice numbering activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle2-P68-69-D3-goal",
+      "block_uid": "TB-G5S1Recycle2-P68-69-D3",
+      "category": "practice_match",
+      "text": "Work on the practice match activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1Recycle2-P68-69-D4-goal",
+      "block_uid": "TB-G5S1Recycle2-P68-69-D4",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-basketball",
+      "atom_type": "word",
+      "text": "basketball",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-bike",
+      "atom_type": "word",
+      "text": "bike",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-bottle",
+      "atom_type": "word",
+      "text": "bottle",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-box",
+      "atom_type": "word",
+      "text": "box",
+      "gloss": "盒子",
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-clock",
+      "atom_type": "word",
+      "text": "clock",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-cupboard",
+      "atom_type": "word",
+      "text": "cupboard",
+      "gloss": "橱柜",
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-dark",
+      "atom_type": "word",
+      "text": "dark",
+      "gloss": "黑暗的",
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-football",
+      "atom_type": "word",
+      "text": "football",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-hallway",
+      "atom_type": "word",
+      "text": "hallway",
+      "gloss": "走廊",
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-house",
+      "atom_type": "word",
+      "text": "house",
+      "gloss": "房子",
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-photo",
+      "atom_type": "word",
+      "text": "photo",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pipa",
+      "atom_type": "word",
+      "text": "pipa",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-plant",
+      "atom_type": "word",
+      "text": "plant",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-room",
+      "atom_type": "word",
+      "text": "room",
+      "gloss": "房间",
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-stairs",
+      "atom_type": "word",
+      "text": "stairs",
+      "gloss": "楼梯",
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-wood",
+      "atom_type": "word",
+      "text": "wood",
+      "gloss": "树林",
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-are-there-any-lakes-in-the-forest",
+      "atom_type": "sentence_pattern",
+      "text": "Are there any lakes in the forest?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P67-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-are-there-any-villages-in-the-nature-park",
+      "atom_type": "sentence_pattern",
+      "text": "Are there any villages in the nature park?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P67-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-you-cook-robin",
+      "atom_type": "sentence_pattern",
+      "text": "Can you cook, Robin?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P66-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-find-friends-for-the-words-in-the-story-and-write-them-down",
+      "atom_type": "sentence_pattern",
+      "text": "Find 'friends' for the words in the story and write them down.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-in-the-dark-dark-wood-there-is-a-dark-dark",
+      "atom_type": "sentence_pattern",
+      "text": "In the dark, dark wood there is a dark, dark ...",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-there-a-restaurant-in-the-forest",
+      "atom_type": "sentence_pattern",
+      "text": "Is there a restaurant in the forest?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P67-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-there-a-robot-in-the-park",
+      "atom_type": "sentence_pattern",
+      "text": "Is there a robot in the park?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P67-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s",
+      "atom_type": "sentence_pattern",
+      "text": "It's ...",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P67-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-again-and-answer-the-questions",
+      "atom_type": "sentence_pattern",
+      "text": "Listen again and answer the questions.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P66-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-ouch-my-tail",
+      "atom_type": "sentence_pattern",
+      "text": "Ouch! My tail!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-asking-can-you-and-answering-with-yes-i-can-or-no-i-can-t",
+      "atom_type": "sentence_pattern",
+      "text": "Practice asking 'Can you...?' and answering with 'Yes, I can.' or 'No, I can't.'",
+      "gloss": "练习使用'Can you...?'提问，并用'Yes, I can.'或'No, I can't.'回答。",
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P66-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-reading-comprehension-and-spatial-reasoning-by-drawing-based-on-descriptions",
+      "atom_type": "sentence_pattern",
+      "text": "Practice reading comprehension and spatial reasoning by drawing based on descriptions.",
+      "gloss": "通过根据描述进行绘画，练习阅读理解和空间推理能力。",
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P67-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-reading-with-rhythm-and-intonation-building-suspense",
+      "atom_type": "sentence_pattern",
+      "text": "Practice reading with rhythm and intonation, building suspense.",
+      "gloss": "练习有节奏和语调地朗读，营造悬念气氛。",
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-children-will-go-to-a-nature-park-this-weekend-robin-wants-to-go-too-he-calls-miss-white-listen-and-tick-or-cross",
+      "atom_type": "sentence_pattern",
+      "text": "The children will go to a nature park this weekend. Robin wants to go, too. He calls Miss White. Listen and tick or cross.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P66-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-a-small-village",
+      "atom_type": "sentence_pattern",
+      "text": "There is a small village.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P67-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-else-can-robin-do-write-two-sentences",
+      "atom_type": "sentence_pattern",
+      "text": "What else can Robin do? Write two sentences.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P66-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-s-in-the-nature-park",
+      "atom_type": "sentence_pattern",
+      "text": "What's in the nature park?",
+      "gloss": "自然公园里有什么？",
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P67-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-is-it",
+      "atom_type": "sentence_pattern",
+      "text": "Where is it?",
+      "gloss": "它在哪里？",
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P67-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-write-your-own-story-read-it-to-your-partner",
+      "atom_type": "sentence_pattern",
+      "text": "Write your own story. Read it to your partner.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P68-69-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-i-can",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, I can.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P66-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-there-are-two",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, there are two.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1Recycle2-P67-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S1Recycle2-P66",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Recycle 2 - Having fun in a park. 一个简单的角色扮演对话，练习询问和回答关于“做饭”的能力。",
+      "entry_probe_questions": [
+        "Can you say: Practice asking 'Can you...?' and answering with 'Yes, I can.' or 'No, I can't.'"
+      ],
+      "priority_blocks": [
+        "TB-G5S1Recycle2-P66-D4",
+        "TB-G5S1Recycle2-P66-D1",
+        "TB-G5S1Recycle2-P66-D2",
+        "TB-G5S1Recycle2-P66-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1Recycle2-P67",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Recycle 2 - Describing a map. 提供一个对话框架，鼓励学生与同伴讨论地图上的内容，练习询问和描述物品及其位置。",
+      "entry_probe_questions": [
+        "Can you say: What's in the nature park?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1Recycle2-P67-D2",
+        "TB-G5S1Recycle2-P67-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1Recycle2-P68-69",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Recycle 2 - Story Reading, Retelling and Writing. 一个带有悬疑和趣味性的连锁故事。故事通过重复“dark, dark...”的句式，层层递进地描述一个黑暗森林中的黑暗房子，直到最后在一个黑暗的盒子里发现一只大老鼠，故事以老鼠的惊叫结尾。",
+      "entry_probe_questions": [
+        "Do you know the word dark?",
+        "Can you say: Practice reading with rhythm and intonation, building suspense."
+      ],
+      "priority_blocks": [
+        "TB-G5S1Recycle2-P68-69-D1",
+        "TB-G5S1Recycle2-P68-69-D2",
+        "TB-G5S1Recycle2-P68-69-D3",
+        "TB-G5S1Recycle2-P68-69-D4"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S1Recycle2-P66-D1",
+      "page_uid": "TB-G5S1Recycle2-P66",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1Recycle2-P66-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "孩子们周末要去自然公园，机器人罗宾也想去。它打电话给怀特老师，介绍了自己的各种能力。学生需要听对话，判断罗宾会做和不会做的活动，并在图片上打勾或画叉。 Key patterns: The children will go to a nature park this weekend. Robin wants to go, too. He calls Miss White. Listen and tick or cross.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "The children will go to a nature park this weekend. Robin wants to go, too. He calls Miss White. Listen and tick or cross."
+      ],
+      "allowed_answer_scope": [
+        "打勾",
+        "画叉"
+      ],
+      "entry_probe_questions": [
+        "Can you say: The children will go to a nature park this weekend. Robin wants to go, too. He calls Miss White. Listen and tick or cross."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1Recycle2-P66-D2",
+        "TB-G5S1Recycle2-P66-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1Recycle2-P66-D1-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 2 - Having fun in a park",
+        "Recycle 2"
+      ],
+      "return_anchors": [
+        "The children will go to a nature park this weekend. Robin wants to go, too. He calls Miss White. Listen and tick or cross."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle2-P66-D2",
+      "page_uid": "TB-G5S1Recycle2-P66",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1Recycle2-P66-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "再次听录音，并回答关于罗宾能力的三个具体问题。 Key patterns: Listen again and answer the questions.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen again and answer the questions."
+      ],
+      "allowed_answer_scope": [
+        "No, he can't.",
+        "Yes, he can."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen again and answer the questions."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1Recycle2-P66-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1Recycle2-P66-D2-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 2 - Having fun in a park",
+        "Listen again and answer the questions."
+      ],
+      "return_anchors": [
+        "Listen again and answer the questions."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle2-P66-D3",
+      "page_uid": "TB-G5S1Recycle2-P66",
+      "page_type": "dialogue",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S1Recycle2-P66-D3"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "根据听力内容，写出罗宾还会做的另外两件事。 Key patterns: What else can Robin do? Write two sentences.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What else can Robin do? Write two sentences."
+      ],
+      "allowed_answer_scope": [
+        "He can sing.",
+        "He can dance."
+      ],
+      "entry_probe_questions": [
+        "Can you say: What else can Robin do? Write two sentences."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1Recycle2-P66-D3-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 2 - Having fun in a park",
+        "What else can Robin do? Write two sentences."
+      ],
+      "return_anchors": [
+        "What else can Robin do? Write two sentences."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle2-P66-D4",
+      "page_uid": "TB-G5S1Recycle2-P66",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1Recycle2-P66-D4"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "一个简单的角色扮演对话，练习询问和回答关于“做饭”的能力。 Key patterns: Practice asking 'Can you...?' and answering with 'Yes, I can.' or 'No, I can't.'; Can you cook, Robin?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice asking 'Can you...?' and answering with 'Yes, I can.' or 'No, I can't.'",
+        "Can you cook, Robin?",
+        "Yes, I can."
+      ],
+      "allowed_answer_scope": [
+        "Yes, I can."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice asking 'Can you...?' and answering with 'Yes, I can.' or 'No, I can't.'"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1Recycle2-P66-D1",
+        "TB-G5S1Recycle2-P66-D2",
+        "TB-G5S1Recycle2-P66-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1Recycle2-P66-D4-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 2 - Having fun in a park",
+        "Role-play."
+      ],
+      "return_anchors": [
+        "Practice asking 'Can you...?' and answering with 'Yes, I can.' or 'No, I can't.'",
+        "Can you cook, Robin?",
+        "Yes, I can."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle2-P67-D1",
+      "page_uid": "TB-G5S1Recycle2-P67",
+      "page_type": "dialogue",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S1Recycle2-P67-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "孩子们在公园里看地图，发现地图上缺少了一些东西。通过一段对话，他们讨论了公园里的湖、餐厅、村庄和机器人的位置。学生需要根据对话内容，在地图上画出缺失的景物。 Key patterns: Practice reading comprehension and spatial reasoning by drawing based on descriptions.; Are there any lakes in the forest?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice reading comprehension and spatial reasoning by drawing based on descriptions.",
+        "Are there any lakes in the forest?",
+        "Is there a restaurant in the forest?",
+        "Are there any villages in the nature park?",
+        "Is there a robot in the park?",
+        "Yes, there are two."
+      ],
+      "allowed_answer_scope": [
+        "Yes, there are two.",
+        "No, there isn't, but there is one in front of the hill.",
+        "Let me think. Yes, there is one on the mountain.",
+        "Yes, there is one between Zhang Peng and Sarah! It's me!"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice reading comprehension and spatial reasoning by drawing based on descriptions."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1Recycle2-P67-D1-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 2 - Describing a map",
+        "Recycle 2"
+      ],
+      "return_anchors": [
+        "Practice reading comprehension and spatial reasoning by drawing based on descriptions.",
+        "Are there any lakes in the forest?",
+        "Is there a restaurant in the forest?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle2-P67-D2",
+      "page_uid": "TB-G5S1Recycle2-P67",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1Recycle2-P67-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "提供一个对话框架，鼓励学生与同伴讨论地图上的内容，练习询问和描述物品及其位置。 Key patterns: What's in the nature park?; Where is it?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What's in the nature park?",
+        "Where is it?",
+        "There is a small village.",
+        "It's ..."
+      ],
+      "allowed_answer_scope": [
+        "There is a small village.",
+        "It's ..."
+      ],
+      "entry_probe_questions": [
+        "Can you say: What's in the nature park?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1Recycle2-P67-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1Recycle2-P67-D2-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 2 - Describing a map",
+        "Talk about the map with your partner."
+      ],
+      "return_anchors": [
+        "What's in the nature park?",
+        "Where is it?",
+        "There is a small village."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle2-P68-69-D1",
+      "page_uid": "TB-G5S1Recycle2-P68-69",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S1Recycle2-P68-69-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一个带有悬疑和趣味性的连锁故事。故事通过重复“dark, dark...”的句式，层层递进地描述一个黑暗森林中的黑暗房子，直到最后在一个黑暗的盒子里发现一只大老鼠，故事以老鼠的惊叫结尾。 Key patterns: Practice reading with rhythm and intonation, building suspense.; Ouch! My tail!",
+      "focus_vocabulary": [
+        "dark",
+        "wood",
+        "house",
+        "hallway",
+        "stairs",
+        "room",
+        "cupboard",
+        "box"
+      ],
+      "core_patterns": [
+        "Practice reading with rhythm and intonation, building suspense.",
+        "Ouch! My tail!"
+      ],
+      "allowed_answer_scope": [
+        "Ouch! My tail!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word dark?",
+        "Can you say: Practice reading with rhythm and intonation, building suspense."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S1Recycle2-P68-69-D2",
+        "TB-G5S1Recycle2-P68-69-D3",
+        "TB-G5S1Recycle2-P68-69-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1Recycle2-P68-69-D1-goal"
+      ],
+      "branchable_topics": [
+        "dark",
+        "wood",
+        "house",
+        "hallway",
+        "stairs",
+        "room",
+        "cupboard",
+        "box"
+      ],
+      "return_anchors": [
+        "Practice reading with rhythm and intonation, building suspense.",
+        "Ouch! My tail!"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle2-P68-69-D2",
+      "page_uid": "TB-G5S1Recycle2-P68-69",
+      "page_type": "reading",
+      "block_type": "practice_numbering",
+      "source_refs": [
+        "TB-G5S1Recycle2-P68-69-D2"
+      ],
+      "teaching_goal": "Work on the practice numbering activity.",
+      "teaching_summary": "根据上一页的故事顺序，为故事中出现的关键名词排序，并尝试复述故事。 Key patterns: In the dark, dark wood there is a dark, dark ...",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "In the dark, dark wood there is a dark, dark ..."
+      ],
+      "allowed_answer_scope": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "entry_probe_questions": [
+        "Can you say: In the dark, dark wood there is a dark, dark ..."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [
+        "TB-G5S1Recycle2-P68-69-D3",
+        "TB-G5S1Recycle2-P68-69-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1Recycle2-P68-69-D2-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 2 - Story Reading, Retelling and Writing",
+        "Number the words and retell the story."
+      ],
+      "return_anchors": [
+        "In the dark, dark wood there is a dark, dark ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle2-P68-69-D3",
+      "page_uid": "TB-G5S1Recycle2-P68-69",
+      "page_type": "reading",
+      "block_type": "practice_match",
+      "source_refs": [
+        "TB-G5S1Recycle2-P68-69-D3"
+      ],
+      "teaching_goal": "Work on the practice match activity.",
+      "teaching_summary": "语音辨析与拼写练习，学生找出与给定单词押韵的词。 Key patterns: Find 'friends' for the words in the story and write them down.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Find 'friends' for the words in the story and write them down."
+      ],
+      "allowed_answer_scope": [
+        "room",
+        "wood",
+        "day",
+        "tail",
+        "look",
+        "train"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Find 'friends' for the words in the story and write them down."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [
+        "TB-G5S1Recycle2-P68-69-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1Recycle2-P68-69-D3-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 2 - Story Reading, Retelling and Writing",
+        "Find \"friends\" for the words in the story and write them down."
+      ],
+      "return_anchors": [
+        "Find 'friends' for the words in the story and write them down."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1Recycle2-P68-69-D4",
+      "page_uid": "TB-G5S1Recycle2-P68-69",
+      "page_type": "reading",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G5S1Recycle2-P68-69-D4"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "模仿上一页的故事结构，利用给定的词库创作一个自己的连锁故事，并读给同伴听。 Key patterns: Write your own story. Read it to your partner.",
+      "focus_vocabulary": [
+        "bike",
+        "bottle",
+        "clock",
+        "basketball",
+        "photo",
+        "football",
+        "plant",
+        "pipa"
+      ],
+      "core_patterns": [
+        "Write your own story. Read it to your partner."
+      ],
+      "allowed_answer_scope": [
+        "bike",
+        "bottle",
+        "clock",
+        "basketball",
+        "photo",
+        "football"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word bike?",
+        "Can you say: Write your own story. Read it to your partner."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1Recycle2-P68-69-D4-goal"
+      ],
+      "branchable_topics": [
+        "bike",
+        "bottle",
+        "clock",
+        "basketball",
+        "photo",
+        "football",
+        "plant",
+        "pipa"
+      ],
+      "return_anchors": [
+        "Write your own story. Read it to your partner."
+      ]
+    }
+  ]
+}

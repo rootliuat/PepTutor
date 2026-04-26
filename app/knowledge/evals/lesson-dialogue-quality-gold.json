@@ -1,0 +1,363 @@
+{
+  "version": 1,
+  "description": "Seeded deterministic teacher-turn quality samples covering retrieval grounding, natural response guards, persona, and memory contracts.",
+  "samples": [
+    {
+      "sample_id": "g5_current_expression_support_is_natural",
+      "page_uid": "TB-G5S1U3-P24",
+      "learner_inputs": [
+        "What does water mean?"
+      ],
+      "expected_turn_label": "ask_knowledge",
+      "expected_teaching_action": "explain",
+      "expected_retrieval_mode": "block",
+      "expected_evaluation": "none",
+      "expected_retrieved_block_uids": [
+        "TB-G5S1U3-P24-D2"
+      ],
+      "expected_support_entry_uids": [
+        "EXP-G5S1U3-id-like-some-water"
+      ],
+      "required_response_phrases": [
+        "water",
+        "水"
+      ],
+      "expected_teaching_move_signal": "knowledge_question",
+      "expected_teaching_move": "answer_briefly_then_return",
+      "expected_state_current_block_uid": "TB-G5S1U3-P24-D2",
+      "expected_state_awaiting_answer": true,
+      "expected_airi_speech_style": "normal",
+      "expected_airi_motion": "Explain"
+    },
+    {
+      "sample_id": "g5_unit_lexicon_support_hits_target_word",
+      "page_uid": "TB-G5S1U3-P24",
+      "learner_inputs": [
+        "What does salad mean?"
+      ],
+      "expected_turn_label": "ask_knowledge",
+      "expected_teaching_action": "explain",
+      "expected_retrieval_mode": "unit",
+      "expected_evaluation": "none",
+      "expected_retrieved_block_uids": [
+        "TB-G5S1U3-P25-D1"
+      ],
+      "expected_support_entry_uids": [
+        "LEX-G5S1U3-salad"
+      ],
+      "required_response_phrases": [
+        "salad",
+        "沙拉"
+      ],
+      "expected_teaching_move_signal": "knowledge_question",
+      "expected_teaching_move": "answer_briefly_then_return",
+      "expected_state_current_block_uid": "TB-G5S1U3-P24-D2",
+      "expected_state_awaiting_answer": true,
+      "expected_airi_speech_style": "normal",
+      "expected_airi_motion": "Explain"
+    },
+    {
+      "sample_id": "g5_branch_turn_keeps_return_anchor",
+      "page_uid": "TB-G5S1U3-P24",
+      "learner_inputs": [
+        "What is your favourite food?"
+      ],
+      "expected_turn_label": "ask_knowledge",
+      "expected_teaching_action": "explain",
+      "expected_retrieval_mode": "branch",
+      "expected_evaluation": "none",
+      "expected_retrieved_block_uids": [
+        "TB-G5S1U3-P22-D1"
+      ],
+      "expected_support_entry_uids": [
+        "EXP-G5S1U3-what-is-your-favourite-food"
+      ],
+      "required_response_phrases": [
+        "favourite food"
+      ],
+      "expected_teaching_move_signal": "knowledge_question",
+      "expected_teaching_move": "answer_briefly_then_return",
+      "expected_state_current_block_uid": "TB-G5S1U3-P24-D2",
+      "expected_state_awaiting_answer": false,
+      "expected_airi_speech_style": "normal",
+      "expected_airi_motion": "Explain"
+    },
+    {
+      "sample_id": "g5_stuck_answer_gets_short_correction_persona",
+      "page_uid": "TB-G5S1U3-P24",
+      "learner_inputs": [
+        "I do not know"
+      ],
+      "expected_turn_label": "answer_question",
+      "expected_teaching_action": "hint",
+      "expected_retrieval_mode": "none",
+      "expected_evaluation": "incorrect",
+      "required_response_phrases": [
+        "hungry"
+      ],
+      "expected_teaching_move_signal": "refusal",
+      "expected_teaching_move": "lower_pressure_reinvite",
+      "expected_state_current_block_uid": "TB-G5S1U3-P24-D2",
+      "expected_state_awaiting_answer": true,
+      "expected_airi_speech_style": "gentle_correction",
+      "expected_airi_motion": "Explain"
+    },
+    {
+      "sample_id": "g5_prompt_memory_shapes_help_without_changing_target",
+      "page_uid": "TB-G5S1U3-P24",
+      "learner_inputs": [
+        "help me"
+      ],
+      "memory_summary": {
+        "student_id": "eval-student",
+        "common_mistakes": [
+          "Learner often omits the full sentence answer."
+        ],
+        "preferences": [
+          "Learner prefers slow split Chinese explanation."
+        ],
+        "semantic_memories": [
+          "Learner gets nervous when asked to answer aloud."
+        ],
+        "summary_text": "Learner needs slow Chinese scaffolding before retry."
+      },
+      "expected_turn_label": "ask_help",
+      "expected_teaching_action": "hint",
+      "expected_retrieval_mode": "none",
+      "expected_evaluation": "none",
+      "required_response_phrases": [
+        "hungry"
+      ],
+      "expected_prompt_memory_buckets": [
+        "common_mistakes",
+        "preferences"
+      ],
+      "expected_persona_relationship_signals": [
+        "stored_mistake_pattern",
+        "slow_split_practice",
+        "chinese_scaffold",
+        "target_sentence_completion_risk",
+        "low_confidence_risk"
+      ],
+      "expected_teaching_move_signal": "help_request",
+      "expected_teaching_move": "give_one_step_hint",
+      "expected_state_current_block_uid": "TB-G5S1U3-P24-D2",
+      "expected_state_awaiting_answer": true,
+      "expected_airi_speech_style": "slow_split",
+      "expected_airi_motion": "Encourage"
+    },
+    {
+      "sample_id": "g6_unit_lexicon_query_hits_correct_grade_scope",
+      "page_uid": "TB-G6S2U1-P6",
+      "learner_inputs": [
+        "What does heavier mean?"
+      ],
+      "expected_turn_label": "ask_knowledge",
+      "expected_teaching_action": "explain",
+      "expected_retrieval_mode": "unit",
+      "expected_evaluation": "none",
+      "expected_retrieved_block_uids": [
+        "TB-G6S2U1-P7-D1"
+      ],
+      "required_response_phrases": [
+        "heavier"
+      ],
+      "expected_teaching_move_signal": "knowledge_question",
+      "expected_teaching_move": "answer_briefly_then_return",
+      "expected_state_current_block_uid": "TB-G6S2U1-P6-D2",
+      "expected_state_awaiting_answer": true,
+      "expected_airi_speech_style": "normal",
+      "expected_airi_motion": "Explain"
+    },
+    {
+      "sample_id": "g5_p31_story_overlay_stays_story_grounded",
+      "page_uid": "TB-G5S1U3-P31",
+      "learner_inputs": [
+        "salad"
+      ],
+      "expected_turn_label": "answer_question",
+      "expected_teaching_action": "hint",
+      "expected_retrieval_mode": "none",
+      "expected_evaluation": "partially_correct",
+      "expected_lesson_evidence_page_type": "story",
+      "expected_lesson_evidence_exact_block_uid": "TB-G5S1U3-P31-D1",
+      "expected_lesson_evidence_source_refs": [
+        "app/knowledge/structured/g5s1u3-p31-pilot.json"
+      ],
+      "expected_lesson_brief_material_uids": [
+        "TB-G5S1U3-P31",
+        "TB-G5S1U3-P31-D1"
+      ],
+      "required_lesson_brief_phrases": [
+        "Zoom is hungry",
+        "I'd like a salad.",
+        "Zoom would like a salad."
+      ],
+      "expected_lesson_brief_answer_scope_phrases": [
+        "Zoom would like a salad."
+      ],
+      "expected_teaching_move_signal": "incomplete_answer",
+      "expected_teaching_move": "prompt_missing_piece",
+      "expected_state_current_block_uid": "TB-G5S1U3-P31-D1",
+      "expected_state_awaiting_answer": true,
+      "expected_airi_speech_style": "gentle_correction",
+      "expected_airi_motion": "Explain"
+    },
+    {
+      "sample_id": "g6_p49_reluctant_student_gets_small_entry",
+      "page_uid": "TB-G6S2Recycle2-P49",
+      "learner_inputs": [
+        "我不想说"
+      ],
+      "expected_turn_label": "answer_question",
+      "expected_teaching_action": "hint",
+      "expected_retrieval_mode": "none",
+      "expected_evaluation": "unclear",
+      "required_response_phrases": [],
+      "expected_lesson_evidence_page_type": "phonics",
+      "expected_lesson_evidence_exact_block_uid": "TB-G6S2Recycle2-P49-D4",
+      "expected_lesson_evidence_source_refs": [
+        "app/knowledge/structured/general/g6s2recycle2-general.json"
+      ],
+      "expected_lesson_brief_material_uids": [
+        "TB-G6S2Recycle2-P49",
+        "TB-G6S2Recycle2-P49-D4"
+      ],
+      "required_lesson_brief_phrases": [
+        "A concrete party-list item",
+        "Create a personal party shopping list."
+      ],
+      "expected_lesson_brief_answer_scope_phrases": [
+        "cake",
+        "Create a personal party shopping list."
+      ],
+      "expected_teaching_move_signal": "refusal",
+      "expected_teaching_move": "lower_pressure_reinvite",
+      "expected_state_current_block_uid": "TB-G6S2Recycle2-P49-D4",
+      "expected_state_awaiting_answer": true,
+      "expected_airi_speech_style": "gentle_correction",
+      "expected_airi_motion": "Explain"
+    },
+    {
+      "sample_id": "g6_p49_task_repetition_is_not_completed_answer",
+      "page_uid": "TB-G6S2Recycle2-P49",
+      "learner_inputs": [
+        "Create a personal party shopping list."
+      ],
+      "expected_turn_label": "answer_question",
+      "expected_teaching_action": "hint",
+      "expected_retrieval_mode": "none",
+      "expected_evaluation": "incorrect",
+      "required_response_phrases": [],
+      "forbidden_response_phrases": [
+        "开头带起来"
+      ],
+      "expected_lesson_evidence_page_type": "phonics",
+      "expected_lesson_evidence_exact_block_uid": "TB-G6S2Recycle2-P49-D4",
+      "expected_lesson_evidence_source_refs": [
+        "app/knowledge/structured/general/g6s2recycle2-general.json"
+      ],
+      "expected_lesson_brief_material_uids": [
+        "TB-G6S2Recycle2-P49",
+        "TB-G6S2Recycle2-P49-D4"
+      ],
+      "required_lesson_brief_phrases": [
+        "task_instruction_echo",
+        "A concrete party-list item"
+      ],
+      "expected_lesson_brief_answer_scope_phrases": [
+        "cake",
+        "Create a personal party shopping list."
+      ],
+      "expected_teaching_move_signal": "task_echo",
+      "expected_teaching_move": "convert_task_echo_to_answer",
+      "expected_state_current_block_uid": "TB-G6S2Recycle2-P49-D4",
+      "expected_state_awaiting_answer": true,
+      "expected_airi_speech_style": "gentle_correction",
+      "expected_airi_motion": "Explain"
+    },
+    {
+      "sample_id": "g6_p49_rough_item_sentence_gets_light_repair",
+      "page_uid": "TB-G6S2Recycle2-P49",
+      "learner_inputs": [
+        "I bring apple."
+      ],
+      "expected_turn_label": "answer_question",
+      "expected_teaching_action": "hint",
+      "expected_retrieval_mode": "none",
+      "expected_evaluation": "partially_correct",
+      "required_response_phrases": [],
+      "expected_lesson_evidence_page_type": "phonics",
+      "expected_lesson_evidence_exact_block_uid": "TB-G6S2Recycle2-P49-D4",
+      "expected_lesson_brief_material_uids": [
+        "TB-G6S2Recycle2-P49",
+        "TB-G6S2Recycle2-P49-D4"
+      ],
+      "required_lesson_brief_phrases": [
+        "rough_item_sentence",
+        "I'm going to bring an apple."
+      ],
+      "expected_lesson_brief_answer_scope_phrases": [
+        "cake"
+      ],
+      "expected_teaching_move_signal": "small_error",
+      "expected_teaching_move": "light_recast",
+      "expected_state_current_block_uid": "TB-G6S2Recycle2-P49-D4",
+      "expected_state_awaiting_answer": true,
+      "expected_airi_speech_style": "gentle_correction",
+      "expected_airi_motion": "Explain"
+    },
+    {
+      "sample_id": "g6_p49_off_topic_student_is_redirected_to_party_list",
+      "page_uid": "TB-G6S2Recycle2-P49",
+      "learner_inputs": [
+        "I played games yesterday."
+      ],
+      "expected_turn_label": "social",
+      "expected_teaching_action": "redirect",
+      "expected_retrieval_mode": "none",
+      "expected_evaluation": "none",
+      "required_response_phrases": [],
+      "expected_lesson_evidence_page_type": "phonics",
+      "expected_lesson_evidence_exact_block_uid": "TB-G6S2Recycle2-P49-D4",
+      "expected_teaching_move_signal": "off_topic",
+      "expected_teaching_move": "redirect_to_active_task",
+      "expected_state_current_block_uid": "TB-G6S2Recycle2-P49-D4",
+      "expected_state_awaiting_answer": true,
+      "expected_airi_speech_style": "short_prompt",
+      "expected_airi_motion": "Listen"
+    },
+    {
+      "sample_id": "g6_p49_good_party_list_answer_advances",
+      "page_uid": "TB-G6S2Recycle2-P49",
+      "learner_inputs": [
+        "I'm going to bring some fruit and drinks."
+      ],
+      "expected_turn_label": "answer_question",
+      "expected_teaching_action": "confirm",
+      "expected_retrieval_mode": "none",
+      "expected_evaluation": "correct",
+      "required_response_phrases": [],
+      "expected_lesson_evidence_page_type": "phonics",
+      "expected_lesson_evidence_exact_block_uid": "TB-G6S2Recycle2-P49-D2",
+      "expected_lesson_brief_material_uids": [
+        "TB-G6S2Recycle2-P49",
+        "TB-G6S2Recycle2-P49-D2"
+      ],
+      "required_lesson_brief_phrases": [
+        "A concrete party-list item",
+        "Group words based on consonant blends"
+      ],
+      "expected_lesson_brief_answer_scope_phrases": [
+        "cake",
+        "Group words based on consonant blends"
+      ],
+      "expected_teaching_move_signal": "good_answer",
+      "expected_teaching_move": "confirm_and_advance",
+      "expected_state_current_block_uid": "TB-G6S2Recycle2-P49-D2",
+      "expected_state_awaiting_answer": true,
+      "expected_airi_speech_style": "normal",
+      "expected_airi_motion": "Nod"
+    }
+  ]
+}

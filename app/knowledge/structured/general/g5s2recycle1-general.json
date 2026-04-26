@@ -1,0 +1,904 @@
+{
+  "pilot_id": "g5s2recycle1-general-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S2",
+    "unit": "Recycle1",
+    "pages": [
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/02.五年级下册语料.js",
+    "app/knowledge/raw/06.五年级下册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 5 · Volume 2), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 5 · Volume 2), People's Education Press (PEP)",
+    "page_count": 4,
+    "block_count": 9,
+    "source_kind": "textbook_source_js",
+    "source_format": "js"
+  },
+  "wordlist_entries": [],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S2Recycle1-P32-D1-goal",
+      "block_uid": "TB-G5S2Recycle1-P32-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2Recycle1-P32-D2-goal",
+      "block_uid": "TB-G5S2Recycle1-P32-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2Recycle1-P33-D1-goal",
+      "block_uid": "TB-G5S2Recycle1-P33-D1",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2Recycle1-P33-D2-goal",
+      "block_uid": "TB-G5S2Recycle1-P33-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2Recycle1-P34-D1-goal",
+      "block_uid": "TB-G5S2Recycle1-P34-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2Recycle1-P34-D2-goal",
+      "block_uid": "TB-G5S2Recycle1-P34-D2",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2Recycle1-P34-D3-goal",
+      "block_uid": "TB-G5S2Recycle1-P34-D3",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2Recycle1-P35-D1-goal",
+      "block_uid": "TB-G5S2Recycle1-P35-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S2Recycle1-P35-D2-goal",
+      "block_uid": "TB-G5S2Recycle1-P35-D2",
+      "category": "practice_match",
+      "text": "Work on the practice match activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-2-00-p-m-eat-lunch",
+      "atom_type": "word",
+      "text": "2:00 p.m. eat lunch",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-5-00-p-m-eat-dinner",
+      "atom_type": "word",
+      "text": "5:00 p.m. eat dinner",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-6-00-p-m-go-to-work",
+      "atom_type": "word",
+      "text": "6:00 p.m. go to work",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-8-00-a-m-eat-breakfast",
+      "atom_type": "word",
+      "text": "8:00 a.m. eat breakfast",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-9-00-a-m-go-to-bed",
+      "atom_type": "word",
+      "text": "9:00 a.m. go to bed",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-go-on-a-picnic",
+      "atom_type": "word",
+      "text": "go on a picnic",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P32-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-go-shopping",
+      "atom_type": "word",
+      "text": "go shopping",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P32-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-go-swimming",
+      "atom_type": "word",
+      "text": "go swimming",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P32-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pick-apples",
+      "atom_type": "word",
+      "text": "pick apples",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P32-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-play-basketball",
+      "atom_type": "word",
+      "text": "play basketball",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P32-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-and-does-it-not-seem-hard-to-you-when-all-the-sky-is-clear-and-blue",
+      "atom_type": "sentence_pattern",
+      "text": "And does it not seem hard to you,\nWhen all the sky is clear and blue,",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-are-you-free-this",
+      "atom_type": "sentence_pattern",
+      "text": "Are you free this...?",
+      "gloss": "你这...有空吗？",
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P32-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-at",
+      "atom_type": "sentence_pattern",
+      "text": "At ...",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P33-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-bed-in-summer-by-robert-louis-stevenson",
+      "atom_type": "sentence_pattern",
+      "text": "Bed in Summer\nby Robert Louis Stevenson",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-you-write-more-words",
+      "atom_type": "sentence_pattern",
+      "text": "Can you write more words?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P35-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-work-at-night",
+      "atom_type": "sentence_pattern",
+      "text": "Do you work at night?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hello",
+      "atom_type": "sentence_pattern",
+      "text": "Hello.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P32-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hi-oliver-this-is-wu-binbin-are-you-free-this",
+      "atom_type": "sentence_pattern",
+      "text": "Hi, Oliver. This is Wu Binbin. Are you free this ...?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P32-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hi-sarah-it-is-autumn-in-april-here-in-sydney-autumn-is-my-favourite-season-it-is-warm-in-the-day-and-cool-at-night-many-people-visit-us-in-autumn-because-they-like-the-weather-when-you-come-you-can-visit-the-sydney-opera-house-it-is-the-most-famous-building-in-australia-what-is-the-weather-like-in-april-in-your-city-what-do-you-often-do-all-the-best-stella",
+      "atom_type": "sentence_pattern",
+      "text": "Hi, Sarah!\nIt is autumn in April here in Sydney. Autumn is my favourite season! It is warm in the day and cool at night. Many people visit us in autumn because they like the weather.\nWhen you come, you can visit the Sydney Opera House. It is the most famous building in Australia.\nWhat is the weather like in April in your city?\nWhat do you often do?\nAll the best,\nStella",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P34-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-have-to-go-to-bed-and-see-the-birds-still-hopping-on-the-tree",
+      "atom_type": "sentence_pattern",
+      "text": "I have to go to bed and see\nThe birds still hopping on the tree,",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-usually-get-up-at-6-00-a-m",
+      "atom_type": "sentence_pattern",
+      "text": "I usually get up at 6:00 a.m.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P33-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-in-summer-quite-the-other-way-i-have-to-go-to-bed-by-day",
+      "atom_type": "sentence_pattern",
+      "text": "In summer, quite the other way,\nI have to go to bed by day.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-in-winter-i-get-up-at-night-and-dress-by-yellow-candlelight",
+      "atom_type": "sentence_pattern",
+      "text": "In winter I get up at night\nAnd dress by yellow candlelight.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-is-saturday-morning-sarah-is-calling-her-friends-listen-and-write-the-names",
+      "atom_type": "sentence_pattern",
+      "text": "It is Saturday morning. Sarah is calling her friends. Listen and write the names.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P32-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-now-can-you-answer-the-email-for-sarah-please",
+      "atom_type": "sentence_pattern",
+      "text": "Now can you answer the email for Sarah, please?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P34-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-or-hear-the-grown-up-people-s-feet-still-going-past-me-in-the-street",
+      "atom_type": "sentence_pattern",
+      "text": "Or hear the grown-up people's feet\nStill going past me in the street.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P35-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-making-plans-over-the-phone",
+      "atom_type": "sentence_pattern",
+      "text": "Practice making plans over the phone.",
+      "gloss": "练习通过电话制定计划。",
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P32-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-and-answer",
+      "atom_type": "sentence_pattern",
+      "text": "Read and answer.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P34-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-do-you-cook-breakfast",
+      "atom_type": "sentence_pattern",
+      "text": "When do you cook breakfast?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P33-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-do-you-eat-dinner",
+      "atom_type": "sentence_pattern",
+      "text": "When do you eat dinner?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-do-you-get-up-mum",
+      "atom_type": "sentence_pattern",
+      "text": "When do you get up, Mum?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P33-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-do-you-go-to-bed-then",
+      "atom_type": "sentence_pattern",
+      "text": "When do you go to bed, then?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-when-do-you-go-to-work",
+      "atom_type": "sentence_pattern",
+      "text": "When do you go to work?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wow-when-do-you-eat-lunch",
+      "atom_type": "sentence_pattern",
+      "text": "Wow! When do you eat lunch?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P33-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-i-m-a-doctor-i-often-work-at-night",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, I'm a doctor. I often work at night.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S2Recycle1-P33-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S2Recycle1-P32",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Recycle 1 - Sarah's weekend. 一个角色扮演活动，鼓励学生打电话给朋友，商量和计划周末的活动。页面提供了对话开场白和活动建议词库。",
+      "entry_probe_questions": [
+        "Do you know the word go shopping?",
+        "Can you say: Practice making plans over the phone."
+      ],
+      "priority_blocks": [
+        "TB-G5S2Recycle1-P32-D2",
+        "TB-G5S2Recycle1-P32-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2Recycle1-P33",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Recycle 1 - Daily Timetables. 一个角色扮演活动。学生需要先调查并填写自己父母的时间表，然后和同伴一起，模拟孩子和机器人询问父母作息时间的场景。",
+      "entry_probe_questions": [
+        "Can you say: When do you get up, Mum?"
+      ],
+      "priority_blocks": [
+        "TB-G5S2Recycle1-P33-D2",
+        "TB-G5S2Recycle1-P33-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2Recycle1-P34",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Recycle 1 - Seasons and Weather. 莎拉计划四月去悉尼旅行，她向朋友斯特拉询问天气情况。这是斯特拉的回信，信中解释了悉尼四月是秋天，并描述了天气和推荐的景点。",
+      "entry_probe_questions": [
+        "Can you say: Hi, Sarah!\nIt is autumn in April here in Sydney. Autumn is my favourite season! It is warm in the day and cool at night. Many people visit us in autumn because they like the weather.\nWhen you come, you can visit the Sydney Opera House. It is the most famous building in Australia.\nWhat is the weather like in April in your city?\nWhat do you often do?\nAll the best,\nStella"
+      ],
+      "priority_blocks": [
+        "TB-G5S2Recycle1-P34-D1",
+        "TB-G5S2Recycle1-P34-D2",
+        "TB-G5S2Recycle1-P34-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S2Recycle1-P35",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Recycle 1 - Poetry Reading. 莎拉正在读一首罗伯特·路易斯·史蒂文森的诗《夏日入眠》。这首诗描绘了孩子在冬夜起床和夏日白天上床睡觉的不同体验，表达了夏天天长夜短、想多玩一会儿的心情。",
+      "entry_probe_questions": [
+        "Can you say: Bed in Summer\nby Robert Louis Stevenson"
+      ],
+      "priority_blocks": [
+        "TB-G5S2Recycle1-P35-D1",
+        "TB-G5S2Recycle1-P35-D2"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S2Recycle1-P32-D1",
+      "page_uid": "TB-G5S2Recycle1-P32",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2Recycle1-P32-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听一段莎拉打电话给朋友们的录音，根据对话内容，将朋友的名字填写到对应的活动图片上。 Key patterns: It is Saturday morning. Sarah is calling her friends. Listen and write the names.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "It is Saturday morning. Sarah is calling her friends. Listen and write the names."
+      ],
+      "allowed_answer_scope": [
+        "Sarah",
+        "Chen Jie",
+        "John",
+        "Zhang Peng"
+      ],
+      "entry_probe_questions": [
+        "Can you say: It is Saturday morning. Sarah is calling her friends. Listen and write the names."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2Recycle1-P32-D1-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 1 - Sarah's weekend",
+        "Sarah's weekend"
+      ],
+      "return_anchors": [
+        "It is Saturday morning. Sarah is calling her friends. Listen and write the names."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2Recycle1-P32-D2",
+      "page_uid": "TB-G5S2Recycle1-P32",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S2Recycle1-P32-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "一个角色扮演活动，鼓励学生打电话给朋友，商量和计划周末的活动。页面提供了对话开场白和活动建议词库。 Key patterns: Practice making plans over the phone.; Are you free this...?",
+      "focus_vocabulary": [
+        "go shopping",
+        "play basketball",
+        "go swimming",
+        "go on a picnic",
+        "pick apples"
+      ],
+      "core_patterns": [
+        "Practice making plans over the phone.",
+        "Are you free this...?",
+        "Hi, Oliver. This is Wu Binbin. Are you free this ...?",
+        "Hello."
+      ],
+      "allowed_answer_scope": [
+        "Hello.",
+        "..."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word go shopping?",
+        "Can you say: Practice making plans over the phone."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2Recycle1-P32-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2Recycle1-P32-D2-goal"
+      ],
+      "branchable_topics": [
+        "go shopping",
+        "play basketball",
+        "go swimming",
+        "go on a picnic",
+        "pick apples",
+        "Recycle 1 - Sarah's weekend",
+        "Call your friends and plan your weekend."
+      ],
+      "return_anchors": [
+        "Practice making plans over the phone.",
+        "Are you free this...?",
+        "Hi, Oliver. This is Wu Binbin. Are you free this ...?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2Recycle1-P33-D1",
+      "page_uid": "TB-G5S2Recycle1-P33",
+      "page_type": "dialogue",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G5S2Recycle1-P33-D1"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "机器人罗宾和莎拉的爸爸在周日早上对话。学生需要根据旁边提示的时间表，阅读对话并补全莎拉爸爸的回答。 Key patterns: Do you work at night?; When do you go to bed, then?",
+      "focus_vocabulary": [
+        "6:00 p.m. go to work",
+        "8:00 a.m. eat breakfast",
+        "9:00 a.m. go to bed",
+        "2:00 p.m. eat lunch",
+        "5:00 p.m. eat dinner"
+      ],
+      "core_patterns": [
+        "Do you work at night?",
+        "When do you go to bed, then?",
+        "Wow! When do you eat lunch?",
+        "When do you eat dinner?",
+        "When do you go to work?",
+        "Yes, I'm a doctor. I often work at night."
+      ],
+      "allowed_answer_scope": [
+        "At 9:00 a.m.",
+        "At 2:00 p.m.",
+        "At 5:00 p.m.",
+        "At 6:00 p.m."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word 6:00 p.m. go to work?",
+        "Can you say: Do you work at night?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2Recycle1-P33-D1-goal"
+      ],
+      "branchable_topics": [
+        "6:00 p.m. go to work",
+        "8:00 a.m. eat breakfast",
+        "9:00 a.m. go to bed",
+        "2:00 p.m. eat lunch",
+        "5:00 p.m. eat dinner",
+        "Recycle 1 - Daily Timetables",
+        "Recycle 1"
+      ],
+      "return_anchors": [
+        "Do you work at night?",
+        "When do you go to bed, then?",
+        "Wow! When do you eat lunch?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2Recycle1-P33-D2",
+      "page_uid": "TB-G5S2Recycle1-P33",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S2Recycle1-P33-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "一个角色扮演活动。学生需要先调查并填写自己父母的时间表，然后和同伴一起，模拟孩子和机器人询问父母作息时间的场景。 Key patterns: When do you get up, Mum?; When do you cook breakfast?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "When do you get up, Mum?",
+        "When do you cook breakfast?",
+        "I usually get up at 6:00 a.m.",
+        "At ..."
+      ],
+      "allowed_answer_scope": [
+        "I usually get up at 6:00 a.m.",
+        "At ..."
+      ],
+      "entry_probe_questions": [
+        "Can you say: When do you get up, Mum?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2Recycle1-P33-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2Recycle1-P33-D2-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 1 - Daily Timetables",
+        "Find out your parents' timetables and role-play with your partner."
+      ],
+      "return_anchors": [
+        "When do you get up, Mum?",
+        "When do you cook breakfast?",
+        "I usually get up at 6:00 a.m."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2Recycle1-P34-D1",
+      "page_uid": "TB-G5S2Recycle1-P34",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S2Recycle1-P34-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "莎拉计划四月去悉尼旅行，她向朋友斯特拉询问天气情况。这是斯特拉的回信，信中解释了悉尼四月是秋天，并描述了天气和推荐的景点。 Key patterns: Hi, Sarah!\nIt is autumn in April here in Sydney. Autumn is my favourite season! It is warm in the day and cool at night. Many people visit us in autumn because they like the weather.\nWhen you come, you can visit the Sydney Opera House. It is the most famous building in Australia.\nWhat is the weather like in April in your city?\nWhat do you often do?\nAll the best,\nStella",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Hi, Sarah!\nIt is autumn in April here in Sydney. Autumn is my favourite season! It is warm in the day and cool at night. Many people visit us in autumn because they like the weather.\nWhen you come, you can visit the Sydney Opera House. It is the most famous building in Australia.\nWhat is the weather like in April in your city?\nWhat do you often do?\nAll the best,\nStella"
+      ],
+      "allowed_answer_scope": [
+        "Hi, Sarah!\nIt is autumn in April here in Sydney. Autumn is my favourite season! It is warm in the day and cool at night. Many people visit us in autumn because they like the weather.\nWhen you come, you can visit the Sydney Opera House. It is the most famous building in Australia.\nWhat is the weather like in April in your city?\nWhat do you often do?\nAll the best,\nStella"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Hi, Sarah!\nIt is autumn in April here in Sydney. Autumn is my favourite season! It is warm in the day and cool at night. Many people visit us in autumn because they like the weather.\nWhen you come, you can visit the Sydney Opera House. It is the most famous building in Australia.\nWhat is the weather like in April in your city?\nWhat do you often do?\nAll the best,\nStella"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S2Recycle1-P34-D2",
+        "TB-G5S2Recycle1-P34-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2Recycle1-P34-D1-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 1 - Seasons and Weather",
+        "Recycle 1"
+      ],
+      "return_anchors": [
+        "Hi, Sarah!\nIt is autumn in April here in Sydney. Autumn is my favourite season! It is warm in the day and cool at night. Many people visit us in autumn because they like the weather.\nWhen you come, you can visit the Sydney Opera House. It is the most famous building in Australia.\nWhat is the weather like in April in your city?\nWhat do you often do?\nAll the best,\nStella"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2Recycle1-P34-D2",
+      "page_uid": "TB-G5S2Recycle1-P34",
+      "page_type": "reading",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S2Recycle1-P34-D2"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "根据斯特拉的邮件内容，回答两个关于悉尼四月天气和季节的问题。 Key patterns: Read and answer.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Read and answer."
+      ],
+      "allowed_answer_scope": [
+        "No, it isn't. It is autumn.",
+        "It is warm in the day and cool at night."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Read and answer."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [
+        "TB-G5S2Recycle1-P34-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2Recycle1-P34-D2-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 1 - Seasons and Weather",
+        "Read and answer."
+      ],
+      "return_anchors": [
+        "Read and answer."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2Recycle1-P34-D3",
+      "page_uid": "TB-G5S2Recycle1-P34",
+      "page_type": "reading",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G5S2Recycle1-P34-D3"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "一项写作任务，要求学生扮演莎拉，回复斯特拉的邮件。邮件模板已经给出，学生需要根据旁边的提示（春季天气如何？你通常做什么？）来补充邮件内容。 Key patterns: Now can you answer the email for Sarah, please?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Now can you answer the email for Sarah, please?"
+      ],
+      "allowed_answer_scope": [
+        "Now can you answer the email for Sarah, please?"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Now can you answer the email for Sarah, please?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2Recycle1-P34-D3-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 1 - Seasons and Weather",
+        "Now can you answer the email for Sarah, please?"
+      ],
+      "return_anchors": [
+        "Now can you answer the email for Sarah, please?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2Recycle1-P35-D1",
+      "page_uid": "TB-G5S2Recycle1-P35",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S2Recycle1-P35-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "莎拉正在读一首罗伯特·路易斯·史蒂文森的诗《夏日入眠》。这首诗描绘了孩子在冬夜起床和夏日白天上床睡觉的不同体验，表达了夏天天长夜短、想多玩一会儿的心情。 Key patterns: Bed in Summer\nby Robert Louis Stevenson; In winter I get up at night\nAnd dress by yellow candlelight.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Bed in Summer\nby Robert Louis Stevenson",
+        "In winter I get up at night\nAnd dress by yellow candlelight.",
+        "In summer, quite the other way,\nI have to go to bed by day.",
+        "I have to go to bed and see\nThe birds still hopping on the tree,",
+        "Or hear the grown-up people's feet\nStill going past me in the street.",
+        "And does it not seem hard to you,\nWhen all the sky is clear and blue,"
+      ],
+      "allowed_answer_scope": [
+        "Bed in Summer\nby Robert Louis Stevenson",
+        "In winter I get up at night\nAnd dress by yellow candlelight.",
+        "In summer, quite the other way,\nI have to go to bed by day.",
+        "I have to go to bed and see\nThe birds still hopping on the tree,"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Bed in Summer\nby Robert Louis Stevenson"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S2Recycle1-P35-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2Recycle1-P35-D1-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 1 - Poetry Reading",
+        "Recycle 1"
+      ],
+      "return_anchors": [
+        "Bed in Summer\nby Robert Louis Stevenson",
+        "In winter I get up at night\nAnd dress by yellow candlelight.",
+        "In summer, quite the other way,\nI have to go to bed by day."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2Recycle1-P35-D2",
+      "page_uid": "TB-G5S2Recycle1-P35",
+      "page_type": "reading",
+      "block_type": "practice_match",
+      "source_refs": [
+        "TB-G5S2Recycle1-P35-D2"
+      ],
+      "teaching_goal": "Work on the practice match activity.",
+      "teaching_summary": "一个语音辨析和拼写练习。学生需要在诗中找出与表格中单词押韵或发音相似的词。 Key patterns: Can you write more words?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Can you write more words?"
+      ],
+      "allowed_answer_scope": [
+        "seem/green",
+        "tree/see",
+        "seem/clean",
+        "feet"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Can you write more words?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2Recycle1-P35-D2-goal"
+      ],
+      "branchable_topics": [
+        "Recycle 1 - Poetry Reading",
+        "Find \"friends\" in the poem for the words below."
+      ],
+      "return_anchors": [
+        "Can you write more words?"
+      ]
+    }
+  ]
+}

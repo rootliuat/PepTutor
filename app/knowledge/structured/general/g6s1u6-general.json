@@ -1,0 +1,3011 @@
+{
+  "pilot_id": "g6s1u6-general-v1",
+  "scope": {
+    "grade": "G6",
+    "semester": "S1",
+    "unit": "U6",
+    "pages": [
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/03.六年级上册语料.json",
+    "app/knowledge/raw/07.六年级上册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 6 · Volume 1), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 6 · Volume 1), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 22,
+    "source_kind": "textbook_source_json",
+    "source_format": "json"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 6",
+      "word": "angry",
+      "phonetic": "/'æŋɡri/",
+      "chinese": "生气的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P58-D2",
+        "TB-G6S1U6-P59-D1",
+        "TB-G6S1U6-P59-D2",
+        "TB-G6S1U6-P60-D4",
+        "TB-G6S1U6-P61-D2",
+        "TB-G6S1U6-P62-D1",
+        "TB-G6S1U6-P64-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "afraid",
+      "phonetic": "/ə'freɪd/",
+      "chinese": "害怕",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U6-P58-D2",
+        "TB-G6S1U6-P59-D1",
+        "TB-G6S1U6-P59-D2",
+        "TB-G6S1U6-P62-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "sad",
+      "phonetic": "/sæd/",
+      "chinese": "难过的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U6-P59-D1",
+        "TB-G6S1U6-P60-D2",
+        "TB-G6S1U6-P62-D1",
+        "TB-G6S1U6-P64-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "worried",
+      "phonetic": "/'wʌrid/",
+      "chinese": "担心的；发愁的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U6-P59-D1",
+        "TB-G6S1U6-P59-D2",
+        "TB-G6S1U6-P61-D2",
+        "TB-G6S1U6-P64-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "happy",
+      "phonetic": "/'hæpi/",
+      "chinese": "高兴的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U6-P56-D1",
+        "TB-G6S1U6-P59-D1",
+        "TB-G6S1U6-P59-D2",
+        "TB-G6S1U6-P62-D1",
+        "TB-G6S1U6-P64-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "see a doctor",
+      "chinese": "看病",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P61-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "wear",
+      "phonetic": "/weə(r)/",
+      "chinese": "穿",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U6-P61-D1",
+        "TB-G6S1U6-P64-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "more",
+      "phonetic": "/mɔː(r)/",
+      "chinese": "更多的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U6-P61-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "deep",
+      "phonetic": "/diːp/",
+      "chinese": "深的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P60-D4",
+        "TB-G6S1U6-P61-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "breath",
+      "phonetic": "/breθ/",
+      "chinese": "呼吸",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P60-D4",
+        "TB-G6S1U6-P61-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "take a deep breath",
+      "chinese": "深呼吸一口气",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P60-D4",
+        "TB-G6S1U6-P61-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "count",
+      "phonetic": "/kaʊnt/",
+      "chinese": "数数",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P61-D1",
+        "TB-G6S1U6-P63-D4",
+        "TB-G6S1U6-P64-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "count to ten",
+      "chinese": "数到十",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P61-D1",
+        "TB-G6S1U6-P64-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "chase",
+      "phonetic": "/tʃeɪs/",
+      "chinese": "追赶",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U6-P58-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "mice",
+      "phonetic": "/maɪs/",
+      "chinese": "（mouse的复数）老鼠",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U6-P58-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "bad",
+      "phonetic": "/bæd/",
+      "chinese": "邪恶的；坏的",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U6-P58-D2",
+        "TB-G6S1U6-P64-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "hurt",
+      "phonetic": "/hɜːt/",
+      "chinese": "（使）受伤",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U6-P58-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "ill",
+      "phonetic": "/ɪl/",
+      "chinese": "有病；不舒服",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P58-D3",
+        "TB-G6S1U6-P59-D1",
+        "TB-G6S1U6-P60-D2",
+        "TB-G6S1U6-P61-D2",
+        "TB-G6S1U6-P64-D1",
+        "TB-G6S1U6-P64-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "wrong",
+      "phonetic": "/rɒŋ/",
+      "chinese": "有毛病",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U6-P60-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "should",
+      "phonetic": "/ʃəd; ʃʊd/",
+      "chinese": "应该",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "feel",
+      "phonetic": "/fiːl/",
+      "chinese": "觉得；感到",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U6-P58-D3"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "well",
+      "phonetic": "/wel/",
+      "chinese": "健康；身体好",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U6-P60-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "sit",
+      "phonetic": "/sɪt/",
+      "chinese": "坐",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U6-P62-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "grass",
+      "phonetic": "/ɡrɑːs/",
+      "chinese": "草坪",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "hear",
+      "phonetic": "/hɪə(r)/",
+      "chinese": "听见",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "ant",
+      "phonetic": "/ænt/",
+      "chinese": "蚂蚁",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U6-P62-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "worry",
+      "phonetic": "/'wʌri/",
+      "chinese": "担心；担忧",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U6-P62-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "stuck",
+      "phonetic": "/stʌk/",
+      "chinese": "陷住；无法移动",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U6-P62-D2",
+        "TB-G6S1U6-P63-D3"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "mud",
+      "phonetic": "/mʌd/",
+      "chinese": "泥",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U6-P62-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "pull",
+      "phonetic": "/pʊl/",
+      "chinese": "拉；拽",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U6-P62-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "everyone",
+      "phonetic": "/'evriwʌn/",
+      "chinese": "每人",
+      "emphasized": false,
+      "linked_block_uids": []
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G6S1U6-P56-D1-goal",
+      "block_uid": "TB-G6S1U6-P56-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P57-D1-goal",
+      "block_uid": "TB-G6S1U6-P57-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P58-D1-goal",
+      "block_uid": "TB-G6S1U6-P58-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P58-D2-goal",
+      "block_uid": "TB-G6S1U6-P58-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P58-D3-goal",
+      "block_uid": "TB-G6S1U6-P58-D3",
+      "category": "practice_speaking",
+      "text": "Work on the practice speaking activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P59-D1-goal",
+      "block_uid": "TB-G6S1U6-P59-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P59-D2-goal",
+      "block_uid": "TB-G6S1U6-P59-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P60-D1-goal",
+      "block_uid": "TB-G6S1U6-P60-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P60-D2-goal",
+      "block_uid": "TB-G6S1U6-P60-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P60-D3-goal",
+      "block_uid": "TB-G6S1U6-P60-D3",
+      "category": "practice_speaking",
+      "text": "Work on the practice speaking activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P60-D4-goal",
+      "block_uid": "TB-G6S1U6-P60-D4",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P61-D1-goal",
+      "block_uid": "TB-G6S1U6-P61-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P61-D2-goal",
+      "block_uid": "TB-G6S1U6-P61-D2",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P62-D1-goal",
+      "block_uid": "TB-G6S1U6-P62-D1",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P62-D2-goal",
+      "block_uid": "TB-G6S1U6-P62-D2",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P63-D1-goal",
+      "block_uid": "TB-G6S1U6-P63-D1",
+      "category": "practice_multiple_choice",
+      "text": "Work on the practice multiple choice activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P63-D2-goal",
+      "block_uid": "TB-G6S1U6-P63-D2",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P63-D3-goal",
+      "block_uid": "TB-G6S1U6-P63-D3",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P63-D4-goal",
+      "block_uid": "TB-G6S1U6-P63-D4",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P64-D1-goal",
+      "block_uid": "TB-G6S1U6-P64-D1",
+      "category": "assessment_quiz",
+      "text": "Check whether the learner can complete the unit review task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P64-D2-goal",
+      "block_uid": "TB-G6S1U6-P64-D2",
+      "category": "summary_wrap_up",
+      "text": "Review and consolidate the core language point.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U6-P65-D1-goal",
+      "block_uid": "TB-G6S1U6-P65-D1",
+      "category": "story_time",
+      "text": "Read and retell the key story events.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-afraid",
+      "atom_type": "word",
+      "text": "afraid",
+      "gloss": "害怕",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D2",
+        "TB-G6S1U6-P59-D1",
+        "TB-G6S1U6-P59-D2",
+        "TB-G6S1U6-P62-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-angry",
+      "atom_type": "word",
+      "text": "angry",
+      "gloss": "生气的",
+      "linked_blocks": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P58-D2",
+        "TB-G6S1U6-P59-D1",
+        "TB-G6S1U6-P59-D2",
+        "TB-G6S1U6-P60-D4",
+        "TB-G6S1U6-P61-D2",
+        "TB-G6S1U6-P62-D1",
+        "TB-G6S1U6-P64-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-ant",
+      "atom_type": "word",
+      "text": "ant",
+      "gloss": "蚂蚁",
+      "linked_blocks": [
+        "TB-G6S1U6-P62-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-bad",
+      "atom_type": "word",
+      "text": "bad",
+      "gloss": "邪恶的；坏的",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D2",
+        "TB-G6S1U6-P64-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-breath",
+      "atom_type": "word",
+      "text": "breath",
+      "gloss": "呼吸",
+      "linked_blocks": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P60-D4",
+        "TB-G6S1U6-P61-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-can-t-go",
+      "atom_type": "word",
+      "text": "can't go",
+      "gloss": "不能去",
+      "linked_blocks": [
+        "TB-G6S1U6-P63-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-cartoon",
+      "atom_type": "word",
+      "text": "cartoon",
+      "gloss": "动画片",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-chase",
+      "atom_type": "word",
+      "text": "chase",
+      "gloss": "追赶",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-check",
+      "atom_type": "word",
+      "text": "check",
+      "gloss": "检查",
+      "linked_blocks": [
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-cold",
+      "atom_type": "word",
+      "text": "cold",
+      "gloss": "寒冷的",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D1",
+        "TB-G6S1U6-P61-D2",
+        "TB-G6S1U6-P64-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-count",
+      "atom_type": "word",
+      "text": "count",
+      "gloss": "数数",
+      "linked_blocks": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P61-D1",
+        "TB-G6S1U6-P63-D4",
+        "TB-G6S1U6-P64-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-count-to",
+      "atom_type": "word",
+      "text": "count to",
+      "gloss": "数到",
+      "linked_blocks": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P61-D1",
+        "TB-G6S1U6-P63-D4",
+        "TB-G6S1U6-P64-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-count-to-ten",
+      "atom_type": "word",
+      "text": "count to ten",
+      "gloss": "数到十",
+      "linked_blocks": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P61-D1",
+        "TB-G6S1U6-P64-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-deep",
+      "atom_type": "word",
+      "text": "deep",
+      "gloss": "深的",
+      "linked_blocks": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P60-D4",
+        "TB-G6S1U6-P61-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-do-more-exercise",
+      "atom_type": "word",
+      "text": "do more exercise",
+      "gloss": "做更多运动",
+      "linked_blocks": [
+        "TB-G6S1U6-P61-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-don-t-be",
+      "atom_type": "word",
+      "text": "don't be",
+      "gloss": "不要",
+      "linked_blocks": [
+        "TB-G6S1U6-P63-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-drink",
+      "atom_type": "word",
+      "text": "drink",
+      "gloss": "饮料",
+      "linked_blocks": [
+        "TB-G6S1U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-everyone",
+      "atom_type": "word",
+      "text": "everyone",
+      "gloss": "每人",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-feel",
+      "atom_type": "word",
+      "text": "feel",
+      "gloss": "觉得；感到",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-gift",
+      "atom_type": "word",
+      "text": "gift",
+      "gloss": "礼物",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-grass",
+      "atom_type": "word",
+      "text": "grass",
+      "gloss": "草坪",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-happy",
+      "atom_type": "word",
+      "text": "happy",
+      "gloss": "高兴的",
+      "linked_blocks": [
+        "TB-G6S1U6-P56-D1",
+        "TB-G6S1U6-P59-D1",
+        "TB-G6S1U6-P59-D2",
+        "TB-G6S1U6-P62-D1",
+        "TB-G6S1U6-P64-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hear",
+      "atom_type": "word",
+      "text": "hear",
+      "gloss": "听见",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-hospital",
+      "atom_type": "word",
+      "text": "hospital",
+      "gloss": "医院",
+      "linked_blocks": [
+        "TB-G6S1U6-P60-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-hungry",
+      "atom_type": "word",
+      "text": "hungry",
+      "gloss": "饿的",
+      "linked_blocks": [
+        "TB-G6S1U6-P64-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-hurt",
+      "atom_type": "word",
+      "text": "hurt",
+      "gloss": "（使）受伤",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-ill",
+      "atom_type": "word",
+      "text": "ill",
+      "gloss": "有病；不舒服",
+      "linked_blocks": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P58-D3",
+        "TB-G6S1U6-P59-D1",
+        "TB-G6S1U6-P60-D2",
+        "TB-G6S1U6-P61-D2",
+        "TB-G6S1U6-P64-D1",
+        "TB-G6S1U6-P64-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-mice",
+      "atom_type": "word",
+      "text": "mice",
+      "gloss": "（mouse的复数）老鼠",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-more",
+      "atom_type": "word",
+      "text": "more",
+      "gloss": "更多的",
+      "linked_blocks": [
+        "TB-G6S1U6-P61-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-mud",
+      "atom_type": "word",
+      "text": "mud",
+      "gloss": "泥",
+      "linked_blocks": [
+        "TB-G6S1U6-P62-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-next-day",
+      "atom_type": "word",
+      "text": "next day",
+      "gloss": "第二天",
+      "linked_blocks": [
+        "TB-G6S1U6-P63-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-outside",
+      "atom_type": "word",
+      "text": "outside",
+      "gloss": "在外面",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-police-officer",
+      "atom_type": "word",
+      "text": "police officer",
+      "gloss": "警察",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-popcorn",
+      "atom_type": "word",
+      "text": "popcorn",
+      "gloss": "爆米花",
+      "linked_blocks": [
+        "TB-G6S1U6-P56-D1",
+        "TB-G6S1U6-P58-D3",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pull",
+      "atom_type": "word",
+      "text": "pull",
+      "gloss": "拉；拽",
+      "linked_blocks": [
+        "TB-G6S1U6-P62-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-sad",
+      "atom_type": "word",
+      "text": "sad",
+      "gloss": "难过的",
+      "linked_blocks": [
+        "TB-G6S1U6-P59-D1",
+        "TB-G6S1U6-P60-D2",
+        "TB-G6S1U6-P62-D1",
+        "TB-G6S1U6-P64-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-see-a-doctor",
+      "atom_type": "word",
+      "text": "see a doctor",
+      "gloss": "看病",
+      "linked_blocks": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P61-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-share",
+      "atom_type": "word",
+      "text": "share",
+      "gloss": "分享",
+      "linked_blocks": [
+        "TB-G6S1U6-P56-D1",
+        "TB-G6S1U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-should",
+      "atom_type": "word",
+      "text": "should",
+      "gloss": "应该",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-sit",
+      "atom_type": "word",
+      "text": "sit",
+      "gloss": "坐",
+      "linked_blocks": [
+        "TB-G6S1U6-P62-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-sit-on",
+      "atom_type": "word",
+      "text": "sit on",
+      "gloss": "坐在……上面",
+      "linked_blocks": [
+        "TB-G6S1U6-P62-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-sorry",
+      "atom_type": "word",
+      "text": "sorry",
+      "gloss": "抱歉的；难过的",
+      "linked_blocks": [
+        "TB-G6S1U6-P64-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-strong",
+      "atom_type": "word",
+      "text": "strong",
+      "gloss": "强壮的",
+      "linked_blocks": [
+        "TB-G6S1U6-P63-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-stuck",
+      "atom_type": "word",
+      "text": "stuck",
+      "gloss": "陷住；无法移动",
+      "linked_blocks": [
+        "TB-G6S1U6-P62-D2",
+        "TB-G6S1U6-P63-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-take-a-deep-breath",
+      "atom_type": "word",
+      "text": "take a deep breath",
+      "gloss": "深呼吸一口气",
+      "linked_blocks": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P60-D4",
+        "TB-G6S1U6-P61-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-tv-show",
+      "atom_type": "word",
+      "text": "TV show",
+      "gloss": "电视节目",
+      "linked_blocks": [
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-warm",
+      "atom_type": "word",
+      "text": "warm",
+      "gloss": "暖和的",
+      "linked_blocks": [
+        "TB-G6S1U6-P61-D1",
+        "TB-G6S1U6-P64-D1",
+        "TB-G6S1U6-P64-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-wear",
+      "atom_type": "word",
+      "text": "wear",
+      "gloss": "穿",
+      "linked_blocks": [
+        "TB-G6S1U6-P61-D1",
+        "TB-G6S1U6-P64-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-wear-warm-clothes",
+      "atom_type": "word",
+      "text": "wear warm clothes",
+      "gloss": "穿暖和的衣服",
+      "linked_blocks": [
+        "TB-G6S1U6-P61-D1",
+        "TB-G6S1U6-P64-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-well",
+      "atom_type": "word",
+      "text": "well",
+      "gloss": "健康；身体好",
+      "linked_blocks": [
+        "TB-G6S1U6-P60-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-worried",
+      "atom_type": "word",
+      "text": "worried",
+      "gloss": "担心的；发愁的",
+      "linked_blocks": [
+        "TB-G6S1U6-P59-D1",
+        "TB-G6S1U6-P59-D2",
+        "TB-G6S1U6-P61-D2",
+        "TB-G6S1U6-P64-D1",
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-worry",
+      "atom_type": "word",
+      "text": "worry",
+      "gloss": "担心；担忧",
+      "linked_blocks": [
+        "TB-G6S1U6-P62-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-wrong",
+      "atom_type": "word",
+      "text": "wrong",
+      "gloss": "有毛病",
+      "linked_blocks": [
+        "TB-G6S1U6-P60-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-after-that",
+      "atom_type": "sentence_pattern",
+      "text": "After that ...?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P57-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-answer-the-questions",
+      "atom_type": "sentence_pattern",
+      "text": "Answer the questions.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P60-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-because",
+      "atom_type": "sentence_pattern",
+      "text": "Because ...",
+      "gloss": "因为……",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-count-to-ten-and-take-a-deep-breath",
+      "atom_type": "sentence_pattern",
+      "text": "Count to ten and take a deep breath.",
+      "gloss": "数到十，深呼吸。",
+      "linked_blocks": [
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-don-t-be-angry",
+      "atom_type": "sentence_pattern",
+      "text": "Don't be angry!",
+      "gloss": "别生气！",
+      "linked_blocks": [
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-don-t-be-angry",
+      "atom_type": "sentence_pattern",
+      "text": "Don't be angry.",
+      "gloss": "别生气。",
+      "linked_blocks": [
+        "TB-G6S1U6-P60-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-don-t-be-sad",
+      "atom_type": "sentence_pattern",
+      "text": "Don't be sad.",
+      "gloss": "别难过。",
+      "linked_blocks": [
+        "TB-G6S1U6-P60-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-don-t-worry",
+      "atom_type": "sentence_pattern",
+      "text": "Don't worry.",
+      "gloss": "别担心。",
+      "linked_blocks": [
+        "TB-G6S1U6-P62-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-draw-faces-for-each-word",
+      "atom_type": "sentence_pattern",
+      "text": "Draw faces for each word.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P62-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-fill-in-the-blanks-and-retell-the-story",
+      "atom_type": "sentence_pattern",
+      "text": "Fill in the blanks and retell the story.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P63-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-is",
+      "atom_type": "sentence_pattern",
+      "text": "He is ...",
+      "gloss": "他是……",
+      "linked_blocks": [
+        "TB-G6S1U6-P59-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-is-stuck-in-the-mud",
+      "atom_type": "sentence_pattern",
+      "text": "He is stuck in the mud.",
+      "gloss": "他陷在泥里了。",
+      "linked_blocks": [
+        "TB-G6S1U6-P62-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-should-see-a-doctor",
+      "atom_type": "sentence_pattern",
+      "text": "He should see a doctor.",
+      "gloss": "他应该看医生。",
+      "linked_blocks": [
+        "TB-G6S1U6-P60-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-here-you-are-i-ll-go-and-get-some-drinks-wait-for-me",
+      "atom_type": "sentence_pattern",
+      "text": "Here you are. I'll go and get some drinks. Wait for me.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hey-let-s-have-some-popcorn",
+      "atom_type": "sentence_pattern",
+      "text": "Hey, let's have some popcorn.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hey-where-s-my-popcorn",
+      "atom_type": "sentence_pattern",
+      "text": "Hey, where's my popcorn?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-are-you-feeling-now",
+      "atom_type": "sentence_pattern",
+      "text": "How are you feeling now?",
+      "gloss": "你现在感觉怎么样？",
+      "linked_blocks": [
+        "TB-G6S1U6-P64-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-do-you-feel",
+      "atom_type": "sentence_pattern",
+      "text": "How do you feel?",
+      "gloss": "你感觉如何？",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-does-feel",
+      "atom_type": "sentence_pattern",
+      "text": "How does ... feel?",
+      "gloss": "……感觉怎么样？",
+      "linked_blocks": [
+        "TB-G6S1U6-P64-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-does-dad-feel-now",
+      "atom_type": "sentence_pattern",
+      "text": "How does Dad feel now?",
+      "gloss": "爸爸现在感觉怎么样？",
+      "linked_blocks": [
+        "TB-G6S1U6-P60-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-am",
+      "atom_type": "sentence_pattern",
+      "text": "I am ...",
+      "gloss": "我是……",
+      "linked_blocks": [
+        "TB-G6S1U6-P59-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-feel",
+      "atom_type": "sentence_pattern",
+      "text": "I feel ...",
+      "gloss": "我感觉……",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-a-little-worried-now",
+      "atom_type": "sentence_pattern",
+      "text": "I'm a little worried now.",
+      "gloss": "我现在有点担心。",
+      "linked_blocks": [
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-so-happy",
+      "atom_type": "sentence_pattern",
+      "text": "I'm so happy!",
+      "gloss": "我太高兴了！",
+      "linked_blocks": [
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-so-happy",
+      "atom_type": "sentence_pattern",
+      "text": "I'm so happy.",
+      "gloss": "我太高兴了。",
+      "linked_blocks": [
+        "TB-G6S1U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-if-i-feel-angry-what-should-i-do",
+      "atom_type": "sentence_pattern",
+      "text": "If I feel angry, what should I do?",
+      "gloss": "如果我感到生气，我该怎么做？",
+      "linked_blocks": [
+        "TB-G6S1U6-P57-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-about",
+      "atom_type": "sentence_pattern",
+      "text": "It's about ...",
+      "gloss": "它是关于……",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D1",
+        "TB-G6S1U6-P60-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-repeat-look-at-the-text-on-page-62-find-and-say-more-like-these",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and repeat. Look at the text on page 62. Find and say more like these.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P63-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-mum-i-feel-ill-should-i-count-to-ten-too",
+      "atom_type": "sentence_pattern",
+      "text": "Mum, I feel ill. Should I count to ten, too?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P57-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-mum-if-i-feel-angry-what-should-i-do",
+      "atom_type": "sentence_pattern",
+      "text": "Mum, if I feel angry, what should I do?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P57-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-my-favourite-tv-show-is-on-soon-let-s-watch-it-do-you-have-any-popcorn",
+      "atom_type": "sentence_pattern",
+      "text": "My favourite TV show is on soon. Let's watch it. Do you have any popcorn?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-number-the-pictures",
+      "atom_type": "sentence_pattern",
+      "text": "Number the pictures.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P63-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-oh-zoom-what-are-you-doing-here",
+      "atom_type": "sentence_pattern",
+      "text": "Oh! Zoom, what are you doing here?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-sarah-and-the-cat-are-worried",
+      "atom_type": "sentence_pattern",
+      "text": "Sarah and the cat are worried.",
+      "gloss": "莎拉和猫都很担心。",
+      "linked_blocks": [
+        "TB-G6S1U6-P59-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-sarah-is-angry-the-cat-is-afraid",
+      "atom_type": "sentence_pattern",
+      "text": "Sarah is angry. The cat is afraid.",
+      "gloss": "莎拉很生气。猫很害怕。",
+      "linked_blocks": [
+        "TB-G6S1U6-P59-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-sarah-sam-come-here-please",
+      "atom_type": "sentence_pattern",
+      "text": "Sarah, Sam, come here, please.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P60-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-she-is",
+      "atom_type": "sentence_pattern",
+      "text": "She is ...",
+      "gloss": "她是……",
+      "linked_blocks": [
+        "TB-G6S1U6-P59-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-cat-is-ill-sarah-is-sad",
+      "atom_type": "sentence_pattern",
+      "text": "The cat is ill. Sarah is sad.",
+      "gloss": "猫病了。莎拉很伤心。",
+      "linked_blocks": [
+        "TB-G6S1U6-P59-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-they-are",
+      "atom_type": "sentence_pattern",
+      "text": "They are ...",
+      "gloss": "他们是……",
+      "linked_blocks": [
+        "TB-G6S1U6-P59-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-they-are-happy",
+      "atom_type": "sentence_pattern",
+      "text": "They are happy.",
+      "gloss": "他们很高兴。",
+      "linked_blocks": [
+        "TB-G6S1U6-P59-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-should-share",
+      "atom_type": "sentence_pattern",
+      "text": "We should share!",
+      "gloss": "我们应该分享！",
+      "linked_blocks": [
+        "TB-G6S1U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-does-the-story-tell-us",
+      "atom_type": "sentence_pattern",
+      "text": "What does the story tell us?",
+      "gloss": "故事告诉了我们什么？",
+      "linked_blocks": [
+        "TB-G6S1U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-should-do",
+      "atom_type": "sentence_pattern",
+      "text": "What should ... do?",
+      "gloss": "……应该做什么？",
+      "linked_blocks": [
+        "TB-G6S1U6-P64-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-should-i-do",
+      "atom_type": "sentence_pattern",
+      "text": "What should I do?",
+      "gloss": "我该怎么做？",
+      "linked_blocks": [
+        "TB-G6S1U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-s-this-cartoon-about",
+      "atom_type": "sentence_pattern",
+      "text": "What's this cartoon about?",
+      "gloss": "这部动画片是关于什么的？",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-s-wrong",
+      "atom_type": "sentence_pattern",
+      "text": "What's wrong?",
+      "gloss": "怎么了？",
+      "linked_blocks": [
+        "TB-G6S1U6-P60-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-why",
+      "atom_type": "sentence_pattern",
+      "text": "Why ...?",
+      "gloss": "为什么……？",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-why",
+      "atom_type": "sentence_pattern",
+      "text": "Why?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-should",
+      "atom_type": "sentence_pattern",
+      "text": "You should ...",
+      "gloss": "你应该……",
+      "linked_blocks": [
+        "TB-G6S1U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-should-count-to-ten",
+      "atom_type": "sentence_pattern",
+      "text": "You should count to ten.",
+      "gloss": "你应该数到十。",
+      "linked_blocks": [
+        "TB-G6S1U6-P57-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-should-do-more-exercise",
+      "atom_type": "sentence_pattern",
+      "text": "You should do more exercise.",
+      "gloss": "你应该做更多运动。",
+      "linked_blocks": [
+        "TB-G6S1U6-P61-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-should-see-a-doctor",
+      "atom_type": "sentence_pattern",
+      "text": "You should see a doctor.",
+      "gloss": "你应该看医生。",
+      "linked_blocks": [
+        "TB-G6S1U6-P57-D1",
+        "TB-G6S1U6-P61-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-should-take-a-deep-breath-and-count-to-ten",
+      "atom_type": "sentence_pattern",
+      "text": "You should take a deep breath and count to ten.",
+      "gloss": "你应该深呼吸并数到十。",
+      "linked_blocks": [
+        "TB-G6S1U6-P61-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-should-take-a-deep-breath",
+      "atom_type": "sentence_pattern",
+      "text": "You should take a deep breath.",
+      "gloss": "你应该深呼吸。",
+      "linked_blocks": [
+        "TB-G6S1U6-P60-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-should-wear-warm-clothes",
+      "atom_type": "sentence_pattern",
+      "text": "You should wear warm clothes.",
+      "gloss": "你应该穿暖和的衣服。",
+      "linked_blocks": [
+        "TB-G6S1U6-P61-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-your-father-is-ill-he-should-see-a-doctor-this-morning-so-we-can-t-go-to-the-zoo-today",
+      "atom_type": "sentence_pattern",
+      "text": "Your father is ill. He should see a doctor this morning, so we can't go to the zoo today.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P60-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yum-i-m-so-happy-i-love-popcorn",
+      "atom_type": "sentence_pattern",
+      "text": "Yum! I'm so happy. I love popcorn!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-be-angry-with",
+      "atom_type": "sentence_pattern",
+      "text": "be angry with",
+      "gloss": "生……的气",
+      "linked_blocks": [
+        "TB-G6S1U6-P58-D2"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G6S1U6-P56",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: How do you feel?. Sarah and Sam are sitting on the sofa watching TV. Sarah brings some popcorn, but Sam eats it all while she goes to get drinks.",
+      "entry_probe_questions": [
+        "Do you know the word popcorn?",
+        "Can you say: I'm so happy."
+      ],
+      "priority_blocks": [
+        "TB-G6S1U6-P56-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U6-P57",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: How do you feel?. Sarah asks her mother for advice on how to handle anger and illness in two different scenes: the kitchen and the bedroom.",
+      "entry_probe_questions": [
+        "Do you know the word angry?",
+        "Can you say: If I feel angry, what should I do?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U6-P57-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U6-P58",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: How do you feel?. Sam and Sarah are sitting on the sofa in the living room. It is windy outside. They are talking about a cartoon.",
+      "entry_probe_questions": [
+        "Do you know the word cartoon?",
+        "Can you say: What's this cartoon about?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U6-P58-D2",
+        "TB-G6S1U6-P58-D1",
+        "TB-G6S1U6-P58-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U6-P59",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: How do you feel?. A sequence of pictures showing Sarah and a cat experiencing different emotions.",
+      "entry_probe_questions": [
+        "Do you know the word angry?",
+        "Can you say: Sarah is angry. The cat is afraid."
+      ],
+      "priority_blocks": [
+        "TB-G6S1U6-P59-D1",
+        "TB-G6S1U6-P59-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U6-P60",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: How do you feel?. Mum tells Sarah and Sam that they cannot go to the zoo because their father is ill.",
+      "entry_probe_questions": [
+        "Do you know the word wrong?",
+        "Can you say: What's wrong?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U6-P60-D2",
+        "TB-G6S1U6-P60-D1",
+        "TB-G6S1U6-P60-D4",
+        "TB-G6S1U6-P60-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U6-P61",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: How do you feel?. Four illustrations showing people giving advice in different situations.",
+      "entry_probe_questions": [
+        "Do you know the word see a doctor?",
+        "Can you say: You should see a doctor."
+      ],
+      "priority_blocks": [
+        "TB-G6S1U6-P61-D1",
+        "TB-G6S1U6-P61-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U6-P62",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: How do you feel?. An activity to draw facial expressions for specific emotion words.",
+      "entry_probe_questions": [
+        "Do you know the word afraid?",
+        "Can you say: Draw faces for each word."
+      ],
+      "priority_blocks": [
+        "TB-G6S1U6-P62-D1",
+        "TB-G6S1U6-P62-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U6-P63",
+      "page_type": "phonics",
+      "page_intro_cn": "Theme: How do you feel?. Four illustrations from the story 'Robin and the Ant' for sequencing.",
+      "entry_probe_questions": [
+        "Can you say: Number the pictures."
+      ],
+      "priority_blocks": [
+        "TB-G6S1U6-P63-D2",
+        "TB-G6S1U6-P63-D3",
+        "TB-G6S1U6-P63-D4",
+        "TB-G6S1U6-P63-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U6-P64",
+      "page_type": "assessment",
+      "page_intro_cn": "Theme: How do you feel?. Vocabulary review activity where students brainstorm feeling words.",
+      "entry_probe_questions": [
+        "Do you know the word warm?",
+        "Can you say: How are you feeling now?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U6-P64-D2",
+        "TB-G6S1U6-P64-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U6-P65",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: How do you feel?. Zip wants to watch a TV show and eat popcorn. Zoom goes to make some, but he actually plants popcorn seeds in the garden and waits for them to grow, which makes Zip surprised and frustrated.",
+      "entry_probe_questions": [
+        "Do you know the word popcorn?",
+        "Can you say: I'm so happy!"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U6-P65-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G6S1U6-P56-D1",
+      "page_uid": "TB-G6S1U6-P56",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U6-P56-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Sarah and Sam are sitting on the sofa watching TV. Sarah brings some popcorn, but Sam eats it all while she goes to get drinks. Key patterns: I'm so happy.; We should share!",
+      "focus_vocabulary": [
+        "popcorn",
+        "happy",
+        "drink",
+        "share"
+      ],
+      "core_patterns": [
+        "I'm so happy.",
+        "We should share!",
+        "Hey, where's my popcorn?",
+        "Hey, let's have some popcorn.",
+        "Yum! I'm so happy. I love popcorn!",
+        "Here you are. I'll go and get some drinks. Wait for me."
+      ],
+      "allowed_answer_scope": [
+        "Hey, let's have some popcorn.",
+        "Yum! I'm so happy. I love popcorn!",
+        "Here you are. I'll go and get some drinks. Wait for me.",
+        "Yum! It was so good."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word popcorn?",
+        "Can you say: I'm so happy."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U6-P56-D1-goal"
+      ],
+      "branchable_topics": [
+        "popcorn",
+        "happy",
+        "drink",
+        "share",
+        "How do you feel?",
+        "Unit Six Main Scene"
+      ],
+      "return_anchors": [
+        "I'm so happy.",
+        "We should share!",
+        "Hey, where's my popcorn?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P57-D1",
+      "page_uid": "TB-G6S1U6-P57",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U6-P57-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Sarah asks her mother for advice on how to handle anger and illness in two different scenes: the kitchen and the bedroom. Key patterns: If I feel angry, what should I do?; You should count to ten.",
+      "focus_vocabulary": [
+        "angry",
+        "ill",
+        "take a deep breath",
+        "count to ten",
+        "see a doctor"
+      ],
+      "core_patterns": [
+        "If I feel angry, what should I do?",
+        "You should count to ten.",
+        "You should see a doctor.",
+        "Mum, if I feel angry, what should I do?",
+        "After that ...?",
+        "Mum, I feel ill. Should I count to ten, too?"
+      ],
+      "allowed_answer_scope": [
+        "Well, first, take a deep breath. Then you should count to ten.",
+        "After that, you won't feel so angry.",
+        "No, dear. You should see a doctor."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word angry?",
+        "Can you say: If I feel angry, what should I do?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U6-P57-D1-goal"
+      ],
+      "branchable_topics": [
+        "angry",
+        "ill",
+        "take a deep breath",
+        "count to ten",
+        "see a doctor",
+        "How do you feel?"
+      ],
+      "return_anchors": [
+        "If I feel angry, what should I do?",
+        "You should count to ten.",
+        "You should see a doctor."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P58-D1",
+      "page_uid": "TB-G6S1U6-P58",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S1U6-P58-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "It's cold outside. Sam is talking with Sarah. Key patterns: Listen and circle.",
+      "focus_vocabulary": [
+        "cold",
+        "outside"
+      ],
+      "core_patterns": [
+        "Listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "At home",
+        "Watch films"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word cold?",
+        "Can you say: Listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U6-P58-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U6-P58-D1-goal"
+      ],
+      "branchable_topics": [
+        "cold",
+        "outside",
+        "How do you feel?",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P58-D2",
+      "page_uid": "TB-G6S1U6-P58",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U6-P58-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Sam and Sarah are sitting on the sofa in the living room. It is windy outside. They are talking about a cartoon. Key patterns: What's this cartoon about?; It's about ...",
+      "focus_vocabulary": [
+        "cartoon",
+        "police officer",
+        "chase",
+        "mice",
+        "afraid",
+        "bad",
+        "hurt",
+        "angry"
+      ],
+      "core_patterns": [
+        "What's this cartoon about?",
+        "It's about ...",
+        "Why ...?",
+        "Because ...",
+        "be angry with",
+        "Why?"
+      ],
+      "allowed_answer_scope": [
+        "It's about a cat. The cat is a police officer.",
+        "Cool!",
+        "He chases the mice. They're afraid of him.",
+        "Because the mice are bad. They hurt people. The cat is angry with them.",
+        "Maybe our cat is chasing a mouse now!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word cartoon?",
+        "Can you say: What's this cartoon about?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U6-P58-D1",
+        "TB-G6S1U6-P58-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U6-P58-D2-goal"
+      ],
+      "branchable_topics": [
+        "cartoon",
+        "police officer",
+        "chase",
+        "mice",
+        "afraid",
+        "bad",
+        "hurt",
+        "angry"
+      ],
+      "return_anchors": [
+        "What's this cartoon about?",
+        "It's about ...",
+        "Why ...?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P58-D3",
+      "page_uid": "TB-G6S1U6-P58",
+      "page_type": "dialogue",
+      "block_type": "practice_speaking",
+      "source_refs": [
+        "TB-G6S1U6-P58-D3"
+      ],
+      "teaching_goal": "Work on the practice speaking activity.",
+      "teaching_summary": "Practice expressing feelings based on different scenarios. Key patterns: How do you feel?; I feel ...",
+      "focus_vocabulary": [
+        "feel",
+        "gift",
+        "share",
+        "popcorn",
+        "ill"
+      ],
+      "core_patterns": [
+        "How do you feel?",
+        "I feel ..."
+      ],
+      "allowed_answer_scope": [
+        "I feel happy.",
+        "I feel angry/sad.",
+        "I feel sad/worried."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word feel?",
+        "Can you say: How do you feel?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U6-P58-D3-goal"
+      ],
+      "branchable_topics": [
+        "feel",
+        "gift",
+        "share",
+        "popcorn",
+        "ill",
+        "How do you feel?",
+        "Read and tell your partner"
+      ],
+      "return_anchors": [
+        "How do you feel?",
+        "I feel ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P59-D1",
+      "page_uid": "TB-G6S1U6-P59",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S1U6-P59-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "A sequence of pictures showing Sarah and a cat experiencing different emotions. Key patterns: Sarah is angry. The cat is afraid.; The cat is ill. Sarah is sad.",
+      "focus_vocabulary": [
+        "angry",
+        "afraid",
+        "ill",
+        "sad",
+        "worried",
+        "happy"
+      ],
+      "core_patterns": [
+        "Sarah is angry. The cat is afraid.",
+        "The cat is ill. Sarah is sad.",
+        "Sarah and the cat are worried.",
+        "They are happy."
+      ],
+      "allowed_answer_scope": [
+        "angry",
+        "afraid",
+        "ill",
+        "sad",
+        "worried",
+        "happy"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word angry?",
+        "Can you say: Sarah is angry. The cat is afraid."
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U6-P59-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U6-P59-D1-goal"
+      ],
+      "branchable_topics": [
+        "angry",
+        "afraid",
+        "ill",
+        "sad",
+        "worried",
+        "happy",
+        "How do you feel?",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Sarah is angry. The cat is afraid.",
+        "The cat is ill. Sarah is sad.",
+        "Sarah and the cat are worried."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P59-D2",
+      "page_uid": "TB-G6S1U6-P59",
+      "page_type": "vocabulary",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S1U6-P59-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Students look at the pictures and fill in the blanks with the correct emotion words. Key patterns: He is ...; They are ...",
+      "focus_vocabulary": [
+        "worried",
+        "happy",
+        "angry",
+        "afraid"
+      ],
+      "core_patterns": [
+        "He is ...",
+        "They are ...",
+        "She is ...",
+        "I am ..."
+      ],
+      "allowed_answer_scope": [
+        "worried",
+        "happy",
+        "angry",
+        "afraid"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word worried?",
+        "Can you say: He is ..."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U6-P59-D2-goal"
+      ],
+      "branchable_topics": [
+        "worried",
+        "happy",
+        "angry",
+        "afraid",
+        "How do you feel?",
+        "Write and say"
+      ],
+      "return_anchors": [
+        "He is ...",
+        "They are ...",
+        "She is ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P60-D1",
+      "page_uid": "TB-G6S1U6-P60",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S1U6-P60-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "It's seven o'clock in the morning, and it's time to get up. Key patterns: Listen and circle.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "Parents",
+        "Going to the zoo"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U6-P60-D4",
+        "TB-G6S1U6-P60-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U6-P60-D1-goal"
+      ],
+      "branchable_topics": [
+        "How do you feel?",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P60-D2",
+      "page_uid": "TB-G6S1U6-P60",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U6-P60-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Mum tells Sarah and Sam that they cannot go to the zoo because their father is ill. Key patterns: What's wrong?; He should see a doctor.",
+      "focus_vocabulary": [
+        "wrong",
+        "ill",
+        "sad",
+        "well",
+        "hospital"
+      ],
+      "core_patterns": [
+        "What's wrong?",
+        "He should see a doctor.",
+        "Don't be sad.",
+        "How does Dad feel now?",
+        "Sarah, Sam, come here, please.",
+        "Your father is ill. He should see a doctor this morning, so we can't go to the zoo today."
+      ],
+      "allowed_answer_scope": [
+        "Sarah, Sam, come here, please.",
+        "Your father is ill. He should see a doctor this morning, so we can't go to the zoo today.",
+        "Oh, no!",
+        "Don't be sad. We can go next time.",
+        "Not well. Let's go to the hospital."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word wrong?",
+        "Can you say: What's wrong?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U6-P60-D1",
+        "TB-G6S1U6-P60-D4",
+        "TB-G6S1U6-P60-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U6-P60-D2-goal"
+      ],
+      "branchable_topics": [
+        "wrong",
+        "ill",
+        "sad",
+        "well",
+        "hospital",
+        "How do you feel?",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "What's wrong?",
+        "He should see a doctor.",
+        "Don't be sad."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P60-D3",
+      "page_uid": "TB-G6S1U6-P60",
+      "page_type": "dialogue",
+      "block_type": "practice_speaking",
+      "source_refs": [
+        "TB-G6S1U6-P60-D3"
+      ],
+      "teaching_goal": "Work on the practice speaking activity.",
+      "teaching_summary": "Questions based on the dialogue context. Key patterns: Answer the questions.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Answer the questions."
+      ],
+      "allowed_answer_scope": [
+        "He feels sad.",
+        "He should take a deep breath and count to ten. (Answers may vary)"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Answer the questions."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U6-P60-D3-goal"
+      ],
+      "branchable_topics": [
+        "How do you feel?",
+        "Think and answer"
+      ],
+      "return_anchors": [
+        "Answer the questions."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P60-D4",
+      "page_uid": "TB-G6S1U6-P60",
+      "page_type": "dialogue",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S1U6-P60-D4"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "Role-play a phone call giving suggestions to friends who need help. Key patterns: Don't be angry.; You should take a deep breath.",
+      "focus_vocabulary": [
+        "angry",
+        "take a deep breath"
+      ],
+      "core_patterns": [
+        "Don't be angry.",
+        "You should take a deep breath."
+      ],
+      "allowed_answer_scope": [
+        "angry",
+        "take a deep breath"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word angry?",
+        "Can you say: Don't be angry."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U6-P60-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U6-P60-D4-goal"
+      ],
+      "branchable_topics": [
+        "angry",
+        "take a deep breath",
+        "How do you feel?",
+        "Act with your friends"
+      ],
+      "return_anchors": [
+        "Don't be angry.",
+        "You should take a deep breath."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P61-D1",
+      "page_uid": "TB-G6S1U6-P61",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S1U6-P61-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Four illustrations showing people giving advice in different situations. Key patterns: You should see a doctor.; You should do more exercise.",
+      "focus_vocabulary": [
+        "see a doctor",
+        "do more exercise",
+        "wear warm clothes",
+        "take a deep breath",
+        "count to ten"
+      ],
+      "core_patterns": [
+        "You should see a doctor.",
+        "You should do more exercise.",
+        "You should wear warm clothes.",
+        "You should take a deep breath and count to ten."
+      ],
+      "allowed_answer_scope": [
+        "see a doctor",
+        "do more exercise",
+        "wear warm clothes",
+        "take a deep breath",
+        "count to ten"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word see a doctor?",
+        "Can you say: You should see a doctor."
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U6-P61-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U6-P61-D1-goal"
+      ],
+      "branchable_topics": [
+        "see a doctor",
+        "do more exercise",
+        "wear warm clothes",
+        "take a deep breath",
+        "count to ten",
+        "How do you feel?",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "You should see a doctor.",
+        "You should do more exercise.",
+        "You should wear warm clothes."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P61-D2",
+      "page_uid": "TB-G6S1U6-P61",
+      "page_type": "vocabulary",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S1U6-P61-D2"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "Two students are playing a card game. One student holds a card showing a feeling and asks for advice, while the other gives a suggestion. Key patterns: What should I do?; You should ...",
+      "focus_vocabulary": [
+        "cold",
+        "ill",
+        "angry",
+        "worried"
+      ],
+      "core_patterns": [
+        "What should I do?",
+        "You should ..."
+      ],
+      "allowed_answer_scope": [
+        "cold",
+        "ill",
+        "angry",
+        "worried"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word cold?",
+        "Can you say: What should I do?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U6-P61-D2-goal"
+      ],
+      "branchable_topics": [
+        "cold",
+        "ill",
+        "angry",
+        "worried",
+        "How do you feel?",
+        "Play card games"
+      ],
+      "return_anchors": [
+        "What should I do?",
+        "You should ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P62-D1",
+      "page_uid": "TB-G6S1U6-P62",
+      "page_type": "reading",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S1U6-P62-D1"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "An activity to draw facial expressions for specific emotion words. Key patterns: Draw faces for each word.",
+      "focus_vocabulary": [
+        "afraid",
+        "happy",
+        "angry",
+        "sad"
+      ],
+      "core_patterns": [
+        "Draw faces for each word."
+      ],
+      "allowed_answer_scope": [
+        "afraid",
+        "happy",
+        "angry",
+        "sad"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word afraid?",
+        "Can you say: Draw faces for each word."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U6-P62-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U6-P62-D1-goal"
+      ],
+      "branchable_topics": [
+        "afraid",
+        "happy",
+        "angry",
+        "sad",
+        "How do you feel?",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "Draw faces for each word."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P62-D2",
+      "page_uid": "TB-G6S1U6-P62",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S1U6-P62-D2"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "A story about Robin and an ant. Robin avoids sitting on an ant, and later the ant helps Robin when he is stuck in the mud. Key patterns: Don't worry.; He is stuck in the mud.",
+      "focus_vocabulary": [
+        "ant",
+        "mud",
+        "pull",
+        "stuck",
+        "worry",
+        "sit on"
+      ],
+      "core_patterns": [
+        "Don't worry.",
+        "He is stuck in the mud."
+      ],
+      "allowed_answer_scope": [
+        "ant",
+        "mud",
+        "pull",
+        "stuck",
+        "worry",
+        "sit on"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word ant?",
+        "Can you say: Don't worry."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U6-P62-D2-goal"
+      ],
+      "branchable_topics": [
+        "ant",
+        "mud",
+        "pull",
+        "stuck",
+        "worry",
+        "sit on",
+        "How do you feel?",
+        "Robin and the Ant"
+      ],
+      "return_anchors": [
+        "Don't worry.",
+        "He is stuck in the mud."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P63-D1",
+      "page_uid": "TB-G6S1U6-P63",
+      "page_type": "phonics",
+      "block_type": "practice_multiple_choice",
+      "source_refs": [
+        "TB-G6S1U6-P63-D1"
+      ],
+      "teaching_goal": "Work on the practice multiple choice activity.",
+      "teaching_summary": "Comprehension question about the moral of the story. Key patterns: What does the story tell us?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What does the story tell us?"
+      ],
+      "allowed_answer_scope": [
+        "A. We should always be nice to each other."
+      ],
+      "entry_probe_questions": [
+        "Can you say: What does the story tell us?"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U6-P63-D1-goal"
+      ],
+      "branchable_topics": [
+        "How do you feel?",
+        "What does the story tell us?"
+      ],
+      "return_anchors": [
+        "What does the story tell us?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P63-D2",
+      "page_uid": "TB-G6S1U6-P63",
+      "page_type": "phonics",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S1U6-P63-D2"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "Four illustrations from the story 'Robin and the Ant' for sequencing. Key patterns: Number the pictures.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Number the pictures."
+      ],
+      "allowed_answer_scope": [
+        "Number the pictures."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Number the pictures."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U6-P63-D3",
+        "TB-G6S1U6-P63-D4",
+        "TB-G6S1U6-P63-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U6-P63-D2-goal"
+      ],
+      "branchable_topics": [
+        "How do you feel?",
+        "Number the pictures"
+      ],
+      "return_anchors": [
+        "Number the pictures."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P63-D3",
+      "page_uid": "TB-G6S1U6-P63",
+      "page_type": "phonics",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S1U6-P63-D3"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Summary sentences of the story with blanks to fill. Key patterns: Fill in the blanks and retell the story.",
+      "focus_vocabulary": [
+        "stuck",
+        "strong"
+      ],
+      "core_patterns": [
+        "Fill in the blanks and retell the story."
+      ],
+      "allowed_answer_scope": [
+        "afraid",
+        "worried",
+        "pull Robin out",
+        "is happy"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word stuck?",
+        "Can you say: Fill in the blanks and retell the story."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U6-P63-D4",
+        "TB-G6S1U6-P63-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U6-P63-D3-goal"
+      ],
+      "branchable_topics": [
+        "stuck",
+        "strong",
+        "How do you feel?",
+        "Fill in the blanks and retell the story"
+      ],
+      "return_anchors": [
+        "Fill in the blanks and retell the story."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P63-D4",
+      "page_uid": "TB-G6S1U6-P63",
+      "page_type": "phonics",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G6S1U6-P63-D4"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "Pronunciation practice focusing on incomplete plosion (silent t). Key patterns: Listen and repeat. Look at the text on page 62. Find and say more like these.",
+      "focus_vocabulary": [
+        "next day",
+        "can't go",
+        "count to",
+        "don't be"
+      ],
+      "core_patterns": [
+        "Listen and repeat. Look at the text on page 62. Find and say more like these."
+      ],
+      "allowed_answer_scope": [
+        "next day",
+        "can't go",
+        "count to",
+        "don't be"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word next day?",
+        "Can you say: Listen and repeat. Look at the text on page 62. Find and say more like these."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U6-P63-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U6-P63-D4-goal"
+      ],
+      "branchable_topics": [
+        "next day",
+        "can't go",
+        "count to",
+        "don't be",
+        "How do you feel?",
+        "Tips for pronunciation"
+      ],
+      "return_anchors": [
+        "Listen and repeat. Look at the text on page 62. Find and say more like these."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P64-D1",
+      "page_uid": "TB-G6S1U6-P64",
+      "page_type": "assessment",
+      "block_type": "assessment_quiz",
+      "source_refs": [
+        "TB-G6S1U6-P64-D1"
+      ],
+      "teaching_goal": "Check whether the learner can complete the unit review task.",
+      "teaching_summary": "Assessment section with listening exercises. Students listen and match characters to conditions, then answer multiple choice questions. Key patterns: How does ... feel?; What should ... do?",
+      "focus_vocabulary": [
+        "ill",
+        "happy",
+        "wear warm clothes",
+        "count to ten",
+        "worried",
+        "angry"
+      ],
+      "core_patterns": [
+        "How does ... feel?",
+        "What should ... do?"
+      ],
+      "allowed_answer_scope": [
+        "ill",
+        "happy",
+        "wear warm clothes",
+        "count to ten",
+        "worried",
+        "angry"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word ill?",
+        "Can you say: How does ... feel?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U6-P64-D1-goal"
+      ],
+      "branchable_topics": [
+        "ill",
+        "happy",
+        "wear warm clothes",
+        "count to ten",
+        "worried",
+        "angry",
+        "How do you feel?",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "How does ... feel?",
+        "What should ... do?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P64-D2",
+      "page_uid": "TB-G6S1U6-P64",
+      "page_type": "assessment",
+      "block_type": "summary_wrap_up",
+      "source_refs": [
+        "TB-G6S1U6-P64-D2"
+      ],
+      "teaching_goal": "Review and consolidate the core language point.",
+      "teaching_summary": "Vocabulary review activity where students brainstorm feeling words. Key patterns: How are you feeling now?",
+      "focus_vocabulary": [
+        "warm",
+        "sad",
+        "cold",
+        "bad",
+        "sorry",
+        "hungry",
+        "ill"
+      ],
+      "core_patterns": [
+        "How are you feeling now?"
+      ],
+      "allowed_answer_scope": [
+        "warm",
+        "sad",
+        "cold",
+        "bad",
+        "sorry",
+        "hungry"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word warm?",
+        "Can you say: How are you feeling now?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U6-P64-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U6-P64-D2-goal"
+      ],
+      "branchable_topics": [
+        "warm",
+        "sad",
+        "cold",
+        "bad",
+        "sorry",
+        "hungry",
+        "ill",
+        "How do you feel?"
+      ],
+      "return_anchors": [
+        "How are you feeling now?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U6-P65-D1",
+      "page_uid": "TB-G6S1U6-P65",
+      "page_type": "reading",
+      "block_type": "story_time",
+      "source_refs": [
+        "TB-G6S1U6-P65-D1"
+      ],
+      "teaching_goal": "Read and retell the key story events.",
+      "teaching_summary": "Zip wants to watch a TV show and eat popcorn. Zoom goes to make some, but he actually plants popcorn seeds in the garden and waits for them to grow, which makes Zip surprised and frustrated. Key patterns: I'm so happy!; I'm a little worried now.",
+      "focus_vocabulary": [
+        "popcorn",
+        "TV show",
+        "happy",
+        "worried",
+        "check",
+        "angry",
+        "count to ten",
+        "take a deep breath"
+      ],
+      "core_patterns": [
+        "I'm so happy!",
+        "I'm a little worried now.",
+        "Don't be angry!",
+        "Count to ten and take a deep breath.",
+        "My favourite TV show is on soon. Let's watch it. Do you have any popcorn?",
+        "Oh! Zoom, what are you doing here?"
+      ],
+      "allowed_answer_scope": [
+        "I'll go and make some.",
+        "I can't wait. I love popcorn. I'm so happy!",
+        "He must be making lots of popcorn. Yum!",
+        "I'm making popcorn.",
+        "Oh, don't be angry! Count to ten and take a deep breath. Well, I planted the popcorn seeds. But they take a long time to grow. I'm still waiting.",
+        "Oooooh noooo!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word popcorn?",
+        "Can you say: I'm so happy!"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U6-P65-D1-goal"
+      ],
+      "branchable_topics": [
+        "popcorn",
+        "TV show",
+        "happy",
+        "worried",
+        "check",
+        "angry",
+        "count to ten",
+        "take a deep breath"
+      ],
+      "return_anchors": [
+        "I'm so happy!",
+        "I'm a little worried now.",
+        "Don't be angry!"
+      ]
+    }
+  ]
+}

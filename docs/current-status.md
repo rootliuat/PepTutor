@@ -1,0 +1,779 @@
+# Current Status
+
+## Project Goal
+Build a page-driven English teaching agent for primary school textbooks. The system should stay on the current textbook page, run a lightweight entry diagnosis, decide whether the learner is `mastered`, `shaky`, or `not_mastered`, and continue teaching without drifting away from the lesson.
+
+## Approved V1 Direction
+- teaching is controlled by a lesson state machine, not by free-form RAG
+- the teacher style is lively and guided
+- prompts are split into `Planner` and `Responder`
+- retrieval modes are fixed to `none / block / page / unit / branch`
+- short branch conversations are allowed, but must return through `return_anchor`
+- the correction ladder is:
+  - half hint
+  - stronger hint
+  - teacher models one sentence
+  - repeat or drill
+  - learner says it independently
+
+## Next Architecture Direction
+- keep PepTutor as a constrained teaching agent rather than a general autonomous agent
+- accepted roundtable consensus is now captured in `docs/lesson-teacher-mind-roundtable-consensus.md`; treat it as the architectural bridge from "RAG answer bot" to "prepared teacher mind"
+- derive each page's teaching focus from retrieved/structured textbook blocks before selecting strategy; do not pre-label pages by page number or use sample pages as fixed teaching templates
+- do not create per-page fixed templates or fixed Q&A scripts; pages provide evidence and goals, while reusable teaching strategies and the live responder decide each turn dynamically
+- add an offline `CurriculumMap` layer for the four PEP books: it indexes grade / semester / unit / pages, unit theme, core vocabulary, core patterns, page types, block UIDs, learning targets, source refs, and confidence; it is not injected wholesale into live prompts
+- build `CurriculumMap` from the existing raw textbook sources, word lists, Useful expressions, and `app/knowledge/structured/general/*` artifacts where possible; do not hand-author unit goals from memory or broad textbook impressions, and mark uncertain generated fields with confidence/source metadata for later review
+- add a page-level `LessonBriefBuilder` before broadening strategy work: RAG/structured curriculum supplies evidence, the brief distills page goals/materials/answer scope/common errors/progression, and the responder treats the brief as private preparation rather than a script to read aloud
+- keep runtime context small: `CurriculumMap` is the offline index, `LessonBrief` is page/block preparation, and per-turn prompt payloads should only receive the current brief slice, learner signal, teaching move, memory hints, and scoped evidence needed for that turn
+- introduce a reusable teaching-strategy layer that chooses classroom moves from learner signals and the current brief, so sample pages validate strategy behavior rather than becoming page-specific wording
+- make teaching-strategy selection auditable: each move should carry the detected learner signal, evidence/brief fields used, a short rationale, and the expected next learner action
+- keep LLM/persona coordination explicit: the responder should combine lesson goal, teaching move, teacher soul, learner state, and memory hints for delivery, while persona and memory remain unable to override textbook facts, answer correctness, or state progression
+- harden backend capabilities into explicit lesson-safe tools, including page lookup, current-block lookup, scoped support retrieval, answer evaluation, memory writeback, and learner-memory recall
+- evolve retrieval toward lesson-scoped Agentic RAG: the model may select or refine retrieval inside the active grade / semester / unit / page / block scope, but it must not run unbounded search loops or leave the current lesson contract
+- use VFS-style large-context handling for offline curriculum processing, draft/review workflows, eval reports, and log analysis; do not make it the default real-time `/lesson/turn` path until outputs are distilled into compact runtime artifacts
+- detailed backlog is tracked in `docs/implementation-plan.md` under `Agent Upgrade Backlog`
+- roundtable-derived teacher-mind boundaries are tracked in `docs/lesson-teacher-mind-roundtable-consensus.md`
+
+## Current Working Slice
+- actively validated backend slice: `G5 S1 U3 p24-p26`
+- broader structured pilot assets still exist for `G5 S1 U3 p24-p31`
+- the default lesson runtime manifest is now the full `app/knowledge/structured/general/general-manifest.json`
+- the loaded lesson catalog currently exposes `30` scopes, `253` pages, and `579` teaching blocks through `GET /lesson/catalog`
+- current curriculum assets are sufficient for a first offline `CurriculumMap` generator: four raw textbook corpora, four word lists, Useful expressions, current unit-level `structured/general/*` files, and page-level pilot assets for `G5 S1 U3`
+- first offline `CurriculumMap` task is now implemented:
+  - output: `app/knowledge/structured/curriculum-map.json`
+  - builder: `backend/LightRAG/lightrag/orchestrator/curriculum_map_builder.py`
+  - CLI: `backend/LightRAG/scripts/build_curriculum_map.py`
+  - test: `backend/LightRAG/tests/test_curriculum_map_builder.py`
+  - current generated coverage: `4` books, `30` scopes, `253` pages, `579` teaching blocks
+  - page-level pilot assets are used as overlays on top of `structured/general/*`, so existing manual corrections such as `TB-G5S1U3-P31` page type `story` are preserved
+- a human-readable Chinese curriculum overview is now generated from the structured map:
+  - output: `app/knowledge/structured/curriculum-overview.zh.md`
+  - builder: `backend/LightRAG/lightrag/orchestrator/curriculum_overview_builder.py`
+  - CLI: `backend/LightRAG/scripts/export_curriculum_overview.py`
+  - test: `backend/LightRAG/tests/test_curriculum_overview_builder.py`
+  - this remains an offline review artifact and does not replace the runtime `CurriculumMap`
+- curriculum-structure output remains an offline index; it should not expand live `/lesson/turn` prompt size
+- `LessonEvidence` exact lookup is now implemented:
+  - lookup/models: `backend/LightRAG/lightrag/orchestrator/lesson_evidence.py`
+  - runtime prompt key: compact `lesson_evidence`, separate from semantic `retrieval_evidence`
+  - tests: `backend/LightRAG/tests/test_lesson_evidence.py`
+  - `TB-G5S1U3-P31` exact evidence resolves to the pilot story overlay, and `TB-G6S2Recycle2-P49` evidence stays on the actual party-list / phonics content
+  - same-page and same-unit support are bounded by page UID and grade / semester / unit, with no cross-grade or cross-unit leakage
+- a checked-in offline retrieval gold set now exists at `app/knowledge/evals/lesson-retrieval-gold.json`:
+  - current seeded coverage: `26` queries
+  - grade split: `G5 = 9`, `G6 = 17`
+  - metric focus: `scope accuracy`, `top-1 / top-3 block hit`, `support hit`, `cross-grade leakage`
+- a checked-in offline teacher-turn quality gold set now exists at `app/knowledge/evals/lesson-dialogue-quality-gold.json`:
+  - current seeded coverage: `12` deterministic classroom samples
+  - metric focus: retrieval contract, source grounding, lesson brief, teaching move, state progression, prompt contract, response naturalness guards, persona contract, memory contract
+  - current gold-lesson focus includes `G6 S2 Recycle2 P49 D4`, because that actual block is an extension task for making a party list; these samples are regression coverage for content-derived behavior, not a page-type template for other pages
+  - `TB-G5S1U3-P31` is now included as a story-overlay grounding sample, so quality evals check that P31 remains sourced from the exact story overlay instead of becoming a coarse reading template
+  - current command: `backend/LightRAG/.venv/bin/python scripts/eval_lesson_dialogue_quality.py`
+- a live route transcript scoring command now exists at `scripts/eval_lesson_transcript_quality.py`:
+  - it can run the temporary `/lesson/turn` smoke and score the captured live-model transcript
+  - it can also re-score a saved transcript JSON through `--input`
+  - metric focus: response naturalness guards, retrieval grounding, branch anchors, persona/AIRI debug signals, AIRI performance-plan completeness/adaptation, live-prompt signal presence, and per-turn latency
+  - this is now explicitly treated as a route-contract score, not a human pedagogical dialogue-quality score
+- a human-readable 米粒 teaching-principles baseline now exists at `app/knowledge/evals/lesson-mili-teaching-filters.json`:
+  - judgment focus: whether the teacher really hears the child before teaching, gives one small step, follows readiness, changes method after help, keeps role-play logic clear, and can resize her own method
+  - it contains no scenario transcript; it is a cross-page classroom-quality judgment aid, not interface validation, keyword scoring, a reusable script, or a template
+- current lesson API entry: `POST /lesson/turn`
+- current realtime lesson API entry: `POST /lesson/turn/stream`
+- current lesson catalog API entry: `GET /lesson/catalog`
+- currently validated frontend slice: `frontend/airi` dedicated `/lesson` route with backend-loaded `grade / semester / unit / page` selection instead of a hardcoded `G5S1U3` list
+- `/lesson` now keeps the AIRI shell and character area while running in a lesson-focused mode:
+  - the route reuses the common AIRI runtime pieces needed for chat session, context bridge, and character orchestrator
+  - onboarding, analytics, and lesson-irrelevant shell work still stay trimmed down compared with the generic AIRI route
+  - no remote helper fetches beyond the lesson/runtime path itself
+  - lesson TTS and ASR stay pinned to the lesson-local provider bootstrap and backend speech proxies
+- current live prompt path is validated against a real DeepSeek-compatible endpoint using the local root `.env`
+- current voice path is split because Doubao TTS balance is unavailable:
+  - temporary teacher TTS uses free Microsoft Edge Xiaoxiao through `LightRAG` route `POST /api/peptutor/edge-tts`
+  - official realtime ASR still uses the Doubao backend websocket route `WS /api/peptutor/doubao-realtime-asr`
+  - the original Doubao HTTP TTS route `POST /api/peptutor/doubao-tts` remains in place for later competition or production use after balance is restored
+  - when `VITE_PEPTUTOR_LESSON_API_URL` points at `LightRAG` and no explicit speech proxy override is set, frontend speech bootstrap now derives these speech proxy URLs from the lesson backend base automatically
+  - local `stage-web` proxies still exist as development fallbacks, but are no longer the primary speech path
+  - when `LightRAG` API key or JWT auth is configured, the backend-native speech routes now reuse that same auth layer instead of staying open under the broader `/api/*` whitelist assumption
+  - frontend lesson mode now supports env-based protected deployments by reusing one PepTutor backend auth contract across `GET /lesson/catalog`, `POST /lesson/turn`, `POST /api/peptutor/edge-tts`, `POST /api/peptutor/doubao-tts`, and browser `WS /api/peptutor/doubao-realtime-asr`
+  - when only `VITE_PEPTUTOR_LESSON_AUTH_USERNAME` / `VITE_PEPTUTOR_LESSON_AUTH_PASSWORD` are provided, lesson mode now auto-checks `/auth-status`, logs in through `/login`, and reuses `X-New-Token` renewal headers on later HTTP requests
+  - backend now applies per-process fixed-window rate limiting to `/lesson`, TTS proxy HTTP routes, and websocket connection attempts for `WS /api/peptutor/doubao-realtime-asr`, with env-tunable request and window settings
+  - backend-native speech routes now emit request-scoped logs for TTS `start/success/error` and ASR `connected/start/ready/closed/error`, including proxy request ids and latency
+
+## What Is Implemented
+- `backend/LightRAG` now contains a text-first lesson runtime with:
+  - `LessonRuntimeState`
+  - local answer evaluation
+  - route handling for `answer`, `ask_help`, `ask_knowledge`, and `social`
+  - retrieval scope control for `none / block / page / unit / branch`
+  - branch budgeting and `return_anchor`
+  - live route classification for open turns behind deterministic fallback
+  - live `Planner` wiring for `ask_knowledge`, `ask_help`, branch-close redirect, and general social redirect behind the same runtime contract
+  - live `Responder` wiring for `page_entry`, `answer_question`, and open-turn teacher phrasing with deterministic fallback
+  - live teacher persona loading from root `soul.md`, now injected into the responder `system_prompt` as the authoritative Teacher Soul instead of being passed as ordinary JSON prompt data
+  - an explicit lesson system contract in `lightrag/pedagogy/system_contract.py`, fixing the authority order as `system_contract > lesson_brief > teaching_move > runtime_state > answer_rubric > retrieval_evidence > learner_memory > teacher_soul > persona_context`
+  - a private `CurrentTurnLessonBrief` payload passed from `LessonRuntime` into `LessonResponder`; first use is response generation only, while existing runtime correctness, routing, retrieval mode, and page progression stay in control
+  - a `LessonBriefBuilder` that turns exact `LessonEvidence` into compact private teacher preparation fields: teaching focus, materials, answer scope, support vocabulary, likely mistakes, and progression
+  - `LessonBriefBuilder` keeps `TB-G5S1U3-P31` grounded in the story overlay and turns `TB-G6S2Recycle2-P49-D4` from a repeatable task sentence into a concrete party-list answer scope
+  - a `TeachingMovePlanner` that turns learner signal plus `LessonBrief` into an auditable private move plan with detected signal, reusable move name, rationale, evidence fields used, and expected next learner action
+  - `TeachingMovePlanner` covers refusal, task echo, incomplete answer, small error, help request, knowledge question, off-topic turn, and good answer without page-specific templates
+  - `LessonResponder` now has a natural response contract that combines `LessonBrief`, `teaching_move`, learner memory, persona context, and system-level Teacher Soul into one fresh child-facing teacher reply
+  - `LessonResponder` treats Teacher Soul catchphrases as optional flavor, rejects private-field/metadata leakage across all turns, and falls back when live output tries to let memory or persona override lesson facts or target answers
+  - `lesson_dialogue_quality_eval.py` now captures the real responder prompt and scores the whole private-teacher pipeline: scoped retrieval result, exact source grounding, `LessonBrief` quality, `TeachingMove` rationale/evidence fields, state progression, natural response contract, persona boundary, and memory boundary
+  - current dialogue-quality baseline: `strict=12/12`, `retrieval=100%`, `source=100%`, `brief=100%`, `move=100%`, `state=100%`, `prompt=100%`, `response=100%`, `persona=100%`, `memory=100%`
+  - read-only `SimpleMem` learner-memory prompt injection for live teacher turns behind deterministic fallback
+  - best-effort `SimpleMem` lesson-trace writeback into `SimpleMem-Cross` SQLite
+  - optional semantic recall from `SimpleMem-Cross` LanceDB for later open turns, with current-session exclusion
+  - a versioned lesson persona kernel in `lesson_persona.py`, currently used to assemble per-turn teacher profile, learner relationship signals, classroom affect state, and presentation-only AIRI performance intent for backend `debug_signals`, `LessonResponder` prompts, and stream `action` payloads
+  - persona boundaries that keep `LessonRuntime` as the content authority; persona can shape teacher delivery style, pacing, scaffolding, and AIRI presentation intent, but cannot change target answers, correctness judgment, page progression, retrieval scope, current block, or required teaching action
+- recent runtime and pedagogy fixes now also cover:
+  - localized page entry and probe wording for the active `P24/P25` demo slice
+  - scene-based teacher phrasing for the active `P24` warm-up and `drink/eat` prompts, for example `假设你饿了，你可以说：I am hungry.`
+  - rerouting `ask_knowledge` interruptions even while `awaiting_answer = true`
+  - returning to the currently active answer prompt after a knowledge interruption, instead of drifting into a nearby but different target
+  - concrete answer-style `help` and `hint` responses instead of placeholder scaffolds like `I'd like ...`
+  - two-choice answer scaffolds for the `P24-D3` drink prompt
+  - no-repeat correction wording for scene-based prompts, so follow-up hints focus on completing the sentence instead of restating the same scene frame
+  - single-word answers such as `water` on full-sentence prompts now stay in practice as `partially_correct` and do not advance the block
+  - an approved-data split for the active `P24` practice flow so `D3` now handles `drink` answers and `D4` handles `eat` answers
+  - a real approved-data `breakfast` branch for the `P25-D3` role-play flow, routed into `TB-G5S1U3-P27-D4` and back to the role-play anchor
+  - branch-state resume handling so a short branch opened during `awaiting_answer = true` can close cleanly and restore the answer turn
+  - prompt-aware answer evaluation remains in place as a compatibility guard, for example `drink` prompts still do not accept food answers even if wider data slices stay mixed
+  - deterministic `ask_knowledge` fallback wording now avoids raw curriculum-summary leakage such as `Key patterns`; it uses the matched support entry or query-aligned target phrase, then returns to the active prompt
+  - `page_entry` teacher openings now reject raw curriculum metadata such as `Theme:`, `Key patterns`, `开放性的活动`, `鼓励学生`, `要求学生`, and `引导学生`; live responder output is preferred, with deterministic wording only as fallback
+  - task-instruction pages such as `TB-G6S2Recycle2-P49` now ask for a concrete student answer instead of asking the learner to repeat `Create a personal party shopping list.`
+  - the `TB-G6S2Recycle2-P49` task-instruction rubric now treats concrete party-list items or short list sentences as answers, rejects task-instruction echoes, lightly repairs rough item sentences such as `I bring apple.`, and accepts list sentences such as `I'm going to bring some fruit and drinks.`
+  - live responder prompts now treat deterministic fallback wording as `safety_fallback_response`, not recommended teacher script; evals check routing, target facts, leakage, persona, and state instead of forcing fixed Chinese phrasing
+  - task-instruction probes such as `Practice ordering food and drinks...` are now converted into classroom actions instead of being repeated to the learner
+  - streamed teacher chunks now strip common Markdown emphasis/code markers before `text_delta`, and final `done.result.teacher_response` stays equal to the text that was actually streamed to subtitles/TTS/chat
+- `backend/LightRAG` also contains:
+  - `QdrantTeachingStore`
+  - optional lesson vector retrieval
+  - `TeachingBlock` indexing helpers
+  - runtime factory wiring that falls back cleanly when vector retrieval is disabled
+  - scoped support-asset retrieval for `ask_knowledge` and short `branch` turns
+- `app/knowledge/raw` now has working ingestion utilities for:
+  - textbook `.js` and `.json` sources
+  - markdown word lists
+  - markdown useful expressions
+- learner-memory prompt summaries can now be read from `SimpleMem-Cross` SQLite and injected into live prompt payloads:
+  - common mistakes
+  - learner preferences
+  - mastery signals
+  - compact `summary_text`
+  - prompt-safe `memory_layers` separated into `fact`, `episode`, and `procedure`
+  - prompt-safe `memory_conflicts` when repeated mistake/mastery signals disagree on the same target
+  - explicit prompt-use boundaries: facts predict stable needs, episodes describe recent context, and procedures shape teaching style only
+- lesson sessions can now be written back into `SimpleMem-Cross` SQLite with:
+  - one session per page lesson start
+  - per-turn `session_events`
+  - distilled observations for `mistake / preference / mastery`
+  - `memory_layer` metadata where mistakes/mastery start as promotable episodes and preferences start as procedures
+  - `promotion_policy` metadata that documents when repeated supported progress can become a stable fact
+  - compact `session_summary` on page close or page switch
+- lesson observations can now also be upserted into `SimpleMem-Cross` LanceDB as compact `lesson_trace` vector memories:
+  - recall stays read-only at runtime
+  - recall is limited to compact prompt-safe semantic hints
+  - the active `memory_session_id` is excluded to avoid same-session echo
+- unit-level support assets can now be emitted from markdown sources:
+  - `app/knowledge/structured/support/g5s1u3-support-assets.json`
+- `raw -> normalized -> draft -> review` is now implemented for the first pilot slice:
+  - draft output: `app/knowledge/structured/drafts/g5s1u3-p24-p25-draft.json`
+  - review output: `app/knowledge/structured/drafts/reviews/g5s1u3-p24-p25-review.md`
+  - `pilot_draft_builder.py` now mirrors the approved `P24 D3 drink -> D4 eat` split for regenerated drafts
+- `frontend/airi` now also contains a dedicated lesson-mode UI slice with:
+  - route entry: `apps/stage-web/src/pages/lesson/index.vue`
+  - lesson store: `packages/stage-ui/src/stores/lesson.ts`
+  - lesson panel: `packages/stage-layouts/src/components/Widgets/LessonPanel.vue`
+  - backend-driven lesson page discovery through `GET /lesson/catalog`, with fallback to the earlier pilot page list if the catalog endpoint is unavailable
+  - grouped `grade / semester / unit` selector state in the store, so `page_uid`, URL query, and active catalog scope stay aligned
+  - catalog coverage badges that make the full loaded `G5/G6 · S1/S2` surface visible up front (`30` scopes / `253` pages in the current general manifest), so the active-scope filter is not mistaken for missing catalog data
+  - coherent lesson-local light/dark styling across sidebar, stage subtitle, bottom chat input, study board, and selector panels, plus an explicit `日间/暗色` toggle in the lesson panel
+  - page tabs filtered down to the active unit scope instead of one long flat list across the full catalog
+  - route-level `page_uid` normalization and last-page restore, so `/lesson` without a query reopens the last lesson page when available and a bad query rewrites itself back to a real catalog page instead of drifting into an invalid selection
+  - an explicit `Page UID` jump action in the panel, so manual jumps now submit intentionally and bad UIDs snap back to the last valid page instead of rewriting the route mid-typing
+  - route-aware lesson utilities and onboarding suppression
+  - stage-model self-healing so `/lesson` recovers to a bundled preset if `settings/stage/model` is blank
+  - route-local lesson stage view defaults so `/lesson` no longer inherits global Live2D drag or zoom offsets that can move the character off-screen
+  - explicit `xOffset / yOffset` forwarding into `Live2DScene`, fixing the earlier path where lesson-safe stage props were ignored and only global settings were read
+  - preset Live2D asset routing through internal non-`.zip` URLs so bundled models do not trigger browser download interception on page load
+  - default AIRI card initialization on clean profiles, so `settings/airi-card` no longer looks empty or blocked before local setup
+  - clearer `settings/airi-card` copy that distinguishes character-card JSON upload from Live2D display-model configuration
+  - route-level isolation so lesson mode can be demoed without generic AIRI auth and runtime noise
+  - lesson-local speech bootstrap that applies configured provider defaults without starting the generic chat runtime
+  - real teacher TTS playback through the temporary Edge Xiaoxiao TTS proxy path in `LightRAG`
+  - real learner mic/ASR input through the official Doubao realtime ASR proxy path in `LightRAG`
+  - frontend debug-signal observability that renders the backend `debug_signals` payload through the "本轮能力" card
+  - a static Edge Xiaoxiao TTS voice entry for `peptutor-edge-tts`, plus the retained static Doubao voice allowlist for later `volcengine` use
+  - AIRI-standard lesson turn streaming:
+    - `POST /lesson/turn/stream` emits `meta`, `action`, `text_delta`, `done`, and `error` SSE events
+    - frontend lesson chat consumes backend SSE directly instead of fake-splitting a completed JSON response
+    - backend teacher responses now stream from the lesson responder call site through a request-local sink; when the configured LLM supports `stream=True`, `text_delta` is emitted as model chunks arrive instead of waiting for the final `LessonTurnResult`
+    - deterministic fallback responses still emit through the same SSE path as immediate text deltas
+    - `turn_client_id` gates stale turn application after interruption
+    - lesson barge-in now stops AIRI playback and aborts the active lesson stream
+    - ACT payloads now carry `emotion`, `motion`, `expression`, `duration_ms`, `teaching_action`, `evaluation`, and `turn_label`
+    - when a persona `AiriPerformancePlan` is available, ACT payloads also carry `speech_style`, `mouth_intensity`, `interrupt_policy`, `content_source`, `fallback_allowed`, and `performance_source`
+    - frontend ACT parsing now preserves the full `AiriPerformancePlan` metadata and writes it into the lesson AIRI runtime store
+    - `speech_style` now adapts lesson-safe teacher playback pace for Edge Xiaoxiao and SSML-compatible providers without changing lesson content
+    - `mouth_intensity` now scales teacher lip-sync amplitude for Live2D and fallback analyser-driven mouth movement
+    - `interrupt_policy` now gates automatic learner barge-in while still allowing explicit user interruption controls
+    - AIRI stage state now maps `listening / learner_speaking / thinking / teacher_speaking / interrupted` into visible motion/expression behavior while preserving existing teacher lip-sync
+    - the lesson sidebar exposes runtime-only diagnostics for `speech_style`, `mouth_intensity`, `interrupt_policy`, and `performance_source`, so visual behavior can be checked against backend persona intent
+
+## Current Source Of Truth
+- design spec: `docs/superpowers/specs/2026-03-22-teaching-runtime-rag-design.md`
+- roundtable consensus: `docs/lesson-teacher-mind-roundtable-consensus.md`
+- next task plan: `docs/lesson-teacher-mind-task-plan.md`
+- implementation plan: `docs/superpowers/plans/2026-03-22-teaching-runtime-rag-implementation-plan.md`
+- current lesson route: `backend/LightRAG/lightrag/api/routers/lesson_routes.py`
+- current runtime factory: `backend/LightRAG/lightrag/orchestrator/lesson_runtime_factory.py`
+- current planner prompt module: `backend/LightRAG/lightrag/pedagogy/planner.py`
+- current responder prompt module: `backend/LightRAG/lightrag/pedagogy/responder.py`
+- current teacher persona source: `soul.md`
+- current lesson persona contract and assembler: `backend/LightRAG/lightrag/orchestrator/lesson_persona.py`
+- current runtime module: `backend/LightRAG/lightrag/orchestrator/lesson_runtime.py`
+- current support-asset retriever: `backend/LightRAG/lightrag/orchestrator/support_asset_retrieval.py`
+- current SimpleMem prompt-memory adapter: `backend/LightRAG/lightrag/orchestrator/simplemem_prompt_memory.py`
+- current SimpleMem semantic-memory adapter: `backend/LightRAG/lightrag/orchestrator/simplemem_semantic_memory.py`
+- current SimpleMem writeback adapter: `backend/LightRAG/lightrag/orchestrator/simplemem_writeback.py`
+- current support-asset output: `app/knowledge/structured/support/g5s1u3-support-assets.json`
+- current lesson page route: `frontend/airi/apps/stage-web/src/pages/lesson/index.vue`
+- current lesson store: `frontend/airi/packages/stage-ui/src/stores/lesson.ts`
+- current lesson panel: `frontend/airi/packages/stage-layouts/src/components/Widgets/LessonPanel.vue`
+- current stage-web app shell: `frontend/airi/apps/stage-web/src/App.vue`
+- current stage layout: `frontend/airi/packages/stage-layouts/src/layouts/stage.vue`
+- current lesson-safe stage component: `frontend/airi/packages/stage-ui/src/components/scenes/Stage.vue`
+- current backend speech config helper: `backend/LightRAG/lightrag/api/speech_proxy_config.py`
+- current backend TTS route: `backend/LightRAG/lightrag/api/speech_proxy_routes.py`
+- current backend realtime ASR bridge: `backend/LightRAG/lightrag/api/speech_proxy_ws.py`
+- current backend-native speech smoke: `scripts/smoke_speech.py`
+- current backend-native lesson turn smoke: `scripts/smoke_lesson_turn.py`
+- current backend dialogue-quality eval: `scripts/eval_lesson_dialogue_quality.py`
+- current backend live-transcript quality eval: `scripts/eval_lesson_transcript_quality.py`
+- current speech deployment notes: `docs/deployment/speech-proxy.md`
+
+## Validation Snapshot
+Realtime AIRI lesson voice validation on `2026-04-24`:
+- theme/catalog follow-up:
+  - `/lesson` no longer mixes hard-coded dark sidebar/chat blocks with a light control panel; current light and dark modes were checked separately on desktop and mobile
+  - the startup panel now displays all loaded grade/semester buckets: `G5 S1`, `G5 S2`, `G6 S1`, and `G6 S2`, with unit/page counts
+  - responder live output now rejects English-only teacher replies when the deterministic fallback contains Chinese, preventing real-backend smoke from accepting an English-only classroom opening
+  - latest screenshot audit:
+    - light desktop: `photo/playwright-lesson-2026-04-24-theme-light-desktop-1440x900-v2.png`
+    - dark desktop: `photo/playwright-lesson-2026-04-24-theme-dark-desktop-1440x900-v2.png`
+    - light mobile: `photo/playwright-lesson-2026-04-24-theme-light-mobile-390x844-v3.png`
+    - dark mobile: `photo/playwright-lesson-2026-04-24-theme-dark-mobile-390x844-v3.png`
+    - result: no visible overlap, abnormal width/height, offscreen shell breakage, or mixed half-light/half-dark theme found
+- mainline follow-up:
+  - replaced the previous post-result pseudo-stream path with a request-local runtime stream sink: `action` metadata is emitted before teacher text, live responder chunks can become SSE `text_delta` immediately, and `done` remains the authoritative state commit
+  - `LLMCallLoopRunner.stream_text(...)` now wraps async `stream=True` model output for the lesson responder while preserving non-stream fallback behavior
+  - frontend `abortActiveTurn(...)` now stops lesson speech playback as part of stream interruption, not just the HTTP request
+  - fixed backend SSE text chunking so English sentence spacing is preserved across `text_delta` replay
+  - backend AIRI `action` payloads now have explicit profiles for every current `LessonTeachingAction` and `LessonEvaluationResult`, and streamed turns now prefer the per-turn persona `AiriPerformancePlan` before falling back to the legacy static profiles
+  - lesson classroom state now drives both Live2D motion and VRM expression for listening, learner speaking, louder learner speech, thinking, and interruption
+  - frontend AIRI visible-layer closure now applies backend `AiriPerformancePlan` fields to voice pacing, mouth intensity, and automatic barge-in policy instead of leaving those fields as backend-only debug metadata
+  - Task 7 AIRI visible closure now makes the state handoff visible in the lesson sidebar: listening, learner speaking, thinking, teacher speaking, correction, encouragement, interruption, speech pacing, mouth intensity, motion, expression, and interruption policy are rendered as visible classroom signals, with browser coverage locking the handoff
+  - route visual audit found a malformed dark-mode logo asset path in the header; `/lesson` now uses the validated shared AIRI logo in both light and dark mode so the dark header no longer shows a broken image
+  - `settings/airi-card` clean-profile default `ReLU` initialization now has a committed store regression test
+  - latest AIRI visible-layer screenshot audit:
+    - light desktop: `photo/playwright-lesson-2026-04-24-airi-performance-closure-g6-p49-light-desktop-v2.png`
+    - dark desktop: `photo/playwright-lesson-2026-04-24-airi-performance-closure-g6-p49-dark-desktop-v2.png`
+    - result: no visible overlap, abnormal width/height, broken header image, offscreen shell breakage, or mixed light/dark theme found
+  - latest Task 7 visible-closure screenshot audit:
+    - desktop: `photo/playwright-lesson-2026-04-25-airi-visible-closure-desktop-1440x900.png`
+    - mobile: `photo/playwright-lesson-2026-04-25-airi-visible-closure-mobile-390x844.png`
+    - result: no visible overlap, abnormal width/height, offscreen shell breakage, or mixed theme found after the lesson selector tabs were constrained to scroll instead of clipping
+  - frontend AIRI visible-layer validation:
+    - `cd frontend/airi && pnpm -F @proj-airi/stage-ui test:run -- src/composables/queues.test.ts src/stores/lesson-airi-runtime.test.ts src/components/scenes/runtime.test.ts src/stores/lesson-chat-provider.test.ts`
+    - result: `186 passed | 3 skipped`
+    - `cd frontend/airi && pnpm -F @proj-airi/stage-ui typecheck`
+    - result: passed
+    - `cd frontend/airi && pnpm -F @proj-airi/stage-layouts typecheck`
+    - result: passed
+    - touched-file ESLint for the stage-ui and stage-layouts AIRI visible-layer files
+    - result: passed
+    - `NO_PROXY=127.0.0.1,localhost,::1 bash scripts/smoke_lesson_browser.sh`
+    - result: `8 passed | 12 skipped`
+  - latest screenshot audit:
+    - desktop: `photo/playwright-lesson-2026-04-24-true-stream-desktop-1440x900.png`
+    - mobile: `photo/playwright-lesson-2026-04-24-true-stream-mobile-390x844.png`
+    - result: no visible overlap, offscreen shell breakage, blank page, or abnormal panel sizing found
+- backend realtime lesson stream regression:
+  - `cd backend/LightRAG && .venv/bin/python -m pytest tests/test_lesson_runtime.py tests/test_lesson_runtime_factory.py tests/test_speech_proxy_routes.py -q`
+  - result: `106 passed, 5 warnings`
+  - `cd backend/LightRAG && .venv/bin/ruff check lightrag/pedagogy/responder.py lightrag/orchestrator/lesson_runtime_factory.py lightrag/orchestrator/lesson_runtime.py lightrag/api/routers/lesson_routes.py tests/test_lesson_runtime.py tests/test_lesson_runtime_factory.py`
+  - result: passed
+- backend persona-aware prompt validation:
+  - latest teacher-soul/page-entry hardening:
+    - `cd backend/LightRAG && .venv/bin/python -m pytest tests/test_lesson_runtime.py::test_page_entry_fallback_hides_curriculum_metadata_when_model_unavailable tests/test_lesson_runtime.py::test_page_entry_prefers_llm_teacher_voice_over_fixed_fallback tests/test_lesson_runtime.py::test_page_entry_rejects_llm_curriculum_metadata_copy tests/test_lesson_runtime.py::test_task_instruction_page_accepts_concrete_list_items tests/test_lesson_runtime.py::test_responder_strips_markdown_from_live_teacher_voice tests/test_lesson_runtime.py::test_responder_system_prompt_carries_teacher_soul_authoritatively tests/test_lesson_runtime.py::test_live_responder_can_cover_page_entry_and_answer_turns -q`
+    - result: `7 passed`
+    - manual route recheck against `TB-G6S2Recycle2-P49`: opening response was live teacher wording without `Theme:` or `Create a personal party shopping list`, `cake` evaluated as `correct`, and `debug_signals.persona.airi_performance` remained present
+  - `cd backend/LightRAG && .venv/bin/python -m pytest tests/test_lesson_persona.py -q`
+  - result: `9 passed`
+  - `cd backend/LightRAG && .venv/bin/python -m pytest tests/test_lesson_runtime.py -q`
+  - result: `83 passed`
+  - `cd backend/LightRAG && .venv/bin/python -m pytest tests/test_lesson_runtime_factory.py -q`
+  - result: `23 passed`
+  - `cd backend/LightRAG && .venv/bin/python -m pytest tests/test_simplemem_prompt_memory.py -q`
+  - result: `22 passed`
+  - `cd backend/LightRAG && .venv/bin/ruff check lightrag/orchestrator/lesson_runtime.py lightrag/pedagogy/responder.py tests/test_lesson_runtime.py`
+  - result: passed
+  - `NO_PROXY=127.0.0.1,localhost,::1 backend/LightRAG/.venv/bin/python scripts/smoke_lesson_turn.py`
+  - result: passed across `TB-G5S1U3-P24 -> P25 -> P26` plus `TB-G6S2U2-P13`
+  - locked coverage: persona context reaches `LessonResponder`, memory-derived relationship signals shape prompt delivery hints, stable persona catchphrases are available, and `confirm` turns fall back if required practice phrases are dropped
+- backend memory-layering validation:
+  - `cd backend/LightRAG && .venv/bin/python -m pytest tests/test_simplemem_prompt_memory.py -q`
+  - result: `22 passed`
+  - `cd backend/LightRAG && .venv/bin/python -m pytest tests/test_simplemem_writeback.py -q`
+  - result: `4 passed`
+  - `cd backend/LightRAG && .venv/bin/python -m pytest tests/test_simplemem_semantic_memory.py -q`
+  - result: `1 passed`
+  - `cd backend/LightRAG && .venv/bin/ruff check lightrag/orchestrator/simplemem_prompt_memory.py lightrag/orchestrator/simplemem_writeback.py lightrag/pedagogy/responder.py tests/test_simplemem_prompt_memory.py tests/test_simplemem_writeback.py tests/test_lesson_runtime.py`
+  - result: passed
+  - locked coverage: fact/episode/procedure memory layers, repeated-progress promotion, stable mistake/mastery conflict resolution, writeback `memory_layer` metadata, and responder prompt boundaries for layered memory
+- backend retrieval and teacher-quality validation:
+  - `cd backend/LightRAG && .venv/bin/python -m pytest tests/test_lesson_dialogue_quality_eval.py tests/test_lesson_retrieval_eval.py -q`
+  - result: `4 passed`
+  - `NO_PROXY=127.0.0.1,localhost,::1 backend/LightRAG/.venv/bin/python scripts/eval_lesson_dialogue_quality.py`
+  - result: `strict=6/6`, `retrieval=100%`, `response=100%`, `persona=100%`, `memory=100%`
+  - `NO_PROXY=127.0.0.1,localhost,::1 backend/LightRAG/.venv/bin/python scripts/eval_lesson_retrieval.py`
+  - result: `strict=26/26`, `top1=26/26`, `support=3/3`, `cross-grade leakage=0`
+  - locked coverage: fixed classroom samples now catch raw `Key patterns`/internal-id leakage, missing support hits, missing persona performance metadata, and missing SimpleMem prompt-memory influence before changes are accepted
+- backend live-model transcript quality validation:
+  - `cd backend/LightRAG && .venv/bin/python -m pytest tests/test_lesson_transcript_quality_eval.py tests/test_lesson_dialogue_quality_eval.py -q`
+  - result: `7 passed`
+  - `cd backend/LightRAG && .venv/bin/python -m pytest tests/test_lesson_runtime.py tests/test_lesson_transcript_quality_eval.py tests/test_lesson_dialogue_quality_eval.py -q`
+  - result: `90 passed`
+  - `cd backend/LightRAG && .venv/bin/ruff check lightrag/orchestrator/lesson_transcript_quality_eval.py tests/test_lesson_transcript_quality_eval.py ../../scripts/eval_lesson_transcript_quality.py`
+  - result: passed
+  - `NO_PROXY=127.0.0.1,localhost,::1 backend/LightRAG/.venv/bin/python scripts/eval_lesson_transcript_quality.py --write-transcript backend/LightRAG/temp/lesson_transcript_quality_latest.json`
+  - result: `strict=15/15`, `response=100%`, `retrieval=100%`, `persona=100%`, `airi=100%`, `live_prompt=100%`, `latency=100%`, `avg_latency=2729ms`, `max_latency=6198ms`
+  - re-score command: `backend/LightRAG/.venv/bin/python scripts/eval_lesson_transcript_quality.py --input backend/LightRAG/temp/lesson_transcript_quality_latest.json`
+  - result: same `15/15` transcript quality score with `airi=100%`
+- frontend stream/action/runtime regression:
+  - `cd frontend/airi && pnpm -F @proj-airi/stage-ui test:run -- src/stores/modules/airi-card.test.ts src/composables/queues.test.ts src/stores/lesson.test.ts src/stores/lesson-chat-provider.test.ts src/components/scenes/runtime.test.ts`
+  - result: `181 passed | 3 skipped`
+  - `cd frontend/airi && pnpm -F @proj-airi/stage-web test:run:browser -- src/pages/lesson/index.browser.test.ts`
+  - result: `13 passed | 8 skipped`
+  - `cd /root/my-project/PepTutor && bash scripts/smoke_lesson_browser.sh`
+  - result: `8 passed | 12 skipped`
+- frontend static checks:
+  - `cd frontend/airi && pnpm -F @proj-airi/stage-web typecheck && pnpm -F @proj-airi/stage-ui typecheck`
+  - result: passed
+  - touched-file ESLint completed with `0 errors`; existing `ChatArea.vue` template style warnings remain unchanged
+- Playwright visual screenshots:
+  - desktop: `photo/playwright-lesson-2026-04-24-true-stream-desktop-1440x900.png`
+  - mobile: `photo/playwright-lesson-2026-04-24-true-stream-mobile-390x844.png`
+  - visual review result: no element overlap, offscreen shell breakage, blank page, or abnormal panel sizing found
+
+Backend-targeted validation on `2026-04-18`:
+- `backend/LightRAG` lesson runtime regression:
+  - `cd backend/LightRAG && ./.venv/bin/python -m pytest tests/test_lesson_runtime.py -q`
+  - result: `56 passed`
+- `backend/LightRAG` runtime-factory regression:
+  - `cd backend/LightRAG && ./.venv/bin/python -m pytest tests/test_lesson_runtime_factory.py -q`
+  - result: `22 passed`
+- targeted lint:
+  - `cd backend/LightRAG && ./.venv/bin/python -m ruff check lightrag/pedagogy/evaluation.py lightrag/pedagogy/responder.py lightrag/orchestrator/lesson_runtime.py tests/test_lesson_runtime.py tests/test_lesson_runtime_factory.py`
+  - result: passed
+Frontend and browser validation on `2026-04-12`:
+- narrow frontend lesson-slice typechecks validated during the current route-isolation work:
+  - `pnpm --filter @proj-airi/stage-ui typecheck`
+  - `pnpm --filter @proj-airi/stage-layouts typecheck`
+  - `pnpm --filter @proj-airi/stage-web typecheck`
+  - result: passed
+- narrow frontend lesson-store regression:
+  - `pnpm --dir frontend/airi exec vitest run packages/stage-ui/src/stores/lesson.test.ts packages/stage-ui/src/utils/lesson-route.test.ts`
+  - result: `2 files passed`, `19 tests passed`
+- frontend provider bootstrap and Doubao voice-path regression:
+  - `cd frontend/airi && pnpm -F @proj-airi/stage-ui exec vitest run src/stores/provider-env-bootstrap.test.ts`
+  - result: `10 passed`
+- frontend lesson-stage typechecks:
+  - `pnpm --dir frontend/airi --filter @proj-airi/stage-ui-live2d typecheck`
+  - `pnpm --dir frontend/airi --filter @proj-airi/stage-ui typecheck`
+  - `pnpm --dir frontend/airi --filter @proj-airi/stage-web typecheck`
+  - result: passed
+- full frontend workspace regression:
+  - `cd frontend/airi && pnpm test:run`
+  - result: `54 passed | 2 skipped (56 files)`, `285 passed | 9 skipped (294 tests)`
+- real-browser lesson validation on `2026-04-14`:
+  - frontend page: `http://127.0.0.1:5173/lesson?page_uid=TB-G5S1U3-P24`
+  - backend server: `http://127.0.0.1:9625`
+  - shell note: `scripts/wait-for-lesson-backend.sh` now bypasses proxies automatically for loopback targets, so the checked-in browser smoke no longer needs explicit `NO_PROXY` wrappers
+  - one-command helper: `cd /root/my-project/PepTutor && bash scripts/smoke_lesson_browser.sh`
+  - result: manual Chromium validation passed for `P24 -> P25 -> P26` plus the `P26` `snow` interruption, for a checked-in `TB-G6S2U2-P13` browser slice where `stayed at home` / `had a cold` both stay on the dialogue block and hit the expected unit-vocabulary block at top-1, and for a checked-in `TB-G6S2Recycle2-P49 -> P51` browser slice where route restore and bad-page recovery both snap back to the last valid page
+  - `2026-04-18` committed real-browser suite recheck:
+    - one-command smoke: `cd /root/my-project/PepTutor && bash scripts/smoke_lesson_browser.sh`
+    - result: `1 file passed`, `8 passed | 6 skipped (14)` in Chromium
+    - workflow note: `scripts/smoke_lesson_turn.py` still covers the direct route contract, while `scripts/smoke_lesson_browser.sh` is now the default one-command browser-smoke entry point; keep a dedicated long-lived `lightrag-server` shell only for interactive follow-up checks
+  - `2026-04-18` proxy-env recheck:
+    - command: `http_proxy=http://172.20.128.1:7897 https_proxy=http://172.20.128.1:7897 bash scripts/smoke_lesson_browser.sh`
+    - result: passed; the helper and the nested `pnpm -F @proj-airi/stage-web test:run:browser:real` command both worked without manual `NO_PROXY`, and the temporary backend still cleaned itself up after the suite
+  - `2026-04-18` helper regression follow-up:
+    - commands:
+      - `cd backend/LightRAG && ./.venv/bin/python -m pytest tests/test_lesson_smoke_scripts.py -q`
+      - `timeout 600s bash scripts/smoke_lesson_browser.sh`
+    - result: `10 passed` offline, and the real helper still passed with `1 file passed`, `8 passed | 6 skipped (14)` in Chromium
+    - workflow note: `scripts/smoke_lesson_browser.sh` now has checked-in offline coverage for loopback proxy-bypass variants (`127.0.0.1`, `localhost`, `[::1]`), the default route-focused backend env, the `PEPTUTOR_LESSON_SMOKE_FULL_STACK=1` / `PEPTUTOR_LESSON_SMOKE_KEEP_SERVER=1` branch, preflight fail-fast checks for missing helper dependencies, and the wait-failure / browser-failure cleanup paths that must print the backend log tail; the helper now tracks the real backend PID so the default path actually clears `:9625` after the suite
+  - `2026-04-18` frontend repo standalone workflow:
+    - workflow: `frontend/airi/.github/workflows/lesson-browser-smoke.yml`
+    - trigger: narrow `push` on `main`, `workflow_dispatch`, plus nightly `schedule`
+    - runner entry: `frontend/airi/apps/stage-web` now calls `frontend/airi/scripts/run-lesson-browser-real-smoke.sh`, which uses the frontend-owned `frontend/airi/scripts/wait-for-lesson-backend.sh`; `test:run:browser:real` no longer depends on PepTutor root scripts
+    - backend contract: the workflow targets a managed real backend via required secret `PEPTUTOR_LESSON_REAL_BACKEND_URL`, with optional auth secrets `PEPTUTOR_LESSON_API_KEY`, `PEPTUTOR_LESSON_BEARER_TOKEN`, `PEPTUTOR_LESSON_AUTH_USERNAME`, and `PEPTUTOR_LESSON_AUTH_PASSWORD`
+  - `2026-04-19` fork Actions verification:
+    - PR: `moeru-ai/airi#1683` (`https://github.com/moeru-ai/airi/pull/1683`)
+    - head: `fb8005de991eca09930d8e4f430b44c94a8f67d3`
+    - current upstream state: `MERGEABLE`, `BLOCKED`, not draft
+    - branch-check note: the PR branch itself currently reports no branch checks; the fork bootstrap run is the external CI-path proof
+    - CI follow-up: the checked-in workflow now installs Chromium via `pnpm dlx playwright install --with-deps chromium`, and the frontend-owned launcher now calls `pnpm exec vitest` instead of relying on a globally visible `vitest` binary
+    - validation route: a temporary fork-only bootstrap workflow on `rootliuat/airi:main` checked out `feat/lesson-browser-smoke-ci` and targeted a temporary public lesson backend
+    - run: `https://github.com/rootliuat/airi/actions/runs/24617715847`
+    - result: the fork GitHub Actions run passed with `1 file passed`, `8 passed | 6 skipped (14)`, so the real-browser workflow wiring is now validated outside the local machine even before upstream merge
+    - handoff note: the PR body now carries the merge-time setup checklist for upstream secrets and post-merge `workflow_dispatch`
+    - remaining upstream step: `moeru-ai/airi` still needs this PR merged plus `PEPTUTOR_LESSON_REAL_BACKEND_URL` and any required auth secrets configured before the scheduled workflow can run there
+  - `2026-04-19` review cleanup follow-up:
+    - PR: `moeru-ai/airi#1683` (`https://github.com/moeru-ai/airi/pull/1683`)
+    - head: `97388beb5e62a81200c8df820308663dce077297`
+    - current upstream state: `MERGEABLE`, `BLOCKED`, not draft
+    - follow-up comment: `https://github.com/moeru-ai/airi/pull/1683#issuecomment-4274929739`
+    - changed files: `apps/stage-web/vite.config.ts`, `apps/stage-web/src/peptutor-voice-env-defines.ts`, `apps/stage-web/src/server/doubao-tts-proxy.ts`, `apps/stage-web/src/server/doubao-realtime-asr-proxy.ts`, `apps/stage-web/src/server/doubao-realtime-protocol.ts`, plus the matching new or updated tests under `apps/stage-web/src/**/*.test.ts`
+    - fixed review findings: the frontend Vite `define` path now exposes only `VITE_`-prefixed PepTutor voice env keys instead of leaking server-only secrets into the browser bundle; the Doubao TTS proxy now points its repo `.env` fallback at the frontend repo root, returns `audio/L16; rate=16000` for PCM responses, the realtime ASR proxy now rejects malformed JSON control frames without throwing out of the websocket callback, and `parseDoubaoRealtimeFrame(...)` now does explicit bounds checks for truncated upstream frames
+    - checked-in regressions: `apps/stage-web/src/peptutor-voice-env-defines.test.ts`, `apps/stage-web/src/server/doubao-tts-proxy.test.ts`, `apps/stage-web/src/server/doubao-realtime-asr-proxy.test.ts`, and `apps/stage-web/src/server/doubao-realtime-protocol.test.ts`
+    - validation:
+      - `cd frontend/airi/apps/stage-web && pnpm exec vitest run src/peptutor-voice-env-defines.test.ts src/server/doubao-tts-proxy.test.ts src/server/doubao-realtime-protocol.test.ts src/server/doubao-realtime-asr-proxy.test.ts --reporter verbose`
+      - `cd frontend/airi && pnpm exec eslint apps/stage-web/vite.config.ts apps/stage-web/src/peptutor-voice-env-defines.ts apps/stage-web/src/peptutor-voice-env-defines.test.ts apps/stage-web/src/server/doubao-tts-proxy.ts apps/stage-web/src/server/doubao-tts-proxy.test.ts apps/stage-web/src/server/doubao-realtime-protocol.ts apps/stage-web/src/server/doubao-realtime-protocol.test.ts apps/stage-web/src/server/doubao-realtime-asr-proxy.ts apps/stage-web/src/server/doubao-realtime-asr-proxy.test.ts`
+      - `cd frontend/airi/apps/stage-web && pnpm exec vitest run -c vitest.browser.sanity.config.ts --reporter verbose`
+      - `cd frontend/airi && pnpm -F @proj-airi/stage-web test:run:browser -- src/pages/lesson/index.browser.test.ts -t "switches scope through the grouped selector" --reporter verbose`
+    - browser recheck comment: `https://github.com/moeru-ai/airi/pull/1683#issuecomment-4274935150`
+    - browser note: the current PR head still passes browser sanity (`1 file passed`, `1 test passed`) plus the grouped-selector Chromium slice (`2 files passed`, `7 passed | 8 skipped (15)`); the broader AIRI i18n YAML pre-transform warnings still appear during the browser run, but this lesson slice still completes successfully
+    - typecheck note: `pnpm -F @proj-airi/stage-web run typecheck` is still blocked by unrelated existing branch errors in `unplugin-vue-router/vite` resolution, `packages/stage-shared/src/beat-sync/detector.ts`, and `packages/stage-ui/src/stores/providers.ts`; this cleanup stayed scoped to the review findings above
+  - `2026-04-19` typecheck cleanup follow-up:
+    - PR: `moeru-ai/airi#1683` (`https://github.com/moeru-ai/airi/pull/1683`)
+    - head: `d29e1b1b7f586627554441533df71319b0bb6dd1`
+    - current upstream state: `MERGEABLE`, `BLOCKED`, not draft
+    - follow-up comment: `https://github.com/moeru-ai/airi/pull/1683#issuecomment-4274969438`
+    - changed files: `apps/stage-web/tsconfig.json`, `apps/stage-web/src/unplugin-vue-router-vite.d.ts`, `packages/stage-shared/tsconfig.json`, `packages/stage-shared/src/electron-screen-capture.d.ts`, `packages/stage-shared/src/electron-screen-capture-renderer.d.ts`, `packages/stage-shared/src/beat-sync/detector.ts`, `packages/stage-ui/src/stores/providers.ts`
+    - fixed blockers: `stage-web` can now resolve the `@proj-airi/electron-screen-capture` workspace package and the `unplugin-vue-router/vite` plugin during `vue-tsc`; the beat-sync detector callbacks now carry concrete types instead of implicit `any`; and the realtime transcription provider metadata now includes the missing `chatPingCheckAvailable: false`
+    - validation:
+      - `cd frontend/airi && pnpm -F @proj-airi/stage-web run typecheck`
+      - `cd frontend/airi && pnpm -F @proj-airi/stage-web test:run:browser -- src/pages/lesson/index.browser.test.ts -t "switches scope through the grouped selector" --reporter verbose`
+    - result: `stage-web` typecheck now passes on the current PR head, and the grouped-selector Chromium slice still passes with `2 files passed`, `7 passed | 8 skipped (15)`; the broader AIRI i18n YAML pre-transform warnings still appear during that browser run, but they do not block the lesson slice
+  - `2026-04-19` review-thread cleanup follow-up:
+    - PR: `moeru-ai/airi#1683` (`https://github.com/moeru-ai/airi/pull/1683`)
+    - head: `2bd9b9e1fecdc3ae673cfe6b0f51e5d722fcde6a`
+    - current upstream state: `MERGEABLE`, `BLOCKED`, not draft
+    - follow-up comment: `https://github.com/moeru-ai/airi/pull/1683#issuecomment-4274998013`
+    - changed files: `.github/workflows/lesson-browser-smoke.yml`, `apps/stage-web/vite.config.ts`, `packages/stage-ui/src/stores/providers.ts`, `vitest.config.ts`, `apps/stage-web/src/server/doubao-tts-proxy.ts`, `apps/stage-web/src/server/doubao-tts-proxy.test.ts`
+    - fixed review surface: `vite.config.ts` now points `repoRoot` at the frontend monorepo root before `loadEnv(...)`; the lesson smoke workflow `push.paths` now covers the real shared lesson dependency surface under `packages/stage-layouts/**`, `packages/stage-ui/src/**`, and `packages/stage-ui-live2d/src/**`; the shared `volcengine` TTS provider is gated to `stage-web` where `serveDoubaoTtsProxy(...)` actually exists; the root `vitest.config.ts` no longer pulls the Playwright browser project into the default `pnpm test:run` path; and the redundant `readRepoEnvFallback()` branch is removed from the Doubao TTS proxy
+    - validation:
+      - `cd frontend/airi && pnpm exec eslint apps/stage-web/vite.config.ts packages/stage-ui/src/stores/providers.ts vitest.config.ts`
+      - `cd frontend/airi && pnpm exec eslint apps/stage-web/src/server/doubao-tts-proxy.ts apps/stage-web/src/server/doubao-tts-proxy.test.ts`
+      - `cd frontend/airi && pnpm exec vitest run apps/stage-web/src/server/doubao-tts-proxy.test.ts --reporter verbose`
+      - static sanity check confirmed `repoRoot` now resolves to the frontend monorepo root, the workflow `push.paths` include the three shared lesson package globs above, and the root `vitest.config.ts` no longer includes `apps/stage-web/vitest.browser.config.ts`
+    - rerun note: a fresh-worktree attempt to rerun `pnpm -F @proj-airi/stage-web run typecheck` plus the grouped-selector Chromium slice still hit unrelated existing cross-workspace package-resolution failures before reaching lesson-specific signal, so those broad reruns were not used as evidence for or against this narrow review cleanup
+    - result: all current review threads on `moeru-ai/airi#1683` are now resolved on the current head, and the remaining blocker is no longer local review noise; it is the normal upstream merge gate plus the merge-time upstream secret/config enablement already called out in the PR body
+  - `2026-04-19` upstream handoff boundary confirmed:
+    - PR: `moeru-ai/airi#1683` (`https://github.com/moeru-ai/airi/pull/1683`)
+    - head: `2bd9b9e1fecdc3ae673cfe6b0f51e5d722fcde6a`
+    - current upstream state: `MERGEABLE`, `BLOCKED`, not draft
+    - permission check: `gh repo view moeru-ai/airi --json viewerPermission` reports `READ`
+    - merge gate check: `gh pr merge 1683 --repo moeru-ai/airi --merge --delete-branch` returns `the base branch policy prohibits the merge`
+    - auto-merge check: `gh pr merge 1683 --repo moeru-ai/airi --auto --merge` returns `EnablePullRequestAutoMerge` permission denied
+    - Actions config boundary:
+      - `gh variable list --repo moeru-ai/airi` returns `HTTP 403`, so this account cannot inspect or edit upstream Actions variables from here
+      - the workflow file exists on the PR head / fork branch (`rootliuat/airi:feat/lesson-browser-smoke-ci`) but not yet on upstream `main`, so `gh workflow view lesson-browser-smoke.yml --repo moeru-ai/airi` returns `404` and `gh workflow run "Lesson Browser Smoke" --repo moeru-ai/airi --ref main` returns `could not find any workflows named Lesson Browser Smoke`
+      - the workflow consumes `secrets.PEPTUTOR_LESSON_REAL_BACKEND_URL` plus optional auth secrets, so upstream merge-time configuration needs to happen as Actions secrets, not just as repo variables
+      - maintainer CLI handoff once this PR lands on upstream `main`:
+        ```bash
+        gh secret set PEPTUTOR_LESSON_REAL_BACKEND_URL --repo moeru-ai/airi --body 'https://<lesson-backend>'
+        gh secret set PEPTUTOR_LESSON_API_KEY --repo moeru-ai/airi --body '<api-key>' # optional
+        gh secret set PEPTUTOR_LESSON_BEARER_TOKEN --repo moeru-ai/airi --body '<bearer-token>' # optional
+        gh secret set PEPTUTOR_LESSON_AUTH_USERNAME --repo moeru-ai/airi --body '<username>' # optional
+        gh secret set PEPTUTOR_LESSON_AUTH_PASSWORD --repo moeru-ai/airi --body '<password>' # optional
+        gh workflow run lesson-browser-smoke.yml --repo moeru-ai/airi --ref main
+        gh run list --repo moeru-ai/airi --workflow lesson-browser-smoke.yml --limit 1
+        ```
+    - PR body handoff update: the Maintainer Handoff section now records the current head, the fact that all current review threads are resolved, and the exact post-merge secret plus first-`workflow_dispatch` checklist
+    - result: local implementation and PR cleanup are both complete; the next executable step is upstream maintainer action to merge the PR, configure `PEPTUTOR_LESSON_REAL_BACKEND_URL` plus any required auth secrets, and then trigger the first upstream `workflow_dispatch`
+  - `2026-04-19` late shared-runtime review follow-up:
+    - PR: `moeru-ai/airi#1683` (`https://github.com/moeru-ai/airi/pull/1683`)
+    - head: `a8a7946bc4abce3ec0cef548c63196ea82c2db91`
+    - current upstream state: `MERGEABLE`, `BLOCKED`, not draft
+    - follow-up comment: `https://github.com/moeru-ai/airi/pull/1683#issuecomment-4275227063`
+    - thread reply: `https://github.com/moeru-ai/airi/pull/1683#discussion_r3106311458`
+    - changed files: `packages/stage-ui/src/stores/display-models.ts`, `packages/stage-ui/src/stores/display-models.test.ts`
+    - fixed review regression: the shared display-model preset Live2D URLs no longer hard-code the `stage-web`-only `__airi/live2d/preset/*` route; they now point back at bundled `hiyori_*_zh.zip` assets via `new URL(..., import.meta.url).href`, so `stage-tamagotchi` and `stage-pocket` do not regress on a path that only `apps/stage-web/vite.config.ts` serves
+    - validation:
+      - `cd frontend/airi && pnpm exec eslint packages/stage-ui/src/stores/display-models.ts packages/stage-ui/src/stores/display-models.test.ts`
+      - `cd frontend/airi && pnpm -F @proj-airi/stage-ui exec vitest run src/stores/display-models.test.ts src/stores/settings/stage-model.test.ts --reporter verbose`
+    - result: the new `packages/stage-ui/src/stores/display-models.test.ts` now locks this shared preset contract away from the runtime-specific `__airi` route, and all current review threads on `moeru-ai/airi#1683` are resolved again (`11 / 11`)
+  - `2026-04-19` protected-backend probe auth follow-up:
+    - PR: `moeru-ai/airi#1683` (`https://github.com/moeru-ai/airi/pull/1683`)
+    - head: `f84e4baf07238530a957c0541773226c35ea1a13`
+    - current upstream state: `MERGEABLE`, `BLOCKED`, not draft
+    - thread reply: `https://github.com/moeru-ai/airi/pull/1683#discussion_r3106331839`
+    - changed files: `scripts/wait-for-lesson-backend.sh`, `apps/stage-web/src/testing/wait-for-lesson-backend.test.ts`
+    - fixed review regression: the lesson-backend readiness probe now forwards the existing auth env into `curl`, with bearer-token precedence, API-key fallback, and a basic-auth fallback when only username/password are configured; protected `/lesson/catalog` backends no longer fail the smoke bootstrap before the browser suite starts
+    - validation:
+      - `cd frontend/airi && bash -n scripts/wait-for-lesson-backend.sh`
+      - `cd frontend/airi && pnpm exec eslint apps/stage-web/src/testing/wait-for-lesson-backend.test.ts`
+      - `cd frontend/airi && pnpm -F @proj-airi/stage-web exec vitest run src/testing/wait-for-lesson-backend.test.ts --reporter verbose`
+    - result: `apps/stage-web/src/testing/wait-for-lesson-backend.test.ts` now pins bearer-token, API-key, and basic-auth probe requests against a local HTTP server, and all current review threads on `moeru-ai/airi#1683` are resolved again (`12 / 12`)
+  - `2026-04-20` local manual startup handoff and review drift:
+    - PR: `moeru-ai/airi#1683` (`https://github.com/moeru-ai/airi/pull/1683`)
+    - head: `f84e4baf07238530a957c0541773226c35ea1a13`
+    - current upstream state at check time: `MERGEABLE`, `BLOCKED`, not draft
+    - local manual startup in this session:
+      - lesson backend: `http://127.0.0.1:9625`
+      - frontend page: `http://127.0.0.1:4173/lesson?page_uid=TB-G6S2Recycle2-P49`
+      - frontend runtime env: `VITE_PEPTUTOR_LESSON_REAL_BACKEND_URL=http://127.0.0.1:9625`, `VITE_PEPTUTOR_LESSON_API_URL=http://127.0.0.1:9625`, `VITE_PEPTUTOR_LESSON_EXPECT_DEBUG_SIGNALS=1`, `VITE_PEPTUTOR_SKIP_REMOTE_ASSET_DOWNLOADS=1`
+    - manual readiness checks:
+      - `bash scripts/wait-for-lesson-backend.sh --url http://127.0.0.1:9625 --timeout 20`
+      - `curl -I http://127.0.0.1:4173/lesson?page_uid=TB-G6S2Recycle2-P49`
+      - `curl http://127.0.0.1:9625/lesson/catalog`
+    - result: the local lesson backend answered immediately, the manually started `stage-web` dev server bound to `127.0.0.1:4173`, and the `/lesson` route returned `HTTP 200`, so the user can exercise the page directly against the local backend
+    - review drift after the auth-probe fix landed: bot review reopened one new thread on `packages/stage-ui/src/components/scenes/Stage.vue` about resetting the speech runtime host when `Stage` remounts (`https://github.com/moeru-ai/airi/pull/1683#discussion_r3106348214`), so the live PR is now `13` threads total with `12` resolved and `1` unresolved
+  - `2026-04-20` local frontend runtime follow-up:
+    - local changed files: `frontend/airi/apps/stage-web/vite.config.ts`, `frontend/airi/packages/stage-ui/src/stores/display-models.ts`, `frontend/airi/packages/stage-ui/src/stores/display-models.test.ts`, `frontend/airi/packages/stage-layouts/src/components/Widgets/LessonPanel.vue`, `frontend/airi/packages/stage-layouts/src/components/Layouts/Header.vue`, `frontend/airi/packages/stage-layouts/src/components/Layouts/MobileHeader.vue`
+    - fixed local runtime issues:
+      - `stage-web` now rewrites bundled preset Live2D models back onto the internal `/__airi/live2d/preset/*` routes at runtime, so `/lesson` no longer surfaces a raw `hiyori_*_zh.zip` asset URL during normal page load
+      - the preset asset middleware now serves `Content-Type: application/zip` plus `Content-Disposition: inline`
+      - the lesson task card now shows the selected page description under the active teacher prompt
+      - the top-right `Lesson` pill on the lesson route is now a current-page status badge instead of a no-op link
+    - manual diagnosis notes:
+      - the downloaded `hiyori_pro_zh` folder exactly matches `frontend/airi/packages/stage-ui/src/assets/live2d/models/hiyori_pro_zh.zip`; it is the bundled official Live2D sample-model payload, not a lesson-content package
+      - the large dark framed overlay seen in the screenshot was Vue DevTools, not lesson UI or a Live2D rendering failure
+      - then-current voice boundary on `/lesson`: `kokoro-local` teacher playback and `browser-web-speech-api` learner transcription both initialized in Chromium, but learner speech still only filled the draft input and still required a manual `发送`
+    - validation:
+      - `cd frontend/airi && pnpm exec eslint apps/stage-web/vite.config.ts packages/stage-ui/src/stores/display-models.ts packages/stage-ui/src/stores/display-models.test.ts packages/stage-layouts/src/components/Widgets/LessonPanel.vue packages/stage-layouts/src/components/Layouts/Header.vue packages/stage-layouts/src/components/Layouts/MobileHeader.vue`
+      - `cd frontend/airi && pnpm -F @proj-airi/stage-ui exec vitest run src/stores/display-models.test.ts src/stores/settings/stage-model.test.ts --reporter verbose`
+      - `curl -I http://127.0.0.1:4173/__airi/live2d/preset/hiyori_pro_zh`
+      - manual Chromium/DevTools validation against `http://127.0.0.1:4173/lesson?page_uid=TB-G6S2Recycle2-P49`
+    - result: the runtime now reports `settings.stageModelSelectedUrl = /__airi/live2d/preset/hiyori_pro_zh`, the lesson page still renders one Live2D `canvas`, there is no startup download prompt after refresh, the task card includes the page description, and the top-right lesson badge no longer looks broken when already inside `/lesson`
+- grouped-selector browser maintenance on `2026-04-17`:
+  - targeted browser runner command:
+    - `timeout 120s bash -lc 'cd frontend/airi && pnpm -F @proj-airi/stage-web test:run:browser -- src/pages/lesson/index.browser.test.ts -t "switches scope through the grouped selector" --reporter verbose'`
+  - result: still timed out in this environment instead of yielding a clean browser-test pass
+  - `2026-04-18` root-cause/fix recheck:
+    - root cause: the Vitest browser orchestrator posted `prepare` on iframe load before the tester had attached its real `BroadcastChannel` message listener
+    - fix: `frontend/airi/apps/stage-web/src/testing/vitest-playwright-provider.ts` now patches the Playwright browser page to replay recent channel messages to late listeners
+    - validation:
+      - `cd frontend/airi/apps/stage-web && pnpm exec vitest run -c vitest.browser.sanity.config.ts --reporter verbose`
+      - `cd frontend/airi && pnpm -F @proj-airi/stage-web test:run:browser -- src/pages/lesson/index.browser.test.ts -t "switches scope through the grouped selector" --reporter verbose`
+      - `cd frontend/airi && pnpm -F @proj-airi/stage-web test:run:browser -- src/pages/lesson/index.browser.test.ts --reporter verbose`
+    - result: all three browser commands now pass in Chromium; the same run also surfaced a stale `peptutor-backend-auth` browser-test mock that was missing `fetchPepTutorBackend`, and that mock is now aligned with the real store contract
+  - manual Chromium/DevTools validation against `http://127.0.0.1:4173/lesson?page_uid=TB-G6S2Recycle2-P49` with a temporary mock lesson backend on `http://127.0.0.1:9625` confirmed the grouped selector can jump across scopes from `TB-G6S2Recycle2-P49` to `TB-G6S1U1-P2`, with the route, selected scope, `Page UID`, persisted last page, and restarted opening turn all staying aligned
+- real Doubao TTS proxy smoke:
+  - request target: `http://127.0.0.1:4173/api/peptutor/doubao-tts`
+  - result: `HTTP 200`, `1884ms`, `audio/mpeg`
+- real Doubao realtime ASR proxy smoke:
+  - websocket target: `ws://127.0.0.1:4173/api/peptutor/doubao-realtime-asr`
+  - result: handshake ok, `ready = 281ms`, end-to-end `1515ms`
+- backend-native Doubao speech smoke through `LightRAG` on `2026-04-12`:
+  - startup path: `cd backend/LightRAG && ./.venv/bin/lightrag-server --port 9630`
+  - `POST /api/peptutor/doubao-tts`: `HTTP 200`, `1028ms`, `audio/mpeg`
+  - `WS /api/peptutor/doubao-realtime-asr`: `connection-started -> ready`, `ready = 308ms`
+- backend speech proxy regression:
+  - `cd backend/LightRAG && ./.venv/bin/python -m pytest tests/test_speech_proxy_config.py tests/test_speech_proxy_routes.py -q`
+  - result: `7 passed`
+- backend speech proxy observability regression:
+  - `cd backend/LightRAG && ./.venv/bin/python -m pytest tests/test_speech_proxy_routes.py -q`
+  - result: `5 passed`
+- backend-native speech smoke command:
+  - `cd /root/my-project/PepTutor && backend/LightRAG/.venv/bin/python scripts/smoke_speech.py`
+  - result: checked in as the default smoke for `POST /api/peptutor/edge-tts` and `WS /api/peptutor/doubao-realtime-asr`; set `PEPTUTOR_SPEECH_SMOKE_TTS_PATH=/api/peptutor/doubao-tts` to recheck Doubao TTS after balance is restored
+- backend-native speech smoke with request-scoped logging on `2026-04-13`:
+  - startup path: `cd backend/LightRAG && ./.venv/bin/lightrag-server --port 9631`
+  - smoke path: `PEPTUTOR_SPEECH_SMOKE_BASE_URL=http://127.0.0.1:9631 backend/LightRAG/.venv/bin/python scripts/smoke_speech.py`
+  - result: `TTS HTTP 200 in 1065ms`, `ASR ready in 279ms`, and server logs now show `Speech proxy TTS start/success` plus `Speech proxy ASR connected/start/ready/closed`
+- backend-native lesson turn smoke on `2026-04-13`:
+  - command: `cd /root/my-project/PepTutor && backend/LightRAG/.venv/bin/python scripts/smoke_lesson_turn.py`
+  - result: checked in as the default one-command live smoke for `POST /lesson/turn`
+  - default coverage: temporary backend startup, localized `P24` entry plus `ask_knowledge(unit)` and correction checks, same-student `P24 -> P25 -> P26` page switches, `P25` progression from `tea` into the role-play block, the `P26` `snow` interruption while the listening prompt is still active, and a `G6S2U2 P13` route-sanity slice where `stayed at home` and `had a cold` hit the expected unit vocabulary blocks at top-1 while keeping the current dialogue block stable
+  - full current-env mode: `PEPTUTOR_LESSON_SMOKE_FULL_STACK=1 backend/LightRAG/.venv/bin/python scripts/smoke_lesson_turn.py`
+- backend full regression after speech proxy migration:
+  - `cd backend/LightRAG && ./.venv/bin/python -m pytest tests`
+  - result: `629 passed, 33 skipped`
+  - `cd backend/LightRAG && ./.venv/bin/ruff check .`
+  - result: passed
+- offline retrieval baseline on `2026-04-13`:
+  - eval command: `backend/LightRAG/.venv/bin/python scripts/eval_lesson_retrieval.py`
+  - gold path: `app/knowledge/evals/lesson-retrieval-gold.json`
+  - manifest: `app/knowledge/structured/general/general-manifest.json`
+  - result: `23/23 strict`, `scope = 23/23`, `top1 = 23/23`, `top3 = 23/23`, `support = 3/3`, `cross-grade leakage = 0`
+  - per-grade result:
+    - `G5`: `9/9 strict`, `support = 3/3`
+    - `G6`: `14/14 strict`
+  - the current regression set now also covers the earlier `G6S2U1` failure mode where `How heavy is it?` from `TB-G6S2U1-P2` could drift into the later `P10` review page instead of the nearby `TB-G6S2U1-P3-D1` teaching block
+  - the current regression set also covers `G6S2U2` lexicon queries such as `What does stayed at home mean?` and `What does had a cold mean?`, which used to prefer the nearer `dialogue_core` blocks and now promote the stronger `vocabulary_core` teaching blocks to top-1
+- backend full regression after retrieval eval slice:
+  - `cd backend/LightRAG && ./.venv/bin/python -m pytest tests`
+  - result: `634 passed, 33 skipped`
+  - `cd backend/LightRAG && ./.venv/bin/ruff check .`
+  - result: passed
+- real DeepSeek runtime-factory checks for `TB-G5S1U3-P24`:
+  - the `P24` warm-up now opens and recovers with scene-based phrasing such as `假设你饿了，你可以说：I am hungry.`
+  - `What does salad mean?` routes to `ask_knowledge` with `retrieval_mode = unit`, explains the word, and returns to the current answer prompt
+  - while the warm-up prompt is still active, `What does salad mean?` now bridges back to `I am hungry.` instead of sliding into the later `eat` question
+  - `help` after `I am hungry.` returns concrete answer choices instead of `I'd like ...`
+  - `water` on the `drink` prompt now stays on `TB-G5S1U3-P24-D3` as a sentence-completion correction path instead of advancing as an acceptable full answer
+  - after a scene-based prompt like `现在你口渴了...`, the next correction turn now focuses on completing the sentence instead of repeating the same scene setup
+  - a correct drink answer now advances from `TB-G5S1U3-P24-D3` into the new food prompt on `TB-G5S1U3-P24-D4`
+  - `I'd like chicken and bread.` on the `drink` prompt now returns `evaluation = incorrect`, `teaching_action = hint`, and stays on `TB-G5S1U3-P24-D3`
+  - with `live_prompts_enabled = true`, teacher replies for `page_entry`, `hint`, `confirm`, `ask_help`, and `ask_knowledge` now all hit the live DeepSeek responder instead of only the older open-turn path
+  - a 26-turn real-model conversation across `P24 -> P25 -> P26` completed with `teacher_llm = true` on all 26 turns
+  - the `P25` role-play now opens a real short branch for `Can I eat noodles for breakfast?`:
+    - `turn_label = ask_knowledge`
+    - `retrieval_mode = branch`
+    - `retrieved_block_uids = [TB-G5S1U3-P27-D4]`
+    - the live teacher answers briefly, then the next learner turn closes the branch and restores the role-play answer state
+  - the earlier `P26` false-positive path is fixed: `What does snow mean?` while awaiting the listening answer now stays on `TB-G5S1U3-P26-D2` as `ask_knowledge`, instead of being swallowed as an acceptable answer
+  - the earlier answer-turn social failure is fixed: `I played soccer yesterday.` on the `drink` prompt now routes to `social / redirect / none` and keeps the lesson on `TB-G5S1U3-P24-D3`
+- browser-driven `/lesson` checks:
+  - `/lesson?page_uid=TB-G5S1U3-P24` renders with the AIRI shell, visible character area, and lesson panel
+  - if `settings/stage/model` is blank, `/lesson` now recovers to `preset-live2d-1` instead of leaving the stage empty
+  - even with intentionally bad persisted `settings/live2d/position = { "x": 3000, "y": 3000 }` and `settings/live2d/scale = 0.1`, `/lesson` still renders the bundled character inside the stage
+  - `preset-live2d-2` now loads through the internal `/__airi/live2d/preset/hiyori_free_zh` route instead of requesting a bare `.zip`, avoiding browser-side `hiyori_free_zh.zip` download prompts
+  - `/settings/airi-card` now initializes with the default `ReLU` card on a clean profile, and its upload affordance is explicitly for character-card JSON rather than Live2D model upload
+  - no auth, provider, helper, or websocket startup noise appears on the dedicated lesson route
+  - `What does salad mean?` explains the word and keeps the page in the same answer-turn context
+  - the `给提示` action after `I am hungry.` shows two concrete drink answers
+  - a correct drink answer advances into the follow-up food prompt
+  - a wrong-domain food answer on the `drink` prompt does not advance the block
+  - an in-app page-selector click from `P24` to `P25` updates the query and reloads the lesson with the `salad`-focused opening prompt
+  - a query-driven route transition from `P24` to `P25` loads the `salad`-focused opening prompt correctly
+  - the committed real-backend browser smoke now continues from `P25` into `P26`:
+    - an in-app page-selector click from `P25` to `P26` updates the query and reloads the listening opening turn on `TB-G5S1U3-P26-D2`
+    - `What does snow mean?` still routes to `ask_knowledge` in-browser while keeping `state.current_block_uid = TB-G5S1U3-P26-D2`
+    - `awaiting_answer = true` is preserved and `retrieved_block_uids` still include `TB-G5S1U3-P26-D1`
+  - the committed real-browser smoke now also covers a non-pilot runtime page on `TB-G6S2U2-P13`, where `What does stayed at home mean?` and `What does had a cold mean?` both route to `ask_knowledge`, keep `state.current_block_uid = TB-G6S2U2-P13-D2`, preserve `awaiting_answer = true`, and hit `TB-G6S2U2-P15-D1` / `TB-G6S2U2-P17-D1` at top-1
+  - `/lesson?page_uid=TB-G6S2Recycle2-P49` now opens directly on the non-pilot `G6 S2 Recycle2` scope with `P48-P51` page tabs
+  - a same-scope page change from `TB-G6S2Recycle2-P49` to `TB-G6S2Recycle2-P51` updates the query and reloads the new opening teacher turn
+  - additional `2026-04-17` Chromium validation against a temporary mock lesson backend confirmed the grouped selector can jump across scopes from `TB-G6S2Recycle2-P49` to `TB-G6S1U1-P2`, with the route, selected scope, `Page UID`, persisted last page, and restarted opening turn all staying aligned
+  - `/lesson` without `page_uid` now rewrites itself to the last saved lesson page when one exists; browser validation restored `TB-G6S2Recycle2-P51` and still auto-started the opening turn
+  - `/lesson?page_uid=TB-UNKNOWN-P404` now recovers back to `TB-G6S2Recycle2-P51` instead of leaving the page in an invalid selection state
+  - a bad manual `Page UID` jump from `TB-G6S2Recycle2-P51` now snaps back to `TB-G6S2Recycle2-P51` instead of drifting to the first catalog page
+  - teacher prompt playback now routes through the lesson-local speech runtime instead of remaining text-only
+  - lesson mic startup now routes through the lesson-local hearing runtime and can fill the draft learner input from streaming sentence callbacks
+  - with `PEPTUTOR_DEBUG_SIGNALS=1`, the "本轮能力" card now follows the latest real backend `/lesson/turn` payload instead of fixture data
+- frontend lesson-runtime integration and performance follow-up on `2026-04-23`:
+  - local changed files:
+    - `frontend/airi/apps/stage-web/src/App.vue`
+    - `frontend/airi/apps/stage-web/src/main.ts`
+    - `frontend/airi/apps/stage-web/vite.config.ts`
+    - `frontend/airi/packages/stage-layouts/src/components/Widgets/LessonPanel.vue`
+    - `frontend/airi/packages/stage-layouts/src/components/Widgets/LessonRuntimeChatPanel.vue`
+    - `frontend/airi/packages/stage-ui/src/stores/lesson-chat-provider.ts`
+    - `frontend/airi/packages/stage-ui/src/stores/lesson-airi-runtime.ts`
+    - `frontend/airi/packages/stage-ui/src/components/scenes/Stage.vue`
+    - `frontend/airi/packages/stage-ui/src/stores/providers.ts`
+    - `frontend/airi/packages/stage-ui/src/stores/display-models.ts`
+    - `frontend/airi/packages/stage-ui/src/stores/settings/stage-model.ts`
+    - `frontend/airi/packages/stage-ui-live2d/src/composables/live2d/animation.ts`
+    - `frontend/airi/scripts/dev-lesson-https.sh`
+  - product surface now present on `/lesson`:
+    - the old lesson-only transcript and textarea path is replaced by an AIRI-backed lesson chat panel, so the page now has a real text chat box instead of only the custom `/lesson/turn` transcript block
+    - the lesson panel now mounts `LessonRuntimeChatPanel.vue`, which bridges the AIRI chat UI to the existing `POST /lesson/turn` contract through `createPepTutorLessonChatProvider()`
+    - teacher replies are streamed back into the AIRI chat history as SSE chunks, while the lesson store remains the source of truth for `page_uid`, routing, and state progression
+    - the lesson route now exposes microphone state, auto-send state, active TTS provider, and active ASR provider through `useLessonAiriRuntimeStore()`
+    - student lesson turns sent through the AIRI chat panel are also written into the current character notebook as structured diary entries tagged by lesson page and block
+  - lesson-focused runtime reductions:
+    - `/lesson` no longer eagerly boots the full AIRI non-lesson runtime path; lesson mode still initializes the shared pieces it now depends on, including chat session, mods/context bridge, and character orchestrator, while keeping onboarding, analytics, display-model preload, and other lesson-irrelevant startup work out of the route
+    - `/lesson` no longer eagerly imports `@tresjs/core` or `posthog` on first load
+    - unconfigured local/model providers no longer auto-poll for validation, which removes repeated `localhost:11434`, `localhost:1234`, and similar failed probes on a clean lesson profile
+    - stage-heavy dependencies are now deferred behind actual usage: VRM scene, DuckDB, lipsync, and VRM preview code are lazy-loaded instead of being part of the first lesson render
+    - the Live2D idle-eye animation no longer imports `three` only to use `MathUtils.randFloat()` and `MathUtils.lerp()`
+  - local secure serving follow-up:
+    - `stage-web` now supports a dedicated HTTPS dev / preview path for lesson work, plus `/peptutor-api` proxy forwarding to the backend lesson server
+    - this session's local verification used:
+      - HTTPS lesson page: `https://127.0.0.1:5175/lesson?page_uid=TB-G5S1U1-P2`
+      - proxied backend turn route: `https://127.0.0.1:5175/peptutor-api/lesson/turn`
+    - result: the lesson page returned `HTTP 200`, the proxied `/lesson/turn` contract returned `HTTP 200`, and the browser no longer mixed an HTTPS page with direct HTTP lesson API calls
+  - validation:
+    - `cd frontend/airi && pnpm -F @proj-airi/stage-ui-live2d typecheck`
+    - `cd frontend/airi && pnpm -F @proj-airi/stage-ui typecheck`
+    - `cd frontend/airi && pnpm -F @proj-airi/stage-web typecheck`
+    - `cd frontend/airi && pnpm -F @proj-airi/stage-ui test:run -- stage-model.test.ts display-models.test.ts provider-env-bootstrap.test.ts lesson-voice-speech-fallback.test.ts lesson-voice-hearing-fallback.test.ts`
+    - `cd frontend/airi && pnpm -F @proj-airi/stage-web build`
+  - result:
+    - the lesson route now has a usable typed AIRI chat surface on top of the existing PepTutor lesson backend, instead of only the earlier lightweight transcript widget
+    - lesson-first performance is materially better than before, but the page still lives inside the wider `stage-web` application shell and therefore still loads more provider/settings/i18n/PWA code than a truly isolated lesson app would
+- alternative frontend evaluation on `2026-04-23`:
+  - checked target: `Open-LLM-VTuber / Open-LLM-VTuber-Web`
+  - decision: do not replace the PepTutor frontend with Open-LLM-VTuber
+  - reason:
+    - it is a different app boundary, built around its own `React + Electron + websocket` frontend/runtime instead of the current `Vue + AIRI + /lesson/turn` lesson contract
+    - its frontend expects the VTuber backend websocket/event model rather than PepTutor's `GET /lesson/catalog` and `POST /lesson/turn` flow
+    - replacing the current frontend with it would be a protocol and product-shell rewrite, not a drop-in component swap
+    - its repository license adds commercial conditions beyond plain Apache-2.0, so it is also not a neutral default dependency choice for PepTutor
+  - practical decision: keep the current AIRI-based lesson route, continue borrowing ideas from stronger VTuber products where useful, and finish the remaining PepTutor/AIRI integration work in-place
+- lesson speech/runtime follow-up on `2026-04-24`:
+  - `/lesson` current browser-side speech chain is now explicit in the UI instead of hidden in DevTools:
+    - left sidebar shows runtime state, secure-context fact, permission state, current input device, active ASR/TTS providers, and live transcript
+    - bottom compact strip and left runtime card now stay aligned on the same state machine: `接入中 -> 聆听中 -> 思考中 -> 说话中`
+    - mocked browser regression now locks the full path `接入中 -> 聆听中 -> 实时转写 -> auto-send -> 思考中 -> 最新 debug_signals`
+  - lesson shell layout has been re-audited and narrowed around the AIRI stage:
+    - subtitle bar is now a centered lower-third bubble instead of a wide banner
+    - bottom dock only keeps the compact input row; chat history stays in the left rail
+    - repeated status/error copy no longer overlaps the input row
+    - Playwright screenshot audits for this pass are checked in under `photo/playwright-layout-audit-https-2026-04-24-v5/v6/v8/v9*.png`
+  - teacher speech text is now normalized before playback:
+    - markdown emphasis such as `**hungry**` no longer renders or speaks as literal asterisks
+  - microphone failure states are now normalized into product-facing Chinese diagnostics instead of raw browser/runtime strings
+  - backend TTS logging is now usage-auditable for both Edge and Doubao routes:
+    - `Speech proxy TTS start/success/error` logs include `client`, `client_chain`, `provider`, `source_tag`, `source_path`, `source_page_uid`, `origin`, `referer`, `user_agent`, `text_preview`, and `text_sha1`
+    - frontend lesson-mode TTS requests now send `X-PepTutor-Source-*` headers so backend logs can attribute usage to `/lesson` and the current `page_uid`
+  - temporary TTS provider switch:
+    - local HTTPS lesson startup now defaults to `VITE_PEPTUTOR_TTS_PROVIDER=peptutor-edge-tts`
+    - current default voice is `zh-CN-XiaoxiaoNeural`
+    - Doubao TTS remains implemented but is no longer the default local lesson TTS path while the account is out of balance
+  - 实体设备验收材料已落盘:
+    - `docs/superpowers/checklists/2026-04-24-real-device-voice-checklist.md`
+  - focused validation for this pass:
+    - `cd backend/LightRAG && .venv/bin/pytest tests/test_speech_proxy_routes.py -q`
+      - result: `13 passed`
+    - `cd backend/LightRAG && .venv/bin/ruff check lightrag/api/speech_proxy_routes.py tests/test_speech_proxy_routes.py`
+      - result: passed
+    - direct Edge Xiaoxiao upstream smoke through `fetch_edge_tts_audio(...)`
+      - result: `audio/mpeg`, `11376` bytes
+    - `cd frontend/airi && pnpm -F @proj-airi/stage-ui test:run -- src/stores/providers/edge/audio-speech.test.ts src/stores/provider-env-bootstrap.test.ts`
+      - result: `36 passed | 1 skipped`, `175 passed | 3 skipped`
+    - `cd frontend/airi && pnpm exec eslint packages/stage-ui/src/stores/provider-env-bootstrap.ts packages/stage-ui/src/stores/provider-env-bootstrap.test.ts packages/stage-ui/src/stores/providers.ts packages/stage-ui/src/stores/providers/edge/audio-speech.ts packages/stage-ui/src/stores/providers/edge/audio-speech.test.ts`
+      - result: passed
+    - `cd frontend/airi && pnpm -F @proj-airi/stage-ui typecheck`
+      - result: passed
+    - `cd frontend/airi && pnpm -F @proj-airi/stage-web test:run:browser -- src/pages/lesson/index.browser.test.ts --reporter verbose`
+      - result: `13 passed | 8 skipped`
+
+## Not Done Yet
+- `/lesson` now has a typed AIRI chat panel and lesson-runtime bridge, but it is still not the full upstream AIRI product chain:
+  - no verified end-to-end full-duplex realtime speech conversation yet
+  - learner-speech auto-send is implemented in the current browser chain and mocked browser regression, but real physical-device acceptance is still pending
+  - interrupt/barge-in has a current basic implementation and browser-side coverage, but no final real-device signoff yet
+  - no full AIRI persona/memory/provider-settings lifecycle wired from the settings surface into lesson runtime behavior
+  - student-speech-driven character reaction now covers listening, learner speaking, louder learner speech, thinking, and interruption across Live2D/VRM, but it is still a lesson-scoped action profile rather than a per-model authored action library
+  - full emotion/action mapping now covers every current lesson teaching action and answer evaluation, and stream `action` payloads now include persona-derived `speech_style`, `mouth_intensity`, and `interrupt_policy`; this is still the lesson-local AIRI profile layer rather than the complete upstream AIRI-wide emotion/action runtime
+- the lesson route no longer eagerly boots much of the generic AIRI shell, but it still runs inside `apps/stage-web`; first paint and route interaction are still heavier than a dedicated lesson-only entry would be
+- teacher replies now stream from the backend responder call site when `live_prompts_enabled = true` and the configured model supports `stream=True`; deterministic fallback turns still complete immediately, and real first-audio latency still needs physical-device verification
+- the active `P24` teacher wording is warmer and more scene-based than before, but broader page-level copy cleanup and richer teacher warmth across later pages still need more iteration
+- the current semantic-recall path still depends on optional `lancedb` and `pyarrow` support in `backend/LightRAG/.venv`
+- support assets are wired for `ask_knowledge` and short `branch` turns, but are not yet vectorized or exposed as a separate retrieval backend
+- the committed browser regression now includes a grouped-selector cross-scope jump from `TB-G6S2Recycle2-P49` to `TB-G6S1U1-P2`, the local browser runner now passes that slice in Chromium after the `vitest-playwright-provider` replay patch, and the committed real-browser smoke still reaches `P26` plus checked-in `TB-G6S2U2-P13` and `TB-G6S2Recycle2-P49 -> P51` non-pilot slices; broader multi-page real-browser coverage across later `G5` pages and non-pilot scopes is still not complete
+- the frontend-owned real-browser workflow is now implemented and was validated through a fork Actions run, but `moeru-ai/airi` still needs `moeru-ai/airi#1683` merged and the backend URL/auth secrets configured before that scheduled job becomes live in upstream
+- the wider AIRI workspace is not fully revalidated end to end outside the narrow PepTutor lesson slice
+- the current local TTS default is intentionally narrow and only exposes Edge `zh-CN-XiaoxiaoNeural`; the retained Doubao TTS voice allowlist still only exposes the app-validated `zh_female_vv_uranus_bigtts` voice
+- the current Edge TTS plus Doubao TTS/ASR backend routes are now inside `LightRAG`, but deployment hardening still is not done:
+  - backend speech routes now share the main `LightRAG` auth layer and a per-process fixed-window limiter with `/lesson`, but there is still no distributed/shared limiter across multiple workers or hosts
+  - reverse-proxy guidance now exists in `docs/deployment/speech-proxy.md`, but there is still no checked-in infra manifest or auth policy
+
+## Next Recommended Slice
+Run the real physical-device voice checklist and do not expand feature scope until that acceptance pass is closed:
+- execute `docs/superpowers/checklists/2026-04-24-real-device-voice-checklist.md` on the host with the real headset, HTTPS lesson page, LightRAG backend, Edge Xiaoxiao TTS, and Doubao ASR credentials
+- reconcile the result against the five still-open voice boundaries:
+  - learner-speech auto-send on the physical mic path
+  - interrupt/barge-in while teacher audio is playing
+  - teacher TTS playback and mouth movement
+  - student-speech-driven character reaction on a real mic path, including the louder-speech `Surprise` reaction and interruption profile
+  - overall voice-chain stability across start, answer, reply, and page switch
+- fix only defects exposed by that real-device acceptance pass; retrieval expansion, startup optimization, and broader service hardening stay out of this slice

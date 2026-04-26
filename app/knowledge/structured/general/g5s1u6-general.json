@@ -1,0 +1,2646 @@
+{
+  "pilot_id": "g5s1u6-general-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "U6",
+    "pages": [
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/01.五年级上册语料.js",
+    "app/knowledge/raw/05.五年级上册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 5 · Volume 1), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 5 · Volume 1), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 25,
+    "source_kind": "textbook_source_js",
+    "source_format": "js"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 6",
+      "word": "forest",
+      "phonetic": "/'fɒrɪst/",
+      "chinese": "森林；林区",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U6-P58-D2",
+        "TB-G5S1U6-P59-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "river",
+      "phonetic": "/'rɪvə/",
+      "chinese": "河；江",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U6-P56-D1",
+        "TB-G5S1U6-P57-D1",
+        "TB-G5S1U6-P58-D2",
+        "TB-G5S1U6-P59-D1",
+        "TB-G5S1U6-P61-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "lake",
+      "phonetic": "/leɪk/",
+      "chinese": "湖；湖泊",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U6-P57-D1",
+        "TB-G5S1U6-P58-D2",
+        "TB-G5S1U6-P59-D1",
+        "TB-G5S1U6-P61-D1",
+        "TB-G5S1U6-P63-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "mountain",
+      "phonetic": "/'maʊntən/",
+      "chinese": "高山；山岳",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U6-P59-D1",
+        "TB-G5S1U6-P63-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "hill",
+      "phonetic": "/hɪl/",
+      "chinese": "山丘；小山",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U6-P59-D1",
+        "TB-G5S1U6-P61-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "tree",
+      "phonetic": "/triː/",
+      "chinese": "树；树木；乔木",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U6-P62-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "bridge",
+      "phonetic": "/brɪdʒ/",
+      "chinese": "桥",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U6-P62-D1",
+        "TB-G5S1U6-P65-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "building",
+      "phonetic": "/'bɪldɪŋ/",
+      "chinese": "建筑物；房子；楼房",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U6-P62-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "village",
+      "phonetic": "/'vɪlɪdʒ/",
+      "chinese": "村庄；村镇",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U6-P62-D1",
+        "TB-G5S1U6-P63-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "house",
+      "phonetic": "/haʊs/",
+      "chinese": "房屋；房子；住宅",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U6-P60-D1",
+        "TB-G5S1U6-P62-D1",
+        "TB-G5S1U6-P65-D1"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "boating",
+      "phonetic": "/'bəʊtɪŋ/",
+      "chinese": "划船",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U6-P58-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "go boating",
+      "chinese": "去划船",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U6-P58-D2"
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "word": "aren't",
+      "chinese": "= are not",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "rabbit",
+      "phonetic": "/'ræbɪt/",
+      "chinese": "兔；野兔",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 6",
+      "word": "high",
+      "phonetic": "/haɪ/",
+      "chinese": "高的",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S1U6-P63-D1"
+      ]
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S1U6-P56-D1-goal",
+      "block_uid": "TB-G5S1U6-P56-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P57-D1-goal",
+      "block_uid": "TB-G5S1U6-P57-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P58-D1-goal",
+      "block_uid": "TB-G5S1U6-P58-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P58-D2-goal",
+      "block_uid": "TB-G5S1U6-P58-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P58-D3-goal",
+      "block_uid": "TB-G5S1U6-P58-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P59-D1-goal",
+      "block_uid": "TB-G5S1U6-P59-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P59-D2-goal",
+      "block_uid": "TB-G5S1U6-P59-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P59-D3-goal",
+      "block_uid": "TB-G5S1U6-P59-D3",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P60-D1-goal",
+      "block_uid": "TB-G5S1U6-P60-D1",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P60-D2-goal",
+      "block_uid": "TB-G5S1U6-P60-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P60-D3-goal",
+      "block_uid": "TB-G5S1U6-P60-D3",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P60-D4-goal",
+      "block_uid": "TB-G5S1U6-P60-D4",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P61-D1-goal",
+      "block_uid": "TB-G5S1U6-P61-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P61-D2-goal",
+      "block_uid": "TB-G5S1U6-P61-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P61-D3-goal",
+      "block_uid": "TB-G5S1U6-P61-D3",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P62-D1-goal",
+      "block_uid": "TB-G5S1U6-P62-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P62-D2-goal",
+      "block_uid": "TB-G5S1U6-P62-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P62-D3-goal",
+      "block_uid": "TB-G5S1U6-P62-D3",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P63-D1-goal",
+      "block_uid": "TB-G5S1U6-P63-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P63-D2-goal",
+      "block_uid": "TB-G5S1U6-P63-D2",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P63-D3-goal",
+      "block_uid": "TB-G5S1U6-P63-D3",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P64-D1-goal",
+      "block_uid": "TB-G5S1U6-P64-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P64-D2-goal",
+      "block_uid": "TB-G5S1U6-P64-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P64-D3-goal",
+      "block_uid": "TB-G5S1U6-P64-D3",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U6-P65-D1-goal",
+      "block_uid": "TB-G5S1U6-P65-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-animals",
+      "atom_type": "word",
+      "text": "animals",
+      "gloss": "动物",
+      "linked_blocks": [
+        "TB-G5S1U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-aren-t",
+      "atom_type": "word",
+      "text": "aren't",
+      "gloss": "= are not",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-beautiful",
+      "atom_type": "word",
+      "text": "beautiful",
+      "gloss": "美丽的",
+      "linked_blocks": [
+        "TB-G5S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-bird",
+      "atom_type": "word",
+      "text": "bird",
+      "gloss": "鸟",
+      "linked_blocks": [
+        "TB-G5S1U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-boating",
+      "atom_type": "word",
+      "text": "boating",
+      "gloss": "划船",
+      "linked_blocks": [
+        "TB-G5S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-boats",
+      "atom_type": "word",
+      "text": "boats",
+      "gloss": "小船",
+      "linked_blocks": [
+        "TB-G5S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-bridge",
+      "atom_type": "word",
+      "text": "bridge",
+      "gloss": "桥",
+      "linked_blocks": [
+        "TB-G5S1U6-P62-D1",
+        "TB-G5S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-building",
+      "atom_type": "word",
+      "text": "building",
+      "gloss": "建筑物；房子；楼房",
+      "linked_blocks": [
+        "TB-G5S1U6-P62-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-buildings",
+      "atom_type": "word",
+      "text": "buildings",
+      "gloss": "建筑物",
+      "linked_blocks": [
+        "TB-G5S1U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-corn",
+      "atom_type": "word",
+      "text": "corn",
+      "gloss": "玉米",
+      "linked_blocks": [
+        "TB-G5S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-count",
+      "atom_type": "word",
+      "text": "count",
+      "gloss": "数数",
+      "linked_blocks": [
+        "TB-G5S1U6-P60-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-ducks",
+      "atom_type": "word",
+      "text": "ducks",
+      "gloss": "鸭子",
+      "linked_blocks": [
+        "TB-G5S1U6-P61-D2",
+        "TB-G5S1U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-fish",
+      "atom_type": "word",
+      "text": "fish",
+      "gloss": "鱼",
+      "linked_blocks": [
+        "TB-G5S1U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-forest",
+      "atom_type": "word",
+      "text": "forest",
+      "gloss": "森林；林区",
+      "linked_blocks": [
+        "TB-G5S1U6-P58-D2",
+        "TB-G5S1U6-P59-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-go-boating",
+      "atom_type": "word",
+      "text": "go boating",
+      "gloss": "去划船",
+      "linked_blocks": [
+        "TB-G5S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-high",
+      "atom_type": "word",
+      "text": "high",
+      "gloss": "高的",
+      "linked_blocks": [
+        "TB-G5S1U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-high-mountain",
+      "atom_type": "word",
+      "text": "high mountain",
+      "gloss": "高山",
+      "linked_blocks": [
+        "TB-G5S1U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hill",
+      "atom_type": "word",
+      "text": "hill",
+      "gloss": "山丘；小山",
+      "linked_blocks": [
+        "TB-G5S1U6-P59-D1",
+        "TB-G5S1U6-P61-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-house",
+      "atom_type": "word",
+      "text": "house",
+      "gloss": "房屋；房子；住宅",
+      "linked_blocks": [
+        "TB-G5S1U6-P60-D1",
+        "TB-G5S1U6-P62-D1",
+        "TB-G5S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-in-front-of",
+      "atom_type": "word",
+      "text": "in front of",
+      "gloss": "在...前面",
+      "linked_blocks": [
+        "TB-G5S1U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-lake",
+      "atom_type": "word",
+      "text": "lake",
+      "gloss": "湖；湖泊",
+      "linked_blocks": [
+        "TB-G5S1U6-P57-D1",
+        "TB-G5S1U6-P58-D2",
+        "TB-G5S1U6-P59-D1",
+        "TB-G5S1U6-P61-D1",
+        "TB-G5S1U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-mountain",
+      "atom_type": "word",
+      "text": "mountain",
+      "gloss": "高山；山岳",
+      "linked_blocks": [
+        "TB-G5S1U6-P59-D1",
+        "TB-G5S1U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-mountains",
+      "atom_type": "word",
+      "text": "mountains",
+      "gloss": "山（复数）",
+      "linked_blocks": [
+        "TB-G5S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-mouse",
+      "atom_type": "word",
+      "text": "mouse",
+      "gloss": "老鼠",
+      "linked_blocks": [
+        "TB-G5S1U6-P60-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-nature-park",
+      "atom_type": "word",
+      "text": "nature park",
+      "gloss": "自然公园",
+      "linked_blocks": [
+        "TB-G5S1U6-P63-D1",
+        "TB-G5S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-near",
+      "atom_type": "word",
+      "text": "near",
+      "gloss": "在...附近",
+      "linked_blocks": [
+        "TB-G5S1U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-park",
+      "atom_type": "word",
+      "text": "park",
+      "gloss": "公园",
+      "linked_blocks": [
+        "TB-G5S1U6-P57-D1",
+        "TB-G5S1U6-P63-D1",
+        "TB-G5S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-quiet",
+      "atom_type": "word",
+      "text": "quiet",
+      "gloss": "安静的",
+      "linked_blocks": [
+        "TB-G5S1U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-rabbit",
+      "atom_type": "word",
+      "text": "rabbit",
+      "gloss": "兔；野兔",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-rabbits",
+      "atom_type": "word",
+      "text": "rabbits",
+      "gloss": "兔子",
+      "linked_blocks": [
+        "TB-G5S1U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-restaurant",
+      "atom_type": "word",
+      "text": "restaurant",
+      "gloss": "餐馆",
+      "linked_blocks": [
+        "TB-G5S1U6-P57-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-river",
+      "atom_type": "word",
+      "text": "river",
+      "gloss": "河；江",
+      "linked_blocks": [
+        "TB-G5S1U6-P56-D1",
+        "TB-G5S1U6-P57-D1",
+        "TB-G5S1U6-P58-D2",
+        "TB-G5S1U6-P59-D1",
+        "TB-G5S1U6-P61-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sky",
+      "atom_type": "word",
+      "text": "sky",
+      "gloss": "天空",
+      "linked_blocks": [
+        "TB-G5S1U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-small-village",
+      "atom_type": "word",
+      "text": "small village",
+      "gloss": "小村庄",
+      "linked_blocks": [
+        "TB-G5S1U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sound",
+      "atom_type": "word",
+      "text": "sound",
+      "gloss": "声音",
+      "linked_blocks": [
+        "TB-G5S1U6-P60-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-take-pictures",
+      "atom_type": "word",
+      "text": "take pictures",
+      "gloss": "拍照",
+      "linked_blocks": [
+        "TB-G5S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-tree",
+      "atom_type": "word",
+      "text": "tree",
+      "gloss": "树；树木；乔木",
+      "linked_blocks": [
+        "TB-G5S1U6-P62-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-trees",
+      "atom_type": "word",
+      "text": "trees",
+      "gloss": "树（复数）",
+      "linked_blocks": [
+        "TB-G5S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-village",
+      "atom_type": "word",
+      "text": "village",
+      "gloss": "村庄；村镇",
+      "linked_blocks": [
+        "TB-G5S1U6-P62-D1",
+        "TB-G5S1U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-are-there-any-animals",
+      "atom_type": "sentence_pattern",
+      "text": "Are there any animals?",
+      "gloss": "有动物吗？",
+      "linked_blocks": [
+        "TB-G5S1U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-are-there-any-lakes-in-the-park",
+      "atom_type": "sentence_pattern",
+      "text": "Are there any lakes in the park?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P61-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-are-there-any-lakes-on-the-mountain",
+      "atom_type": "sentence_pattern",
+      "text": "Are there any lakes on the mountain?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P62-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-are-there-any-people-in-the-house",
+      "atom_type": "sentence_pattern",
+      "text": "Are there any people in the house?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-are-there-any-tall-buildings-in-the-nature-park",
+      "atom_type": "sentence_pattern",
+      "text": "Are there any tall buildings in the nature park?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-are-there-any-tall-buildings",
+      "atom_type": "sentence_pattern",
+      "text": "Are there any tall buildings?",
+      "gloss": "有高大的建筑物吗？",
+      "linked_blocks": [
+        "TB-G5S1U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-children-let-s-go-to-the-forest",
+      "atom_type": "sentence_pattern",
+      "text": "Children, let's go to the forest!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-choose-one-sentence-from-above-and-write",
+      "atom_type": "sentence_pattern",
+      "text": "Choose one sentence from above and write.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P60-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-describing-scenery-and-things-seen-in-a-park",
+      "atom_type": "sentence_pattern",
+      "text": "Describing scenery and things seen in a park.",
+      "gloss": "描述在公园里看到的风景和事物。",
+      "linked_blocks": [
+        "TB-G5S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hey-why-don-t-you-take-a-picture-of-me",
+      "atom_type": "sentence_pattern",
+      "text": "Hey! Why don't you take a picture of me?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-many",
+      "atom_type": "sentence_pattern",
+      "text": "How many?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P61-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-hungry-is-there-a-restaurant-beside-the-lake",
+      "atom_type": "sentence_pattern",
+      "text": "I'm hungry. Is there a restaurant beside the lake?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P57-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-there-a-forest",
+      "atom_type": "sentence_pattern",
+      "text": "Is there a forest?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-there-a-lake-in-the-park",
+      "atom_type": "sentence_pattern",
+      "text": "Is there a lake in the park?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-there-a-lake-miss-white",
+      "atom_type": "sentence_pattern",
+      "text": "Is there a lake, Miss White?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-there-a-lake",
+      "atom_type": "sentence_pattern",
+      "text": "Is there a lake?",
+      "gloss": "有湖吗？",
+      "linked_blocks": [
+        "TB-G5S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-there-a-river-in-front-of-the-mountain",
+      "atom_type": "sentence_pattern",
+      "text": "Is there a river in front of the mountain?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P59-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-there-a-river-in-the-forest-miss-white",
+      "atom_type": "sentence_pattern",
+      "text": "Is there a river in the forest, Miss White?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-there-a-river-in-the-forest",
+      "atom_type": "sentence_pattern",
+      "text": "Is there a river in the forest?",
+      "gloss": "森林里有河吗？",
+      "linked_blocks": [
+        "TB-G5S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-there-a-river-in-the-park",
+      "atom_type": "sentence_pattern",
+      "text": "Is there a river in the park?",
+      "gloss": "公园里有河吗？",
+      "linked_blocks": [
+        "TB-G5S1U6-P57-D1",
+        "TB-G5S1U6-P59-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-learn",
+      "atom_type": "sentence_pattern",
+      "text": "Let's learn",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P59-D1",
+        "TB-G5S1U6-P62-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-again-and-answer-the-questions",
+      "atom_type": "sentence_pattern",
+      "text": "Listen again and answer the questions.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P64-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-tick-or-cross",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and tick or cross.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P64-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-at-that-beautiful-bridge",
+      "atom_type": "sentence_pattern",
+      "text": "Look at that beautiful bridge.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-there-is-a-big-white-bird-in-the-sky",
+      "atom_type": "sentence_pattern",
+      "text": "Look! There is a big white bird in the sky!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-listen-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Look, listen and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P60-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-listen-and-write",
+      "atom_type": "sentence_pattern",
+      "text": "Look, listen and write.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P60-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-there-aren-t",
+      "atom_type": "sentence_pattern",
+      "text": "No, there aren't.",
+      "gloss": "不，没有。",
+      "linked_blocks": [
+        "TB-G5S1U6-P61-D2",
+        "TB-G5S1U6-P61-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-there-isn-t-look-i-have-some-food-let-s-share",
+      "atom_type": "sentence_pattern",
+      "text": "No, there isn't. Look! I have some food. Let's share.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P57-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-asking-and-answering-are-there-any-and-how-many",
+      "atom_type": "sentence_pattern",
+      "text": "Practice asking and answering 'Are there any...?' and 'How many?'",
+      "gloss": "练习问答 'Are there any...?' 和 'How many?'。",
+      "linked_blocks": [
+        "TB-G5S1U6-P61-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-asking-and-answering-is-there-questions-based-on-a-self-drawn-picture",
+      "atom_type": "sentence_pattern",
+      "text": "Practice asking and answering 'Is there...?' questions based on a self-drawn picture.",
+      "gloss": "练习根据自己画的图画进行'Is there...?'的问答。",
+      "linked_blocks": [
+        "TB-G5S1U6-P59-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-asking-and-answering-is-there-questions",
+      "atom_type": "sentence_pattern",
+      "text": "Practice asking and answering 'Is there...?' questions.",
+      "gloss": "练习问答“Is there...?”句型。",
+      "linked_blocks": [
+        "TB-G5S1U6-P58-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-forming-is-there-and-are-there-questions",
+      "atom_type": "sentence_pattern",
+      "text": "Practice forming 'Is there...?' and 'Are there...?' questions.",
+      "gloss": "练习构造'Is there...?'和'Are there...?'问句。",
+      "linked_blocks": [
+        "TB-G5S1U6-P63-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-writing-descriptive-sentences-using-there-is-and-there-are",
+      "atom_type": "sentence_pattern",
+      "text": "Practice writing descriptive sentences using 'There is' and 'There are'.",
+      "gloss": "练习使用'There is'和'There are'句型写描述性句子。",
+      "linked_blocks": [
+        "TB-G5S1U6-P62-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-and-understand-a-descriptive-text-about-a-place",
+      "atom_type": "sentence_pattern",
+      "text": "Read and understand a descriptive text about a place.",
+      "gloss": "阅读并理解一篇关于地点的描述性短文。",
+      "linked_blocks": [
+        "TB-G5S1U6-P63-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-review-and-practice-is-there-for-singular-nouns-and-are-there-for-plural-nouns",
+      "atom_type": "sentence_pattern",
+      "text": "Review and practice 'Is there...?' for singular nouns and 'Are there...?' for plural nouns.",
+      "gloss": "复习和练习对单数名词使用'Is there...?'，对复数名词使用'Are there...?'。",
+      "linked_blocks": [
+        "TB-G5S1U6-P64-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-robin-would-like-to-draw-a-picture-of-the-park-can-you-help",
+      "atom_type": "sentence_pattern",
+      "text": "Robin would like to draw a picture of the park. Can you help?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P63-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-sorry-you-re-not-my-friend",
+      "atom_type": "sentence_pattern",
+      "text": "Sorry. You're not my \"friend\".",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P61-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-letter-combinations-ou-and-ow-can-make-the-a-sound",
+      "atom_type": "sentence_pattern",
+      "text": "The letter combinations 'ou' and 'ow' can make the /aʊ/ sound.",
+      "gloss": "字母组合 'ou' 和 'ow' 可以发 /aʊ/ 音。",
+      "linked_blocks": [
+        "TB-G5S1U6-P60-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-nature-park-is-so-quiet",
+      "atom_type": "sentence_pattern",
+      "text": "The nature park is so quiet!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P61-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-are-many-pretty-fish-in-the-river",
+      "atom_type": "sentence_pattern",
+      "text": "There are many pretty fish in the river.",
+      "gloss": "河里有很多漂亮的鱼。",
+      "linked_blocks": [
+        "TB-G5S1U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-a-big-white-bird-in-the-sky",
+      "atom_type": "sentence_pattern",
+      "text": "There is a big white bird in the sky!",
+      "gloss": "天空中有一只白色的大鸟！",
+      "linked_blocks": [
+        "TB-G5S1U6-P56-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-a-village-in-the-nature-park",
+      "atom_type": "sentence_pattern",
+      "text": "There is a village in the nature park.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P62-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-a-nice-day-let-s-go-to-a-nature-park",
+      "atom_type": "sentence_pattern",
+      "text": "What a nice day! Let's go to a nature park!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P65-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-is-in-the-park-listen-and-tick-the-word-you-hear",
+      "atom_type": "sentence_pattern",
+      "text": "What is in the park? Listen and tick the word you hear.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P58-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-are-the-tables-listen-and-fill-in-the-blank",
+      "atom_type": "sentence_pattern",
+      "text": "Where are the tables? Listen and fill in the blank.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P61-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yeah",
+      "atom_type": "sentence_pattern",
+      "text": "Yeah!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P58-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-there-are",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, there are.",
+      "gloss": "是的，有。",
+      "linked_blocks": [
+        "TB-G5S1U6-P61-D2",
+        "TB-G5S1U6-P61-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-there-is-one",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, there is one.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P62-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-there-is",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, there is.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P57-D1",
+        "TB-G5S1U6-P58-D3",
+        "TB-G5S1U6-P59-D2",
+        "TB-G5S1U6-P59-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-there-is-no-there-isn-t",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, there is. / No, there isn't.",
+      "gloss": "是的，有。/ 不，没有。",
+      "linked_blocks": [
+        "TB-G5S1U6-P57-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-the-mountains-and-trees-are-beautiful-too",
+      "atom_type": "sentence_pattern",
+      "text": "Yes. The mountains and trees are beautiful, too.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U6-P65-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S1U6-P56",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: In a nature park. 单元首页图。老师和学生们正在一个美丽的乡村环境中。一些学生在草地上看到了天空中的大鸟，而另一些师生则在小桥上欣赏河里的鱼。这个场景引出了本单元关于自然景物的主题。",
+      "entry_probe_questions": [
+        "Do you know the word bird?",
+        "Can you say: There is a big white bird in the sky!"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U6-P56-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U6-P57",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: In a nature park. 在自然公园里，陈洁和约翰正在看地图，讨论公园里的设施。小熊祖姆也饿了，想找餐厅，但小松鼠兹普告诉它没有餐厅，并提议分享食物。这个场景引出了询问某个地方是否有某物的句型。",
+      "entry_probe_questions": [
+        "Do you know the word river?",
+        "Can you say: Is there a river in the park?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U6-P57-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U6-P58",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Describing a park. 怀特老师带着孩子们去森林。张鹏询问森林里是否有河和湖，老师回答后，张鹏提议去划船。",
+      "entry_probe_questions": [
+        "Do you know the word forest?",
+        "Can you say: Is there a river in the forest?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U6-P58-D2",
+        "TB-G5S1U6-P58-D3",
+        "TB-G5S1U6-P58-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U6-P59",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Describing a nature park. 通过一张自然公园的地图，学习描述自然景物的五个核心词汇。",
+      "entry_probe_questions": [
+        "Do you know the word forest?",
+        "Can you say: Let's learn"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U6-P59-D1",
+        "TB-G5S1U6-P59-D2",
+        "TB-G5S1U6-P59-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U6-P60",
+      "page_type": "phonics",
+      "page_intro_cn": "Theme: Phonics: ou / ow. 看图、听录音并圈出听到的单词。",
+      "entry_probe_questions": [
+        "Can you say: Look, listen and circle."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U6-P60-D2",
+        "TB-G5S1U6-P60-D3",
+        "TB-G5S1U6-P60-D1",
+        "TB-G5S1U6-P60-D4"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U6-P61",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Describing a nature park. 怀特老师和张鹏在自然公园里对话。他们谈论了公园里的人、建筑物和动物。",
+      "entry_probe_questions": [
+        "Do you know the word quiet?",
+        "Can you say: Are there any tall buildings?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U6-P61-D2",
+        "TB-G5S1U6-P61-D1",
+        "TB-G5S1U6-P61-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U6-P62",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Describing a natural scene. 通过一幅乡村风光图，学习描述自然和人造景物的五个核心词汇。",
+      "entry_probe_questions": [
+        "Do you know the word village?",
+        "Can you say: Let's learn"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U6-P62-D1",
+        "TB-G5S1U6-P62-D2",
+        "TB-G5S1U6-P62-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U6-P63",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Reading, drawing and writing about a nature park. 一项绘画辅助任务，要求学生帮助罗宾根据上面的文字描述画出公园的图片。提供了一张只有山的背景图。",
+      "entry_probe_questions": [
+        "Can you say: Robin would like to draw a picture of the park. Can you help?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U6-P63-D2",
+        "TB-G5S1U6-P63-D1",
+        "TB-G5S1U6-P63-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U6-P64",
+      "page_type": "listening",
+      "page_intro_cn": "Theme: Unit 6 Check & Wrap-up. 学生听录音，根据听到的内容，判断公园里有哪些景物，并在相应的图片上打勾或画叉。",
+      "entry_probe_questions": [
+        "Can you say: Listen and tick or cross."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U6-P64-D1",
+        "TB-G5S1U6-P64-D2",
+        "TB-G5S1U6-P64-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U6-P65",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Story time. 一个连环画故事。小熊zoom和小松鼠zip去自然公园拍照。他们在公园里欣赏了美丽的风景，发现了一间装满玉米的房子和一只考拉。正当小松鼠zip要给考拉拍照时，相机卡坏了。",
+      "entry_probe_questions": [
+        "Do you know the word nature park?",
+        "Can you say: Describing scenery and things seen in a park."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U6-P65-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S1U6-P56-D1",
+      "page_uid": "TB-G5S1U6-P56",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U6-P56-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "单元首页图。老师和学生们正在一个美丽的乡村环境中。一些学生在草地上看到了天空中的大鸟，而另一些师生则在小桥上欣赏河里的鱼。这个场景引出了本单元关于自然景物的主题。 Key patterns: There is a big white bird in the sky!; There are many pretty fish in the river.",
+      "focus_vocabulary": [
+        "bird",
+        "sky",
+        "fish",
+        "river"
+      ],
+      "core_patterns": [
+        "There is a big white bird in the sky!",
+        "There are many pretty fish in the river.",
+        "Look! There is a big white bird in the sky!"
+      ],
+      "allowed_answer_scope": [
+        "Look! There is a big white bird in the sky!",
+        "There are many pretty fish in the river.",
+        "Wow!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word bird?",
+        "Can you say: There is a big white bird in the sky!"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U6-P56-D1-goal"
+      ],
+      "branchable_topics": [
+        "bird",
+        "sky",
+        "fish",
+        "river",
+        "In a nature park",
+        "Unit Six"
+      ],
+      "return_anchors": [
+        "There is a big white bird in the sky!",
+        "There are many pretty fish in the river.",
+        "Look! There is a big white bird in the sky!"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P57-D1",
+      "page_uid": "TB-G5S1U6-P57",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U6-P57-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "在自然公园里，陈洁和约翰正在看地图，讨论公园里的设施。小熊祖姆也饿了，想找餐厅，但小松鼠兹普告诉它没有餐厅，并提议分享食物。这个场景引出了询问某个地方是否有某物的句型。 Key patterns: Is there a river in the park?; Yes, there is. / No, there isn't.",
+      "focus_vocabulary": [
+        "river",
+        "park",
+        "restaurant",
+        "lake"
+      ],
+      "core_patterns": [
+        "Is there a river in the park?",
+        "Yes, there is. / No, there isn't.",
+        "I'm hungry. Is there a restaurant beside the lake?",
+        "Yes, there is.",
+        "No, there isn't. Look! I have some food. Let's share."
+      ],
+      "allowed_answer_scope": [
+        "Yes, there is.",
+        "No, there isn't. Look! I have some food. Let's share."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word river?",
+        "Can you say: Is there a river in the park?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U6-P57-D1-goal"
+      ],
+      "branchable_topics": [
+        "river",
+        "park",
+        "restaurant",
+        "lake",
+        "In a nature park"
+      ],
+      "return_anchors": [
+        "Is there a river in the park?",
+        "Yes, there is. / No, there isn't.",
+        "I'm hungry. Is there a restaurant beside the lake?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P58-D1",
+      "page_uid": "TB-G5S1U6-P58",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U6-P58-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，根据听到的内容，勾选公园里有的景物。 Key patterns: What is in the park? Listen and tick the word you hear.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What is in the park? Listen and tick the word you hear."
+      ],
+      "allowed_answer_scope": [
+        "river"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What is in the park? Listen and tick the word you hear."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U6-P58-D1-goal"
+      ],
+      "branchable_topics": [
+        "Describing a park",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "What is in the park? Listen and tick the word you hear."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P58-D2",
+      "page_uid": "TB-G5S1U6-P58",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U6-P58-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "怀特老师带着孩子们去森林。张鹏询问森林里是否有河和湖，老师回答后，张鹏提议去划船。 Key patterns: Is there a river in the forest?; Is there a lake?",
+      "focus_vocabulary": [
+        "forest",
+        "river",
+        "lake",
+        "boats",
+        "go boating"
+      ],
+      "core_patterns": [
+        "Is there a river in the forest?",
+        "Is there a lake?",
+        "Is there a river in the forest, Miss White?",
+        "Is there a lake, Miss White?",
+        "Children, let's go to the forest!",
+        "Yeah!"
+      ],
+      "allowed_answer_scope": [
+        "Children, let's go to the forest!",
+        "Yeah!",
+        "No, there isn't.",
+        "Yes, there is and there are some small boats.",
+        "Cool! Let's go boating."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word forest?",
+        "Can you say: Is there a river in the forest?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U6-P58-D3",
+        "TB-G5S1U6-P58-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U6-P58-D2-goal"
+      ],
+      "branchable_topics": [
+        "forest",
+        "river",
+        "lake",
+        "boats",
+        "go boating",
+        "Describing a park",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "Is there a river in the forest?",
+        "Is there a lake?",
+        "Is there a river in the forest, Miss White?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P58-D3",
+      "page_uid": "TB-G5S1U6-P58",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U6-P58-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "提供一个对话框架，鼓励学生与同伴练习询问和回答关于公园里景物的问题。 Key patterns: Practice asking and answering 'Is there...?' questions.; Is there a lake in the park?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice asking and answering 'Is there...?' questions.",
+        "Is there a lake in the park?",
+        "Is there a forest?",
+        "Yes, there is."
+      ],
+      "allowed_answer_scope": [
+        "Yes, there is.",
+        "..."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice asking and answering 'Is there...?' questions."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U6-P58-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U6-P58-D3-goal"
+      ],
+      "branchable_topics": [
+        "Describing a park",
+        "Talk about the park with your partner."
+      ],
+      "return_anchors": [
+        "Practice asking and answering 'Is there...?' questions.",
+        "Is there a lake in the park?",
+        "Is there a forest?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P59-D1",
+      "page_uid": "TB-G5S1U6-P59",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S1U6-P59-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "通过一张自然公园的地图，学习描述自然景物的五个核心词汇。 Key patterns: Let's learn",
+      "focus_vocabulary": [
+        "forest",
+        "mountain",
+        "lake",
+        "hill",
+        "river"
+      ],
+      "core_patterns": [
+        "Let's learn"
+      ],
+      "allowed_answer_scope": [
+        "forest",
+        "mountain",
+        "lake",
+        "hill",
+        "river"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word forest?",
+        "Can you say: Let's learn"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U6-P59-D2",
+        "TB-G5S1U6-P59-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U6-P59-D1-goal"
+      ],
+      "branchable_topics": [
+        "forest",
+        "mountain",
+        "lake",
+        "hill",
+        "river",
+        "Describing a nature park",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Let's learn"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P59-D2",
+      "page_uid": "TB-G5S1U6-P59",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U6-P59-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "在词汇学习部分，提供了一段简短的问答对话，练习根据地图询问公园里的景物。 Key patterns: Is there a river in the park?; Yes, there is.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Is there a river in the park?",
+        "Yes, there is."
+      ],
+      "allowed_answer_scope": [
+        "Yes, there is."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Is there a river in the park?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U6-P59-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U6-P59-D2-goal"
+      ],
+      "branchable_topics": [
+        "Describing a nature park",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Is there a river in the park?",
+        "Yes, there is."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P59-D3",
+      "page_uid": "TB-G5S1U6-P59",
+      "page_type": "vocabulary",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G5S1U6-P59-D3"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "一项绘画和口语结合的活动。学生需要自己画一个自然公园，然后和同伴互相提问，描述自己画中的景物。 Key patterns: Practice asking and answering 'Is there...?' questions based on a self-drawn picture.; Is there a river in front of the mountain?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice asking and answering 'Is there...?' questions based on a self-drawn picture.",
+        "Is there a river in front of the mountain?",
+        "Yes, there is."
+      ],
+      "allowed_answer_scope": [
+        "Yes, there is."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice asking and answering 'Is there...?' questions based on a self-drawn picture."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U6-P59-D3-goal"
+      ],
+      "branchable_topics": [
+        "Describing a nature park",
+        "Draw and ask"
+      ],
+      "return_anchors": [
+        "Practice asking and answering 'Is there...?' questions based on a self-drawn picture.",
+        "Is there a river in front of the mountain?",
+        "Yes, there is."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P60-D1",
+      "page_uid": "TB-G5S1U6-P60",
+      "page_type": "phonics",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G5S1U6-P60-D1"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "学习字母组合 'ou' 和 'ow' 发 /aʊ/ 音的情况。 Key patterns: The letter combinations 'ou' and 'ow' can make the /aʊ/ sound.",
+      "focus_vocabulary": [
+        "house",
+        "mouse",
+        "sound",
+        "count"
+      ],
+      "core_patterns": [
+        "The letter combinations 'ou' and 'ow' can make the /aʊ/ sound."
+      ],
+      "allowed_answer_scope": [
+        "house",
+        "mouse",
+        "sound",
+        "count"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word house?",
+        "Can you say: The letter combinations 'ou' and 'ow' can make the /aʊ/ sound."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U6-P60-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U6-P60-D1-goal"
+      ],
+      "branchable_topics": [
+        "house",
+        "mouse",
+        "sound",
+        "count",
+        "Phonics: ou / ow",
+        "Let's spell"
+      ],
+      "return_anchors": [
+        "The letter combinations 'ou' and 'ow' can make the /aʊ/ sound."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P60-D2",
+      "page_uid": "TB-G5S1U6-P60",
+      "page_type": "phonics",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U6-P60-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "看图、听录音并圈出听到的单词。 Key patterns: Look, listen and circle.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Look, listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "house",
+        "cow",
+        "about"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Look, listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U6-P60-D3",
+        "TB-G5S1U6-P60-D1",
+        "TB-G5S1U6-P60-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U6-P60-D2-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: ou / ow",
+        "Let's spell"
+      ],
+      "return_anchors": [
+        "Look, listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P60-D3",
+      "page_uid": "TB-G5S1U6-P60",
+      "page_type": "phonics",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U6-P60-D3"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "看图、听录音并填写句子。三幅图分别描绘了一头奶牛、一个正在数数的女孩和一只在房子里的老鼠。 Key patterns: Look, listen and write.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Look, listen and write."
+      ],
+      "allowed_answer_scope": [
+        "cow",
+        "count",
+        "mouse, house"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Look, listen and write."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U6-P60-D1",
+        "TB-G5S1U6-P60-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U6-P60-D3-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: ou / ow",
+        "Look, listen and write."
+      ],
+      "return_anchors": [
+        "Look, listen and write."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P60-D4",
+      "page_uid": "TB-G5S1U6-P60",
+      "page_type": "phonics",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S1U6-P60-D4"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "从上面完成的三个句子中选择一句抄写下来。 Key patterns: Choose one sentence from above and write.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Choose one sentence from above and write."
+      ],
+      "allowed_answer_scope": [
+        "I see a big cow."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Choose one sentence from above and write."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U6-P60-D4-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: ou / ow",
+        "Choose one sentence from above and write."
+      ],
+      "return_anchors": [
+        "Choose one sentence from above and write."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P61-D1",
+      "page_uid": "TB-G5S1U6-P61",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U6-P61-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，根据内容判断桌子在哪个位置旁边，并从词汇标签中选择正确的单词填空。 Key patterns: Where are the tables? Listen and fill in the blank.",
+      "focus_vocabulary": [
+        "river",
+        "lake",
+        "hill"
+      ],
+      "core_patterns": [
+        "Where are the tables? Listen and fill in the blank."
+      ],
+      "allowed_answer_scope": [
+        "lake"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word river?",
+        "Can you say: Where are the tables? Listen and fill in the blank."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U6-P61-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U6-P61-D1-goal"
+      ],
+      "branchable_topics": [
+        "river",
+        "lake",
+        "hill",
+        "Describing a nature park",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Where are the tables? Listen and fill in the blank."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P61-D2",
+      "page_uid": "TB-G5S1U6-P61",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U6-P61-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "怀特老师和张鹏在自然公园里对话。他们谈论了公园里的人、建筑物和动物。 Key patterns: Are there any tall buildings?; No, there aren't.",
+      "focus_vocabulary": [
+        "quiet",
+        "buildings",
+        "animals",
+        "ducks",
+        "rabbits"
+      ],
+      "core_patterns": [
+        "Are there any tall buildings?",
+        "No, there aren't.",
+        "Are there any animals?",
+        "Yes, there are.",
+        "Are there any tall buildings in the nature park?",
+        "The nature park is so quiet!"
+      ],
+      "allowed_answer_scope": [
+        "The nature park is so quiet!",
+        "Yes, Zhang Peng. There aren't many people.",
+        "No, there aren't.",
+        "Yes, there are. There are ducks and rabbits."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word quiet?",
+        "Can you say: Are there any tall buildings?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U6-P61-D1",
+        "TB-G5S1U6-P61-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U6-P61-D2-goal"
+      ],
+      "branchable_topics": [
+        "quiet",
+        "buildings",
+        "animals",
+        "ducks",
+        "rabbits",
+        "Describing a nature park",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "Are there any tall buildings?",
+        "No, there aren't.",
+        "Are there any animals?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P61-D3",
+      "page_uid": "TB-G5S1U6-P61",
+      "page_type": "dialogue",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G5S1U6-P61-D3"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "一个配对游戏。学生各自秘密选择一张图片，然后通过互相提问“公园里有湖吗？”等问题，来判断对方是否选择了和自己一样的图片，找到自己的“朋友”。 Key patterns: Practice asking and answering 'Are there any...?' and 'How many?'; Are there any lakes in the park?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice asking and answering 'Are there any...?' and 'How many?'",
+        "Are there any lakes in the park?",
+        "How many?",
+        "No, there aren't.",
+        "Sorry. You're not my \"friend\".",
+        "Yes, there are."
+      ],
+      "allowed_answer_scope": [
+        "No, there aren't.",
+        "Sorry. You're not my \"friend\".",
+        "Yes, there are.",
+        "Two.",
+        "You're my \"friend\"!"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice asking and answering 'Are there any...?' and 'How many?'"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U6-P61-D3-goal"
+      ],
+      "branchable_topics": [
+        "Describing a nature park",
+        "Tick a picture and find your \"friend\"."
+      ],
+      "return_anchors": [
+        "Practice asking and answering 'Are there any...?' and 'How many?'",
+        "Are there any lakes in the park?",
+        "How many?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P62-D1",
+      "page_uid": "TB-G5S1U6-P62",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S1U6-P62-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "通过一幅乡村风光图，学习描述自然和人造景物的五个核心词汇。 Key patterns: Let's learn",
+      "focus_vocabulary": [
+        "village",
+        "house",
+        "tree",
+        "building",
+        "bridge"
+      ],
+      "core_patterns": [
+        "Let's learn"
+      ],
+      "allowed_answer_scope": [
+        "village",
+        "house",
+        "tree",
+        "building",
+        "bridge"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word village?",
+        "Can you say: Let's learn"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U6-P62-D2",
+        "TB-G5S1U6-P62-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U6-P62-D1-goal"
+      ],
+      "branchable_topics": [
+        "village",
+        "house",
+        "tree",
+        "building",
+        "bridge",
+        "Describing a natural scene",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Let's learn"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P62-D2",
+      "page_uid": "TB-G5S1U6-P62",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U6-P62-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "在词汇学习部分，提供了一段简短的问答对话，练习根据图片询问景物。 Key patterns: Are there any lakes on the mountain?; Yes, there is one.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Are there any lakes on the mountain?",
+        "Yes, there is one."
+      ],
+      "allowed_answer_scope": [
+        "Yes, there is one."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Are there any lakes on the mountain?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U6-P62-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U6-P62-D2-goal"
+      ],
+      "branchable_topics": [
+        "Describing a natural scene",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Are there any lakes on the mountain?",
+        "Yes, there is one."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P62-D3",
+      "page_uid": "TB-G5S1U6-P62",
+      "page_type": "vocabulary",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S1U6-P62-D3"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "一项写作任务，要求学生观察上面的图片，写四个句子来描述图中的景物。 Key patterns: Practice writing descriptive sentences using 'There is' and 'There are'.; There is a village in the nature park.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice writing descriptive sentences using 'There is' and 'There are'.",
+        "There is a village in the nature park."
+      ],
+      "allowed_answer_scope": [
+        "a bridge over the river.",
+        "many trees in the forest.",
+        "There is a tall building.",
+        "There are some houses in the village."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice writing descriptive sentences using 'There is' and 'There are'."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U6-P62-D3-goal"
+      ],
+      "branchable_topics": [
+        "Describing a natural scene",
+        "Write and say"
+      ],
+      "return_anchors": [
+        "Practice writing descriptive sentences using 'There is' and 'There are'.",
+        "There is a village in the nature park."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P63-D1",
+      "page_uid": "TB-G5S1U6-P63",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S1U6-P63-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一段描述机器人罗宾在琼斯先生家附近看到的自然公园景象的短文。短文详细描述了公园里的山、村庄、湖和鸭子。 Key patterns: Read and understand a descriptive text about a place.",
+      "focus_vocabulary": [
+        "nature park",
+        "high mountain",
+        "in front of",
+        "small village",
+        "near",
+        "lake",
+        "ducks"
+      ],
+      "core_patterns": [
+        "Read and understand a descriptive text about a place."
+      ],
+      "allowed_answer_scope": [
+        "nature park",
+        "high mountain",
+        "in front of",
+        "small village",
+        "near",
+        "lake"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word nature park?",
+        "Can you say: Read and understand a descriptive text about a place."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U6-P63-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U6-P63-D1-goal"
+      ],
+      "branchable_topics": [
+        "nature park",
+        "high mountain",
+        "in front of",
+        "small village",
+        "near",
+        "lake",
+        "ducks",
+        "Reading, drawing and writing about a nature park"
+      ],
+      "return_anchors": [
+        "Read and understand a descriptive text about a place."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P63-D2",
+      "page_uid": "TB-G5S1U6-P63",
+      "page_type": "reading",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G5S1U6-P63-D2"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "一项绘画辅助任务，要求学生帮助罗宾根据上面的文字描述画出公园的图片。提供了一张只有山的背景图。 Key patterns: Robin would like to draw a picture of the park. Can you help?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Robin would like to draw a picture of the park. Can you help?"
+      ],
+      "allowed_answer_scope": [
+        "Robin would like to draw a picture of the park. Can you help?"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Robin would like to draw a picture of the park. Can you help?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U6-P63-D1",
+        "TB-G5S1U6-P63-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U6-P63-D2-goal"
+      ],
+      "branchable_topics": [
+        "Reading, drawing and writing about a nature park",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "Robin would like to draw a picture of the park. Can you help?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P63-D3",
+      "page_uid": "TB-G5S1U6-P63",
+      "page_type": "reading",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G5S1U6-P63-D3"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "一项写作任务，要求学生根据公园的描述写出三个问题并给出答案。 Key patterns: Practice forming 'Is there...?' and 'Are there...?' questions.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Practice forming 'Is there...?' and 'Are there...?' questions."
+      ],
+      "allowed_answer_scope": [
+        "Yes, there is.",
+        "Yes, there are.",
+        "No, there isn't."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Practice forming 'Is there...?' and 'Are there...?' questions."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U6-P63-D3-goal"
+      ],
+      "branchable_topics": [
+        "Reading, drawing and writing about a nature park",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "Practice forming 'Is there...?' and 'Are there...?' questions."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P64-D1",
+      "page_uid": "TB-G5S1U6-P64",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U6-P64-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "学生听录音，根据听到的内容，判断公园里有哪些景物，并在相应的图片上打勾或画叉。 Key patterns: Listen and tick or cross.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and tick or cross."
+      ],
+      "allowed_answer_scope": [
+        "打勾",
+        "画叉"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and tick or cross."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U6-P64-D2",
+        "TB-G5S1U6-P64-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U6-P64-D1-goal"
+      ],
+      "branchable_topics": [
+        "Unit 6 Check & Wrap-up",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Listen and tick or cross."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P64-D2",
+      "page_uid": "TB-G5S1U6-P64",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U6-P64-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "再次听录音，并根据听到的内容回答问题，考察对公园景物的听力理解能力。 Key patterns: Listen again and answer the questions.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen again and answer the questions."
+      ],
+      "allowed_answer_scope": [
+        "No, there isn't.",
+        "Yes, there are."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen again and answer the questions."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U6-P64-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U6-P64-D2-goal"
+      ],
+      "branchable_topics": [
+        "Unit 6 Check & Wrap-up",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Listen again and answer the questions."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P64-D3",
+      "page_uid": "TB-G5S1U6-P64",
+      "page_type": "listening",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G5S1U6-P64-D3"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "观察一幅自然风光图，补全问句并给出相应的回答，总结和巩固'Is there...?'和'Are there...?'句型。 Key patterns: Review and practice 'Is there...?' for singular nouns and 'Are there...?' for plural nouns.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Review and practice 'Is there...?' for singular nouns and 'Are there...?' for plural nouns."
+      ],
+      "allowed_answer_scope": [
+        "Yes, there is.",
+        "No, there aren't.",
+        "No, there isn't.",
+        "Yes, there are."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Review and practice 'Is there...?' for singular nouns and 'Are there...?' for plural nouns."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U6-P64-D3-goal"
+      ],
+      "branchable_topics": [
+        "Unit 6 Check & Wrap-up",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Review and practice 'Is there...?' for singular nouns and 'Are there...?' for plural nouns."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U6-P65-D1",
+      "page_uid": "TB-G5S1U6-P65",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S1U6-P65-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一个连环画故事。小熊zoom和小松鼠zip去自然公园拍照。他们在公园里欣赏了美丽的风景，发现了一间装满玉米的房子和一只考拉。正当小松鼠zip要给考拉拍照时，相机卡坏了。 Key patterns: Describing scenery and things seen in a park.; Are there any people in the house?",
+      "focus_vocabulary": [
+        "nature park",
+        "take pictures",
+        "beautiful",
+        "bridge",
+        "mountains",
+        "trees",
+        "house",
+        "corn"
+      ],
+      "core_patterns": [
+        "Describing scenery and things seen in a park.",
+        "Are there any people in the house?",
+        "Hey! Why don't you take a picture of me?",
+        "What a nice day! Let's go to a nature park!",
+        "Look at that beautiful bridge.",
+        "Yes. The mountains and trees are beautiful, too."
+      ],
+      "allowed_answer_scope": [
+        "What a nice day! Let's go to a nature park!",
+        "Look at that beautiful bridge.",
+        "Yes. The mountains and trees are beautiful, too.",
+        "Look! There is a house over there!",
+        "Let's go and have a look!",
+        "There is so much corn! I like corn."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word nature park?",
+        "Can you say: Describing scenery and things seen in a park."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U6-P65-D1-goal"
+      ],
+      "branchable_topics": [
+        "nature park",
+        "take pictures",
+        "beautiful",
+        "bridge",
+        "mountains",
+        "trees",
+        "house",
+        "corn"
+      ],
+      "return_anchors": [
+        "Describing scenery and things seen in a park.",
+        "Are there any people in the house?",
+        "Hey! Why don't you take a picture of me?"
+      ]
+    }
+  ]
+}

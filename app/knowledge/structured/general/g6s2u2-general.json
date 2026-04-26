@@ -1,0 +1,2590 @@
+{
+  "pilot_id": "g6s2u2-general-v1",
+  "scope": {
+    "grade": "G6",
+    "semester": "S2",
+    "unit": "U2",
+    "pages": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/04.六年级下册语料.json",
+    "app/knowledge/raw/08.六年级下册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 22,
+    "source_kind": "textbook_source_json",
+    "source_format": "json"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 2",
+      "word": "cleaned",
+      "phonetic": "/kliːnd/",
+      "chinese": "（clean 的过去式）打扫",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U2-P14-D2",
+        "TB-G6S2U2-P15-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "stayed",
+      "phonetic": "/steɪd/",
+      "chinese": "（stay 的过去式）停留；待",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U2-P14-D2",
+        "TB-G6S2U2-P15-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "washed",
+      "phonetic": "/wɒʃt/",
+      "chinese": "（wash 的过去式）洗",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U2-P14-D2",
+        "TB-G6S2U2-P15-D1",
+        "TB-G6S2U2-P17-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "watched",
+      "phonetic": "/wɒtʃt/",
+      "chinese": "（watch 的过去式）看",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U2-P14-D2",
+        "TB-G6S2U2-P15-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "had",
+      "phonetic": "/hæd/",
+      "chinese": "（have 的过去式）患病；得病",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U2-P16-D2",
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "had a cold",
+      "chinese": "感冒",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U2-P16-D2",
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "slept",
+      "phonetic": "/slept/",
+      "chinese": "（sleep 的过去式）睡觉",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "read",
+      "phonetic": "/red/",
+      "chinese": "（read /riːd/ 的过去式）读",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "saw",
+      "phonetic": "/sɔː/",
+      "chinese": "（see 的过去式）看见",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "last",
+      "phonetic": "/lɑːst/",
+      "chinese": "最近的；上一个的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "yesterday",
+      "phonetic": "/'jestədeɪ/",
+      "chinese": "昨天",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "before",
+      "phonetic": "/bɪ'fɔː(r)/",
+      "chinese": "在……之前",
+      "emphasized": true,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "drank",
+      "phonetic": "/dræŋk/",
+      "chinese": "（drink 的过去式）喝",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U2-P14-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "show",
+      "phonetic": "/ʃəʊ/",
+      "chinese": "演出",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "magazine",
+      "phonetic": "/ˌmæɡə'ziːn/",
+      "chinese": "杂志",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U2-P16-D2"
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "word": "better",
+      "phonetic": "/'betə(r)/",
+      "chinese": "（well 的比较级）更好的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "faster",
+      "phonetic": "/'fɑːstə(r)/",
+      "chinese": "（fast 的比较级）更快的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "hotel",
+      "phonetic": "/həʊ'tel/",
+      "chinese": "旅馆",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "fixed",
+      "phonetic": "/fɪkst/",
+      "chinese": "（fix /fɪks/ 的过去式）修理",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "broken",
+      "phonetic": "/'brəʊkən/",
+      "chinese": "破损的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "lamp",
+      "phonetic": "/læmp/",
+      "chinese": "台灯",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "loud",
+      "phonetic": "/laʊd/",
+      "chinese": "喧闹的；大声的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "enjoy",
+      "phonetic": "/ɪn'dʒɔɪ/",
+      "chinese": "享受……乐趣；喜爱",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 2",
+      "word": "stay",
+      "phonetic": "/steɪ/",
+      "chinese": "暂住；逗留",
+      "emphasized": false,
+      "linked_block_uids": []
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G6S2U2-P12-D1-goal",
+      "block_uid": "TB-G6S2U2-P12-D1",
+      "category": "picture_scene",
+      "text": "Work on the picture scene activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P13-D1-goal",
+      "block_uid": "TB-G6S2U2-P13-D1",
+      "category": "picture_scene",
+      "text": "Work on the picture scene activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P13-D2-goal",
+      "block_uid": "TB-G6S2U2-P13-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P14-D1-goal",
+      "block_uid": "TB-G6S2U2-P14-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P14-D2-goal",
+      "block_uid": "TB-G6S2U2-P14-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P14-D3-goal",
+      "block_uid": "TB-G6S2U2-P14-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P15-D1-goal",
+      "block_uid": "TB-G6S2U2-P15-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P15-D2-goal",
+      "block_uid": "TB-G6S2U2-P15-D2",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P16-D1-goal",
+      "block_uid": "TB-G6S2U2-P16-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P16-D2-goal",
+      "block_uid": "TB-G6S2U2-P16-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P16-D3-goal",
+      "block_uid": "TB-G6S2U2-P16-D3",
+      "category": "practice_speaking",
+      "text": "Work on the practice speaking activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P16-D4-goal",
+      "block_uid": "TB-G6S2U2-P16-D4",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P17-D1-goal",
+      "block_uid": "TB-G6S2U2-P17-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P17-D2-goal",
+      "block_uid": "TB-G6S2U2-P17-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P18-D1-goal",
+      "block_uid": "TB-G6S2U2-P18-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P19-D1-goal",
+      "block_uid": "TB-G6S2U2-P19-D1",
+      "category": "practice_matching",
+      "text": "Work on the practice matching activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P19-D2-goal",
+      "block_uid": "TB-G6S2U2-P19-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P19-D3-goal",
+      "block_uid": "TB-G6S2U2-P19-D3",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P20-D1-goal",
+      "block_uid": "TB-G6S2U2-P20-D1",
+      "category": "assessment_quiz",
+      "text": "Check whether the learner can complete the unit review task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P20-D2-goal",
+      "block_uid": "TB-G6S2U2-P20-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P20-D3-goal",
+      "block_uid": "TB-G6S2U2-P20-D3",
+      "category": "grammar_point",
+      "text": "Work on the grammar point activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U2-P21-D1-goal",
+      "block_uid": "TB-G6S2U2-P21-D1",
+      "category": "story_time",
+      "text": "Read and retell the key story events.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-april",
+      "atom_type": "word",
+      "text": "April",
+      "gloss": "四月",
+      "linked_blocks": [
+        "TB-G6S2U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-average",
+      "atom_type": "word",
+      "text": "average",
+      "gloss": "一般的",
+      "linked_blocks": [
+        "TB-G6S2U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-before",
+      "atom_type": "word",
+      "text": "before",
+      "gloss": "在……之前",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-better",
+      "atom_type": "word",
+      "text": "better",
+      "gloss": "（well 的比较级）更好的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-broken",
+      "atom_type": "word",
+      "text": "broken",
+      "gloss": "破损的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-children-s-shows",
+      "atom_type": "word",
+      "text": "children's shows",
+      "gloss": "儿童节目",
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-cleaned",
+      "atom_type": "word",
+      "text": "cleaned",
+      "gloss": "（clean 的过去式）打扫",
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2",
+        "TB-G6S2U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-cleaned-my-room",
+      "atom_type": "word",
+      "text": "cleaned my room",
+      "gloss": "打扫我的房间",
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2",
+        "TB-G6S2U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-comments",
+      "atom_type": "word",
+      "text": "comments",
+      "gloss": "意见；评论",
+      "linked_blocks": [
+        "TB-G6S2U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-customer",
+      "atom_type": "word",
+      "text": "customer",
+      "gloss": "顾客",
+      "linked_blocks": [
+        "TB-G6S2U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-did-something-else",
+      "atom_type": "word",
+      "text": "did something else",
+      "gloss": "做了其他事情",
+      "linked_blocks": [
+        "TB-G6S2U2-P15-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-drank",
+      "atom_type": "word",
+      "text": "drank",
+      "gloss": "（drink 的过去式）喝",
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-drank-tea",
+      "atom_type": "word",
+      "text": "drank tea",
+      "gloss": "喝茶",
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-enjoy",
+      "atom_type": "word",
+      "text": "enjoy",
+      "gloss": "享受……乐趣；喜爱",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-faster",
+      "atom_type": "word",
+      "text": "faster",
+      "gloss": "（fast 的比较级）更快的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-film-magazine",
+      "atom_type": "word",
+      "text": "film magazine",
+      "gloss": "电影杂志",
+      "linked_blocks": [
+        "TB-G6S2U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-fixed",
+      "atom_type": "word",
+      "text": "fixed",
+      "gloss": "（fix /fɪks/ 的过去式）修理",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-had",
+      "atom_type": "word",
+      "text": "had",
+      "gloss": "（have 的过去式）患病；得病",
+      "linked_blocks": [
+        "TB-G6S2U2-P16-D2",
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-had-a-cold",
+      "atom_type": "word",
+      "text": "had a cold",
+      "gloss": "感冒",
+      "linked_blocks": [
+        "TB-G6S2U2-P16-D2",
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hotel",
+      "atom_type": "word",
+      "text": "hotel",
+      "gloss": "旅馆",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-housekeeper",
+      "atom_type": "word",
+      "text": "housekeeper",
+      "gloss": "客房清洁员",
+      "linked_blocks": [
+        "TB-G6S2U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-lamp",
+      "atom_type": "word",
+      "text": "lamp",
+      "gloss": "台灯",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-last",
+      "atom_type": "word",
+      "text": "last",
+      "gloss": "最近的；上一个的",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-last-monday",
+      "atom_type": "word",
+      "text": "last Monday",
+      "gloss": "上个星期一",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-last-night",
+      "atom_type": "word",
+      "text": "last night",
+      "gloss": "昨晚",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-last-weekend",
+      "atom_type": "word",
+      "text": "last weekend",
+      "gloss": "上个周末",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-loud",
+      "atom_type": "word",
+      "text": "loud",
+      "gloss": "喧闹的；大声的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-magazine",
+      "atom_type": "word",
+      "text": "magazine",
+      "gloss": "杂志",
+      "linked_blocks": [
+        "TB-G6S2U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-read",
+      "atom_type": "word",
+      "text": "read",
+      "gloss": "（read /riːd/ 的过去式）读",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-read-a-book",
+      "atom_type": "word",
+      "text": "read a book",
+      "gloss": "看书",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-saturday",
+      "atom_type": "word",
+      "text": "Saturday",
+      "gloss": "星期六",
+      "linked_blocks": [
+        "TB-G6S2U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-saw",
+      "atom_type": "word",
+      "text": "saw",
+      "gloss": "（see 的过去式）看见",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-saw-a-film",
+      "atom_type": "word",
+      "text": "saw a film",
+      "gloss": "看电影",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-show",
+      "atom_type": "word",
+      "text": "show",
+      "gloss": "演出",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-slept",
+      "atom_type": "word",
+      "text": "slept",
+      "gloss": "（sleep 的过去式）睡觉",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-stay",
+      "atom_type": "word",
+      "text": "stay",
+      "gloss": "暂住；逗留",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-stayed",
+      "atom_type": "word",
+      "text": "stayed",
+      "gloss": "（stay 的过去式）停留；待",
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2",
+        "TB-G6S2U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-stayed-at-home",
+      "atom_type": "word",
+      "text": "stayed at home",
+      "gloss": "呆在家里",
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2",
+        "TB-G6S2U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sunday",
+      "atom_type": "word",
+      "text": "Sunday",
+      "gloss": "星期日",
+      "linked_blocks": [
+        "TB-G6S2U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-washed",
+      "atom_type": "word",
+      "text": "washed",
+      "gloss": "（wash 的过去式）洗",
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2",
+        "TB-G6S2U2-P15-D1",
+        "TB-G6S2U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-washed-her-clothes",
+      "atom_type": "word",
+      "text": "washed her clothes",
+      "gloss": "洗了她的衣服",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-washed-my-clothes",
+      "atom_type": "word",
+      "text": "washed my clothes",
+      "gloss": "洗我的衣服",
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2",
+        "TB-G6S2U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-watched",
+      "atom_type": "word",
+      "text": "watched",
+      "gloss": "（watch 的过去式）看",
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2",
+        "TB-G6S2U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-watched-tv",
+      "atom_type": "word",
+      "text": "watched TV",
+      "gloss": "看电视",
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2",
+        "TB-G6S2U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-went-boating",
+      "atom_type": "word",
+      "text": "went boating",
+      "gloss": "去划船",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-wow",
+      "atom_type": "word",
+      "text": "Wow",
+      "gloss": "哇",
+      "linked_blocks": [
+        "TB-G6S2U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-yesterday",
+      "atom_type": "word",
+      "text": "yesterday",
+      "gloss": "昨天",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-answer-the-questions",
+      "atom_type": "sentence_pattern",
+      "text": "Answer the questions.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P16-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-circle-all-the-verbs-in-the-text-and-complete-the-table",
+      "atom_type": "sentence_pattern",
+      "text": "Circle all the verbs in the text and complete the table.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P19-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-dear-manager",
+      "atom_type": "sentence_pattern",
+      "text": "Dear Manager,",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P19-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-did-he-have-a-cold-yesterday",
+      "atom_type": "sentence_pattern",
+      "text": "Did he have a cold yesterday?",
+      "gloss": "他昨天感冒了吗？",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-did-you-do-anything-else",
+      "atom_type": "sentence_pattern",
+      "text": "Did you do anything else?",
+      "gloss": "你还做了其他什么事吗？",
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-did-you-like-it",
+      "atom_type": "sentence_pattern",
+      "text": "Did you like it?",
+      "gloss": "你喜欢它吗？",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-did-you-play-football-with-zhang-peng",
+      "atom_type": "sentence_pattern",
+      "text": "Did you play football with Zhang Peng?",
+      "gloss": "你和张鹏踢足球了吗？",
+      "linked_blocks": [
+        "TB-G6S2U2-P13-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-did-you-see-a-film",
+      "atom_type": "sentence_pattern",
+      "text": "Did you see a film?",
+      "gloss": "你看电影了吗？",
+      "linked_blocks": [
+        "TB-G6S2U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-slept",
+      "atom_type": "sentence_pattern",
+      "text": "He slept.",
+      "gloss": "他睡觉了。",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hey-amy-let-s-go-to-the-bookstore-i-want-to-buy-the-new-film-magazine",
+      "atom_type": "sentence_pattern",
+      "text": "Hey, Amy. Let's go to the bookstore. I want to buy the new film magazine.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hi-grandpa-how-are-you-how-was-your-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "Hi, Grandpa. How are you? How was your weekend?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-was-your-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "How was your weekend?",
+      "gloss": "你周末过得怎么样？",
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2",
+        "TB-G6S2U2-P14-D3",
+        "TB-G6S2U2-P15-D1",
+        "TB-G6S2U2-P15-D2",
+        "TB-G6S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-cleaned-my-room-and-washed-my-clothes-on-saturday",
+      "atom_type": "sentence_pattern",
+      "text": "I cleaned my room and washed my clothes on Saturday.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P13-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-saw-a-film",
+      "atom_type": "sentence_pattern",
+      "text": "I saw a film.",
+      "gloss": "我看了一部电影。",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-stayed-at-home-all-weekend-and-slept",
+      "atom_type": "sentence_pattern",
+      "text": "I stayed at home all weekend and slept.",
+      "gloss": "我整个周末都待在家里睡觉。",
+      "linked_blocks": [
+        "TB-G6S2U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-stayed-at-home-and-watched-tv",
+      "atom_type": "sentence_pattern",
+      "text": "I stayed at home and watched TV.",
+      "gloss": "我待在家里看电视了。",
+      "linked_blocks": [
+        "TB-G6S2U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-washed-my-clothes",
+      "atom_type": "sentence_pattern",
+      "text": "I washed my clothes.",
+      "gloss": "我洗了我的衣服。",
+      "linked_blocks": [
+        "TB-G6S2U2-P15-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-fine-mike-it-was-good-thank-you",
+      "atom_type": "sentence_pattern",
+      "text": "I'm fine, Mike. It was good, thank you.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-was-ok",
+      "atom_type": "sentence_pattern",
+      "text": "It was OK.",
+      "gloss": "还行。",
+      "linked_blocks": [
+        "TB-G6S2U2-P15-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-was-a-busy-one",
+      "atom_type": "sentence_pattern",
+      "text": "It was a busy one.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-was-fine-thanks",
+      "atom_type": "sentence_pattern",
+      "text": "It was fine, thanks.",
+      "gloss": "很好，谢谢。",
+      "linked_blocks": [
+        "TB-G6S2U2-P15-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-wasn-t-a-good-stay-maybe-we-can-write-an-email-and-say-sorry-to-them",
+      "atom_type": "sentence_pattern",
+      "text": "It wasn't a good stay. Maybe we can write an email and say sorry to them.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P19-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-last-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "Last weekend",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P13-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-last-weekend-the-wu-family-were-not-happy-with-their-room-the-people-in-room-301-all-night-it-was-very-noisy-the-father-from-the-kitchen-but-also-the-mother-but-the-lamp-the-tv-didn-t-work-either",
+      "atom_type": "sentence_pattern",
+      "text": "Last weekend, the Wu family were not happy with their room. The people in Room 301 ________________________ all night. It was very noisy. The father ________________________ from the kitchen but ________________________. Also, the mother ________________________ but the lamp ________________________. The TV didn't work either.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P19-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-check",
+      "atom_type": "sentence_pattern",
+      "text": "Let's check",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P20-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D1",
+        "TB-G6S2U2-P16-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-at-the-table-below-for-a-few-seconds-then-cover-it-ask-and-answer",
+      "atom_type": "sentence_pattern",
+      "text": "Look at the table below for a few seconds. Then cover it. Ask and answer.",
+      "gloss": "看下面的表格几秒钟。然后把它盖住。进行问答。",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-mrs-broom",
+      "atom_type": "sentence_pattern",
+      "text": "Mrs Broom",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P19-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-and-complete-the-sentences",
+      "atom_type": "sentence_pattern",
+      "text": "Read and complete the sentences.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P20-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-the-letter-again-quickly-find-the-sentences-that-describe-pictures-1-3",
+      "atom_type": "sentence_pattern",
+      "text": "Read the letter again quickly. Find the sentences that describe Pictures 1-3.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P19-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-that-s-nice-did-you-do-anything-else",
+      "atom_type": "sentence_pattern",
+      "text": "That's nice. Did you do anything else?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-unit-two",
+      "atom_type": "sentence_pattern",
+      "text": "Unit Two",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P12-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-was-it-interesting",
+      "atom_type": "sentence_pattern",
+      "text": "Was it interesting?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-are-you-going-to-do-next-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "What are you going to do next weekend?",
+      "gloss": "你下个周末打算做什么？",
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-did-john-do-yesterday",
+      "atom_type": "sentence_pattern",
+      "text": "What did John do yesterday?",
+      "gloss": "约翰昨天做了什么？",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-did-mike-s-grandpa-do-last-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "What did Mike's grandpa do last weekend?",
+      "gloss": "迈克的爷爷上周末做了什么？",
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-did-you-do-last-weekend",
+      "atom_type": "sentence_pattern",
+      "text": "What did you do last weekend?",
+      "gloss": "你上个周末做了什么？",
+      "linked_blocks": [
+        "TB-G6S2U2-P13-D2",
+        "TB-G6S2U2-P14-D3",
+        "TB-G6S2U2-P16-D2",
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-did-you-do-on-saturday-afternoon",
+      "atom_type": "sentence_pattern",
+      "text": "What did you do on Saturday afternoon?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-did-you-do-on-saturday-morning",
+      "atom_type": "sentence_pattern",
+      "text": "What did you do on Saturday morning?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-did-you-do-on-sunday-afternoon",
+      "atom_type": "sentence_pattern",
+      "text": "What did you do on Sunday afternoon?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-did-you-do-on-sunday-morning",
+      "atom_type": "sentence_pattern",
+      "text": "What did you do on Sunday morning?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P21-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-did-you-do-yesterday-last-night",
+      "atom_type": "sentence_pattern",
+      "text": "What did you do yesterday/last night ...?",
+      "gloss": "你昨天/昨晚做了什么……？",
+      "linked_blocks": [
+        "TB-G6S2U2-P16-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-did-you-do",
+      "atom_type": "sentence_pattern",
+      "text": "What did you do?",
+      "gloss": "你做了什么？",
+      "linked_blocks": [
+        "TB-G6S2U2-P14-D2",
+        "TB-G6S2U2-P15-D1",
+        "TB-G6S2U2-P15-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-do-you-think-she-did-yesterday",
+      "atom_type": "sentence_pattern",
+      "text": "What do you think she did yesterday?",
+      "gloss": "你认为她昨天做了什么？",
+      "linked_blocks": [
+        "TB-G6S2U2-P18-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-do-you-usually-do-on-weekends",
+      "atom_type": "sentence_pattern",
+      "text": "What do you usually do on weekends?",
+      "gloss": "你周末通常做什么？",
+      "linked_blocks": [
+        "TB-G6S2U2-P16-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-i-did-it-was-great",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, I did. It was great.",
+      "gloss": "是的，我喜欢。它很棒。",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-i-did-we-played-football-on-sunday",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, I did. We played football on Sunday.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P13-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-he-did",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, he did.",
+      "gloss": "是的，他感冒了。",
+      "linked_blocks": [
+        "TB-G6S2U2-P17-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-it-talked-about-a-lot-of-new-films-what-did-you-do-last-weekend-did-you-see-a-film",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, it talked about a lot of new films. What did you do last weekend? Did you see a film?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U2-P16-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-cry-cried",
+      "atom_type": "sentence_pattern",
+      "text": "cry → cried",
+      "gloss": "哭泣 → 哭泣（过去式）",
+      "linked_blocks": [
+        "TB-G6S2U2-P20-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-live-lived",
+      "atom_type": "sentence_pattern",
+      "text": "live → lived",
+      "gloss": "居住 → 居住（过去式）",
+      "linked_blocks": [
+        "TB-G6S2U2-P20-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-plan-planned",
+      "atom_type": "sentence_pattern",
+      "text": "plan → planned",
+      "gloss": "计划 → 计划（过去式）",
+      "linked_blocks": [
+        "TB-G6S2U2-P20-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-stay-stayed",
+      "atom_type": "sentence_pattern",
+      "text": "stay → stayed",
+      "gloss": "停留 → 停留（过去式）",
+      "linked_blocks": [
+        "TB-G6S2U2-P20-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-talk-talked",
+      "atom_type": "sentence_pattern",
+      "text": "talk → talked",
+      "gloss": "谈话 → 谈话（过去式）",
+      "linked_blocks": [
+        "TB-G6S2U2-P20-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-want-wanted",
+      "atom_type": "sentence_pattern",
+      "text": "want → wanted",
+      "gloss": "想要 → 想要（过去式）",
+      "linked_blocks": [
+        "TB-G6S2U2-P20-D3"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G6S2U2-P12",
+      "page_type": "picture",
+      "page_intro_cn": "Theme: Unit Two. 本页是Unit Two的主情景图，模拟了社交媒体的界面，展示了Mike发布的两条动态。第一条动态发布时间为'Saturday April 5th 15:30'，界面显示有关注、粉丝、微博数量以及'转发 (30) | 收藏 | 评论 (15)'，配图为Mike在拖地、洗衣服和做作业。第二条动态发布时间为'Sunday April 6th 20:17'，界面显示有相应的账号数据以及'转发 (26) | 收藏 | 评论 (10)'，配图为Mike和朋友在划船、踢足球以及在电影院看电影（电影画面中有两只松鼠，并带有字幕'Wow!'）。",
+      "entry_probe_questions": [
+        "Do you know the word Saturday?",
+        "Can you say: Unit Two"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U2-P12-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U2-P13",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Last weekend. John and Mike are talking about what they did last weekend.",
+      "entry_probe_questions": [
+        "Can you say: What did you do last weekend?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U2-P13-D2",
+        "TB-G6S2U2-P13-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U2-P14",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Last weekend. Mike is talking to his Grandpa on the phone about their weekend.",
+      "entry_probe_questions": [
+        "Do you know the word stayed at home?",
+        "Can you say: How was your weekend?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U2-P14-D2",
+        "TB-G6S2U2-P14-D3",
+        "TB-G6S2U2-P14-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U2-P15",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Last weekend. Illustrations of four weekend activities and a dialogue between Mike and Chen Jie about their weekend.",
+      "entry_probe_questions": [
+        "Do you know the word cleaned my room?",
+        "Can you say: How was your weekend?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U2-P15-D1",
+        "TB-G6S2U2-P15-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U2-P16",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Last weekend. John and Amy are talking at a bus stop.",
+      "entry_probe_questions": [
+        "Do you know the word film magazine?",
+        "Can you say: What did you do last weekend?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U2-P16-D2",
+        "TB-G6S2U2-P16-D4",
+        "TB-G6S2U2-P16-D1",
+        "TB-G6S2U2-P16-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U2-P17",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Last weekend. Illustrations of past activities and time expressions, followed by a dialogue between John and Amy.",
+      "entry_probe_questions": [
+        "Do you know the word read a book?",
+        "Can you say: What did you do last weekend?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U2-P17-D1",
+        "TB-G6S2U2-P17-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U2-P18",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Last weekend. An introduction to Mrs Broom's job and a feedback letter from Wu Binbin's family about their bad stay at the Holiday Hotel.",
+      "entry_probe_questions": [
+        "Do you know the word housekeeper?",
+        "Can you say: What do you think she did yesterday?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U2-P18-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U2-P19",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Last weekend. An email from Mrs Broom to the Manager about the Wu family's bad stay at the hotel.",
+      "entry_probe_questions": [
+        "Can you say: Dear Manager,"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U2-P19-D3",
+        "TB-G6S2U2-P19-D2",
+        "TB-G6S2U2-P19-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U2-P20",
+      "page_type": "grammar",
+      "page_intro_cn": "Theme: Last weekend. Read and complete the sentences with the correct past tense form of the verbs.",
+      "entry_probe_questions": [
+        "Can you say: Read and complete the sentences."
+      ],
+      "priority_blocks": [
+        "TB-G6S2U2-P20-D2",
+        "TB-G6S2U2-P20-D3",
+        "TB-G6S2U2-P20-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U2-P21",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Story time. Zip and Zoom are talking about Zoom's busy weekend.",
+      "entry_probe_questions": [
+        "Can you say: How was your weekend?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U2-P21-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G6S2U2-P12-D1",
+      "page_uid": "TB-G6S2U2-P12",
+      "page_type": "picture",
+      "block_type": "picture_scene",
+      "source_refs": [
+        "TB-G6S2U2-P12-D1"
+      ],
+      "teaching_goal": "Work on the picture scene activity.",
+      "teaching_summary": "本页是Unit Two的主情景图，模拟了社交媒体的界面，展示了Mike发布的两条动态。第一条动态发布时间为'Saturday April 5th 15:30'，界面显示有关注、粉丝、微博数量以及'转发 (30) | 收藏 | 评论 (15)'，配图为Mike在拖地、洗衣服和做作业。第二条动态发布时间为'Sunday April 6th 20:17'，界面显示有相应的账号数据以及'转发 (26) | 收藏 | 评论 (10)'，配图为Mike和朋友在划船、踢足球以及在电影院看电影（电影画面中有两只松鼠，并带有字幕'Wow!'）。 Key patterns: Unit Two",
+      "focus_vocabulary": [
+        "Saturday",
+        "Sunday",
+        "April",
+        "Wow"
+      ],
+      "core_patterns": [
+        "Unit Two"
+      ],
+      "allowed_answer_scope": [
+        "Saturday",
+        "Sunday",
+        "April",
+        "Wow"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word Saturday?",
+        "Can you say: Unit Two"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U2-P12-D1-goal"
+      ],
+      "branchable_topics": [
+        "Saturday",
+        "Sunday",
+        "April",
+        "Wow",
+        "Unit Two"
+      ],
+      "return_anchors": [
+        "Unit Two"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P13-D1",
+      "page_uid": "TB-G6S2U2-P13",
+      "page_type": "dialogue",
+      "block_type": "picture_scene",
+      "source_refs": [
+        "TB-G6S2U2-P13-D1"
+      ],
+      "teaching_goal": "Work on the picture scene activity.",
+      "teaching_summary": "The page shows John's social media posts. The first post is on Saturday, April 5th at 17:23, with pictures of him sleeping and reading a book. The second post is on Sunday, April 6th at 20:45, with pictures of him listening to music and watching TV. Key patterns: Last weekend",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Last weekend"
+      ],
+      "allowed_answer_scope": [
+        "Last weekend"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Last weekend"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U2-P13-D1-goal"
+      ],
+      "branchable_topics": [
+        "Last weekend"
+      ],
+      "return_anchors": [
+        "Last weekend"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P13-D2",
+      "page_uid": "TB-G6S2U2-P13",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S2U2-P13-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "John and Mike are talking about what they did last weekend. Key patterns: What did you do last weekend?; Did you play football with Zhang Peng?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What did you do last weekend?",
+        "Did you play football with Zhang Peng?",
+        "I cleaned my room and washed my clothes on Saturday.",
+        "Yes, I did. We played football on Sunday."
+      ],
+      "allowed_answer_scope": [
+        "I cleaned my room and washed my clothes on Saturday.",
+        "Yes, I did. We played football on Sunday."
+      ],
+      "entry_probe_questions": [
+        "Can you say: What did you do last weekend?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U2-P13-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U2-P13-D2-goal"
+      ],
+      "branchable_topics": [
+        "Last weekend"
+      ],
+      "return_anchors": [
+        "What did you do last weekend?",
+        "Did you play football with Zhang Peng?",
+        "I cleaned my room and washed my clothes on Saturday."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P14-D1",
+      "page_uid": "TB-G6S2U2-P14",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S2U2-P14-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Sarah and Mike are talking about this weekend. Key patterns: Listen and circle.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "Listen and circle."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U2-P14-D1-goal"
+      ],
+      "branchable_topics": [
+        "Last weekend",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P14-D2",
+      "page_uid": "TB-G6S2U2-P14",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S2U2-P14-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Mike is talking to his Grandpa on the phone about their weekend. Key patterns: How was your weekend?; What did you do?",
+      "focus_vocabulary": [
+        "stayed at home",
+        "drank tea",
+        "watched TV",
+        "children's shows",
+        "cleaned my room",
+        "washed my clothes"
+      ],
+      "core_patterns": [
+        "How was your weekend?",
+        "What did you do?",
+        "Did you do anything else?",
+        "Hi, Grandpa. How are you? How was your weekend?",
+        "That's nice. Did you do anything else?",
+        "I'm fine, Mike. It was good, thank you."
+      ],
+      "allowed_answer_scope": [
+        "I'm fine, Mike. It was good, thank you.",
+        "Well, I stayed at home with your grandma. We drank tea in the afternoon and watched TV.",
+        "I watched TV, too. I watched some children's shows on TV.",
+        "Yes, I cleaned my room and washed my clothes.",
+        "You are a good boy!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word stayed at home?",
+        "Can you say: How was your weekend?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U2-P14-D3",
+        "TB-G6S2U2-P14-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U2-P14-D2-goal"
+      ],
+      "branchable_topics": [
+        "stayed at home",
+        "drank tea",
+        "watched TV",
+        "children's shows",
+        "cleaned my room",
+        "washed my clothes",
+        "Last weekend",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "How was your weekend?",
+        "What did you do?",
+        "Did you do anything else?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P14-D3",
+      "page_uid": "TB-G6S2U2-P14",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S2U2-P14-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Questions for practice based on the dialogue and personal experience. Key patterns: What did Mike's grandpa do last weekend?; How was your weekend?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What did Mike's grandpa do last weekend?",
+        "How was your weekend?",
+        "What did you do last weekend?",
+        "What are you going to do next weekend?"
+      ],
+      "allowed_answer_scope": [
+        "What did Mike's grandpa do last weekend?",
+        "How was your weekend?",
+        "What did you do last weekend?",
+        "What are you going to do next weekend?"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What did Mike's grandpa do last weekend?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U2-P14-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U2-P14-D3-goal"
+      ],
+      "branchable_topics": [
+        "Last weekend",
+        "Practice"
+      ],
+      "return_anchors": [
+        "What did Mike's grandpa do last weekend?",
+        "How was your weekend?",
+        "What did you do last weekend?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P15-D1",
+      "page_uid": "TB-G6S2U2-P15",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S2U2-P15-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Illustrations of four weekend activities and a dialogue between Mike and Chen Jie about their weekend. Key patterns: How was your weekend?; It was fine, thanks.",
+      "focus_vocabulary": [
+        "cleaned my room",
+        "washed my clothes",
+        "stayed at home",
+        "watched TV"
+      ],
+      "core_patterns": [
+        "How was your weekend?",
+        "It was fine, thanks.",
+        "What did you do?",
+        "I stayed at home and watched TV."
+      ],
+      "allowed_answer_scope": [
+        "cleaned my room",
+        "washed my clothes",
+        "stayed at home",
+        "watched TV"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word cleaned my room?",
+        "Can you say: How was your weekend?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U2-P15-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U2-P15-D1-goal"
+      ],
+      "branchable_topics": [
+        "cleaned my room",
+        "washed my clothes",
+        "stayed at home",
+        "watched TV",
+        "Last weekend",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "How was your weekend?",
+        "It was fine, thanks.",
+        "What did you do?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P15-D2",
+      "page_uid": "TB-G6S2U2-P15",
+      "page_type": "vocabulary",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S2U2-P15-D2"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "Students ask each other about their weekend activities, fill in a chart, and report to the class. Key patterns: How was your weekend?; It was OK.",
+      "focus_vocabulary": [
+        "did something else"
+      ],
+      "core_patterns": [
+        "How was your weekend?",
+        "It was OK.",
+        "What did you do?",
+        "I washed my clothes."
+      ],
+      "allowed_answer_scope": [
+        "did something else"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word did something else?",
+        "Can you say: How was your weekend?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U2-P15-D2-goal"
+      ],
+      "branchable_topics": [
+        "did something else",
+        "Last weekend",
+        "Do a survey and report"
+      ],
+      "return_anchors": [
+        "How was your weekend?",
+        "It was OK.",
+        "What did you do?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P16-D1",
+      "page_uid": "TB-G6S2U2-P16",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S2U2-P16-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Wu Binbin is asking John about last weekend. Key patterns: Listen and circle.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "A. He slept.",
+        "B. No, they aren't."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U2-P16-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U2-P16-D1-goal"
+      ],
+      "branchable_topics": [
+        "Last weekend",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P16-D2",
+      "page_uid": "TB-G6S2U2-P16",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S2U2-P16-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "John and Amy are talking at a bus stop. Key patterns: What did you do last weekend?; Did you see a film?",
+      "focus_vocabulary": [
+        "film magazine",
+        "had a cold"
+      ],
+      "core_patterns": [
+        "What did you do last weekend?",
+        "Did you see a film?",
+        "I stayed at home all weekend and slept.",
+        "Was it interesting?",
+        "Yes, it talked about a lot of new films. What did you do last weekend? Did you see a film?",
+        "Hey, Amy. Let's go to the bookstore. I want to buy the new film magazine."
+      ],
+      "allowed_answer_scope": [
+        "Hey, Amy. Let's go to the bookstore. I want to buy the new film magazine.",
+        "Oh, I read it last weekend.",
+        "No, I had a cold. I stayed at home all weekend and slept.",
+        "Oh, I'm sorry. I'm happy you feel better now.",
+        "Thanks. Let's go by bus. It's faster than walking."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word film magazine?",
+        "Can you say: What did you do last weekend?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U2-P16-D4",
+        "TB-G6S2U2-P16-D1",
+        "TB-G6S2U2-P16-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U2-P16-D2-goal"
+      ],
+      "branchable_topics": [
+        "film magazine",
+        "had a cold",
+        "Last weekend",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "What did you do last weekend?",
+        "Did you see a film?",
+        "I stayed at home all weekend and slept."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P16-D3",
+      "page_uid": "TB-G6S2U2-P16",
+      "page_type": "dialogue",
+      "block_type": "practice_speaking",
+      "source_refs": [
+        "TB-G6S2U2-P16-D3"
+      ],
+      "teaching_goal": "Work on the practice speaking activity.",
+      "teaching_summary": "Questions based on the dialogue. Key patterns: Answer the questions.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Answer the questions."
+      ],
+      "allowed_answer_scope": [
+        "No, he didn't.",
+        "He stayed at home all weekend and slept."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Answer the questions."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U2-P16-D3-goal"
+      ],
+      "branchable_topics": [
+        "Last weekend",
+        "Answer the questions"
+      ],
+      "return_anchors": [
+        "Answer the questions."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P16-D4",
+      "page_uid": "TB-G6S2U2-P16",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S2U2-P16-D4"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Students practice asking about past and usual activities. Key patterns: What did you do yesterday/last night ...?; What do you usually do on weekends?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What did you do yesterday/last night ...?",
+        "What do you usually do on weekends?"
+      ],
+      "allowed_answer_scope": [
+        "What did you do yesterday/last night ...?",
+        "What do you usually do on weekends?"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What did you do yesterday/last night ...?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U2-P16-D1",
+        "TB-G6S2U2-P16-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U2-P16-D4-goal"
+      ],
+      "branchable_topics": [
+        "Last weekend",
+        "Practice"
+      ],
+      "return_anchors": [
+        "What did you do yesterday/last night ...?",
+        "What do you usually do on weekends?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P17-D1",
+      "page_uid": "TB-G6S2U2-P17",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S2U2-P17-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Illustrations of past activities and time expressions, followed by a dialogue between John and Amy. Key patterns: What did you do last weekend?; I saw a film.",
+      "focus_vocabulary": [
+        "read a book",
+        "saw a film",
+        "had a cold",
+        "slept",
+        "last weekend",
+        "last night",
+        "last Monday",
+        "yesterday"
+      ],
+      "core_patterns": [
+        "What did you do last weekend?",
+        "I saw a film.",
+        "Did you like it?",
+        "Yes, I did. It was great."
+      ],
+      "allowed_answer_scope": [
+        "read a book",
+        "saw a film",
+        "had a cold",
+        "slept",
+        "last weekend",
+        "last night"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word read a book?",
+        "Can you say: What did you do last weekend?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U2-P17-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U2-P17-D1-goal"
+      ],
+      "branchable_topics": [
+        "read a book",
+        "saw a film",
+        "had a cold",
+        "slept",
+        "last weekend",
+        "last night",
+        "last Monday",
+        "yesterday"
+      ],
+      "return_anchors": [
+        "What did you do last weekend?",
+        "I saw a film.",
+        "Did you like it?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P17-D2",
+      "page_uid": "TB-G6S2U2-P17",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S2U2-P17-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "A bear and a squirrel are practicing asking and answering questions based on a table of activities. Key patterns: Look at the table below for a few seconds. Then cover it. Ask and answer.; What did John do yesterday?",
+      "focus_vocabulary": [
+        "went boating",
+        "washed her clothes"
+      ],
+      "core_patterns": [
+        "Look at the table below for a few seconds. Then cover it. Ask and answer.",
+        "What did John do yesterday?",
+        "He slept.",
+        "Did he have a cold yesterday?",
+        "Yes, he did."
+      ],
+      "allowed_answer_scope": [
+        "He slept.",
+        "Yes, he did."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word went boating?",
+        "Can you say: Look at the table below for a few seconds. Then cover it. Ask and answer."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U2-P17-D2-goal"
+      ],
+      "branchable_topics": [
+        "went boating",
+        "washed her clothes",
+        "Last weekend",
+        "Look and talk"
+      ],
+      "return_anchors": [
+        "Look at the table below for a few seconds. Then cover it. Ask and answer.",
+        "What did John do yesterday?",
+        "He slept."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P18-D1",
+      "page_uid": "TB-G6S2U2-P18",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S2U2-P18-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "An introduction to Mrs Broom's job and a feedback letter from Wu Binbin's family about their bad stay at the Holiday Hotel. Key patterns: What do you think she did yesterday?",
+      "focus_vocabulary": [
+        "housekeeper",
+        "customer",
+        "average",
+        "comments"
+      ],
+      "core_patterns": [
+        "What do you think she did yesterday?"
+      ],
+      "allowed_answer_scope": [
+        "housekeeper",
+        "customer",
+        "average",
+        "comments"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word housekeeper?",
+        "Can you say: What do you think she did yesterday?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U2-P18-D1-goal"
+      ],
+      "branchable_topics": [
+        "housekeeper",
+        "customer",
+        "average",
+        "comments",
+        "Last weekend",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "What do you think she did yesterday?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P19-D1",
+      "page_uid": "TB-G6S2U2-P19",
+      "page_type": "reading",
+      "block_type": "practice_matching",
+      "source_refs": [
+        "TB-G6S2U2-P19-D1"
+      ],
+      "teaching_goal": "Work on the practice matching activity.",
+      "teaching_summary": "Three pictures showing different situations in a hotel room. Key patterns: Read the letter again quickly. Find the sentences that describe Pictures 1-3.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Read the letter again quickly. Find the sentences that describe Pictures 1-3."
+      ],
+      "allowed_answer_scope": [
+        "Read the letter again quickly. Find the sentences that describe Pictures 1-3."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Read the letter again quickly. Find the sentences that describe Pictures 1-3."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U2-P19-D1-goal"
+      ],
+      "branchable_topics": [
+        "Last weekend",
+        "Read the letter again quickly. Find the sentences that describe Pictures 1-3."
+      ],
+      "return_anchors": [
+        "Read the letter again quickly. Find the sentences that describe Pictures 1-3."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P19-D2",
+      "page_uid": "TB-G6S2U2-P19",
+      "page_type": "reading",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S2U2-P19-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "A table to categorize verbs into Past and Present tense. Key patterns: Circle all the verbs in the text and complete the table.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Circle all the verbs in the text and complete the table."
+      ],
+      "allowed_answer_scope": [
+        "was",
+        "is"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Circle all the verbs in the text and complete the table."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U2-P19-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U2-P19-D2-goal"
+      ],
+      "branchable_topics": [
+        "Last weekend",
+        "Circle all the verbs in the text and complete the table."
+      ],
+      "return_anchors": [
+        "Circle all the verbs in the text and complete the table."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P19-D3",
+      "page_uid": "TB-G6S2U2-P19",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S2U2-P19-D3"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "An email from Mrs Broom to the Manager about the Wu family's bad stay at the hotel. Key patterns: Dear Manager,; Last weekend, the Wu family were not happy with their room. The people in Room 301 ________________________ all night. It was very noisy. The father ________________________ from the kitchen but ________________________. Also, the mother ________________________ but the lamp ________________________. The TV didn't work either.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Dear Manager,",
+        "Last weekend, the Wu family were not happy with their room. The people in Room 301 ________________________ all night. It was very noisy. The father ________________________ from the kitchen but ________________________. Also, the mother ________________________ but the lamp ________________________. The TV didn't work either.",
+        "It wasn't a good stay. Maybe we can write an email and say sorry to them.",
+        "Mrs Broom"
+      ],
+      "allowed_answer_scope": [
+        "Dear Manager,",
+        "Last weekend, the Wu family were not happy with their room. The people in Room 301 ________________________ all night. It was very noisy. The father ________________________ from the kitchen but ________________________. Also, the mother ________________________ but the lamp ________________________. The TV didn't work either.",
+        "It wasn't a good stay. Maybe we can write an email and say sorry to them.",
+        "Mrs Broom"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Dear Manager,"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U2-P19-D2",
+        "TB-G6S2U2-P19-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U2-P19-D3-goal"
+      ],
+      "branchable_topics": [
+        "Last weekend",
+        "Read and finish the letter."
+      ],
+      "return_anchors": [
+        "Dear Manager,",
+        "Last weekend, the Wu family were not happy with their room. The people in Room 301 ________________________ all night. It was very noisy. The father ________________________ from the kitchen but ________________________. Also, the mother ________________________ but the lamp ________________________. The TV didn't work either.",
+        "It wasn't a good stay. Maybe we can write an email and say sorry to them."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P20-D1",
+      "page_uid": "TB-G6S2U2-P20",
+      "page_type": "grammar",
+      "block_type": "assessment_quiz",
+      "source_refs": [
+        "TB-G6S2U2-P20-D1"
+      ],
+      "teaching_goal": "Check whether the learner can complete the unit review task.",
+      "teaching_summary": "Listening exercises with pictures and phrases about past activities. Key patterns: Let's check",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Let's check"
+      ],
+      "allowed_answer_scope": [
+        "Let's check"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Let's check"
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U2-P20-D1-goal"
+      ],
+      "branchable_topics": [
+        "Last weekend",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Let's check"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P20-D2",
+      "page_uid": "TB-G6S2U2-P20",
+      "page_type": "grammar",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S2U2-P20-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Read and complete the sentences with the correct past tense form of the verbs. Key patterns: Read and complete the sentences.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Read and complete the sentences."
+      ],
+      "allowed_answer_scope": [
+        "cooked",
+        "played",
+        "liked",
+        "visited",
+        "stopped",
+        "studied"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Read and complete the sentences."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U2-P20-D3",
+        "TB-G6S2U2-P20-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U2-P20-D2-goal"
+      ],
+      "branchable_topics": [
+        "Last weekend",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Read and complete the sentences."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P20-D3",
+      "page_uid": "TB-G6S2U2-P20",
+      "page_type": "grammar",
+      "block_type": "grammar_point",
+      "source_refs": [
+        "TB-G6S2U2-P20-D3"
+      ],
+      "teaching_goal": "Work on the grammar point activity.",
+      "teaching_summary": "A balloon showing examples of regular verbs changing to their past tense forms, held by a squirrel. Key patterns: talk → talked; stay → stayed",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "talk → talked",
+        "stay → stayed",
+        "live → lived",
+        "want → wanted",
+        "plan → planned",
+        "cry → cried"
+      ],
+      "allowed_answer_scope": [
+        "talk → talked",
+        "stay → stayed",
+        "live → lived",
+        "want → wanted"
+      ],
+      "entry_probe_questions": [
+        "Can you say: talk → talked"
+      ],
+      "repair_modes": [
+        "repeat",
+        "sentence_drill",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U2-P20-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U2-P20-D3-goal"
+      ],
+      "branchable_topics": [
+        "Last weekend"
+      ],
+      "return_anchors": [
+        "talk → talked",
+        "stay → stayed",
+        "live → lived"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U2-P21-D1",
+      "page_uid": "TB-G6S2U2-P21",
+      "page_type": "reading",
+      "block_type": "story_time",
+      "source_refs": [
+        "TB-G6S2U2-P21-D1"
+      ],
+      "teaching_goal": "Read and retell the key story events.",
+      "teaching_summary": "Zip and Zoom are talking about Zoom's busy weekend. Key patterns: How was your weekend?; What did you do on Saturday morning?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "How was your weekend?",
+        "What did you do on Saturday morning?",
+        "What did you do on Saturday afternoon?",
+        "What did you do on Sunday morning?",
+        "What did you do on Sunday afternoon?",
+        "It was a busy one."
+      ],
+      "allowed_answer_scope": [
+        "It was a busy one.",
+        "I washed my schoolbag. Then I went to the park.",
+        "I did my homework. Then I went fishing.",
+        "I cleaned my room. Then I visited my grandparents.",
+        "I played football. Then I watched TV.",
+        "That was a busy weekend."
+      ],
+      "entry_probe_questions": [
+        "Can you say: How was your weekend?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U2-P21-D1-goal"
+      ],
+      "branchable_topics": [
+        "Story time"
+      ],
+      "return_anchors": [
+        "How was your weekend?",
+        "What did you do on Saturday morning?",
+        "What did you do on Saturday afternoon?"
+      ]
+    }
+  ]
+}

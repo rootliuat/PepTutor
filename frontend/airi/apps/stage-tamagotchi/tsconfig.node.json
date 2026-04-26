@@ -1,0 +1,63 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "target": "ESNext",
+    "jsx": "preserve",
+    "lib": [
+      "ESNext"
+    ],
+    "useDefineForClassFields": true,
+    "paths": {
+      "@proj-airi/electron-eventa": [
+        "../../packages/electron-eventa/src/index.ts"
+      ],
+      "@proj-airi/electron-eventa/*": [
+        "../../packages/electron-eventa/src/*"
+      ],
+      "@proj-airi/electron-vueuse": [
+        "../../packages/electron-vueuse/src/index.ts"
+      ],
+      "@proj-airi/electron-vueuse/*": [
+        "../../packages/electron-vueuse/src/*"
+      ],
+      "@proj-airi/plugin-sdk": [
+        "../../packages/plugin-sdk/src/index.ts"
+      ],
+      "@proj-airi/plugin-sdk/*": [
+        "../../packages/plugin-sdk/src/*"
+      ],
+      "@proj-airi/server-runtime": [
+        "../../packages/server-runtime/src/index.ts"
+      ],
+      "@proj-airi/server-runtime/*": [
+        "../../packages/server-runtime/src/*"
+      ]
+    },
+    "resolveJsonModule": true,
+    "types": [
+      "vitest",
+      "vite/client",
+      "electron-vite/node",
+      "unplugin-info/client"
+    ],
+    "allowJs": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "../../uno.config.ts",
+    "uno.config.ts",
+    "electron.vite.config.ts",
+
+    "src/main/**/*.ts",
+    "src/main/**/*.d.ts",
+    "src/main/**/*.tsx",
+    "src/main/**/*.vue",
+
+    "src/shared/**/*.ts",
+    "src/shared/**/*.d.ts",
+    "src/shared/**/*.tsx",
+    "src/shared/**/*.vue"
+  ]
+}

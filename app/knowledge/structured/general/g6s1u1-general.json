@@ -1,0 +1,2657 @@
+{
+  "pilot_id": "g6s1u1-general-v1",
+  "scope": {
+    "grade": "G6",
+    "semester": "S1",
+    "unit": "U1",
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/03.六年级上册语料.json",
+    "app/knowledge/raw/07.六年级上册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 6 · Volume 1), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 6 · Volume 1), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 19,
+    "source_kind": "textbook_source_json",
+    "source_format": "json"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 1",
+      "word": "science",
+      "phonetic": "/'saɪəns/",
+      "chinese": "科学",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U1-P2-D1",
+        "TB-G6S1U1-P5-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "museum",
+      "phonetic": "/mju'ziːəm/",
+      "chinese": "博物馆",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U1-P2-D1",
+        "TB-G6S1U1-P4-D1",
+        "TB-G6S1U1-P4-D2",
+        "TB-G6S1U1-P4-D3",
+        "TB-G6S1U1-P5-D1",
+        "TB-G6S1U1-P7-D2",
+        "TB-G6S1U1-P11-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "post office",
+      "phonetic": "/'pəʊst ˌɒfɪs/",
+      "chinese": "邮局",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U1-P4-D2",
+        "TB-G6S1U1-P4-D3",
+        "TB-G6S1U1-P5-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "bookstore",
+      "phonetic": "/'bʊkstɔː(r)/",
+      "chinese": "书店",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U1-P4-D1",
+        "TB-G6S1U1-P5-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "cinema",
+      "phonetic": "/'sɪnəmə/",
+      "chinese": "电影院",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U1-P5-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "hospital",
+      "phonetic": "/'hɒspɪtl/",
+      "chinese": "医院",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U1-P5-D1",
+        "TB-G6S1U1-P5-D2"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "crossing",
+      "phonetic": "/'krɒsɪŋ/",
+      "chinese": "十字路口",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "turn",
+      "phonetic": "/tɜːn/",
+      "chinese": "转弯",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U1-P2-D1",
+        "TB-G6S1U1-P6-D2",
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "left",
+      "phonetic": "/left/",
+      "chinese": "左",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U1-P6-D2",
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "straight",
+      "phonetic": "/streɪt/",
+      "chinese": "笔直地",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U1-P2-D1",
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "right",
+      "phonetic": "/raɪt/",
+      "chinese": "右",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S1U1-P2-D1",
+        "TB-G6S1U1-P6-D2",
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "ask",
+      "phonetic": "/ɑːsk/",
+      "chinese": "问",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 1",
+      "word": "sir",
+      "phonetic": "/sɜː(r)/",
+      "chinese": "（对男子的礼貌称呼）先生",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 1",
+      "word": "interesting",
+      "phonetic": "/'ɪntrəstɪŋ/",
+      "chinese": "有趣的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 1",
+      "word": "Italian",
+      "phonetic": "/ɪ'tæliən/",
+      "chinese": "意大利的",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U1-P6-D2"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "restaurant",
+      "phonetic": "/'restrɒnt/",
+      "chinese": "餐馆",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U1-P6-D2"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "pizza",
+      "phonetic": "/'piːtsə/",
+      "chinese": "比萨饼",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U1-P6-D2"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "street",
+      "phonetic": "/striːt/",
+      "chinese": "大街；街道",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 1",
+      "word": "get",
+      "phonetic": "/get/",
+      "chinese": "到达",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 1",
+      "word": "BDS",
+      "chinese": "北斗卫星导航系统",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "gave",
+      "phonetic": "/ɡeɪv/",
+      "chinese": "（give的过去式）提供；交给",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 1",
+      "word": "feature",
+      "phonetic": "/'fiːtʃə(r)/",
+      "chinese": "特点",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "follow",
+      "phonetic": "/'fɒləʊ/",
+      "chinese": "跟着",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "far",
+      "phonetic": "/fɑː(r)/",
+      "chinese": "远的",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "tell",
+      "phonetic": "/tel/",
+      "chinese": "告诉",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G6S1U1-P2-D1-goal",
+      "block_uid": "TB-G6S1U1-P2-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P3-D1-goal",
+      "block_uid": "TB-G6S1U1-P3-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P4-D1-goal",
+      "block_uid": "TB-G6S1U1-P4-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P4-D2-goal",
+      "block_uid": "TB-G6S1U1-P4-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P4-D3-goal",
+      "block_uid": "TB-G6S1U1-P4-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P5-D1-goal",
+      "block_uid": "TB-G6S1U1-P5-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P5-D2-goal",
+      "block_uid": "TB-G6S1U1-P5-D2",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P6-D1-goal",
+      "block_uid": "TB-G6S1U1-P6-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P6-D2-goal",
+      "block_uid": "TB-G6S1U1-P6-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P6-D3-goal",
+      "block_uid": "TB-G6S1U1-P6-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P7-D1-goal",
+      "block_uid": "TB-G6S1U1-P7-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P7-D2-goal",
+      "block_uid": "TB-G6S1U1-P7-D2",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P8-D1-goal",
+      "block_uid": "TB-G6S1U1-P8-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P9-D1-goal",
+      "block_uid": "TB-G6S1U1-P9-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P9-D2-goal",
+      "block_uid": "TB-G6S1U1-P9-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P9-D3-goal",
+      "block_uid": "TB-G6S1U1-P9-D3",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P10-D1-goal",
+      "block_uid": "TB-G6S1U1-P10-D1",
+      "category": "assessment_quiz",
+      "text": "Check whether the learner can complete the unit review task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P10-D2-goal",
+      "block_uid": "TB-G6S1U1-P10-D2",
+      "category": "summary_wrap_up",
+      "text": "Review and consolidate the core language point.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1U1-P11-D1-goal",
+      "block_uid": "TB-G6S1U1-P11-D1",
+      "category": "story_time",
+      "text": "Read and retell the key story events.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-ask",
+      "atom_type": "word",
+      "text": "ask",
+      "gloss": "问",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-bds",
+      "atom_type": "word",
+      "text": "BDS",
+      "gloss": "北斗卫星导航系统",
+      "linked_blocks": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-beihai-park",
+      "atom_type": "word",
+      "text": "Beihai Park",
+      "gloss": "北海公园",
+      "linked_blocks": [
+        "TB-G6S1U1-P7-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-beside",
+      "atom_type": "word",
+      "text": "beside",
+      "gloss": "在……旁边",
+      "linked_blocks": [
+        "TB-G6S1U1-P10-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-bookstore",
+      "atom_type": "word",
+      "text": "bookstore",
+      "gloss": "书店",
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D1",
+        "TB-G6S1U1-P5-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-cinema",
+      "atom_type": "word",
+      "text": "cinema",
+      "gloss": "电影院",
+      "linked_blocks": [
+        "TB-G6S1U1-P5-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-crossing",
+      "atom_type": "word",
+      "text": "crossing",
+      "gloss": "十字路口",
+      "linked_blocks": [
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-excuse-me",
+      "atom_type": "word",
+      "text": "excuse me",
+      "gloss": "打扰一下",
+      "linked_blocks": [
+        "TB-G6S1U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-far",
+      "atom_type": "word",
+      "text": "far",
+      "gloss": "远的",
+      "linked_blocks": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-feature",
+      "atom_type": "word",
+      "text": "feature",
+      "gloss": "特点",
+      "linked_blocks": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-film",
+      "atom_type": "word",
+      "text": "film",
+      "gloss": "电影",
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D2",
+        "TB-G6S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-film-museum",
+      "atom_type": "word",
+      "text": "film museum",
+      "gloss": "电影博物馆",
+      "linked_blocks": [
+        "TB-G6S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-follow",
+      "atom_type": "word",
+      "text": "follow",
+      "gloss": "跟着",
+      "linked_blocks": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-gave",
+      "atom_type": "word",
+      "text": "gave",
+      "gloss": "（give的过去式）提供；交给",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-get",
+      "atom_type": "word",
+      "text": "get",
+      "gloss": "到达",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-go-straight",
+      "atom_type": "word",
+      "text": "go straight",
+      "gloss": "直走",
+      "linked_blocks": [
+        "TB-G6S1U1-P2-D1",
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-gps",
+      "atom_type": "word",
+      "text": "GPS",
+      "gloss": "全球定位系统",
+      "linked_blocks": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-help",
+      "atom_type": "word",
+      "text": "help",
+      "gloss": "帮助",
+      "linked_blocks": [
+        "TB-G6S1U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hospital",
+      "atom_type": "word",
+      "text": "hospital",
+      "gloss": "医院",
+      "linked_blocks": [
+        "TB-G6S1U1-P5-D1",
+        "TB-G6S1U1-P5-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-interesting",
+      "atom_type": "word",
+      "text": "interesting",
+      "gloss": "有趣的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-italian",
+      "atom_type": "word",
+      "text": "Italian",
+      "gloss": "意大利的",
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-italian-restaurant",
+      "atom_type": "word",
+      "text": "Italian restaurant",
+      "gloss": "意大利餐厅",
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-left",
+      "atom_type": "word",
+      "text": "left",
+      "gloss": "左",
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D2",
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-library",
+      "atom_type": "word",
+      "text": "library",
+      "gloss": "图书馆",
+      "linked_blocks": [
+        "TB-G6S1U1-P2-D1",
+        "TB-G6S1U1-P4-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-london-eye",
+      "atom_type": "word",
+      "text": "London Eye",
+      "gloss": "伦敦眼",
+      "linked_blocks": [
+        "TB-G6S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-museum",
+      "atom_type": "word",
+      "text": "museum",
+      "gloss": "博物馆",
+      "linked_blocks": [
+        "TB-G6S1U1-P2-D1",
+        "TB-G6S1U1-P4-D1",
+        "TB-G6S1U1-P4-D2",
+        "TB-G6S1U1-P4-D3",
+        "TB-G6S1U1-P5-D1",
+        "TB-G6S1U1-P7-D2",
+        "TB-G6S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-museum-shop",
+      "atom_type": "word",
+      "text": "museum shop",
+      "gloss": "博物馆商店",
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-near",
+      "atom_type": "word",
+      "text": "near",
+      "gloss": "在……附近",
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D2",
+        "TB-G6S1U1-P10-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-next-to",
+      "atom_type": "word",
+      "text": "next to",
+      "gloss": "紧挨着",
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D2",
+        "TB-G6S1U1-P10-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-over-there",
+      "atom_type": "word",
+      "text": "over there",
+      "gloss": "在那边",
+      "linked_blocks": [
+        "TB-G6S1U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-park",
+      "atom_type": "word",
+      "text": "park",
+      "gloss": "公园",
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D3",
+        "TB-G6S1U1-P5-D2",
+        "TB-G6S1U1-P7-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pet-hospital",
+      "atom_type": "word",
+      "text": "pet hospital",
+      "gloss": "宠物医院",
+      "linked_blocks": [
+        "TB-G6S1U1-P5-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pizza",
+      "atom_type": "word",
+      "text": "pizza",
+      "gloss": "比萨饼",
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-post-office",
+      "atom_type": "word",
+      "text": "post office",
+      "gloss": "邮局",
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D2",
+        "TB-G6S1U1-P4-D3",
+        "TB-G6S1U1-P5-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-postcard",
+      "atom_type": "word",
+      "text": "postcard",
+      "gloss": "明信片",
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-restaurant",
+      "atom_type": "word",
+      "text": "restaurant",
+      "gloss": "餐馆",
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-right",
+      "atom_type": "word",
+      "text": "right",
+      "gloss": "右",
+      "linked_blocks": [
+        "TB-G6S1U1-P2-D1",
+        "TB-G6S1U1-P6-D2",
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-school",
+      "atom_type": "word",
+      "text": "school",
+      "gloss": "学校",
+      "linked_blocks": [
+        "TB-G6S1U1-P2-D1",
+        "TB-G6S1U1-P4-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-science",
+      "atom_type": "word",
+      "text": "science",
+      "gloss": "科学",
+      "linked_blocks": [
+        "TB-G6S1U1-P2-D1",
+        "TB-G6S1U1-P5-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-science-museum",
+      "atom_type": "word",
+      "text": "science museum",
+      "gloss": "科学博物馆",
+      "linked_blocks": [
+        "TB-G6S1U1-P2-D1",
+        "TB-G6S1U1-P5-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sir",
+      "atom_type": "word",
+      "text": "sir",
+      "gloss": "（对男子的礼貌称呼）先生",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-stomach",
+      "atom_type": "word",
+      "text": "stomach",
+      "gloss": "胃/肚子",
+      "linked_blocks": [
+        "TB-G6S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-straight",
+      "atom_type": "word",
+      "text": "straight",
+      "gloss": "笔直地",
+      "linked_blocks": [
+        "TB-G6S1U1-P2-D1",
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-street",
+      "atom_type": "word",
+      "text": "street",
+      "gloss": "大街；街道",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-tanghulu",
+      "atom_type": "word",
+      "text": "tanghulu",
+      "gloss": "糖葫芦",
+      "linked_blocks": [
+        "TB-G6S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-tell",
+      "atom_type": "word",
+      "text": "tell",
+      "gloss": "告诉",
+      "linked_blocks": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-thames",
+      "atom_type": "word",
+      "text": "Thames",
+      "gloss": "泰晤士河",
+      "linked_blocks": [
+        "TB-G6S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-the-palace-museum",
+      "atom_type": "word",
+      "text": "the Palace Museum",
+      "gloss": "故宫博物院",
+      "linked_blocks": [
+        "TB-G6S1U1-P7-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-tian-anmen",
+      "atom_type": "word",
+      "text": "Tian'anmen",
+      "gloss": "天安门",
+      "linked_blocks": [
+        "TB-G6S1U1-P7-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-turn",
+      "atom_type": "word",
+      "text": "turn",
+      "gloss": "转弯",
+      "linked_blocks": [
+        "TB-G6S1U1-P2-D1",
+        "TB-G6S1U1-P6-D2",
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-turn-left",
+      "atom_type": "word",
+      "text": "turn left",
+      "gloss": "左转",
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D2",
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-turn-right",
+      "atom_type": "word",
+      "text": "turn right",
+      "gloss": "向右转",
+      "linked_blocks": [
+        "TB-G6S1U1-P2-D1",
+        "TB-G6S1U1-P6-D2",
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-zoo",
+      "atom_type": "word",
+      "text": "zoo",
+      "gloss": "动物园",
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-1-what-is-robin-s-new-feature-he-can-find-food-he-can-find-the-way",
+      "atom_type": "sentence_pattern",
+      "text": "1. What is Robin's new feature? □ He can find food. □ He can find the way.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P9-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-2-how-many-places-did-they-pass-by-underline-them-in-the-text",
+      "atom_type": "sentence_pattern",
+      "text": "2. How many places did they pass by? _______ Underline them in the text.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P9-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-3-which-word-under-the-fourth-picture-means",
+      "atom_type": "sentence_pattern",
+      "text": "3. Which word under the fourth picture means \"奏效，起作用\"? _______",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P9-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-you-help-me",
+      "atom_type": "sentence_pattern",
+      "text": "Can you help me?",
+      "gloss": "你能帮我吗？",
+      "linked_blocks": [
+        "TB-G6S1U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-excuse-me-can-you-help-me",
+      "atom_type": "sentence_pattern",
+      "text": "Excuse me. Can you help me?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-excuse-me-is-the-thames-far-from-here",
+      "atom_type": "sentence_pattern",
+      "text": "Excuse me. Is the Thames far from here?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-excuse-me-where-is-the-london-eye",
+      "atom_type": "sentence_pattern",
+      "text": "Excuse me. Where is the London Eye?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-falling-tone-for-wh-questions",
+      "atom_type": "sentence_pattern",
+      "text": "Falling tone for Wh- questions.",
+      "gloss": "特殊疑问句用降调。",
+      "linked_blocks": [
+        "TB-G6S1U1-P9-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-falling-tone-for-statements",
+      "atom_type": "sentence_pattern",
+      "text": "Falling tone for statements.",
+      "gloss": "陈述句用降调。",
+      "linked_blocks": [
+        "TB-G6S1U1-P9-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-fill-in-the-blanks-then-retell-the-story",
+      "atom_type": "sentence_pattern",
+      "text": "Fill in the blanks. Then retell the story.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P9-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-go-straight-and-you-can-see",
+      "atom_type": "sentence_pattern",
+      "text": "Go straight and you can see ...",
+      "gloss": "直走你就能看到……",
+      "linked_blocks": [
+        "TB-G6S1U1-P7-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-can-help-the-boys-find-the-italian-restaurant",
+      "atom_type": "sentence_pattern",
+      "text": "He can help the boys find the Italian restaurant.",
+      "gloss": "他可以帮助男孩们找到意大利餐厅。",
+      "linked_blocks": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hey-robin-where-is-the-science-museum",
+      "atom_type": "sentence_pattern",
+      "text": "Hey, Robin. Where is the science museum?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hey-that-looks-tasty-where-can-i-buy-one",
+      "atom_type": "sentence_pattern",
+      "text": "Hey, that looks tasty. Where can I buy one?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-can-i-get-there",
+      "atom_type": "sentence_pattern",
+      "text": "How can I get there?",
+      "gloss": "我怎么到那里？",
+      "linked_blocks": [
+        "TB-G6S1U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-can-i-get-to",
+      "atom_type": "sentence_pattern",
+      "text": "How can I get to ...?",
+      "gloss": "我怎么去……？",
+      "linked_blocks": [
+        "TB-G6S1U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-can-i-get-to-the",
+      "atom_type": "sentence_pattern",
+      "text": "How can I get to the ... ?",
+      "gloss": "我怎么去……？",
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-can-i-get-to-the-science-museum",
+      "atom_type": "sentence_pattern",
+      "text": "How can I get to the science museum?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-can-we-get-there",
+      "atom_type": "sentence_pattern",
+      "text": "How can we get there?",
+      "gloss": "我们怎么到那里？",
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-don-t-know-i-ll-ask-excuse-me-sir",
+      "atom_type": "sentence_pattern",
+      "text": "I don't know. I'll ask. Excuse me, sir.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-like",
+      "atom_type": "sentence_pattern",
+      "text": "I like ...",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-see-how-can-i-get-there",
+      "atom_type": "sentence_pattern",
+      "text": "I see. How can I get there?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-it-far",
+      "atom_type": "sentence_pattern",
+      "text": "Is it far?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-is-there-a",
+      "atom_type": "sentence_pattern",
+      "text": "Is there a ...?",
+      "gloss": "有一个……吗？",
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-near",
+      "atom_type": "sentence_pattern",
+      "text": "It's near ...",
+      "gloss": "它在……附近。",
+      "linked_blocks": [
+        "TB-G6S1U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-near-the-door",
+      "atom_type": "sentence_pattern",
+      "text": "It's near the door.",
+      "gloss": "它在门附近。",
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-near-the-library",
+      "atom_type": "sentence_pattern",
+      "text": "It's near the library.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-near-the-park",
+      "atom_type": "sentence_pattern",
+      "text": "It's near the park.",
+      "gloss": "它在公园附近。",
+      "linked_blocks": [
+        "TB-G6S1U1-P5-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-near-next-to-behind",
+      "atom_type": "sentence_pattern",
+      "text": "It's near/next to/behind ...",
+      "gloss": "它在……附近/旁边/后面……",
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-next-to-the-bookstore",
+      "atom_type": "sentence_pattern",
+      "text": "It's next to the bookstore.",
+      "gloss": "它在书店旁边。",
+      "linked_blocks": [
+        "TB-G6S1U1-P5-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-next-to-the-film-museum-near-the-thames",
+      "atom_type": "sentence_pattern",
+      "text": "It's next to the film museum near the Thames.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-next-to-the-museum",
+      "atom_type": "sentence_pattern",
+      "text": "It's next to the museum.",
+      "gloss": "它在博物馆旁边。",
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-check",
+      "atom_type": "sentence_pattern",
+      "text": "Let's check",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P10-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-near-the-london-eye-go-that-way",
+      "atom_type": "sentence_pattern",
+      "text": "Near the London Eye. Go that way.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-turn-left",
+      "atom_type": "sentence_pattern",
+      "text": "No, turn left.",
+      "gloss": "不，左转。",
+      "linked_blocks": [
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-go-straight-and-turn-left",
+      "atom_type": "sentence_pattern",
+      "text": "No. Go straight and turn left.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-now-we-are-behind-the-hospital-let-s-turn-right-and-then-turn-right-again",
+      "atom_type": "sentence_pattern",
+      "text": "No. Now we are behind the hospital. Let's turn right and then turn right again.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-oh-where-is-robin",
+      "atom_type": "sentence_pattern",
+      "text": "Oh, where is Robin?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-rising-tone-for-yes-no-questions",
+      "atom_type": "sentence_pattern",
+      "text": "Rising tone for Yes/No questions.",
+      "gloss": "一般疑问句用升调。",
+      "linked_blocks": [
+        "TB-G6S1U1-P9-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-robin-has-bds",
+      "atom_type": "sentence_pattern",
+      "text": "Robin has BDS!",
+      "gloss": "罗宾有北斗卫星导航系统！",
+      "linked_blocks": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-sure",
+      "atom_type": "sentence_pattern",
+      "text": "Sure.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-a-pet-hospital-in-my-city",
+      "atom_type": "sentence_pattern",
+      "text": "There is a pet hospital in my city.",
+      "gloss": "我的城市里有一家宠物医院。",
+      "linked_blocks": [
+        "TB-G6S1U1-P5-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-there-is-the-restaurant",
+      "atom_type": "sentence_pattern",
+      "text": "There is the restaurant!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-try-to-write-more-words-can-you-make-sentences-with-these-words",
+      "atom_type": "sentence_pattern",
+      "text": "Try to write more words. Can you make sentences with these words?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P10-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-turn-left-at-the-bookstore",
+      "atom_type": "sentence_pattern",
+      "text": "Turn left at the bookstore.",
+      "gloss": "在书店左转。",
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-turn-left-right-at",
+      "atom_type": "sentence_pattern",
+      "text": "Turn left/right at ...",
+      "gloss": "在……左/右转",
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-turn-right-at-the-hospital",
+      "atom_type": "sentence_pattern",
+      "text": "Turn right at the hospital.",
+      "gloss": "在医院右转。",
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-turn-right-here",
+      "atom_type": "sentence_pattern",
+      "text": "Turn right here?",
+      "gloss": "在这里右转吗？",
+      "linked_blocks": [
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-re-in-front-of-the-cinema-let-s-go-straight-and-turn-left-at-the-bookstore-follow-me-please",
+      "atom_type": "sentence_pattern",
+      "text": "We're in front of the cinema. Let's go straight and turn left at the bookstore. Follow me, please!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-an-interesting-film",
+      "atom_type": "sentence_pattern",
+      "text": "What an interesting film!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-is-it",
+      "atom_type": "sentence_pattern",
+      "text": "Where is it?",
+      "gloss": "它在哪里？",
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D3",
+        "TB-G6S1U1-P5-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-is-the",
+      "atom_type": "sentence_pattern",
+      "text": "Where is the ...?",
+      "gloss": "……在哪里？",
+      "linked_blocks": [
+        "TB-G6S1U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-is-the-italian-restaurant-turn-right-here",
+      "atom_type": "sentence_pattern",
+      "text": "Where is the Italian restaurant? Turn right here?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-is-the-cinema",
+      "atom_type": "sentence_pattern",
+      "text": "Where is the cinema?",
+      "gloss": "电影院在哪里？",
+      "linked_blocks": [
+        "TB-G6S1U1-P5-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-is-the-museum-shop",
+      "atom_type": "sentence_pattern",
+      "text": "Where is the museum shop?",
+      "gloss": "博物馆商店在哪里？",
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-is-the-post-office",
+      "atom_type": "sentence_pattern",
+      "text": "Where is the post office?",
+      "gloss": "邮局在哪里？",
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wow-a-talking-robot-what-a-great-museum",
+      "atom_type": "sentence_pattern",
+      "text": "Wow! A talking robot! What a great museum!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wu-binbin-is-calling-mike-listen-and-tick-or-cross",
+      "atom_type": "sentence_pattern",
+      "text": "Wu Binbin is calling Mike. Listen and tick or cross.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-but-i-m-hungry-now-i-know-a-great-italian-restaurant",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, but I'm hungry now. I know a great Italian restaurant.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yum-i-like-pizza-where-is-the-restaurant",
+      "atom_type": "sentence_pattern",
+      "text": "Yum! I like pizza! Where is the restaurant?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1U1-P6-D2"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G6S1U1-P2",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: How can I get there?. Wu Binbin and Robin are looking at a digital map of the city. They discuss the location of the science museum.",
+      "entry_probe_questions": [
+        "Do you know the word science museum?",
+        "Can you say: Where is the ...?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U1-P2-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U1-P3",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: How can I get there?. Wu Binbin is asking a stranger for directions on the street. Robin seems to be missing.",
+      "entry_probe_questions": [
+        "Do you know the word excuse me?",
+        "Can you say: Can you help me?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U1-P3-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U1-P4",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: How can I get there?. Wu Binbin and Robin are at the museum. Wu Binbin wants to buy a postcard.",
+      "entry_probe_questions": [
+        "Do you know the word museum shop?",
+        "Can you say: Where is the museum shop?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U1-P4-D2",
+        "TB-G6S1U1-P4-D3",
+        "TB-G6S1U1-P4-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U1-P5",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: How can I get there?. Wu Binbin and Robin discussing locations.",
+      "entry_probe_questions": [
+        "Do you know the word science museum?",
+        "Can you say: Where is the cinema?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U1-P5-D1",
+        "TB-G6S1U1-P5-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U1-P6",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: How can I get there?. Mike and Wu Binbin talk about an interesting film and finding a restaurant.",
+      "entry_probe_questions": [
+        "Do you know the word film?",
+        "Can you say: How can we get there?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U1-P6-D2",
+        "TB-G6S1U1-P6-D3",
+        "TB-G6S1U1-P6-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U1-P7",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: How can I get there?. Learning directions vocabulary with Mike and Robin.",
+      "entry_probe_questions": [
+        "Do you know the word crossing?",
+        "Can you say: Turn right here?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U1-P7-D1",
+        "TB-G6S1U1-P7-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U1-P8",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: How can I get there?. A story about Robin using his new BDS feature to help Wu Binbin and Mike find the Italian restaurant.",
+      "entry_probe_questions": [
+        "Do you know the word GPS?",
+        "Can you say: Robin has BDS!"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U1-P8-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U1-P9",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: How can I get there?. Comprehension questions based on the story on page 8.",
+      "entry_probe_questions": [
+        "Can you say: 1. What is Robin's new feature? □ He can find food. □ He can find the way."
+      ],
+      "priority_blocks": [
+        "TB-G6S1U1-P9-D1",
+        "TB-G6S1U1-P9-D2",
+        "TB-G6S1U1-P9-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U1-P10",
+      "page_type": "assessment",
+      "page_intro_cn": "Theme: How can I get there?. Review of location prepositions.",
+      "entry_probe_questions": [
+        "Do you know the word next to?",
+        "Can you say: Try to write more words. Can you make sentences with these words?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U1-P10-D2",
+        "TB-G6S1U1-P10-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1U1-P11",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: How can I get there?. Zoom and Zip are in London. Zoom wants to buy fish and chips.",
+      "entry_probe_questions": [
+        "Do you know the word London Eye?",
+        "Can you say: Hey, that looks tasty. Where can I buy one?"
+      ],
+      "priority_blocks": [
+        "TB-G6S1U1-P11-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G6S1U1-P2-D1",
+      "page_uid": "TB-G6S1U1-P2",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U1-P2-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Wu Binbin and Robin are looking at a digital map of the city. They discuss the location of the science museum. Key patterns: Where is the ...?; It's near ...",
+      "focus_vocabulary": [
+        "science museum",
+        "library",
+        "school",
+        "turn right",
+        "go straight"
+      ],
+      "core_patterns": [
+        "Where is the ...?",
+        "It's near ...",
+        "How can I get there?",
+        "Hey, Robin. Where is the science museum?",
+        "I see. How can I get there?",
+        "It's near the library."
+      ],
+      "allowed_answer_scope": [
+        "It's near the library.",
+        "Turn right at the school. Then go straight.",
+        "OK. Let's go."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word science museum?",
+        "Can you say: Where is the ...?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U1-P2-D1-goal"
+      ],
+      "branchable_topics": [
+        "science museum",
+        "library",
+        "school",
+        "turn right",
+        "go straight",
+        "How can I get there?",
+        "Unit One - Story Scene 1"
+      ],
+      "return_anchors": [
+        "Where is the ...?",
+        "It's near ...",
+        "How can I get there?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P3-D1",
+      "page_uid": "TB-G6S1U1-P3",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U1-P3-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Wu Binbin is asking a stranger for directions on the street. Robin seems to be missing. Key patterns: Can you help me?; How can I get to ...?",
+      "focus_vocabulary": [
+        "excuse me",
+        "help",
+        "over there"
+      ],
+      "core_patterns": [
+        "Can you help me?",
+        "How can I get to ...?",
+        "Excuse me. Can you help me?",
+        "How can I get to the science museum?",
+        "Oh, where is Robin?",
+        "Sure."
+      ],
+      "allowed_answer_scope": [
+        "It's over there."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word excuse me?",
+        "Can you say: Can you help me?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U1-P3-D1-goal"
+      ],
+      "branchable_topics": [
+        "excuse me",
+        "help",
+        "over there",
+        "How can I get there?",
+        "Unit One - Story Scene 2"
+      ],
+      "return_anchors": [
+        "Can you help me?",
+        "How can I get to ...?",
+        "Excuse me. Can you help me?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P4-D1",
+      "page_uid": "TB-G6S1U1-P4",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S1U1-P4-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Wu Binbin and Robin are looking at some robots. Listen and tick. Key patterns: Listen and tick.",
+      "focus_vocabulary": [
+        "museum",
+        "bookstore"
+      ],
+      "core_patterns": [
+        "Listen and tick."
+      ],
+      "allowed_answer_scope": [
+        "In the museum",
+        "Yes, he is"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word museum?",
+        "Can you say: Listen and tick."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U1-P4-D1-goal"
+      ],
+      "branchable_topics": [
+        "museum",
+        "bookstore",
+        "How can I get there?",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P4-D2",
+      "page_uid": "TB-G6S1U1-P4",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U1-P4-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Wu Binbin and Robin are at the museum. Wu Binbin wants to buy a postcard. Key patterns: Where is the museum shop?; It's near the door.",
+      "focus_vocabulary": [
+        "museum shop",
+        "postcard",
+        "post office",
+        "near",
+        "next to"
+      ],
+      "core_patterns": [
+        "Where is the museum shop?",
+        "It's near the door.",
+        "Where is the post office?",
+        "It's next to the museum.",
+        "I don't know. I'll ask. Excuse me, sir.",
+        "Wow! A talking robot! What a great museum!"
+      ],
+      "allowed_answer_scope": [
+        "It's near the door.",
+        "I don't know. I'll ask. Excuse me, sir.",
+        "Wow! A talking robot! What a great museum!",
+        "It's next to the museum."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word museum shop?",
+        "Can you say: Where is the museum shop?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U1-P4-D3",
+        "TB-G6S1U1-P4-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U1-P4-D2-goal"
+      ],
+      "branchable_topics": [
+        "museum shop",
+        "postcard",
+        "post office",
+        "near",
+        "next to",
+        "How can I get there?",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "Where is the museum shop?",
+        "It's near the door.",
+        "Where is the post office?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P4-D3",
+      "page_uid": "TB-G6S1U1-P4",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S1U1-P4-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Practice sentence patterns about locations. Key patterns: Is there a ...?; Where is it?",
+      "focus_vocabulary": [
+        "park",
+        "library",
+        "zoo",
+        "post office",
+        "school",
+        "museum"
+      ],
+      "core_patterns": [
+        "Is there a ...?",
+        "Where is it?",
+        "It's near/next to/behind ..."
+      ],
+      "allowed_answer_scope": [
+        "park",
+        "library",
+        "zoo",
+        "post office",
+        "school",
+        "museum"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word park?",
+        "Can you say: Is there a ...?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U1-P4-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U1-P4-D3-goal"
+      ],
+      "branchable_topics": [
+        "park",
+        "library",
+        "zoo",
+        "post office",
+        "school",
+        "museum",
+        "How can I get there?",
+        "Talk about the places in your city/town/village"
+      ],
+      "return_anchors": [
+        "Is there a ...?",
+        "Where is it?",
+        "It's near/next to/behind ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P5-D1",
+      "page_uid": "TB-G6S1U1-P5",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S1U1-P5-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Wu Binbin and Robin discussing locations. Key patterns: Where is the cinema?; It's next to the bookstore.",
+      "focus_vocabulary": [
+        "science museum",
+        "post office",
+        "bookstore",
+        "cinema",
+        "hospital"
+      ],
+      "core_patterns": [
+        "Where is the cinema?",
+        "It's next to the bookstore."
+      ],
+      "allowed_answer_scope": [
+        "It's next to the bookstore."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word science museum?",
+        "Can you say: Where is the cinema?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U1-P5-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U1-P5-D1-goal"
+      ],
+      "branchable_topics": [
+        "science museum",
+        "post office",
+        "bookstore",
+        "cinema",
+        "hospital",
+        "How can I get there?",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Where is the cinema?",
+        "It's next to the bookstore."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P5-D2",
+      "page_uid": "TB-G6S1U1-P5",
+      "page_type": "vocabulary",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S1U1-P5-D2"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "Students make a map of their city and talk about locations. Key patterns: There is a pet hospital in my city.; Where is it?",
+      "focus_vocabulary": [
+        "pet hospital",
+        "park"
+      ],
+      "core_patterns": [
+        "There is a pet hospital in my city.",
+        "Where is it?",
+        "It's near the park."
+      ],
+      "allowed_answer_scope": [
+        "pet hospital",
+        "park"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word pet hospital?",
+        "Can you say: There is a pet hospital in my city."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U1-P5-D2-goal"
+      ],
+      "branchable_topics": [
+        "pet hospital",
+        "park",
+        "How can I get there?",
+        "Make a map and talk"
+      ],
+      "return_anchors": [
+        "There is a pet hospital in my city.",
+        "Where is it?",
+        "It's near the park."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P6-D1",
+      "page_uid": "TB-G6S1U1-P6",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S1U1-P6-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Wu Binbin is calling Mike. Listen and tick or cross. Key patterns: Wu Binbin is calling Mike. Listen and tick or cross.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Wu Binbin is calling Mike. Listen and tick or cross."
+      ],
+      "allowed_answer_scope": [
+        "Wu Binbin is calling Mike. Listen and tick or cross."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Wu Binbin is calling Mike. Listen and tick or cross."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U1-P6-D1-goal"
+      ],
+      "branchable_topics": [
+        "How can I get there?",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Wu Binbin is calling Mike. Listen and tick or cross."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P6-D2",
+      "page_uid": "TB-G6S1U1-P6",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S1U1-P6-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Mike and Wu Binbin talk about an interesting film and finding a restaurant. Key patterns: How can we get there?; Turn left at the bookstore.",
+      "focus_vocabulary": [
+        "film",
+        "Italian restaurant",
+        "pizza",
+        "turn left",
+        "turn right"
+      ],
+      "core_patterns": [
+        "How can we get there?",
+        "Turn left at the bookstore.",
+        "Turn right at the hospital.",
+        "Yum! I like pizza! Where is the restaurant?",
+        "What an interesting film!",
+        "Yes, but I'm hungry now. I know a great Italian restaurant."
+      ],
+      "allowed_answer_scope": [
+        "What an interesting film!",
+        "Yes, but I'm hungry now. I know a great Italian restaurant.",
+        "It's next to the park on Dongfang Street.",
+        "Turn left at the bookstore. Then turn right at the hospital.",
+        "OK. Let's go!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word film?",
+        "Can you say: How can we get there?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U1-P6-D3",
+        "TB-G6S1U1-P6-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U1-P6-D2-goal"
+      ],
+      "branchable_topics": [
+        "film",
+        "Italian restaurant",
+        "pizza",
+        "turn left",
+        "turn right",
+        "How can I get there?",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "How can we get there?",
+        "Turn left at the bookstore.",
+        "Turn right at the hospital."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P6-D3",
+      "page_uid": "TB-G6S1U1-P6",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S1U1-P6-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Talk about a cinema or restaurant you like. Key patterns: How can I get to the ... ?; Turn left/right at ...",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "How can I get to the ... ?",
+        "Turn left/right at ...",
+        "I like ..."
+      ],
+      "allowed_answer_scope": [
+        "I like ...",
+        "Turn left/right at ..."
+      ],
+      "entry_probe_questions": [
+        "Can you say: How can I get to the ... ?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U1-P6-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U1-P6-D3-goal"
+      ],
+      "branchable_topics": [
+        "How can I get there?",
+        "Practice"
+      ],
+      "return_anchors": [
+        "How can I get to the ... ?",
+        "Turn left/right at ...",
+        "I like ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P7-D1",
+      "page_uid": "TB-G6S1U1-P7",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S1U1-P7-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Learning directions vocabulary with Mike and Robin. Key patterns: Turn right here?; No, turn left.",
+      "focus_vocabulary": [
+        "crossing",
+        "turn left",
+        "go straight",
+        "turn right"
+      ],
+      "core_patterns": [
+        "Turn right here?",
+        "No, turn left.",
+        "Where is the Italian restaurant? Turn right here?"
+      ],
+      "allowed_answer_scope": [
+        "No, turn left."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word crossing?",
+        "Can you say: Turn right here?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U1-P7-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U1-P7-D1-goal"
+      ],
+      "branchable_topics": [
+        "crossing",
+        "turn left",
+        "go straight",
+        "turn right",
+        "How can I get there?",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Turn right here?",
+        "No, turn left.",
+        "Where is the Italian restaurant? Turn right here?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P7-D2",
+      "page_uid": "TB-G6S1U1-P7",
+      "page_type": "vocabulary",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S1U1-P7-D2"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "Chen Jie is trying to be a tour guide for Oliver in Beijing. Map includes Tian'anmen, The Palace Museum, and Beihai Park. Key patterns: Go straight and you can see ...",
+      "focus_vocabulary": [
+        "Tian'anmen",
+        "the Palace Museum",
+        "Beihai Park"
+      ],
+      "core_patterns": [
+        "Go straight and you can see ..."
+      ],
+      "allowed_answer_scope": [
+        "Tian'anmen",
+        "the Palace Museum",
+        "Beihai Park"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word Tian'anmen?",
+        "Can you say: Go straight and you can see ..."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U1-P7-D2-goal"
+      ],
+      "branchable_topics": [
+        "Tian'anmen",
+        "the Palace Museum",
+        "Beihai Park",
+        "How can I get there?",
+        "Be a tour guide"
+      ],
+      "return_anchors": [
+        "Go straight and you can see ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P8-D1",
+      "page_uid": "TB-G6S1U1-P8",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S1U1-P8-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "A story about Robin using his new BDS feature to help Wu Binbin and Mike find the Italian restaurant. Key patterns: Robin has BDS!; He can help the boys find the Italian restaurant.",
+      "focus_vocabulary": [
+        "GPS",
+        "BDS",
+        "feature",
+        "follow",
+        "far",
+        "tell"
+      ],
+      "core_patterns": [
+        "Robin has BDS!",
+        "He can help the boys find the Italian restaurant.",
+        "Is it far?",
+        "We're in front of the cinema. Let's go straight and turn left at the bookstore. Follow me, please!",
+        "No. Now we are behind the hospital. Let's turn right and then turn right again.",
+        "There is the restaurant!"
+      ],
+      "allowed_answer_scope": [
+        "We're in front of the cinema. Let's go straight and turn left at the bookstore. Follow me, please!",
+        "No. Now we are behind the hospital. Let's turn right and then turn right again.",
+        "There is the restaurant!",
+        "My BDS works!",
+        "Yes! I'll tell Grandpa. But let's eat first. I'm so hungry!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word GPS?",
+        "Can you say: Robin has BDS!"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U1-P8-D1-goal"
+      ],
+      "branchable_topics": [
+        "GPS",
+        "BDS",
+        "feature",
+        "follow",
+        "far",
+        "tell",
+        "How can I get there?",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "Robin has BDS!",
+        "He can help the boys find the Italian restaurant.",
+        "Is it far?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P9-D1",
+      "page_uid": "TB-G6S1U1-P9",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S1U1-P9-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "Comprehension questions based on the story on page 8. Key patterns: 1. What is Robin's new feature? □ He can find food. □ He can find the way.; 2. How many places did they pass by? _______ Underline them in the text.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "1. What is Robin's new feature? □ He can find food. □ He can find the way.",
+        "2. How many places did they pass by? _______ Underline them in the text.",
+        "3. Which word under the fourth picture means \"奏效，起作用\"? _______"
+      ],
+      "allowed_answer_scope": [
+        "He can find the way.",
+        "cinema, bookstore, hospital",
+        "works"
+      ],
+      "entry_probe_questions": [
+        "Can you say: 1. What is Robin's new feature? □ He can find food. □ He can find the way."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U1-P9-D2",
+        "TB-G6S1U1-P9-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U1-P9-D1-goal"
+      ],
+      "branchable_topics": [
+        "How can I get there?",
+        "Read the text and answer the questions"
+      ],
+      "return_anchors": [
+        "1. What is Robin's new feature? □ He can find food. □ He can find the way.",
+        "2. How many places did they pass by? _______ Underline them in the text.",
+        "3. Which word under the fourth picture means \"奏效，起作用\"? _______"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P9-D2",
+      "page_uid": "TB-G6S1U1-P9",
+      "page_type": "reading",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S1U1-P9-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Retell the story by filling in the blanks. Key patterns: Fill in the blanks. Then retell the story.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Fill in the blanks. Then retell the story."
+      ],
+      "allowed_answer_scope": [
+        "Fill in the blanks. Then retell the story."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Fill in the blanks. Then retell the story."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U1-P9-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U1-P9-D2-goal"
+      ],
+      "branchable_topics": [
+        "How can I get there?",
+        "Fill in the blanks"
+      ],
+      "return_anchors": [
+        "Fill in the blanks. Then retell the story."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P9-D3",
+      "page_uid": "TB-G6S1U1-P9",
+      "page_type": "reading",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G6S1U1-P9-D3"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "Intonation practice for statements and questions. Key patterns: Falling tone for statements.; Rising tone for Yes/No questions.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Falling tone for statements.",
+        "Rising tone for Yes/No questions.",
+        "Falling tone for Wh- questions."
+      ],
+      "allowed_answer_scope": [
+        "Falling tone for statements.",
+        "Rising tone for Yes/No questions.",
+        "Falling tone for Wh- questions."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Falling tone for statements."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U1-P9-D3-goal"
+      ],
+      "branchable_topics": [
+        "How can I get there?",
+        "Tips for pronunciation"
+      ],
+      "return_anchors": [
+        "Falling tone for statements.",
+        "Rising tone for Yes/No questions.",
+        "Falling tone for Wh- questions."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P10-D1",
+      "page_uid": "TB-G6S1U1-P10",
+      "page_type": "assessment",
+      "block_type": "assessment_quiz",
+      "source_refs": [
+        "TB-G6S1U1-P10-D1"
+      ],
+      "teaching_goal": "Check whether the learner can complete the unit review task.",
+      "teaching_summary": "A map route with blank boxes under buildings. Listen and fill in. Key patterns: Let's check",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Let's check"
+      ],
+      "allowed_answer_scope": [
+        "Let's check"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Let's check"
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U1-P10-D1-goal"
+      ],
+      "branchable_topics": [
+        "How can I get there?",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Let's check"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P10-D2",
+      "page_uid": "TB-G6S1U1-P10",
+      "page_type": "assessment",
+      "block_type": "summary_wrap_up",
+      "source_refs": [
+        "TB-G6S1U1-P10-D2"
+      ],
+      "teaching_goal": "Review and consolidate the core language point.",
+      "teaching_summary": "Review of location prepositions. Key patterns: Try to write more words. Can you make sentences with these words?",
+      "focus_vocabulary": [
+        "next to",
+        "near",
+        "beside"
+      ],
+      "core_patterns": [
+        "Try to write more words. Can you make sentences with these words?"
+      ],
+      "allowed_answer_scope": [
+        "next to",
+        "near",
+        "beside"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word next to?",
+        "Can you say: Try to write more words. Can you make sentences with these words?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S1U1-P10-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1U1-P10-D2-goal"
+      ],
+      "branchable_topics": [
+        "next to",
+        "near",
+        "beside",
+        "How can I get there?",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Try to write more words. Can you make sentences with these words?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1U1-P11-D1",
+      "page_uid": "TB-G6S1U1-P11",
+      "page_type": "reading",
+      "block_type": "story_time",
+      "source_refs": [
+        "TB-G6S1U1-P11-D1"
+      ],
+      "teaching_goal": "Read and retell the key story events.",
+      "teaching_summary": "Zoom and Zip are in London. Zoom wants to buy fish and chips. Key patterns: Hey, that looks tasty. Where can I buy one?; Excuse me. Where is the London Eye?",
+      "focus_vocabulary": [
+        "London Eye",
+        "Thames",
+        "film museum",
+        "stomach",
+        "tanghulu"
+      ],
+      "core_patterns": [
+        "Hey, that looks tasty. Where can I buy one?",
+        "Excuse me. Where is the London Eye?",
+        "Excuse me. Is the Thames far from here?",
+        "Near the London Eye. Go that way.",
+        "It's next to the film museum near the Thames.",
+        "No. Go straight and turn left."
+      ],
+      "allowed_answer_scope": [
+        "Near the London Eye. Go that way.",
+        "It's next to the film museum near the Thames.",
+        "No. Go straight and turn left.",
+        "Zip, look!",
+        "Finally!",
+        "Hi! Three large portions and one small one, please."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word London Eye?",
+        "Can you say: Hey, that looks tasty. Where can I buy one?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1U1-P11-D1-goal"
+      ],
+      "branchable_topics": [
+        "London Eye",
+        "Thames",
+        "film museum",
+        "stomach",
+        "tanghulu",
+        "How can I get there?",
+        "Story time"
+      ],
+      "return_anchors": [
+        "Hey, that looks tasty. Where can I buy one?",
+        "Excuse me. Where is the London Eye?",
+        "Excuse me. Is the Thames far from here?"
+      ]
+    }
+  ]
+}

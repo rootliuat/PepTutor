@@ -1,0 +1,873 @@
+{
+  "pilot_id": "g6s1recycle2-general-v1",
+  "scope": {
+    "grade": "G6",
+    "semester": "S1",
+    "unit": "Recycle2",
+    "pages": [
+      66,
+      67,
+      68,
+      69
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/03.六年级上册语料.json",
+    "app/knowledge/raw/07.六年级上册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 6 · Volume 1), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 6 · Volume 1), People's Education Press (PEP)",
+    "page_count": 4,
+    "block_count": 7,
+    "source_kind": "textbook_source_json",
+    "source_format": "json"
+  },
+  "wordlist_entries": [],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G6S1Recycle2-P66-D1-goal",
+      "block_uid": "TB-G6S1Recycle2-P66-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1Recycle2-P66-D2-goal",
+      "block_uid": "TB-G6S1Recycle2-P66-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1Recycle2-P67-D1-goal",
+      "block_uid": "TB-G6S1Recycle2-P67-D1",
+      "category": "practice_speaking",
+      "text": "Work on the practice speaking activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1Recycle2-P67-D2-goal",
+      "block_uid": "TB-G6S1Recycle2-P67-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1Recycle2-P68-D1-goal",
+      "block_uid": "TB-G6S1Recycle2-P68-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1Recycle2-P69-D1-goal",
+      "block_uid": "TB-G6S1Recycle2-P69-D1",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S1Recycle2-P69-D2-goal",
+      "block_uid": "TB-G6S1Recycle2-P69-D2",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-ashamed",
+      "atom_type": "word",
+      "text": "ashamed",
+      "gloss": "羞愧的",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P68-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-aunt",
+      "atom_type": "word",
+      "text": "aunt",
+      "gloss": "姑姑/阿姨",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P67-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-brother",
+      "atom_type": "word",
+      "text": "brother",
+      "gloss": "哥哥/弟弟",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P67-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-businessman",
+      "atom_type": "word",
+      "text": "businessman",
+      "gloss": "商人",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P68-D1",
+        "TB-G6S1Recycle2-P69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-character",
+      "atom_type": "word",
+      "text": "character",
+      "gloss": "人物",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-coach",
+      "atom_type": "word",
+      "text": "coach",
+      "gloss": "教练",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P68-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-cousin",
+      "atom_type": "word",
+      "text": "cousin",
+      "gloss": "堂/表兄弟姐妹",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P67-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-factory-worker",
+      "atom_type": "word",
+      "text": "factory worker",
+      "gloss": "工厂工人",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P68-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-father",
+      "atom_type": "word",
+      "text": "father",
+      "gloss": "父亲",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P67-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-fisherman",
+      "atom_type": "word",
+      "text": "fisherman",
+      "gloss": "渔夫",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P68-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hobbies",
+      "atom_type": "word",
+      "text": "hobbies",
+      "gloss": "爱好",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P66-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-honest",
+      "atom_type": "word",
+      "text": "honest",
+      "gloss": "诚实的",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P68-D1",
+        "TB-G6S1Recycle2-P69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hospital",
+      "atom_type": "word",
+      "text": "hospital",
+      "gloss": "医院",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P67-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-ill",
+      "atom_type": "word",
+      "text": "ill",
+      "gloss": "生病的",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P67-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-job",
+      "atom_type": "word",
+      "text": "job",
+      "gloss": "工作",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P66-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-like",
+      "atom_type": "word",
+      "text": "like",
+      "gloss": "喜欢",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P66-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-mother",
+      "atom_type": "word",
+      "text": "mother",
+      "gloss": "母亲",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P67-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-peter",
+      "atom_type": "word",
+      "text": "Peter",
+      "gloss": "彼得",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P67-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-plot",
+      "atom_type": "word",
+      "text": "plot",
+      "gloss": "情节",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-police",
+      "atom_type": "word",
+      "text": "police",
+      "gloss": "警察",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P67-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-seed",
+      "atom_type": "word",
+      "text": "seed",
+      "gloss": "种子",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P68-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-setting",
+      "atom_type": "word",
+      "text": "setting",
+      "gloss": "背景（时间与地点）",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sister",
+      "atom_type": "word",
+      "text": "sister",
+      "gloss": "姐姐/妹妹",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P67-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sprout",
+      "atom_type": "word",
+      "text": "sprout",
+      "gloss": "发芽",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P68-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-town",
+      "atom_type": "word",
+      "text": "town",
+      "gloss": "城镇",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P66-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-uncle",
+      "atom_type": "word",
+      "text": "uncle",
+      "gloss": "叔叔/舅舅",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P67-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-visit",
+      "atom_type": "word",
+      "text": "visit",
+      "gloss": "拜访",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P66-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-worried",
+      "atom_type": "word",
+      "text": "worried",
+      "gloss": "担心的",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P67-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-a-story-often-has-a-setting-characters-and-a-plot",
+      "atom_type": "sentence_pattern",
+      "text": "A story often has a setting, characters and a plot.",
+      "gloss": "一个故事通常有背景、人物和情节。",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P69-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-know-the-answers-read-the-clues-and-complete-the-puzzle",
+      "atom_type": "sentence_pattern",
+      "text": "Do you know the answers? Read the clues and complete the puzzle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P67-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-likes",
+      "atom_type": "sentence_pattern",
+      "text": "He likes ...",
+      "gloss": "他喜欢……",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P66-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-now-you-are-peter-call-your-friend-and-tell-the-story",
+      "atom_type": "sentence_pattern",
+      "text": "Now you are Peter. Call your friend and tell the story.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P69-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-people-should-be-honest",
+      "atom_type": "sentence_pattern",
+      "text": "People should be honest.",
+      "gloss": "人们应该诚实。",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P68-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-peter-s-family-are-going-to-visit-ken-s-family-in-another-town-peter-s-father-is-talking-about-them-listen-and-fill-in-the-blanks",
+      "atom_type": "sentence_pattern",
+      "text": "Peter's family are going to visit Ken's family in another town. Peter's father is talking about them. Listen and fill in the blanks.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P66-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-peter-s-father-is-talking-he-s-happy",
+      "atom_type": "sentence_pattern",
+      "text": "Peter's father is talking. He's happy.",
+      "gloss": "彼得的父亲正在交谈。他很开心。",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P67-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-she-likes",
+      "atom_type": "sentence_pattern",
+      "text": "She likes ...",
+      "gloss": "她喜欢……",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P66-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-stop-running-sit-down",
+      "atom_type": "sentence_pattern",
+      "text": "Stop running! Sit down!",
+      "gloss": "别跑！坐下！",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P67-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-man-with-the-most-beautiful-flower-can-have-my-money",
+      "atom_type": "sentence_pattern",
+      "text": "The man with the most beautiful flower can have my money!",
+      "gloss": "拥有最美丽花朵的人可以得到我的钱！",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P68-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-seeds-are-bad-and-will-never-sprout",
+      "atom_type": "sentence_pattern",
+      "text": "The seeds are bad and will never sprout!",
+      "gloss": "种子是坏的，永远不会发芽！",
+      "linked_blocks": [
+        "TB-G6S1Recycle2-P68-D1"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G6S1Recycle2-P66",
+      "page_type": "listening",
+      "page_intro_cn": "Theme: Visiting an old friend. Peter's family are going to visit Ken's family in another town. Peter's father is talking about them. There is a central picture of Ken, surrounded by boxes to fill in his family members' jobs.",
+      "entry_probe_questions": [
+        "Do you know the word visit?",
+        "Can you say: Peter's family are going to visit Ken's family in another town. Peter's father is talking about them. Listen and fill in the blanks."
+      ],
+      "priority_blocks": [
+        "TB-G6S1Recycle2-P66-D1",
+        "TB-G6S1Recycle2-P66-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1Recycle2-P67",
+      "page_type": "practice",
+      "page_intro_cn": "Theme: Peter's family. A crossword puzzle with clues about feelings and places.",
+      "entry_probe_questions": [
+        "Do you know the word hospital?",
+        "Can you say: Do you know the answers? Read the clues and complete the puzzle."
+      ],
+      "priority_blocks": [
+        "TB-G6S1Recycle2-P67-D2",
+        "TB-G6S1Recycle2-P67-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1Recycle2-P68",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Read and write - Story. A story about a rich businessman testing the honesty of three men using flower seeds.",
+      "entry_probe_questions": [
+        "Do you know the word businessman?",
+        "Can you say: The man with the most beautiful flower can have my money!"
+      ],
+      "priority_blocks": [
+        "TB-G6S1Recycle2-P68-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S1Recycle2-P69",
+      "page_type": "practice",
+      "page_intro_cn": "Theme: Read and write - Story Review. Peter is calling his friend to retell the story using the information from the chart.",
+      "entry_probe_questions": [
+        "Can you say: Now you are Peter. Call your friend and tell the story."
+      ],
+      "priority_blocks": [
+        "TB-G6S1Recycle2-P69-D2",
+        "TB-G6S1Recycle2-P69-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G6S1Recycle2-P66-D1",
+      "page_uid": "TB-G6S1Recycle2-P66",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S1Recycle2-P66-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Peter's family are going to visit Ken's family in another town. Peter's father is talking about them. There is a central picture of Ken, surrounded by boxes to fill in his family members' jobs. Key patterns: Peter's family are going to visit Ken's family in another town. Peter's father is talking about them. Listen and fill in the blanks.",
+      "focus_vocabulary": [
+        "visit",
+        "town",
+        "job"
+      ],
+      "core_patterns": [
+        "Peter's family are going to visit Ken's family in another town. Peter's father is talking about them. Listen and fill in the blanks."
+      ],
+      "allowed_answer_scope": [
+        "visit",
+        "town",
+        "job"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word visit?",
+        "Can you say: Peter's family are going to visit Ken's family in another town. Peter's father is talking about them. Listen and fill in the blanks."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S1Recycle2-P66-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1Recycle2-P66-D1-goal"
+      ],
+      "branchable_topics": [
+        "visit",
+        "town",
+        "job",
+        "Visiting an old friend"
+      ],
+      "return_anchors": [
+        "Peter's family are going to visit Ken's family in another town. Peter's father is talking about them. Listen and fill in the blanks."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1Recycle2-P66-D2",
+      "page_uid": "TB-G6S1Recycle2-P66",
+      "page_type": "listening",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S1Recycle2-P66-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Portraits of Ken and his family members (mother, brother, sister, aunt, uncle). Students need to write down their hobbies based on the audio. Key patterns: He likes ...; She likes ...",
+      "focus_vocabulary": [
+        "hobbies",
+        "like"
+      ],
+      "core_patterns": [
+        "He likes ...",
+        "She likes ..."
+      ],
+      "allowed_answer_scope": [
+        "hobbies",
+        "like"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word hobbies?",
+        "Can you say: He likes ..."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1Recycle2-P66-D2-goal"
+      ],
+      "branchable_topics": [
+        "hobbies",
+        "like",
+        "Visiting an old friend",
+        "Listen again"
+      ],
+      "return_anchors": [
+        "He likes ...",
+        "She likes ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1Recycle2-P67-D1",
+      "page_uid": "TB-G6S1Recycle2-P67",
+      "page_type": "practice",
+      "block_type": "practice_speaking",
+      "source_refs": [
+        "TB-G6S1Recycle2-P67-D1"
+      ],
+      "teaching_goal": "Work on the practice speaking activity.",
+      "teaching_summary": "Peter's family are on the bus. Family members are doing different activities and showing different emotions. Key patterns: Stop running! Sit down!; Peter's father is talking. He's happy.",
+      "focus_vocabulary": [
+        "aunt",
+        "sister",
+        "cousin",
+        "mother",
+        "brother",
+        "father",
+        "uncle",
+        "Peter"
+      ],
+      "core_patterns": [
+        "Stop running! Sit down!",
+        "Peter's father is talking. He's happy."
+      ],
+      "allowed_answer_scope": [
+        "Stop running! Sit down!",
+        "Peter's father is talking. He's happy."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word aunt?",
+        "Can you say: Stop running! Sit down!"
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1Recycle2-P67-D1-goal"
+      ],
+      "branchable_topics": [
+        "aunt",
+        "sister",
+        "cousin",
+        "mother",
+        "brother",
+        "father",
+        "uncle",
+        "Peter"
+      ],
+      "return_anchors": [
+        "Stop running! Sit down!",
+        "Peter's father is talking. He's happy."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1Recycle2-P67-D2",
+      "page_uid": "TB-G6S1Recycle2-P67",
+      "page_type": "practice",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S1Recycle2-P67-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "A crossword puzzle with clues about feelings and places. Key patterns: Do you know the answers? Read the clues and complete the puzzle.",
+      "focus_vocabulary": [
+        "hospital",
+        "police",
+        "worried",
+        "ill"
+      ],
+      "core_patterns": [
+        "Do you know the answers? Read the clues and complete the puzzle."
+      ],
+      "allowed_answer_scope": [
+        "hospital",
+        "police",
+        "worried",
+        "ill"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word hospital?",
+        "Can you say: Do you know the answers? Read the clues and complete the puzzle."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1Recycle2-P67-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1Recycle2-P67-D2-goal"
+      ],
+      "branchable_topics": [
+        "hospital",
+        "police",
+        "worried",
+        "ill",
+        "Peter's family",
+        "This is Peter's puzzle"
+      ],
+      "return_anchors": [
+        "Do you know the answers? Read the clues and complete the puzzle."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1Recycle2-P68-D1",
+      "page_uid": "TB-G6S1Recycle2-P68",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S1Recycle2-P68-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "A story about a rich businessman testing the honesty of three men using flower seeds. Key patterns: The man with the most beautiful flower can have my money!; The seeds are bad and will never sprout!",
+      "focus_vocabulary": [
+        "businessman",
+        "factory worker",
+        "coach",
+        "fisherman",
+        "seed",
+        "sprout",
+        "honest",
+        "ashamed"
+      ],
+      "core_patterns": [
+        "The man with the most beautiful flower can have my money!",
+        "The seeds are bad and will never sprout!",
+        "People should be honest."
+      ],
+      "allowed_answer_scope": [
+        "businessman",
+        "factory worker",
+        "coach",
+        "fisherman",
+        "seed",
+        "sprout"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word businessman?",
+        "Can you say: The man with the most beautiful flower can have my money!"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1Recycle2-P68-D1-goal"
+      ],
+      "branchable_topics": [
+        "businessman",
+        "factory worker",
+        "coach",
+        "fisherman",
+        "seed",
+        "sprout",
+        "honest",
+        "ashamed"
+      ],
+      "return_anchors": [
+        "The man with the most beautiful flower can have my money!",
+        "The seeds are bad and will never sprout!",
+        "People should be honest."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1Recycle2-P69-D1",
+      "page_uid": "TB-G6S1Recycle2-P69",
+      "page_type": "practice",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S1Recycle2-P69-D1"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "A chart analyzing the elements of the story: setting, characters, and plot. Students need to fill in the blanks based on the story details and visual cues. Key patterns: A story often has a setting, characters and a plot.",
+      "focus_vocabulary": [
+        "setting",
+        "character",
+        "plot",
+        "businessman",
+        "honest"
+      ],
+      "core_patterns": [
+        "A story often has a setting, characters and a plot."
+      ],
+      "allowed_answer_scope": [
+        "a small town",
+        "The businessman, the factory worker, the coach, the fisherman",
+        "money",
+        "them seeds",
+        "grows a red flower",
+        "grows a purple flower"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word setting?",
+        "Can you say: A story often has a setting, characters and a plot."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S1Recycle2-P69-D1-goal"
+      ],
+      "branchable_topics": [
+        "setting",
+        "character",
+        "plot",
+        "businessman",
+        "honest",
+        "Read and write - Story Review",
+        "Read and fill"
+      ],
+      "return_anchors": [
+        "A story often has a setting, characters and a plot."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S1Recycle2-P69-D2",
+      "page_uid": "TB-G6S1Recycle2-P69",
+      "page_type": "practice",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S1Recycle2-P69-D2"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "Peter is calling his friend to retell the story using the information from the chart. Key patterns: Now you are Peter. Call your friend and tell the story.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Now you are Peter. Call your friend and tell the story."
+      ],
+      "allowed_answer_scope": [
+        "Now you are Peter. Call your friend and tell the story."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Now you are Peter. Call your friend and tell the story."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S1Recycle2-P69-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S1Recycle2-P69-D2-goal"
+      ],
+      "branchable_topics": [
+        "Read and write - Story Review",
+        "Retell the story"
+      ],
+      "return_anchors": [
+        "Now you are Peter. Call your friend and tell the story."
+      ]
+    }
+  ]
+}

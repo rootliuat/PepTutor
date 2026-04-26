@@ -1,0 +1,849 @@
+{
+  "kind": "peptutor_general_build_report",
+  "generated_at": "2026-04-07T22:43:33.313131+00:00",
+  "volumes": [
+    {
+      "source_file": "app/knowledge/raw/01.五年级上册语料.js",
+      "grade": "G5",
+      "semester": "S1",
+      "word_list_file": "app/knowledge/raw/05.五年级上册单词表.md",
+      "scopes": [
+        {
+          "scope": "U1",
+          "draft_id": "g5s1u1-general-v1",
+          "pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "page_uids": [
+            "TB-G5S1U1-P2",
+            "TB-G5S1U1-P3",
+            "TB-G5S1U1-P4",
+            "TB-G5S1U1-P5",
+            "TB-G5S1U1-P6",
+            "TB-G5S1U1-P7",
+            "TB-G5S1U1-P8",
+            "TB-G5S1U1-P9",
+            "TB-G5S1U1-P10",
+            "TB-G5S1U1-P11"
+          ],
+          "teaching_block_count": 26,
+          "wordlist_entry_count": 19
+        },
+        {
+          "scope": "U2",
+          "draft_id": "g5s1u2-general-v1",
+          "pages": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "page_uids": [
+            "TB-G5S1U2-P12",
+            "TB-G5S1U2-P13",
+            "TB-G5S1U2-P14",
+            "TB-G5S1U2-P15",
+            "TB-G5S1U2-P16",
+            "TB-G5S1U2-P17",
+            "TB-G5S1U2-P18",
+            "TB-G5S1U2-P19",
+            "TB-G5S1U2-P20",
+            "TB-G5S1U2-P21"
+          ],
+          "teaching_block_count": 27,
+          "wordlist_entry_count": 28
+        },
+        {
+          "scope": "U3",
+          "draft_id": "g5s1u3-general-v1",
+          "pages": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          "page_uids": [
+            "TB-G5S1U3-P22",
+            "TB-G5S1U3-P23",
+            "TB-G5S1U3-P24",
+            "TB-G5S1U3-P25",
+            "TB-G5S1U3-P26",
+            "TB-G5S1U3-P27",
+            "TB-G5S1U3-P28",
+            "TB-G5S1U3-P29",
+            "TB-G5S1U3-P30",
+            "TB-G5S1U3-P31"
+          ],
+          "teaching_block_count": 26,
+          "wordlist_entry_count": 16
+        },
+        {
+          "scope": "Recycle1",
+          "draft_id": "g5s1recycle1-general-v1",
+          "pages": [
+            32,
+            33,
+            34,
+            35
+          ],
+          "page_uids": [
+            "TB-G5S1Recycle1-P32",
+            "TB-G5S1Recycle1-P33",
+            "TB-G5S1Recycle1-P34",
+            "TB-G5S1Recycle1-P35"
+          ],
+          "teaching_block_count": 9,
+          "wordlist_entry_count": 0
+        },
+        {
+          "scope": "U4",
+          "draft_id": "g5s1u4-general-v1",
+          "pages": [
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45
+          ],
+          "page_uids": [
+            "TB-G5S1U4-P36",
+            "TB-G5S1U4-P37",
+            "TB-G5S1U4-P38",
+            "TB-G5S1U4-P39",
+            "TB-G5S1U4-P40",
+            "TB-G5S1U4-P41",
+            "TB-G5S1U4-P42",
+            "TB-G5S1U4-P43",
+            "TB-G5S1U4-P44",
+            "TB-G5S1U4-P45"
+          ],
+          "teaching_block_count": 26,
+          "wordlist_entry_count": 28
+        },
+        {
+          "scope": "U5",
+          "draft_id": "g5s1u5-general-v1",
+          "pages": [
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55
+          ],
+          "page_uids": [
+            "TB-G5S1U5-P46",
+            "TB-G5S1U5-P47",
+            "TB-G5S1U5-P48",
+            "TB-G5S1U5-P49",
+            "TB-G5S1U5-P50",
+            "TB-G5S1U5-P51",
+            "TB-G5S1U5-P52",
+            "TB-G5S1U5-P53",
+            "TB-G5S1U5-P54",
+            "TB-G5S1U5-P55"
+          ],
+          "teaching_block_count": 25,
+          "wordlist_entry_count": 25
+        },
+        {
+          "scope": "U6",
+          "draft_id": "g5s1u6-general-v1",
+          "pages": [
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65
+          ],
+          "page_uids": [
+            "TB-G5S1U6-P56",
+            "TB-G5S1U6-P57",
+            "TB-G5S1U6-P58",
+            "TB-G5S1U6-P59",
+            "TB-G5S1U6-P60",
+            "TB-G5S1U6-P61",
+            "TB-G5S1U6-P62",
+            "TB-G5S1U6-P63",
+            "TB-G5S1U6-P64",
+            "TB-G5S1U6-P65"
+          ],
+          "teaching_block_count": 25,
+          "wordlist_entry_count": 15
+        },
+        {
+          "scope": "Recycle2",
+          "draft_id": "g5s1recycle2-general-v1",
+          "pages": [
+            66,
+            67,
+            68,
+            69
+          ],
+          "page_uids": [
+            "TB-G5S1Recycle2-P66",
+            "TB-G5S1Recycle2-P67",
+            "TB-G5S1Recycle2-P68-69"
+          ],
+          "teaching_block_count": 10,
+          "wordlist_entry_count": 0
+        }
+      ],
+      "unassigned_main_pages": []
+    },
+    {
+      "source_file": "app/knowledge/raw/02.五年级下册语料.js",
+      "grade": "G5",
+      "semester": "S2",
+      "word_list_file": "app/knowledge/raw/06.五年级下册单词表.md",
+      "scopes": [
+        {
+          "scope": "U1",
+          "draft_id": "g5s2u1-general-v1",
+          "pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "page_uids": [
+            "TB-G5S2U1-P2",
+            "TB-G5S2U1-P3",
+            "TB-G5S2U1-P4",
+            "TB-G5S2U1-P5",
+            "TB-G5S2U1-P6",
+            "TB-G5S2U1-P7",
+            "TB-G5S2U1-P8",
+            "TB-G5S2U1-P9",
+            "TB-G5S2U1-P10",
+            "TB-G5S2U1-P11"
+          ],
+          "teaching_block_count": 22,
+          "wordlist_entry_count": 36
+        },
+        {
+          "scope": "U2",
+          "draft_id": "g5s2u2-general-v1",
+          "pages": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "page_uids": [
+            "TB-G5S2U2-P12",
+            "TB-G5S2U2-P13",
+            "TB-G5S2U2-P14",
+            "TB-G5S2U2-P15",
+            "TB-G5S2U2-P16",
+            "TB-G5S2U2-P17",
+            "TB-G5S2U2-P18",
+            "TB-G5S2U2-P19",
+            "TB-G5S2U2-P20",
+            "TB-G5S2U2-P21"
+          ],
+          "teaching_block_count": 21,
+          "wordlist_entry_count": 24
+        },
+        {
+          "scope": "U3",
+          "draft_id": "g5s2u3-general-v1",
+          "pages": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          "page_uids": [
+            "TB-G5S2U3-P22",
+            "TB-G5S2U3-P23",
+            "TB-G5S2U3-P24",
+            "TB-G5S2U3-P25",
+            "TB-G5S2U3-P26",
+            "TB-G5S2U3-P27",
+            "TB-G5S2U3-P28",
+            "TB-G5S2U3-P29",
+            "TB-G5S2U3-P30",
+            "TB-G5S2U3-P31"
+          ],
+          "teaching_block_count": 23,
+          "wordlist_entry_count": 35
+        },
+        {
+          "scope": "Recycle1",
+          "draft_id": "g5s2recycle1-general-v1",
+          "pages": [
+            32,
+            33,
+            34,
+            35
+          ],
+          "page_uids": [
+            "TB-G5S2Recycle1-P32",
+            "TB-G5S2Recycle1-P33",
+            "TB-G5S2Recycle1-P34",
+            "TB-G5S2Recycle1-P35"
+          ],
+          "teaching_block_count": 9,
+          "wordlist_entry_count": 0
+        },
+        {
+          "scope": "U4",
+          "draft_id": "g5s2u4-general-v1",
+          "pages": [
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45
+          ],
+          "page_uids": [
+            "TB-G5S2U4-P36",
+            "TB-G5S2U4-P37",
+            "TB-G5S2U4-P38",
+            "TB-G5S2U4-P39",
+            "TB-G5S2U4-P40",
+            "TB-G5S2U4-P41",
+            "TB-G5S2U4-P42",
+            "TB-G5S2U4-P43",
+            "TB-G5S2U4-P44",
+            "TB-G5S2U4-P45"
+          ],
+          "teaching_block_count": 23,
+          "wordlist_entry_count": 23
+        },
+        {
+          "scope": "U5",
+          "draft_id": "g5s2u5-general-v1",
+          "pages": [
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55
+          ],
+          "page_uids": [
+            "TB-G5S2U5-P46",
+            "TB-G5S2U5-P47",
+            "TB-G5S2U5-P48",
+            "TB-G5S2U5-P49",
+            "TB-G5S2U5-P50",
+            "TB-G5S2U5-P51",
+            "TB-G5S2U5-P52",
+            "TB-G5S2U5-P53",
+            "TB-G5S2U5-P54",
+            "TB-G5S2U5-P55"
+          ],
+          "teaching_block_count": 21,
+          "wordlist_entry_count": 14
+        },
+        {
+          "scope": "U6",
+          "draft_id": "g5s2u6-general-v1",
+          "pages": [
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65
+          ],
+          "page_uids": [
+            "TB-G5S2U6-P56",
+            "TB-G5S2U6-P57",
+            "TB-G5S2U6-P58",
+            "TB-G5S2U6-P59",
+            "TB-G5S2U6-P60",
+            "TB-G5S2U6-P61",
+            "TB-G5S2U6-P62",
+            "TB-G5S2U6-P63",
+            "TB-G5S2U6-P64",
+            "TB-G5S2U6-P65"
+          ],
+          "teaching_block_count": 21,
+          "wordlist_entry_count": 24
+        },
+        {
+          "scope": "Recycle2",
+          "draft_id": "g5s2recycle2-general-v1",
+          "pages": [
+            66,
+            67,
+            68,
+            69
+          ],
+          "page_uids": [
+            "TB-G5S2Recycle2-P66",
+            "TB-G5S2Recycle2-P67",
+            "TB-G5S2Recycle2-P68",
+            "TB-G5S2Recycle2-P69"
+          ],
+          "teaching_block_count": 9,
+          "wordlist_entry_count": 0
+        }
+      ],
+      "unassigned_main_pages": []
+    },
+    {
+      "source_file": "app/knowledge/raw/03.六年级上册语料.json",
+      "grade": "G6",
+      "semester": "S1",
+      "word_list_file": "app/knowledge/raw/07.六年级上册单词表.md",
+      "scopes": [
+        {
+          "scope": "U1",
+          "draft_id": "g6s1u1-general-v1",
+          "pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "page_uids": [
+            "TB-G6S1U1-P2",
+            "TB-G6S1U1-P3",
+            "TB-G6S1U1-P4",
+            "TB-G6S1U1-P5",
+            "TB-G6S1U1-P6",
+            "TB-G6S1U1-P7",
+            "TB-G6S1U1-P8",
+            "TB-G6S1U1-P9",
+            "TB-G6S1U1-P10",
+            "TB-G6S1U1-P11"
+          ],
+          "teaching_block_count": 19,
+          "wordlist_entry_count": 25
+        },
+        {
+          "scope": "U2",
+          "draft_id": "g6s1u2-general-v1",
+          "pages": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "page_uids": [
+            "TB-G6S1U2-P12",
+            "TB-G6S1U2-P13",
+            "TB-G6S1U2-P14",
+            "TB-G6S1U2-P15",
+            "TB-G6S1U2-P16",
+            "TB-G6S1U2-P17",
+            "TB-G6S1U2-P18",
+            "TB-G6S1U2-P19",
+            "TB-G6S1U2-P20",
+            "TB-G6S1U2-P21"
+          ],
+          "teaching_block_count": 23,
+          "wordlist_entry_count": 29
+        },
+        {
+          "scope": "U3",
+          "draft_id": "g6s1u3-general-v1",
+          "pages": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          "page_uids": [
+            "TB-G6S1U3-P22",
+            "TB-G6S1U3-P23",
+            "TB-G6S1U3-P24",
+            "TB-G6S1U3-P25",
+            "TB-G6S1U3-P26",
+            "TB-G6S1U3-P27",
+            "TB-G6S1U3-P28",
+            "TB-G6S1U3-P29",
+            "TB-G6S1U3-P30",
+            "TB-G6S1U3-P31"
+          ],
+          "teaching_block_count": 22,
+          "wordlist_entry_count": 27
+        },
+        {
+          "scope": "Recycle1",
+          "draft_id": "g6s1recycle1-general-v1",
+          "pages": [
+            32,
+            33,
+            34,
+            35
+          ],
+          "page_uids": [
+            "TB-G6S1Recycle1-P32",
+            "TB-G6S1Recycle1-P33",
+            "TB-G6S1Recycle1-P34",
+            "TB-G6S1Recycle1-P35"
+          ],
+          "teaching_block_count": 10,
+          "wordlist_entry_count": 0
+        },
+        {
+          "scope": "U4",
+          "draft_id": "g6s1u4-general-v1",
+          "pages": [
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45
+          ],
+          "page_uids": [
+            "TB-G6S1U4-P36",
+            "TB-G6S1U4-P37",
+            "TB-G6S1U4-P38",
+            "TB-G6S1U4-P39",
+            "TB-G6S1U4-P40",
+            "TB-G6S1U4-P41",
+            "TB-G6S1U4-P42",
+            "TB-G6S1U4-P43",
+            "TB-G6S1U4-P44",
+            "TB-G6S1U4-P45"
+          ],
+          "teaching_block_count": 20,
+          "wordlist_entry_count": 14
+        },
+        {
+          "scope": "U5",
+          "draft_id": "g6s1u5-general-v1",
+          "pages": [
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55
+          ],
+          "page_uids": [
+            "TB-G6S1U5-P46",
+            "TB-G6S1U5-P47",
+            "TB-G6S1U5-P48",
+            "TB-G6S1U5-P49",
+            "TB-G6S1U5-P50",
+            "TB-G6S1U5-P51",
+            "TB-G6S1U5-P52",
+            "TB-G6S1U5-P53",
+            "TB-G6S1U5-P54",
+            "TB-G6S1U5-P55"
+          ],
+          "teaching_block_count": 24,
+          "wordlist_entry_count": 21
+        },
+        {
+          "scope": "U6",
+          "draft_id": "g6s1u6-general-v1",
+          "pages": [
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65
+          ],
+          "page_uids": [
+            "TB-G6S1U6-P56",
+            "TB-G6S1U6-P57",
+            "TB-G6S1U6-P58",
+            "TB-G6S1U6-P59",
+            "TB-G6S1U6-P60",
+            "TB-G6S1U6-P61",
+            "TB-G6S1U6-P62",
+            "TB-G6S1U6-P63",
+            "TB-G6S1U6-P64",
+            "TB-G6S1U6-P65"
+          ],
+          "teaching_block_count": 22,
+          "wordlist_entry_count": 31
+        },
+        {
+          "scope": "Recycle2",
+          "draft_id": "g6s1recycle2-general-v1",
+          "pages": [
+            66,
+            67,
+            68,
+            69
+          ],
+          "page_uids": [
+            "TB-G6S1Recycle2-P66",
+            "TB-G6S1Recycle2-P67",
+            "TB-G6S1Recycle2-P68",
+            "TB-G6S1Recycle2-P69"
+          ],
+          "teaching_block_count": 7,
+          "wordlist_entry_count": 0
+        }
+      ],
+      "unassigned_main_pages": []
+    },
+    {
+      "source_file": "app/knowledge/raw/04.六年级下册语料.json",
+      "grade": "G6",
+      "semester": "S2",
+      "word_list_file": "app/knowledge/raw/08.六年级下册单词表.md",
+      "scopes": [
+        {
+          "scope": "U1",
+          "draft_id": "g6s2u1-general-v1",
+          "pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "page_uids": [
+            "TB-G6S2U1-P2",
+            "TB-G6S2U1-P3",
+            "TB-G6S2U1-P4",
+            "TB-G6S2U1-P5",
+            "TB-G6S2U1-P6",
+            "TB-G6S2U1-P7",
+            "TB-G6S2U1-P8",
+            "TB-G6S2U1-P9",
+            "TB-G6S2U1-P10",
+            "TB-G6S2U1-P11"
+          ],
+          "teaching_block_count": 22,
+          "wordlist_entry_count": 21
+        },
+        {
+          "scope": "U2",
+          "draft_id": "g6s2u2-general-v1",
+          "pages": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "page_uids": [
+            "TB-G6S2U2-P12",
+            "TB-G6S2U2-P13",
+            "TB-G6S2U2-P14",
+            "TB-G6S2U2-P15",
+            "TB-G6S2U2-P16",
+            "TB-G6S2U2-P17",
+            "TB-G6S2U2-P18",
+            "TB-G6S2U2-P19",
+            "TB-G6S2U2-P20",
+            "TB-G6S2U2-P21"
+          ],
+          "teaching_block_count": 22,
+          "wordlist_entry_count": 24
+        },
+        {
+          "scope": "U3",
+          "draft_id": "g6s2u3-general-v1",
+          "pages": [
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          "page_uids": [
+            "TB-G6S2U3-P22",
+            "TB-G6S2U3-P23",
+            "TB-G6S2U3-P24",
+            "TB-G6S2U3-P25",
+            "TB-G6S2U3-P26",
+            "TB-G6S2U3-P27",
+            "TB-G6S2U3-P28",
+            "TB-G6S2U3-P29",
+            "TB-G6S2U3-P30",
+            "TB-G6S2U3-P31"
+          ],
+          "teaching_block_count": 20,
+          "wordlist_entry_count": 23
+        },
+        {
+          "scope": "U4",
+          "draft_id": "g6s2u4-general-v1",
+          "pages": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41
+          ],
+          "page_uids": [
+            "TB-G6S2U4-P32",
+            "TB-G6S2U4-P33",
+            "TB-G6S2U4-P34",
+            "TB-G6S2U4-P35",
+            "TB-G6S2U4-P36",
+            "TB-G6S2U4-P37",
+            "TB-G6S2U4-P38",
+            "TB-G6S2U4-P39",
+            "TB-G6S2U4-P40",
+            "TB-G6S2U4-P41"
+          ],
+          "teaching_block_count": 20,
+          "wordlist_entry_count": 22
+        },
+        {
+          "scope": "Recycle1",
+          "draft_id": "g6s2recycle1-general-v1",
+          "pages": [
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "page_uids": [
+            "TB-G6S2Recycle1-P42",
+            "TB-G6S2Recycle1-P43",
+            "TB-G6S2Recycle1-P44",
+            "TB-G6S2Recycle1-P45",
+            "TB-G6S2Recycle1-P46",
+            "TB-G6S2Recycle1-P47"
+          ],
+          "teaching_block_count": 14,
+          "wordlist_entry_count": 0
+        },
+        {
+          "scope": "Recycle2",
+          "draft_id": "g6s2recycle2-general-v1",
+          "pages": [
+            48,
+            49,
+            50,
+            51
+          ],
+          "page_uids": [
+            "TB-G6S2Recycle2-P48",
+            "TB-G6S2Recycle2-P49",
+            "TB-G6S2Recycle2-P50",
+            "TB-G6S2Recycle2-P51"
+          ],
+          "teaching_block_count": 11,
+          "wordlist_entry_count": 0
+        }
+      ],
+      "unassigned_main_pages": []
+    }
+  ]
+}

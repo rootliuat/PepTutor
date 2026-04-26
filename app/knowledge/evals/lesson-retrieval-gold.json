@@ -1,0 +1,355 @@
+{
+  "version": 1,
+  "description": "Seeded offline gold queries for lesson retrieval baseline across G5 and G6.",
+  "samples": [
+    {
+      "sample_id": "g5_unit_sandwich",
+      "grade": "G5",
+      "semester": "S1",
+      "unit": "U3",
+      "page_uid": "TB-G5S1U3-P24",
+      "current_block_uid": "TB-G5S1U3-P24-D2",
+      "query": "What does sandwich mean?",
+      "expected_mode": "unit",
+      "expected_block_uids": [
+        "TB-G5S1U3-P25-D1"
+      ],
+      "expected_support_entry_uids": [
+        "LEX-G5S1U3-sandwich"
+      ]
+    },
+    {
+      "sample_id": "g5_block_water_expression",
+      "grade": "G5",
+      "semester": "S1",
+      "unit": "U3",
+      "page_uid": "TB-G5S1U3-P24",
+      "current_block_uid": "TB-G5S1U3-P24-D2",
+      "query": "What does water mean?",
+      "expected_mode": "block",
+      "expected_block_uids": [
+        "TB-G5S1U3-P24-D2"
+      ],
+      "expected_support_entry_uids": [
+        "EXP-G5S1U3-id-like-some-water"
+      ]
+    },
+    {
+      "sample_id": "g5_unit_salad",
+      "grade": "G5",
+      "semester": "S1",
+      "unit": "U3",
+      "page_uid": "TB-G5S1U3-P24",
+      "current_block_uid": "TB-G5S1U3-P24-D2",
+      "query": "What does salad mean?",
+      "expected_mode": "unit",
+      "expected_block_uids": [
+        "TB-G5S1U3-P25-D1"
+      ],
+      "expected_support_entry_uids": [
+        "LEX-G5S1U3-salad"
+      ]
+    },
+    {
+      "sample_id": "g5_branch_favourite_food",
+      "grade": "G5",
+      "semester": "S1",
+      "unit": "U3",
+      "page_uid": "TB-G5S1U3-P24",
+      "current_block_uid": "TB-G5S1U3-P24-D2",
+      "query": "What is your favourite food?",
+      "expected_mode": "branch",
+      "expected_block_uids": [
+        "TB-G5S1U3-P22-D1"
+      ]
+    },
+    {
+      "sample_id": "g5_branch_talk_favourite_food",
+      "grade": "G5",
+      "semester": "S1",
+      "unit": "U3",
+      "page_uid": "TB-G5S1U3-P24",
+      "current_block_uid": "TB-G5S1U3-P24-D2",
+      "query": "How do I talk about favourite food and drink?",
+      "expected_mode": "branch",
+      "expected_block_uids": [
+        "TB-G5S1U3-P27-D3"
+      ]
+    },
+    {
+      "sample_id": "g5s2u1_block_get_up",
+      "grade": "G5",
+      "semester": "S2",
+      "unit": "U1",
+      "page_uid": "TB-G5S2U1-P2",
+      "current_block_uid": "TB-G5S2U1-P2-D1",
+      "query": "What does get up mean?",
+      "expected_mode": "block",
+      "expected_block_uids": [
+        "TB-G5S2U1-P2-D1"
+      ]
+    },
+    {
+      "sample_id": "g5s2u1_branch_weekend",
+      "grade": "G5",
+      "semester": "S2",
+      "unit": "U1",
+      "page_uid": "TB-G5S2U1-P2",
+      "current_block_uid": "TB-G5S2U1-P2-D1",
+      "query": "What do you do on the weekend?",
+      "expected_mode": "branch",
+      "expected_block_uids": [
+        "TB-G5S2U1-P3-D1"
+      ]
+    },
+    {
+      "sample_id": "g5s2u2_page_survey",
+      "grade": "G5",
+      "semester": "S2",
+      "unit": "U2",
+      "page_uid": "TB-G5S2U2-P14",
+      "current_block_uid": "TB-G5S2U2-P14-D2",
+      "query": "How do I do the survey?",
+      "expected_mode": "page",
+      "expected_block_uids": [
+        "TB-G5S2U2-P14-D3"
+      ]
+    },
+    {
+      "sample_id": "g5s2u2_unit_make_snowman",
+      "grade": "G5",
+      "semester": "S2",
+      "unit": "U2",
+      "page_uid": "TB-G5S2U2-P14",
+      "current_block_uid": "TB-G5S2U2-P14-D2",
+      "query": "What does make a snowman mean?",
+      "expected_mode": "unit",
+      "expected_block_uids": [
+        "TB-G5S2U2-P18-D1",
+        "TB-G5S2U2-P18-D2"
+      ]
+    },
+    {
+      "sample_id": "g6_block_museum_shop",
+      "grade": "G6",
+      "semester": "S1",
+      "unit": "U1",
+      "page_uid": "TB-G6S1U1-P4",
+      "current_block_uid": "TB-G6S1U1-P4-D2",
+      "query": "Where is the museum shop?",
+      "expected_mode": "block",
+      "expected_block_uids": [
+        "TB-G6S1U1-P4-D2"
+      ]
+    },
+    {
+      "sample_id": "g6_page_extension_task",
+      "grade": "G6",
+      "semester": "S1",
+      "unit": "U1",
+      "page_uid": "TB-G6S1U1-P7",
+      "current_block_uid": "TB-G6S1U1-P7-D1",
+      "query": "How do I do the extension task?",
+      "expected_mode": "page",
+      "expected_block_uids": [
+        "TB-G6S1U1-P7-D2"
+      ]
+    },
+    {
+      "sample_id": "g6_unit_crossing",
+      "grade": "G6",
+      "semester": "S1",
+      "unit": "U1",
+      "page_uid": "TB-G6S1U1-P4",
+      "current_block_uid": "TB-G6S1U1-P4-D2",
+      "query": "What does crossing mean?",
+      "expected_mode": "unit",
+      "expected_block_uids": [
+        "TB-G6S1U1-P7-D1"
+      ]
+    },
+    {
+      "sample_id": "g6_branch_help",
+      "grade": "G6",
+      "semester": "S1",
+      "unit": "U1",
+      "page_uid": "TB-G6S1U1-P4",
+      "current_block_uid": "TB-G6S1U1-P4-D2",
+      "query": "Can you help me?",
+      "expected_mode": "branch",
+      "expected_block_uids": [
+        "TB-G6S1U1-P3-D1"
+      ]
+    },
+    {
+      "sample_id": "g6_branch_italian_restaurant",
+      "grade": "G6",
+      "semester": "S1",
+      "unit": "U1",
+      "page_uid": "TB-G6S1U1-P2",
+      "current_block_uid": "TB-G6S1U1-P2-D1",
+      "query": "How can I get to the Italian restaurant?",
+      "expected_mode": "branch",
+      "expected_block_uids": [
+        "TB-G6S1U1-P6-D2"
+      ]
+    },
+    {
+      "sample_id": "g6s2u1_branch_heavy",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "U1",
+      "page_uid": "TB-G6S2U1-P2",
+      "current_block_uid": "TB-G6S2U1-P2-D1",
+      "query": "How heavy is it?",
+      "expected_mode": "branch",
+      "expected_block_uids": [
+        "TB-G6S2U1-P3-D1"
+      ]
+    },
+    {
+      "sample_id": "g6s2u1_branch_survey",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "U1",
+      "page_uid": "TB-G6S2U1-P4",
+      "current_block_uid": "TB-G6S2U1-P4-D2",
+      "query": "How do I do a survey?",
+      "expected_mode": "branch",
+      "expected_block_uids": [
+        "TB-G6S2U1-P5-D2"
+      ]
+    },
+    {
+      "sample_id": "g6s2u1_unit_heavier_from_dialogue",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "U1",
+      "page_uid": "TB-G6S2U1-P6",
+      "current_block_uid": "TB-G6S2U1-P6-D2",
+      "query": "What does heavier mean?",
+      "expected_mode": "unit",
+      "expected_block_uids": [
+        "TB-G6S2U1-P7-D1"
+      ]
+    },
+    {
+      "sample_id": "g6s2u2_block_weekend",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "U2",
+      "page_uid": "TB-G6S2U2-P13",
+      "current_block_uid": "TB-G6S2U2-P13-D2",
+      "query": "How was your weekend?",
+      "expected_mode": "block",
+      "expected_block_uids": [
+        "TB-G6S2U2-P13-D2"
+      ]
+    },
+    {
+      "sample_id": "g6s2u2_unit_stayed_at_home",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "U2",
+      "page_uid": "TB-G6S2U2-P13",
+      "current_block_uid": "TB-G6S2U2-P13-D2",
+      "query": "What does stayed at home mean?",
+      "expected_mode": "unit",
+      "expected_block_uids": [
+        "TB-G6S2U2-P15-D1"
+      ]
+    },
+    {
+      "sample_id": "g6s2u2_unit_washed_my_clothes_from_dialogue",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "U2",
+      "page_uid": "TB-G6S2U2-P13",
+      "current_block_uid": "TB-G6S2U2-P13-D2",
+      "query": "What does washed my clothes mean?",
+      "expected_mode": "unit",
+      "expected_block_uids": [
+        "TB-G6S2U2-P15-D1"
+      ]
+    },
+    {
+      "sample_id": "g6s2u2_unit_had_a_cold",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "U2",
+      "page_uid": "TB-G6S2U2-P13",
+      "current_block_uid": "TB-G6S2U2-P13-D2",
+      "query": "What does had a cold mean?",
+      "expected_mode": "unit",
+      "expected_block_uids": [
+        "TB-G6S2U2-P17-D1"
+      ]
+    },
+    {
+      "sample_id": "g6s2u2_unit_read_a_book",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "U2",
+      "page_uid": "TB-G6S2U2-P13",
+      "current_block_uid": "TB-G6S2U2-P13-D2",
+      "query": "What does read a book mean?",
+      "expected_mode": "unit",
+      "expected_block_uids": [
+        "TB-G6S2U2-P17-D1",
+        "TB-G6S2U2-P18-D1"
+      ]
+    },
+    {
+      "sample_id": "g6s2u2_unit_watched_from_dialogue",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "U2",
+      "page_uid": "TB-G6S2U2-P14",
+      "current_block_uid": "TB-G6S2U2-P14-D2",
+      "query": "What does watched mean?",
+      "expected_mode": "unit",
+      "expected_block_uids": [
+        "TB-G6S2U2-P15-D1"
+      ]
+    },
+    {
+      "sample_id": "g6s2u2_branch_practice",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "U2",
+      "page_uid": "TB-G6S2U2-P14",
+      "current_block_uid": "TB-G6S2U2-P14-D2",
+      "query": "How do I do the practice?",
+      "expected_mode": "branch",
+      "expected_block_uids": [
+        "TB-G6S2U2-P16-D4"
+      ]
+    },
+    {
+      "sample_id": "g6s2_block_cheese",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "Recycle2",
+      "page_uid": "TB-G6S2Recycle2-P49",
+      "current_block_uid": "TB-G6S2Recycle2-P49-D1",
+      "query": "What does cheese mean?",
+      "expected_mode": "block",
+      "expected_block_uids": [
+        "TB-G6S2Recycle2-P49-D1"
+      ]
+    },
+    {
+      "sample_id": "g6s2_unit_america",
+      "grade": "G6",
+      "semester": "S2",
+      "unit": "Recycle2",
+      "page_uid": "TB-G6S2Recycle2-P49",
+      "current_block_uid": "TB-G6S2Recycle2-P49-D1",
+      "query": "What does America mean?",
+      "expected_mode": "unit",
+      "expected_block_uids": [
+        "TB-G6S2Recycle2-P51-D1"
+      ]
+    }
+  ]
+}

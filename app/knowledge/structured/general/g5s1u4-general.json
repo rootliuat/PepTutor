@@ -1,0 +1,3011 @@
+{
+  "pilot_id": "g5s1u4-general-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "U4",
+    "pages": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/01.五年级上册语料.js",
+    "app/knowledge/raw/05.五年级上册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 5 · Volume 1), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 5 · Volume 1), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 26,
+    "source_kind": "textbook_source_js",
+    "source_format": "js"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 4",
+      "word": "sing",
+      "phonetic": "/sɪŋ/",
+      "chinese": "唱；唱歌",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U4-P36-D1",
+        "TB-G5S1U4-P38-D2",
+        "TB-G5S1U4-P38-D3",
+        "TB-G5S1U4-P39-D1",
+        "TB-G5S1U4-P41-D3",
+        "TB-G5S1U4-P45-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "song",
+      "phonetic": "/sɒŋ/",
+      "chinese": "歌曲",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U4-P41-D3"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "sing English songs",
+      "chinese": "唱英文歌曲",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U4-P38-D2",
+        "TB-G5S1U4-P39-D1",
+        "TB-G5S1U4-P41-D3"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "play the pipa",
+      "chinese": "弹琵琶",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U4-P36-D1",
+        "TB-G5S1U4-P39-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "kung fu",
+      "phonetic": "/ˌkʌŋ 'fuː/",
+      "chinese": "功夫；武术",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U4-P38-D2",
+        "TB-G5S1U4-P38-D3",
+        "TB-G5S1U4-P39-D1",
+        "TB-G5S1U4-P41-D2",
+        "TB-G5S1U4-P41-D3",
+        "TB-G5S1U4-P43-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "do kung fu",
+      "chinese": "练武术",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U4-P39-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "dance",
+      "phonetic": "/dɑːns/",
+      "chinese": "跳舞",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U4-P36-D1",
+        "TB-G5S1U4-P38-D3",
+        "TB-G5S1U4-P39-D1",
+        "TB-G5S1U4-P45-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "draw",
+      "phonetic": "/drɔː/",
+      "chinese": "画",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U4-P38-D3",
+        "TB-G5S1U4-P39-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "cartoon",
+      "phonetic": "/kɑː'tuːn/",
+      "chinese": "漫画",
+      "emphasized": true,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "draw cartoons",
+      "chinese": "画漫画",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U4-P39-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "cook",
+      "phonetic": "/kʊk/",
+      "chinese": "烹调；烹饪",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U4-P41-D3",
+        "TB-G5S1U4-P42-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "swim",
+      "phonetic": "/swɪm/",
+      "chinese": "游泳",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U4-P42-D1",
+        "TB-G5S1U4-P43-D1",
+        "TB-G5S1U4-P45-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "play basketball",
+      "chinese": "打篮球",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U4-P42-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "ping-pong",
+      "phonetic": "/'pɪŋpɒŋ/",
+      "chinese": "乒乓球",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U4-P37-D1",
+        "TB-G5S1U4-P42-D1",
+        "TB-G5S1U4-P43-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "play ping-pong",
+      "chinese": "打乒乓球",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U4-P37-D1",
+        "TB-G5S1U4-P42-D1",
+        "TB-G5S1U4-P43-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "speak English",
+      "chinese": "说英语",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G5S1U4-P41-D3",
+        "TB-G5S1U4-P42-D1",
+        "TB-G5S1U4-P43-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "we'll",
+      "chinese": "= we will",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "party",
+      "phonetic": "/'pɑːti/",
+      "chinese": "聚会；派对",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S1U4-P36-D1"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "next",
+      "phonetic": "/nekst/",
+      "chinese": "下一个的；紧接着的；接下来的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "wonderful",
+      "phonetic": "/'wʌndəfl/",
+      "chinese": "极好的；了不起的",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "learn",
+      "phonetic": "/lɜːn/",
+      "chinese": "学；学习；学会",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S1U4-P41-D2"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "any",
+      "phonetic": "/'eni/",
+      "chinese": "任何的；任一的",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G5S1U4-P41-D2"
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "word": "problem",
+      "phonetic": "/'prɒbləm/",
+      "chinese": "问题",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "no problem",
+      "chinese": "没问题",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "want",
+      "phonetic": "/wɒnt/",
+      "chinese": "要；想要",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "send",
+      "phonetic": "/send/",
+      "chinese": "邮寄；发送",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "email",
+      "phonetic": "/'iːmeɪl/",
+      "chinese": "电子邮件",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 4",
+      "word": "at",
+      "phonetic": "/ət; æt/",
+      "chinese": "（后面接邮件地址）",
+      "emphasized": false,
+      "linked_block_uids": []
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S1U4-P36-D1-goal",
+      "block_uid": "TB-G5S1U4-P36-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P37-D1-goal",
+      "block_uid": "TB-G5S1U4-P37-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P38-D1-goal",
+      "block_uid": "TB-G5S1U4-P38-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P38-D2-goal",
+      "block_uid": "TB-G5S1U4-P38-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P38-D3-goal",
+      "block_uid": "TB-G5S1U4-P38-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P39-D1-goal",
+      "block_uid": "TB-G5S1U4-P39-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P39-D2-goal",
+      "block_uid": "TB-G5S1U4-P39-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P39-D3-goal",
+      "block_uid": "TB-G5S1U4-P39-D3",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P40-D1-goal",
+      "block_uid": "TB-G5S1U4-P40-D1",
+      "category": "phonics",
+      "text": "Notice and repeat the target pronunciation pattern.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P40-D2-goal",
+      "block_uid": "TB-G5S1U4-P40-D2",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P40-D3-goal",
+      "block_uid": "TB-G5S1U4-P40-D3",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P40-D4-goal",
+      "block_uid": "TB-G5S1U4-P40-D4",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P41-D1-goal",
+      "block_uid": "TB-G5S1U4-P41-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P41-D2-goal",
+      "block_uid": "TB-G5S1U4-P41-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P41-D3-goal",
+      "block_uid": "TB-G5S1U4-P41-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P42-D1-goal",
+      "block_uid": "TB-G5S1U4-P42-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P42-D2-goal",
+      "block_uid": "TB-G5S1U4-P42-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P42-D3-goal",
+      "block_uid": "TB-G5S1U4-P42-D3",
+      "category": "practice_write",
+      "text": "Work on the practice write activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P43-D1-goal",
+      "block_uid": "TB-G5S1U4-P43-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P43-D2-goal",
+      "block_uid": "TB-G5S1U4-P43-D2",
+      "category": "practice_true_false",
+      "text": "Work on the practice true false activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P43-D3-goal",
+      "block_uid": "TB-G5S1U4-P43-D3",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P44-D1-goal",
+      "block_uid": "TB-G5S1U4-P44-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P44-D2-goal",
+      "block_uid": "TB-G5S1U4-P44-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P44-D3-goal",
+      "block_uid": "TB-G5S1U4-P44-D3",
+      "category": "grammar_point",
+      "text": "Work on the grammar point activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P44-D4-goal",
+      "block_uid": "TB-G5S1U4-P44-D4",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U4-P45-D1-goal",
+      "block_uid": "TB-G5S1U4-P45-D1",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-3-o-clock",
+      "atom_type": "word",
+      "text": "3 o'clock",
+      "gloss": "三点钟",
+      "linked_blocks": [
+        "TB-G5S1U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-a-little",
+      "atom_type": "word",
+      "text": "a little",
+      "gloss": "一点儿",
+      "linked_blocks": [
+        "TB-G5S1U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-any",
+      "atom_type": "word",
+      "text": "any",
+      "gloss": "任何的；任一的",
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-at",
+      "atom_type": "word",
+      "text": "at",
+      "gloss": "（后面接邮件地址）",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-balloon",
+      "atom_type": "word",
+      "text": "balloon",
+      "gloss": "气球",
+      "linked_blocks": [
+        "TB-G5S1U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-book",
+      "atom_type": "word",
+      "text": "book",
+      "gloss": "书",
+      "linked_blocks": [
+        "TB-G5S1U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-cartoon",
+      "atom_type": "word",
+      "text": "cartoon",
+      "gloss": "漫画",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-clean-the-classroom",
+      "atom_type": "word",
+      "text": "clean the classroom",
+      "gloss": "打扫教室",
+      "linked_blocks": [
+        "TB-G5S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-cook",
+      "atom_type": "word",
+      "text": "cook",
+      "gloss": "烹调；烹饪",
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D3",
+        "TB-G5S1U4-P42-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-dance",
+      "atom_type": "word",
+      "text": "dance",
+      "gloss": "跳舞",
+      "linked_blocks": [
+        "TB-G5S1U4-P36-D1",
+        "TB-G5S1U4-P38-D3",
+        "TB-G5S1U4-P39-D1",
+        "TB-G5S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-do-any-kung-fu",
+      "atom_type": "word",
+      "text": "do any kung fu",
+      "gloss": "会（任何）功夫",
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-do-kung-fu",
+      "atom_type": "word",
+      "text": "do kung fu",
+      "gloss": "练武术",
+      "linked_blocks": [
+        "TB-G5S1U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-do-some-kung-fu",
+      "atom_type": "word",
+      "text": "do some kung fu",
+      "gloss": "表演一些功夫",
+      "linked_blocks": [
+        "TB-G5S1U4-P38-D2",
+        "TB-G5S1U4-P38-D3",
+        "TB-G5S1U4-P41-D3",
+        "TB-G5S1U4-P43-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-draw",
+      "atom_type": "word",
+      "text": "draw",
+      "gloss": "画",
+      "linked_blocks": [
+        "TB-G5S1U4-P38-D3",
+        "TB-G5S1U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-draw-cartoons",
+      "atom_type": "word",
+      "text": "draw cartoons",
+      "gloss": "画漫画",
+      "linked_blocks": [
+        "TB-G5S1U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-draw-pictures",
+      "atom_type": "word",
+      "text": "draw pictures",
+      "gloss": "画画",
+      "linked_blocks": [
+        "TB-G5S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-email",
+      "atom_type": "word",
+      "text": "email",
+      "gloss": "电子邮件",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-english-class",
+      "atom_type": "word",
+      "text": "English class",
+      "gloss": "英语课",
+      "linked_blocks": [
+        "TB-G5S1U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-english-party",
+      "atom_type": "word",
+      "text": "English party",
+      "gloss": "英语派对",
+      "linked_blocks": [
+        "TB-G5S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-food",
+      "atom_type": "word",
+      "text": "food",
+      "gloss": "食物",
+      "linked_blocks": [
+        "TB-G5S1U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-football",
+      "atom_type": "word",
+      "text": "football",
+      "gloss": "足球",
+      "linked_blocks": [
+        "TB-G5S1U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-friendly",
+      "atom_type": "word",
+      "text": "friendly",
+      "gloss": "友好的",
+      "linked_blocks": [
+        "TB-G5S1U4-P43-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-funny",
+      "atom_type": "word",
+      "text": "funny",
+      "gloss": "有趣的",
+      "linked_blocks": [
+        "TB-G5S1U4-P43-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-good",
+      "atom_type": "word",
+      "text": "good",
+      "gloss": "好的",
+      "linked_blocks": [
+        "TB-G5S1U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hungry",
+      "atom_type": "word",
+      "text": "hungry",
+      "gloss": "饿的",
+      "linked_blocks": [
+        "TB-G5S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-kung-fu",
+      "atom_type": "word",
+      "text": "kung fu",
+      "gloss": "功夫；武术",
+      "linked_blocks": [
+        "TB-G5S1U4-P38-D2",
+        "TB-G5S1U4-P38-D3",
+        "TB-G5S1U4-P39-D1",
+        "TB-G5S1U4-P41-D2",
+        "TB-G5S1U4-P41-D3",
+        "TB-G5S1U4-P43-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-lake",
+      "atom_type": "word",
+      "text": "lake",
+      "gloss": "湖",
+      "linked_blocks": [
+        "TB-G5S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-learn",
+      "atom_type": "word",
+      "text": "learn",
+      "gloss": "学；学习；学会",
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-look",
+      "atom_type": "word",
+      "text": "look",
+      "gloss": "看",
+      "linked_blocks": [
+        "TB-G5S1U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-make-a-puppet-robot",
+      "atom_type": "word",
+      "text": "make a puppet/robot/...",
+      "gloss": "制作一个木偶/机器人/...",
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-next",
+      "atom_type": "word",
+      "text": "next",
+      "gloss": "下一个的；紧接着的；接下来的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-no-problem",
+      "atom_type": "word",
+      "text": "no problem",
+      "gloss": "没问题",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-noodles",
+      "atom_type": "word",
+      "text": "noodles",
+      "gloss": "面条",
+      "linked_blocks": [
+        "TB-G5S1U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-party",
+      "atom_type": "word",
+      "text": "party",
+      "gloss": "聚会；派对",
+      "linked_blocks": [
+        "TB-G5S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-ping-pong",
+      "atom_type": "word",
+      "text": "ping-pong",
+      "gloss": "乒乓球",
+      "linked_blocks": [
+        "TB-G5S1U4-P37-D1",
+        "TB-G5S1U4-P42-D1",
+        "TB-G5S1U4-P43-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-play-basketball",
+      "atom_type": "word",
+      "text": "play basketball",
+      "gloss": "打篮球",
+      "linked_blocks": [
+        "TB-G5S1U4-P42-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-play-ping-pong",
+      "atom_type": "word",
+      "text": "play ping-pong",
+      "gloss": "打乒乓球",
+      "linked_blocks": [
+        "TB-G5S1U4-P37-D1",
+        "TB-G5S1U4-P42-D1",
+        "TB-G5S1U4-P43-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-play-the-pipa",
+      "atom_type": "word",
+      "text": "play the pipa",
+      "gloss": "弹琵琶",
+      "linked_blocks": [
+        "TB-G5S1U4-P36-D1",
+        "TB-G5S1U4-P39-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-problem",
+      "atom_type": "word",
+      "text": "problem",
+      "gloss": "问题",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-send",
+      "atom_type": "word",
+      "text": "send",
+      "gloss": "邮寄；发送",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-silly",
+      "atom_type": "word",
+      "text": "silly",
+      "gloss": "愚蠢的",
+      "linked_blocks": [
+        "TB-G5S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sing",
+      "atom_type": "word",
+      "text": "sing",
+      "gloss": "唱；唱歌",
+      "linked_blocks": [
+        "TB-G5S1U4-P36-D1",
+        "TB-G5S1U4-P38-D2",
+        "TB-G5S1U4-P38-D3",
+        "TB-G5S1U4-P39-D1",
+        "TB-G5S1U4-P41-D3",
+        "TB-G5S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-sing-english-songs",
+      "atom_type": "word",
+      "text": "sing English songs",
+      "gloss": "唱英文歌曲",
+      "linked_blocks": [
+        "TB-G5S1U4-P38-D2",
+        "TB-G5S1U4-P39-D1",
+        "TB-G5S1U4-P41-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-sing-the-birthday-song",
+      "atom_type": "word",
+      "text": "sing the birthday song",
+      "gloss": "唱生日歌",
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-song",
+      "atom_type": "word",
+      "text": "song",
+      "gloss": "歌曲",
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-speak-english",
+      "atom_type": "word",
+      "text": "speak English",
+      "gloss": "说英语",
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D3",
+        "TB-G5S1U4-P42-D1",
+        "TB-G5S1U4-P43-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-swim",
+      "atom_type": "word",
+      "text": "swim",
+      "gloss": "游泳",
+      "linked_blocks": [
+        "TB-G5S1U4-P42-D1",
+        "TB-G5S1U4-P43-D1",
+        "TB-G5S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-tasty",
+      "atom_type": "word",
+      "text": "tasty",
+      "gloss": "美味的",
+      "linked_blocks": [
+        "TB-G5S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-want",
+      "atom_type": "word",
+      "text": "want",
+      "gloss": "要；想要",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-we-ll",
+      "atom_type": "word",
+      "text": "we'll",
+      "gloss": "= we will",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-wonderful",
+      "atom_type": "word",
+      "text": "wonderful",
+      "gloss": "极好的；了不起的",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-zoo",
+      "atom_type": "word",
+      "text": "zoo",
+      "gloss": "动物园",
+      "linked_blocks": [
+        "TB-G5S1U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-a-little",
+      "atom_type": "sentence_pattern",
+      "text": "A little.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-mike-do-any-kung-fu-listen-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "Can Mike do any kung fu? Listen and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-you-cook",
+      "atom_type": "sentence_pattern",
+      "text": "Can you cook?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-you-dance",
+      "atom_type": "sentence_pattern",
+      "text": "Can you dance?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-you-do-any-kung-fu-john",
+      "atom_type": "sentence_pattern",
+      "text": "Can you do any kung fu, John?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-you-do-any-kung-fu-oliver",
+      "atom_type": "sentence_pattern",
+      "text": "Can you do any kung fu, Oliver?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-you-do-any-kung-fu",
+      "atom_type": "sentence_pattern",
+      "text": "Can you do any kung fu?",
+      "gloss": "你会功夫吗？",
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-you-play-ping-pong",
+      "atom_type": "sentence_pattern",
+      "text": "Can you play ping-pong?",
+      "gloss": "你会打乒乓球吗？",
+      "linked_blocks": [
+        "TB-G5S1U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-you-swim",
+      "atom_type": "sentence_pattern",
+      "text": "Can you swim?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P42-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-choose-one-sentence-from-above-and-write",
+      "atom_type": "sentence_pattern",
+      "text": "Choose one sentence from above and write.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P40-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-conduct-a-class-survey-about-talents",
+      "atom_type": "sentence_pattern",
+      "text": "Conduct a class survey about talents.",
+      "gloss": "进行一个关于才能的班级调查。",
+      "linked_blocks": [
+        "TB-G5S1U4-P39-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-cool",
+      "atom_type": "sentence_pattern",
+      "text": "Cool!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-do-you-want-to-be-robin-s-friend-write-three-sentences-about-yourself",
+      "atom_type": "sentence_pattern",
+      "text": "Do you want to be Robin's friend? Write three sentences about yourself.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P43-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-fill-in-the-blank",
+      "atom_type": "sentence_pattern",
+      "text": "Fill in the blank.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P44-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-giving-a-reason-for-declining-an-invitation",
+      "atom_type": "sentence_pattern",
+      "text": "Giving a reason for declining an invitation.",
+      "gloss": "为拒绝邀请给出理由。",
+      "linked_blocks": [
+        "TB-G5S1U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-good-afternoon-children-today-we-ll-learn-some-kung-fu",
+      "atom_type": "sentence_pattern",
+      "text": "Good afternoon, children. Today we'll learn some kung fu.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-great",
+      "atom_type": "sentence_pattern",
+      "text": "Great!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hi-mr-li",
+      "atom_type": "sentence_pattern",
+      "text": "Hi, Mr Li.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hi-can-you-play-ping-pong",
+      "atom_type": "sentence_pattern",
+      "text": "Hi. Can you play ping-pong?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-about-you",
+      "atom_type": "sentence_pattern",
+      "text": "How about you?",
+      "gloss": "你呢？",
+      "linked_blocks": [
+        "TB-G5S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-can-dance",
+      "atom_type": "sentence_pattern",
+      "text": "I can dance!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-can-do-some-kung-fu",
+      "atom_type": "sentence_pattern",
+      "text": "I can do some kung fu!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-can-draw-cartoons",
+      "atom_type": "sentence_pattern",
+      "text": "I can draw cartoons.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P39-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-can-draw-cartoons-i-can-do-some-kung-fu-too",
+      "atom_type": "sentence_pattern",
+      "text": "I can draw cartoons. I can do some kung fu, too!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P39-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-can-draw-pictures",
+      "atom_type": "sentence_pattern",
+      "text": "I can draw pictures.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-can-play-the-pipa",
+      "atom_type": "sentence_pattern",
+      "text": "I can play the pipa.",
+      "gloss": "我会弹琵琶。",
+      "linked_blocks": [
+        "TB-G5S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-can-sing-english-songs",
+      "atom_type": "sentence_pattern",
+      "text": "I can sing English songs.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-hungry-mmm-here-comes-some-tasty-food-now-i-can-eat",
+      "atom_type": "sentence_pattern",
+      "text": "I'm hungry. Mmm ... Here comes some tasty food. Now I can eat.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-me-see-there-is-a-lake-near-here-can-you-swim",
+      "atom_type": "sentence_pattern",
+      "text": "Let me see. There is a lake near here. Can you swim?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-learn",
+      "atom_type": "sentence_pattern",
+      "text": "Let's learn",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P39-D1",
+        "TB-G5S1U4-P42-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-play-together",
+      "atom_type": "sentence_pattern",
+      "text": "Let's play together!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P37-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-tick-or-cross",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and tick or cross.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P44-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-circle-and-say",
+      "atom_type": "sentence_pattern",
+      "text": "Listen, circle and say.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P40-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-and-write",
+      "atom_type": "sentence_pattern",
+      "text": "Look and write.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P44-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-look-listen-and-write",
+      "atom_type": "sentence_pattern",
+      "text": "Look, listen and write.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P40-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-no-i-can-t",
+      "atom_type": "sentence_pattern",
+      "text": "No, I can't.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-oh-what-can-you-do-can-you-sing",
+      "atom_type": "sentence_pattern",
+      "text": "Oh! What can you do? Can you sing?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-practice-using-can-you-to-ask-about-abilities",
+      "atom_type": "sentence_pattern",
+      "text": "Practice using 'Can you...?' to ask about abilities.",
+      "gloss": "练习使用'Can you...?'询问能力。",
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-letter-combination-oo-can-also-make-the-short-sound-as-in-book",
+      "atom_type": "sentence_pattern",
+      "text": "The letter combination 'oo' can also make the short /ʊ/ sound, as in 'book'.",
+      "gloss": "字母组合 'oo' 也可以发短音 /ʊ/，如 'book'。",
+      "linked_blocks": [
+        "TB-G5S1U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-letter-combination-oo-can-make-the-long-u-sound-as-in-zoo",
+      "atom_type": "sentence_pattern",
+      "text": "The letter combination 'oo' can make the long /u:/ sound, as in 'zoo'.",
+      "gloss": "字母组合 'oo' 可以发长音 /u:/，如 'zoo'。",
+      "linked_blocks": [
+        "TB-G5S1U4-P40-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-understand-a-personal-introduction-text",
+      "atom_type": "sentence_pattern",
+      "text": "Understand a personal introduction text.",
+      "gloss": "理解一篇自我介绍的短文。",
+      "linked_blocks": [
+        "TB-G5S1U4-P43-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-use-can-and-can-t-to-talk-about-your-own-abilities",
+      "atom_type": "sentence_pattern",
+      "text": "Use 'can' and 'can't' to talk about your own abilities.",
+      "gloss": "使用'can'和'can't'谈论自己的能力。",
+      "linked_blocks": [
+        "TB-G5S1U4-P42-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-use-play-the-for-musical-instruments",
+      "atom_type": "sentence_pattern",
+      "text": "Use 'play the' for musical instruments.",
+      "gloss": "在乐器前使用'play the'。",
+      "linked_blocks": [
+        "TB-G5S1U4-P44-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-use-play-without-the-for-sports-and-ball-games",
+      "atom_type": "sentence_pattern",
+      "text": "Use 'play' without 'the' for sports and ball games.",
+      "gloss": "在体育运动和球类游戏前使用'play'时，不加'the'。",
+      "linked_blocks": [
+        "TB-G5S1U4-P44-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-use-your-wits-to-get-out-of-a-difficult-situation",
+      "atom_type": "sentence_pattern",
+      "text": "Use your wits to get out of a difficult situation.",
+      "gloss": "运用智慧摆脱困境。",
+      "linked_blocks": [
+        "TB-G5S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-using-can-and-can-t-to-talk-about-abilities",
+      "atom_type": "sentence_pattern",
+      "text": "Using 'can' and 'can't' to talk about abilities.",
+      "gloss": "使用'can'和'can't'谈论能力。",
+      "linked_blocks": [
+        "TB-G5S1U4-P45-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-ll-have-an-english-party-next-tuesday-what-can-you-do-for-the-party-children",
+      "atom_type": "sentence_pattern",
+      "text": "We'll have an English party next Tuesday! What can you do for the party, children?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-ll-have-an-english-party-next-tuesday",
+      "atom_type": "sentence_pattern",
+      "text": "We'll have an English party next Tuesday.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-can-mike-do-listen-and-tick",
+      "atom_type": "sentence_pattern",
+      "text": "What can Mike do? Listen and tick.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P38-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-can-robin-do-tick-or-cross",
+      "atom_type": "sentence_pattern",
+      "text": "What can Robin do? Tick or cross.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P43-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-can-you-do-for-the-party",
+      "atom_type": "sentence_pattern",
+      "text": "What can you do for the party?",
+      "gloss": "你能为派对做什么？",
+      "linked_blocks": [
+        "TB-G5S1U4-P36-D1",
+        "TB-G5S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-can-you-do-wu-binbin",
+      "atom_type": "sentence_pattern",
+      "text": "What can you do, Wu Binbin?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P38-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-can-you-do",
+      "atom_type": "sentence_pattern",
+      "text": "What can you do?",
+      "gloss": "你会做什么？",
+      "linked_blocks": [
+        "TB-G5S1U4-P38-D3",
+        "TB-G5S1U4-P39-D2",
+        "TB-G5S1U4-P39-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-who-can-dance",
+      "atom_type": "sentence_pattern",
+      "text": "Who can dance?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P39-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-who-can",
+      "atom_type": "sentence_pattern",
+      "text": "Who can...?",
+      "gloss": "谁会...?",
+      "linked_blocks": [
+        "TB-G5S1U4-P39-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wonderful",
+      "atom_type": "sentence_pattern",
+      "text": "Wonderful!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P36-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wonderful-how-about-you-john",
+      "atom_type": "sentence_pattern",
+      "text": "Wonderful! How about you, John?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P38-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-i-can",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, I can.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-i-can-no-i-can-t",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, I can. / No, I can't.",
+      "gloss": "是的，我会。/ 不，我不会。",
+      "linked_blocks": [
+        "TB-G5S1U4-P41-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-i-can-i-can-do-some-kung-fu-too",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, I can. I can do some kung fu, too!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G5S1U4-P42-D2"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S1U4-P36",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: What can you do?. 单元首页图。老师正在和学生陈洁讨论即将在下周二举行的英语派对。老师询问陈洁能为派对表演什么节目，引出本单元关于能力和才艺的主题。窗外的小动物们也在展示自己的才艺。",
+      "entry_probe_questions": [
+        "Do you know the word English party?",
+        "Can you say: What can you do for the party?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U4-P36-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U4-P37",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: What can you do?. 在活动室，李老师邀请刚进门的约翰一起打乒乓球。约翰表示自己会一点，但因为三点钟有英语课而婉拒了邀请。",
+      "entry_probe_questions": [
+        "Do you know the word play ping-pong?",
+        "Can you say: Can you play ping-pong?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U4-P37-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U4-P38",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Talents and abilities for a party. 怀特老师正在和学生们讨论即将举行的英语派对，询问大家能表演什么节目。张鹏和约翰分别表示自己可以唱歌和表演功夫。",
+      "entry_probe_questions": [
+        "Do you know the word sing English songs?",
+        "Can you say: What can you do for the party?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U4-P38-D2",
+        "TB-G5S1U4-P38-D3",
+        "TB-G5S1U4-P38-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U4-P39",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Talents and abilities. 通过图片展示了五种不同的才艺和活动，学习相关的动词短语。",
+      "entry_probe_questions": [
+        "Do you know the word dance?",
+        "Can you say: Let's learn"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U4-P39-D1",
+        "TB-G5S1U4-P39-D2",
+        "TB-G5S1U4-P39-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U4-P40",
+      "page_type": "phonics",
+      "page_intro_cn": "Theme: Phonics: oo. 听录音，圈出每组中'oo'发音与其他单词不同的那个词。",
+      "entry_probe_questions": [
+        "Can you say: Listen, circle and say."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U4-P40-D2",
+        "TB-G5S1U4-P40-D3",
+        "TB-G5S1U4-P40-D1",
+        "TB-G5S1U4-P40-D4"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U4-P41",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Expressing ability. 马老师正在教孩子们功夫。他询问约翰和奥利弗是否会功夫，得到了不同的回答。马老师表示可以帮助不会的奥利弗。",
+      "entry_probe_questions": [
+        "Do you know the word learn?",
+        "Can you say: Can you do any kung fu?"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U4-P41-D2",
+        "TB-G5S1U4-P41-D3",
+        "TB-G5S1U4-P41-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U4-P42",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Expressing abilities. 通过图片展示了五种不同的技能和活动，学习相关的动词短语。",
+      "entry_probe_questions": [
+        "Do you know the word swim?",
+        "Can you say: Let's learn"
+      ],
+      "priority_blocks": [
+        "TB-G5S1U4-P42-D1",
+        "TB-G5S1U4-P42-D2",
+        "TB-G5S1U4-P42-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U4-P43",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Reading and writing about abilities. 一篇以机器人罗宾的口吻写的交友信息。罗宾介绍了自己的性格和能力，并邀请读者通过电子邮件介绍自己，以便成为朋友。",
+      "entry_probe_questions": [
+        "Do you know the word friendly?",
+        "Can you say: Understand a personal introduction text."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U4-P43-D1",
+        "TB-G5S1U4-P43-D2",
+        "TB-G5S1U4-P43-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U4-P44",
+      "page_type": "grammar",
+      "page_intro_cn": "Theme: Unit 4 Check & Wrap-up. 学生听录音，了解约翰和张鹏分别会和不会哪项运动，并在表格中打勾或画叉。",
+      "entry_probe_questions": [
+        "Can you say: Listen and tick or cross."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U4-P44-D1",
+        "TB-G5S1U4-P44-D2",
+        "TB-G5S1U4-P44-D3",
+        "TB-G5S1U4-P44-D4"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G5S1U4-P45",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Story time. 一个连环画故事。一条饥饿的蛇抓到了一只老鼠。为了自救，老鼠声称自己能为蛇做事，展示了唱歌跳舞的才能。蛇为了验证老鼠是否会游泳，打算把它扔进湖里，老鼠假装求饶。但实际上，老鼠会游泳，并借此机会成功逃脱。",
+      "entry_probe_questions": [
+        "Do you know the word hungry?",
+        "Can you say: Use your wits to get out of a difficult situation."
+      ],
+      "priority_blocks": [
+        "TB-G5S1U4-P45-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S1U4-P36-D1",
+      "page_uid": "TB-G5S1U4-P36",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U4-P36-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "单元首页图。老师正在和学生陈洁讨论即将在下周二举行的英语派对。老师询问陈洁能为派对表演什么节目，引出本单元关于能力和才艺的主题。窗外的小动物们也在展示自己的才艺。 Key patterns: What can you do for the party?; I can play the pipa.",
+      "focus_vocabulary": [
+        "English party",
+        "play the pipa",
+        "dance",
+        "sing"
+      ],
+      "core_patterns": [
+        "What can you do for the party?",
+        "I can play the pipa.",
+        "We'll have an English party next Tuesday.",
+        "Great!",
+        "Wonderful!",
+        "I can dance!"
+      ],
+      "allowed_answer_scope": [
+        "We'll have an English party next Tuesday.",
+        "Great!",
+        "I can play the pipa.",
+        "Wonderful!",
+        "I can dance!",
+        "I can sing! La la la ..."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word English party?",
+        "Can you say: What can you do for the party?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U4-P36-D1-goal"
+      ],
+      "branchable_topics": [
+        "English party",
+        "play the pipa",
+        "dance",
+        "sing",
+        "What can you do?",
+        "Unit Four"
+      ],
+      "return_anchors": [
+        "What can you do for the party?",
+        "I can play the pipa.",
+        "We'll have an English party next Tuesday."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P37-D1",
+      "page_uid": "TB-G5S1U4-P37",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U4-P37-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "在活动室，李老师邀请刚进门的约翰一起打乒乓球。约翰表示自己会一点，但因为三点钟有英语课而婉拒了邀请。 Key patterns: Can you play ping-pong?; Giving a reason for declining an invitation.",
+      "focus_vocabulary": [
+        "play ping-pong",
+        "a little",
+        "English class",
+        "3 o'clock"
+      ],
+      "core_patterns": [
+        "Can you play ping-pong?",
+        "Giving a reason for declining an invitation.",
+        "Hi. Can you play ping-pong?",
+        "Hi, Mr Li.",
+        "A little.",
+        "Let's play together!"
+      ],
+      "allowed_answer_scope": [
+        "Hi, Mr Li.",
+        "A little.",
+        "Let's play together!",
+        "Sorry. I have an English class at 3 o'clock."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word play ping-pong?",
+        "Can you say: Can you play ping-pong?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U4-P37-D1-goal"
+      ],
+      "branchable_topics": [
+        "play ping-pong",
+        "a little",
+        "English class",
+        "3 o'clock",
+        "What can you do?"
+      ],
+      "return_anchors": [
+        "Can you play ping-pong?",
+        "Giving a reason for declining an invitation.",
+        "Hi. Can you play ping-pong?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P38-D1",
+      "page_uid": "TB-G5S1U4-P38",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U4-P38-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，根据内容判断迈克会做什么，并勾选正确的图片。 Key patterns: What can Mike do? Listen and tick.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What can Mike do? Listen and tick."
+      ],
+      "allowed_answer_scope": [
+        "Picture 2"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What can Mike do? Listen and tick."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U4-P38-D1-goal"
+      ],
+      "branchable_topics": [
+        "Talents and abilities for a party",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "What can Mike do? Listen and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P38-D2",
+      "page_uid": "TB-G5S1U4-P38",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U4-P38-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "怀特老师正在和学生们讨论即将举行的英语派对，询问大家能表演什么节目。张鹏和约翰分别表示自己可以唱歌和表演功夫。 Key patterns: What can you do for the party?; How about you?",
+      "focus_vocabulary": [
+        "sing English songs",
+        "do some kung fu"
+      ],
+      "core_patterns": [
+        "What can you do for the party?",
+        "How about you?",
+        "We'll have an English party next Tuesday! What can you do for the party, children?",
+        "Wonderful! How about you, John?",
+        "I can sing English songs.",
+        "I can do some kung fu!"
+      ],
+      "allowed_answer_scope": [
+        "I can sing English songs.",
+        "I can do some kung fu!",
+        "Thank you, John."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word sing English songs?",
+        "Can you say: What can you do for the party?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U4-P38-D3",
+        "TB-G5S1U4-P38-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U4-P38-D2-goal"
+      ],
+      "branchable_topics": [
+        "sing English songs",
+        "do some kung fu",
+        "Talents and abilities for a party",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "What can you do for the party?",
+        "How about you?",
+        "We'll have an English party next Tuesday! What can you do for the party, children?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P38-D3",
+      "page_uid": "TB-G5S1U4-P38",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U4-P38-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "提供一个词汇库和一段示范对话，引导学生练习询问和回答关于个人能力的问题。 Key patterns: What can you do?; What can you do, Wu Binbin?",
+      "focus_vocabulary": [
+        "sing",
+        "dance",
+        "draw pictures",
+        "clean the classroom",
+        "do some kung fu"
+      ],
+      "core_patterns": [
+        "What can you do?",
+        "What can you do, Wu Binbin?",
+        "I can draw pictures."
+      ],
+      "allowed_answer_scope": [
+        "I can draw pictures."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word sing?",
+        "Can you say: What can you do?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U4-P38-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U4-P38-D3-goal"
+      ],
+      "branchable_topics": [
+        "sing",
+        "dance",
+        "draw pictures",
+        "clean the classroom",
+        "do some kung fu",
+        "Talents and abilities for a party",
+        "What can you do?"
+      ],
+      "return_anchors": [
+        "What can you do?",
+        "What can you do, Wu Binbin?",
+        "I can draw pictures."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P39-D1",
+      "page_uid": "TB-G5S1U4-P39",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S1U4-P39-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "通过图片展示了五种不同的才艺和活动，学习相关的动词短语。 Key patterns: Let's learn",
+      "focus_vocabulary": [
+        "dance",
+        "sing English songs",
+        "play the pipa",
+        "do kung fu",
+        "draw cartoons"
+      ],
+      "core_patterns": [
+        "Let's learn"
+      ],
+      "allowed_answer_scope": [
+        "dance",
+        "sing English songs",
+        "play the pipa",
+        "do kung fu",
+        "draw cartoons"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word dance?",
+        "Can you say: Let's learn"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U4-P39-D2",
+        "TB-G5S1U4-P39-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U4-P39-D1-goal"
+      ],
+      "branchable_topics": [
+        "dance",
+        "sing English songs",
+        "play the pipa",
+        "do kung fu",
+        "draw cartoons",
+        "Talents and abilities",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Let's learn"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P39-D2",
+      "page_uid": "TB-G5S1U4-P39",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U4-P39-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "在词汇学习部分下方，提供了一段老师和学生之间的简短对话，练习询问和回答个人能力。 Key patterns: What can you do?; I can draw cartoons.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What can you do?",
+        "I can draw cartoons."
+      ],
+      "allowed_answer_scope": [
+        "I can draw cartoons."
+      ],
+      "entry_probe_questions": [
+        "Can you say: What can you do?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U4-P39-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U4-P39-D2-goal"
+      ],
+      "branchable_topics": [
+        "Talents and abilities",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "What can you do?",
+        "I can draw cartoons."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P39-D3",
+      "page_uid": "TB-G5S1U4-P39",
+      "page_type": "vocabulary",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G5S1U4-P39-D3"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "一个课堂调查活动。学生需要询问同学会做什么才艺，并将结果记录在表格中。页面提供了对话示例和表格模板。 Key patterns: Conduct a class survey about talents.; Who can...?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Conduct a class survey about talents.",
+        "Who can...?",
+        "What can you do?",
+        "Who can dance?",
+        "I can draw cartoons. I can do some kung fu, too!"
+      ],
+      "allowed_answer_scope": [
+        "I can draw cartoons. I can do some kung fu, too!",
+        "..."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Conduct a class survey about talents."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U4-P39-D3-goal"
+      ],
+      "branchable_topics": [
+        "Talents and abilities",
+        "Do a survey"
+      ],
+      "return_anchors": [
+        "Conduct a class survey about talents.",
+        "Who can...?",
+        "What can you do?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P40-D1",
+      "page_uid": "TB-G5S1U4-P40",
+      "page_type": "phonics",
+      "block_type": "phonics",
+      "source_refs": [
+        "TB-G5S1U4-P40-D1"
+      ],
+      "teaching_goal": "Notice and repeat the target pronunciation pattern.",
+      "teaching_summary": "学习字母组合 'oo' 的两种常见发音：长音 /u:/ 和短音 /ʊ/。 Key patterns: The letter combination 'oo' can make the long /u:/ sound, as in 'zoo'.; The letter combination 'oo' can also make the short /ʊ/ sound, as in 'book'.",
+      "focus_vocabulary": [
+        "book",
+        "look",
+        "balloon",
+        "food",
+        "football",
+        "good",
+        "zoo",
+        "noodles"
+      ],
+      "core_patterns": [
+        "The letter combination 'oo' can make the long /u:/ sound, as in 'zoo'.",
+        "The letter combination 'oo' can also make the short /ʊ/ sound, as in 'book'."
+      ],
+      "allowed_answer_scope": [
+        "book",
+        "look",
+        "balloon",
+        "food",
+        "football",
+        "good"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word book?",
+        "Can you say: The letter combination 'oo' can make the long /u:/ sound, as in 'zoo'."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U4-P40-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U4-P40-D1-goal"
+      ],
+      "branchable_topics": [
+        "book",
+        "look",
+        "balloon",
+        "food",
+        "football",
+        "good",
+        "zoo",
+        "noodles"
+      ],
+      "return_anchors": [
+        "The letter combination 'oo' can make the long /u:/ sound, as in 'zoo'.",
+        "The letter combination 'oo' can also make the short /ʊ/ sound, as in 'book'."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P40-D2",
+      "page_uid": "TB-G5S1U4-P40",
+      "page_type": "phonics",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U4-P40-D2"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，圈出每组中'oo'发音与其他单词不同的那个词。 Key patterns: Listen, circle and say.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen, circle and say."
+      ],
+      "allowed_answer_scope": [
+        "room",
+        "balloon",
+        "cool",
+        "zoo",
+        "too",
+        "goodbye"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen, circle and say."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U4-P40-D3",
+        "TB-G5S1U4-P40-D1",
+        "TB-G5S1U4-P40-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U4-P40-D2-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: oo",
+        "Let's spell"
+      ],
+      "return_anchors": [
+        "Listen, circle and say."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P40-D3",
+      "page_uid": "TB-G5S1U4-P40",
+      "page_type": "phonics",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U4-P40-D3"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "看图、听录音并填写句子。三幅图分别描绘了做饭、看别人滑滑板和看书的场景。 Key patterns: Look, listen and write.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Look, listen and write."
+      ],
+      "allowed_answer_scope": [
+        "good food",
+        "cool",
+        "good book"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Look, listen and write."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U4-P40-D1",
+        "TB-G5S1U4-P40-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U4-P40-D3-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: oo",
+        "Look, listen and write."
+      ],
+      "return_anchors": [
+        "Look, listen and write."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P40-D4",
+      "page_uid": "TB-G5S1U4-P40",
+      "page_type": "phonics",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S1U4-P40-D4"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "从上面完成的三个句子中选择一句抄写下来。 Key patterns: Choose one sentence from above and write.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Choose one sentence from above and write."
+      ],
+      "allowed_answer_scope": [
+        "I make good food."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Choose one sentence from above and write."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U4-P40-D4-goal"
+      ],
+      "branchable_topics": [
+        "Phonics: oo",
+        "Choose one sentence from above and write."
+      ],
+      "return_anchors": [
+        "Choose one sentence from above and write."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P41-D1",
+      "page_uid": "TB-G5S1U4-P41",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U4-P41-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "听录音，判断迈克是否会功夫，并勾选YES或NO。 Key patterns: Can Mike do any kung fu? Listen and tick.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Can Mike do any kung fu? Listen and tick."
+      ],
+      "allowed_answer_scope": [
+        "YES"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Can Mike do any kung fu? Listen and tick."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U4-P41-D1-goal"
+      ],
+      "branchable_topics": [
+        "Expressing ability",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Can Mike do any kung fu? Listen and tick."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P41-D2",
+      "page_uid": "TB-G5S1U4-P41",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S1U4-P41-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "马老师正在教孩子们功夫。他询问约翰和奥利弗是否会功夫，得到了不同的回答。马老师表示可以帮助不会的奥利弗。 Key patterns: Can you do any kung fu?; Yes, I can. / No, I can't.",
+      "focus_vocabulary": [
+        "learn",
+        "do any kung fu"
+      ],
+      "core_patterns": [
+        "Can you do any kung fu?",
+        "Yes, I can. / No, I can't.",
+        "Can you do any kung fu, John?",
+        "Can you do any kung fu, Oliver?",
+        "Good afternoon, children. Today we'll learn some kung fu.",
+        "Cool!"
+      ],
+      "allowed_answer_scope": [
+        "Good afternoon, children. Today we'll learn some kung fu.",
+        "Cool!",
+        "Yes, I can.",
+        "Wonderful!",
+        "No, I can't.",
+        "No problem. I can help you."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word learn?",
+        "Can you say: Can you do any kung fu?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U4-P41-D3",
+        "TB-G5S1U4-P41-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U4-P41-D2-goal"
+      ],
+      "branchable_topics": [
+        "learn",
+        "do any kung fu",
+        "Expressing ability",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "Can you do any kung fu?",
+        "Yes, I can. / No, I can't.",
+        "Can you do any kung fu, John?"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P41-D3",
+      "page_uid": "TB-G5S1U4-P41",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U4-P41-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "提供一个词汇库和两组对话示例，引导学生练习询问和回答关于各种能力的问题。 Key patterns: Practice using 'Can you...?' to ask about abilities.; Can you cook?",
+      "focus_vocabulary": [
+        "cook",
+        "sing English songs",
+        "speak English",
+        "do some kung fu",
+        "make a puppet/robot/...",
+        "sing the birthday song"
+      ],
+      "core_patterns": [
+        "Practice using 'Can you...?' to ask about abilities.",
+        "Can you cook?",
+        "Yes, I can.",
+        "No, I can't."
+      ],
+      "allowed_answer_scope": [
+        "Yes, I can.",
+        "No, I can't."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word cook?",
+        "Can you say: Practice using 'Can you...?' to ask about abilities."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U4-P41-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U4-P41-D3-goal"
+      ],
+      "branchable_topics": [
+        "cook",
+        "sing English songs",
+        "speak English",
+        "do some kung fu",
+        "make a puppet/robot/...",
+        "sing the birthday song",
+        "Expressing ability",
+        "Can you do it?"
+      ],
+      "return_anchors": [
+        "Practice using 'Can you...?' to ask about abilities.",
+        "Can you cook?",
+        "Yes, I can."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P42-D1",
+      "page_uid": "TB-G5S1U4-P42",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G5S1U4-P42-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "通过图片展示了五种不同的技能和活动，学习相关的动词短语。 Key patterns: Let's learn",
+      "focus_vocabulary": [
+        "swim",
+        "speak English",
+        "cook",
+        "play basketball",
+        "play ping-pong"
+      ],
+      "core_patterns": [
+        "Let's learn"
+      ],
+      "allowed_answer_scope": [
+        "swim",
+        "speak English",
+        "cook",
+        "play basketball",
+        "play ping-pong"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word swim?",
+        "Can you say: Let's learn"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U4-P42-D2",
+        "TB-G5S1U4-P42-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U4-P42-D1-goal"
+      ],
+      "branchable_topics": [
+        "swim",
+        "speak English",
+        "cook",
+        "play basketball",
+        "play ping-pong",
+        "Expressing abilities",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Let's learn"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P42-D2",
+      "page_uid": "TB-G5S1U4-P42",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U4-P42-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "在词汇学习部分下方，提供了一段小动物之间的简短对话，练习询问和回答个人能力。 Key patterns: Can you swim?; Yes, I can. I can do some kung fu, too!",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Can you swim?",
+        "Yes, I can. I can do some kung fu, too!"
+      ],
+      "allowed_answer_scope": [
+        "Yes, I can. I can do some kung fu, too!"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Can you swim?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U4-P42-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U4-P42-D2-goal"
+      ],
+      "branchable_topics": [
+        "Expressing abilities",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Can you swim?",
+        "Yes, I can. I can do some kung fu, too!"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P42-D3",
+      "page_uid": "TB-G5S1U4-P42",
+      "page_type": "vocabulary",
+      "block_type": "practice_write",
+      "source_refs": [
+        "TB-G5S1U4-P42-D3"
+      ],
+      "teaching_goal": "Work on the practice write activity.",
+      "teaching_summary": "一个写作和口语练习。学生需要将自己会做和不会做的事情分别填写在'can'和'can't'两列表格中，并根据填写的内容进行口头表达。莎拉提供了一个完整的口语示例。 Key patterns: Use 'can' and 'can't' to talk about your own abilities.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Use 'can' and 'can't' to talk about your own abilities."
+      ],
+      "allowed_answer_scope": [
+        "Use 'can' and 'can't' to talk about your own abilities."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Use 'can' and 'can't' to talk about your own abilities."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U4-P42-D3-goal"
+      ],
+      "branchable_topics": [
+        "Expressing abilities",
+        "Write and say"
+      ],
+      "return_anchors": [
+        "Use 'can' and 'can't' to talk about your own abilities."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P43-D1",
+      "page_uid": "TB-G5S1U4-P43",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S1U4-P43-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一篇以机器人罗宾的口吻写的交友信息。罗宾介绍了自己的性格和能力，并邀请读者通过电子邮件介绍自己，以便成为朋友。 Key patterns: Understand a personal introduction text.",
+      "focus_vocabulary": [
+        "friendly",
+        "funny",
+        "speak English",
+        "do some kung fu",
+        "play ping-pong",
+        "swim"
+      ],
+      "core_patterns": [
+        "Understand a personal introduction text."
+      ],
+      "allowed_answer_scope": [
+        "friendly",
+        "funny",
+        "speak English",
+        "do some kung fu",
+        "play ping-pong",
+        "swim"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word friendly?",
+        "Can you say: Understand a personal introduction text."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U4-P43-D2",
+        "TB-G5S1U4-P43-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U4-P43-D1-goal"
+      ],
+      "branchable_topics": [
+        "friendly",
+        "funny",
+        "speak English",
+        "do some kung fu",
+        "play ping-pong",
+        "swim",
+        "Reading and writing about abilities",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "Understand a personal introduction text."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P43-D2",
+      "page_uid": "TB-G5S1U4-P43",
+      "page_type": "reading",
+      "block_type": "practice_true_false",
+      "source_refs": [
+        "TB-G5S1U4-P43-D2"
+      ],
+      "teaching_goal": "Work on the practice true false activity.",
+      "teaching_summary": "根据罗宾的交友信息，判断关于罗宾能力的五个陈述句的对错，并打勾或画叉。 Key patterns: What can Robin do? Tick or cross.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What can Robin do? Tick or cross."
+      ],
+      "allowed_answer_scope": [
+        "打勾",
+        "画叉"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What can Robin do? Tick or cross."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U4-P43-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U4-P43-D2-goal"
+      ],
+      "branchable_topics": [
+        "Reading and writing about abilities",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "What can Robin do? Tick or cross."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P43-D3",
+      "page_uid": "TB-G5S1U4-P43",
+      "page_type": "reading",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G5S1U4-P43-D3"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "一项写作任务，要求学生写三句话介绍自己，回应罗宾的交友请求。 Key patterns: Do you want to be Robin's friend? Write three sentences about yourself.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Do you want to be Robin's friend? Write three sentences about yourself."
+      ],
+      "allowed_answer_scope": [
+        "Do you want to be Robin's friend? Write three sentences about yourself."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Do you want to be Robin's friend? Write three sentences about yourself."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U4-P43-D3-goal"
+      ],
+      "branchable_topics": [
+        "Reading and writing about abilities",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "Do you want to be Robin's friend? Write three sentences about yourself."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P44-D1",
+      "page_uid": "TB-G5S1U4-P44",
+      "page_type": "grammar",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S1U4-P44-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "学生听录音，了解约翰和张鹏分别会和不会哪项运动，并在表格中打勾或画叉。 Key patterns: Listen and tick or cross.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and tick or cross."
+      ],
+      "allowed_answer_scope": [
+        "✓",
+        "✗"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and tick or cross."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U4-P44-D2",
+        "TB-G5S1U4-P44-D3",
+        "TB-G5S1U4-P44-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U4-P44-D1-goal"
+      ],
+      "branchable_topics": [
+        "Unit 4 Check & Wrap-up",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Listen and tick or cross."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P44-D2",
+      "page_uid": "TB-G5S1U4-P44",
+      "page_type": "grammar",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G5S1U4-P44-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "根据上一题听力表格的结果，填写句子，找出张鹏和约翰可以一起进行的活动。 Key patterns: Fill in the blank.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Fill in the blank."
+      ],
+      "allowed_answer_scope": [
+        "not play sports"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Fill in the blank."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U4-P44-D3",
+        "TB-G5S1U4-P44-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U4-P44-D2-goal"
+      ],
+      "branchable_topics": [
+        "Unit 4 Check & Wrap-up",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Fill in the blank."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P44-D3",
+      "page_uid": "TB-G5S1U4-P44",
+      "page_type": "grammar",
+      "block_type": "grammar_point",
+      "source_refs": [
+        "TB-G5S1U4-P44-D3"
+      ],
+      "teaching_goal": "Work on the grammar point activity.",
+      "teaching_summary": "总结动词'play'后接不同活动名词时，定冠词'the'的使用规则：球类运动前不加'the'，乐器前要加'the'。 Key patterns: Use 'play' without 'the' for sports and ball games.; Use 'play the' for musical instruments.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Use 'play' without 'the' for sports and ball games.",
+        "Use 'play the' for musical instruments."
+      ],
+      "allowed_answer_scope": [
+        "Use 'play' without 'the' for sports and ball games.",
+        "Use 'play the' for musical instruments."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Use 'play' without 'the' for sports and ball games."
+      ],
+      "repair_modes": [
+        "repeat",
+        "sentence_drill",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U4-P44-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U4-P44-D3-goal"
+      ],
+      "branchable_topics": [
+        "Unit 4 Check & Wrap-up",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Use 'play' without 'the' for sports and ball games.",
+        "Use 'play the' for musical instruments."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P44-D4",
+      "page_uid": "TB-G5S1U4-P44",
+      "page_type": "grammar",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G5S1U4-P44-D4"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "根据'play'后是否加'the'的规则，看图完成两个问句。 Key patterns: Look and write.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Look and write."
+      ],
+      "allowed_answer_scope": [
+        "pipa",
+        "football"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Look and write."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U4-P44-D4-goal"
+      ],
+      "branchable_topics": [
+        "Unit 4 Check & Wrap-up",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "Look and write."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U4-P45-D1",
+      "page_uid": "TB-G5S1U4-P45",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G5S1U4-P45-D1"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "一个连环画故事。一条饥饿的蛇抓到了一只老鼠。为了自救，老鼠声称自己能为蛇做事，展示了唱歌跳舞的才能。蛇为了验证老鼠是否会游泳，打算把它扔进湖里，老鼠假装求饶。但实际上，老鼠会游泳，并借此机会成功逃脱。 Key patterns: Use your wits to get out of a difficult situation.; Using 'can' and 'can't' to talk about abilities.",
+      "focus_vocabulary": [
+        "hungry",
+        "tasty",
+        "sing",
+        "dance",
+        "swim",
+        "lake",
+        "silly"
+      ],
+      "core_patterns": [
+        "Use your wits to get out of a difficult situation.",
+        "Using 'can' and 'can't' to talk about abilities.",
+        "Oh! What can you do? Can you sing?",
+        "Can you dance?",
+        "Let me see. There is a lake near here. Can you swim?",
+        "I'm hungry. Mmm ... Here comes some tasty food. Now I can eat."
+      ],
+      "allowed_answer_scope": [
+        "I'm hungry. Mmm ... Here comes some tasty food. Now I can eat.",
+        "Dear snake, wait a minute. I can do things for you.",
+        "Yes, I can.",
+        "Yes, I can. Let me go. Then I can dance for you.",
+        "No! Don't throw me into the lake, please!",
+        "Haha! Silly snake! Now I can swim away. Bye!"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word hungry?",
+        "Can you say: Use your wits to get out of a difficult situation."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U4-P45-D1-goal"
+      ],
+      "branchable_topics": [
+        "hungry",
+        "tasty",
+        "sing",
+        "dance",
+        "swim",
+        "lake",
+        "silly",
+        "Story time"
+      ],
+      "return_anchors": [
+        "Use your wits to get out of a difficult situation.",
+        "Using 'can' and 'can't' to talk about abilities.",
+        "Oh! What can you do? Can you sing?"
+      ]
+    }
+  ]
+}

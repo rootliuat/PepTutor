@@ -1,0 +1,446 @@
+{
+  "pilot_id": "g5s1u3-p24-p25-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "U3",
+    "pages": [24, 25]
+  },
+  "source_files": [
+    "raw_textbook_g5s1_unit3",
+    "raw_wordlist_g5s1",
+    "raw_useful_expressions_g5s1"
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S1U3-P24",
+      "page_type": "dialogue",
+      "page_intro_cn": "这一页我们练习在餐厅里点餐，表达想吃什么、想喝什么，先把 hungry 和两个核心问句热起来。",
+      "entry_probe_questions": [
+        "假设你饿了，你可以说：I am hungry.",
+        "老师来问你：What would you like to eat? 你就选一句说。"
+      ],
+      "assumed_prior_knowledge": [
+        {
+          "topic": "basic food words and need-state language from earlier grades",
+          "source": "grade_level_default",
+          "confidence": "low",
+          "verification_status": "unverified",
+          "verify_by_block_uid": "TB-G5S1U3-P24-D2",
+          "learning_target_uids": [
+            "LT-G5S1U3-P24-pattern-what-would-you-like-to-eat",
+            "LT-G5S1U3-P24-pattern-what-would-you-like-to-drink",
+            "LT-G5S1U3-P24-word-hungry"
+          ]
+        }
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P24-D4",
+        "TB-G5S1U3-P24-D1"
+      ]
+    },
+    {
+      "page_uid": "TB-G5S1U3-P25",
+      "page_type": "vocabulary",
+      "page_intro_cn": "这一页我们先认识食物和饮料词，再练用 I'd like ... 礼貌点餐。",
+      "entry_probe_questions": [
+        "先看看这些食物和饮料词你认不认识。",
+        "试着说一句：I'd like a sandwich, please."
+      ],
+      "assumed_prior_knowledge": [
+        {
+          "topic": "page 24 ordering frame with I'd like answers",
+          "source": "unit_progression",
+          "confidence": "medium",
+          "verification_status": "unverified",
+          "verify_by_block_uid": "TB-G5S1U3-P25-D2",
+          "learning_target_uids": [
+            "LT-G5S1U3-P25-pattern-id-like",
+            "LT-G5S1U3-P25-word-sandwich"
+          ]
+        }
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P25-D2",
+        "TB-G5S1U3-P25-D3"
+      ]
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S1U3-P24-D2",
+      "page_uid": "TB-G5S1U3-P24",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": ["TB-G5S1U3-P24-D2"],
+      "teaching_goal": "理解并会说点餐时询问吃什么、喝什么的核心问句。",
+      "teaching_summary": "围绕饥饿和口渴的情境，先理解 hungry 和 thirsty，再抓住吃什么、喝什么两个核心问句。",
+      "focus_vocabulary": ["hungry", "drink", "water", "thirsty", "sandwich"],
+      "core_patterns": [
+        "What would you like to eat?",
+        "What would you like to drink?",
+        "I'd like some water."
+      ],
+      "allowed_answer_scope": [
+        "I am hungry.",
+        "I'm hungry.",
+        "A sandwich, please.",
+        "I'd like some water."
+      ],
+      "entry_probe_questions": [
+        "假设你饿了，你可以说：I am hungry.",
+        "跟老师读一遍：What would you like to eat?"
+      ],
+      "repair_modes": ["repeat", "slow_read", "word_drill", "sentence_drill", "asr_clarify"],
+      "next_block_uids": ["TB-G5S1U3-P24-D3", "TB-G5S1U3-P24-D4", "TB-G5S1U3-P24-D1"],
+      "learning_target_uids": [
+        "LT-G5S1U3-P24-pattern-what-would-you-like-to-eat",
+        "LT-G5S1U3-P24-pattern-what-would-you-like-to-drink",
+        "LT-G5S1U3-P24-word-hungry"
+      ],
+      "branchable_topics": ["food", "drink", "restaurant", "hungry", "thirsty"],
+      "return_anchors": ["What would you like to eat?", "What would you like to drink?", "I'd like some water."]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P24-D3",
+      "page_uid": "TB-G5S1U3-P24",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": ["TB-G5S1U3-P24-D3"],
+      "teaching_goal": "在简短角色扮演中先回答想喝什么。",
+      "teaching_summary": "先用饮料小词库练习点餐对话，听懂 What would you like to drink?，再用 I'd like ... 回答。",
+      "focus_vocabulary": ["water", "tea"],
+      "core_patterns": [
+        "What would you like to drink?",
+        "I'd like ..."
+      ],
+      "allowed_answer_scope": [
+        "I'd like water.",
+        "I'd like some tea."
+      ],
+      "entry_probe_questions": [
+        "现在你口渴了，跟老师选一句说：I'd like water. 或 I'd like some tea."
+      ],
+      "repair_modes": ["choice_probe", "word_drill", "sentence_drill"],
+      "next_block_uids": ["TB-G5S1U3-P24-D4", "TB-G5S1U3-P24-D1"],
+      "learning_target_uids": [
+        "LT-G5S1U3-P24-answer-id-like"
+      ],
+      "branchable_topics": ["restaurant", "drink choice"],
+      "return_anchors": ["What would you like to drink?", "I'd like ..."]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P24-D4",
+      "page_uid": "TB-G5S1U3-P24",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": ["TB-G5S1U3-P24-D3"],
+      "teaching_goal": "在简短角色扮演中再回答想吃什么。",
+      "teaching_summary": "继续用食物小词库练习点餐对话，听懂 What would you like to eat?，再用 I'd like ... 回答。",
+      "focus_vocabulary": ["chicken and bread", "rice and vegetables"],
+      "core_patterns": [
+        "What would you like to eat?",
+        "I'd like ..."
+      ],
+      "allowed_answer_scope": [
+        "I'd like chicken and bread.",
+        "I'd like rice and vegetables."
+      ],
+      "entry_probe_questions": [
+        "Can you repeat: What would you like to eat?"
+      ],
+      "repair_modes": ["choice_probe", "word_drill", "sentence_drill"],
+      "next_block_uids": ["TB-G5S1U3-P24-D1"],
+      "learning_target_uids": [
+        "LT-G5S1U3-P24-dialogue-food-drink-roleplay"
+      ],
+      "branchable_topics": ["restaurant", "food choice"],
+      "return_anchors": ["What would you like to eat?", "I'd like ..."]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P24-D1",
+      "page_uid": "TB-G5S1U3-P24",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": ["TB-G5S1U3-P24-D1"],
+      "teaching_goal": "在短听力里抓住食物关键词。",
+      "teaching_summary": "听一小段录音，听出 Sarah 想吃什么，并从词库里抓到关键信息。",
+      "focus_vocabulary": ["bread", "noodles", "chicken"],
+      "core_patterns": [
+        "She would like some ... and ..."
+      ],
+      "allowed_answer_scope": [
+        "bread and noodles",
+        "She would like some bread and noodles."
+      ],
+      "entry_probe_questions": [
+        "先听一听，bread and noodles 这几个词你能分清吗？"
+      ],
+      "repair_modes": ["repeat", "choice_probe", "asr_clarify"],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U3-P24-listening-food-keywords"
+      ],
+      "branchable_topics": ["bread", "noodles", "listening"],
+      "return_anchors": ["She would like some ... and ..."]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P25-D1",
+      "page_uid": "TB-G5S1U3-P25",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": ["TB-G5S1U3-P25-D1"],
+      "teaching_goal": "认读本页核心食物和饮料词。",
+      "teaching_summary": "在餐厅场景里认识 tea、ice cream、sandwich、hamburger 和 salad。",
+      "focus_vocabulary": ["tea", "ice cream", "sandwich", "hamburger", "salad"],
+      "core_patterns": [],
+      "allowed_answer_scope": [
+        "sandwich",
+        "hamburger",
+        "salad",
+        "ice cream",
+        "tea"
+      ],
+      "entry_probe_questions": [
+        "先看看这个词你认不认识：salad",
+        "再试着读一读：sandwich"
+      ],
+      "repair_modes": ["repeat", "word_drill", "choice_probe", "asr_clarify"],
+      "next_block_uids": ["TB-G5S1U3-P25-D2", "TB-G5S1U3-P25-D3"],
+      "learning_target_uids": [
+        "LT-G5S1U3-P25-word-sandwich",
+        "LT-G5S1U3-P25-word-salad",
+        "LT-G5S1U3-P25-word-hamburger",
+        "LT-G5S1U3-P25-word-tea"
+      ],
+      "branchable_topics": [],
+      "return_anchors": ["I'd like ...", "What would you like to eat?"]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P25-D2",
+      "page_uid": "TB-G5S1U3-P25",
+      "page_type": "vocabulary",
+      "block_type": "sentence_pattern_practice",
+      "source_refs": ["TB-G5S1U3-P25-D2"],
+      "teaching_goal": "会用 I'd like ... 礼貌地点一种食物。",
+      "teaching_summary": "跟着示范对话，练会说 I'd like a sandwich, please.",
+      "focus_vocabulary": ["I'd like", "sandwich", "please"],
+      "core_patterns": [
+        "What would you like to eat?",
+        "I'd like a sandwich, please."
+      ],
+      "allowed_answer_scope": [
+        "I'd like a sandwich, please.",
+        "I'd like a hamburger, please.",
+        "I'd like some tea, please."
+      ],
+      "entry_probe_questions": [
+        "先试着说一遍：I'd like a sandwich, please."
+      ],
+      "repair_modes": ["slow_read", "word_drill", "sentence_drill"],
+      "next_block_uids": ["TB-G5S1U3-P25-D3"],
+      "learning_target_uids": [
+        "LT-G5S1U3-P25-pattern-id-like"
+      ],
+      "branchable_topics": ["polite order", "restaurant"],
+      "return_anchors": ["I'd like a sandwich, please.", "I'd like ..."]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P25-D3",
+      "page_uid": "TB-G5S1U3-P25",
+      "page_type": "vocabulary",
+      "block_type": "roleplay_task",
+      "source_refs": ["TB-G5S1U3-P25-D3"],
+      "teaching_goal": "在 waiter/customer 角色扮演里说出一种食物和一种饮料。",
+      "teaching_summary": "做一个简短餐厅角色扮演，用 I'd like ... 说出食物加饮料的点单。",
+      "focus_vocabulary": ["waiter", "customer", "tea", "sandwich", "hamburger"],
+      "core_patterns": [
+        "What would you like to eat?",
+        "What would you like to drink?",
+        "I'd like ..."
+      ],
+      "allowed_answer_scope": [
+        "I'd like a sandwich and some tea.",
+        "I'd like a hamburger and some tea."
+      ],
+      "entry_probe_questions": [
+        "如果你是顾客，你会怎么点餐？"
+      ],
+      "repair_modes": ["choice_probe", "word_drill", "sentence_drill"],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S1U3-P25-roleplay-ordering"
+      ],
+      "branchable_topics": ["restaurant roleplay", "food", "drink"],
+      "return_anchors": ["What would you like to eat?", "What would you like to drink?", "I'd like ..."]
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-G5S1U3-word-hungry",
+      "atom_type": "word",
+      "text": "hungry",
+      "gloss": "feeling like you need food",
+      "linked_blocks": ["TB-G5S1U3-P24-D2"]
+    },
+    {
+      "atom_uid": "KA-G5S1U3-word-sandwich",
+      "atom_type": "word",
+      "text": "sandwich",
+      "gloss": "a sandwich item",
+      "linked_blocks": ["TB-G5S1U3-P24-D2", "TB-G5S1U3-P25-D1", "TB-G5S1U3-P25-D2"]
+    },
+    {
+      "atom_uid": "KA-G5S1U3-word-salad",
+      "atom_type": "word",
+      "text": "salad",
+      "gloss": "a salad item",
+      "linked_blocks": ["TB-G5S1U3-P25-D1"]
+    },
+    {
+      "atom_uid": "KA-G5S1U3-word-hamburger",
+      "atom_type": "word",
+      "text": "hamburger",
+      "gloss": "a hamburger item",
+      "linked_blocks": ["TB-G5S1U3-P25-D1", "TB-G5S1U3-P25-D3"]
+    },
+    {
+      "atom_uid": "KA-G5S1U3-word-tea",
+      "atom_type": "word",
+      "text": "tea",
+      "gloss": "a drink item",
+      "linked_blocks": ["TB-G5S1U3-P24-D3", "TB-G5S1U3-P25-D1", "TB-G5S1U3-P25-D3"]
+    },
+    {
+      "atom_uid": "KA-G5S1U3-pattern-order-eat",
+      "atom_type": "sentence_pattern",
+      "text": "What would you like to eat?",
+      "linked_blocks": ["TB-G5S1U3-P24-D2", "TB-G5S1U3-P24-D4", "TB-G5S1U3-P25-D2", "TB-G5S1U3-P25-D3"]
+    },
+    {
+      "atom_uid": "KA-G5S1U3-pattern-order-drink",
+      "atom_type": "sentence_pattern",
+      "text": "What would you like to drink?",
+      "linked_blocks": ["TB-G5S1U3-P24-D2", "TB-G5S1U3-P24-D3", "TB-G5S1U3-P25-D3"]
+    },
+    {
+      "atom_uid": "KA-G5S1U3-pattern-id-like",
+      "atom_type": "sentence_pattern",
+      "text": "I'd like ... , please.",
+      "linked_blocks": ["TB-G5S1U3-P24-D2", "TB-G5S1U3-P24-D3", "TB-G5S1U3-P24-D4", "TB-G5S1U3-P25-D2", "TB-G5S1U3-P25-D3"]
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S1U3-P24-pattern-what-would-you-like-to-eat",
+      "category": "sentence_pattern",
+      "mastery_signal_examples": {
+        "mastered": "Learner can ask the full question independently.",
+        "shaky": "Learner needs prompting or drops part of the sentence.",
+        "not_mastered": "Learner cannot form the question even after a model."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P24-pattern-what-would-you-like-to-drink",
+      "category": "sentence_pattern",
+      "mastery_signal_examples": {
+        "mastered": "Learner can ask and understand the drink question.",
+        "shaky": "Learner recognizes the sentence but cannot say it smoothly.",
+        "not_mastered": "Learner confuses drink with eat or cannot repeat the line."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P24-word-hungry",
+      "category": "word",
+      "mastery_signal_examples": {
+        "mastered": "Learner understands the meaning and says the word clearly.",
+        "shaky": "Learner understands the meaning but pronunciation is unstable.",
+        "not_mastered": "Learner does not know the meaning or cannot repeat the word."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P24-answer-id-like",
+      "category": "sentence_pattern",
+      "mastery_signal_examples": {
+        "mastered": "Learner answers with I'd like ... independently.",
+        "shaky": "Learner answers with a noun only or needs a sentence frame.",
+        "not_mastered": "Learner cannot answer the preference question."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P24-dialogue-food-drink-roleplay",
+      "category": "dialogue_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes one short food-drink exchange.",
+        "shaky": "Learner can complete half the exchange with support.",
+        "not_mastered": "Learner cannot sustain the exchange."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P24-listening-food-keywords",
+      "category": "listening_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner catches both target words from the word bank.",
+        "shaky": "Learner catches one target word only.",
+        "not_mastered": "Learner cannot identify the food words."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P25-word-sandwich",
+      "category": "word",
+      "mastery_signal_examples": {
+        "mastered": "Learner can read and use sandwich in a short order sentence.",
+        "shaky": "Learner knows the meaning but misreads the word.",
+        "not_mastered": "Learner cannot recognize or pronounce the word."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P25-word-salad",
+      "category": "word",
+      "mastery_signal_examples": {
+        "mastered": "Learner can identify and say salad correctly.",
+        "shaky": "Learner recognizes the picture but pronunciation is unstable.",
+        "not_mastered": "Learner does not know the word."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P25-word-hamburger",
+      "category": "word",
+      "mastery_signal_examples": {
+        "mastered": "Learner says hamburger clearly in context.",
+        "shaky": "Learner says part of the word only.",
+        "not_mastered": "Learner cannot identify the item."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P25-word-tea",
+      "category": "word",
+      "mastery_signal_examples": {
+        "mastered": "Learner knows tea and can use it as a drink answer.",
+        "shaky": "Learner knows the meaning but not the full answer pattern.",
+        "not_mastered": "Learner cannot connect the word to the drink concept."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P25-pattern-id-like",
+      "category": "sentence_pattern",
+      "mastery_signal_examples": {
+        "mastered": "Learner uses I'd like ... politely and independently.",
+        "shaky": "Learner drops please or needs a prompt after I'd like.",
+        "not_mastered": "Learner cannot build the sentence."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P25-roleplay-ordering",
+      "category": "dialogue_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes a basic waiter-customer exchange.",
+        "shaky": "Learner completes one turn but not the whole exchange.",
+        "not_mastered": "Learner cannot role-play without full imitation."
+      }
+    }
+  ]
+}

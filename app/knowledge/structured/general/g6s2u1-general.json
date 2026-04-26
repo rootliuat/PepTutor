@@ -1,0 +1,2511 @@
+{
+  "pilot_id": "g6s2u1-general-v1",
+  "scope": {
+    "grade": "G6",
+    "semester": "S2",
+    "unit": "U1",
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/04.六年级下册语料.json",
+    "app/knowledge/raw/08.六年级下册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 22,
+    "source_kind": "textbook_source_json",
+    "source_format": "json"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 1",
+      "word": "younger",
+      "phonetic": "/'jʌŋɡə(r)/",
+      "chinese": "（young 的比较级）更年轻的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U1-P5-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "older",
+      "phonetic": "/'əʊldə(r)/",
+      "chinese": "（old 的比较级）更年长的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U1-P4-D4",
+        "TB-G6S2U1-P5-D1",
+        "TB-G6S2U1-P8-D2"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "taller",
+      "phonetic": "/'tɔːlə(r)/",
+      "chinese": "（tall 的比较级）更高的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U1-P2-D1",
+        "TB-G6S2U1-P4-D2",
+        "TB-G6S2U1-P5-D1",
+        "TB-G6S2U1-P6-D2",
+        "TB-G6S2U1-P8-D2",
+        "TB-G6S2U1-P10-D2"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "shorter",
+      "phonetic": "/'ʃɔːtə(r)/",
+      "chinese": "（short 的比较级）更矮的；更短的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U1-P5-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "longer",
+      "phonetic": "/'lɒŋɡə(r)/",
+      "chinese": "（long 的比较级）更长的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U1-P5-D1",
+        "TB-G6S2U1-P8-D2"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "thinner",
+      "phonetic": "/'θɪnə(r)/",
+      "chinese": "（thin 的比较级）更瘦的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U1-P7-D1",
+        "TB-G6S2U1-P10-D2"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "heavier",
+      "phonetic": "/'heviə(r)/",
+      "chinese": "（heavy /'hevi/ 的比较级）更重的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U1-P6-D2",
+        "TB-G6S2U1-P7-D1",
+        "TB-G6S2U1-P10-D2"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "bigger",
+      "phonetic": "/'bɪɡə(r)/",
+      "chinese": "（big 的比较级）更大的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U1-P2-D1",
+        "TB-G6S2U1-P6-D2",
+        "TB-G6S2U1-P7-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "smaller",
+      "phonetic": "/'smɔːlə(r)/",
+      "chinese": "（small 的比较级）更小的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U1-P2-D1",
+        "TB-G6S2U1-P7-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "stronger",
+      "phonetic": "/'strɒŋɡə(r)/",
+      "chinese": "（strong 的比较级）更强壮的",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U1-P7-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "dinosaur",
+      "phonetic": "/'daɪnəsɔː(r)/",
+      "chinese": "恐龙",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U1-P2-D1",
+        "TB-G6S2U1-P4-D1"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "hall",
+      "phonetic": "/hɔːl/",
+      "chinese": "大厅",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U1-P4-D2"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "metre",
+      "phonetic": "/'miːtə(r)/",
+      "chinese": "米（美式英语：meter /'miːtə(r)/）",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U1-P4-D2"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "than",
+      "phonetic": "/ðæn; ðən/",
+      "chinese": "比",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 1",
+      "word": "both",
+      "phonetic": "/bəʊθ/",
+      "chinese": "两个都",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U1-P4-D2"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "kilogram",
+      "phonetic": "/'kɪləɡræm/",
+      "chinese": "千克；公斤",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U1-P6-D2"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "countryside",
+      "phonetic": "/'kʌntrisaɪd/",
+      "chinese": "乡村",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 1",
+      "word": "lower",
+      "phonetic": "/'ləʊə(r)/",
+      "chinese": "（low /ləʊ/ 的比较级）更低",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U1-P8-D2"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "shadow",
+      "phonetic": "/'ʃædəʊ/",
+      "chinese": "阴影；影子",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 1",
+      "word": "smarter",
+      "phonetic": "/'smɑːtə(r)/",
+      "chinese": "（smart /smɑːt/ 的比较级）更聪明的",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U1-P8-D2"
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "word": "become",
+      "phonetic": "/bɪ'kʌm/",
+      "chinese": "开始变得；变成",
+      "emphasized": false,
+      "linked_block_uids": []
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G6S2U1-P2-D1-goal",
+      "block_uid": "TB-G6S2U1-P2-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P3-D1-goal",
+      "block_uid": "TB-G6S2U1-P3-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P4-D1-goal",
+      "block_uid": "TB-G6S2U1-P4-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P4-D2-goal",
+      "block_uid": "TB-G6S2U1-P4-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P4-D3-goal",
+      "block_uid": "TB-G6S2U1-P4-D3",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P4-D4-goal",
+      "block_uid": "TB-G6S2U1-P4-D4",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P5-D1-goal",
+      "block_uid": "TB-G6S2U1-P5-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P5-D2-goal",
+      "block_uid": "TB-G6S2U1-P5-D2",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P6-D1-goal",
+      "block_uid": "TB-G6S2U1-P6-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P6-D2-goal",
+      "block_uid": "TB-G6S2U1-P6-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P6-D3-goal",
+      "block_uid": "TB-G6S2U1-P6-D3",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P7-D1-goal",
+      "block_uid": "TB-G6S2U1-P7-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P7-D2-goal",
+      "block_uid": "TB-G6S2U1-P7-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P8-D1-goal",
+      "block_uid": "TB-G6S2U1-P8-D1",
+      "category": "practice_multiple_choice",
+      "text": "Work on the practice multiple choice activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P8-D2-goal",
+      "block_uid": "TB-G6S2U1-P8-D2",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P8-D3-goal",
+      "block_uid": "TB-G6S2U1-P8-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P9-D1-goal",
+      "block_uid": "TB-G6S2U1-P9-D1",
+      "category": "practice_multiple_choice",
+      "text": "Work on the practice multiple choice activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P9-D2-goal",
+      "block_uid": "TB-G6S2U1-P9-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P9-D3-goal",
+      "block_uid": "TB-G6S2U1-P9-D3",
+      "category": "extension_task",
+      "text": "Transfer the page language into a new speaking task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P10-D1-goal",
+      "block_uid": "TB-G6S2U1-P10-D1",
+      "category": "assessment_quiz",
+      "text": "Check whether the learner can complete the unit review task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P10-D2-goal",
+      "block_uid": "TB-G6S2U1-P10-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U1-P11-D1-goal",
+      "block_uid": "TB-G6S2U1-P11-D1",
+      "category": "story_time",
+      "text": "Read and retell the key story events.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-become",
+      "atom_type": "word",
+      "text": "become",
+      "gloss": "开始变得；变成",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-bigger",
+      "atom_type": "word",
+      "text": "bigger",
+      "gloss": "（big 的比较级）更大的",
+      "linked_blocks": [
+        "TB-G6S2U1-P2-D1",
+        "TB-G6S2U1-P6-D2",
+        "TB-G6S2U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-both",
+      "atom_type": "word",
+      "text": "both",
+      "gloss": "两个都",
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-brighter",
+      "atom_type": "word",
+      "text": "brighter",
+      "gloss": "更明亮的",
+      "linked_blocks": [
+        "TB-G6S2U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-clearer",
+      "atom_type": "word",
+      "text": "clearer",
+      "gloss": "更晴朗的；更清晰的",
+      "linked_blocks": [
+        "TB-G6S2U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-countryside",
+      "atom_type": "word",
+      "text": "countryside",
+      "gloss": "乡村",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-dinosaur",
+      "atom_type": "word",
+      "text": "dinosaur",
+      "gloss": "恐龙",
+      "linked_blocks": [
+        "TB-G6S2U1-P2-D1",
+        "TB-G6S2U1-P4-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hall",
+      "atom_type": "word",
+      "text": "hall",
+      "gloss": "大厅",
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-heavier",
+      "atom_type": "word",
+      "text": "heavier",
+      "gloss": "（heavy /'hevi/ 的比较级）更重的",
+      "linked_blocks": [
+        "TB-G6S2U1-P6-D2",
+        "TB-G6S2U1-P7-D1",
+        "TB-G6S2U1-P10-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-heavy",
+      "atom_type": "word",
+      "text": "heavy",
+      "gloss": "重的",
+      "linked_blocks": [
+        "TB-G6S2U1-P3-D1",
+        "TB-G6S2U1-P10-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-kilogram",
+      "atom_type": "word",
+      "text": "kilogram",
+      "gloss": "千克；公斤",
+      "linked_blocks": [
+        "TB-G6S2U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-longer",
+      "atom_type": "word",
+      "text": "longer",
+      "gloss": "（long 的比较级）更长的",
+      "linked_blocks": [
+        "TB-G6S2U1-P5-D1",
+        "TB-G6S2U1-P8-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-lower",
+      "atom_type": "word",
+      "text": "lower",
+      "gloss": "（low /ləʊ/ 的比较级）更低",
+      "linked_blocks": [
+        "TB-G6S2U1-P8-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-meat",
+      "atom_type": "word",
+      "text": "meat",
+      "gloss": "肉",
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-metre",
+      "atom_type": "word",
+      "text": "metre",
+      "gloss": "米（美式英语：meter /'miːtə(r)/）",
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-older",
+      "atom_type": "word",
+      "text": "older",
+      "gloss": "（old 的比较级）更年长的",
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D4",
+        "TB-G6S2U1-P5-D1",
+        "TB-G6S2U1-P8-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-shadow",
+      "atom_type": "word",
+      "text": "shadow",
+      "gloss": "阴影；影子",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-shorter",
+      "atom_type": "word",
+      "text": "shorter",
+      "gloss": "（short 的比较级）更矮的；更短的",
+      "linked_blocks": [
+        "TB-G6S2U1-P5-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-size",
+      "atom_type": "word",
+      "text": "size",
+      "gloss": "尺码",
+      "linked_blocks": [
+        "TB-G6S2U1-P3-D1",
+        "TB-G6S2U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-smaller",
+      "atom_type": "word",
+      "text": "smaller",
+      "gloss": "（small 的比较级）更小的",
+      "linked_blocks": [
+        "TB-G6S2U1-P2-D1",
+        "TB-G6S2U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-smarter",
+      "atom_type": "word",
+      "text": "smarter",
+      "gloss": "（smart /smɑːt/ 的比较级）更聪明的",
+      "linked_blocks": [
+        "TB-G6S2U1-P8-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-stronger",
+      "atom_type": "word",
+      "text": "stronger",
+      "gloss": "（strong 的比较级）更强壮的",
+      "linked_blocks": [
+        "TB-G6S2U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-tall",
+      "atom_type": "word",
+      "text": "tall",
+      "gloss": "高的",
+      "linked_blocks": [
+        "TB-G6S2U1-P2-D1",
+        "TB-G6S2U1-P10-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-taller",
+      "atom_type": "word",
+      "text": "taller",
+      "gloss": "（tall 的比较级）更高的",
+      "linked_blocks": [
+        "TB-G6S2U1-P2-D1",
+        "TB-G6S2U1-P4-D2",
+        "TB-G6S2U1-P5-D1",
+        "TB-G6S2U1-P6-D2",
+        "TB-G6S2U1-P8-D2",
+        "TB-G6S2U1-P10-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-tallest",
+      "atom_type": "word",
+      "text": "tallest",
+      "gloss": "最高的",
+      "linked_blocks": [
+        "TB-G6S2U1-P2-D1",
+        "TB-G6S2U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-than",
+      "atom_type": "word",
+      "text": "than",
+      "gloss": "比",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-thin",
+      "atom_type": "word",
+      "text": "thin",
+      "gloss": "瘦的",
+      "linked_blocks": [
+        "TB-G6S2U1-P10-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-thinner",
+      "atom_type": "word",
+      "text": "thinner",
+      "gloss": "（thin 的比较级）更瘦的",
+      "linked_blocks": [
+        "TB-G6S2U1-P7-D1",
+        "TB-G6S2U1-P10-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-together",
+      "atom_type": "word",
+      "text": "together",
+      "gloss": "一起",
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-ton",
+      "atom_type": "word",
+      "text": "ton",
+      "gloss": "吨",
+      "linked_blocks": [
+        "TB-G6S2U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-vegetables",
+      "atom_type": "word",
+      "text": "vegetables",
+      "gloss": "蔬菜",
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-wear",
+      "atom_type": "word",
+      "text": "wear",
+      "gloss": "穿",
+      "linked_blocks": [
+        "TB-G6S2U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-younger",
+      "atom_type": "word",
+      "text": "younger",
+      "gloss": "（young 的比较级）更年轻的",
+      "linked_blocks": [
+        "TB-G6S2U1-P5-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-answer-the-questions",
+      "atom_type": "sentence_pattern",
+      "text": "Answer the questions.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-but-i-think-you-are-heavier-how-heavy-are-you",
+      "atom_type": "sentence_pattern",
+      "text": "But I think you are heavier. How heavy are you?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-you-answer-little-duck-s-question-robin",
+      "atom_type": "sentence_pattern",
+      "text": "Can you answer Little Duck's question, Robin?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P8-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-heavy-are-you-jim",
+      "atom_type": "sentence_pattern",
+      "text": "How heavy are you, Jim?",
+      "gloss": "吉姆，你有多重？",
+      "linked_blocks": [
+        "TB-G6S2U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-heavy-are-you",
+      "atom_type": "sentence_pattern",
+      "text": "How heavy are you?",
+      "gloss": "你有多重？",
+      "linked_blocks": [
+        "TB-G6S2U1-P6-D2",
+        "TB-G6S2U1-P6-D3",
+        "TB-G6S2U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-heavy-is-it",
+      "atom_type": "sentence_pattern",
+      "text": "How heavy is it?",
+      "gloss": "它有多重？",
+      "linked_blocks": [
+        "TB-G6S2U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-old-are-you",
+      "atom_type": "sentence_pattern",
+      "text": "How old are you?",
+      "gloss": "你多大了？",
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D4",
+        "TB-G6S2U1-P5-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-tall-are-you",
+      "atom_type": "sentence_pattern",
+      "text": "How tall are you?",
+      "gloss": "你有多高？",
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D2",
+        "TB-G6S2U1-P4-D4",
+        "TB-G6S2U1-P5-D1",
+        "TB-G6S2U1-P5-D2",
+        "TB-G6S2U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-tall-is-it",
+      "atom_type": "sentence_pattern",
+      "text": "How tall is it?",
+      "gloss": "它有多高？",
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-d-like-to-have-a-try",
+      "atom_type": "sentence_pattern",
+      "text": "I'd like to have a try.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-1-6-metres-tall",
+      "atom_type": "sentence_pattern",
+      "text": "I'm 1.6 metres tall.",
+      "gloss": "我1.6米高。",
+      "linked_blocks": [
+        "TB-G6S2U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-1-6-metres-tall-i-m-taller-than-this-dinosaur",
+      "atom_type": "sentence_pattern",
+      "text": "I'm 1.6 metres tall. I'm taller than this dinosaur.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-1-61-metres",
+      "atom_type": "sentence_pattern",
+      "text": "I'm 1.61 metres.",
+      "gloss": "我1.61米。",
+      "linked_blocks": [
+        "TB-G6S2U1-P5-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-1-64-metres",
+      "atom_type": "sentence_pattern",
+      "text": "I'm 1.64 metres.",
+      "gloss": "我1.64米。",
+      "linked_blocks": [
+        "TB-G6S2U1-P5-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-1-65-metres",
+      "atom_type": "sentence_pattern",
+      "text": "I'm 1.65 metres.",
+      "gloss": "我身高1.65米。",
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-12-years-old",
+      "atom_type": "sentence_pattern",
+      "text": "I'm 12 years old.",
+      "gloss": "我12岁。",
+      "linked_blocks": [
+        "TB-G6S2U1-P5-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-21-metres-tall-i-m-the-tallest",
+      "atom_type": "sentence_pattern",
+      "text": "I'm 21 metres tall. I'm the tallest!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-48-kilograms",
+      "atom_type": "sentence_pattern",
+      "text": "I'm 48 kilograms.",
+      "gloss": "我48公斤。",
+      "linked_blocks": [
+        "TB-G6S2U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-52-kilograms",
+      "atom_type": "sentence_pattern",
+      "text": "I'm 52 kilograms.",
+      "gloss": "我52公斤。",
+      "linked_blocks": [
+        "TB-G6S2U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-m-taller-than-this-dinosaur",
+      "atom_type": "sentence_pattern",
+      "text": "I'm taller than this dinosaur.",
+      "gloss": "我比这只恐龙高。",
+      "linked_blocks": [
+        "TB-G6S2U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-is-getting-lower-and-lower-but-his-shadow-is-getting-longer-and-longer",
+      "atom_type": "sentence_pattern",
+      "text": "It is getting lower and lower, but his shadow is getting longer and longer.",
+      "gloss": "它变得越来越低，但是他的影子变得越来越长。",
+      "linked_blocks": [
+        "TB-G6S2U1-P8-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-five-tons",
+      "atom_type": "sentence_pattern",
+      "text": "It's five tons.",
+      "gloss": "它有五吨重。",
+      "linked_blocks": [
+        "TB-G6S2U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-so-tall",
+      "atom_type": "sentence_pattern",
+      "text": "It's so tall!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-s-taller-than-both-of-us-together",
+      "atom_type": "sentence_pattern",
+      "text": "It's taller than both of us together.",
+      "gloss": "它比我们俩加起来还要高。",
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-check",
+      "atom_type": "sentence_pattern",
+      "text": "Let's check",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P10-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P6-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-mike-s-fish-is-than",
+      "atom_type": "sentence_pattern",
+      "text": "Mike's fish is ________ than ________.",
+      "gloss": "迈克的鱼比________。",
+      "linked_blocks": [
+        "TB-G6S2U1-P7-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-my-shoes-are-size-35",
+      "atom_type": "sentence_pattern",
+      "text": "My shoes are size 35.",
+      "gloss": "我的鞋是35码的。",
+      "linked_blocks": [
+        "TB-G6S2U1-P3-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-oh-i-m-taller",
+      "atom_type": "sentence_pattern",
+      "text": "Oh! I'm taller.",
+      "gloss": "哦！我更高。",
+      "linked_blocks": [
+        "TB-G6S2U1-P5-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-oh-yes-how-tall-are-you",
+      "atom_type": "sentence_pattern",
+      "text": "Oh, yes. How tall are you?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Read and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P9-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-read-the-story-again-and-finish-the-dialogue",
+      "atom_type": "sentence_pattern",
+      "text": "Read the story again and finish the dialogue.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P9-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-some-dinosaurs-are-bigger-than-houses",
+      "atom_type": "sentence_pattern",
+      "text": "Some dinosaurs are bigger than houses.",
+      "gloss": "有些恐龙比房子还大。",
+      "linked_blocks": [
+        "TB-G6S2U1-P2-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-children-are-in-the-museum-listen-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "The children are in the museum. Listen and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-the-sky-is-clearer-and-the-sun-is-brighter",
+      "atom_type": "sentence_pattern",
+      "text": "The sky is clearer and the sun is brighter.",
+      "gloss": "天空更晴朗了，阳光更明媚了。",
+      "linked_blocks": [
+        "TB-G6S2U1-P8-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-they-need-a-new-goalkeeper",
+      "atom_type": "sentence_pattern",
+      "text": "They need a new goalkeeper.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-think-and-discuss",
+      "atom_type": "sentence_pattern",
+      "text": "Think and discuss.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P9-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-we-want-a-goalkeeper",
+      "atom_type": "sentence_pattern",
+      "text": "We want a goalkeeper !!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-size-are-your-shoes-mike",
+      "atom_type": "sentence_pattern",
+      "text": "What size are your shoes, Mike?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-size-are-your-shoes",
+      "atom_type": "sentence_pattern",
+      "text": "What size are your shoes?",
+      "gloss": "你的鞋是多大码的？",
+      "linked_blocks": [
+        "TB-G6S2U1-P3-D1",
+        "TB-G6S2U1-P6-D2",
+        "TB-G6S2U1-P6-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-s-happening-here",
+      "atom_type": "sentence_pattern",
+      "text": "What's happening here?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P11-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-who-is-heavier-than-you",
+      "atom_type": "sentence_pattern",
+      "text": "Who is heavier than you?",
+      "gloss": "谁比你重？",
+      "linked_blocks": [
+        "TB-G6S2U1-P6-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-who-is-older-than-you",
+      "atom_type": "sentence_pattern",
+      "text": "Who is older than you?",
+      "gloss": "谁比你大？",
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-who-is-taller-than-you",
+      "atom_type": "sentence_pattern",
+      "text": "Who is taller than you?",
+      "gloss": "谁比你高？",
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D4"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-whose-shoes-are-bigger",
+      "atom_type": "sentence_pattern",
+      "text": "Whose shoes are bigger?",
+      "gloss": "谁的鞋更大？",
+      "linked_blocks": [
+        "TB-G6S2U1-P6-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wu-binbin-is-taller-than-john-but-zhang-peng-is-taller-than-wu-binbin",
+      "atom_type": "sentence_pattern",
+      "text": "Wu Binbin is taller than John, but Zhang Peng is taller than Wu Binbin.",
+      "gloss": "吴彬彬比约翰高，但是张鹏比吴彬彬高。",
+      "linked_blocks": [
+        "TB-G6S2U1-P5-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-it-is-how-tall-is-it",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, it is. How tall is it?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U1-P4-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-are-older-and-smarter-than-me",
+      "atom_type": "sentence_pattern",
+      "text": "You are older and smarter than me.",
+      "gloss": "你比我更老、更聪明。",
+      "linked_blocks": [
+        "TB-G6S2U1-P8-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-re-heavier-than-me",
+      "atom_type": "sentence_pattern",
+      "text": "You're heavier than me.",
+      "gloss": "你比我重。",
+      "linked_blocks": [
+        "TB-G6S2U1-P7-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-re-older-than-me-too",
+      "atom_type": "sentence_pattern",
+      "text": "You're older than me, too.",
+      "gloss": "你也比我大。",
+      "linked_blocks": [
+        "TB-G6S2U1-P5-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-your-feet-are-bigger-than-mine",
+      "atom_type": "sentence_pattern",
+      "text": "Your feet are bigger than mine.",
+      "gloss": "你的脚比我的大。",
+      "linked_blocks": [
+        "TB-G6S2U1-P6-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-heavy-heavier",
+      "atom_type": "sentence_pattern",
+      "text": "heavy — heavier",
+      "gloss": "重 — 更重",
+      "linked_blocks": [
+        "TB-G6S2U1-P10-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-tall-taller",
+      "atom_type": "sentence_pattern",
+      "text": "tall — taller",
+      "gloss": "高 — 更高",
+      "linked_blocks": [
+        "TB-G6S2U1-P10-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-thin-thinner",
+      "atom_type": "sentence_pattern",
+      "text": "thin — thinner",
+      "gloss": "瘦 — 更瘦",
+      "linked_blocks": [
+        "TB-G6S2U1-P10-D2"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G6S2U1-P2",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: How tall are you?. Children and animals are in a dinosaur park, looking at dinosaurs and comparing their heights and sizes.",
+      "entry_probe_questions": [
+        "Do you know the word tall?",
+        "Can you say: I'm 1.6 metres tall."
+      ],
+      "priority_blocks": [
+        "TB-G6S2U1-P2-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U1-P3",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: How tall are you?. Students are visiting a dinosaur museum. They are talking about the weight of a dinosaur and shoe sizes at a souvenir shop.",
+      "entry_probe_questions": [
+        "Do you know the word heavy?",
+        "Can you say: How heavy is it?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U1-P3-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U1-P4",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: How tall are you?. Zhang Peng and Mike are looking at dinosaurs in the museum.",
+      "entry_probe_questions": [
+        "Do you know the word tallest?",
+        "Can you say: How tall is it?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U1-P4-D2",
+        "TB-G6S2U1-P4-D1",
+        "TB-G6S2U1-P4-D3",
+        "TB-G6S2U1-P4-D4"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U1-P5",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: How tall are you?. Zhang Peng and John are talking about their heights. Other students are comparing their ages, heights, and the lengths of their dresses and hair.",
+      "entry_probe_questions": [
+        "Do you know the word younger?",
+        "Can you say: How tall are you?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U1-P5-D1",
+        "TB-G6S2U1-P5-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U1-P6",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: How tall are you?. Mike and Wu Binbin are at a shoe store, trying on shoes and comparing their sizes and weights.",
+      "entry_probe_questions": [
+        "Do you know the word size?",
+        "Can you say: What size are your shoes?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U1-P6-D2",
+        "TB-G6S2U1-P6-D1",
+        "TB-G6S2U1-P6-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U1-P7",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Comparatives. Children are having a picnic in the park. John and Jim are talking about their weight. Other children are comparing their bags and shoes.",
+      "entry_probe_questions": [
+        "Do you know the word thinner?",
+        "Can you say: How heavy are you, Jim?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U1-P7-D1",
+        "TB-G6S2U1-P7-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U1-P8",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: How can I get there?. Wu Binbin asks Robin a question about the story.",
+      "entry_probe_questions": [
+        "Can you say: Can you answer Little Duck's question, Robin?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U1-P8-D3",
+        "TB-G6S2U1-P8-D2",
+        "TB-G6S2U1-P8-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U1-P9",
+      "page_type": "practice",
+      "page_intro_cn": "Discussion questions about the story and changes in friends, with an illustration of a little duck.",
+      "entry_probe_questions": [
+        "Can you say: Think and discuss."
+      ],
+      "priority_blocks": [
+        "TB-G6S2U1-P9-D3",
+        "TB-G6S2U1-P9-D2",
+        "TB-G6S2U1-P9-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U1-P10",
+      "page_type": "assessment",
+      "page_intro_cn": "Theme: How tall are you?. Review and practice of comparative adjectives.",
+      "entry_probe_questions": [
+        "Do you know the word tall?",
+        "Can you say: tall — taller"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U1-P10-D2",
+        "TB-G6S2U1-P10-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U1-P11",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: How tall are you?. The animals are holding an audition to find a new goalkeeper for their football team.",
+      "entry_probe_questions": [
+        "Can you say: How tall are you?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U1-P11-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G6S2U1-P2-D1",
+      "page_uid": "TB-G6S2U1-P2",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S2U1-P2-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Children and animals are in a dinosaur park, looking at dinosaurs and comparing their heights and sizes. Key patterns: I'm 1.6 metres tall.; I'm taller than this dinosaur.",
+      "focus_vocabulary": [
+        "tall",
+        "tallest",
+        "taller",
+        "dinosaur",
+        "bigger",
+        "smaller"
+      ],
+      "core_patterns": [
+        "I'm 1.6 metres tall.",
+        "I'm taller than this dinosaur.",
+        "Some dinosaurs are bigger than houses.",
+        "I'm 21 metres tall. I'm the tallest!",
+        "I'm 1.6 metres tall. I'm taller than this dinosaur.",
+        "It's so tall!"
+      ],
+      "allowed_answer_scope": [
+        "I'm 21 metres tall. I'm the tallest!",
+        "I'm 1.6 metres tall. I'm taller than this dinosaur.",
+        "It's so tall!",
+        "Some dinosaurs are bigger than houses. Some are smaller than our schoolbags."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word tall?",
+        "Can you say: I'm 1.6 metres tall."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U1-P2-D1-goal"
+      ],
+      "branchable_topics": [
+        "tall",
+        "tallest",
+        "taller",
+        "dinosaur",
+        "bigger",
+        "smaller",
+        "How tall are you?",
+        "Unit One"
+      ],
+      "return_anchors": [
+        "I'm 1.6 metres tall.",
+        "I'm taller than this dinosaur.",
+        "Some dinosaurs are bigger than houses."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P3-D1",
+      "page_uid": "TB-G6S2U1-P3",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S2U1-P3-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Students are visiting a dinosaur museum. They are talking about the weight of a dinosaur and shoe sizes at a souvenir shop. Key patterns: How heavy is it?; It's five tons.",
+      "focus_vocabulary": [
+        "heavy",
+        "ton",
+        "size"
+      ],
+      "core_patterns": [
+        "How heavy is it?",
+        "It's five tons.",
+        "What size are your shoes?",
+        "My shoes are size 35."
+      ],
+      "allowed_answer_scope": [
+        "It's five tons.",
+        "My shoes are size 35."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word heavy?",
+        "Can you say: How heavy is it?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U1-P3-D1-goal"
+      ],
+      "branchable_topics": [
+        "heavy",
+        "ton",
+        "size",
+        "How tall are you?"
+      ],
+      "return_anchors": [
+        "How heavy is it?",
+        "It's five tons.",
+        "What size are your shoes?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P4-D1",
+      "page_uid": "TB-G6S2U1-P4",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S2U1-P4-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "The children are in the museum. Listen and circle. Key patterns: The children are in the museum. Listen and circle.",
+      "focus_vocabulary": [
+        "dinosaur",
+        "vegetables",
+        "meat"
+      ],
+      "core_patterns": [
+        "The children are in the museum. Listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "dinosaur",
+        "vegetables",
+        "meat"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word dinosaur?",
+        "Can you say: The children are in the museum. Listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U1-P4-D3",
+        "TB-G6S2U1-P4-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U1-P4-D1-goal"
+      ],
+      "branchable_topics": [
+        "dinosaur",
+        "vegetables",
+        "meat",
+        "How tall are you?",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "The children are in the museum. Listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P4-D2",
+      "page_uid": "TB-G6S2U1-P4",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S2U1-P4-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Zhang Peng and Mike are looking at dinosaurs in the museum. Key patterns: How tall is it?; It's taller than both of us together.",
+      "focus_vocabulary": [
+        "tallest",
+        "hall",
+        "metre",
+        "taller",
+        "both",
+        "together"
+      ],
+      "core_patterns": [
+        "How tall is it?",
+        "It's taller than both of us together.",
+        "How tall are you?",
+        "I'm 1.65 metres.",
+        "Yes, it is. How tall is it?",
+        "Oh, yes. How tall are you?"
+      ],
+      "allowed_answer_scope": [
+        "Look! That's the tallest dinosaur in this hall.",
+        "Maybe 4 metres.",
+        "Wow! It's taller than both of us together.",
+        "Look! There are more dinosaurs over there!",
+        "They're all so big and tall.",
+        "Hey, this dinosaur isn't tall! I'm taller than this one."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word tallest?",
+        "Can you say: How tall is it?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U1-P4-D1",
+        "TB-G6S2U1-P4-D3",
+        "TB-G6S2U1-P4-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U1-P4-D2-goal"
+      ],
+      "branchable_topics": [
+        "tallest",
+        "hall",
+        "metre",
+        "taller",
+        "both",
+        "together",
+        "How tall are you?",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "How tall is it?",
+        "It's taller than both of us together.",
+        "How tall are you?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P4-D3",
+      "page_uid": "TB-G6S2U1-P4",
+      "page_type": "dialogue",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S2U1-P4-D3"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Comprehension questions based on the dialogue. Key patterns: Answer the questions.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Answer the questions."
+      ],
+      "allowed_answer_scope": [
+        "1.65 metres",
+        "Zhang Peng"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Answer the questions."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U1-P4-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U1-P4-D3-goal"
+      ],
+      "branchable_topics": [
+        "How tall are you?"
+      ],
+      "return_anchors": [
+        "Answer the questions."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P4-D4",
+      "page_uid": "TB-G6S2U1-P4",
+      "page_type": "dialogue",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S2U1-P4-D4"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Students fill in their own height and age, and compare with others. Key patterns: How tall are you?; Who is taller than you?",
+      "focus_vocabulary": [
+        "older"
+      ],
+      "core_patterns": [
+        "How tall are you?",
+        "Who is taller than you?",
+        "How old are you?",
+        "Who is older than you?"
+      ],
+      "allowed_answer_scope": [
+        "Personalized answer"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word older?",
+        "Can you say: How tall are you?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U1-P4-D4-goal"
+      ],
+      "branchable_topics": [
+        "older",
+        "How tall are you?"
+      ],
+      "return_anchors": [
+        "How tall are you?",
+        "Who is taller than you?",
+        "How old are you?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P5-D1",
+      "page_uid": "TB-G6S2U1-P5",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S2U1-P5-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Zhang Peng and John are talking about their heights. Other students are comparing their ages, heights, and the lengths of their dresses and hair. Key patterns: How tall are you?; I'm 1.61 metres.",
+      "focus_vocabulary": [
+        "younger",
+        "older",
+        "taller",
+        "shorter",
+        "longer"
+      ],
+      "core_patterns": [
+        "How tall are you?",
+        "I'm 1.61 metres.",
+        "Oh! I'm taller.",
+        "You're older than me, too."
+      ],
+      "allowed_answer_scope": [
+        "younger",
+        "older",
+        "taller",
+        "shorter",
+        "longer"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word younger?",
+        "Can you say: How tall are you?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U1-P5-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U1-P5-D1-goal"
+      ],
+      "branchable_topics": [
+        "younger",
+        "older",
+        "taller",
+        "shorter",
+        "longer",
+        "How tall are you?",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "How tall are you?",
+        "I'm 1.61 metres.",
+        "Oh! I'm taller."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P5-D2",
+      "page_uid": "TB-G6S2U1-P5",
+      "page_type": "vocabulary",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S2U1-P5-D2"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "A girl is asking Wu Binbin about his age and height to fill in a survey chart, and then reporting the comparison. Key patterns: How old are you?; I'm 12 years old.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "How old are you?",
+        "I'm 12 years old.",
+        "How tall are you?",
+        "I'm 1.64 metres.",
+        "Wu Binbin is taller than John, but Zhang Peng is taller than Wu Binbin."
+      ],
+      "allowed_answer_scope": [
+        "How old are you?",
+        "I'm 12 years old.",
+        "How tall are you?",
+        "I'm 1.64 metres."
+      ],
+      "entry_probe_questions": [
+        "Can you say: How old are you?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U1-P5-D2-goal"
+      ],
+      "branchable_topics": [
+        "How tall are you?",
+        "Do a survey and report"
+      ],
+      "return_anchors": [
+        "How old are you?",
+        "I'm 12 years old.",
+        "How tall are you?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P6-D1",
+      "page_uid": "TB-G6S2U1-P6",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S2U1-P6-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Mike and Wu Binbin are talking about the weekend. Key patterns: Listen and circle.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "B. Go shopping.",
+        "A. Hiking clothes and shoes."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U1-P6-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U1-P6-D1-goal"
+      ],
+      "branchable_topics": [
+        "How tall are you?",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P6-D2",
+      "page_uid": "TB-G6S2U1-P6",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S2U1-P6-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Mike and Wu Binbin are at a shoe store, trying on shoes and comparing their sizes and weights. Key patterns: What size are your shoes?; Your feet are bigger than mine.",
+      "focus_vocabulary": [
+        "size",
+        "wear",
+        "bigger",
+        "taller",
+        "heavier",
+        "kilogram"
+      ],
+      "core_patterns": [
+        "What size are your shoes?",
+        "Your feet are bigger than mine.",
+        "How heavy are you?",
+        "I'm 48 kilograms.",
+        "What size are your shoes, Mike?",
+        "But I think you are heavier. How heavy are you?"
+      ],
+      "allowed_answer_scope": [
+        "Those shoes in the window are nice! Let's have a look.",
+        "Size 7.",
+        "In China I wear size 40 shoes.",
+        "Oh! Your feet are bigger than mine. My shoes are size 37.",
+        "I'm 48 kilograms.",
+        "Yes, you're heavier. I'm 46 kilograms."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word size?",
+        "Can you say: What size are your shoes?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U1-P6-D1",
+        "TB-G6S2U1-P6-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U1-P6-D2-goal"
+      ],
+      "branchable_topics": [
+        "size",
+        "wear",
+        "bigger",
+        "taller",
+        "heavier",
+        "kilogram",
+        "How tall are you?",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "What size are your shoes?",
+        "Your feet are bigger than mine.",
+        "How heavy are you?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P6-D3",
+      "page_uid": "TB-G6S2U1-P6",
+      "page_type": "dialogue",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S2U1-P6-D3"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Questions about the dialogue and personal questions for students. Key patterns: How heavy are you?; Who is heavier than you?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "How heavy are you?",
+        "Who is heavier than you?",
+        "What size are your shoes?",
+        "Whose shoes are bigger?"
+      ],
+      "allowed_answer_scope": [
+        "Size 37.",
+        "46 kilograms.",
+        "Student's own answer"
+      ],
+      "entry_probe_questions": [
+        "Can you say: How heavy are you?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U1-P6-D3-goal"
+      ],
+      "branchable_topics": [
+        "How tall are you?",
+        "Practice"
+      ],
+      "return_anchors": [
+        "How heavy are you?",
+        "Who is heavier than you?",
+        "What size are your shoes?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P7-D1",
+      "page_uid": "TB-G6S2U1-P7",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S2U1-P7-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Children are having a picnic in the park. John and Jim are talking about their weight. Other children are comparing their bags and shoes. Key patterns: How heavy are you, Jim?; I'm 52 kilograms.",
+      "focus_vocabulary": [
+        "thinner",
+        "heavier",
+        "bigger",
+        "smaller",
+        "stronger"
+      ],
+      "core_patterns": [
+        "How heavy are you, Jim?",
+        "I'm 52 kilograms.",
+        "You're heavier than me."
+      ],
+      "allowed_answer_scope": [
+        "thinner",
+        "heavier",
+        "bigger",
+        "smaller",
+        "stronger"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word thinner?",
+        "Can you say: How heavy are you, Jim?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U1-P7-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U1-P7-D1-goal"
+      ],
+      "branchable_topics": [
+        "thinner",
+        "heavier",
+        "bigger",
+        "smaller",
+        "stronger",
+        "Comparatives",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "How heavy are you, Jim?",
+        "I'm 52 kilograms.",
+        "You're heavier than me."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P7-D2",
+      "page_uid": "TB-G6S2U1-P7",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S2U1-P7-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Four children are fishing by the river. There are different sizes of fish in the water. A bear is pointing to a sentence template. Key patterns: Mike's fish is ________ than ________.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Mike's fish is ________ than ________."
+      ],
+      "allowed_answer_scope": [
+        "Mike's fish is ________ than ________."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Mike's fish is ________ than ________."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U1-P7-D2-goal"
+      ],
+      "branchable_topics": [
+        "Comparatives",
+        "Match and say"
+      ],
+      "return_anchors": [
+        "Mike's fish is ________ than ________."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P8-D1",
+      "page_uid": "TB-G6S2U1-P8",
+      "page_type": "dialogue",
+      "block_type": "practice_multiple_choice",
+      "source_refs": [
+        "TB-G6S2U1-P8-D1"
+      ],
+      "teaching_goal": "Work on the practice multiple choice activity.",
+      "teaching_summary": "Spring is coming! The sky is clearer and the sun is brighter. Can you think of any other changes? Look and tick. Key patterns: The sky is clearer and the sun is brighter.",
+      "focus_vocabulary": [
+        "clearer",
+        "brighter"
+      ],
+      "core_patterns": [
+        "The sky is clearer and the sun is brighter."
+      ],
+      "allowed_answer_scope": [
+        "The second picture (trees turning green) and the fourth picture (boy taking off winter clothes)."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word clearer?",
+        "Can you say: The sky is clearer and the sun is brighter."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U1-P8-D1-goal"
+      ],
+      "branchable_topics": [
+        "clearer",
+        "brighter",
+        "How can I get there?",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "The sky is clearer and the sun is brighter."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P8-D2",
+      "page_uid": "TB-G6S2U1-P8",
+      "page_type": "dialogue",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S2U1-P8-D2"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "Wu Binbin and his family are going on a trip to the countryside. Wu Binbin has a story to tell Robin. Key patterns: It is getting lower and lower, but his shadow is getting longer and longer.; You are older and smarter than me.",
+      "focus_vocabulary": [
+        "lower",
+        "longer",
+        "older",
+        "smarter",
+        "taller"
+      ],
+      "core_patterns": [
+        "It is getting lower and lower, but his shadow is getting longer and longer.",
+        "You are older and smarter than me."
+      ],
+      "allowed_answer_scope": [
+        "lower",
+        "longer",
+        "older",
+        "smarter",
+        "taller"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word lower?",
+        "Can you say: It is getting lower and lower, but his shadow is getting longer and longer."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U1-P8-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U1-P8-D2-goal"
+      ],
+      "branchable_topics": [
+        "lower",
+        "longer",
+        "older",
+        "smarter",
+        "taller",
+        "How can I get there?",
+        "Read and write"
+      ],
+      "return_anchors": [
+        "It is getting lower and lower, but his shadow is getting longer and longer.",
+        "You are older and smarter than me."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P8-D3",
+      "page_uid": "TB-G6S2U1-P8",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S2U1-P8-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Wu Binbin asks Robin a question about the story. Key patterns: Can you answer Little Duck's question, Robin?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Can you answer Little Duck's question, Robin?"
+      ],
+      "allowed_answer_scope": [
+        "Can you answer Little Duck's question, Robin?"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Can you answer Little Duck's question, Robin?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U1-P8-D2",
+        "TB-G6S2U1-P8-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U1-P8-D3-goal"
+      ],
+      "branchable_topics": [
+        "How can I get there?"
+      ],
+      "return_anchors": [
+        "Can you answer Little Duck's question, Robin?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P9-D1",
+      "page_uid": "TB-G6S2U1-P9",
+      "page_type": "practice",
+      "block_type": "practice_multiple_choice",
+      "source_refs": [
+        "TB-G6S2U1-P9-D1"
+      ],
+      "teaching_goal": "Work on the practice multiple choice activity.",
+      "teaching_summary": "Multiple choice questions about the story. Key patterns: Read and circle.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Read and circle."
+      ],
+      "allowed_answer_scope": [
+        "A. Little Duck's shadow",
+        "B. The duck.",
+        "A. In the morning."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Read and circle."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U1-P9-D1-goal"
+      ],
+      "branchable_topics": [
+        "Read and circle."
+      ],
+      "return_anchors": [
+        "Read and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P9-D2",
+      "page_uid": "TB-G6S2U1-P9",
+      "page_type": "practice",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S2U1-P9-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "A dialogue completion exercise between Little Duck and Old Tree. Key patterns: Read the story again and finish the dialogue.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Read the story again and finish the dialogue."
+      ],
+      "allowed_answer_scope": [
+        "Read the story again and finish the dialogue."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Read the story again and finish the dialogue."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U1-P9-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U1-P9-D2-goal"
+      ],
+      "branchable_topics": [
+        "Read the story again and finish the dialogue."
+      ],
+      "return_anchors": [
+        "Read the story again and finish the dialogue."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P9-D3",
+      "page_uid": "TB-G6S2U1-P9",
+      "page_type": "practice",
+      "block_type": "extension_task",
+      "source_refs": [
+        "TB-G6S2U1-P9-D3"
+      ],
+      "teaching_goal": "Transfer the page language into a new speaking task.",
+      "teaching_summary": "Discussion questions about the story and changes in friends, with an illustration of a little duck. Key patterns: Think and discuss.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Think and discuss."
+      ],
+      "allowed_answer_scope": [
+        "Think and discuss."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Think and discuss."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U1-P9-D2",
+        "TB-G6S2U1-P9-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U1-P9-D3-goal"
+      ],
+      "branchable_topics": [
+        "Think and discuss."
+      ],
+      "return_anchors": [
+        "Think and discuss."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P10-D1",
+      "page_uid": "TB-G6S2U1-P10",
+      "page_type": "assessment",
+      "block_type": "assessment_quiz",
+      "source_refs": [
+        "TB-G6S2U1-P10-D1"
+      ],
+      "teaching_goal": "Check whether the learner can complete the unit review task.",
+      "teaching_summary": "Listening comprehension exercises including ticking the correct picture and writing answers to questions. Key patterns: Let's check",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Let's check"
+      ],
+      "allowed_answer_scope": [
+        "Let's check"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Let's check"
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U1-P10-D1-goal"
+      ],
+      "branchable_topics": [
+        "How tall are you?",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Let's check"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P10-D2",
+      "page_uid": "TB-G6S2U1-P10",
+      "page_type": "assessment",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S2U1-P10-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Review and practice of comparative adjectives. Key patterns: tall — taller; thin — thinner",
+      "focus_vocabulary": [
+        "tall",
+        "taller",
+        "thin",
+        "thinner",
+        "heavy",
+        "heavier"
+      ],
+      "core_patterns": [
+        "tall — taller",
+        "thin — thinner",
+        "heavy — heavier"
+      ],
+      "allowed_answer_scope": [
+        "longer",
+        "stronger",
+        "bigger",
+        "sadder",
+        "hotter",
+        "angrier"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word tall?",
+        "Can you say: tall — taller"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U1-P10-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U1-P10-D2-goal"
+      ],
+      "branchable_topics": [
+        "tall",
+        "taller",
+        "thin",
+        "thinner",
+        "heavy",
+        "heavier",
+        "How tall are you?",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "tall — taller",
+        "thin — thinner",
+        "heavy — heavier"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U1-P11-D1",
+      "page_uid": "TB-G6S2U1-P11",
+      "page_type": "reading",
+      "block_type": "story_time",
+      "source_refs": [
+        "TB-G6S2U1-P11-D1"
+      ],
+      "teaching_goal": "Read and retell the key story events.",
+      "teaching_summary": "The animals are holding an audition to find a new goalkeeper for their football team. Key patterns: How tall are you?; How heavy are you?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "How tall are you?",
+        "How heavy are you?",
+        "What's happening here?",
+        "We want a goalkeeper !!",
+        "They need a new goalkeeper.",
+        "I'd like to have a try."
+      ],
+      "allowed_answer_scope": [
+        "We want a goalkeeper !!",
+        "They need a new goalkeeper.",
+        "I'd like to have a try.",
+        "Me too.",
+        "I can't wait.",
+        "I'm 1.8 metres."
+      ],
+      "entry_probe_questions": [
+        "Can you say: How tall are you?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U1-P11-D1-goal"
+      ],
+      "branchable_topics": [
+        "How tall are you?",
+        "Story time"
+      ],
+      "return_anchors": [
+        "How tall are you?",
+        "How heavy are you?",
+        "What's happening here?"
+      ]
+    }
+  ]
+}

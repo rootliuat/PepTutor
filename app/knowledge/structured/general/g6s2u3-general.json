@@ -1,0 +1,2428 @@
+{
+  "pilot_id": "g6s2u3-general-v1",
+  "scope": {
+    "grade": "G6",
+    "semester": "S2",
+    "unit": "U3",
+    "pages": [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ]
+  },
+  "source_files": [
+    "app/knowledge/raw/04.六年级下册语料.json",
+    "app/knowledge/raw/08.六年级下册单词表.md"
+  ],
+  "draft_metadata": {
+    "builder": "general_draft_builder",
+    "display_name": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+    "raw_display_name": "English (Primary School, Grade 6 · Volume 2), People's Education Press (PEP)",
+    "page_count": 10,
+    "block_count": 20,
+    "source_kind": "textbook_source_json",
+    "source_format": "json"
+  },
+  "wordlist_entries": [
+    {
+      "unit": "Unit 3",
+      "word": "went",
+      "phonetic": "/went/",
+      "chinese": "（go 的过去式）去",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U3-P25-D1",
+        "TB-G6S2U3-P27-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "camp",
+      "phonetic": "/kæmp/",
+      "chinese": "野营",
+      "emphasized": true,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "went camping",
+      "chinese": "（尤指在假日）野营",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U3-P25-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "fish",
+      "phonetic": "/fɪʃ/",
+      "chinese": "钓鱼；捕鱼",
+      "emphasized": true,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "went fishing",
+      "chinese": "去钓鱼",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U3-P25-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "rode",
+      "phonetic": "/rəʊd/",
+      "chinese": "（ride /raɪd/ 的过去式）骑（马；自行车）",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U3-P25-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "hurt",
+      "phonetic": "/hɜːt/",
+      "chinese": "（hurt 的过去式）（使）受伤",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U3-P22-D1",
+        "TB-G6S2U3-P25-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "ate",
+      "phonetic": "/eɪt/",
+      "chinese": "（eat 的过去式）吃",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U3-P27-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "took",
+      "phonetic": "/tʊk/",
+      "chinese": "（take 的过去式）拍照",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U3-P27-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "took pictures",
+      "chinese": "照相",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U3-P27-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "bought",
+      "phonetic": "/bɔːt/",
+      "chinese": "（buy 的过去式）买",
+      "emphasized": true,
+      "linked_block_uids": [
+        "TB-G6S2U3-P27-D1"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "gift",
+      "phonetic": "/ɡɪft/",
+      "chinese": "礼物",
+      "emphasized": true,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "fell",
+      "phonetic": "/fel/",
+      "chinese": "（fall的过去式）摔倒",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U3-P22-D1",
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "off",
+      "phonetic": "/ɒf/",
+      "chinese": "从（某处）落下",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U3-P22-D1",
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "mule",
+      "phonetic": "/mjuːl/",
+      "chinese": "骡子",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "Turpan",
+      "phonetic": "/'tʊə'pɑːn/",
+      "chinese": "吐鲁番",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U3-P23-D1",
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "could",
+      "phonetic": "/kəd; kʊd/",
+      "chinese": "（can 的过去式）能",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "till",
+      "phonetic": "/tɪl/",
+      "chinese": "直到",
+      "emphasized": false,
+      "linked_block_uids": [
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "word": "beach",
+      "phonetic": "/biːtʃ/",
+      "chinese": "海滩；沙滩",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "basket",
+      "phonetic": "/'bɑːskɪt/",
+      "chinese": "篮；筐",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "part",
+      "phonetic": "/pɑːt/",
+      "chinese": "角色",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "licked",
+      "phonetic": "/lɪkt/",
+      "chinese": "（lick /lɪk/ 的过去式）舔",
+      "emphasized": false,
+      "linked_block_uids": []
+    },
+    {
+      "unit": "Unit 3",
+      "word": "laughed",
+      "phonetic": "/lɑːft/",
+      "chinese": "（laugh /lɑːf/ 的过去式）笑",
+      "emphasized": false,
+      "linked_block_uids": []
+    }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G6S2U3-P22-D1-goal",
+      "block_uid": "TB-G6S2U3-P22-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P23-D1-goal",
+      "block_uid": "TB-G6S2U3-P23-D1",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P24-D1-goal",
+      "block_uid": "TB-G6S2U3-P24-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P24-D2-goal",
+      "block_uid": "TB-G6S2U3-P24-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P24-D3-goal",
+      "block_uid": "TB-G6S2U3-P24-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P25-D1-goal",
+      "block_uid": "TB-G6S2U3-P25-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P25-D2-goal",
+      "block_uid": "TB-G6S2U3-P25-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P26-D1-goal",
+      "block_uid": "TB-G6S2U3-P26-D1",
+      "category": "listening_probe",
+      "text": "Catch the key information from the listening task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P26-D2-goal",
+      "block_uid": "TB-G6S2U3-P26-D2",
+      "category": "dialogue_core",
+      "text": "Understand and say the core dialogue pattern on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P26-D3-goal",
+      "block_uid": "TB-G6S2U3-P26-D3",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P27-D1-goal",
+      "block_uid": "TB-G6S2U3-P27-D1",
+      "category": "vocabulary_core",
+      "text": "Recognize and say the core vocabulary on the page.",
+      "mastery_signal_examples": {
+        "mastered": "Learner gives the target word or pattern accurately.",
+        "shaky": "Learner recognizes the target but responds with noticeable hesitation or error.",
+        "not_mastered": "Learner does not recognize or produce the target item."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P27-D2-goal",
+      "block_uid": "TB-G6S2U3-P27-D2",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P28-D1-goal",
+      "block_uid": "TB-G6S2U3-P28-D1",
+      "category": "dialogue_practice",
+      "text": "Use the page dialogue pattern in short guided practice.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P28-D2-goal",
+      "block_uid": "TB-G6S2U3-P28-D2",
+      "category": "reading_passage",
+      "text": "Read and understand the key information in the passage.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P29-D1-goal",
+      "block_uid": "TB-G6S2U3-P29-D1",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P29-D2-goal",
+      "block_uid": "TB-G6S2U3-P29-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P29-D3-goal",
+      "block_uid": "TB-G6S2U3-P29-D3",
+      "category": "writing_prompt",
+      "text": "Work on the writing prompt activity.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the target task accurately.",
+        "shaky": "Learner completes the task with partial accuracy.",
+        "not_mastered": "Learner cannot complete the task."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P30-D1-goal",
+      "block_uid": "TB-G6S2U3-P30-D1",
+      "category": "assessment_quiz",
+      "text": "Check whether the learner can complete the unit review task.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P30-D2-goal",
+      "block_uid": "TB-G6S2U3-P30-D2",
+      "category": "practice_fill_blank",
+      "text": "Retell the reading content by filling in key blanks.",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies the key answer correctly.",
+        "shaky": "Learner identifies part of the answer only.",
+        "not_mastered": "Learner cannot identify the key answer."
+      }
+    },
+    {
+      "target_uid": "LT-G6S2U3-P31-D1-goal",
+      "block_uid": "TB-G6S2U3-P31-D1",
+      "category": "story_time",
+      "text": "Read and retell the key story events.",
+      "mastery_signal_examples": {
+        "mastered": "Learner completes the spoken task with limited support.",
+        "shaky": "Learner completes part of the task but still needs prompting.",
+        "not_mastered": "Learner cannot complete the task without full imitation."
+      }
+    }
+  ],
+  "knowledge_atoms": [
+    {
+      "atom_uid": "KA-ate",
+      "atom_type": "word",
+      "text": "ate",
+      "gloss": "（eat 的过去式）吃",
+      "linked_blocks": [
+        "TB-G6S2U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-ate-fresh-food",
+      "atom_type": "word",
+      "text": "ate fresh food",
+      "gloss": "吃新鲜食物",
+      "linked_blocks": [
+        "TB-G6S2U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-basket",
+      "atom_type": "word",
+      "text": "basket",
+      "gloss": "篮；筐",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-beach",
+      "atom_type": "word",
+      "text": "beach",
+      "gloss": "海滩；沙滩",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-bought",
+      "atom_type": "word",
+      "text": "bought",
+      "gloss": "（buy 的过去式）买",
+      "linked_blocks": [
+        "TB-G6S2U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-bought-gifts",
+      "atom_type": "word",
+      "text": "bought gifts",
+      "gloss": "买礼物",
+      "linked_blocks": [
+        "TB-G6S2U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-by-plane",
+      "atom_type": "word",
+      "text": "by plane",
+      "gloss": "乘飞机",
+      "linked_blocks": [
+        "TB-G6S2U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-camp",
+      "atom_type": "word",
+      "text": "camp",
+      "gloss": "野营",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-could",
+      "atom_type": "word",
+      "text": "could",
+      "gloss": "（can 的过去式）能",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-delicious",
+      "atom_type": "word",
+      "text": "delicious",
+      "gloss": "美味的",
+      "linked_blocks": [
+        "TB-G6S2U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-dinosaur",
+      "atom_type": "word",
+      "text": "dinosaur",
+      "gloss": "恐龙",
+      "linked_blocks": [
+        "TB-G6S2U3-P30-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-far-from",
+      "atom_type": "word",
+      "text": "far from",
+      "gloss": "离……远",
+      "linked_blocks": [
+        "TB-G6S2U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-fell",
+      "atom_type": "word",
+      "text": "fell",
+      "gloss": "（fall的过去式）摔倒",
+      "linked_blocks": [
+        "TB-G6S2U3-P22-D1",
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-fell-off",
+      "atom_type": "word",
+      "text": "fell off",
+      "gloss": "摔倒",
+      "linked_blocks": [
+        "TB-G6S2U3-P22-D1",
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-fish",
+      "atom_type": "word",
+      "text": "fish",
+      "gloss": "钓鱼；捕鱼",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-gift",
+      "atom_type": "word",
+      "text": "gift",
+      "gloss": "礼物",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-go-swimming",
+      "atom_type": "word",
+      "text": "go swimming",
+      "gloss": "去游泳",
+      "linked_blocks": [
+        "TB-G6S2U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-grapes",
+      "atom_type": "word",
+      "text": "grapes",
+      "gloss": "葡萄",
+      "linked_blocks": [
+        "TB-G6S2U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hurt",
+      "atom_type": "word",
+      "text": "hurt",
+      "gloss": "（hurt 的过去式）（使）受伤",
+      "linked_blocks": [
+        "TB-G6S2U3-P22-D1",
+        "TB-G6S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-hurt-my-foot",
+      "atom_type": "word",
+      "text": "hurt my foot",
+      "gloss": "伤了我的脚",
+      "linked_blocks": [
+        "TB-G6S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-labour-day",
+      "atom_type": "word",
+      "text": "Labour Day",
+      "gloss": "劳动节",
+      "linked_blocks": [
+        "TB-G6S2U3-P22-D1",
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-labour-day-holiday",
+      "atom_type": "word",
+      "text": "Labour Day holiday",
+      "gloss": "劳动节假期",
+      "linked_blocks": [
+        "TB-G6S2U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-laughed",
+      "atom_type": "word",
+      "text": "laughed",
+      "gloss": "（laugh /lɑːf/ 的过去式）笑",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-licked",
+      "atom_type": "word",
+      "text": "licked",
+      "gloss": "（lick /lɪk/ 的过去式）舔",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-mule",
+      "atom_type": "word",
+      "text": "mule",
+      "gloss": "骡子",
+      "linked_blocks": [
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-mutton-kebabs",
+      "atom_type": "word",
+      "text": "mutton kebabs",
+      "gloss": "羊肉串",
+      "linked_blocks": [
+        "TB-G6S2U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-off",
+      "atom_type": "word",
+      "text": "off",
+      "gloss": "从（某处）落下",
+      "linked_blocks": [
+        "TB-G6S2U3-P22-D1",
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-part",
+      "atom_type": "word",
+      "text": "part",
+      "gloss": "角色",
+      "linked_blocks": []
+    },
+    {
+      "atom_uid": "KA-rode",
+      "atom_type": "word",
+      "text": "rode",
+      "gloss": "（ride /raɪd/ 的过去式）骑（马；自行车）",
+      "linked_blocks": [
+        "TB-G6S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-rode-a-bike",
+      "atom_type": "word",
+      "text": "rode a bike",
+      "gloss": "骑自行车",
+      "linked_blocks": [
+        "TB-G6S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-rode-a-horse",
+      "atom_type": "word",
+      "text": "rode a horse",
+      "gloss": "骑马",
+      "linked_blocks": [
+        "TB-G6S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-take-pictures",
+      "atom_type": "word",
+      "text": "take pictures",
+      "gloss": "照相",
+      "linked_blocks": [
+        "TB-G6S2U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-till",
+      "atom_type": "word",
+      "text": "till",
+      "gloss": "直到",
+      "linked_blocks": [
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-took",
+      "atom_type": "word",
+      "text": "took",
+      "gloss": "（take 的过去式）拍照",
+      "linked_blocks": [
+        "TB-G6S2U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-took-pictures",
+      "atom_type": "word",
+      "text": "took pictures",
+      "gloss": "照相",
+      "linked_blocks": [
+        "TB-G6S2U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-turpan",
+      "atom_type": "word",
+      "text": "Turpan",
+      "gloss": "吐鲁番",
+      "linked_blocks": [
+        "TB-G6S2U3-P23-D1",
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-went",
+      "atom_type": "word",
+      "text": "went",
+      "gloss": "（go 的过去式）去",
+      "linked_blocks": [
+        "TB-G6S2U3-P25-D1",
+        "TB-G6S2U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-went-camping",
+      "atom_type": "word",
+      "text": "went camping",
+      "gloss": "（尤指在假日）野营",
+      "linked_blocks": [
+        "TB-G6S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-went-fishing",
+      "atom_type": "word",
+      "text": "went fishing",
+      "gloss": "去钓鱼",
+      "linked_blocks": [
+        "TB-G6S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-went-swimming",
+      "atom_type": "word",
+      "text": "went swimming",
+      "gloss": "去游泳",
+      "linked_blocks": [
+        "TB-G6S2U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-winter-holiday",
+      "atom_type": "word",
+      "text": "winter holiday",
+      "gloss": "寒假",
+      "linked_blocks": [
+        "TB-G6S2U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-amy-how-was-your-summer-holiday-binbin",
+      "atom_type": "sentence_pattern",
+      "text": "Amy: How was your summer holiday, Binbin?",
+      "gloss": "艾米：你的暑假过得怎么样，彬彬？",
+      "linked_blocks": [
+        "TB-G6S2U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-bad-luck-often-brings-good-luck",
+      "atom_type": "sentence_pattern",
+      "text": "Bad luck often brings good luck.",
+      "gloss": "坏运气通常带来好运气。",
+      "linked_blocks": [
+        "TB-G6S2U3-P29-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-can-i-come-and-visit-you",
+      "atom_type": "sentence_pattern",
+      "text": "Can I come and visit you?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-did-you-go-to-turpan",
+      "atom_type": "sentence_pattern",
+      "text": "Did you go to Turpan?",
+      "gloss": "你去了吐鲁番吗？",
+      "linked_blocks": [
+        "TB-G6S2U3-P23-D1",
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-did-you-take-any-pictures",
+      "atom_type": "sentence_pattern",
+      "text": "Did you take any pictures?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hainan-is-far-from-here-how-did-you-go-there",
+      "atom_type": "sentence_pattern",
+      "text": "Hainan is far from here. How did you go there?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-bought",
+      "atom_type": "sentence_pattern",
+      "text": "He bought ...",
+      "gloss": "他买了……",
+      "linked_blocks": [
+        "TB-G6S2U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-took-pictures-of",
+      "atom_type": "sentence_pattern",
+      "text": "He took pictures of ...",
+      "gloss": "他拍了……的照片",
+      "linked_blocks": [
+        "TB-G6S2U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-he-went",
+      "atom_type": "sentence_pattern",
+      "text": "He went ...",
+      "gloss": "他去了……",
+      "linked_blocks": [
+        "TB-G6S2U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-hello-max",
+      "atom_type": "sentence_pattern",
+      "text": "Hello, Max!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-did-she-go-there",
+      "atom_type": "sentence_pattern",
+      "text": "How did she go there?",
+      "gloss": "她怎么去的？",
+      "linked_blocks": [
+        "TB-G6S2U3-P26-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-did-you-go-there",
+      "atom_type": "sentence_pattern",
+      "text": "How did you go there?",
+      "gloss": "你们怎么去的？",
+      "linked_blocks": [
+        "TB-G6S2U3-P26-D2",
+        "TB-G6S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-much-is-this",
+      "atom_type": "sentence_pattern",
+      "text": "How much is this?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-was-the-beach-what-did-you-do-there",
+      "atom_type": "sentence_pattern",
+      "text": "How was the beach? What did you do there?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-how-was-your-holiday",
+      "atom_type": "sentence_pattern",
+      "text": "How was your holiday?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-fell-off-my-bike-and-hurt-my-foot",
+      "atom_type": "sentence_pattern",
+      "text": "I fell off my bike and hurt my foot.",
+      "gloss": "我从自行车上摔下来，伤了脚。",
+      "linked_blocks": [
+        "TB-G6S2U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-rode-a-bike",
+      "atom_type": "sentence_pattern",
+      "text": "I rode a bike.",
+      "gloss": "我骑了自行车。",
+      "linked_blocks": [
+        "TB-G6S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-i-went-to-a-forest-park",
+      "atom_type": "sentence_pattern",
+      "text": "I went to a forest park.",
+      "gloss": "我去了森林公园。",
+      "linked_blocks": [
+        "TB-G6S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-in-the-afternoon-mum-ate-some-bad-fruit-and-didn-t-feel-well-so-we-stayed-in-the-hotel-dad-and-i-wanted-to-make-her-happy-we-dressed-up-and-made-a-funny-play-robin-played-the-part-of-a-dog-he-was-so-cute-max-liked-him-so-much-he-jumped-on-him-and-licked-him-of-course-robin-didn-t-like-it-we-laughed-and-laughed",
+      "atom_type": "sentence_pattern",
+      "text": "In the afternoon, Mum ate some bad fruit and didn't feel well. So we stayed in the hotel. Dad and I wanted to make her happy. We dressed up and made a funny play. Robin played the part of a dog. He was so cute. Max liked him so much. He jumped on him and licked him. Of course, Robin didn't like it. We laughed and laughed.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P28-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-it-was-a-bad-day-but-also-a-good-day",
+      "atom_type": "sentence_pattern",
+      "text": "It was a bad day but also a good day!",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P28-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-john-answered-a-phone-call-from-amy-listen-and-tick-or-cross",
+      "atom_type": "sentence_pattern",
+      "text": "John answered a phone call from Amy. Listen and tick or cross.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P24-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-last-summer-holiday-andy-ate",
+      "atom_type": "sentence_pattern",
+      "text": "Last summer holiday, Andy ate ...",
+      "gloss": "去年暑假，安迪吃了……",
+      "linked_blocks": [
+        "TB-G6S2U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-let-s-check",
+      "atom_type": "sentence_pattern",
+      "text": "Let's check",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P30-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-listen-and-circle",
+      "atom_type": "sentence_pattern",
+      "text": "Listen and circle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P26-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-my-parents-and-my-uncle",
+      "atom_type": "sentence_pattern",
+      "text": "My parents and my uncle.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-number-the-pictures",
+      "atom_type": "sentence_pattern",
+      "text": "Number the pictures.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P29-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-oh-dear-are-you-all-right",
+      "atom_type": "sentence_pattern",
+      "text": "Oh dear! Are you all right?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-oh-yes-it-looks-like-a-mule-did-you-go-to-turpan",
+      "atom_type": "sentence_pattern",
+      "text": "Oh, yes. It looks like a mule! Did you go to Turpan?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-really-did-you-like-it",
+      "atom_type": "sentence_pattern",
+      "text": "Really? Did you like it?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-robin-is-not-for-sale",
+      "atom_type": "sentence_pattern",
+      "text": "Robin is not for sale!",
+      "gloss": "罗宾非卖品！",
+      "linked_blocks": [
+        "TB-G6S2U3-P27-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-that-s-too-bad-are-you-all-right",
+      "atom_type": "sentence_pattern",
+      "text": "That's too bad! Are you all right?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-today-was-a-sunny-day-in-the-morning-we-rode-a-bike-for-three-people-max-sat-in-a-basket-on-the-front-of-the-bike-that-was-fun-we-took-pictures-of-the-beautiful-countryside-we-bought-some-gifts-and-ate-some-delicious-food",
+      "atom_type": "sentence_pattern",
+      "text": "Today was a sunny day. In the morning, we rode a bike for three people. Max sat in a basket on the front of the bike. That was fun! We took pictures of the beautiful countryside. We bought some gifts and ate some delicious food.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P28-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-did-she-do",
+      "atom_type": "sentence_pattern",
+      "text": "What did she do?",
+      "gloss": "她做了什么？",
+      "linked_blocks": [
+        "TB-G6S2U3-P26-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-did-they-do-yesterday",
+      "atom_type": "sentence_pattern",
+      "text": "What did they do yesterday?",
+      "gloss": "他们昨天做了什么？",
+      "linked_blocks": [
+        "TB-G6S2U3-P25-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-did-you-do-there",
+      "atom_type": "sentence_pattern",
+      "text": "What did you do there?",
+      "gloss": "你在那里做了什么？",
+      "linked_blocks": [
+        "TB-G6S2U3-P25-D1",
+        "TB-G6S2U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-did-you-do",
+      "atom_type": "sentence_pattern",
+      "text": "What did you do?",
+      "gloss": "你做了什么？",
+      "linked_blocks": [
+        "TB-G6S2U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-did-you-see",
+      "atom_type": "sentence_pattern",
+      "text": "What did you see?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-happened-to-wu-binbin-s-family",
+      "atom_type": "sentence_pattern",
+      "text": "What happened to Wu Binbin's family?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P29-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-happened",
+      "atom_type": "sentence_pattern",
+      "text": "What happened?",
+      "gloss": "发生了什么事？",
+      "linked_blocks": [
+        "TB-G6S2U3-P22-D1",
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-what-s-your-name-how-about-max",
+      "atom_type": "sentence_pattern",
+      "text": "What's your name? How about \"Max\"?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P28-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-did-amy-go-last-winter-holiday",
+      "atom_type": "sentence_pattern",
+      "text": "Where did Amy go last winter holiday?",
+      "gloss": "艾米去年寒假去哪里了？",
+      "linked_blocks": [
+        "TB-G6S2U3-P26-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-did-john-go-over-his-holiday-what-did-he-do",
+      "atom_type": "sentence_pattern",
+      "text": "Where did John go over his holiday? What did he do?",
+      "gloss": "约翰假期去了哪里？他做了什么？",
+      "linked_blocks": [
+        "TB-G6S2U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-did-you-go-last-saturday",
+      "atom_type": "sentence_pattern",
+      "text": "Where did you go last Saturday?",
+      "gloss": "上个星期六你去哪儿了？",
+      "linked_blocks": [
+        "TB-G6S2U3-P25-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-did-you-go-over-the-winter-holiday",
+      "atom_type": "sentence_pattern",
+      "text": "Where did you go over the winter holiday?",
+      "gloss": "你寒假去哪里了？",
+      "linked_blocks": [
+        "TB-G6S2U3-P26-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-did-you-go-over-your-holiday",
+      "atom_type": "sentence_pattern",
+      "text": "Where did you go over your holiday?",
+      "gloss": "你假期去了哪里？",
+      "linked_blocks": [
+        "TB-G6S2U3-P24-D3"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-where-did-you-go",
+      "atom_type": "sentence_pattern",
+      "text": "Where did you go?",
+      "gloss": "你去了哪里？",
+      "linked_blocks": [
+        "TB-G6S2U3-P23-D1",
+        "TB-G6S2U3-P24-D2",
+        "TB-G6S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-who-did-you-go-with",
+      "atom_type": "sentence_pattern",
+      "text": "Who did you go with?",
+      "gloss": "你和谁一起去的？",
+      "linked_blocks": [
+        "TB-G6S2U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-wu-binbin-it-was-good-i-went-swimming-every-weekend-and-took-lots-of-pictures",
+      "atom_type": "sentence_pattern",
+      "text": "Wu Binbin: It was good. I went swimming every weekend and took lots of pictures.",
+      "gloss": "吴彬彬：很好。我每个周末都去游泳，还拍了很多照片。",
+      "linked_blocks": [
+        "TB-G6S2U3-P27-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-i-did-i-saw-lots-of-grapes-and-ate-lots-of-mutton-kebabs-they-were-delicious",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, I did. I saw lots of grapes and ate lots of mutton kebabs. They were delicious.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P23-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-i-did-oops-where-did-i-put-the-pictures",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, I did. Oops, where did I put the pictures?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P31-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-i-m-ok-thanks",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, I'm OK. Thanks.",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-yes-we-did",
+      "atom_type": "sentence_pattern",
+      "text": "Yes, we did.",
+      "gloss": "是的，我们去了。",
+      "linked_blocks": [
+        "TB-G6S2U3-P24-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-you-didn-t-come-to-school-what-happened",
+      "atom_type": "sentence_pattern",
+      "text": "You didn't come to school. What happened?",
+      "gloss": null,
+      "linked_blocks": [
+        "TB-G6S2U3-P22-D1"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-am-is-was",
+      "atom_type": "sentence_pattern",
+      "text": "am/is → was",
+      "gloss": "am/is 的过去式是 was",
+      "linked_blocks": [
+        "TB-G6S2U3-P30-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-are-were",
+      "atom_type": "sentence_pattern",
+      "text": "are → were",
+      "gloss": "are 的过去式是 were",
+      "linked_blocks": [
+        "TB-G6S2U3-P30-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-drink-drank",
+      "atom_type": "sentence_pattern",
+      "text": "drink → drank",
+      "gloss": "drink 的过去式是 drank",
+      "linked_blocks": [
+        "TB-G6S2U3-P30-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-eat-ate",
+      "atom_type": "sentence_pattern",
+      "text": "eat → ate",
+      "gloss": "eat 的过去式是 ate",
+      "linked_blocks": [
+        "TB-G6S2U3-P30-D2"
+      ]
+    },
+    {
+      "atom_uid": "KA-pattern-run-ran",
+      "atom_type": "sentence_pattern",
+      "text": "run → ran",
+      "gloss": "run 的过去式是 ran",
+      "linked_blocks": [
+        "TB-G6S2U3-P30-D2"
+      ]
+    }
+  ],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G6S2U3-P22",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Unit Three. Two boys are talking on the phone. One boy is at home with a hurt foot because he fell off his bike.",
+      "entry_probe_questions": [
+        "Do you know the word fell off?",
+        "Can you say: What happened?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U3-P22-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U3-P23",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Where did you go?. Wu Binbin and John are sitting on the floor, looking at photos from John's trip to Turpan.",
+      "entry_probe_questions": [
+        "Do you know the word Turpan?",
+        "Can you say: Where did you go?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U3-P23-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U3-P24",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Where did you go?. Amy and John are talking about John's Labour Day holiday.",
+      "entry_probe_questions": [
+        "Do you know the word fell off?",
+        "Can you say: Where did you go?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U3-P24-D2",
+        "TB-G6S2U3-P24-D3",
+        "TB-G6S2U3-P24-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U3-P25",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Where did you go?. John's social media posts showing his past activities. The left post is from Tuesday May 1st 18:30, and the right post is from Saturday May 12th 15:30.",
+      "entry_probe_questions": [
+        "Do you know the word rode a horse?",
+        "Can you say: Where did you go last Saturday?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U3-P25-D1",
+        "TB-G6S2U3-P25-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U3-P26",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Where did you go?. Sarah, Amy and Wu Binbin are talking about Amy's winter holiday in Sanya.",
+      "entry_probe_questions": [
+        "Do you know the word winter holiday?",
+        "Can you say: Where did you go over the winter holiday?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U3-P26-D2",
+        "TB-G6S2U3-P26-D3",
+        "TB-G6S2U3-P26-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U3-P27",
+      "page_type": "vocabulary",
+      "page_intro_cn": "Theme: Where did you go?. Illustrations of activities done during the summer holiday.",
+      "entry_probe_questions": [
+        "Do you know the word ate fresh food?",
+        "Can you say: Amy: How was your summer holiday, Binbin?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U3-P27-D1",
+        "TB-G6S2U3-P27-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U3-P28",
+      "page_type": "dialogue",
+      "page_intro_cn": "Theme: Read and write. Wu Binbin finds a dog, names it Max, and introduces it to his parents.",
+      "entry_probe_questions": [
+        "Can you say: What's your name? How about \"Max\"?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U3-P28-D1",
+        "TB-G6S2U3-P28-D2"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U3-P29",
+      "page_type": "writing",
+      "page_intro_cn": "Theme: My weekend plan. Three pictures showing events from a story: Wu Binbin sick in bed, Robin playing with a dog, and the family riding a tandem bike.",
+      "entry_probe_questions": [
+        "Can you say: Number the pictures."
+      ],
+      "priority_blocks": [
+        "TB-G6S2U3-P29-D1",
+        "TB-G6S2U3-P29-D2",
+        "TB-G6S2U3-P29-D3"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U3-P30",
+      "page_type": "assessment",
+      "page_intro_cn": "Theme: Where did you go?. Fill in the blanks with the correct past tense forms of verbs to complete sentences about dinosaurs.",
+      "entry_probe_questions": [
+        "Do you know the word dinosaur?",
+        "Can you say: am/is → was"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U3-P30-D2",
+        "TB-G6S2U3-P30-D1"
+      ],
+      "assumed_prior_knowledge": []
+    },
+    {
+      "page_uid": "TB-G6S2U3-P31",
+      "page_type": "reading",
+      "page_intro_cn": "Theme: Story time. Zoom dreams about going to the moon, meeting Chang'e and the rabbit, and returning by spaceship. He then wakes up and realizes it was a dream.",
+      "entry_probe_questions": [
+        "Can you say: How was your holiday?"
+      ],
+      "priority_blocks": [
+        "TB-G6S2U3-P31-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G6S2U3-P22-D1",
+      "page_uid": "TB-G6S2U3-P22",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S2U3-P22-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Two boys are talking on the phone. One boy is at home with a hurt foot because he fell off his bike. Key patterns: What happened?; I fell off my bike and hurt my foot.",
+      "focus_vocabulary": [
+        "fell off",
+        "hurt",
+        "Labour Day holiday"
+      ],
+      "core_patterns": [
+        "What happened?",
+        "I fell off my bike and hurt my foot.",
+        "You didn't come to school. What happened?",
+        "Oh dear! Are you all right?",
+        "Can I come and visit you?",
+        "Yes, I'm OK. Thanks."
+      ],
+      "allowed_answer_scope": [
+        "I fell off my bike and hurt my foot.",
+        "Yes, I'm OK. Thanks.",
+        "Sure! You can see my photos from the Labour Day holiday."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word fell off?",
+        "Can you say: What happened?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U3-P22-D1-goal"
+      ],
+      "branchable_topics": [
+        "fell off",
+        "hurt",
+        "Labour Day holiday",
+        "Unit Three"
+      ],
+      "return_anchors": [
+        "What happened?",
+        "I fell off my bike and hurt my foot.",
+        "You didn't come to school. What happened?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P23-D1",
+      "page_uid": "TB-G6S2U3-P23",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S2U3-P23-D1"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Wu Binbin and John are sitting on the floor, looking at photos from John's trip to Turpan. Key patterns: Where did you go?; Did you go to Turpan?",
+      "focus_vocabulary": [
+        "Turpan",
+        "grapes",
+        "mutton kebabs",
+        "delicious"
+      ],
+      "core_patterns": [
+        "Where did you go?",
+        "Did you go to Turpan?",
+        "Who did you go with?",
+        "Yes, I did. I saw lots of grapes and ate lots of mutton kebabs. They were delicious.",
+        "My parents and my uncle."
+      ],
+      "allowed_answer_scope": [
+        "Yes, I did. I saw lots of grapes and ate lots of mutton kebabs. They were delicious.",
+        "My parents and my uncle."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word Turpan?",
+        "Can you say: Where did you go?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U3-P23-D1-goal"
+      ],
+      "branchable_topics": [
+        "Turpan",
+        "grapes",
+        "mutton kebabs",
+        "delicious",
+        "Where did you go?"
+      ],
+      "return_anchors": [
+        "Where did you go?",
+        "Did you go to Turpan?",
+        "Who did you go with?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P24-D1",
+      "page_uid": "TB-G6S2U3-P24",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S2U3-P24-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "John answered a phone call from Amy. Listen and tick or cross. Key patterns: John answered a phone call from Amy. Listen and tick or cross.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "John answered a phone call from Amy. Listen and tick or cross."
+      ],
+      "allowed_answer_scope": [
+        "John answered a phone call from Amy. Listen and tick or cross."
+      ],
+      "entry_probe_questions": [
+        "Can you say: John answered a phone call from Amy. Listen and tick or cross."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U3-P24-D1-goal"
+      ],
+      "branchable_topics": [
+        "Where did you go?",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "John answered a phone call from Amy. Listen and tick or cross."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P24-D2",
+      "page_uid": "TB-G6S2U3-P24",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S2U3-P24-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Amy and John are talking about John's Labour Day holiday. Key patterns: Where did you go?; Did you go to Turpan?",
+      "focus_vocabulary": [
+        "fell off",
+        "Labour Day",
+        "mule",
+        "Turpan",
+        "till"
+      ],
+      "core_patterns": [
+        "Where did you go?",
+        "Did you go to Turpan?",
+        "Yes, we did.",
+        "What happened?",
+        "That's too bad! Are you all right?",
+        "Oh, yes. It looks like a mule! Did you go to Turpan?"
+      ],
+      "allowed_answer_scope": [
+        "I fell off my bike last Saturday and hurt my foot.",
+        "I'm OK now. Come and look at my photos from the Labour Day holiday.",
+        "Mt. Tianshan, Xinjiang. I rode a horse. Look, it's very small!",
+        "Yes, we did. We saw lots of grapes there, but we couldn't eat them. They won't be ready till August."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word fell off?",
+        "Can you say: Where did you go?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U3-P24-D3",
+        "TB-G6S2U3-P24-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U3-P24-D2-goal"
+      ],
+      "branchable_topics": [
+        "fell off",
+        "Labour Day",
+        "mule",
+        "Turpan",
+        "till",
+        "Where did you go?",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "Where did you go?",
+        "Did you go to Turpan?",
+        "Yes, we did."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P24-D3",
+      "page_uid": "TB-G6S2U3-P24",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S2U3-P24-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Questions about John's and the student's holiday. Key patterns: Where did John go over his holiday? What did he do?; Where did you go over your holiday?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Where did John go over his holiday? What did he do?",
+        "Where did you go over your holiday?",
+        "What did you do?"
+      ],
+      "allowed_answer_scope": [
+        "Where did John go over his holiday? What did he do?",
+        "Where did you go over your holiday?",
+        "What did you do?"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Where did John go over his holiday? What did he do?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U3-P24-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U3-P24-D3-goal"
+      ],
+      "branchable_topics": [
+        "Where did you go?"
+      ],
+      "return_anchors": [
+        "Where did John go over his holiday? What did he do?",
+        "Where did you go over your holiday?",
+        "What did you do?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P25-D1",
+      "page_uid": "TB-G6S2U3-P25",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S2U3-P25-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "John's social media posts showing his past activities. The left post is from Tuesday May 1st 18:30, and the right post is from Saturday May 12th 15:30. Key patterns: Where did you go last Saturday?; I went to a forest park.",
+      "focus_vocabulary": [
+        "rode a horse",
+        "went camping",
+        "went fishing",
+        "rode a bike",
+        "hurt my foot"
+      ],
+      "core_patterns": [
+        "Where did you go last Saturday?",
+        "I went to a forest park.",
+        "What did you do there?",
+        "I rode a bike."
+      ],
+      "allowed_answer_scope": [
+        "rode a horse",
+        "went camping",
+        "went fishing",
+        "rode a bike",
+        "hurt my foot"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word rode a horse?",
+        "Can you say: Where did you go last Saturday?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U3-P25-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U3-P25-D1-goal"
+      ],
+      "branchable_topics": [
+        "rode a horse",
+        "went camping",
+        "went fishing",
+        "rode a bike",
+        "hurt my foot",
+        "Where did you go?",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Where did you go last Saturday?",
+        "I went to a forest park.",
+        "What did you do there?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P25-D2",
+      "page_uid": "TB-G6S2U3-P25",
+      "page_type": "vocabulary",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S2U3-P25-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Listen to the audio and fill in the blanks about what Carl, Meimei, and Mr Guo did yesterday. Key patterns: What did they do yesterday?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What did they do yesterday?"
+      ],
+      "allowed_answer_scope": [
+        "What did they do yesterday?"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What did they do yesterday?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U3-P25-D2-goal"
+      ],
+      "branchable_topics": [
+        "Where did you go?",
+        "Listen, answer and write"
+      ],
+      "return_anchors": [
+        "What did they do yesterday?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P26-D1",
+      "page_uid": "TB-G6S2U3-P26",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G6S2U3-P26-D1"
+      ],
+      "teaching_goal": "Catch the key information from the listening task.",
+      "teaching_summary": "Wu Binbin and Amy meet Sarah at school. Listen and circle. Key patterns: Listen and circle.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Listen and circle."
+      ],
+      "allowed_answer_scope": [
+        "B. Holidays."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Listen and circle."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U3-P26-D1-goal"
+      ],
+      "branchable_topics": [
+        "Where did you go?",
+        "Let's try"
+      ],
+      "return_anchors": [
+        "Listen and circle."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P26-D2",
+      "page_uid": "TB-G6S2U3-P26",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G6S2U3-P26-D2"
+      ],
+      "teaching_goal": "Understand and say the core dialogue pattern on the page.",
+      "teaching_summary": "Sarah, Amy and Wu Binbin are talking about Amy's winter holiday in Sanya. Key patterns: Where did you go over the winter holiday?; How did you go there?",
+      "focus_vocabulary": [
+        "winter holiday",
+        "far from",
+        "by plane",
+        "take pictures",
+        "go swimming"
+      ],
+      "core_patterns": [
+        "Where did you go over the winter holiday?",
+        "How did you go there?",
+        "What did you do there?",
+        "Really? Did you like it?",
+        "Hainan is far from here. How did you go there?",
+        "How was the beach? What did you do there?"
+      ],
+      "allowed_answer_scope": [
+        "My family and I went to Sanya.",
+        "Yes, it was so warm.",
+        "We went there by plane.",
+        "It was beautiful. I took lots of pictures, and I also went swimming."
+      ],
+      "entry_probe_questions": [
+        "Do you know the word winter holiday?",
+        "Can you say: Where did you go over the winter holiday?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U3-P26-D3",
+        "TB-G6S2U3-P26-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U3-P26-D2-goal"
+      ],
+      "branchable_topics": [
+        "winter holiday",
+        "far from",
+        "by plane",
+        "take pictures",
+        "go swimming",
+        "Where did you go?",
+        "Let's talk"
+      ],
+      "return_anchors": [
+        "Where did you go over the winter holiday?",
+        "How did you go there?",
+        "What did you do there?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P26-D3",
+      "page_uid": "TB-G6S2U3-P26",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S2U3-P26-D3"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Questions about Amy's trip and a prompt for students to talk about their own winter holiday. Key patterns: Where did Amy go last winter holiday?; How did she go there?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Where did Amy go last winter holiday?",
+        "How did she go there?",
+        "What did she do?"
+      ],
+      "allowed_answer_scope": [
+        "Where did Amy go last winter holiday?",
+        "How did she go there?",
+        "What did she do?"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Where did Amy go last winter holiday?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U3-P26-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U3-P26-D3-goal"
+      ],
+      "branchable_topics": [
+        "Where did you go?",
+        "Talk about your winter holiday."
+      ],
+      "return_anchors": [
+        "Where did Amy go last winter holiday?",
+        "How did she go there?",
+        "What did she do?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P27-D1",
+      "page_uid": "TB-G6S2U3-P27",
+      "page_type": "vocabulary",
+      "block_type": "vocabulary_core",
+      "source_refs": [
+        "TB-G6S2U3-P27-D1"
+      ],
+      "teaching_goal": "Recognize and say the core vocabulary on the page.",
+      "teaching_summary": "Illustrations of activities done during the summer holiday. Key patterns: Amy: How was your summer holiday, Binbin?; Wu Binbin: It was good. I went swimming every weekend and took lots of pictures.",
+      "focus_vocabulary": [
+        "ate fresh food",
+        "went swimming",
+        "took pictures",
+        "bought gifts"
+      ],
+      "core_patterns": [
+        "Amy: How was your summer holiday, Binbin?",
+        "Wu Binbin: It was good. I went swimming every weekend and took lots of pictures."
+      ],
+      "allowed_answer_scope": [
+        "ate fresh food",
+        "went swimming",
+        "took pictures",
+        "bought gifts"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word ate fresh food?",
+        "Can you say: Amy: How was your summer holiday, Binbin?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "word_drill",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U3-P27-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U3-P27-D1-goal"
+      ],
+      "branchable_topics": [
+        "ate fresh food",
+        "went swimming",
+        "took pictures",
+        "bought gifts",
+        "Where did you go?",
+        "Let's learn"
+      ],
+      "return_anchors": [
+        "Amy: How was your summer holiday, Binbin?",
+        "Wu Binbin: It was good. I went swimming every weekend and took lots of pictures."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P27-D2",
+      "page_uid": "TB-G6S2U3-P27",
+      "page_type": "vocabulary",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S2U3-P27-D2"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Andy is showing his summer holiday activities and a man wants to buy Robin. Key patterns: Last summer holiday, Andy ate ...; He took pictures of ...",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Last summer holiday, Andy ate ...",
+        "He took pictures of ...",
+        "He went ...",
+        "He bought ...",
+        "Robin is not for sale!",
+        "How much is this?"
+      ],
+      "allowed_answer_scope": [
+        "Sorry. You can't buy him. He's my friend!",
+        "Oops!"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Last summer holiday, Andy ate ..."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U3-P27-D2-goal"
+      ],
+      "branchable_topics": [
+        "Where did you go?",
+        "Look and say"
+      ],
+      "return_anchors": [
+        "Last summer holiday, Andy ate ...",
+        "He took pictures of ...",
+        "He went ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P28-D1",
+      "page_uid": "TB-G6S2U3-P28",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S2U3-P28-D1"
+      ],
+      "teaching_goal": "Use the page dialogue pattern in short guided practice.",
+      "teaching_summary": "Wu Binbin finds a dog, names it Max, and introduces it to his parents. Key patterns: What's your name? How about \"Max\"?; Hello, Max!",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What's your name? How about \"Max\"?",
+        "Hello, Max!"
+      ],
+      "allowed_answer_scope": [
+        "Hello, Max!"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What's your name? How about \"Max\"?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U3-P28-D2"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U3-P28-D1-goal"
+      ],
+      "branchable_topics": [
+        "Read and write"
+      ],
+      "return_anchors": [
+        "What's your name? How about \"Max\"?",
+        "Hello, Max!"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P28-D2",
+      "page_uid": "TB-G6S2U3-P28",
+      "page_type": "dialogue",
+      "block_type": "reading_passage",
+      "source_refs": [
+        "TB-G6S2U3-P28-D2"
+      ],
+      "teaching_goal": "Read and understand the key information in the passage.",
+      "teaching_summary": "Wu Binbin's diary about his day with his family and their new dog Max. Key patterns: Today was a sunny day. In the morning, we rode a bike for three people. Max sat in a basket on the front of the bike. That was fun! We took pictures of the beautiful countryside. We bought some gifts and ate some delicious food.; In the afternoon, Mum ate some bad fruit and didn't feel well. So we stayed in the hotel. Dad and I wanted to make her happy. We dressed up and made a funny play. Robin played the part of a dog. He was so cute. Max liked him so much. He jumped on him and licked him. Of course, Robin didn't like it. We laughed and laughed.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Today was a sunny day. In the morning, we rode a bike for three people. Max sat in a basket on the front of the bike. That was fun! We took pictures of the beautiful countryside. We bought some gifts and ate some delicious food.",
+        "In the afternoon, Mum ate some bad fruit and didn't feel well. So we stayed in the hotel. Dad and I wanted to make her happy. We dressed up and made a funny play. Robin played the part of a dog. He was so cute. Max liked him so much. He jumped on him and licked him. Of course, Robin didn't like it. We laughed and laughed.",
+        "It was a bad day but also a good day!"
+      ],
+      "allowed_answer_scope": [
+        "Today was a sunny day. In the morning, we rode a bike for three people. Max sat in a basket on the front of the bike. That was fun! We took pictures of the beautiful countryside. We bought some gifts and ate some delicious food.",
+        "In the afternoon, Mum ate some bad fruit and didn't feel well. So we stayed in the hotel. Dad and I wanted to make her happy. We dressed up and made a funny play. Robin played the part of a dog. He was so cute. Max liked him so much. He jumped on him and licked him. Of course, Robin didn't like it. We laughed and laughed.",
+        "It was a bad day but also a good day!"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Today was a sunny day. In the morning, we rode a bike for three people. Max sat in a basket on the front of the bike. That was fun! We took pictures of the beautiful countryside. We bought some gifts and ate some delicious food."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U3-P28-D2-goal"
+      ],
+      "branchable_topics": [
+        "Read and write",
+        "Saturday, April 23rd"
+      ],
+      "return_anchors": [
+        "Today was a sunny day. In the morning, we rode a bike for three people. Max sat in a basket on the front of the bike. That was fun! We took pictures of the beautiful countryside. We bought some gifts and ate some delicious food.",
+        "In the afternoon, Mum ate some bad fruit and didn't feel well. So we stayed in the hotel. Dad and I wanted to make her happy. We dressed up and made a funny play. Robin played the part of a dog. He was so cute. Max liked him so much. He jumped on him and licked him. Of course, Robin didn't like it. We laughed and laughed.",
+        "It was a bad day but also a good day!"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P29-D1",
+      "page_uid": "TB-G6S2U3-P29",
+      "page_type": "writing",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S2U3-P29-D1"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Three pictures showing events from a story: Wu Binbin sick in bed, Robin playing with a dog, and the family riding a tandem bike. Key patterns: Number the pictures.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Number the pictures."
+      ],
+      "allowed_answer_scope": [
+        "Number the pictures."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Number the pictures."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U3-P29-D2",
+        "TB-G6S2U3-P29-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U3-P29-D1-goal"
+      ],
+      "branchable_topics": [
+        "My weekend plan",
+        "Number the pictures."
+      ],
+      "return_anchors": [
+        "Number the pictures."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P29-D2",
+      "page_uid": "TB-G6S2U3-P29",
+      "page_type": "writing",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S2U3-P29-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Two boxes labeled 'Bad:' and 'Good:' for students to list events. Key patterns: What happened to Wu Binbin's family?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "What happened to Wu Binbin's family?"
+      ],
+      "allowed_answer_scope": [
+        "What happened to Wu Binbin's family?"
+      ],
+      "entry_probe_questions": [
+        "Can you say: What happened to Wu Binbin's family?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U3-P29-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U3-P29-D2-goal"
+      ],
+      "branchable_topics": [
+        "My weekend plan",
+        "What happened to Wu Binbin's family?"
+      ],
+      "return_anchors": [
+        "What happened to Wu Binbin's family?"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P29-D3",
+      "page_uid": "TB-G6S2U3-P29",
+      "page_type": "writing",
+      "block_type": "writing_prompt",
+      "source_refs": [
+        "TB-G6S2U3-P29-D3"
+      ],
+      "teaching_goal": "Work on the writing prompt activity.",
+      "teaching_summary": "A writing template for students to describe their own bad but good day. Key patterns: Bad luck often brings good luck.",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Bad luck often brings good luck."
+      ],
+      "allowed_answer_scope": [
+        "Bad luck often brings good luck."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Bad luck often brings good luck."
+      ],
+      "repair_modes": [
+        "repeat"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U3-P29-D3-goal"
+      ],
+      "branchable_topics": [
+        "My weekend plan",
+        "Now write about your bad but good day."
+      ],
+      "return_anchors": [
+        "Bad luck often brings good luck."
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P30-D1",
+      "page_uid": "TB-G6S2U3-P30",
+      "page_type": "assessment",
+      "block_type": "assessment_quiz",
+      "source_refs": [
+        "TB-G6S2U3-P30-D1"
+      ],
+      "teaching_goal": "Check whether the learner can complete the unit review task.",
+      "teaching_summary": "Listening comprehension exercises including true/false questions based on pictures and answering questions about past weekend activities. Key patterns: Let's check",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Let's check"
+      ],
+      "allowed_answer_scope": [
+        "Let's check"
+      ],
+      "entry_probe_questions": [
+        "Can you say: Let's check"
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U3-P30-D1-goal"
+      ],
+      "branchable_topics": [
+        "Where did you go?",
+        "Let's check"
+      ],
+      "return_anchors": [
+        "Let's check"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P30-D2",
+      "page_uid": "TB-G6S2U3-P30",
+      "page_type": "assessment",
+      "block_type": "practice_fill_blank",
+      "source_refs": [
+        "TB-G6S2U3-P30-D2"
+      ],
+      "teaching_goal": "Retell the reading content by filling in key blanks.",
+      "teaching_summary": "Fill in the blanks with the correct past tense forms of verbs to complete sentences about dinosaurs. Key patterns: am/is → was; are → were",
+      "focus_vocabulary": [
+        "dinosaur"
+      ],
+      "core_patterns": [
+        "am/is → was",
+        "are → were",
+        "eat → ate",
+        "drink → drank",
+        "run → ran"
+      ],
+      "allowed_answer_scope": [
+        "were",
+        "ate",
+        "ran"
+      ],
+      "entry_probe_questions": [
+        "Do you know the word dinosaur?",
+        "Can you say: am/is → was"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U3-P30-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U3-P30-D2-goal"
+      ],
+      "branchable_topics": [
+        "dinosaur",
+        "Where did you go?",
+        "Let's wrap it up"
+      ],
+      "return_anchors": [
+        "am/is → was",
+        "are → were",
+        "eat → ate"
+      ]
+    },
+    {
+      "block_uid": "TB-G6S2U3-P31-D1",
+      "page_uid": "TB-G6S2U3-P31",
+      "page_type": "reading",
+      "block_type": "story_time",
+      "source_refs": [
+        "TB-G6S2U3-P31-D1"
+      ],
+      "teaching_goal": "Read and retell the key story events.",
+      "teaching_summary": "Zoom dreams about going to the moon, meeting Chang'e and the rabbit, and returning by spaceship. He then wakes up and realizes it was a dream. Key patterns: How was your holiday?; Where did you go?",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "How was your holiday?",
+        "Where did you go?",
+        "How did you go there?",
+        "What did you see?",
+        "Did you take any pictures?",
+        "Yes, I did. Oops, where did I put the pictures?"
+      ],
+      "allowed_answer_scope": [
+        "It's time to go. Good! Here comes a spaceship.",
+        "It was fun.",
+        "I went to the moon.",
+        "By spaceship.",
+        "I saw Chang'e, the rabbit and the tree.",
+        "Oh, it was a dream."
+      ],
+      "entry_probe_questions": [
+        "Can you say: How was your holiday?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "choice_probe"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G6S2U3-P31-D1-goal"
+      ],
+      "branchable_topics": [
+        "Story time"
+      ],
+      "return_anchors": [
+        "How was your holiday?",
+        "Where did you go?",
+        "How did you go there?"
+      ]
+    }
+  ]
+}

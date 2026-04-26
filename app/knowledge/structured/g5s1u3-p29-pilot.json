@@ -1,0 +1,131 @@
+{
+  "pilot_id": "g5s1u3-p29-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S1",
+    "unit": "U3",
+    "pages": [29]
+  },
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S1U3-P29",
+      "page_type": "reading",
+      "page_intro_cn": "Unit 3 page 29: read Robin notes about food likes and dislikes, then write your own note.",
+      "entry_probe_questions": [
+        "Can you tell me one food the writer likes?",
+        "Do you know the difference between like and do not like in the notes?"
+      ],
+      "assumed_prior_knowledge": [
+        {
+          "topic": "food adjectives and preference sentences from earlier Unit 3 pages",
+          "source": "unit_progression",
+          "confidence": "medium",
+          "verification_status": "unverified",
+          "verify_by_block_uid": "TB-G5S1U3-P29-D1",
+          "learning_target_uids": [
+            "LT-G5S1U3-P29-read-food-preferences"
+          ]
+        }
+      ],
+      "priority_blocks": [
+        "TB-G5S1U3-P29-D1",
+        "TB-G5S1U3-P29-D2",
+        "TB-G5S1U3-P29-D3"
+      ]
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S1U3-P29-D1",
+      "page_uid": "TB-G5S1U3-P29",
+      "page_type": "reading",
+      "block_type": "reading_passage",
+      "source_refs": ["TB-G5S1U3-P29-D1"],
+      "teaching_goal": "Read two short notes and identify food likes and dislikes.",
+      "teaching_summary": "Robin receives notes about favourite food, acceptable food, and disliked vegetables.",
+      "focus_vocabulary": ["ice cream", "sweet", "beef", "chicken", "onions", "salad", "vegetables", "carrots"],
+      "core_patterns": ["My favourite food is ...", "I do not like ... but ... is OK."],
+      "allowed_answer_scope": ["Binbin likes ice cream.", "Grandpa likes chicken.", "Grandpa does not like carrots."],
+      "entry_probe_questions": ["Can you tell me one thing Binbin likes?", "Can you find one food Grandpa does not like?"],
+      "repair_modes": ["repeat", "choice_probe", "sentence_drill"],
+      "next_block_uids": ["TB-G5S1U3-P29-D2", "TB-G5S1U3-P29-D3"],
+      "learning_target_uids": ["LT-G5S1U3-P29-read-food-preferences"]
+      ,
+      "branchable_topics": ["likes", "dislikes", "reading"],
+      "return_anchors": ["My favourite food is ...", "I do not like ... but ... is OK."]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P29-D2",
+      "page_uid": "TB-G5S1U3-P29",
+      "page_type": "reading",
+      "block_type": "practice_choice",
+      "source_refs": ["TB-G5S1U3-P29-D2"],
+      "teaching_goal": "Infer what both people can eat.",
+      "teaching_summary": "Choose the option that works for both note writers.",
+      "focus_vocabulary": ["chicken", "onions", "beef", "salad", "carrots"],
+      "core_patterns": ["What can they both eat?"],
+      "allowed_answer_scope": ["Chicken and onions"],
+      "entry_probe_questions": ["What food works for both people?"],
+      "repair_modes": ["choice_probe", "repeat"],
+      "next_block_uids": ["TB-G5S1U3-P29-D3"],
+      "learning_target_uids": ["LT-G5S1U3-P29-infer-common-food"]
+      ,
+      "branchable_topics": ["common food", "reading inference"],
+      "return_anchors": ["What can they both eat?"]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P29-D3",
+      "page_uid": "TB-G5S1U3-P29",
+      "page_type": "reading",
+      "block_type": "writing_prompt",
+      "source_refs": ["TB-G5S1U3-P29-D3"],
+      "teaching_goal": "Write a short note to Robin about food preferences.",
+      "teaching_summary": "Use the note frame to describe favourite food, one dislike, and one like.",
+      "focus_vocabulary": ["favourite food", "do not like", "like"],
+      "core_patterns": ["My favourite food is ...", "I do not like ... but I like ..."],
+      "allowed_answer_scope": ["A short note with favourite food, one dislike, and one like."],
+      "entry_probe_questions": ["Can you tell me your favourite food first?"],
+      "repair_modes": ["sentence_drill", "choice_probe"],
+      "next_block_uids": [],
+      "learning_target_uids": ["LT-G5S1U3-P29-write-food-note"]
+      ,
+      "branchable_topics": ["note writing", "favourite food", "like and dislike"],
+      "return_anchors": ["My favourite food is ...", "I do not like ... but I like ..."]
+    }
+  ],
+  "knowledge_atoms": [
+    { "atom_uid": "KA-G5S1U3-word-onions", "atom_type": "word", "text": "onions", "gloss": "plural onion" },
+    { "atom_uid": "KA-G5S1U3-word-carrots", "atom_type": "word", "text": "carrots", "gloss": "plural carrot" },
+    { "atom_uid": "KA-G5S1U3-word-vegetables", "atom_type": "word", "text": "vegetables", "gloss": "plural vegetable" },
+    { "atom_uid": "KA-G5S1U3-pattern-like-dislike-note", "atom_type": "sentence_pattern", "text": "I do not like ... but I like ..." }
+  ],
+  "learning_targets": [
+    {
+      "target_uid": "LT-G5S1U3-P29-read-food-preferences",
+      "category": "reading_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner identifies key likes and dislikes from both notes.",
+        "shaky": "Learner extracts some information with prompting.",
+        "not_mastered": "Learner cannot track the food preferences in the notes."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P29-infer-common-food",
+      "category": "reading_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner infers the shared acceptable food correctly.",
+        "shaky": "Learner narrows to two options with support.",
+        "not_mastered": "Learner cannot infer what both can eat."
+      }
+    },
+    {
+      "target_uid": "LT-G5S1U3-P29-write-food-note",
+      "category": "writing_task",
+      "mastery_signal_examples": {
+        "mastered": "Learner writes a short preference note with the target frame.",
+        "shaky": "Learner completes the frame with sentence support.",
+        "not_mastered": "Learner cannot produce the note."
+      }
+    }
+  ]
+}
