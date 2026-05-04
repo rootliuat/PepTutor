@@ -38,6 +38,9 @@ LLM_CONTEXT_BREAKDOWN_AUDIT_SCRIPT = (
 UNKNOWN_CONTEXT_ATTRIBUTION_AUDIT_SCRIPT = (
     REPO_ROOT / "scripts" / "audit_unknown_context_attribution.py"
 )
+RUNTIME_STATE_SHADOW_AUDIT_SCRIPT = (
+    REPO_ROOT / "scripts" / "audit_runtime_state_minimal_view_shadow.py"
+)
 MILI_PERSONA_CONSISTENCY_AUDIT_SCRIPT = (
     REPO_ROOT / "scripts" / "audit_mili_persona_consistency.py"
 )
@@ -175,6 +178,9 @@ def _run_smoke_browser_script(
     env["PEPTUTOR_LESSON_SMOKE_WAIT_SCRIPT"] = str(stubs.wait_script)
     env["PEPTUTOR_LESSON_SMOKE_LOG_DIR"] = str(stubs.log_dir)
     env["PEPTUTOR_LESSON_SMOKE_ARTIFACT_DIR"] = str(tmp_path / "browser-artifacts")
+    env["PEPTUTOR_TEST_GOAL_ID"] = f"pytest-{tmp_path.name}"
+    env["PEPTUTOR_TEST_GOAL_TYPE"] = "frontend"
+    env["PEPTUTOR_TEST_BUDGET_DIR"] = str(tmp_path / "test-budget")
 
     for key in (
         "PEPTUTOR_LESSON_LIVE_PROMPTS",
@@ -188,6 +194,7 @@ def _run_smoke_browser_script(
         "PEPTUTOR_LESSON_SMOKE_BACKEND_PORT",
         "PEPTUTOR_LESSON_SMOKE_BROWSER_TIMEOUT_SECONDS",
         "PEPTUTOR_TEST_PNPM_STDOUT",
+        "PEPTUTOR_TEST_BUDGET_OVERRIDE_REASON",
     ):
         env.pop(key, None)
 
@@ -221,6 +228,9 @@ def _run_regression20_script(
     env["PEPTUTOR_LESSON_REGRESSION_MATRIX_SCRIPT"] = str(matrix_script)
     env["PEPTUTOR_LESSON_REGRESSION_OUT_DIR"] = str(tmp_path / "matrix-artifacts")
     env["PEPTUTOR_TEST_MATRIX_ARGS_LOG"] = str(matrix_args_log)
+    env["PEPTUTOR_TEST_GOAL_ID"] = f"pytest-{tmp_path.name}"
+    env["PEPTUTOR_TEST_GOAL_TYPE"] = "backend"
+    env["PEPTUTOR_TEST_BUDGET_DIR"] = str(tmp_path / "test-budget")
 
     for key in (
         "PEPTUTOR_LESSON_LIVE_PROMPTS",
@@ -231,6 +241,7 @@ def _run_regression20_script(
         "PEPTUTOR_SIMPLEMEM_SEMANTIC_RECALL",
         "PEPTUTOR_LESSON_REGRESSION_FULL_STACK",
         "PEPTUTOR_LESSON_REGRESSION_KEEP_SERVER",
+        "PEPTUTOR_TEST_BUDGET_OVERRIDE_REASON",
     ):
         env.pop(key, None)
 
@@ -267,6 +278,9 @@ def _run_deep_browser_script(
     env["PEPTUTOR_LESSON_DEEP_HISTORY_ROOT"] = str(tmp_path / "history")
     env["PEPTUTOR_LESSON_DEEP_FRONTEND_PORT"] = str(frontend_port)
     env["PEPTUTOR_TEST_DEEP_ARGS_LOG"] = str(deep_args_log)
+    env["PEPTUTOR_TEST_GOAL_ID"] = f"pytest-{tmp_path.name}"
+    env["PEPTUTOR_TEST_GOAL_TYPE"] = "deep-s4"
+    env["PEPTUTOR_TEST_BUDGET_DIR"] = str(tmp_path / "test-budget")
 
     for key in (
         "PEPTUTOR_LESSON_LIVE_PROMPTS",
@@ -278,6 +292,7 @@ def _run_deep_browser_script(
         "PEPTUTOR_LESSON_DEEP_FULL_STACK",
         "PEPTUTOR_LESSON_DEEP_KEEP_SERVERS",
         "PEPTUTOR_LESSON_DEEP_OBSERVER_TIMEOUT_SECONDS",
+        "PEPTUTOR_TEST_BUDGET_OVERRIDE_REASON",
     ):
         env.pop(key, None)
 
@@ -301,6 +316,11 @@ def _read_assignments(path: Path) -> dict[str, str]:
         key, value = line.split("=", 1)
         values[key] = value
     return values
+
+
+def _read_budget_metadata(tmp_path: Path, goal_id: str) -> dict[str, object]:
+    path = tmp_path / "test-budget" / f"{goal_id}.json"
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def _free_loopback_port() -> int:
@@ -433,6 +453,18 @@ def _load_unknown_context_attribution_audit_module():
     spec = importlib.util.spec_from_file_location(
         "audit_unknown_context_attribution",
         UNKNOWN_CONTEXT_ATTRIBUTION_AUDIT_SCRIPT,
+    )
+    assert spec is not None
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module
+
+
+def _load_runtime_state_shadow_audit_module():
+    spec = importlib.util.spec_from_file_location(
+        "audit_runtime_state_minimal_view_shadow",
+        RUNTIME_STATE_SHADOW_AUDIT_SCRIPT,
     )
     assert spec is not None
     module = importlib.util.module_from_spec(spec)
@@ -597,6 +629,9 @@ def test_smoke_matrix_copies_llm_token_usage_from_response_audit() -> None:
         "textbook_block_bytes": 48,
         "page_overview_bytes": 20,
         "runtime_state_bytes": 16,
+        "runtime_state_minimal_view_bytes": 9,
+        "runtime_state_legacy_frame_bytes": 20,
+        "runtime_state_savings_candidate_bytes": 11,
         "teaching_move_bytes": 0,
         "policy_instruction_bytes": 30,
         "quality_revision_prompt_bytes": 0,
@@ -676,6 +711,9 @@ def test_smoke_matrix_copies_llm_token_usage_from_response_audit() -> None:
     assert turn["llm_token_usage"]["other_bytes"] == 8
     assert turn["llm_token_usage"]["unknown_context_bytes"] == 1
     assert turn["llm_token_usage"]["prompt_frame_overhead_bytes"] == 3
+    assert turn["llm_token_usage"]["runtime_state_minimal_view_bytes"] == 9
+    assert turn["llm_token_usage"]["runtime_state_legacy_frame_bytes"] == 20
+    assert turn["llm_token_usage"]["runtime_state_savings_candidate_bytes"] == 11
 
 
 def test_smoke_matrix_persona_semantics_distinguish_call_injection() -> None:
@@ -2788,13 +2826,14 @@ def test_smoke_lesson_browser_runs_route_focused_defaults(tmp_path: Path) -> Non
             "PEPTUTOR_SIMPLEMEM_SEMANTIC_RECALL": "keep-recall",
             "PEPTUTOR_TEST_PNPM_STDOUT": (
                 " ↓ |stage-web-browser (chromium)| src/pages/lesson/index.browser.test.ts > /lesson browser smoke > skipped fixture-only input test\\n"
+                " ↓ |stage-web-browser (chromium)| src/pages/lesson/index.browser.test.ts > /lesson browser smoke (real backend) > real backend opt-in skipped test\\n"
                 " ✓ |stage-web-browser (chromium)| src/pages/lesson/index.browser.test.ts > /lesson browser smoke (real backend) > real backend route test 123ms\\n"
                 " [lesson-real-smoke] {\"test\":\"real backend route test\",\"duration_ms\":123,\"teacher_response\":\"ok\"}\\n"
                 " [lesson-s4-interrupt-evidence] {\"test\":\"barge_in_allowed\",\"interrupt_policy\":\"barge_in_allowed\",\"tts_playback_stop_reason_normalized\":\"final_transcript_interrupt\"}\\n"
                 " [lesson-real-debug-signals] {\"test\":\"debug signals\",\"debug_signals\":{\"response_audit\":{\"route\":\"llm_only\"}}}\\n"
                 " [lesson-real-artifacts] {\"test\":\"real backend route test\",\"network_entries\":[{\"name\":\"http://127.0.0.1:9625/lesson/turn\",\"initiator_type\":\"fetch\",\"duration_ms\":12,\"transfer_size\":456}],\"history_debug\":{\"active_session_id\":\"session-1\",\"active_lesson_tab_writable\":true,\"active_history_read_only\":false,\"history_safety_session_count\":1},\"dom_snapshot\":{\"text_chars\":123,\"has_lesson_sidebar\":true},\"screenshot\":{\"format\":\"png\",\"data_url\":\"data:image/png;base64,iVBORw0KGgo=\",\"error\":\"\"}}\\n"
                 " Test Files  1 passed (1)\\n"
-                " Tests  10 passed | 21 skipped (31)\\n"
+                " Tests  10 passed | 22 skipped (32)\\n"
             ),
         },
     )
@@ -2838,7 +2877,7 @@ def test_smoke_lesson_browser_runs_route_focused_defaults(tmp_path: Path) -> Non
     assert report["browser_test_counts"] == {
         "passed": 10,
         "failed": 0,
-        "skipped": 21,
+        "skipped": 22,
     }
     assert report["browser_test_file_counts"] == {
         "passed": 1,
@@ -2850,9 +2889,45 @@ def test_smoke_lesson_browser_runs_route_focused_defaults(tmp_path: Path) -> Non
         "timed_out": False,
         "browser_exit_code": 0,
         "failed_test_count": 0,
-        "skipped_test_count": 21,
+        "skipped_test_count": 22,
     }
-    assert report["skipped_tests"] == ["skipped fixture-only input test"]
+    assert report["browser_suite_summary"] == {
+        "real_backend_passed": 1,
+        "real_backend_failed": 0,
+        "real_backend_skipped": 1,
+        "mock_suite_passed": 0,
+        "mock_suite_failed": 0,
+        "mock_suite_skipped": 1,
+        "skipped_due_real_backend_mode": 1,
+    }
+    assert report["skipped_tests"] == [
+        "skipped fixture-only input test",
+        "real backend opt-in skipped test",
+    ]
+    assert report["skipped_test_entries"] == [
+        {
+            "name": "skipped fixture-only input test",
+            "suite_name": "/lesson browser smoke",
+            "suite_kind": "mock_suite",
+            "raw": "↓ |stage-web-browser (chromium)| src/pages/lesson/index.browser.test.ts > /lesson browser smoke > skipped fixture-only input test",
+            "skip_reason": "mock_skipped_due_real_backend_mode",
+        },
+        {
+            "name": "real backend opt-in skipped test",
+            "suite_name": "/lesson browser smoke (real backend)",
+            "suite_kind": "real_backend_suite",
+            "raw": "↓ |stage-web-browser (chromium)| src/pages/lesson/index.browser.test.ts > /lesson browser smoke (real backend) > real backend opt-in skipped test",
+            "skip_reason": "real_backend_conditional_skip",
+        },
+    ]
+    assert report["passed_test_entries"] == [
+        {
+            "name": "real backend route test",
+            "suite_name": "/lesson browser smoke (real backend)",
+            "suite_kind": "real_backend_suite",
+            "raw": "✓ |stage-web-browser (chromium)| src/pages/lesson/index.browser.test.ts > /lesson browser smoke (real backend) > real backend route test 123ms",
+        }
+    ]
     assert report["passed_tests"] == ["real backend route test"]
     assert report["failed_tests"] == []
     assert report["evidence_events"]["lesson_real_smoke"] == [
@@ -2901,12 +2976,21 @@ def test_smoke_lesson_browser_runs_route_focused_defaults(tmp_path: Path) -> Non
     assert report["trend_comparison"]["status"] == "compared"
     assert report["trend_comparison"]["passed_delta"] == 2
     assert report["trend_comparison"]["failed_delta"] == -1
-    assert report["trend_comparison"]["skipped_delta"] == -1
+    assert report["trend_comparison"]["skipped_delta"] == 0
     assert report["trend_comparison"]["s4_interrupt_event_delta"] == 0
     assert report["trend_comparison"]["failure_reason_changed"] is True
     assert report["log_excerpt"]["browser_tail"]
     assert Path(report["backend_log_path"]).name.startswith("smoke_lesson_browser_")
     assert Path(report["browser_log_path"]).name.startswith("lesson_browser_vitest_")
+    markdown = Path(report["artifact_manifest"]["markdown_report"]).read_text(encoding="utf-8")
+    assert "## Suite Breakdown" in markdown
+    assert "- real_backend_passed: `1`" in markdown
+    assert "- mock_suite_skipped: `1`" in markdown
+    assert "- skipped_due_real_backend_mode: `1`" in markdown
+    assert (
+        "- skipped fixture-only input test (`mock_suite`, `mock_skipped_due_real_backend_mode`)"
+        in markdown
+    )
 
 
 def test_smoke_lesson_browser_passes_selected_backend_port_to_real_browser_runner(tmp_path: Path) -> None:
@@ -3007,6 +3091,185 @@ def test_smoke_lesson_regression20_tails_log_when_matrix_fails(tmp_path: Path) -
     pid = int(stubs.server_pid_file.read_text(encoding="utf-8").strip())
     assert _wait_for_process_exit(pid)
     assert "TERM" in stubs.server_events_log.read_text(encoding="utf-8")
+
+
+def test_test_budget_guard_allows_first_full_smoke_and_records_metadata(tmp_path: Path) -> None:
+    goal_id = "pytest-budget-full-first"
+    stubs = _prepare_smoke_browser_stubs(tmp_path)
+    matrix_args_log = tmp_path / "matrix-args.log"
+    matrix_script = _write_executable(
+        tmp_path / "smoke_lesson_matrix_stub.sh",
+        """\
+        #!/usr/bin/env bash
+        set -euo pipefail
+        printf '%s\n' "$*" > "${PEPTUTOR_TEST_MATRIX_ARGS_LOG}"
+        out_dir=""
+        args=("$@")
+        for ((i = 0; i < ${#args[@]}; i++)); do
+          if [[ "${args[$i]}" == "--out-dir" && $((i + 1)) -lt ${#args[@]} ]]; then
+            out_dir="${args[$((i + 1))]}"
+          fi
+        done
+        mkdir -p "${out_dir}"
+        printf '{"summary":{"acceptance_passed":true}}\n' > "${out_dir}/lesson_smoke_matrix_20000101_000000.json"
+        """,
+    )
+
+    result = _run_regression20_script(
+        tmp_path,
+        stubs=stubs,
+        matrix_script=matrix_script,
+        matrix_args_log=matrix_args_log,
+        extra_env={"PEPTUTOR_TEST_GOAL_ID": goal_id},
+    )
+
+    assert result.returncode == 0, result.stderr
+    assert "Test budget accepted" in result.stdout
+    metadata = _read_budget_metadata(tmp_path, goal_id)
+    assert metadata["goal_id"] == goal_id
+    assert metadata["smoke_type"] == "full_20_page"
+    assert metadata["run_count"] == 1
+    assert metadata["override_reason"] == ""
+    assert metadata["runs_by_type"] == {"full_20_page": 1}
+    assert metadata["report_path"].endswith("lesson_smoke_matrix_20000101_000000.json")
+    assert metadata["runs"][0]["status"] == "completed"
+
+
+def test_test_budget_guard_rejects_second_full_smoke_without_override(tmp_path: Path) -> None:
+    goal_id = "pytest-budget-full-repeat"
+    matrix_args_log = tmp_path / "matrix-args.log"
+    matrix_script = _write_executable(
+        tmp_path / "smoke_lesson_matrix_stub.sh",
+        """\
+        #!/usr/bin/env bash
+        set -euo pipefail
+        printf '%s\n' "$*" > "${PEPTUTOR_TEST_MATRIX_ARGS_LOG}"
+        exit 0
+        """,
+    )
+
+    first = _run_regression20_script(
+        tmp_path,
+        stubs=_prepare_smoke_browser_stubs(tmp_path / "first"),
+        matrix_script=matrix_script,
+        matrix_args_log=matrix_args_log,
+        extra_env={
+            "PEPTUTOR_TEST_GOAL_ID": goal_id,
+            "PEPTUTOR_TEST_BUDGET_DIR": str(tmp_path / "test-budget"),
+        },
+    )
+    assert first.returncode == 0, first.stderr
+
+    second_stubs = _prepare_smoke_browser_stubs(tmp_path / "second")
+    second = _run_regression20_script(
+        tmp_path / "second",
+        stubs=second_stubs,
+        matrix_script=matrix_script,
+        matrix_args_log=matrix_args_log,
+        extra_env={
+            "PEPTUTOR_TEST_GOAL_ID": goal_id,
+            "PEPTUTOR_TEST_BUDGET_DIR": str(tmp_path / "test-budget"),
+        },
+    )
+
+    assert second.returncode == 3
+    assert "Test budget exceeded" in second.stderr
+    assert not second_stubs.server_pid_file.exists()
+    metadata = _read_budget_metadata(tmp_path, goal_id)
+    assert metadata["run_count"] == 1
+    assert len(metadata["runs"]) == 1
+
+
+def test_test_budget_guard_allows_repeat_full_smoke_with_override(tmp_path: Path) -> None:
+    goal_id = "pytest-budget-full-override"
+    matrix_args_log = tmp_path / "matrix-args.log"
+    matrix_script = _write_executable(
+        tmp_path / "smoke_lesson_matrix_stub.sh",
+        """\
+        #!/usr/bin/env bash
+        set -euo pipefail
+        printf '%s\n' "$*" > "${PEPTUTOR_TEST_MATRIX_ARGS_LOG}"
+        exit 0
+        """,
+    )
+
+    first = _run_regression20_script(
+        tmp_path,
+        stubs=_prepare_smoke_browser_stubs(tmp_path / "first"),
+        matrix_script=matrix_script,
+        matrix_args_log=matrix_args_log,
+        extra_env={
+            "PEPTUTOR_TEST_GOAL_ID": goal_id,
+            "PEPTUTOR_TEST_BUDGET_DIR": str(tmp_path / "test-budget"),
+        },
+    )
+    assert first.returncode == 0, first.stderr
+
+    second = _run_regression20_script(
+        tmp_path / "second",
+        stubs=_prepare_smoke_browser_stubs(tmp_path / "second"),
+        matrix_script=matrix_script,
+        matrix_args_log=matrix_args_log,
+        extra_env={
+            "PEPTUTOR_TEST_GOAL_ID": goal_id,
+            "PEPTUTOR_TEST_BUDGET_DIR": str(tmp_path / "test-budget"),
+            "PEPTUTOR_TEST_BUDGET_OVERRIDE_REASON": "rerun after isolated L2 fix",
+        },
+    )
+
+    assert second.returncode == 0, second.stderr
+    metadata = _read_budget_metadata(tmp_path, goal_id)
+    assert metadata["run_count"] == 2
+    assert metadata["runs_by_type"] == {"full_20_page": 2}
+    assert metadata["runs"][1]["override_reason"] == "rerun after isolated L2 fix"
+
+
+def test_test_budget_guard_rejects_browser_smoke_for_backend_goal(tmp_path: Path) -> None:
+    stubs = _prepare_smoke_browser_stubs(tmp_path)
+
+    result = _run_smoke_browser_script(
+        tmp_path,
+        stubs=stubs,
+        extra_env={
+            "PEPTUTOR_TEST_GOAL_ID": "pytest-budget-browser-denied",
+            "PEPTUTOR_TEST_GOAL_TYPE": "backend",
+        },
+    )
+
+    assert result.returncode == 2
+    assert "browser smoke is not allowed" in result.stderr
+    assert not stubs.server_pid_file.exists()
+
+
+def test_test_budget_guard_rejects_deep_smoke_without_deep_s4_tts_or_live2d_goal(
+    tmp_path: Path,
+) -> None:
+    stubs = _prepare_smoke_browser_stubs(tmp_path)
+    deep_args_log = tmp_path / "deep-args.log"
+    deep_script = _write_executable(
+        tmp_path / "lesson_deep_smoke_stub.sh",
+        """\
+        #!/usr/bin/env bash
+        exit 0
+        """,
+    )
+
+    result = _run_deep_browser_script(
+        tmp_path,
+        stubs=stubs,
+        deep_script=deep_script,
+        deep_args_log=deep_args_log,
+        frontend_port=_free_loopback_port(),
+        extra_env={
+            "PEPTUTOR_TEST_GOAL_ID": "pytest-budget-deep-denied",
+            "PEPTUTOR_TEST_GOAL_TYPE": "frontend",
+        },
+    )
+
+    assert result.returncode == 2
+    assert "deep smoke is not allowed" in result.stderr
+    assert not stubs.server_pid_file.exists()
+    assert not deep_args_log.exists()
 
 
 def test_smoke_lesson_deep_browser_runs_observer_with_frontend_and_backend(tmp_path: Path) -> None:
@@ -3838,6 +4101,120 @@ def test_unknown_context_attribution_audit_splits_overhead_fields(
     assert report["top_routes_by_previously_unknown_bytes"][0]["route"] == (
         "rag_plus_llm"
     )
+    assert Path(report["json_path"]).exists()
+    assert Path(report["markdown_path"]).exists()
+
+
+def test_runtime_state_minimal_view_shadow_audit_reports_candidate_savings(
+    tmp_path: Path,
+) -> None:
+    audit = _load_runtime_state_shadow_audit_module()
+    smoke_path = tmp_path / "lesson_smoke_matrix.json"
+    p24_call = {
+        "call_id": "answer-p24",
+        "audit_tag": "teacher_turn_policy.answer_question",
+        "prompt_token_estimate": 300,
+        "route": "answer_turn_policy",
+        "turn_label": "answer_question",
+        "page_uid": "TB-G5S1U3-P24",
+        "block_uid": "TB-G5S1U3-P24-D2",
+        "runtime_state_bytes": 400,
+        "runtime_state_legacy_frame_bytes": 2862,
+        "runtime_state_minimal_view_bytes": 958,
+        "runtime_state_savings_candidate_bytes": 1904,
+    }
+    p13_call = {
+        "call_id": "answer-p13",
+        "audit_tag": "teacher_turn_policy.answer_question",
+        "prompt_token_estimate": 260,
+        "route": "answer_turn_policy",
+        "turn_label": "answer_question",
+        "page_uid": "TB-G6S2U2-P13",
+        "block_uid": "TB-G6S2U2-P13-D2",
+        "runtime_state_bytes": 240,
+        "runtime_state_legacy_frame_bytes": 1298,
+        "runtime_state_minimal_view_bytes": 599,
+        "runtime_state_savings_candidate_bytes": 699,
+    }
+    rag_call = {
+        "call_id": "rag-p6",
+        "audit_tag": "responder.render_teacher_turn.ask_knowledge",
+        "prompt_token_estimate": 120,
+        "route": "rag_plus_llm",
+        "turn_label": "ask_knowledge",
+        "page_uid": "TB-G5S2U1-P6",
+        "block_uid": "TB-G5S2U1-P6-D1",
+        "runtime_state_bytes": 30,
+        "runtime_state_legacy_frame_bytes": 0,
+        "runtime_state_minimal_view_bytes": 0,
+        "runtime_state_savings_candidate_bytes": 0,
+    }
+    smoke_path.write_text(
+        json.dumps(
+            {
+                "summary": {"acceptance_passed": True},
+                "turns": [
+                    {
+                        "page_uid": "TB-G5S1U3-P24",
+                        "page_label": "P24",
+                        "step": "turn_1",
+                        "route": "answer_turn_policy",
+                        "turn_label": "answer_question",
+                        "state_block_uid": "TB-G5S1U3-P24-D2",
+                        "llm_token_usage": {"calls": [p24_call]},
+                    },
+                    {
+                        "page_uid": "TB-G6S2U2-P13",
+                        "page_label": "P13",
+                        "step": "turn_2",
+                        "route": "answer_turn_policy",
+                        "turn_label": "answer_question",
+                        "state_block_uid": "TB-G6S2U2-P13-D2",
+                        "llm_token_usage": {"calls": [p13_call]},
+                    },
+                    {
+                        "page_uid": "TB-G5S2U1-P6",
+                        "page_label": "P6",
+                        "step": "turn_3",
+                        "route": "rag_plus_llm",
+                        "turn_label": "ask_knowledge",
+                        "state_block_uid": "TB-G5S2U1-P6-D1",
+                        "llm_token_usage": {"calls": [rag_call]},
+                    },
+                ],
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    report = audit.audit_runtime_state_minimal_view_shadow(
+        smoke_report_path=smoke_path,
+        out_dir=tmp_path,
+        timestamp="20260504_000001",
+    )
+
+    assert report["kind"] == "lesson_runtime_state_minimal_view_shadow_audit"
+    assert report["shadow_only"] is True
+    assert report["live_prompt_switched"] is False
+    assert report["summary"]["metered_runtime_state_call_count"] == 2
+    assert report["summary"]["total_runtime_state_legacy_frame_bytes"] == 4160
+    assert report["summary"]["total_runtime_state_minimal_view_bytes"] == 1557
+    assert report["summary"]["total_runtime_state_savings_candidate_bytes"] == 2603
+    assert report["summary"]["minimal_view_missing_count"] == 0
+    assert report["top_pages_by_savings_candidate_bytes"][0]["page_uid"] == (
+        "TB-G5S1U3-P24"
+    )
+    route_rows = {
+        row["route"]: row for row in report["top_routes_by_savings_candidate_bytes"]
+    }
+    assert route_rows["answer_turn_policy"][
+        "runtime_state_savings_candidate_bytes"
+    ] == 2603
+    watchlist = {row["page_uid"]: row for row in report["boundary_watchlist"]}
+    assert watchlist["TB-G5S1U3-P24"]["seen_in_sample"] is True
+    assert watchlist["TB-G6S2U2-P13"]["seen_in_sample"] is True
+    assert watchlist["TB-G6S1U1-P4"]["seen_in_sample"] is False
     assert Path(report["json_path"]).exists()
     assert Path(report["markdown_path"]).exists()
 

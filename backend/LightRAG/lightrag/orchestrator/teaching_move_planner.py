@@ -9,7 +9,10 @@ from typing import Any
 
 from lightrag.pedagogy.evaluation import normalize_text
 from lightrag.pedagogy.lesson_brief import CurrentTurnLessonBrief
-from lightrag.pedagogy.teaching_move import TeachingMovePlan
+from lightrag.pedagogy.teaching_move import (
+    TeachingMoveActionContract,
+    TeachingMovePlan,
+)
 
 _REFUSAL_HINTS = (
     "no",
@@ -664,7 +667,9 @@ def _first_question(value: str) -> str:
         first = _clean_target_phrase(cleaned.split("?", 1)[0])
         if _normalized_target_phrase(first).startswith(_QUESTION_TARGET_PREFIXES):
             return _ensure_question_mark(first)
-    if _is_question(cleaned):
+    if _is_question(cleaned) and _normalized_target_phrase(cleaned).startswith(
+        _QUESTION_PREFIXES
+    ):
         return _ensure_question_mark(cleaned)
     for match in re.finditer(
         r"\b(?:What(?:'s| is)?|Where|When|Who|Which|Why|How|Do|Does|Did|Can|Is|Are)\b[^.。!?！？]{1,100}\?",
@@ -720,6 +725,77 @@ def _durable_payload_target_phrase(
     if target_role in {"answer", "phonics"} and action_payload.get("answer_target"):
         return action_payload["answer_target"]
     return fallback
+
+
+def _validated_action_payload_fields(payload_fields: dict[str, Any]) -> dict[str, str]:
+    contract = TeachingMoveActionContract.from_payload_fields(payload_fields)
+    return contract.to_payload_fields()
+
+
+def _fallback_action_payload_fields(
+    *,
+    target_phrase: str,
+    active_prompt: str,
+    return_anchor: str,
+    preserve_page_uid: str = "",
+    preserve_block_uid: str = "",
+) -> dict[str, str]:
+    target = _teaching_action_target_phrase(
+        active_prompt or return_anchor or target_phrase
+    )
+    fallback_fields = {
+        "target_role": "phrase",
+        "expected_student_action": "read",
+        "question_target": "",
+        "answer_target": "",
+        "answer_frame": "",
+        "action_source": "fallback_conservative",
+        "preserve_page_uid": preserve_page_uid,
+        "preserve_block_uid": preserve_block_uid,
+        "active_prompt": active_prompt,
+        "return_anchor": return_anchor,
+        "target_phrase": target,
+    }
+    return _validated_action_payload_fields(fallback_fields)
+
+
+def _vocab_answer_return_action_payload(
+    *,
+    active_prompt: str,
+    return_anchor: str,
+) -> dict[str, str]:
+    target_source = "active_prompt" if active_prompt else "return_anchor"
+    target_phrase = active_prompt or return_anchor
+    question_target = _first_question(target_phrase)
+    if question_target:
+        action_fields = {
+            "target_role": "question",
+            "expected_student_action": "answer",
+            "question_target": question_target,
+            "answer_target": "",
+            "answer_frame": _answer_frame_for(question_target, ""),
+            "action_source": target_source,
+            "preserve_page_uid": "",
+            "preserve_block_uid": "",
+            "active_prompt": active_prompt,
+            "return_anchor": return_anchor,
+            "target_phrase": question_target,
+        }
+    else:
+        action_fields = {
+            "target_role": "phrase",
+            "expected_student_action": "read",
+            "question_target": "",
+            "answer_target": "",
+            "answer_frame": "",
+            "action_source": target_source if target_phrase else "fallback_conservative",
+            "preserve_page_uid": "",
+            "preserve_block_uid": "",
+            "active_prompt": active_prompt,
+            "return_anchor": return_anchor,
+            "target_phrase": _teaching_action_target_phrase(target_phrase),
+        }
+    return _validated_action_payload_fields(action_fields)
 
 
 def _looks_like_answer_sentence(value: str) -> bool:
@@ -811,6 +887,18 @@ class TeachingMovePlanner:
             "preserve_block_uid": preserve_block_uid,
         }
         payload_fields.update(action_payload)
+        try:
+            payload_fields.update(_validated_action_payload_fields(payload_fields))
+        except ValueError:
+            payload_fields.update(
+                _fallback_action_payload_fields(
+                    target_phrase=target_phrase,
+                    active_prompt=active_prompt,
+                    return_anchor=return_anchor,
+                    preserve_page_uid=preserve_page_uid,
+                    preserve_block_uid=preserve_block_uid,
+                )
+            )
         return TeachingMovePlan(
             detected_signal=detected_signal,
             move="gentle_redirect",
@@ -880,6 +968,12 @@ class TeachingMovePlanner:
             "retrieval_evidence_count": retrieval_count,
             "support_evidence_count": support_count,
         }
+        payload_fields.update(
+            _vocab_answer_return_action_payload(
+                active_prompt=effective_active_prompt,
+                return_anchor=return_anchor or "",
+            )
+        )
         return TeachingMovePlan(
             detected_signal="vocabulary_question",
             move="vocab_answer_return",

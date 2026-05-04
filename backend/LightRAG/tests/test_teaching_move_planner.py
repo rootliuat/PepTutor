@@ -11,6 +11,7 @@ from lightrag.orchestrator.teaching_move_planner import (
     classroom_target_phrase_reasons,
     select_classroom_target_phrase,
 )
+from lightrag.pedagogy.teaching_move import TeachingMoveActionContract
 from lightrag.pedagogy.planner import PlannerDecision
 from lightrag.pedagogy.responder import LessonResponder
 
@@ -352,8 +353,99 @@ def test_teaching_move_planner_vocab_answer_return_payload_is_structural():
         "return_to_current_task": True,
         "retrieval_evidence_count": 2,
         "support_evidence_count": 1,
+        "target_role": "question",
+        "expected_student_action": "answer",
+        "question_target": "What did you do last weekend?",
+        "answer_target": "",
+        "answer_frame": "I ... last weekend.",
+        "action_source": "active_prompt",
+        "preserve_page_uid": "",
+        "preserve_block_uid": "",
+        "target_phrase": "What did you do last weekend?",
     }
     assert "Do not change the current page or block." in payload["constraints"]
+
+
+def test_teaching_move_action_contract_validates_allowed_fields():
+    contract = TeachingMoveActionContract.from_payload_fields(
+        {
+            "target_role": "question",
+            "expected_student_action": "answer",
+            "question_target": "How tall is it?",
+            "answer_target": "",
+            "answer_frame": "It's ... metres tall.",
+            "action_source": "block_core_pattern",
+            "preserve_page_uid": "TB-G6S2U1-P4",
+            "preserve_block_uid": "TB-G6S2U1-P4-D2",
+            "active_prompt": "How tall is it?",
+            "return_anchor": "How tall is it?",
+            "target_phrase": "How tall is it?",
+        }
+    )
+
+    assert contract.to_payload_fields() == {
+        "target_role": "question",
+        "expected_student_action": "answer",
+        "question_target": "How tall is it?",
+        "answer_target": "",
+        "answer_frame": "It's ... metres tall.",
+        "action_source": "block_core_pattern",
+        "preserve_page_uid": "TB-G6S2U1-P4",
+        "preserve_block_uid": "TB-G6S2U1-P4-D2",
+        "active_prompt": "How tall is it?",
+        "return_anchor": "How tall is it?",
+        "target_phrase": "How tall is it?",
+    }
+
+
+def test_teaching_move_action_contract_treats_optional_none_as_empty_string():
+    contract = TeachingMoveActionContract.from_payload_fields(
+        {
+            "target_role": "question",
+            "expected_student_action": "answer",
+            "question_target": "How tall is it?",
+            "answer_target": None,
+            "answer_frame": "It's ... metres tall.",
+            "action_source": "block_core_pattern",
+            "preserve_page_uid": "TB-G6S2U1-P4",
+            "preserve_block_uid": "TB-G6S2U1-P4-D2",
+            "active_prompt": "How tall is it?",
+            "return_anchor": None,
+            "target_phrase": "How tall is it?",
+        }
+    )
+
+    assert contract.answer_target == ""
+    assert contract.return_anchor == ""
+
+
+def test_teaching_move_action_contract_rejects_unknown_role_and_non_strings():
+    assert TeachingMoveActionContract.try_from_payload_fields(
+        {
+            "target_role": "mystery",
+            "expected_student_action": "answer",
+            "question_target": "How tall is it?",
+            "answer_target": "",
+            "answer_frame": "It's ... metres tall.",
+            "action_source": "block_core_pattern",
+            "active_prompt": "How tall is it?",
+            "return_anchor": "How tall is it?",
+            "target_phrase": "How tall is it?",
+        }
+    ) is None
+    assert TeachingMoveActionContract.try_from_payload_fields(
+        {
+            "target_role": "question",
+            "expected_student_action": "answer",
+            "question_target": 123,
+            "answer_target": "",
+            "answer_frame": "It's ... metres tall.",
+            "action_source": "block_core_pattern",
+            "active_prompt": "How tall is it?",
+            "return_anchor": "How tall is it?",
+            "target_phrase": "How tall is it?",
+        }
+    ) is None
 
 
 def test_teaching_move_planner_vocab_answer_return_uses_anchor_as_active_prompt_fallback():

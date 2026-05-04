@@ -64,6 +64,8 @@ LessonResponderTurnResult = responder_module.LessonResponderTurnResult
 render_classification_short_answer_reply = (
     responder_module.render_classification_short_answer_reply
 )
+redirect_policy_module = importlib.import_module("lightrag.pedagogy.redirect_reply_policy")
+maybe_render_redirect_reply = redirect_policy_module.maybe_render_redirect_reply
 classification_policy_module = importlib.import_module(
     "lightrag.pedagogy.classification_task_policy"
 )
@@ -132,6 +134,26 @@ def _assert_priority_edges_follow_classroom_order(catalog) -> None:
             block = catalog.get_block(block_uid)
             assert block.page_uid == page.page_uid, block_uid
             assert block.next_block_uids == priority_blocks[index + 1 :], block_uid
+
+
+def _compact_json_bytes(value) -> int:
+    return len(
+        json.dumps(value, ensure_ascii=True, separators=(",", ":")).encode("utf-8")
+    )
+
+
+def _legacy_answer_policy_runtime_state_bytes(frame: dict[str, object]) -> int:
+    return sum(
+        _compact_json_bytes(frame[key])
+        for key in (
+            "teacherasked",
+            "taskboundary",
+            "recentdialogue",
+            "allowedstatewrites",
+            "learnerinputmatches",
+        )
+        if key in frame
+    )
 
 
 def _write_test_pilot(tmp_path):
@@ -4381,6 +4403,15 @@ def test_vocab_answer_return_plans_structural_move_without_changing_reply():
                 "return_to_current_task": True,
                 "retrieval_evidence_count": 1,
                 "support_evidence_count": 1,
+                "target_role": "question",
+                "expected_student_action": "answer",
+                "question_target": "What would Zoom like to eat?",
+                "answer_target": "",
+                "answer_frame": "",
+                "action_source": "active_prompt",
+                "preserve_page_uid": "",
+                "preserve_block_uid": "",
+                "target_phrase": "What would Zoom like to eat?",
             },
             "constraints": [
                 "Do not change the current page or block.",
@@ -4730,6 +4761,36 @@ def test_gentle_redirect_runtime_payload_records_phonics_action_contract():
     assert fields["answer_target"] == "clean"
 
 
+def test_redirect_reply_policy_ignores_invalid_action_fields_and_uses_active_prompt():
+    catalog = PilotLessonCatalog(manifest_path=_general_overlay_manifest_path())
+    block = catalog.get_block("TB-G5S1U3-P22-D1")
+
+    repaired = maybe_render_redirect_reply(
+        learner_input="water",
+        target_phrase="water",
+        teacher_reply=(
+            "你刚才说的是 water. 先听，再说：What's your favourite food?"
+        ),
+        block=block,
+        active_prompt="What's your favourite food?",
+        return_anchor="What's your favourite food?",
+        action_fields={
+            "target_role": "question",
+            "expected_student_action": "answer",
+            "question_target": 123,
+            "answer_target": "",
+            "answer_frame": "My favourite food is ...",
+            "action_source": "block_core_pattern",
+            "target_phrase": "water",
+        },
+    )
+
+    assert repaired is not None
+    assert "What's your favourite food?" in repaired
+    assert "你最喜欢的食物是什么" in repaired
+    assert "water（水）" in repaired or "water" in repaired
+
+
 def test_g5s2_p6_grounded_page_vocabulary_question_does_not_fallback():
     def _teacher_llm(prompt, system_prompt=None, history_messages=None, **kwargs):
         _ = (system_prompt, history_messages, kwargs)
@@ -4931,6 +4992,96 @@ def test_answer_turn_policy_frame_allows_matching_later_p24_drink_block():
     assert matches["TB-G5S1U3-P24-D4"]
 
 
+def test_answer_turn_policy_runtime_state_view_preserves_allowed_writes():
+    runtime = LessonRuntime(PilotLessonCatalog(manifest_path=_general_manifest_path()))
+    start = runtime.start_page("TB-G6S2Recycle2-P49", "student-1")
+    selected = runtime.handle_turn(start.state, "第四块")
+    block = runtime.catalog.get_block(selected.state.current_block_uid)
+    frame = runtime._build_answer_turn_policy_frame(
+        block=block,
+        state=selected.state,
+        learner_input="climb",
+    )
+
+    view = runtime._answer_turn_policy_runtime_state_view(frame=frame)
+
+    assert set(view) == {
+        "teacherasked",
+        "currentblockuid",
+        "allowedcurrentblockuids",
+        "currentblockcanstay",
+        "canwriteotherblocks",
+        "matchedblockuids",
+        "matchedblockfields",
+        "activequestionkind",
+        "currentblockscope",
+        "hasmultiplecurrenttargets",
+        "samepageblockroles",
+    }
+    assert view["currentblockuid"] == frame["currentblock"]["blockuid"]
+    assert view["allowedcurrentblockuids"] == frame["allowedstatewrites"][
+        "currentblockuids"
+    ]
+    assert view["currentblockcanstay"] is True
+    assert view["canwriteotherblocks"] is False
+    assert _compact_json_bytes(view) < _legacy_answer_policy_runtime_state_bytes(frame)
+
+
+def test_answer_turn_policy_runtime_state_view_preserves_p24_food_drink_boundary():
+    runtime = LessonRuntime(PilotLessonCatalog(manifest_path=_general_overlay_manifest_path()))
+    start = runtime.start_page("TB-G5S1U3-P24", "student-1")
+    selected = runtime.handle_turn(start.state, "第一块")
+    block = runtime.catalog.get_block(selected.state.current_block_uid)
+    frame = runtime._build_answer_turn_policy_frame(
+        block=block,
+        state=selected.state,
+        learner_input="I'd like some water.",
+    )
+
+    view = runtime._answer_turn_policy_runtime_state_view(frame=frame)
+
+    assert view["allowedcurrentblockuids"] == [
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P24-D4",
+    ]
+    assert view["currentblockcanstay"] is True
+    assert view["canwriteotherblocks"] is True
+    assert view["matchedblockuids"] == [
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P24-D4",
+    ]
+    assert any(
+        "I'd like some water." in value
+        for value in view["matchedblockfields"]["TB-G5S1U3-P24-D2"]
+    )
+    assert any(role["relation"] == "current" for role in view["samepageblockroles"])
+    assert any(role["relation"] == "next" for role in view["samepageblockroles"])
+    assert _compact_json_bytes(view) < _legacy_answer_policy_runtime_state_bytes(frame)
+
+
+def test_answer_turn_policy_runtime_state_view_preserves_p13_vocab_return_boundary():
+    runtime = LessonRuntime(PilotLessonCatalog(manifest_path=_general_overlay_manifest_path()))
+    start = runtime.start_page("TB-G6S2U2-P13", "student-1")
+    block = runtime.catalog.get_block(start.state.current_block_uid)
+    frame = runtime._build_answer_turn_policy_frame(
+        block=block,
+        state=start.state,
+        learner_input="had a cold是什么意思",
+    )
+
+    view = runtime._answer_turn_policy_runtime_state_view(frame=frame)
+
+    assert view["teacherasked"] == frame["teacherasked"]
+    assert view["currentblockuid"] == "TB-G6S2U2-P13-D2"
+    assert view["allowedcurrentblockuids"] == ["TB-G6S2U2-P13-D2"]
+    assert view["currentblockcanstay"] is True
+    assert view["canwriteotherblocks"] is False
+    assert view["activequestionkind"] == frame["taskboundary"]["activequestionkind"]
+    assert view["currentblockscope"] == frame["taskboundary"]["currentblockscope"]
+    assert _compact_json_bytes(view) < _legacy_answer_policy_runtime_state_bytes(frame)
+
+
 def test_answer_turn_policy_frame_marks_same_page_phonics_word_match():
     runtime = LessonRuntime(PilotLessonCatalog(manifest_path=_general_overlay_manifest_path()))
     start = runtime.start_page("TB-G5S2U1-P6", "student-1")
@@ -4953,6 +5104,31 @@ def test_answer_turn_policy_frame_marks_same_page_phonics_word_match():
     assert matches["TB-G5S2U1-P6-D1"] == [
         {"field": "vocabulary", "text": "please"}
     ]
+
+
+def test_answer_turn_policy_runtime_state_view_preserves_p6_phonics_match():
+    runtime = LessonRuntime(PilotLessonCatalog(manifest_path=_general_overlay_manifest_path()))
+    start = runtime.start_page("TB-G5S2U1-P6", "student-1")
+    block = runtime.catalog.get_block(start.state.current_block_uid)
+    frame = runtime._build_answer_turn_policy_frame(
+        block=block,
+        state=start.state,
+        learner_input="please",
+    )
+
+    view = runtime._answer_turn_policy_runtime_state_view(frame=frame)
+
+    assert view["allowedcurrentblockuids"] == [
+        "TB-G5S2U1-P6-D2",
+        "TB-G5S2U1-P6-D1",
+    ]
+    assert view["matchedblockuids"] == ["TB-G5S2U1-P6-D1"]
+    assert view["matchedblockfields"]["TB-G5S2U1-P6-D1"] == [
+        "vocabulary:please"
+    ]
+    assert view["currentblockcanstay"] is True
+    assert view["canwriteotherblocks"] is True
+    assert _compact_json_bytes(view) < _legacy_answer_policy_runtime_state_bytes(frame)
 
 
 def test_module_choice_responder_generic_praise_uses_deterministic_repair(tmp_path):
@@ -6375,6 +6551,16 @@ def test_answer_turn_policy_exposes_response_audit_when_debug_enabled(tmp_path):
     assert audit.llm_token_usage["calls"][0]["llm_provider"] == "test-llm"
     assert audit.llm_token_usage["calls"][0]["lesson_context_bytes"] > 0
     assert audit.llm_token_usage["calls"][0]["textbook_block_bytes"] > 0
+    assert audit.llm_token_usage["calls"][0]["runtime_state_legacy_frame_bytes"] > 0
+    assert audit.llm_token_usage["calls"][0]["runtime_state_minimal_view_bytes"] > 0
+    assert (
+        audit.llm_token_usage["calls"][0]["runtime_state_savings_candidate_bytes"]
+        > 0
+    )
+    assert (
+        audit.llm_token_usage["calls"][0]["runtime_state_minimal_view_bytes"]
+        < audit.llm_token_usage["calls"][0]["runtime_state_legacy_frame_bytes"]
+    )
     expected_metered_capsule_bytes = len(
         json.dumps(
             MILI_ANSWER_TURN_POLICY_PERSONA_CAPSULE_V1,

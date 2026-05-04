@@ -6,6 +6,8 @@ import re
 from collections.abc import Mapping
 from typing import Any
 
+from lightrag.pedagogy.teaching_move import TeachingMoveActionContract
+
 
 _PHRASE_SCAFFOLD_BY_KEY = {
     "water": "水",
@@ -118,7 +120,7 @@ def maybe_render_redirect_reply(
     block: Any,
     active_prompt: str = "",
     return_anchor: str = "",
-    action_fields: Mapping[str, str] | None = None,
+    action_fields: Mapping[str, object] | None = None,
 ) -> str | None:
     """Return a shorter redirect reply when evidence is deterministic.
 
@@ -133,13 +135,20 @@ def maybe_render_redirect_reply(
     if not learner_phrase or _looks_like_module_choice(learner_phrase):
         return None
     learner_key = _phrase_key(learner_phrase)
-    fields = dict(action_fields or {})
-    if learner_key in _CHARACTER_NAME_KEYS and fields.get("target_role") != "story":
+    has_action_fields = bool(action_fields)
+    fields = _validated_action_fields(action_fields)
+    invalid_action_fields = has_action_fields and not fields
+    if (
+        learner_key in _CHARACTER_NAME_KEYS
+        and fields.get("target_role") != "story"
+        and not _is_story_context(block)
+    ):
         return None
+    self_target_keys = {_phrase_key(active_prompt), _phrase_key(return_anchor)}
+    if not invalid_action_fields:
+        self_target_keys.add(_phrase_key(target_phrase))
     if learner_key and learner_key in {
-        _phrase_key(active_prompt),
-        _phrase_key(return_anchor),
-        _phrase_key(target_phrase),
+        key for key in self_target_keys if key
     }:
         return None
 
@@ -164,7 +173,7 @@ def maybe_render_redirect_reply(
         block=block,
         active_prompt=active_prompt,
         return_anchor=return_anchor,
-        target_phrase=target_phrase,
+        target_phrase="" if invalid_action_fields else target_phrase,
         teacher_reply=teacher_reply,
         learner_phrase=learner_phrase,
     )
@@ -197,6 +206,15 @@ def maybe_render_redirect_reply(
         target_phrase=target,
         target_meaning=target_meaning,
     )
+
+
+def _validated_action_fields(
+    action_fields: Mapping[str, object] | None,
+) -> dict[str, str]:
+    contract = TeachingMoveActionContract.try_from_payload_fields(dict(action_fields or {}))
+    if contract is None:
+        return {}
+    return contract.to_payload_fields()
 
 
 def normalize_redirect_read_target_for_phonics(
@@ -238,6 +256,14 @@ def _looks_like_redirect(teacher_reply: str) -> bool:
 
 def _looks_like_module_choice(text: str) -> bool:
     return bool(_MODULE_CHOICE_RE.search(text or ""))
+
+
+def _is_story_context(block: Any) -> bool:
+    context = " ".join(
+        str(getattr(block, attr, "") or "")
+        for attr in ("block_type", "page_type", "teaching_goal", "teaching_summary")
+    )
+    return "story" in context.casefold()
 
 
 def _select_redirect_target(

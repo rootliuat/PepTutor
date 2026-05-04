@@ -90,6 +90,7 @@ from lightrag.pedagogy.redirect_reply_policy import (
     looks_like_redirect_reply,
     maybe_render_redirect_reply,
 )
+from lightrag.pedagogy.teaching_move import TeachingMoveActionContract
 from lightrag.pedagogy.evaluation import evaluate_answer, normalize_text
 from lightrag.pedagogy.types import (
     EvaluationResult,
@@ -1985,6 +1986,90 @@ class LessonRuntime:
             },
         }
 
+    def _answer_turn_policy_runtime_state_view(
+        self,
+        *,
+        frame: dict[str, Any],
+    ) -> dict[str, Any]:
+        current_block = frame.get("currentblock")
+        current_block_uid = ""
+        if isinstance(current_block, dict):
+            current_block_uid = str(current_block.get("blockuid") or "")
+
+        allowed_state_writes = frame.get("allowedstatewrites")
+        allowed_block_uids: list[str] = []
+        if isinstance(allowed_state_writes, dict):
+            current_block_uids = allowed_state_writes.get("currentblockuids")
+            if isinstance(current_block_uids, list):
+                allowed_block_uids = [
+                    str(block_uid)
+                    for block_uid in current_block_uids
+                    if str(block_uid).strip()
+                ]
+
+        learner_input_matches = frame.get("learnerinputmatches")
+        matched_block_uids: list[str] = []
+        matched_block_fields: dict[str, list[str]] = {}
+        if isinstance(learner_input_matches, list):
+            for item in learner_input_matches:
+                if not isinstance(item, dict):
+                    continue
+                block_uid = str(item.get("blockuid") or "")
+                if not block_uid:
+                    continue
+                matched_block_uids.append(block_uid)
+                fields: list[str] = []
+                matches = item.get("matches")
+                if isinstance(matches, list):
+                    for match in matches:
+                        if not isinstance(match, dict):
+                            continue
+                        field_name = str(match.get("field") or "").strip()
+                        text = str(match.get("text") or "").strip()
+                        if field_name and text:
+                            fields.append(f"{field_name}:{text}")
+                        elif field_name:
+                            fields.append(field_name)
+                if fields:
+                    matched_block_fields[block_uid] = sorted(dict.fromkeys(fields))
+
+        task_boundary = frame.get("taskboundary")
+        if not isinstance(task_boundary, dict):
+            task_boundary = {}
+        same_page_block_roles: list[dict[str, str]] = []
+        raw_same_page_roles = task_boundary.get("samepageblockroles")
+        if isinstance(raw_same_page_roles, list):
+            for item in raw_same_page_roles:
+                if not isinstance(item, dict):
+                    continue
+                block_uid = str(item.get("blockuid") or "")
+                if not block_uid:
+                    continue
+                role = {
+                    "blockuid": block_uid,
+                    "relation": str(item.get("relation") or ""),
+                    "topic": str(item.get("topic") or ""),
+                }
+                same_page_block_roles.append(role)
+
+        return {
+            "teacherasked": str(frame.get("teacherasked") or ""),
+            "currentblockuid": current_block_uid,
+            "allowedcurrentblockuids": allowed_block_uids,
+            "currentblockcanstay": current_block_uid in allowed_block_uids,
+            "canwriteotherblocks": any(
+                block_uid != current_block_uid for block_uid in allowed_block_uids
+            ),
+            "matchedblockuids": matched_block_uids,
+            "matchedblockfields": matched_block_fields,
+            "activequestionkind": str(task_boundary.get("activequestionkind") or ""),
+            "currentblockscope": str(task_boundary.get("currentblockscope") or ""),
+            "hasmultiplecurrenttargets": bool(
+                task_boundary.get("currentblockhasmultipletargets"),
+            ),
+            "samepageblockroles": same_page_block_roles,
+        }
+
     def _answer_turn_policy_allowed_blocks(
         self,
         block: TeachingBlockRecord,
@@ -3529,7 +3614,10 @@ class LessonRuntime:
         fields = payload.get("payload_fields", {})
         if not isinstance(fields, dict):
             return {}
-        return {str(key): str(value) for key, value in fields.items()}
+        contract = TeachingMoveActionContract.try_from_payload_fields(fields)
+        if contract is None:
+            return {}
+        return contract.to_payload_fields()
 
     def _repair_answer_turn_policy_reply_pacing(
         self,

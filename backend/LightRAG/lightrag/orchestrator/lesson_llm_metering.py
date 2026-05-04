@@ -40,6 +40,9 @@ class LessonLLMCallMeter:
     textbook_block_bytes: int = 0
     page_overview_bytes: int = 0
     runtime_state_bytes: int = 0
+    runtime_state_minimal_view_bytes: int = 0
+    runtime_state_legacy_frame_bytes: int = 0
+    runtime_state_savings_candidate_bytes: int = 0
     teaching_move_bytes: int = 0
     policy_instruction_bytes: int = 0
     quality_revision_prompt_bytes: int = 0
@@ -93,6 +96,13 @@ class LessonLLMCallMeter:
             "textbook_block_bytes": self.textbook_block_bytes,
             "page_overview_bytes": self.page_overview_bytes,
             "runtime_state_bytes": self.runtime_state_bytes,
+            "runtime_state_minimal_view_bytes": (
+                self.runtime_state_minimal_view_bytes
+            ),
+            "runtime_state_legacy_frame_bytes": self.runtime_state_legacy_frame_bytes,
+            "runtime_state_savings_candidate_bytes": (
+                self.runtime_state_savings_candidate_bytes
+            ),
             "teaching_move_bytes": self.teaching_move_bytes,
             "policy_instruction_bytes": self.policy_instruction_bytes,
             "quality_revision_prompt_bytes": self.quality_revision_prompt_bytes,
@@ -225,6 +235,15 @@ def record_lesson_llm_call(
             textbook_block_bytes=breakdown["textbook_block_bytes"],
             page_overview_bytes=breakdown["page_overview_bytes"],
             runtime_state_bytes=breakdown["runtime_state_bytes"],
+            runtime_state_minimal_view_bytes=breakdown[
+                "runtime_state_minimal_view_bytes"
+            ],
+            runtime_state_legacy_frame_bytes=breakdown[
+                "runtime_state_legacy_frame_bytes"
+            ],
+            runtime_state_savings_candidate_bytes=breakdown[
+                "runtime_state_savings_candidate_bytes"
+            ],
             teaching_move_bytes=breakdown["teaching_move_bytes"],
             policy_instruction_bytes=breakdown["policy_instruction_bytes"],
             quality_revision_prompt_bytes=breakdown[
@@ -321,6 +340,15 @@ def summarize_lesson_llm_metering(
         ),
         "runtime_state_bytes": sum(
             int(call["runtime_state_bytes"]) for call in calls
+        ),
+        "runtime_state_minimal_view_bytes": sum(
+            int(call["runtime_state_minimal_view_bytes"]) for call in calls
+        ),
+        "runtime_state_legacy_frame_bytes": sum(
+            int(call["runtime_state_legacy_frame_bytes"]) for call in calls
+        ),
+        "runtime_state_savings_candidate_bytes": sum(
+            int(call["runtime_state_savings_candidate_bytes"]) for call in calls
         ),
         "teaching_move_bytes": sum(
             int(call["teaching_move_bytes"]) for call in calls
@@ -509,6 +537,18 @@ def _prompt_breakdown(prompt: str) -> dict[str, int]:
         ),
         ensure_ascii=ascii_json_prompt,
     )
+    runtime_state_legacy_frame_bytes = _answer_turn_policy_legacy_state_bytes(
+        frame,
+        ensure_ascii=ascii_json_prompt,
+    )
+    runtime_state_minimal_view_bytes = _json_bytes(
+        _answer_turn_policy_runtime_state_minimal_view(frame),
+        ensure_ascii=ascii_json_prompt,
+    ) if runtime_state_legacy_frame_bytes else 0
+    runtime_state_savings_candidate_bytes = max(
+        0,
+        runtime_state_legacy_frame_bytes - runtime_state_minimal_view_bytes,
+    )
     teaching_move_bytes = _component_bytes(
         payload,
         ("teachermove", "teaching_move"),
@@ -607,6 +647,11 @@ def _prompt_breakdown(prompt: str) -> dict[str, int]:
         "textbook_block_bytes": textbook_block_bytes,
         "page_overview_bytes": page_overview_bytes,
         "runtime_state_bytes": runtime_state_bytes,
+        "runtime_state_minimal_view_bytes": runtime_state_minimal_view_bytes,
+        "runtime_state_legacy_frame_bytes": runtime_state_legacy_frame_bytes,
+        "runtime_state_savings_candidate_bytes": (
+            runtime_state_savings_candidate_bytes
+        ),
         "teaching_move_bytes": teaching_move_bytes,
         "policy_instruction_bytes": policy_instruction_bytes,
         "quality_revision_prompt_bytes": quality_revision_prompt_bytes,
@@ -632,6 +677,9 @@ def _empty_prompt_breakdown() -> dict[str, int]:
         "textbook_block_bytes": 0,
         "page_overview_bytes": 0,
         "runtime_state_bytes": 0,
+        "runtime_state_minimal_view_bytes": 0,
+        "runtime_state_legacy_frame_bytes": 0,
+        "runtime_state_savings_candidate_bytes": 0,
         "teaching_move_bytes": 0,
         "policy_instruction_bytes": 0,
         "quality_revision_prompt_bytes": 0,
@@ -661,6 +709,108 @@ def _component_bytes(
         for key in keys
         if key in mapping
     )
+
+
+def _answer_turn_policy_legacy_state_bytes(
+    frame: dict[str, Any],
+    *,
+    ensure_ascii: bool,
+) -> int:
+    return _component_bytes(
+        frame,
+        (
+            "teacherasked",
+            "taskboundary",
+            "recentdialogue",
+            "allowedstatewrites",
+            "learnerinputmatches",
+        ),
+        ensure_ascii=ensure_ascii,
+    )
+
+
+def _answer_turn_policy_runtime_state_minimal_view(
+    frame: dict[str, Any],
+) -> dict[str, Any]:
+    current_block = frame.get("currentblock")
+    current_block_uid = ""
+    if isinstance(current_block, dict):
+        current_block_uid = str(current_block.get("blockuid") or "")
+
+    allowed_state_writes = frame.get("allowedstatewrites")
+    allowed_block_uids: list[str] = []
+    if isinstance(allowed_state_writes, dict):
+        current_block_uids = allowed_state_writes.get("currentblockuids")
+        if isinstance(current_block_uids, list):
+            allowed_block_uids = [
+                str(block_uid)
+                for block_uid in current_block_uids
+                if str(block_uid).strip()
+            ]
+
+    learner_input_matches = frame.get("learnerinputmatches")
+    matched_block_uids: list[str] = []
+    matched_block_fields: dict[str, list[str]] = {}
+    if isinstance(learner_input_matches, list):
+        for item in learner_input_matches:
+            if not isinstance(item, dict):
+                continue
+            block_uid = str(item.get("blockuid") or "")
+            if not block_uid:
+                continue
+            matched_block_uids.append(block_uid)
+            fields: list[str] = []
+            matches = item.get("matches")
+            if isinstance(matches, list):
+                for match in matches:
+                    if not isinstance(match, dict):
+                        continue
+                    field_name = str(match.get("field") or "").strip()
+                    text = str(match.get("text") or "").strip()
+                    if field_name and text:
+                        fields.append(f"{field_name}:{text}")
+                    elif field_name:
+                        fields.append(field_name)
+            if fields:
+                matched_block_fields[block_uid] = sorted(dict.fromkeys(fields))
+
+    task_boundary = frame.get("taskboundary")
+    if not isinstance(task_boundary, dict):
+        task_boundary = {}
+    same_page_block_roles: list[dict[str, str]] = []
+    raw_same_page_roles = task_boundary.get("samepageblockroles")
+    if isinstance(raw_same_page_roles, list):
+        for item in raw_same_page_roles:
+            if not isinstance(item, dict):
+                continue
+            block_uid = str(item.get("blockuid") or "")
+            if not block_uid:
+                continue
+            same_page_block_roles.append(
+                {
+                    "blockuid": block_uid,
+                    "relation": str(item.get("relation") or ""),
+                    "topic": str(item.get("topic") or ""),
+                }
+            )
+
+    return {
+        "teacherasked": str(frame.get("teacherasked") or ""),
+        "currentblockuid": current_block_uid,
+        "allowedcurrentblockuids": allowed_block_uids,
+        "currentblockcanstay": current_block_uid in allowed_block_uids,
+        "canwriteotherblocks": any(
+            block_uid != current_block_uid for block_uid in allowed_block_uids
+        ),
+        "matchedblockuids": matched_block_uids,
+        "matchedblockfields": matched_block_fields,
+        "activequestionkind": str(task_boundary.get("activequestionkind") or ""),
+        "currentblockscope": str(task_boundary.get("currentblockscope") or ""),
+        "hasmultiplecurrenttargets": bool(
+            task_boundary.get("currentblockhasmultipletargets"),
+        ),
+        "samepageblockroles": same_page_block_roles,
+    }
 
 
 def _int_from_mapping(
