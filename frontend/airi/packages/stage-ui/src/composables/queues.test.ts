@@ -33,6 +33,9 @@ describe('useEmotionsMessageQueue', () => {
       content_source: 'lesson_runtime_teacher_response',
       fallback_allowed: true,
       performance_source: 'lesson_persona_context',
+      target_role: 'question',
+      expected_student_action: 'answer',
+      speech_style_tag: 'short_scaffold',
     })}|>`)
 
     await vi.waitFor(() => {
@@ -54,6 +57,9 @@ describe('useEmotionsMessageQueue', () => {
       contentSource: 'lesson_runtime_teacher_response',
       fallbackAllowed: true,
       performanceSource: 'lesson_persona_context',
+      targetRole: 'question',
+      expectedStudentAction: 'answer',
+      speechStyleTag: 'short_scaffold',
     })
   })
 })

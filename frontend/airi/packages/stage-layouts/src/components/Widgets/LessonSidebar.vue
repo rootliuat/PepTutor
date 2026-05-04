@@ -530,6 +530,15 @@ const performancePlanSourceLabel = computed(() => {
 const performanceContentSourceLabel = computed(() =>
   currentPerformancePlan.value?.contentSource || '未收到',
 )
+const personaCapsuleStatusLabel = computed(() => {
+  const persona = activeTurn.value?.debug_signals?.persona
+  if (!persona)
+    return '未收到'
+  const source = persona.persona_source || 'unknown'
+  const version = persona.persona_version || 'unknown'
+  const soul = persona.full_soul_injected ? 'full_soul=true' : 'full_soul=false'
+  return `${source}/${version} · ${soul}`
+})
 const visibleTeachingStance = computed(() => {
   const action = currentPerformancePlan.value?.teachingAction || ''
   const evaluation = currentPerformancePlan.value?.evaluation || ''
@@ -595,6 +604,31 @@ const visiblePerformanceFacts = computed(() => [
     key: 'content_source',
     label: '内容源',
     value: performanceContentSourceLabel.value,
+  },
+  {
+    key: 'teaching_action',
+    label: '教学动作',
+    value: currentPerformancePlan.value?.teachingAction || activeTurn.value?.teaching_action || 'none',
+  },
+  {
+    key: 'target_role',
+    label: '目标角色',
+    value: currentPerformancePlan.value?.targetRole || 'none',
+  },
+  {
+    key: 'expected_student_action',
+    label: '学生动作',
+    value: currentPerformancePlan.value?.expectedStudentAction || 'none',
+  },
+  {
+    key: 'speech_style_tag',
+    label: '课堂语气',
+    value: currentPerformancePlan.value?.speechStyleTag || currentSpeechStyle.value,
+  },
+  {
+    key: 'persona_capsule',
+    label: 'Persona',
+    value: personaCapsuleStatusLabel.value,
   },
   {
     key: 'tts',
@@ -977,7 +1011,7 @@ function resolveReplyPathLabel() {
           :key="fact.key"
           :class="[
             'min-w-0 rounded-[14px] border border-sky-100/80 bg-sky-50/55 px-2.5 py-2 dark:border-white/8 dark:bg-white/5',
-            ['reply_path', 'performance_source', 'content_source', 'performance_apply', 'performance_fallback_kind', 'tts_playback_state', 'tts_playback_id', 'active_reply_id', 'tts_stop_reason', 'tts_stop_type', 'tts_overlap_detected', 'interrupt_policy'].includes(fact.key) ? 'col-span-2' : '',
+            ['reply_path', 'performance_source', 'content_source', 'teaching_action', 'target_role', 'expected_student_action', 'speech_style_tag', 'persona_capsule', 'performance_apply', 'performance_fallback_kind', 'tts_playback_state', 'tts_playback_id', 'active_reply_id', 'tts_stop_reason', 'tts_stop_type', 'tts_overlap_detected', 'interrupt_policy'].includes(fact.key) ? 'col-span-2' : '',
           ]"
         >
           <div class="text-[10px] text-slate-400 font-semibold tracking-[0.12em] uppercase dark:text-neutral-500">
@@ -987,7 +1021,7 @@ function resolveReplyPathLabel() {
             :data-testid="`lesson-airi-visible-fact-${fact.key}`"
             :class="[
               'mt-1 text-[11px] text-slate-800 font-semibold dark:text-neutral-100',
-              ['reply_path', 'performance_source', 'content_source', 'performance_apply', 'performance_fallback_kind', 'tts_playback_state', 'tts_playback_id', 'active_reply_id', 'tts_stop_reason', 'tts_stop_type', 'tts_overlap_detected'].includes(fact.key) ? 'break-words leading-4' : 'truncate',
+              ['reply_path', 'performance_source', 'content_source', 'teaching_action', 'target_role', 'expected_student_action', 'speech_style_tag', 'persona_capsule', 'performance_apply', 'performance_fallback_kind', 'tts_playback_state', 'tts_playback_id', 'active_reply_id', 'tts_stop_reason', 'tts_stop_type', 'tts_overlap_detected'].includes(fact.key) ? 'break-words leading-4' : 'truncate',
             ]"
           >
             {{ fact.value }}

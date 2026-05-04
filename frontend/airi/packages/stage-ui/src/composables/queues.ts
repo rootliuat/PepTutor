@@ -68,6 +68,9 @@ export function useEmotionsMessageQueue(emotionsQueue: UseQueueReturn<EmotionPay
     contentSource: optionalString(payload.content_source ?? payload.contentSource),
     fallbackAllowed: optionalBoolean(payload.fallback_allowed ?? payload.fallbackAllowed),
     performanceSource: optionalString(payload.performance_source ?? payload.performanceSource),
+    targetRole: optionalString(payload.target_role ?? payload.targetRole),
+    expectedStudentAction: optionalString(payload.expected_student_action ?? payload.expectedStudentAction),
+    speechStyleTag: optionalString(payload.speech_style_tag ?? payload.speechStyleTag),
   })
 
   function parseActEmotion(content: string) {

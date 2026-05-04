@@ -1720,7 +1720,7 @@ def test_answer_turn_policy_redirect_reply_adds_short_scaffold_for_p22_water():
     assert "水" in result.teacher_response
     assert "What's your favourite food?" in result.teacher_response
     assert "你最喜欢的食物是什么" in result.teacher_response
-    assert "你先说一个食物" in result.teacher_response
+    assert "可以用这个句型回答：My favourite food is ..." in result.teacher_response
     assert "这页的问题是" in result.teacher_response
     assert "这页先回答这个问题" not in result.teacher_response
     assert "你刚才说的是 water. 这一步先听清" not in result.teacher_response
@@ -1811,7 +1811,8 @@ def test_answer_turn_policy_redirect_reply_naturalizes_get_up_wording():
 
     assert "get up" in result.teacher_response
     assert "起床" in result.teacher_response
-    assert "你先读一遍" in result.teacher_response
+    assert "When do you get up?" in result.teacher_response
+    assert "I get up at ..." in result.teacher_response
     assert "这一步老师问的是 get up" not in result.teacher_response
     assert "先听，再说：get up" not in result.teacher_response
     assert "你刚才说的是" not in result.teacher_response
@@ -1841,6 +1842,31 @@ def test_answer_turn_policy_redirect_reply_strips_try_to_say_wrapper():
     assert "redirect_reply_policy" in result.debug_signals.response_audit.repair_reason
 
 
+def test_answer_turn_policy_redirect_reply_frames_favourite_food_probe():
+    result = _run_policy_reply_style_case(
+        page_uid="TB-G5S1U3-P22",
+        block_uid="TB-G5S1U3-P22-D1",
+        last_teacher_question="What's your favourite food?",
+        learner_input="Yesterday I played football.",
+        raw_teacher_reply=(
+            "你说昨天踢足球了！不过刚才问的是“你最喜欢的食物是什么？”"
+            "答案可以用“Salad.”或“Sandwich.”。试着用英语回答一下吧。"
+        ),
+    )
+
+    assert "我听到你说 Yesterday I played football." in result.teacher_response
+    assert "What's your favourite food?" in result.teacher_response
+    assert "你最喜欢的食物是什么" in result.teacher_response
+    assert "可以用这个句型回答：My favourite food is ..." in result.teacher_response
+    assert "Salad." not in result.teacher_response
+    assert "Sandwich." not in result.teacher_response
+    assert "不过刚才问的是" not in result.teacher_response
+    assert result.state.current_block_uid == "TB-G5S1U3-P22-D1"
+    assert result.debug_signals is not None
+    assert result.debug_signals.response_audit is not None
+    assert "redirect_reply_policy" in result.debug_signals.response_audit.repair_reason
+
+
 def test_answer_turn_policy_redirect_reply_naturalizes_museum_shop_wording():
     result = _run_policy_reply_style_case(
         page_uid="TB-G6S1U1-P4",
@@ -1862,6 +1888,29 @@ def test_answer_turn_policy_redirect_reply_naturalizes_museum_shop_wording():
     assert "先回到课本目标" not in result.teacher_response
     assert "把这句读出来" not in result.teacher_response
     assert "这一步先听清这个问题" not in result.teacher_response
+    assert result.state.current_block_uid == "TB-G6S1U1-P4-D2"
+    assert result.debug_signals is not None
+    assert result.debug_signals.response_audit is not None
+    assert "redirect_reply_policy" in result.debug_signals.response_audit.repair_reason
+
+
+def test_answer_turn_policy_redirect_reply_replaces_follow_teacher_reading_wrapper():
+    result = _run_policy_reply_style_case(
+        page_uid="TB-G6S1U1-P4",
+        block_uid="TB-G6S1U1-P4-D2",
+        last_teacher_question="Where is the museum shop?",
+        learner_input="I want to play basketball.",
+        raw_teacher_reply=(
+            "你说你想打篮球，那很好。现在跟着老师读：Where is the museum shop?"
+        ),
+    )
+
+    assert "I want to play basketball." in result.teacher_response
+    assert "Where is the museum shop?" in result.teacher_response
+    assert "博物馆商店在哪里" in result.teacher_response
+    assert "可以用这个句型回答：It's near ..." in result.teacher_response
+    assert "那很好" not in result.teacher_response
+    assert "跟着老师读" not in result.teacher_response
     assert result.state.current_block_uid == "TB-G6S1U1-P4-D2"
     assert result.debug_signals is not None
     assert result.debug_signals.response_audit is not None
@@ -1929,6 +1978,51 @@ def test_answer_turn_policy_redirect_reply_strips_follow_me_target_fragment():
     assert result.debug_signals is not None
     assert result.debug_signals.response_audit is not None
     assert "redirect_reply_policy" in result.debug_signals.response_audit.repair_reason
+
+
+def test_answer_turn_policy_strips_interest_generic_praise_modifier():
+    result = _run_policy_reply_style_case(
+        page_uid="TB-G6S2U1-P2",
+        block_uid="TB-G6S2U1-P2-D1",
+        last_teacher_question="I'm 1.60 metres tall.",
+        learner_input="I want to play basketball.",
+        raw_teacher_reply=(
+            "米粒老师听到你说想打篮球，很棒的兴趣！"
+            "不过现在我们在说身高：I'm 1.60 metres tall. "
+            "你能试试补全这个句子吗？"
+        ),
+    )
+
+    assert "很棒" not in result.teacher_response
+    assert "兴趣" not in result.teacher_response
+    assert "I'm 1.60 metres tall." in result.teacher_response
+    assert result.debug_signals is not None
+    assert result.debug_signals.response_audit is not None
+    assert "generic_praise_stripped" in (
+        result.debug_signals.response_audit.repair_reason
+    )
+
+
+def test_answer_turn_policy_strips_activity_generic_praise_suffix():
+    result = _run_policy_reply_style_case(
+        page_uid="TB-G6S2U1-P4",
+        block_uid="TB-G6S2U1-P4-D2",
+        last_teacher_question="How tall is it?",
+        learner_input="I want to play basketball.",
+        raw_teacher_reply=(
+            "你说想打篮球，很棒的活动哦。\n"
+            "我们先把这句话说好：How tall is it?"
+        ),
+    )
+
+    assert "很棒" not in result.teacher_response
+    assert "活动哦" not in result.teacher_response
+    assert "How tall is it?" in result.teacher_response
+    assert result.debug_signals is not None
+    assert result.debug_signals.response_audit is not None
+    assert "generic_praise_stripped" in (
+        result.debug_signals.response_audit.repair_reason
+    )
 
 
 def test_answer_turn_policy_redirect_reply_distinguishes_g6_height_questions():
@@ -2217,6 +2311,30 @@ def test_answer_turn_policy_repairs_module_choice_without_redirect_marker():
     assert "module_choice_boundary" in result.debug_signals.response_audit.repair_reason
 
 
+def test_answer_turn_policy_repairs_single_module_label_leak():
+    result = _run_policy_reply_style_case(
+        page_uid="TB-G6S2U2-P13",
+        block_uid="TB-G6S2U2-P13-D2",
+        last_teacher_question="What did you do last weekend?",
+        learner_input="I want to play basketball.",
+        raw_teacher_reply=(
+            "好的，你说“I want to play basketball.”，这是在说你上周末做的事情吗？"
+            "我们可以先一起看看第二块的内容，把核心句型读一读。"
+        ),
+    )
+
+    assert "What did you do last weekend?" in result.teacher_response
+    assert "你上个周末做了什么" in result.teacher_response
+    assert "I ... last weekend." in result.teacher_response
+    assert "第二块" not in result.teacher_response
+    assert "模块" not in result.teacher_response
+    assert "核心句型读一读" not in result.teacher_response
+    assert result.state.current_block_uid == "TB-G6S2U2-P13-D2"
+    assert result.debug_signals is not None
+    assert result.debug_signals.response_audit is not None
+    assert "module_choice_boundary" in result.debug_signals.response_audit.repair_reason
+
+
 def test_answer_turn_policy_repairs_module_choice_after_target_source_lock():
     result = _run_policy_reply_style_case(
         page_uid="TB-G6S2U2-P13",
@@ -2240,6 +2358,33 @@ def test_answer_turn_policy_repairs_module_choice_after_target_source_lock():
     assert result.debug_signals is not None
     assert result.debug_signals.response_audit is not None
     assert "module_choice_boundary" in result.debug_signals.response_audit.repair_reason
+
+
+def test_answer_turn_policy_repairs_module_choice_reintroduced_by_revision():
+    result = _run_policy_reply_style_case(
+        page_uid="TB-G6S2U2-P13",
+        block_uid="TB-G6S2U2-P13-D2",
+        last_teacher_question="What did you do last weekend?",
+        learner_input="water",
+        raw_teacher_reply="water 很棒！先回到刚才的问题：What did you do last weekend?",
+        revision_reply=(
+            '你说 "water"，是想选第几块呢？'
+            "第二块是对话核心句，第一块是图片场景活动。"
+        ),
+    )
+
+    assert "What did you do last weekend?" in result.teacher_response
+    assert "I ... last weekend." in result.teacher_response
+    assert "第几块" not in result.teacher_response
+    assert "第一块" not in result.teacher_response
+    assert "第二块" not in result.teacher_response
+    assert result.state.current_block_uid == "TB-G6S2U2-P13-D2"
+    assert result.debug_signals is not None
+    assert result.debug_signals.response_audit is not None
+    assert (
+        "module_choice_boundary" in result.debug_signals.response_audit.repair_reason
+        or "redirect_reply_policy" in result.debug_signals.response_audit.repair_reason
+    )
 
 
 def test_answer_turn_policy_redirect_reply_handles_last_weekend_phrase_target():
@@ -2413,7 +2558,8 @@ def test_answer_turn_policy_separates_g6_direction_from_museum_shop_target():
     assert "你来读：museum shop" not in result.teacher_response
     assert "把这句读出来" not in result.teacher_response
     assert "先听，再说：museum shop" not in result.teacher_response
-    assert "你先读一遍" in result.teacher_response
+    assert "Where is the museum shop?" in result.teacher_response
+    assert "It's near ..." in result.teacher_response
     assert not _SMOKE_BROKEN_MIXED_ENGLISH_RE.search(result.teacher_response)
     assert result.debug_signals is not None
     assert result.debug_signals.response_audit is not None
@@ -2575,6 +2721,35 @@ def test_answer_turn_policy_strips_standalone_bucuo_generic_praise():
     assert "generic_praise_stripped" in (
         result.debug_signals.response_audit.repair_reason
     )
+    assert result.debug_signals.response_audit.fallback_used is False
+
+
+def test_answer_turn_policy_repairs_generic_praise_with_wrong_learner_echo():
+    result = _run_policy_reply_style_case(
+        page_uid="TB-G5S1U3-P25",
+        block_uid="TB-G5S1U3-P25-D2",
+        last_teacher_question="What would you like to eat?",
+        learner_input="I'd like a sandwich, please.",
+        raw_teacher_reply=(
+            "你说了沙拉，很棒！现在试试用 I'd like ... 说一个完整句子吧。"
+        ),
+        revision_reply=(
+            "你刚才说的是“I'd like a sandwich, please.”——这是用完整句子来点餐，"
+            "很好。接下来我们试着用“I'd like ...”点一份沙拉，请跟我说。"
+        ),
+    )
+
+    assert "很棒" not in result.teacher_response
+    assert "我听到你说 I'd like a sandwich, please." in result.teacher_response
+    assert "你说了沙拉" not in result.teacher_response
+    assert "I'd like. 说" not in result.teacher_response
+    assert not _SMOKE_BROKEN_MIXED_ENGLISH_RE.search(result.teacher_response)
+    assert result.debug_signals is not None
+    assert result.debug_signals.response_audit is not None
+    assert "generic_praise_stripped" in (
+        result.debug_signals.response_audit.repair_reason
+    )
+    assert "learner_echo" in result.debug_signals.response_audit.repair_reason
     assert result.debug_signals.response_audit.fallback_used is False
 
 
@@ -2772,6 +2947,34 @@ def test_responder_strips_hobby_generic_praise_modifier_without_fallback():
     assert "很棒" not in result.text
     assert "爱好" not in result.text
     assert "Can you read cow" in result.text
+    assert result.audit.source == "llm_repaired"
+    assert result.audit.repair_reason == "generic_praise_stripped"
+    assert result.audit.fallback_used is False
+
+
+def test_responder_strips_short_answer_bucuo_praise_without_fallback():
+    runtime = LessonRuntime(PilotLessonCatalog(manifest_path=_general_manifest_path()))
+
+    result = runtime._teacher_response_result_from_responder(
+        LessonResponderTurnResult(
+            text=(
+                "嗯，你昨天看电视了，那也不错。现在我们翻到这一页，"
+                "John 和 Amy 在等公交车。你想先试哪个？"
+            ),
+            source="llm",
+            llm_called=True,
+            llm_provider="test",
+            latency_ms=12,
+            fallback_used=False,
+            fallback_reason="none",
+        ),
+        route="llm_only",
+        fallback_response="你想先学哪一块？",
+        learner_input="I watched TV.",
+    )
+
+    assert "不错" not in result.text
+    assert "John 和 Amy" in result.text
     assert result.audit.source == "llm_repaired"
     assert result.audit.repair_reason == "generic_praise_stripped"
     assert result.audit.fallback_used is False
@@ -4897,6 +5100,42 @@ def test_redirect_reply_policy_uses_valid_contract_over_polluted_return_anchor()
     assert "I ... last weekend." in repaired
     assert "第一块" not in repaired
     assert "第二块" not in repaired
+
+
+def test_redirect_reply_policy_promotes_phrase_contract_to_question_frame():
+    catalog = PilotLessonCatalog(manifest_path=_general_overlay_manifest_path())
+    block = catalog.get_block("TB-G6S2U2-P13-D2")
+
+    repaired = maybe_render_redirect_reply(
+        learner_input="I stayed at home.",
+        target_phrase="I cleaned my room and washed my clothes on Saturday.",
+        teacher_reply=(
+            "你刚才说的是 I stayed at home. "
+            "你来读：I cleaned my room and washed my clothes on Saturday."
+        ),
+        block=block,
+        active_prompt="What did you do last weekend?",
+        return_anchor="I cleaned my room and washed my clothes on Saturday.",
+        action_fields={
+            "target_role": "phrase",
+            "expected_student_action": "read",
+            "question_target": "What did you do last weekend?",
+            "answer_target": "Yes, I did. We played football on Sunday.",
+            "answer_frame": "I ... last weekend.",
+            "action_source": "block_core_pattern",
+            "preserve_page_uid": "TB-G6S2U2-P13",
+            "preserve_block_uid": "TB-G6S2U2-P13-D2",
+            "active_prompt": "What did you do last weekend?",
+            "return_anchor": "I cleaned my room and washed my clothes on Saturday.",
+            "target_phrase": "I cleaned my room and washed my clothes on Saturday.",
+        },
+    )
+
+    assert repaired is not None
+    assert "What did you do last weekend?" in repaired
+    assert "I ... last weekend." in repaired
+    assert "I cleaned my room and washed my clothes" not in repaired
+    assert "你来读" not in repaired
 
 
 def test_g5s2_p6_grounded_page_vocabulary_question_does_not_fallback():
@@ -7147,6 +7386,9 @@ def test_lesson_turn_route_includes_debug_signals_when_enabled(tmp_path, monkeyp
             "interrupt_policy": "barge_in_allowed",
             "content_source": "lesson_runtime_teacher_response",
             "fallback_allowed": True,
+            "target_role": "",
+            "expected_student_action": "",
+            "speech_style_tag": "",
         },
     }
 
@@ -7197,6 +7439,9 @@ def test_lesson_turn_stream_route_emits_action_text_and_done_events(tmp_path):
     assert action["mouth_intensity"] == 0.8
     assert action["interrupt_policy"] == "barge_in_allowed"
     assert action["performance_source"] == "lesson_persona_context"
+    assert action["target_role"] == ""
+    assert action["expected_student_action"] == ""
+    assert action["speech_style_tag"] == ""
 
     text_chunks = [payload["text"] for name, payload in events if name == "text_delta"]
     done = events[-1][1]

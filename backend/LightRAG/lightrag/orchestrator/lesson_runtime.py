@@ -6,7 +6,7 @@ import json
 import os
 import re
 import time
-from collections.abc import Callable
+from collections.abc import Callable, Mapping
 from contextlib import contextmanager
 from contextvars import ContextVar
 from pathlib import Path
@@ -123,6 +123,7 @@ _ANSWER_TURN_GENERIC_PRAISE_COMPACT_PHRASES = (
     "特别棒",
     "很不错",
     "真不错",
+    "不错",
     "非常好",
     "特别好",
     "真好",
@@ -1468,6 +1469,19 @@ class LessonRuntime:
             quality_issues_after = self._answer_turn_policy_reply_quality_issues(
                 policy.teacherreply
             )
+        policy, echo_repair_status = (
+            self._maybe_repair_answer_turn_policy_learner_echo_mismatch(
+                policy=policy,
+                learner_input=learner_input,
+            )
+        )
+        if echo_repair_status != "not_needed":
+            quality_revision_status = (
+                f"{quality_revision_status}+learner_echo_{echo_repair_status}"
+            )
+            quality_issues_after = self._answer_turn_policy_reply_quality_issues(
+                policy.teacherreply
+            )
         policy, matched_input_repair_status = (
             self._maybe_repair_answer_turn_policy_matched_input_pullback(
                 policy=policy,
@@ -1577,6 +1591,20 @@ class LessonRuntime:
             quality_issues_after = self._answer_turn_policy_reply_quality_issues(
                 policy.teacherreply
             )
+        policy, final_module_choice_boundary_status = (
+            self._maybe_repair_answer_turn_policy_module_choice_boundary(
+                policy=policy,
+                frame=frame,
+                learner_input=learner_input,
+            )
+        )
+        if final_module_choice_boundary_status != "not_needed":
+            quality_revision_status = (
+                f"{quality_revision_status}+module_choice_boundary_final_{final_module_choice_boundary_status}"
+            )
+            quality_issues_after = self._answer_turn_policy_reply_quality_issues(
+                policy.teacherreply
+            )
         fact_warnings = self._answer_turn_policy_fact_warnings(
             policy=policy,
             frame=frame,
@@ -1584,8 +1612,9 @@ class LessonRuntime:
         )
         reply_warnings = self._answer_turn_policy_reply_warnings(policy.teacherreply)
         latency_ms = int((time.perf_counter() - started_at) * 1000)
+        action_contract_fields: dict[str, str] = {}
         if policy.statepatch.currentblockuid == block.block_uid:
-            self._log_gentle_redirect_teaching_move(
+            action_contract_fields = self._log_gentle_redirect_teaching_move(
                 learner_input=learner_input,
                 state=state,
                 block=block,
@@ -1599,7 +1628,7 @@ class LessonRuntime:
                 ),
                 active_prompt=str(frame.get("teacherasked") or ""),
                 return_anchor=policy.statepatch.lastteacherquestion,
-            )
+            ) or {}
         logger.info(
             "Lesson teacher response audit turn_label=answer_question llmcalled=true llmprovider=%s latencyms=%d fallbackused=false fallbackreason=none teacherresponse_source=policy response_chars=%d",
             self.llm_provider,
@@ -1631,6 +1660,7 @@ class LessonRuntime:
             block=block,
             state=state,
             policy=policy,
+            action_contract_fields=action_contract_fields,
             response_audit=LessonTeacherResponseAuditSignal(
                 source=(
                     "policy_repaired" if repair_reason != "none" else "policy"
@@ -1657,7 +1687,7 @@ class LessonRuntime:
         target_phrase: str | None = None,
         active_prompt: str | None = None,
         return_anchor: str | None = None,
-    ) -> None:
+    ) -> dict[str, str] | None:
         interpreted_intent = self._gentle_redirect_interpreted_intent(
             learner_input=learner_input,
             state=state,
@@ -1666,7 +1696,7 @@ class LessonRuntime:
             turn_label=turn_label,
         )
         if interpreted_intent is None:
-            return
+            return None
         active_prompt = active_prompt or self._active_prompt_for_teaching_move(
             state=state,
             block=block,
@@ -1715,6 +1745,14 @@ class LessonRuntime:
                 sort_keys=True,
             ),
         )
+        payload = teaching_move.to_prompt_payload()
+        fields = payload.get("payload_fields", {})
+        if not isinstance(fields, dict):
+            return None
+        contract = TeachingMoveActionContract.try_from_payload_fields(fields)
+        if contract is None:
+            return None
+        return contract.to_payload_fields()
 
     def _gentle_redirect_interpreted_intent(
         self,
@@ -1941,6 +1979,8 @@ class LessonRuntime:
                 reasons.append("target_source_lock")
             if "generic_praise_stripped" in status:
                 reasons.append("generic_praise_stripped")
+            if "learner_echo_applied" in status:
+                reasons.append("learner_echo_repaired")
             if "matched_input_pullback_applied" in status:
                 reasons.append("matched_input_pullback")
             if "module_choice_boundary_applied" in status:
@@ -2982,6 +3022,75 @@ class LessonRuntime:
             return policy, "unresolved"
         return stripped_policy, "stripped"
 
+    def _maybe_repair_answer_turn_policy_learner_echo_mismatch(
+        self,
+        *,
+        policy: AnswerTurnPolicyOutput,
+        learner_input: str,
+    ) -> tuple[AnswerTurnPolicyOutput, str]:
+        repaired_reply = self._repair_answer_turn_policy_learner_echo_mismatch(
+            teacher_reply=policy.teacherreply,
+            learner_input=learner_input,
+        )
+        if not repaired_reply or repaired_reply.strip() == policy.teacherreply.strip():
+            return policy, "not_needed"
+        repaired_policy = policy.model_copy(update={"teacherreply": repaired_reply})
+        if self._answer_turn_policy_reply_has_generic_praise(repaired_reply):
+            return policy, "unresolved"
+        return repaired_policy, "applied"
+
+    def _repair_answer_turn_policy_learner_echo_mismatch(
+        self,
+        *,
+        teacher_reply: str,
+        learner_input: str,
+    ) -> str:
+        learner_phrase = self._answer_turn_policy_spoken_english_phrase(learner_input)
+        if not learner_phrase:
+            return teacher_reply.strip()
+        learner_tokens = self._teacher_tokens(learner_phrase)
+        if len(learner_tokens) < 2:
+            return teacher_reply.strip()
+
+        def _replace_echo(match: re.Match[str]) -> str:
+            echo = self._clean_english_phrase(match.group("echo"))
+            if self._answer_turn_policy_echo_matches_learner(
+                echo=echo,
+                learner_phrase=learner_phrase,
+                learner_tokens=learner_tokens,
+            ):
+                return match.group(0)
+            return f"我听到你说 {self._english_sentence(learner_phrase)}"
+
+        repaired = re.sub(
+            r"(?:你(?:刚才)?说(?:了|的是)|你刚才说的是|你说的是|我听到你说)\s*"
+            r"[“\"']?(?P<echo>[^，,。.!！?？；;\n”\"]{1,60})[”\"']?"
+            r"(?:[，,。.!！?？；;])?",
+            _replace_echo,
+            teacher_reply.strip(),
+            count=1,
+        )
+        repaired = re.sub(r"\s+([，,、。!！?？；;])", r"\1", repaired)
+        return repaired.strip()
+
+    def _answer_turn_policy_echo_matches_learner(
+        self,
+        *,
+        echo: str,
+        learner_phrase: str,
+        learner_tokens: set[str],
+    ) -> bool:
+        if not echo:
+            return False
+        echo_key = self._answer_turn_policy_phrase_key(echo)
+        learner_key = self._answer_turn_policy_phrase_key(learner_phrase)
+        if echo_key and learner_key and echo_key == learner_key:
+            return True
+        echo_tokens = self._teacher_tokens(echo)
+        if echo_tokens and echo_tokens <= learner_tokens:
+            return True
+        return False
+
     def _maybe_repair_answer_turn_policy_incomplete_sentence_tail(
         self,
         policy: AnswerTurnPolicyOutput,
@@ -3511,7 +3620,10 @@ class LessonRuntime:
         current_block_uid = str(frame.get("currentblock", {}).get("blockuid") or "")
         if policy.statepatch.currentblockuid != current_block_uid:
             return policy, "not_needed"
-        if not self._teacher_reply_has_module_choice_prompt(policy.teacherreply):
+        if not (
+            self._teacher_reply_has_module_choice_prompt(policy.teacherreply)
+            or self._teacher_reply_has_module_choice_leak(policy.teacherreply)
+        ):
             return policy, "not_needed"
         if self.module_choice_skill.has_module_navigation_request(learner_input):
             return policy, "not_needed"
@@ -4619,10 +4731,10 @@ class LessonRuntime:
             r"(?:(?<=^)|(?<=[—–~～，,、。.!！?？；;:：\s]))(?:老师|我)?听得(?:很|非常)?清楚(?=$|[—–~～，,、。.!！?？；;:：\s])",
             r"(?:(?<=^)|(?<=[—–~～，,、。.!！?？；;:：\s]))(?:哎呀|噢|哦|好)?(?:你|这个|这个词|这个单词|这个问题|这个点|你这个问题|你问的这个问题)?问得好(?=$|[—–~～，,、。.!！?？；;:：\s])",
             r"(?:你|这个词|这个单词|这个问题|这个点|你这个问题|你问的这个问题|你刚才)?问得(?:很|非常|特别)?(?:好|棒|不错)",
-            r"(?:(?<=^)|(?<=[—–~～，,、。.!！?？；;:：\s]))(?:很棒|真棒|太棒|非常棒|特别棒|很好|很不错|真不错|不错|非常好|特别好)的(?:运动|爱好|活动|想法|尝试|回答|句子|表达|选择|问题)(?=$|[—–~～，,、。.!！?？；;:：\s])",
-            r"(?:(?<=^)|(?<=[—–~～，,、。.!！?？；;:：\s]))(?:这是|这是个|这个是个)?好(?:运动|想法|尝试|回答|句子|表达|选择|问题)(?=$|[—–~～，,、。.!！?？；;:：\s])",
-            r"(?:(?<=^)|(?<=[—–~～，,、。.!！?？；;:：\s]))(?:这个|那个|你的|这个小)?(?:想法|主意|运动|活动|选择)(?:很|真|非常|特别)?(?:棒|好|不错)(?:呀|哦)?(?=$|[—–~～，,、。.!！?？；;:：\s])",
-            r"(?:(?<=^)|(?<=[—–~～，,、。.!！?？；;:：\s]))(?:那|这|这样|这也)?(?:很|真|非常|特别)?(?:棒|好|不错)(?:呀|哦)?(?=$|[—–~～，,、。.!！?？；;:：\s])",
+            r"(?:(?<=^)|(?<=[—–~～，,、。.!！?？；;:：\s]))(?:很棒|真棒|太棒|非常棒|特别棒|很好|很不错|真不错|不错|非常好|特别好)的(?:兴趣|运动|爱好|活动|想法|尝试|回答|句子|表达|选择|问题)(?:呀|哦)?(?=$|[—–~～，,、。.!！?？；;:：\s])",
+            r"(?:(?<=^)|(?<=[—–~～，,、。.!！?？；;:：\s]))(?:这是|这是个|这个是个)?好(?:兴趣|运动|想法|尝试|回答|句子|表达|选择|问题)(?=$|[—–~～，,、。.!！?？；;:：\s])",
+            r"(?:(?<=^)|(?<=[—–~～，,、。.!！?？；;:：\s]))(?:这个|那个|你的|这个小)?(?:兴趣|想法|主意|运动|活动|选择)(?:很|真|非常|特别)?(?:棒|好|不错)(?:呀|哦)?(?=$|[—–~～，,、。.!！?？；;:：\s])",
+            r"(?:(?<=^)|(?<=[—–~～，,、。.!！?？；;:：\s]))(?:那也|那|这|这样|这也)?(?:很|真|非常|特别)?(?:棒|好|不错)(?:呀|哦)?(?=$|[—–~～，,、。.!！?？；;:：\s])",
             r"(?:(?<=^)|(?<=[—–~～，,、。.!！?？；;:：\s]))(?:句子结构|这句话|这句话说得|这个回答|你的回答|你刚才的回答|回答|答案|这句|这个句子|你的句子|你刚才的句子|表达|说法|这个说法|你的说法|这个表达)(?:是|也)?(?:很|非常|完全)?(?:正确|准确|清楚|标准|好|棒|不错|对)(?:的)?(?=$|[—–~～，,、。.!！?？；;:：\s])",
             r"(?:这个回答|你的回答|你刚才的回答|这次回答|这个句子|你的句子|这句话|这句)(?:是|也)?(?:很|非常|特别)?(?:棒|好|不错|正确|准确|清楚|标准|对)(?:的)?(?![（(]?\s*tick\s*[）)]?\s*还是错)",
             r"(?:(?<=^)|(?<=[—–~～，,、。.!！?？；;:：\s]))(?:你|你刚才|刚才)?[^。.!！?？；;\n]{0,18}?(?:很棒|真棒|太棒|非常棒|特别棒|很好|非常好|特别好|真好|不错)(?:呀|哦)?(?=$|[—–~～，,、。.!！?？；;:：\s])",
@@ -4637,7 +4749,7 @@ class LessonRuntime:
         stripped = re.sub(r"^[—–~～，,、。.!！?？；;:：\s]+", "", stripped)
         stripped = re.sub(r"\s+([，,、。.!！?？；;])", r"\1", stripped)
         stripped = re.sub(r"([。.!?？])\s*[!！]", r"\1", stripped)
-        stripped = re.sub(r"([。.!！?？]){2,}", r"\1", stripped)
+        stripped = re.sub(r"([。!！?？]){2,}", r"\1", stripped)
         stripped = re.sub(r"([A-Za-z0-9])。", r"\1.", stripped)
         stripped = re.sub(r"([A-Za-z0-9]\.)\s*([\u4e00-\u9fff])", r"\1 \2", stripped)
         return stripped.strip()
@@ -4694,6 +4806,19 @@ class LessonRuntime:
             return True
         english_labels = self._curriculum_anchor_phrases(teacher_reply)
         return len({label.casefold() for label in english_labels}) >= 2
+
+    def _teacher_reply_has_module_choice_leak(self, teacher_reply: str) -> bool:
+        """Return whether answer-turn wording leaked module navigation language."""
+
+        if not teacher_reply:
+            return False
+        return bool(
+            re.search(
+                r"(?:第[一二三四五六七八九十]+块(?:的)?(?:内容|对话|图文|小任务|核心句型)?|"
+                r"第几块|先学(?:第一块|第二块)|模块)",
+                teacher_reply,
+            )
+        )
 
     def _curriculum_anchor_phrases(self, text: str) -> list[str]:
         anchors: list[str] = []
@@ -4777,6 +4902,7 @@ class LessonRuntime:
         state: LessonRuntimeState,
         policy: AnswerTurnPolicyOutput,
         response_audit: LessonTeacherResponseAuditSignal,
+        action_contract_fields: Mapping[str, str] | None = None,
     ) -> LessonTurnResult:
         next_state = state.model_copy(deep=True)
         teacher_response = policy.teacherreply.strip()
@@ -4839,6 +4965,7 @@ class LessonRuntime:
             state=next_state,
             teaching_action=teaching_action,
             teacher_response=teacher_response,
+            action_contract_fields=action_contract_fields,
         )
         return LessonTurnResult(
             page_uid=next_state.current_page_uid,
@@ -4857,6 +4984,7 @@ class LessonRuntime:
                 evaluation=next_state.last_eval_result,
                 learner_turn=True,
                 response_audit=response_audit,
+                action_contract_fields=action_contract_fields,
             ),
         )
 
@@ -4867,6 +4995,7 @@ class LessonRuntime:
         turn_label: TurnLabel,
         teaching_action: TeachingAction,
         teacher_response: str,
+        action_contract_fields: Mapping[str, str] | None = None,
     ) -> None:
         stream_sink = _ACTIVE_TEACHER_RESPONSE_STREAM.get()
         if stream_sink is None:
@@ -4877,6 +5006,9 @@ class LessonRuntime:
             turn_label=turn_label,
             teaching_action=teaching_action,
         ).model_dump()
+        persona_context["airi_performance"].update(
+            self._airi_performance_action_contract_fields(action_contract_fields)
+        )
         stream_sink.emit_action_metadata(
             teaching_action=teaching_action,
             evaluation=state.last_eval_result,
@@ -4892,12 +5024,14 @@ class LessonRuntime:
         state: LessonRuntimeState,
         teaching_action: TeachingAction,
         teacher_response: str,
+        action_contract_fields: Mapping[str, str] | None = None,
     ) -> None:
         self._emit_teacher_response(
             state=state,
             turn_label="answer_question",
             teaching_action=teaching_action,
             teacher_response=teacher_response,
+            action_contract_fields=action_contract_fields,
         )
 
     def _handle_module_choice_turn(
@@ -6242,6 +6376,7 @@ class LessonRuntime:
         recall_status_override: Literal["success", "skipped", "degraded"] | None = None,
         recall_summary_override: str | None = None,
         response_audit: LessonTeacherResponseAuditSignal | None = None,
+        action_contract_fields: Mapping[str, str] | None = None,
     ) -> LessonTurnDebugSignals | None:
         if not self.debug_signals_enabled:
             return None
@@ -6303,6 +6438,7 @@ class LessonRuntime:
                 turn_label=turn_label,
                 teaching_action=teaching_action,
                 evaluation=evaluation,
+                action_contract_fields=action_contract_fields,
             ),
             response_audit=response_audit,
         )
@@ -6315,6 +6451,7 @@ class LessonRuntime:
         turn_label: str | None,
         teaching_action: str | None,
         evaluation: str | None,
+        action_contract_fields: Mapping[str, str] | None = None,
     ) -> LessonPersonaDebugSignal:
         persona_context = self._build_lesson_persona_context(
             state=state,
@@ -6325,6 +6462,11 @@ class LessonRuntime:
         )
         profile = persona_context.profile
         relationship = persona_context.relationship
+        airi_performance = persona_context.airi_performance.model_copy(
+            update=self._airi_performance_action_contract_fields(
+                action_contract_fields
+            )
+        )
         return LessonPersonaDebugSignal(
             enabled=True,
             schema_version=persona_context.schema_version,
@@ -6359,8 +6501,47 @@ class LessonRuntime:
             mastery_signals=list(relationship.mastery_signals),
             semantic_memories=list(relationship.semantic_memories),
             affect_state=persona_context.affect_state,
-            airi_performance=persona_context.airi_performance,
+            airi_performance=airi_performance,
         )
+
+    def _airi_performance_action_contract_fields(
+        self,
+        action_contract_fields: Mapping[str, str] | None,
+    ) -> dict[str, str]:
+        contract = TeachingMoveActionContract.try_from_payload_fields(
+            dict(action_contract_fields or {})
+        )
+        if contract is None:
+            return {}
+        fields = contract.to_payload_fields()
+        target_role = fields.get("target_role", "")
+        expected_action = fields.get("expected_student_action", "")
+        return {
+            "target_role": target_role,
+            "expected_student_action": expected_action,
+            "speech_style_tag": self._speech_style_tag_for_action_contract(
+                target_role=target_role,
+                expected_student_action=expected_action,
+            ),
+        }
+
+    def _speech_style_tag_for_action_contract(
+        self,
+        *,
+        target_role: str,
+        expected_student_action: str,
+    ) -> str:
+        if target_role == "phonics":
+            return "phonics_repeat"
+        if target_role == "story":
+            return "story_prompt"
+        if target_role == "question" and expected_student_action == "answer":
+            return "short_scaffold"
+        if target_role == "answer":
+            return "calm_correction"
+        if target_role == "phrase":
+            return "gentle_redirect"
+        return ""
 
     def _build_lesson_persona_context(
         self,

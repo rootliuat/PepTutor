@@ -683,6 +683,9 @@ def test_smoke_matrix_copies_llm_token_usage_from_response_audit() -> None:
                         "expression": "thinking",
                         "emotion": "thinking",
                         "speech_style": "normal",
+                        "speech_style_tag": "short_scaffold",
+                        "target_role": "question",
+                        "expected_student_action": "answer",
                         "interrupt_policy": "finish_current_sentence",
                         "mouth_intensity": 0.7,
                     },
@@ -701,6 +704,9 @@ def test_smoke_matrix_copies_llm_token_usage_from_response_audit() -> None:
     assert turn["persona_capsule_bytes_metered"] == 24
     assert turn["live2d_motion"] == "Explain"
     assert turn["speech_style"] == "normal"
+    assert turn["speech_style_tag"] == "short_scaffold"
+    assert turn["target_role"] == "question"
+    assert turn["expected_student_action"] == "answer"
     assert turn["interrupt_policy"] == "finish_current_sentence"
     summary = matrix.summarize([turn], [])
     assert summary["llm_call_count"] == 1

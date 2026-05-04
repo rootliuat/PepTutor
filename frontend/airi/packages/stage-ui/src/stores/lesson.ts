@@ -174,6 +174,9 @@ function lessonAiriProfileFromBackendPerformance(result: LessonTurnResult): Less
     content_source: performance.content_source || 'lesson_runtime_teacher_response',
     fallback_allowed: typeof performance.fallback_allowed === 'boolean' ? performance.fallback_allowed : true,
     performance_source: 'lesson_persona_context',
+    target_role: performance.target_role || '',
+    expected_student_action: performance.expected_student_action || '',
+    speech_style_tag: performance.speech_style_tag || '',
   }
 }
 
@@ -312,6 +315,9 @@ function lessonAiriEmotionPayloadFromAction(payload: LessonAiriActionPayload): E
     contentSource: payload.content_source,
     fallbackAllowed: payload.fallback_allowed,
     performanceSource: payload.performance_source,
+    targetRole: payload.target_role,
+    expectedStudentAction: payload.expected_student_action,
+    speechStyleTag: payload.speech_style_tag,
     turnLabel: payload.turn_label,
   }
 }

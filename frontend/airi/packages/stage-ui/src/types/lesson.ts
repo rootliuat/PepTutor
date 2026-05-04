@@ -138,6 +138,9 @@ export interface LessonAiriPerformancePlan {
   interrupt_policy?: 'barge_in_allowed' | 'finish_current_sentence' | 'no_interrupt'
   content_source?: string
   fallback_allowed?: boolean
+  target_role?: string
+  expected_student_action?: string
+  speech_style_tag?: string
 }
 
 export interface LessonClassroomAffectState {
@@ -151,6 +154,9 @@ export interface LessonClassroomAffectState {
 export interface LessonPersonaDebugSignal {
   enabled?: boolean
   schema_version?: string
+  persona_source?: string
+  persona_version?: string
+  full_soul_injected?: boolean
   profile_id?: string
   profile_version?: string
   display_name?: string
@@ -201,6 +207,9 @@ export interface LessonAiriActionPayload {
   content_source?: string
   fallback_allowed?: boolean
   performance_source?: string
+  target_role?: string
+  expected_student_action?: string
+  speech_style_tag?: string
 }
 
 export interface LessonTurnStreamRequest {
