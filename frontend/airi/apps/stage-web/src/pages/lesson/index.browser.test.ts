@@ -1061,7 +1061,7 @@ describeMockSmoke('/lesson browser smoke', () => {
     document.body.innerHTML = ''
   })
 
-  it('loads the catalog, resolves the route page, and auto-starts the first teacher turn against the real backend', async () => {
+  it('loads the catalog, resolves the route page, and auto-starts the first mocked teacher turn', async () => {
     const fetchSpy = installLessonApiMock([lessonTurnP24StartFixture])
     const { app } = await mountLessonPage()
     mountedApp = app

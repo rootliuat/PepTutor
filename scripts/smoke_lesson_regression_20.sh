@@ -8,6 +8,7 @@ SERVER_BIN="${PEPTUTOR_LESSON_REGRESSION_SERVER_BIN:-${BACKEND_DIR}/.venv/bin/li
 PYTHON_BIN="${PEPTUTOR_LESSON_REGRESSION_PYTHON:-${BACKEND_DIR}/.venv/bin/python}"
 WAIT_SCRIPT="${PEPTUTOR_LESSON_REGRESSION_WAIT_SCRIPT:-${ROOT_DIR}/scripts/wait-for-lesson-backend.sh}"
 MATRIX_SCRIPT="${PEPTUTOR_LESSON_REGRESSION_MATRIX_SCRIPT:-${ROOT_DIR}/scripts/smoke_lesson_matrix.py}"
+BUDGET_GUARD_SCRIPT="${PEPTUTOR_TEST_BUDGET_GUARD_SCRIPT:-${ROOT_DIR}/scripts/test-budget-guard.sh}"
 LOG_DIR="${PEPTUTOR_LESSON_REGRESSION_LOG_DIR:-${BACKEND_DIR}/temp}"
 OUT_DIR="${PEPTUTOR_LESSON_REGRESSION_OUT_DIR:-${ROOT_DIR}/temp/lesson-smoke-artifacts}"
 LESSON_BACKEND_HOST="${PEPTUTOR_LESSON_REGRESSION_HOST:-127.0.0.1}"
@@ -31,6 +32,8 @@ Environment overrides:
   PEPTUTOR_LESSON_REGRESSION_FULL_STACK=1   Keep vector/SimpleMem env.
   PEPTUTOR_LESSON_REGRESSION_KEEP_SERVER=1  Leave the backend running.
   PEPTUTOR_LESSON_REGRESSION_OUT_DIR=...    Matrix artifact directory.
+  PEPTUTOR_TEST_GOAL_ID=...                  Required test budget goal id.
+  PEPTUTOR_TEST_BUDGET_OVERRIDE_REASON=...   Required for repeated L3 runs.
 EOF
 }
 
@@ -70,6 +73,15 @@ if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
   usage
   exit 0
 fi
+
+if [[ ! -f "${BUDGET_GUARD_SCRIPT}" ]]; then
+  echo "Missing test budget guard script: ${BUDGET_GUARD_SCRIPT}" >&2
+  exit 1
+fi
+
+# shellcheck source=/dev/null
+source "${BUDGET_GUARD_SCRIPT}"
+peptutor_test_budget_guard "full_20_page" "" ""
 
 if [[ ! -x "${SERVER_BIN}" ]]; then
   echo "Missing LightRAG server binary: ${SERVER_BIN}" >&2
@@ -135,5 +147,13 @@ if ! "${PYTHON_BIN}" "${MATRIX_SCRIPT}" --base-url "${BASE_URL}" --out-dir "${OU
   print_backend_log_tail
   exit 1
 fi
+
+LATEST_REPORT="$(
+  find "${OUT_DIR}" -maxdepth 1 -type f -name 'lesson_smoke_matrix_*.json' -printf '%T@ %p\n' 2>/dev/null \
+    | sort -nr \
+    | head -n 1 \
+    | cut -d' ' -f2-
+)"
+peptutor_test_budget_mark_report "full_20_page" "${LATEST_REPORT}"
 
 echo "[PASS] Fixed 20-page lesson regression completed."

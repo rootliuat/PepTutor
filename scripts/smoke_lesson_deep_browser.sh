@@ -9,6 +9,7 @@ SERVER_BIN="${PEPTUTOR_LESSON_DEEP_SERVER_BIN:-${BACKEND_DIR}/.venv/bin/lightrag
 PYTHON_BIN="${PEPTUTOR_LESSON_DEEP_PYTHON:-${BACKEND_DIR}/.venv/bin/python}"
 WAIT_SCRIPT="${PEPTUTOR_LESSON_DEEP_WAIT_SCRIPT:-${ROOT_DIR}/scripts/wait-for-lesson-backend.sh}"
 DEEP_SMOKE_SCRIPT="${PEPTUTOR_LESSON_DEEP_SCRIPT:-${ROOT_DIR}/temp/lesson_deep_smoke.py}"
+BUDGET_GUARD_SCRIPT="${PEPTUTOR_TEST_BUDGET_GUARD_SCRIPT:-${ROOT_DIR}/scripts/test-budget-guard.sh}"
 LOG_DIR="${PEPTUTOR_LESSON_DEEP_LOG_DIR:-${BACKEND_DIR}/temp}"
 ARTIFACT_DIR="${PEPTUTOR_LESSON_DEEP_ARTIFACT_DIR:-${ROOT_DIR}/temp/lesson-smoke-artifacts}"
 HISTORY_ROOT="${PEPTUTOR_LESSON_DEEP_HISTORY_ROOT:-${ROOT_DIR}/frontend/airi/apps/stage-web/chat_history}"
@@ -46,6 +47,9 @@ Environment overrides:
   PEPTUTOR_LESSON_DEEP_BACKEND_PORT=...  Use an exact backend port.
   PEPTUTOR_LESSON_DEEP_FRONTEND_PORT=... Use another Vite port.
   PEPTUTOR_LESSON_DEEP_OBSERVER_TIMEOUT_SECONDS=... Kill a hung observer.
+  PEPTUTOR_TEST_GOAL_ID=...              Required test budget goal id.
+  PEPTUTOR_TEST_GOAL_TYPE=deep-s4        Required; must include deep, s4, tts, or live2d.
+  PEPTUTOR_TEST_BUDGET_OVERRIDE_REASON=... Required for repeated deep smoke.
 EOF
 }
 
@@ -170,6 +174,15 @@ if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
   exit 0
 fi
 
+if [[ ! -f "${BUDGET_GUARD_SCRIPT}" ]]; then
+  echo "Missing test budget guard script: ${BUDGET_GUARD_SCRIPT}" >&2
+  exit 1
+fi
+
+# shellcheck source=/dev/null
+source "${BUDGET_GUARD_SCRIPT}"
+peptutor_test_budget_guard "deep" "deep,s4,tts,live2d" "${OBSERVER_LOG_PATH}"
+
 if [[ ! -x "${SERVER_BIN}" ]]; then
   echo "Missing LightRAG server binary: ${SERVER_BIN}" >&2
   echo "Install backend/LightRAG/.venv first." >&2
@@ -237,6 +250,7 @@ echo "[INFO] Backend log: ${BACKEND_LOG_PATH}"
 BACKEND_PID="$!"
 
 if ! bash "${WAIT_SCRIPT}" --url "${BACKEND_URL}" --timeout 120; then
+  peptutor_test_budget_mark_report "deep" "${OBSERVER_LOG_PATH}"
   print_log_tail "Backend" "${BACKEND_LOG_PATH}"
   exit 1
 fi
@@ -259,6 +273,7 @@ echo "[INFO] Frontend log: ${FRONTEND_LOG_PATH}"
 FRONTEND_PID="$!"
 
 if ! wait_for_frontend; then
+  peptutor_test_budget_mark_report "deep" "${OBSERVER_LOG_PATH}"
   print_log_tail "Frontend" "${FRONTEND_LOG_PATH}"
   print_log_tail "Backend" "${BACKEND_LOG_PATH}"
   exit 1
@@ -283,7 +298,9 @@ if [[ "${observer_status}" -ne 0 ]]; then
   print_log_tail "Observer" "${OBSERVER_LOG_PATH}"
   print_log_tail "Frontend" "${FRONTEND_LOG_PATH}"
   print_log_tail "Backend" "${BACKEND_LOG_PATH}"
+  peptutor_test_budget_mark_report "deep" "${OBSERVER_LOG_PATH}"
   exit 1
 fi
 
+peptutor_test_budget_mark_report "deep" "${OBSERVER_LOG_PATH}"
 echo "[PASS] Deep lesson browser observation completed."
