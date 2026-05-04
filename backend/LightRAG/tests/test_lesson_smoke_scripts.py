@@ -632,6 +632,7 @@ def test_smoke_matrix_copies_llm_token_usage_from_response_audit() -> None:
         "runtime_state_minimal_view_bytes": 9,
         "runtime_state_legacy_frame_bytes": 20,
         "runtime_state_savings_candidate_bytes": 11,
+        "minimal_runtime_state_prompt_enabled": True,
         "teaching_move_bytes": 0,
         "policy_instruction_bytes": 30,
         "quality_revision_prompt_bytes": 0,
@@ -714,6 +715,7 @@ def test_smoke_matrix_copies_llm_token_usage_from_response_audit() -> None:
     assert turn["llm_token_usage"]["runtime_state_minimal_view_bytes"] == 9
     assert turn["llm_token_usage"]["runtime_state_legacy_frame_bytes"] == 20
     assert turn["llm_token_usage"]["runtime_state_savings_candidate_bytes"] == 11
+    assert turn["llm_token_usage"]["minimal_runtime_state_prompt_enabled"] is True
 
 
 def test_smoke_matrix_persona_semantics_distinguish_call_injection() -> None:
@@ -3845,6 +3847,7 @@ def test_llm_context_breakdown_audit_attributes_prompt_components(
         "textbook_block_bytes": 520,
         "page_overview_bytes": 90,
         "runtime_state_bytes": 160,
+        "minimal_runtime_state_prompt_enabled": True,
         "teaching_move_bytes": 20,
         "policy_instruction_bytes": 320,
         "quality_revision_prompt_bytes": 0,
@@ -3989,6 +3992,17 @@ def test_llm_context_breakdown_audit_attributes_prompt_components(
     assert report["summary"]["component_totals"]["output_schema_bytes"] == 49
     assert report["summary"]["component_totals"]["revision_notes_bytes"] == 72
     assert report["summary"]["component_totals"]["persona_capsule_bytes"] == 120
+    assert report["summary"]["minimal_runtime_state_prompt_enabled_call_count"] == 1
+    assert (
+        report["summary"]["answer_turn_policy_runtime_state"][
+            "runtime_state_bytes"
+        ]
+        == 160
+    )
+    assert (
+        report["summary"]["answer_turn_policy_runtime_state"]["max_prompt_tokens"]
+        == 300
+    )
     assert report["top_calls_by_lesson_context_bytes"][0]["call_id"] == "answer-p24"
     assert report["top_pages_by_lesson_context_bytes"][0]["page_uid"] == "TB-G5S1U3-P24"
     assert report["top_routes_by_lesson_context_bytes"][0]["route"] == "answer_turn_policy"
@@ -4202,6 +4216,7 @@ def test_runtime_state_minimal_view_shadow_audit_reports_candidate_savings(
     assert report["summary"]["total_runtime_state_minimal_view_bytes"] == 1557
     assert report["summary"]["total_runtime_state_savings_candidate_bytes"] == 2603
     assert report["summary"]["minimal_view_missing_count"] == 0
+    assert report["summary"]["minimal_runtime_state_prompt_enabled_call_count"] == 0
     assert report["top_pages_by_savings_candidate_bytes"][0]["page_uid"] == (
         "TB-G5S1U3-P24"
     )

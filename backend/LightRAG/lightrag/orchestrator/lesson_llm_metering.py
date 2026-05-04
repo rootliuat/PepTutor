@@ -43,6 +43,7 @@ class LessonLLMCallMeter:
     runtime_state_minimal_view_bytes: int = 0
     runtime_state_legacy_frame_bytes: int = 0
     runtime_state_savings_candidate_bytes: int = 0
+    minimal_runtime_state_prompt_enabled: bool = False
     teaching_move_bytes: int = 0
     policy_instruction_bytes: int = 0
     quality_revision_prompt_bytes: int = 0
@@ -103,6 +104,9 @@ class LessonLLMCallMeter:
             "runtime_state_savings_candidate_bytes": (
                 self.runtime_state_savings_candidate_bytes
             ),
+            "minimal_runtime_state_prompt_enabled": (
+                self.minimal_runtime_state_prompt_enabled
+            ),
             "teaching_move_bytes": self.teaching_move_bytes,
             "policy_instruction_bytes": self.policy_instruction_bytes,
             "quality_revision_prompt_bytes": self.quality_revision_prompt_bytes,
@@ -134,6 +138,10 @@ _ACTIVE_METERING_CONTEXT: ContextVar[LessonLLMMeteringContext | None] = ContextV
     "lesson_llm_metering_context",
     default=None,
 )
+_PROMPT_BREAKDOWN_OVERRIDES: ContextVar[dict[str, Any] | None] = ContextVar(
+    "lesson_llm_prompt_breakdown_overrides",
+    default=None,
+)
 
 
 @contextmanager
@@ -159,6 +167,17 @@ def collect_lesson_llm_metering(
         yield context
     finally:
         _ACTIVE_METERING_CONTEXT.reset(token)
+
+
+@contextmanager
+def override_lesson_llm_prompt_breakdown(
+    overrides: Mapping[str, Any] | None,
+) -> Iterator[None]:
+    token = _PROMPT_BREAKDOWN_OVERRIDES.set(dict(overrides or {}))
+    try:
+        yield
+    finally:
+        _PROMPT_BREAKDOWN_OVERRIDES.reset(token)
 
 
 def active_lesson_llm_call_count() -> int:
@@ -210,7 +229,7 @@ def record_lesson_llm_call(
         completion=completion,
         provider_usage=provider_usage,
     )
-    breakdown = _prompt_breakdown(prompt)
+    breakdown = _apply_prompt_breakdown_overrides(_prompt_breakdown(prompt))
     context.calls.append(
         LessonLLMCallMeter(
             call_id=call_id,
@@ -244,6 +263,9 @@ def record_lesson_llm_call(
             runtime_state_savings_candidate_bytes=breakdown[
                 "runtime_state_savings_candidate_bytes"
             ],
+            minimal_runtime_state_prompt_enabled=bool(
+                breakdown["minimal_runtime_state_prompt_enabled"]
+            ),
             teaching_move_bytes=breakdown["teaching_move_bytes"],
             policy_instruction_bytes=breakdown["policy_instruction_bytes"],
             quality_revision_prompt_bytes=breakdown[
@@ -349,6 +371,9 @@ def summarize_lesson_llm_metering(
         ),
         "runtime_state_savings_candidate_bytes": sum(
             int(call["runtime_state_savings_candidate_bytes"]) for call in calls
+        ),
+        "minimal_runtime_state_prompt_enabled_call_count": sum(
+            1 for call in calls if bool(call["minimal_runtime_state_prompt_enabled"])
         ),
         "teaching_move_bytes": sum(
             int(call["teaching_move_bytes"]) for call in calls
@@ -530,6 +555,7 @@ def _prompt_breakdown(prompt: str) -> dict[str, int]:
         frame,
         (
             "teacherasked",
+            "runtimestate",
             "taskboundary",
             "recentdialogue",
             "allowedstatewrites",
@@ -537,14 +563,23 @@ def _prompt_breakdown(prompt: str) -> dict[str, int]:
         ),
         ensure_ascii=ascii_json_prompt,
     )
+    prompt_runtime_state = frame.get("runtimestate")
     runtime_state_legacy_frame_bytes = _answer_turn_policy_legacy_state_bytes(
         frame,
         ensure_ascii=ascii_json_prompt,
     )
-    runtime_state_minimal_view_bytes = _json_bytes(
-        _answer_turn_policy_runtime_state_minimal_view(frame),
-        ensure_ascii=ascii_json_prompt,
-    ) if runtime_state_legacy_frame_bytes else 0
+    if isinstance(prompt_runtime_state, dict):
+        runtime_state_minimal_view_bytes = _json_bytes(
+            prompt_runtime_state,
+            ensure_ascii=ascii_json_prompt,
+        )
+    elif runtime_state_legacy_frame_bytes:
+        runtime_state_minimal_view_bytes = _json_bytes(
+            _answer_turn_policy_runtime_state_minimal_view(frame),
+            ensure_ascii=ascii_json_prompt,
+        )
+    else:
+        runtime_state_minimal_view_bytes = 0
     runtime_state_savings_candidate_bytes = max(
         0,
         runtime_state_legacy_frame_bytes - runtime_state_minimal_view_bytes,
@@ -652,6 +687,15 @@ def _prompt_breakdown(prompt: str) -> dict[str, int]:
         "runtime_state_savings_candidate_bytes": (
             runtime_state_savings_candidate_bytes
         ),
+        "minimal_runtime_state_prompt_enabled": bool(
+            payload.get("minimal_runtime_state_prompt_enabled")
+        )
+        or (
+            isinstance(prompt_runtime_state, dict)
+            and "taskboundary" not in frame
+            and "allowedstatewrites" not in frame
+            and "learnerinputmatches" not in frame
+        ),
         "teaching_move_bytes": teaching_move_bytes,
         "policy_instruction_bytes": policy_instruction_bytes,
         "quality_revision_prompt_bytes": quality_revision_prompt_bytes,
@@ -668,7 +712,7 @@ def _prompt_breakdown(prompt: str) -> dict[str, int]:
     }
 
 
-def _empty_prompt_breakdown() -> dict[str, int]:
+def _empty_prompt_breakdown() -> dict[str, Any]:
     return {
         "rag_context_bytes": 0,
         "lesson_context_bytes": 0,
@@ -680,6 +724,7 @@ def _empty_prompt_breakdown() -> dict[str, int]:
         "runtime_state_minimal_view_bytes": 0,
         "runtime_state_legacy_frame_bytes": 0,
         "runtime_state_savings_candidate_bytes": 0,
+        "minimal_runtime_state_prompt_enabled": False,
         "teaching_move_bytes": 0,
         "policy_instruction_bytes": 0,
         "quality_revision_prompt_bytes": 0,
@@ -709,6 +754,24 @@ def _component_bytes(
         for key in keys
         if key in mapping
     )
+
+
+def _apply_prompt_breakdown_overrides(
+    breakdown: dict[str, Any],
+) -> dict[str, Any]:
+    overrides = _PROMPT_BREAKDOWN_OVERRIDES.get() or {}
+    if not overrides:
+        return breakdown
+    adjusted = dict(breakdown)
+    for key in (
+        "runtime_state_legacy_frame_bytes",
+        "runtime_state_minimal_view_bytes",
+        "runtime_state_savings_candidate_bytes",
+        "minimal_runtime_state_prompt_enabled",
+    ):
+        if key in overrides:
+            adjusted[key] = overrides[key]
+    return adjusted
 
 
 def _answer_turn_policy_legacy_state_bytes(

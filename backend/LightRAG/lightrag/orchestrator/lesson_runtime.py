@@ -23,6 +23,7 @@ from lightrag.orchestrator.lesson_llm_metering import (
     active_lesson_llm_call_count,
     collect_lesson_llm_metering,
     default_lesson_llm_model,
+    override_lesson_llm_prompt_breakdown,
     record_lesson_llm_call,
     summarize_lesson_llm_metering,
 )
@@ -169,6 +170,15 @@ _ANSWER_TURN_GENERIC_PRAISE_COMPACT_PHRASES = (
     "你的回答是对的",
     "回答是对的",
     "问得好",
+)
+_ANSWER_TURN_MINIMAL_RUNTIME_STATE_ENV = (
+    "PEPTUTOR_ANSWER_TURN_MINIMAL_RUNTIME_STATE"
+)
+_ANSWER_TURN_LEGACY_RUNTIME_STATE_FRAME_KEYS = (
+    "taskboundary",
+    "recentdialogue",
+    "allowedstatewrites",
+    "learnerinputmatches",
 )
 _ANSWER_TURN_GENERIC_PRAISE_PATTERNS = (
     r"(?:^|[，,。.!！\s])很好(?:[，,。.!！\s]|$)",
@@ -1298,66 +1308,70 @@ class LessonRuntime:
             learner_input=learner_input,
         )
         prompt = self._build_answer_turn_policy_prompt(frame=frame)
+        metering_overrides = self._answer_turn_policy_prompt_metering_overrides(
+            frame=frame
+        )
         raw = ""
         started_at = time.perf_counter()
         call_count_before = active_lesson_llm_call_count()
-        try:
-            raw = complete_text(
-                prompt,
-                system_prompt=None,
-                history_messages=[],
-                max_tokens=420,
-                _lesson_audit_tag="teacher_turn_policy.answer_question",
-            )
-            if active_lesson_llm_call_count() == call_count_before:
-                record_lesson_llm_call(
-                    prompt=prompt,
-                    completion=raw,
+        with override_lesson_llm_prompt_breakdown(metering_overrides):
+            try:
+                raw = complete_text(
+                    prompt,
                     system_prompt=None,
                     history_messages=[],
-                    llm_provider=self.llm_provider,
-                    llm_model=self.llm_model,
-                    audit_tag="teacher_turn_policy.answer_question",
-                    mode="complete",
-                    status="success",
-                    route="answer_turn_policy",
-                    turn_label="answer_question",
-                    page_uid=state.current_page_uid,
-                    block_uid=block.block_uid,
+                    max_tokens=420,
+                    _lesson_audit_tag="teacher_turn_policy.answer_question",
                 )
-            policy = self._parse_answer_turn_policy(raw)
-        except Exception as exc:
-            if active_lesson_llm_call_count() == call_count_before:
-                record_lesson_llm_call(
-                    prompt=prompt,
-                    completion=raw,
-                    system_prompt=None,
-                    history_messages=[],
-                    llm_provider=self.llm_provider,
-                    llm_model=self.llm_model,
-                    audit_tag="teacher_turn_policy.answer_question",
-                    mode="complete",
-                    status="error",
-                    route="answer_turn_policy",
-                    turn_label="answer_question",
-                    page_uid=state.current_page_uid,
-                    block_uid=block.block_uid,
+                if active_lesson_llm_call_count() == call_count_before:
+                    record_lesson_llm_call(
+                        prompt=prompt,
+                        completion=raw,
+                        system_prompt=None,
+                        history_messages=[],
+                        llm_provider=self.llm_provider,
+                        llm_model=self.llm_model,
+                        audit_tag="teacher_turn_policy.answer_question",
+                        mode="complete",
+                        status="success",
+                        route="answer_turn_policy",
+                        turn_label="answer_question",
+                        page_uid=state.current_page_uid,
+                        block_uid=block.block_uid,
+                    )
+                policy = self._parse_answer_turn_policy(raw)
+            except Exception as exc:
+                if active_lesson_llm_call_count() == call_count_before:
+                    record_lesson_llm_call(
+                        prompt=prompt,
+                        completion=raw,
+                        system_prompt=None,
+                        history_messages=[],
+                        llm_provider=self.llm_provider,
+                        llm_model=self.llm_model,
+                        audit_tag="teacher_turn_policy.answer_question",
+                        mode="complete",
+                        status="error",
+                        route="answer_turn_policy",
+                        turn_label="answer_question",
+                        page_uid=state.current_page_uid,
+                        block_uid=block.block_uid,
+                    )
+                logger.info(
+                    "Lesson teacher response audit turn_label=answer_question llmcalled=true llmprovider=%s latencyms=%d fallbackused=true fallbackreason=policy_exception teacherresponse_source=fallback response_chars=0",
+                    self.llm_provider,
+                    int((time.perf_counter() - started_at) * 1000),
                 )
-            logger.info(
-                "Lesson teacher response audit turn_label=answer_question llmcalled=true llmprovider=%s latencyms=%d fallbackused=true fallbackreason=policy_exception teacherresponse_source=fallback response_chars=0",
-                self.llm_provider,
-                int((time.perf_counter() - started_at) * 1000),
-            )
-            logger.warning(
-                "Lesson answer policy route policy_used=false legacy_branch_used=true page_uid=%s block_uid=%s rule_eval=%s fallback_reason=policy_exception prompt_chars=%d error=%s raw=%s",
-                state.current_page_uid,
-                block.block_uid,
-                evaluation,
-                len(prompt),
-                exc,
-                raw[:500],
-            )
-            return None
+                logger.warning(
+                    "Lesson answer policy route policy_used=false legacy_branch_used=true page_uid=%s block_uid=%s rule_eval=%s fallback_reason=policy_exception prompt_chars=%d error=%s raw=%s",
+                    state.current_page_uid,
+                    block.block_uid,
+                    evaluation,
+                    len(prompt),
+                    exc,
+                    raw[:500],
+                )
+                return None
 
         policy = self._apply_answer_turn_policy_state_boundary(
             block=block,
@@ -1818,11 +1832,14 @@ class LessonRuntime:
         *,
         frame: dict[str, Any],
     ) -> str:
+        minimal_runtime_state_enabled = (
+            self._answer_turn_policy_minimal_runtime_state_prompt_enabled()
+        )
         payload = {
             "turn_kind": "answer_turn_policy",
             "persona_capsule": MILI_ANSWER_TURN_POLICY_PERSONA_CAPSULE_V1,
             "instructions": ANSWER_TURN_POLICY_RUBRIC_V1,
-            "frame": frame,
+            "frame": self._answer_turn_policy_prompt_frame(frame=frame),
             "required_output_schema": {
                 "teacherreply": "<final teacher speech>",
                 "statepatch": {
@@ -1832,10 +1849,80 @@ class LessonRuntime:
                 },
             },
         }
+        if minimal_runtime_state_enabled:
+            payload["minimal_runtime_state_prompt_enabled"] = True
         return json.dumps(
             payload,
             ensure_ascii=True,
             separators=(",", ":"),
+        )
+
+    def _answer_turn_policy_minimal_runtime_state_prompt_enabled(self) -> bool:
+        return str(os.getenv(_ANSWER_TURN_MINIMAL_RUNTIME_STATE_ENV) or "").lower() in {
+            "1",
+            "true",
+            "yes",
+            "on",
+        }
+
+    def _answer_turn_policy_prompt_frame(
+        self,
+        *,
+        frame: dict[str, Any],
+    ) -> dict[str, Any]:
+        if not self._answer_turn_policy_minimal_runtime_state_prompt_enabled():
+            return frame
+        prompt_frame = {
+            key: value
+            for key, value in frame.items()
+            if key not in _ANSWER_TURN_LEGACY_RUNTIME_STATE_FRAME_KEYS
+        }
+        prompt_frame["runtimestate"] = self._answer_turn_policy_runtime_state_view(
+            frame=frame
+        )
+        return prompt_frame
+
+    def _answer_turn_policy_prompt_metering_overrides(
+        self,
+        *,
+        frame: dict[str, Any],
+    ) -> dict[str, Any]:
+        if not self._answer_turn_policy_minimal_runtime_state_prompt_enabled():
+            return {"minimal_runtime_state_prompt_enabled": False}
+        legacy_bytes = self._answer_turn_policy_legacy_runtime_state_bytes(frame)
+        minimal_bytes = self._compact_prompt_json_bytes(
+            self._answer_turn_policy_runtime_state_view(frame=frame)
+        )
+        return {
+            "minimal_runtime_state_prompt_enabled": True,
+            "runtime_state_legacy_frame_bytes": legacy_bytes,
+            "runtime_state_minimal_view_bytes": minimal_bytes,
+            "runtime_state_savings_candidate_bytes": max(
+                0,
+                legacy_bytes - minimal_bytes,
+            ),
+        }
+
+    def _answer_turn_policy_legacy_runtime_state_bytes(
+        self,
+        frame: dict[str, Any],
+    ) -> int:
+        return sum(
+            self._compact_prompt_json_bytes(frame[key])
+            for key in (
+                "teacherasked",
+                *_ANSWER_TURN_LEGACY_RUNTIME_STATE_FRAME_KEYS,
+            )
+            if key in frame
+        )
+
+    def _compact_prompt_json_bytes(self, value: Any) -> int:
+        return len(
+            json.dumps(
+                value,
+                ensure_ascii=True,
+                separators=(",", ":"),
+            ).encode("utf-8")
         )
 
     def _answer_turn_policy_audit_repair_reason(self, status: str) -> str:

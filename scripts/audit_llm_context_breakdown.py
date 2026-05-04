@@ -149,6 +149,7 @@ def render_markdown(report: dict[str, Any]) -> str:
         f"- max_lesson_context_bytes: `{summary['max_lesson_context_bytes']}`",
         f"- unknown_context_bytes: `{summary['component_totals']['unknown_context_bytes']}`",
         f"- unclassified_context_bytes: `{summary['component_totals']['unclassified_context_bytes']}`",
+        f"- minimal_runtime_state_prompt_enabled_call_count: `{summary['minimal_runtime_state_prompt_enabled_call_count']}`",
         "",
         "## Component Totals",
         "",
@@ -202,6 +203,20 @@ def render_markdown(report: dict[str, Any]) -> str:
 
     lines.extend(["", "## Answer Turn Policy Breakdown", ""])
     lines.extend(_breakdown_lines(report["answer_turn_policy_breakdown"]))
+    lines.extend(["", "## Answer Turn Policy Runtime State", ""])
+    runtime_state = summary["answer_turn_policy_runtime_state"]
+    lines.extend(
+        [
+            f"- call_count: `{runtime_state['call_count']}`",
+            f"- runtime_state_bytes: `{runtime_state['runtime_state_bytes']}`",
+            f"- avg_runtime_state_bytes: `{runtime_state['avg_runtime_state_bytes']}`",
+            f"- p95_runtime_state_bytes: `{runtime_state['p95_runtime_state_bytes']}`",
+            f"- max_runtime_state_bytes: `{runtime_state['max_runtime_state_bytes']}`",
+            f"- avg_prompt_tokens: `{runtime_state['avg_prompt_tokens']}`",
+            f"- p95_prompt_tokens: `{runtime_state['p95_prompt_tokens']}`",
+            f"- max_prompt_tokens: `{runtime_state['max_prompt_tokens']}`",
+        ]
+    )
     lines.extend(["", "## Reply Quality Revision Breakdown", ""])
     lines.extend(_breakdown_lines(report["reply_quality_revision_breakdown"]))
 
@@ -296,6 +311,9 @@ def _normalize_call(
     }
     for field in CONTEXT_BYTE_FIELDS:
         normalized[field] = _int(call.get(field))
+    normalized["minimal_runtime_state_prompt_enabled"] = bool(
+        call.get("minimal_runtime_state_prompt_enabled")
+    )
     normalized["top_component"] = _top_component(normalized)
     return normalized
 
@@ -312,6 +330,35 @@ def _summary(calls: list[dict[str, Any]]) -> dict[str, Any]:
         "component_totals": totals,
         "component_shares": _component_shares(totals, total_context),
         "audit_tag_counts": dict(Counter(_text(call.get("audit_tag")) for call in calls)),
+        "minimal_runtime_state_prompt_enabled_call_count": sum(
+            1 for call in calls if bool(call.get("minimal_runtime_state_prompt_enabled"))
+        ),
+        "answer_turn_policy_runtime_state": _answer_turn_policy_runtime_state_stats(
+            calls
+        ),
+    }
+
+
+def _answer_turn_policy_runtime_state_stats(
+    calls: list[dict[str, Any]],
+) -> dict[str, Any]:
+    selected = [
+        call
+        for call in calls
+        if _text(call.get("route")) == "answer_turn_policy"
+        and "reply_quality_revision" not in _text(call.get("audit_tag"))
+    ]
+    runtime_state_values = [int(call["runtime_state_bytes"]) for call in selected]
+    prompt_values = [int(call["prompt_token_estimate"]) for call in selected]
+    return {
+        "call_count": len(selected),
+        "runtime_state_bytes": sum(runtime_state_values),
+        "avg_runtime_state_bytes": _average(runtime_state_values),
+        "p95_runtime_state_bytes": _percentile(runtime_state_values, 95),
+        "max_runtime_state_bytes": max(runtime_state_values, default=0),
+        "avg_prompt_tokens": _average(prompt_values),
+        "p95_prompt_tokens": _percentile(prompt_values, 95),
+        "max_prompt_tokens": max(prompt_values, default=0),
     }
 
 
@@ -501,6 +548,17 @@ def _average(values: list[int]) -> int:
     if not values:
         return 0
     return round(sum(values) / len(values))
+
+
+def _percentile(values: list[int], percentile: int) -> int:
+    if not values:
+        return 0
+    ordered = sorted(values)
+    index = min(
+        len(ordered) - 1,
+        max(0, round((percentile / 100) * (len(ordered) - 1))),
+    )
+    return ordered[index]
 
 
 def _int(value: Any) -> int:

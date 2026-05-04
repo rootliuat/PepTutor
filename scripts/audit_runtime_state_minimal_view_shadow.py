@@ -56,6 +56,9 @@ def audit_runtime_state_minimal_view_shadow(
     resolved_smoke_path = _resolve_path(smoke_report_path)
     smoke_report = json.loads(resolved_smoke_path.read_text(encoding="utf-8"))
     calls = _extract_llm_calls(smoke_report)
+    live_prompt_switched = any(
+        bool(call.get("minimal_runtime_state_prompt_enabled")) for call in calls
+    )
     report = {
         "kind": REPORT_KIND,
         "generated_at": datetime.now().isoformat(timespec="seconds"),
@@ -63,8 +66,8 @@ def audit_runtime_state_minimal_view_shadow(
         "smoke_acceptance_passed": bool(
             (smoke_report.get("summary") or {}).get("acceptance_passed")
         ),
-        "shadow_only": True,
-        "live_prompt_switched": False,
+        "shadow_only": not live_prompt_switched,
+        "live_prompt_switched": live_prompt_switched,
         "summary": _summary(calls),
         "top_calls_by_savings_candidate_bytes": _top_calls(calls),
         "top_pages_by_savings_candidate_bytes": _top_grouped(calls, "page_uid"),
@@ -121,6 +124,7 @@ def render_markdown(report: dict[str, Any]) -> str:
         f"- max_savings_candidate_bytes: `{summary['max_savings_candidate_bytes']}`",
         f"- savings_share_of_legacy: `{summary['savings_share_of_legacy']}`",
         f"- minimal_view_missing_count: `{summary['minimal_view_missing_count']}`",
+        f"- minimal_runtime_state_prompt_enabled_call_count: `{summary['minimal_runtime_state_prompt_enabled_call_count']}`",
         "",
         "## Top Pages By Savings Candidate",
         "",
@@ -226,6 +230,9 @@ def _normalize_call(
         "runtime_state_legacy_frame_bytes": legacy,
         "runtime_state_minimal_view_bytes": minimal,
         "runtime_state_savings_candidate_bytes": savings,
+        "minimal_runtime_state_prompt_enabled": bool(
+            call.get("minimal_runtime_state_prompt_enabled")
+        ),
         "minimal_view_missing": legacy > 0 and minimal <= 0,
         "savings_share_of_legacy": _share(savings, legacy),
     }
@@ -254,6 +261,9 @@ def _summary(calls: list[dict[str, Any]]) -> dict[str, Any]:
         "savings_share_of_legacy": _share(savings_total, legacy_total),
         "minimal_view_missing_count": sum(
             1 for call in calls if bool(call["minimal_view_missing"])
+        ),
+        "minimal_runtime_state_prompt_enabled_call_count": sum(
+            1 for call in calls if bool(call["minimal_runtime_state_prompt_enabled"])
         ),
         "routes_with_metered_runtime_state": dict(
             Counter(_text(call.get("route")) for call in metered)
