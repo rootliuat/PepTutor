@@ -5,6 +5,8 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 BACKEND_DIR="${ROOT_DIR}/backend/LightRAG"
 FRONTEND_DIR="${ROOT_DIR}/frontend/airi"
+FRONTEND_APP_DIR="${FRONTEND_DIR}/apps/stage-web"
+NODE_BIN_RESOLVER="${FRONTEND_DIR}/scripts/resolve-node-bin.mjs"
 SERVER_BIN="${PEPTUTOR_LESSON_DEEP_SERVER_BIN:-${BACKEND_DIR}/.venv/bin/lightrag-server}"
 PYTHON_BIN="${PEPTUTOR_LESSON_DEEP_PYTHON:-${BACKEND_DIR}/.venv/bin/python}"
 WAIT_SCRIPT="${PEPTUTOR_LESSON_DEEP_WAIT_SCRIPT:-${ROOT_DIR}/scripts/wait-for-lesson-backend.sh}"
@@ -209,6 +211,14 @@ if ! command -v pnpm >/dev/null 2>&1; then
   echo "Missing pnpm. Install frontend dependencies first in frontend/airi." >&2
   exit 1
 fi
+if [[ ! -f "${NODE_BIN_RESOLVER}" ]]; then
+  echo "Missing Node bin resolver: ${NODE_BIN_RESOLVER}" >&2
+  exit 1
+fi
+
+VITE_BIN="$(
+  node "${NODE_BIN_RESOLVER}" vite bin/vite.js "${FRONTEND_APP_DIR}"
+)"
 
 mkdir -p "${LOG_DIR}" "${ARTIFACT_DIR}"
 append_loopback_no_proxy
@@ -258,7 +268,7 @@ fi
 echo "[INFO] Starting AIRI stage-web at ${FRONTEND_URL}/lesson"
 echo "[INFO] Frontend log: ${FRONTEND_LOG_PATH}"
 (
-  cd "${FRONTEND_DIR}"
+  cd "${FRONTEND_APP_DIR}"
   exec env \
     "NO_PROXY=${NO_PROXY}" \
     "no_proxy=${no_proxy}" \
@@ -268,7 +278,7 @@ echo "[INFO] Frontend log: ${FRONTEND_LOG_PATH}"
     "VITE_PEPTUTOR_TTS_PROVIDER=${VITE_PEPTUTOR_TTS_PROVIDER:-edge-tts}" \
     "VITE_PEPTUTOR_TTS_MODEL=${VITE_PEPTUTOR_TTS_MODEL:-edge-tts}" \
     "VITE_PEPTUTOR_TTS_VOICE=${VITE_PEPTUTOR_TTS_VOICE:-zh-CN-XiaoxiaoNeural}" \
-    pnpm -F @proj-airi/stage-web exec vite --host "${FRONTEND_HOST}" --port "${FRONTEND_PORT}" --strictPort
+    node "${VITE_BIN}" --host "${FRONTEND_HOST}" --port "${FRONTEND_PORT}" --strictPort
 ) >"${FRONTEND_LOG_PATH}" 2>&1 &
 FRONTEND_PID="$!"
 

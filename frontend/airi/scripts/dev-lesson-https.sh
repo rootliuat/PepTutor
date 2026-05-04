@@ -3,6 +3,8 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
+STAGE_WEB_DIR="${REPO_DIR}/apps/stage-web"
+NODE_BIN_RESOLVER="${REPO_DIR}/scripts/resolve-node-bin.mjs"
 CERT_DIR="${REPO_DIR}/.cache/peptutor-dev-https"
 PORT="${PEPTUTOR_STAGE_WEB_HTTPS_PORT:-5174}"
 BACKEND_URL="${VITE_PEPTUTOR_DEV_PROXY_TARGET:-http://127.0.0.1:9625}"
@@ -70,5 +72,9 @@ echo "  Backend: ${BACKEND_URL} via /peptutor-api"
 echo "  TTS:     ${VITE_PEPTUTOR_TTS_PROVIDER:-runtime default} / ${VITE_PEPTUTOR_TTS_VOICE:-runtime default}"
 echo
 
-cd "${REPO_DIR}"
-exec pnpm -F @proj-airi/stage-web exec vite --host 0.0.0.0 --port "${PORT}" --strictPort
+VITE_BIN="$(
+  node "${NODE_BIN_RESOLVER}" vite bin/vite.js "${STAGE_WEB_DIR}"
+)"
+
+cd "${STAGE_WEB_DIR}"
+exec node "${VITE_BIN}" --host 0.0.0.0 --port "${PORT}" --strictPort
