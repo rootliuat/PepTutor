@@ -4,7 +4,14 @@ from __future__ import annotations
 
 from typing import Any, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr, ValidationError
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    StrictStr,
+    ValidationError,
+    model_validator,
+)
 
 from lightrag.pedagogy.types import TeachingAction
 
@@ -73,6 +80,12 @@ class TeachingMoveActionContract(BaseModel):
     active_prompt: StrictStr = ""
     return_anchor: StrictStr = ""
     target_phrase: StrictStr = ""
+
+    @model_validator(mode="after")
+    def _validate_contract_semantics(self) -> "TeachingMoveActionContract":
+        if self.target_role == "phonics" and not self.answer_target.strip():
+            raise ValueError("phonics action contract requires answer_target")
+        return self
 
     @classmethod
     def from_payload_fields(cls, payload_fields: dict[str, Any]) -> "TeachingMoveActionContract":

@@ -1761,6 +1761,76 @@ def test_teaching_move_audit_reports_action_semantic_warnings(
     assert "phonics_role_uses_fragment_target" in all_issues
 
 
+def test_teaching_move_audit_accepts_phonics_contract_with_answer_target(
+    tmp_path: Path,
+) -> None:
+    audit = _load_teaching_move_audit_module()
+    smoke_path = tmp_path / "lesson_smoke_matrix.json"
+    smoke_path.write_text(
+        json.dumps(
+            {
+                "regression_set_id": "lesson-core-20-v1",
+                "summary": {"acceptance_passed": True},
+                "turns": [
+                    {
+                        "page_uid": "TB-G5S2U1-P6",
+                        "step": "rapid_a_same_state",
+                        "learner_input": "water",
+                        "route": "answer_turn_policy",
+                        "turn_label": "answer_question",
+                        "state_block_uid": "TB-G5S2U1-P6-D2",
+                    }
+                ],
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+    payload = {
+        "schema_version": "peptutor-teaching-move-v1",
+        "detected_signal": "off_topic",
+        "move": "gentle_redirect",
+        "teaching_action": "redirect",
+        "rationale": "Preserve the current target after a learner detour.",
+        "evidence_fields_used": ["learner_input"],
+        "expected_next_learner_action": "Return to the active prompt.",
+        "payload_fields": {
+            "learner_input": "water",
+            "interpreted_intent": "off_topic",
+            "current_target": "Keep the current classroom target.",
+            "target_phrase": "class",
+            "active_prompt": "Class, clock, plate, eggplant, clean, play.",
+            "return_anchor": "Class, clock, plate, eggplant, clean, play.",
+            "next_action": "return_to_active_task",
+            "correction_kind": "incorrect",
+            "route": "answer_turn_policy",
+            "turn_label": "answer_question",
+            "preserve_page_uid": "TB-G5S2U1-P6",
+            "preserve_block_uid": "TB-G5S2U1-P6-D2",
+            "target_role": "phonics",
+            "expected_student_action": "repeat",
+            "question_target": "",
+            "answer_target": "class",
+            "answer_frame": "",
+            "action_source": "phonics_context",
+        },
+    }
+    log_path = tmp_path / "smoke_lesson_regression20.log"
+    log_path.write_text(
+        "INFO: Lesson teaching move planned "
+        f"route=gentle_redirect payload={json.dumps(payload, sort_keys=True)}",
+        encoding="utf-8",
+    )
+
+    report = audit.audit_teaching_moves(
+        smoke_report_path=smoke_path,
+        runtime_log_path=log_path,
+    )
+
+    assert report["summary"]["audit_passed"] is True
+    assert report["summary"]["teaching_action_semantic_warning_count"] == 0
+
+
 def test_classroom_quality_audit_reports_gentle_redirect_hotspots_and_candidates(
     tmp_path: Path,
 ) -> None:

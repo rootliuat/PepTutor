@@ -4761,6 +4761,47 @@ def test_gentle_redirect_runtime_payload_records_phonics_action_contract():
     assert fields["answer_target"] == "clean"
 
 
+def test_gentle_redirect_runtime_payload_extracts_phonics_target_from_word_list():
+    result, fields = _run_policy_case_with_captured_gentle_move(
+        page_uid="TB-G5S2U1-P6",
+        block_uid="TB-G5S2U1-P6-D2",
+        last_teacher_question="Class, clock, plate, eggplant, clean, play.",
+        learner_input="water",
+        raw_teacher_reply=(
+            "你说water，这是个有意思的词。不过我们这一页在学cl和pl的发音，"
+            "你是想选第一块（说句子）、第二块（学发音）还是第三块（练习游戏）？"
+        ),
+    )
+
+    assert result.state.current_block_uid == "TB-G5S2U1-P6-D2"
+    assert fields["target_role"] == "phonics"
+    assert fields["expected_student_action"] == "repeat"
+    assert fields["question_target"] == ""
+    assert fields["answer_target"] == "class"
+    assert fields["answer_target"] != "water"
+
+
+def test_gentle_redirect_runtime_payload_extracts_phonics_target_from_repeat_instruction():
+    result, fields = _run_policy_case_with_captured_gentle_move(
+        page_uid="TB-G5S2U1-P6",
+        block_uid="TB-G5S2U1-P6-D2",
+        last_teacher_question="Listen and repeat: clean.",
+        learner_input="I want to play basketball.",
+        raw_teacher_reply=(
+            "你说想打篮球。这一页我们要学的是 cl 和 pl 的发音。"
+            "我们先把第二块做好：听我说词，你来读。第一个词：clean."
+        ),
+    )
+
+    assert result.state.current_block_uid == "TB-G5S2U1-P6-D2"
+    assert "cl' as in" not in result.teacher_response
+    assert fields["target_role"] == "phonics"
+    assert fields["expected_student_action"] == "repeat"
+    assert fields["question_target"] == ""
+    assert fields["answer_target"] == "clean"
+    assert fields["answer_target"] != "basketball"
+
+
 def test_redirect_reply_policy_ignores_invalid_action_fields_and_uses_active_prompt():
     catalog = PilotLessonCatalog(manifest_path=_general_overlay_manifest_path())
     block = catalog.get_block("TB-G5S1U3-P22-D1")
