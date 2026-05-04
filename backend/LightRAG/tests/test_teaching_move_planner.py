@@ -448,6 +448,22 @@ def test_teaching_move_action_contract_rejects_unknown_role_and_non_strings():
     ) is None
 
 
+def test_teaching_move_action_contract_rejects_phonics_without_answer_target():
+    assert TeachingMoveActionContract.try_from_payload_fields(
+        {
+            "target_role": "phonics",
+            "expected_student_action": "repeat",
+            "question_target": "",
+            "answer_target": "",
+            "answer_frame": "",
+            "action_source": "phonics_context",
+            "active_prompt": "Listen and repeat: clean.",
+            "return_anchor": "Listen and repeat: clean.",
+            "target_phrase": "Listen and repeat: clean.",
+        }
+    ) is None
+
+
 def test_teaching_move_planner_vocab_answer_return_uses_anchor_as_active_prompt_fallback():
     payload = TeachingMovePlanner().plan_vocab_answer_return(
         learner_input="What does because mean?",
@@ -727,6 +743,40 @@ def test_gentle_redirect_action_payload_records_phonics_repeat_target():
     assert fields["answer_target"] == "clean"
     assert fields["answer_frame"] == ""
     assert fields["action_source"] == "phonics_context"
+
+
+def test_gentle_redirect_action_payload_extracts_phonics_target_from_word_list():
+    fields = _gentle_payload_for_block(
+        page_uid="TB-G5S2U1-P6",
+        block_uid="TB-G5S2U1-P6-D2",
+        target_phrase="Class, clock, plate, eggplant, clean, play.",
+        active_prompt="Class, clock, plate, eggplant, clean, play.",
+        return_anchor="Class, clock, plate, eggplant, clean, play.",
+        learner_input="water",
+    )
+
+    assert fields["target_role"] == "phonics"
+    assert fields["expected_student_action"] == "repeat"
+    assert fields["question_target"] == ""
+    assert fields["answer_target"] == "class"
+    assert fields["answer_target"] != "water"
+
+
+def test_gentle_redirect_action_payload_extracts_phonics_target_from_instruction():
+    fields = _gentle_payload_for_block(
+        page_uid="TB-G5S2U1-P6",
+        block_uid="TB-G5S2U1-P6-D2",
+        target_phrase="Listen and repeat: clean.",
+        active_prompt="Class, clock, plate, eggplant, clean, play.",
+        return_anchor="Listen and repeat: clean.",
+        learner_input="I want to play basketball.",
+    )
+
+    assert fields["target_role"] == "phonics"
+    assert fields["expected_student_action"] == "repeat"
+    assert fields["question_target"] == ""
+    assert fields["answer_target"] == "clean"
+    assert fields["answer_target"] != "basketball"
 
 
 def test_gentle_redirect_action_payload_adds_suggestion_answer_frame():

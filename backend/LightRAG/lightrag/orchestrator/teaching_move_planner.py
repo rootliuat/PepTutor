@@ -79,6 +79,30 @@ _PHONICS_AS_IN_RE = re.compile(
     r"\b(?:consonant\s+)?blend\s+['’`-]*(?P<blend>[a-z]{1,4})['’`-]*\s+as\s+in\s+['’`](?P<word>[a-z][a-z-]*)['’`]",
     re.IGNORECASE,
 )
+_PHONICS_WORD_RE = re.compile(r"[A-Za-z][A-Za-z'’/-]*")
+_PHONICS_INSTRUCTION_WORDS = {
+    "and",
+    "after",
+    "as",
+    "can",
+    "choose",
+    "circle",
+    "find",
+    "follow",
+    "group",
+    "listen",
+    "look",
+    "me",
+    "number",
+    "read",
+    "repeat",
+    "say",
+    "the",
+    "to",
+    "try",
+    "write",
+    "you",
+}
 _QUESTION_PREFIXES = (
     "what ",
     "what's ",
@@ -462,21 +486,70 @@ def _phonics_answer_target(
     active_prompt: str,
     return_anchor: str,
 ) -> str:
-    for value in [
+    primary_values = [
         target_phrase,
         active_prompt,
         return_anchor,
+    ]
+    block_values = [
         *_block_values(block, "core_patterns"),
         *_block_values(block, "return_anchors"),
-    ]:
+        *_block_values(block, "allowed_answer_scope"),
+        *_block_values(block, "focus_vocabulary"),
+    ]
+    for value in [*primary_values, *block_values]:
         match = _PHONICS_AS_IN_RE.search(value)
         if match:
             return _clean_target_phrase(match.group("word"))
-    for value in [target_phrase, active_prompt, return_anchor]:
+    for value in primary_values:
+        instruction_target = _instruction_payload_target(_clean_target_phrase(value))
+        word = _single_safe_phonics_word(instruction_target)
+        if word:
+            return word
+    for value in primary_values:
         cleaned = _clean_target_phrase(value)
         if _is_single_word(cleaned):
             return cleaned
-    return _block_values(block, "focus_vocabulary")[0] if _block_values(block, "focus_vocabulary") else ""
+    for value in [*primary_values, *block_values]:
+        word = _first_phonics_word_candidate(value)
+        if word:
+            return word
+    return ""
+
+
+def _first_phonics_word_candidate(value: str) -> str:
+    cleaned = _clean_target_phrase(value)
+    if not cleaned:
+        return ""
+    instruction_target = _instruction_payload_target(cleaned)
+    word = _single_safe_phonics_word(instruction_target)
+    if word:
+        return word
+    parts = [
+        part.strip()
+        for part in re.split(r"[,，、;/；]|(?:\s+and\s+)", cleaned)
+        if part.strip()
+    ]
+    for part in parts:
+        word = _single_safe_phonics_word(part)
+        if word:
+            return word
+    return _single_safe_phonics_word(cleaned)
+
+
+def _single_safe_phonics_word(value: str) -> str:
+    tokens = [
+        token.strip("'’/-").casefold()
+        for token in _PHONICS_WORD_RE.findall(value or "")
+    ]
+    if len(tokens) != 1:
+        return ""
+    token = tokens[0]
+    if token in _PHONICS_INSTRUCTION_WORDS:
+        return ""
+    if not re.fullmatch(r"[a-z][a-z-]{1,24}", token):
+        return ""
+    return token
 
 
 def _question_target(
