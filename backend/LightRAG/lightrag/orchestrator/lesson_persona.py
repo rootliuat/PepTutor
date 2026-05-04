@@ -315,6 +315,9 @@ class AiriPerformancePlan(BaseModel):
         "lesson_runtime_teacher_response"
     )
     fallback_allowed: bool = True
+    target_role: str = ""
+    expected_student_action: str = ""
+    speech_style_tag: str = ""
 
 
 class LessonPersonaContext(BaseModel):

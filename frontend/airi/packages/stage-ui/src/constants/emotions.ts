@@ -62,4 +62,7 @@ export interface EmotionPayload {
   contentSource?: string
   fallbackAllowed?: boolean
   performanceSource?: string
+  targetRole?: string
+  expectedStudentAction?: string
+  speechStyleTag?: string
 }

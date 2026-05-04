@@ -28,6 +28,9 @@ describe('lesson AIRI runtime store', () => {
       contentSource: 'lesson_runtime_teacher_response',
       fallbackAllowed: false,
       performanceSource: 'lesson_persona_context',
+      targetRole: 'question',
+      expectedStudentAction: 'answer',
+      speechStyleTag: 'short_scaffold',
     }
 
     store.applyPerformancePlan(plan)
@@ -48,6 +51,9 @@ describe('lesson AIRI runtime store', () => {
       contentSource: 'lesson_runtime_teacher_response',
       fallbackAllowed: false,
       performanceSource: 'lesson_persona_context',
+      targetRole: 'question',
+      expectedStudentAction: 'answer',
+      speechStyleTag: 'short_scaffold',
     })
     expect(store.currentPerformancePlan?.updatedAt).toBeGreaterThan(0)
     expect(store.currentSpeechStyle).toBe('gentle_correction')

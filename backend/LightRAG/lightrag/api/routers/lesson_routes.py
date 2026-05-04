@@ -233,6 +233,9 @@ def _airi_profile_from_performance_plan(
     raw_speech_style = airi_performance.get("speech_style")
     raw_interrupt_policy = airi_performance.get("interrupt_policy")
     raw_content_source = airi_performance.get("content_source")
+    raw_target_role = airi_performance.get("target_role")
+    raw_expected_student_action = airi_performance.get("expected_student_action")
+    raw_speech_style_tag = airi_performance.get("speech_style_tag")
 
     emotion_key = raw_emotion if isinstance(raw_emotion, str) else ""
     motion_key = raw_motion if isinstance(raw_motion, str) else ""
@@ -247,6 +250,15 @@ def _airi_profile_from_performance_plan(
         raw_content_source
         if isinstance(raw_content_source, str)
         else "lesson_runtime_teacher_response"
+    )
+    target_role = raw_target_role if isinstance(raw_target_role, str) else ""
+    expected_student_action = (
+        raw_expected_student_action
+        if isinstance(raw_expected_student_action, str)
+        else ""
+    )
+    speech_style_tag = (
+        raw_speech_style_tag if isinstance(raw_speech_style_tag, str) else ""
     )
     fallback_allowed = airi_performance.get("fallback_allowed")
     if not isinstance(fallback_allowed, bool):
@@ -279,6 +291,9 @@ def _airi_profile_from_performance_plan(
         "content_source": content_source,
         "fallback_allowed": fallback_allowed,
         "performance_source": "lesson_persona_context",
+        "target_role": target_role,
+        "expected_student_action": expected_student_action,
+        "speech_style_tag": speech_style_tag,
     }
 
 
@@ -318,6 +333,9 @@ def _airi_action_payload_from_metadata(
         "content_source",
         "fallback_allowed",
         "performance_source",
+        "target_role",
+        "expected_student_action",
+        "speech_style_tag",
     ):
         if key in profile:
             payload[key] = profile[key]

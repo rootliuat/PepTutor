@@ -96,6 +96,9 @@ export interface LessonAiriPerformancePlanState {
   contentSource: string
   fallbackAllowed: boolean | null
   performanceSource: string
+  targetRole: string
+  expectedStudentAction: string
+  speechStyleTag: string
   updatedAt: number
 }
 
@@ -159,6 +162,9 @@ function fingerprintPerformancePlan(plan: LessonAiriPerformancePlanState): strin
     contentSource: plan.contentSource,
     fallbackAllowed: plan.fallbackAllowed,
     performanceSource: plan.performanceSource,
+    targetRole: plan.targetRole,
+    expectedStudentAction: plan.expectedStudentAction,
+    speechStyleTag: plan.speechStyleTag,
   }
 
   return JSON.stringify(stablePlan)
@@ -669,6 +675,9 @@ export const useLessonAiriRuntimeStore = defineStore('lesson-airi-runtime', () =
       contentSource: payload.contentSource || '',
       fallbackAllowed: typeof payload.fallbackAllowed === 'boolean' ? payload.fallbackAllowed : null,
       performanceSource: payload.performanceSource || '',
+      targetRole: payload.targetRole || '',
+      expectedStudentAction: payload.expectedStudentAction || '',
+      speechStyleTag: payload.speechStyleTag || '',
       updatedAt: Date.now(),
     }
 

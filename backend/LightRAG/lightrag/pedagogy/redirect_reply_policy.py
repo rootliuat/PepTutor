@@ -89,9 +89,9 @@ _CHARACTER_NAME_KEYS = {
 _REDIRECT_MARKER_RE = re.compile(
     r"你刚才说的是|你刚说到(?:了)?|你说的是|你说了|你提到了目标句|我听到|"
     r"你刚说的是|试着说说|试着说|现在试着说|完整的句子|"
-    r"老师(?:刚才)?问的是|老师刚问|"
+    r"老师(?:刚才)?问的是|老师刚问|刚才问的是|"
     r"这一步先听清|先听，再说|我们先说这个|你来读|跟我读|"
-    r"请你跟我读|把这句读出来|试着读|读一下|回到|先回到|先练|先看这个|"
+    r"请你跟我读|跟着老师读|把这句读出来|试着读|读一下|回到|先回到|先练|先看这个|"
     r"选入口|先选一块|我们先选一块|我们先选|你想先(?:看|学)哪一块|"
     r"你选哪一块|可以说[“\"]?第[一二三四五六七八九十]+块",
 )
@@ -138,6 +138,11 @@ def maybe_render_redirect_reply(
     has_action_fields = bool(action_fields)
     fields = _validated_action_fields(action_fields)
     invalid_action_fields = has_action_fields and not fields
+    if fields.get("question_target") and not _action_question_matches_active_prompt(
+        fields,
+        fields.get("question_target", ""),
+    ):
+        return None
     if (
         learner_key in _CHARACTER_NAME_KEYS
         and fields.get("target_role") != "story"
@@ -167,7 +172,8 @@ def maybe_render_redirect_reply(
         return action_reply
     if fields.get("target_role") == "phrase":
         phrase_target = _clean_phrase(
-            target_phrase
+            fields.get("target_phrase")
+            or target_phrase
             or active_prompt
             or return_anchor
             or fields.get("answer_target")
@@ -376,18 +382,28 @@ def _render_action_field_redirect(
 ) -> str | None:
     target_role = action_fields.get("target_role", "")
     expected_action = action_fields.get("expected_student_action", "")
-    if target_role == "question" and expected_action == "answer":
-        question_target = _clean_phrase(action_fields.get("question_target", ""))
-        answer_frame = _clean_phrase(action_fields.get("answer_frame", ""))
-        if _safe_question_answer_frame(question_target, answer_frame):
-            return _render_question_answer_frame_redirect(
-                learner_phrase=learner_phrase,
-                question_target=question_target,
-                answer_frame=answer_frame,
+    question_target = _clean_phrase(action_fields.get("question_target", ""))
+    answer_frame = _clean_phrase(action_fields.get("answer_frame", ""))
+    if (
+        question_target
+        and answer_frame
+        and _safe_question_answer_frame(question_target, answer_frame)
+        and (
+            (target_role == "question" and expected_action == "answer")
+            or (
+                target_role == "phrase"
+                and expected_action in {"read", "repeat"}
+                and action_fields.get("action_source") != "active_prompt"
             )
+        )
+        and _action_question_matches_active_prompt(action_fields, question_target)
+    ):
+        return _render_question_answer_frame_redirect(
+            learner_phrase=learner_phrase,
+            question_target=question_target,
+            answer_frame=answer_frame,
+        )
     if target_role == "story" and expected_action == "answer":
-        question_target = _clean_phrase(action_fields.get("question_target", ""))
-        answer_frame = _clean_phrase(action_fields.get("answer_frame", ""))
         if question_target and answer_frame:
             return _render_story_answer_frame_redirect(
                 learner_phrase=learner_phrase,
@@ -405,11 +421,54 @@ def _render_action_field_redirect(
     return None
 
 
+def _action_question_matches_active_prompt(
+    action_fields: Mapping[str, str],
+    question_target: str,
+) -> bool:
+    return_anchor = _clean_phrase(action_fields.get("return_anchor", ""))
+    stripped_return_anchor = _strip_surface_target_wrapper(return_anchor)
+    if stripped_return_anchor:
+        return_anchor = stripped_return_anchor
+    if (
+        return_anchor
+        and _phrase_key(return_anchor) != _phrase_key(question_target)
+        and _looks_like_short_english_phrase(return_anchor.rstrip("."))
+    ):
+        return False
+    active_prompt = _clean_phrase(action_fields.get("active_prompt", ""))
+    stripped_active_prompt = _strip_surface_target_wrapper(active_prompt)
+    if stripped_active_prompt:
+        active_prompt = stripped_active_prompt
+    if not active_prompt:
+        return True
+    if _phrase_key(active_prompt) == _phrase_key(question_target):
+        return True
+    if _looks_like_short_vocab_target(active_prompt.rstrip(".")) or (
+        _looks_like_short_english_phrase(active_prompt.rstrip("."))
+        and not active_prompt.rstrip(".").endswith("?")
+    ):
+        return False
+    return True
+
+
 def _safe_question_answer_frame(question_target: str, answer_frame: str) -> bool:
     key = _phrase_key(question_target)
     frame_key = _phrase_key(answer_frame)
     return (key == "howtallisit" and frame_key == "itsmetrestall") or (
         key == "whatdidyoudolastweekend" and frame_key == "ilastweekend"
+    ) or (
+        key
+        in {
+            "whatsyourfavouritefood",
+            "whatisyourfavouritefood",
+            "whatsyourfavoritefood",
+            "whatisyourfavoritefood",
+        }
+        and frame_key == "myfavouritefoodis"
+    ) or (
+        key == "whereisthemuseumshop" and frame_key == "itsnear"
+    ) or (
+        key == "whendoyougetup" and frame_key == "igetupat"
     )
 
 
@@ -733,6 +792,18 @@ def _looks_like_short_vocab_target(phrase: str) -> bool:
     if not re.fullmatch(r"[A-Za-z][A-Za-z'’]*(?:\s+[A-Za-z][A-Za-z'’]*){0,3}", cleaned):
         return False
     return bool(_known_phrase_scaffold(cleaned))
+
+
+def _looks_like_short_english_phrase(phrase: str) -> bool:
+    cleaned = _clean_phrase(phrase)
+    return bool(
+        cleaned
+        and not cleaned.endswith(("?", ".", "!"))
+        and re.fullmatch(
+            r"[A-Za-z][A-Za-z'’]*(?:\s+[A-Za-z][A-Za-z'’]*){0,3}",
+            cleaned,
+        )
+    )
 
 
 def _looks_like_place_target(phrase: str) -> bool:
