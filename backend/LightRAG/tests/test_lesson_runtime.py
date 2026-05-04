@@ -4404,11 +4404,11 @@ def test_vocab_answer_return_plans_structural_move_without_changing_reply():
                 "retrieval_evidence_count": 1,
                 "support_evidence_count": 1,
                 "target_role": "question",
-                "expected_student_action": "answer",
-                "question_target": "What would Zoom like to eat?",
-                "answer_target": "",
-                "answer_frame": "",
-                "action_source": "active_prompt",
+                    "expected_student_action": "answer",
+                    "question_target": "What would Zoom like to eat?",
+                    "answer_target": "",
+                    "answer_frame": "Zoom would like ...",
+                    "action_source": "active_prompt",
                 "preserve_page_uid": "",
                 "preserve_block_uid": "",
                 "target_phrase": "What would Zoom like to eat?",
@@ -4701,6 +4701,27 @@ def test_gentle_redirect_runtime_payload_keeps_height_answer_frame():
     assert fields["question_target"] != "How tall are you"
     assert fields["answer_target"] == ""
     assert fields["answer_frame"] == "It's ... metres tall."
+
+
+def test_gentle_redirect_runtime_payload_frames_listening_looking_at_question():
+    result, fields = _run_policy_case_with_captured_gentle_move(
+        page_uid="TB-G6S2U1-P4",
+        block_uid="TB-G6S2U1-P4-D1",
+        last_teacher_question="Listen and circle: What are the children looking at in the museum?",
+        learner_input="heavier",
+        raw_teacher_reply=(
+            "你听到了heavier。问题是：孩子们在博物馆里看什么？"
+            "再听一次，圈出答案：dinosaur, vegetables, 还是 meat？"
+        ),
+    )
+
+    assert result.state.current_block_uid == "TB-G6S2U1-P4-D1"
+    assert fields["target_role"] == "question"
+    assert fields["expected_student_action"] == "answer"
+    assert fields["question_target"] == "What are the children looking at in the museum?"
+    assert fields["answer_target"] == ""
+    assert fields["answer_frame"] == "They are looking at ..."
+    assert fields["target_phrase"] != "heavier"
 
 
 def test_gentle_redirect_runtime_payload_treats_height_sentence_as_answer():

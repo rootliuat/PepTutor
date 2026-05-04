@@ -464,6 +464,22 @@ def test_teaching_move_action_contract_rejects_phonics_without_answer_target():
     ) is None
 
 
+def test_teaching_move_action_contract_rejects_question_answer_without_frame():
+    assert TeachingMoveActionContract.try_from_payload_fields(
+        {
+            "target_role": "question",
+            "expected_student_action": "answer",
+            "question_target": "What are the children looking at in the museum?",
+            "answer_target": "",
+            "answer_frame": "",
+            "action_source": "return_anchor",
+            "active_prompt": "Listen and circle: What are the children looking at in the museum?",
+            "return_anchor": "What are the children looking at in the museum?",
+            "target_phrase": "What are the children looking at in the museum?",
+        }
+    ) is None
+
+
 def test_teaching_move_planner_vocab_answer_return_uses_anchor_as_active_prompt_fallback():
     payload = TeachingMovePlanner().plan_vocab_answer_return(
         learner_input="What does because mean?",
@@ -697,6 +713,24 @@ def test_gentle_redirect_action_payload_adds_personal_height_answer_frame():
     assert fields["expected_student_action"] == "answer"
     assert fields["question_target"] == "How tall are you?"
     assert fields["answer_frame"] == "I'm ... metres tall."
+
+
+def test_gentle_redirect_action_payload_adds_looking_at_answer_frame():
+    fields = _gentle_payload_for_block(
+        page_uid="TB-G6S2U1-P4",
+        block_uid="TB-G6S2U1-P4-D1",
+        target_phrase="What are the children looking at in the museum?",
+        active_prompt="Listen and circle: What are the children looking at in the museum?",
+        return_anchor="What are the children looking at in the museum?",
+        learner_input="heavier",
+    )
+
+    assert fields["target_role"] == "question"
+    assert fields["expected_student_action"] == "answer"
+    assert fields["question_target"] == "What are the children looking at in the museum?"
+    assert fields["answer_target"] == ""
+    assert fields["answer_frame"] == "They are looking at ..."
+    assert fields["target_phrase"] != "heavier"
 
 
 def test_gentle_redirect_action_payload_records_story_answer_frame():
