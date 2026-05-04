@@ -5027,6 +5027,99 @@ def test_answer_turn_policy_runtime_state_view_preserves_allowed_writes():
     assert _compact_json_bytes(view) < _legacy_answer_policy_runtime_state_bytes(frame)
 
 
+def test_answer_turn_policy_prompt_uses_legacy_frame_by_default(monkeypatch):
+    monkeypatch.delenv("PEPTUTOR_ANSWER_TURN_MINIMAL_RUNTIME_STATE", raising=False)
+    runtime = LessonRuntime(PilotLessonCatalog(manifest_path=_general_manifest_path()))
+    start = runtime.start_page("TB-G6S2Recycle2-P49", "student-1")
+    selected = runtime.handle_turn(start.state, "第四块")
+    block = runtime.catalog.get_block(selected.state.current_block_uid)
+    frame = runtime._build_answer_turn_policy_frame(
+        block=block,
+        state=selected.state,
+        learner_input="climb",
+    )
+
+    payload = json.loads(runtime._build_answer_turn_policy_prompt(frame=frame))
+
+    assert "minimal_runtime_state_prompt_enabled" not in payload
+    assert "runtimestate" not in payload["frame"]
+    for key in (
+        "taskboundary",
+        "recentdialogue",
+        "allowedstatewrites",
+        "learnerinputmatches",
+    ):
+        assert key in payload["frame"]
+    assert payload["required_output_schema"] == {
+        "teacherreply": "<final teacher speech>",
+        "statepatch": {
+            "currentblockuid": "<one of frame.allowedstatewrites.currentblockuids>",
+            "awaitinganswer": "<boolean>",
+            "lastteacherquestion": (
+                "<teacher's current question for the next student reply, or null>"
+            ),
+        },
+    }
+    assert payload["instructions"] == list(ANSWER_TURN_POLICY_RUBRIC_V1)
+
+
+def test_answer_turn_policy_prompt_uses_minimal_runtime_state_when_enabled(
+    monkeypatch,
+):
+    monkeypatch.setenv("PEPTUTOR_ANSWER_TURN_MINIMAL_RUNTIME_STATE", "1")
+    runtime = LessonRuntime(PilotLessonCatalog(manifest_path=_general_manifest_path()))
+    start = runtime.start_page("TB-G6S2Recycle2-P49", "student-1")
+    selected = runtime.handle_turn(start.state, "第四块")
+    block = runtime.catalog.get_block(selected.state.current_block_uid)
+    frame = runtime._build_answer_turn_policy_frame(
+        block=block,
+        state=selected.state,
+        learner_input="climb",
+    )
+
+    payload = json.loads(runtime._build_answer_turn_policy_prompt(frame=frame))
+    prompt_frame = payload["frame"]
+
+    assert payload["minimal_runtime_state_prompt_enabled"] is True
+    assert prompt_frame["runtimestate"] == (
+        runtime._answer_turn_policy_runtime_state_view(frame=frame)
+    )
+    for key in (
+        "taskboundary",
+        "recentdialogue",
+        "allowedstatewrites",
+        "learnerinputmatches",
+    ):
+        assert key not in prompt_frame
+    assert set(prompt_frame["runtimestate"]) == {
+        "teacherasked",
+        "currentblockuid",
+        "allowedcurrentblockuids",
+        "currentblockcanstay",
+        "canwriteotherblocks",
+        "matchedblockuids",
+        "matchedblockfields",
+        "activequestionkind",
+        "currentblockscope",
+        "hasmultiplecurrenttargets",
+        "samepageblockroles",
+    }
+    assert payload["required_output_schema"] == {
+        "teacherreply": "<final teacher speech>",
+        "statepatch": {
+            "currentblockuid": "<one of frame.allowedstatewrites.currentblockuids>",
+            "awaitinganswer": "<boolean>",
+            "lastteacherquestion": (
+                "<teacher's current question for the next student reply, or null>"
+            ),
+        },
+    }
+    assert payload["instructions"] == list(ANSWER_TURN_POLICY_RUBRIC_V1)
+    assert _compact_json_bytes(prompt_frame["runtimestate"]) < (
+        _legacy_answer_policy_runtime_state_bytes(frame)
+    )
+
+
 def test_answer_turn_policy_runtime_state_view_preserves_p24_food_drink_boundary():
     runtime = LessonRuntime(PilotLessonCatalog(manifest_path=_general_overlay_manifest_path()))
     start = runtime.start_page("TB-G5S1U3-P24", "student-1")
@@ -5079,6 +5172,70 @@ def test_answer_turn_policy_runtime_state_view_preserves_p13_vocab_return_bounda
     assert view["canwriteotherblocks"] is False
     assert view["activequestionkind"] == frame["taskboundary"]["activequestionkind"]
     assert view["currentblockscope"] == frame["taskboundary"]["currentblockscope"]
+    assert _compact_json_bytes(view) < _legacy_answer_policy_runtime_state_bytes(frame)
+
+
+def test_answer_turn_policy_runtime_state_view_preserves_g6s1_p4_question_boundary():
+    runtime = LessonRuntime(PilotLessonCatalog(manifest_path=_general_overlay_manifest_path()))
+    state = runtime.start_page("TB-G6S1U1-P4", "student-1").state.model_copy(
+        deep=True
+    )
+    state.current_block_uid = "TB-G6S1U1-P4-D2"
+    state.last_teacher_question = "Where is the museum shop?"
+    block = runtime.catalog.get_block("TB-G6S1U1-P4-D2")
+    frame = runtime._build_answer_turn_policy_frame(
+        block=block,
+        state=state,
+        learner_input="turn left",
+    )
+
+    view = runtime._answer_turn_policy_runtime_state_view(frame=frame)
+
+    assert view["teacherasked"] == "Where is the museum shop?"
+    assert view["currentblockuid"] == "TB-G6S1U1-P4-D2"
+    assert view["allowedcurrentblockuids"] == [
+        "TB-G6S1U1-P4-D2",
+        "TB-G6S1U1-P4-D3",
+    ]
+    assert view["currentblockcanstay"] is True
+    assert view["canwriteotherblocks"] is True
+    assert _compact_json_bytes(view) < _legacy_answer_policy_runtime_state_bytes(frame)
+
+
+def test_answer_turn_policy_runtime_state_view_preserves_g6s2_p4_height_boundary():
+    runtime = LessonRuntime(PilotLessonCatalog(manifest_path=_general_overlay_manifest_path()))
+    state = runtime.start_page("TB-G6S2U1-P4", "student-1").state.model_copy(
+        deep=True
+    )
+    state.current_block_uid = "TB-G6S2U1-P4-D2"
+    state.last_teacher_question = "How tall is it?"
+    block = runtime.catalog.get_block("TB-G6S2U1-P4-D2")
+    frame = runtime._build_answer_turn_policy_frame(
+        block=block,
+        state=state,
+        learner_input="How tall are you?",
+    )
+
+    view = runtime._answer_turn_policy_runtime_state_view(frame=frame)
+    fields = runtime._answer_turn_policy_redirect_action_fields(
+        block=block,
+        learner_input="How tall are you?",
+        target_phrase="How tall is it?",
+        active_prompt="How tall is it?",
+        return_anchor="How tall is it?",
+    )
+
+    assert view["teacherasked"] == "How tall is it?"
+    assert view["currentblockuid"] == "TB-G6S2U1-P4-D2"
+    assert view["allowedcurrentblockuids"] == [
+        "TB-G6S2U1-P4-D2",
+        "TB-G6S2U1-P4-D1",
+        "TB-G6S2U1-P4-D4",
+    ]
+    assert view["currentblockcanstay"] is True
+    assert view["canwriteotherblocks"] is True
+    assert fields["question_target"] == "How tall is it?"
+    assert fields["answer_frame"] == "It's ... metres tall."
     assert _compact_json_bytes(view) < _legacy_answer_policy_runtime_state_bytes(frame)
 
 
@@ -6554,6 +6711,10 @@ def test_answer_turn_policy_exposes_response_audit_when_debug_enabled(tmp_path):
     assert audit.llm_token_usage["calls"][0]["runtime_state_legacy_frame_bytes"] > 0
     assert audit.llm_token_usage["calls"][0]["runtime_state_minimal_view_bytes"] > 0
     assert (
+        audit.llm_token_usage["calls"][0]["minimal_runtime_state_prompt_enabled"]
+        is False
+    )
+    assert (
         audit.llm_token_usage["calls"][0]["runtime_state_savings_candidate_bytes"]
         > 0
     )
@@ -6588,6 +6749,60 @@ def test_answer_turn_policy_exposes_response_audit_when_debug_enabled(tmp_path):
     assert audit.llm_token_usage["calls"][0]["unclassified_context_bytes"] == 0
     assert "unknown_context_bytes" in audit.llm_token_usage["calls"][0]
     assert audit.llm_token_usage["calls"][0]["unknown_context_bytes"] == 0
+
+
+def test_answer_turn_policy_minimal_runtime_state_metering_when_enabled(
+    monkeypatch,
+    tmp_path,
+):
+    monkeypatch.setenv("PEPTUTOR_ANSWER_TURN_MINIMAL_RUNTIME_STATE", "1")
+    manifest_path = _write_test_pilot(tmp_path)
+
+    def _policy_llm(prompt, system_prompt=None, history_messages=None, **kwargs):
+        assert system_prompt is None
+        payload = json.loads(prompt)
+        assert payload["minimal_runtime_state_prompt_enabled"] is True
+        assert "runtimestate" in payload["frame"]
+        assert "allowedstatewrites" not in payload["frame"]
+        _ = (history_messages, kwargs)
+        return json.dumps(
+            {
+                "teacherreply": "你想到 pizza 了。这里先回到饮料句：I'd like some water.",
+                "statepatch": {
+                    "currentblockuid": "TB-G5S1U3-P24-D1",
+                    "awaitinganswer": True,
+                    "lastteacherquestion": "What would you like to drink?",
+                },
+            }
+        )
+
+    runtime = LessonRuntime(
+        PilotLessonCatalog(manifest_path=manifest_path),
+        readiness_judge=ReadinessJudge(
+            _policy_llm,
+            system_prompt="# readiness judge unused by answer-turn policy test",
+        ),
+        debug_signals_enabled=True,
+        llm_provider="test-llm",
+    )
+
+    start = runtime.start_page("TB-G5S1U3-P24", "student-1")
+    result = runtime.handle_turn(start.state, "pizza")
+
+    assert result.debug_signals is not None
+    audit = result.debug_signals.response_audit
+    assert audit is not None
+    assert audit.llm_token_usage is not None
+    call = audit.llm_token_usage["calls"][0]
+    assert call["minimal_runtime_state_prompt_enabled"] is True
+    assert call["runtime_state_legacy_frame_bytes"] > 0
+    assert call["runtime_state_minimal_view_bytes"] > 0
+    assert call["runtime_state_savings_candidate_bytes"] > 0
+    assert call["runtime_state_bytes"] < call["runtime_state_legacy_frame_bytes"]
+    assert audit.llm_token_usage[
+        "minimal_runtime_state_prompt_enabled_call_count"
+    ] == 1
+    assert call["unknown_context_bytes"] == 0
 
 
 def test_responder_llm_exposes_response_audit_when_debug_enabled(tmp_path):
