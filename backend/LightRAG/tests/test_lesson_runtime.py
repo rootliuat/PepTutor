@@ -3118,8 +3118,10 @@ def test_answer_turn_policy_recovers_markdown_field_output(tmp_path):
 
 
 def test_answer_turn_policy_advances_then_repairs_related_wrong_without_reset(
+    monkeypatch,
     tmp_path,
 ):
+    monkeypatch.setenv("PEPTUTOR_ANSWER_TURN_MINIMAL_RUNTIME_STATE", "0")
     manifest_path = _write_answer_policy_progression_pilot(tmp_path)
     captured_prompts: list[dict[str, object]] = []
 
@@ -3381,7 +3383,8 @@ def test_answer_turn_policy_treats_open_slot_examples_as_non_exhaustive(
     ]
 
 
-def test_answer_turn_policy_frames_default_p24_task_boundary():
+def test_answer_turn_policy_frames_default_p24_task_boundary(monkeypatch):
+    monkeypatch.setenv("PEPTUTOR_ANSWER_TURN_MINIMAL_RUNTIME_STATE", "0")
     captured_prompts: list[dict[str, object]] = []
 
     def _policy_llm(prompt, system_prompt=None, history_messages=None, **kwargs):
@@ -5132,8 +5135,50 @@ def test_answer_turn_policy_runtime_state_view_preserves_allowed_writes():
     assert _compact_json_bytes(view) < _legacy_answer_policy_runtime_state_bytes(frame)
 
 
-def test_answer_turn_policy_prompt_uses_legacy_frame_by_default(monkeypatch):
+def test_answer_turn_policy_prompt_uses_minimal_runtime_state_by_default(monkeypatch):
     monkeypatch.delenv("PEPTUTOR_ANSWER_TURN_MINIMAL_RUNTIME_STATE", raising=False)
+    runtime = LessonRuntime(PilotLessonCatalog(manifest_path=_general_manifest_path()))
+    start = runtime.start_page("TB-G6S2Recycle2-P49", "student-1")
+    selected = runtime.handle_turn(start.state, "第四块")
+    block = runtime.catalog.get_block(selected.state.current_block_uid)
+    frame = runtime._build_answer_turn_policy_frame(
+        block=block,
+        state=selected.state,
+        learner_input="climb",
+    )
+
+    payload = json.loads(runtime._build_answer_turn_policy_prompt(frame=frame))
+    prompt_frame = payload["frame"]
+
+    assert payload["minimal_runtime_state_prompt_enabled"] is True
+    assert prompt_frame["runtimestate"] == (
+        runtime._answer_turn_policy_runtime_state_view(frame=frame)
+    )
+    for key in (
+        "taskboundary",
+        "recentdialogue",
+        "allowedstatewrites",
+        "learnerinputmatches",
+    ):
+        assert key not in prompt_frame
+    assert payload["required_output_schema"] == {
+        "teacherreply": "<final teacher speech>",
+        "statepatch": {
+            "currentblockuid": "<one of frame.allowedstatewrites.currentblockuids>",
+            "awaitinganswer": "<boolean>",
+            "lastteacherquestion": (
+                "<teacher's current question for the next student reply, or null>"
+            ),
+        },
+    }
+    assert payload["instructions"] == list(ANSWER_TURN_POLICY_RUBRIC_V1)
+    assert _compact_json_bytes(prompt_frame["runtimestate"]) < (
+        _legacy_answer_policy_runtime_state_bytes(frame)
+    )
+
+
+def test_answer_turn_policy_prompt_can_disable_minimal_runtime_state(monkeypatch):
+    monkeypatch.setenv("PEPTUTOR_ANSWER_TURN_MINIMAL_RUNTIME_STATE", "0")
     runtime = LessonRuntime(PilotLessonCatalog(manifest_path=_general_manifest_path()))
     start = runtime.start_page("TB-G6S2Recycle2-P49", "student-1")
     selected = runtime.handle_turn(start.state, "第四块")
@@ -5155,16 +5200,6 @@ def test_answer_turn_policy_prompt_uses_legacy_frame_by_default(monkeypatch):
         "learnerinputmatches",
     ):
         assert key in payload["frame"]
-    assert payload["required_output_schema"] == {
-        "teacherreply": "<final teacher speech>",
-        "statepatch": {
-            "currentblockuid": "<one of frame.allowedstatewrites.currentblockuids>",
-            "awaitinganswer": "<boolean>",
-            "lastteacherquestion": (
-                "<teacher's current question for the next student reply, or null>"
-            ),
-        },
-    }
     assert payload["instructions"] == list(ANSWER_TURN_POLICY_RUBRIC_V1)
 
 
@@ -6817,7 +6852,7 @@ def test_answer_turn_policy_exposes_response_audit_when_debug_enabled(tmp_path):
     assert audit.llm_token_usage["calls"][0]["runtime_state_minimal_view_bytes"] > 0
     assert (
         audit.llm_token_usage["calls"][0]["minimal_runtime_state_prompt_enabled"]
-        is False
+        is True
     )
     assert (
         audit.llm_token_usage["calls"][0]["runtime_state_savings_candidate_bytes"]

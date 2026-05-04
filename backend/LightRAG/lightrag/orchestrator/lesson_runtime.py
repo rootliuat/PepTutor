@@ -1858,7 +1858,10 @@ class LessonRuntime:
         )
 
     def _answer_turn_policy_minimal_runtime_state_prompt_enabled(self) -> bool:
-        return str(os.getenv(_ANSWER_TURN_MINIMAL_RUNTIME_STATE_ENV) or "").lower() in {
+        value = os.getenv(_ANSWER_TURN_MINIMAL_RUNTIME_STATE_ENV)
+        if value is None:
+            return True
+        return value.lower() in {
             "1",
             "true",
             "yes",
