@@ -7,6 +7,7 @@ BACKEND_DIR="${ROOT_DIR}/backend/LightRAG"
 FRONTEND_DIR="${ROOT_DIR}/frontend/airi"
 SERVER_BIN="${PEPTUTOR_LESSON_SMOKE_SERVER_BIN:-${BACKEND_DIR}/.venv/bin/lightrag-server}"
 WAIT_SCRIPT="${PEPTUTOR_LESSON_SMOKE_WAIT_SCRIPT:-${ROOT_DIR}/scripts/wait-for-lesson-backend.sh}"
+BUDGET_GUARD_SCRIPT="${PEPTUTOR_TEST_BUDGET_GUARD_SCRIPT:-${ROOT_DIR}/scripts/test-budget-guard.sh}"
 LOG_DIR="${PEPTUTOR_LESSON_SMOKE_LOG_DIR:-${BACKEND_DIR}/temp}"
 ARTIFACT_DIR="${PEPTUTOR_LESSON_SMOKE_ARTIFACT_DIR:-${ROOT_DIR}/temp/lesson-smoke-artifacts}"
 RUN_STAMP="$(date +%Y%m%d_%H%M%S)"
@@ -37,6 +38,9 @@ Environment overrides:
   PEPTUTOR_LESSON_SMOKE_BACKEND_PORT=... Use an exact backend port.
   PEPTUTOR_LESSON_SMOKE_BROWSER_TIMEOUT_SECONDS=... Kill a hung browser suite.
   PEPTUTOR_LESSON_SMOKE_ARTIFACT_DIR=... Write browser smoke JSON/MD reports here.
+  PEPTUTOR_TEST_GOAL_ID=...              Required test budget goal id.
+  PEPTUTOR_TEST_GOAL_TYPE=frontend       Required; must include frontend, s4, or browser.
+  PEPTUTOR_TEST_BUDGET_OVERRIDE_REASON=... Required for repeated browser smoke.
 EOF
 }
 
@@ -185,7 +189,27 @@ def parse_vitest_counts(label: str) -> dict[str, int]:
 
 
 def parse_vitest_test_names(marker: str) -> list[str]:
-    names: list[str] = []
+    return [entry["name"] for entry in parse_vitest_test_entries(marker)]
+
+
+def classify_vitest_suite(suite_name: str) -> str:
+    if suite_name == "/lesson browser smoke (real backend)":
+        return "real_backend_suite"
+    if suite_name == "/lesson browser smoke":
+        return "mock_suite"
+    return "unknown_suite"
+
+
+def skip_reason_for_entry(entry: dict[str, str]) -> str:
+    if entry.get("suite_kind") == "mock_suite":
+        return "mock_skipped_due_real_backend_mode"
+    if entry.get("suite_kind") == "real_backend_suite":
+        return "real_backend_conditional_skip"
+    return "unknown_skip_reason"
+
+
+def parse_vitest_test_entries(marker: str) -> list[dict[str, str]]:
+    entries: list[dict[str, str]] = []
     for line in browser_log_text.splitlines():
         stripped = line.strip()
         if not stripped.startswith(marker):
@@ -193,10 +217,44 @@ def parse_vitest_test_names(marker: str) -> list[str]:
         segments = [segment.strip() for segment in stripped.split(" > ")]
         if not segments:
             continue
+        suite_name = segments[-2] if len(segments) >= 2 else ""
+        suite_kind = classify_vitest_suite(suite_name)
         name = re.sub(r"\s+\d+(?:ms|s)$", "", segments[-1]).strip()
         if name:
-            names.append(name)
-    return names
+            entry = {
+                "name": name,
+                "suite_name": suite_name,
+                "suite_kind": suite_kind,
+                "raw": stripped,
+            }
+            if marker == "↓":
+                entry["skip_reason"] = skip_reason_for_entry(entry)
+            entries.append(entry)
+    return entries
+
+
+def build_browser_suite_summary(
+    *,
+    passed_entries: list[dict[str, str]],
+    failed_entries: list[dict[str, str]],
+    skipped_entries: list[dict[str, str]],
+) -> dict[str, int]:
+    def count(entries: list[dict[str, str]], suite_kind: str) -> int:
+        return sum(1 for entry in entries if entry.get("suite_kind") == suite_kind)
+
+    return {
+        "real_backend_passed": count(passed_entries, "real_backend_suite"),
+        "real_backend_failed": count(failed_entries, "real_backend_suite"),
+        "real_backend_skipped": count(skipped_entries, "real_backend_suite"),
+        "mock_suite_passed": count(passed_entries, "mock_suite"),
+        "mock_suite_failed": count(failed_entries, "mock_suite"),
+        "mock_suite_skipped": count(skipped_entries, "mock_suite"),
+        "skipped_due_real_backend_mode": sum(
+            1
+            for entry in skipped_entries
+            if entry.get("skip_reason") == "mock_skipped_due_real_backend_mode"
+        ),
+    }
 
 
 def parse_json_events(prefix: str) -> list[dict[str, object]]:
@@ -389,9 +447,17 @@ def build_trend_comparison(
 
 test_counts = parse_vitest_counts("Tests")
 file_counts = parse_vitest_counts("Test Files")
-skipped_tests = parse_vitest_test_names("↓")
-passed_tests = parse_vitest_test_names("✓")
-failed_tests = parse_vitest_test_names("×") + parse_vitest_test_names("✗")
+skipped_test_entries = parse_vitest_test_entries("↓")
+passed_test_entries = parse_vitest_test_entries("✓")
+failed_test_entries = parse_vitest_test_entries("×") + parse_vitest_test_entries("✗")
+skipped_tests = [entry["name"] for entry in skipped_test_entries]
+passed_tests = [entry["name"] for entry in passed_test_entries]
+failed_tests = [entry["name"] for entry in failed_test_entries]
+browser_suite_summary = build_browser_suite_summary(
+    passed_entries=passed_test_entries,
+    failed_entries=failed_test_entries,
+    skipped_entries=skipped_test_entries,
+)
 s4_interrupt_events = parse_json_events("[lesson-s4-interrupt-evidence]")
 real_smoke_events = parse_json_events("[lesson-real-smoke]")
 debug_signal_events = parse_json_events("[lesson-real-debug-signals]")
@@ -459,6 +525,10 @@ report = {
     "browser_log_path": str(browser_log_path),
     "browser_test_counts": test_counts,
     "browser_test_file_counts": file_counts,
+    "browser_suite_summary": browser_suite_summary,
+    "skipped_test_entries": skipped_test_entries,
+    "passed_test_entries": passed_test_entries,
+    "failed_test_entries": failed_test_entries,
     "skipped_tests": skipped_tests,
     "passed_tests": passed_tests,
     "failed_tests": failed_tests,
@@ -509,6 +579,16 @@ md_lines = [
     f"- passed_tests: `{len(passed_tests)}`",
     f"- failed_tests: `{len(failed_tests)}`",
     "",
+    "## Suite Breakdown",
+    "",
+    f"- real_backend_passed: `{browser_suite_summary['real_backend_passed']}`",
+    f"- real_backend_failed: `{browser_suite_summary['real_backend_failed']}`",
+    f"- real_backend_skipped: `{browser_suite_summary['real_backend_skipped']}`",
+    f"- mock_suite_passed: `{browser_suite_summary['mock_suite_passed']}`",
+    f"- mock_suite_failed: `{browser_suite_summary['mock_suite_failed']}`",
+    f"- mock_suite_skipped: `{browser_suite_summary['mock_suite_skipped']}`",
+    f"- skipped_due_real_backend_mode: `{browser_suite_summary['skipped_due_real_backend_mode']}`",
+    "",
     "## Failure Attribution",
     "",
     f"- reason: `{failure_reason}`",
@@ -544,7 +624,11 @@ if skipped_tests:
         "",
         "## Skipped Tests",
         "",
-        *[f"- {name}" for name in skipped_tests[:30]],
+        *[
+            f"- {entry['name']} "
+            f"(`{entry['suite_kind']}`, `{entry.get('skip_reason', '')}`)"
+            for entry in skipped_test_entries[:30]
+        ],
     ])
 md_lines.extend([
     "",
@@ -562,6 +646,15 @@ if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
   usage
   exit 0
 fi
+
+if [[ ! -f "${BUDGET_GUARD_SCRIPT}" ]]; then
+  echo "Missing test budget guard script: ${BUDGET_GUARD_SCRIPT}" >&2
+  exit 1
+fi
+
+# shellcheck source=/dev/null
+source "${BUDGET_GUARD_SCRIPT}"
+peptutor_test_budget_guard "browser" "frontend,s4,browser" "${BROWSER_REPORT_JSON_PATH}"
 
 if [[ ! -x "${SERVER_BIN}" ]]; then
   echo "Missing LightRAG server binary: ${SERVER_BIN}" >&2
@@ -613,6 +706,7 @@ SERVER_PID="$!"
 
 if ! bash "${WAIT_SCRIPT}" --url "${LESSON_BACKEND_URL}" --timeout 120; then
   write_browser_report "backend_wait_failed" "1" "false"
+  peptutor_test_budget_mark_report "browser" "${BROWSER_REPORT_JSON_PATH}"
   print_backend_log_tail
   exit 1
 fi
@@ -640,10 +734,12 @@ if [[ "${browser_status}" -ne 0 ]]; then
   else
     write_browser_report "failed" "${browser_status}" "false"
   fi
+  peptutor_test_budget_mark_report "browser" "${BROWSER_REPORT_JSON_PATH}"
   print_browser_log_tail
   print_backend_log_tail
   exit 1
 fi
 
 write_browser_report "passed" "${browser_status}" "false"
+peptutor_test_budget_mark_report "browser" "${BROWSER_REPORT_JSON_PATH}"
 echo "[PASS] Lesson browser smoke completed."
