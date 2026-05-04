@@ -85,6 +85,16 @@ class TeachingMoveActionContract(BaseModel):
     def _validate_contract_semantics(self) -> "TeachingMoveActionContract":
         if self.target_role == "phonics" and not self.answer_target.strip():
             raise ValueError("phonics action contract requires answer_target")
+        if (
+            self.target_role == "question"
+            and self.expected_student_action == "answer"
+            and _question_action_needs_answer_target_or_frame(self.question_target)
+            and not self.answer_target.strip()
+            and not self.answer_frame.strip()
+        ):
+            raise ValueError(
+                "question answer action contract requires answer_target or answer_frame"
+            )
         return self
 
     @classmethod
@@ -147,6 +157,25 @@ class TeachingMoveActionContract(BaseModel):
 
 def _optional_payload_string(value: Any) -> Any:
     return "" if value is None else value
+
+
+def _question_action_needs_answer_target_or_frame(value: str) -> bool:
+    normalized = " ".join(str(value or "").strip().split()).casefold()
+    normalized = normalized.strip("。！？!?.")
+    if not normalized:
+        return False
+    return normalized.startswith(
+        (
+            "what ",
+            "what's ",
+            "what is ",
+            "what did ",
+            "what would ",
+            "where ",
+            "when ",
+            "how tall ",
+        )
+    )
 
 
 class TeachingMovePlan(BaseModel):

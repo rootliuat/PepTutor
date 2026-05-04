@@ -393,12 +393,18 @@ def _gentle_redirect_teaching_action_payload(
     if reliable_question and _is_question(cleaned_target):
         cleaned_target = reliable_question
     if _is_question(cleaned_target):
+        answer_frame = _answer_frame_for(cleaned_target, answer_target)
+        expected_action = _expected_action_for_question(
+            block=block,
+            answer_target=answer_target,
+            answer_frame=answer_frame,
+        )
         return {
             "target_role": "question",
-            "expected_student_action": "answer",
+            "expected_student_action": expected_action,
             "question_target": cleaned_target,
             "answer_target": answer_target,
-            "answer_frame": _answer_frame_for(cleaned_target, answer_target),
+            "answer_frame": answer_frame,
             "action_source": _action_source_for_target(
                 block=block,
                 target=cleaned_target,
@@ -435,6 +441,48 @@ def _gentle_redirect_teaching_action_payload(
             return_anchor=return_anchor,
         ),
     }
+
+
+def _expected_action_for_question(
+    *,
+    block: Any | None,
+    answer_target: str,
+    answer_frame: str,
+) -> str:
+    if answer_target or answer_frame:
+        return "answer"
+    if _is_choice_or_listening_context(block):
+        return "choose"
+    return "read"
+
+
+def _is_choice_or_listening_context(block: Any | None) -> bool:
+    context = " ".join(
+        [
+            _block_text(block, "block_type"),
+            _block_text(block, "page_type"),
+            _block_text(block, "task_type"),
+            _block_text(block, "teaching_goal"),
+            _block_text(block, "teaching_summary"),
+            " ".join(_block_values(block, "core_patterns")),
+            " ".join(_block_values(block, "return_anchors")),
+        ]
+    ).casefold()
+    return any(
+        marker in context
+        for marker in (
+            "listen and circle",
+            "listen and tick",
+            "listen and choose",
+            "listening",
+            "circle",
+            "tick",
+            "choose",
+            "选择",
+            "圈",
+            "勾选",
+        )
+    )
 
 
 def _block_text(block: Any | None, field: str) -> str:
@@ -677,6 +725,15 @@ def _answer_frame_for(question_target: str, answer_target: str) -> str:
         return "I ... last weekend."
     if question_key.startswith("when do you get up"):
         return "I get up at ..."
+    if re.match(r"^what\s+are\b.*\blooking\s+at\b", question_key):
+        return "They are looking at ..."
+    if re.match(r"^what\s+is\b.*\blooking\s+at\b", question_key):
+        return "It is looking at ..."
+    if question_key.startswith("what would you like"):
+        return "I'd like ..."
+    match = re.match(r"^what\s+would\s+([a-z]+)\s+like\b", question_key)
+    if match:
+        return f"{match.group(1).capitalize()} would like ..."
     if "favourite food" in question_key or "favorite food" in question_key:
         return "My favourite food is ..."
     if "suggestion" in question_key:
@@ -774,6 +831,10 @@ def _teaching_action_target_phrase(value: str) -> str:
     instruction_target = _instruction_payload_target(cleaned)
     if instruction_target:
         cleaned = instruction_target
+    elif _is_question(cleaned):
+        question_target = _first_question(cleaned)
+        if question_target:
+            cleaned = question_target
     return _normalize_declarative_target_punctuation(cleaned)
 
 
@@ -841,12 +902,13 @@ def _vocab_answer_return_action_payload(
     target_phrase = active_prompt or return_anchor
     question_target = _first_question(target_phrase)
     if question_target:
+        answer_frame = _answer_frame_for(question_target, "")
         action_fields = {
             "target_role": "question",
-            "expected_student_action": "answer",
+            "expected_student_action": "answer" if answer_frame else "read",
             "question_target": question_target,
             "answer_target": "",
-            "answer_frame": _answer_frame_for(question_target, ""),
+            "answer_frame": answer_frame,
             "action_source": target_source,
             "preserve_page_uid": "",
             "preserve_block_uid": "",

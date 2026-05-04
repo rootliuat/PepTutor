@@ -1831,6 +1831,76 @@ def test_teaching_move_audit_accepts_phonics_contract_with_answer_target(
     assert report["summary"]["teaching_action_semantic_warning_count"] == 0
 
 
+def test_teaching_move_audit_accepts_question_contract_with_answer_frame(
+    tmp_path: Path,
+) -> None:
+    audit = _load_teaching_move_audit_module()
+    smoke_path = tmp_path / "lesson_smoke_matrix.json"
+    smoke_path.write_text(
+        json.dumps(
+            {
+                "regression_set_id": "lesson-core-20-v1",
+                "summary": {"acceptance_passed": True},
+                "turns": [
+                    {
+                        "page_uid": "TB-G6S2U1-P4",
+                        "step": "turn_4",
+                        "learner_input": "heavier",
+                        "route": "answer_turn_policy",
+                        "turn_label": "answer_question",
+                        "state_block_uid": "TB-G6S2U1-P4-D1",
+                    }
+                ],
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+    payload = {
+        "schema_version": "peptutor-teaching-move-v1",
+        "detected_signal": "off_topic",
+        "move": "gentle_redirect",
+        "teaching_action": "redirect",
+        "rationale": "Preserve the current target after a learner detour.",
+        "evidence_fields_used": ["learner_input"],
+        "expected_next_learner_action": "Return to the active prompt.",
+        "payload_fields": {
+            "learner_input": "heavier",
+            "interpreted_intent": "short_answer_pullback",
+            "current_target": "Catch the key information from the listening task.",
+            "target_phrase": "What are the children looking at in the museum?",
+            "active_prompt": "Listen and circle: What are the children looking at in the museum?",
+            "return_anchor": "What are the children looking at in the museum?",
+            "next_action": "connect_or_redirect_to_current_target",
+            "correction_kind": "unclear",
+            "route": "answer_turn_policy",
+            "turn_label": "answer_question",
+            "preserve_page_uid": "TB-G6S2U1-P4",
+            "preserve_block_uid": "TB-G6S2U1-P4-D1",
+            "target_role": "question",
+            "expected_student_action": "answer",
+            "question_target": "What are the children looking at in the museum?",
+            "answer_target": "",
+            "answer_frame": "They are looking at ...",
+            "action_source": "return_anchor",
+        },
+    }
+    log_path = tmp_path / "smoke_lesson_regression20.log"
+    log_path.write_text(
+        "INFO: Lesson teaching move planned "
+        f"route=gentle_redirect payload={json.dumps(payload, sort_keys=True)}",
+        encoding="utf-8",
+    )
+
+    report = audit.audit_teaching_moves(
+        smoke_report_path=smoke_path,
+        runtime_log_path=log_path,
+    )
+
+    assert report["summary"]["audit_passed"] is True
+    assert report["summary"]["teaching_action_semantic_warning_count"] == 0
+
+
 def test_classroom_quality_audit_reports_gentle_redirect_hotspots_and_candidates(
     tmp_path: Path,
 ) -> None:
