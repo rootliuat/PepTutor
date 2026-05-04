@@ -10,12 +10,12 @@ import { nanoid } from 'nanoid'
 import { defineStore, storeToRefs } from 'pinia'
 import { ref, toRaw } from 'vue'
 
-import { useAnalytics } from '../composables'
 import { useLlmmarkerParser } from '../composables/llm-marker-parser'
 import { categorizeResponse, createStreamingCategorizer } from '../composables/response-categoriser'
+import { useAnalytics } from '../composables/use-analytics'
 import { createDatetimeContext } from './chat/context-providers'
 import { useChatContextStore } from './chat/context-store'
-import { createChatHooks } from './chat/hooks'
+import { useSharedChatHooks } from './chat/hooks'
 import { useChatSessionStore } from './chat/session-store'
 import { useChatStreamStore } from './chat/stream-store'
 import { useLLM } from './llm'
@@ -63,7 +63,7 @@ export const useChatOrchestratorStore = defineStore('chat-orchestrator', () => {
 
   const sending = ref(false)
   const pendingQueuedSends = ref<QueuedSend[]>([])
-  const hooks = createChatHooks()
+  const hooks = useSharedChatHooks()
 
   const sendQueue = createQueue<QueuedSend>({
     handlers: [

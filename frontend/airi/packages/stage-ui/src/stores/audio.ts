@@ -66,10 +66,35 @@ function calculateVolume(analyser: AnalyserNode, mode: 'linear' | 'minmax' = 'li
 }
 
 export const useAudioContext = defineStore('audio-context', () => {
-  const audioContext = shallowRef<AudioContext>(new AudioContext())
+  const audioContext = shallowRef<AudioContext>()
+
+  function ensureAudioContext() {
+    if (!audioContext.value || audioContext.value.state === 'closed')
+      audioContext.value = new AudioContext()
+
+    return audioContext.value
+  }
+
+  async function resumeAudioContext() {
+    const context = ensureAudioContext()
+    if (context.state === 'suspended')
+      await context.resume()
+
+    return context
+  }
+
+  async function closeAudioContext() {
+    const context = audioContext.value
+    audioContext.value = undefined
+    if (context && context.state !== 'closed')
+      await context.close()
+  }
 
   return {
     audioContext,
+    ensureAudioContext,
+    resumeAudioContext,
+    closeAudioContext,
     calculateVolume,
   }
 })

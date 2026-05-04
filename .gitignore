@@ -1,0 +1,36 @@
+.env
+.env.*
+*.env
+*.env.local
+
+# Python / JS local state
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.superpowers/
+node_modules/
+.venv/
+build/
+dist/
+coverage/
+.turbo/
+
+# Generated smoke, screenshots, and local runtime state
+temp/
+tmp/
+test-results/
+lightrag.log
+rag_storage/
+chat_history/
+inputs/
+study/
+
+# Generated deploy env files. Commit only *.env.example.
+deploy/lesson/backend.env
+deploy/lesson/frontend.env
+
+# Nested project repositories manage their own generated artifacts.
+backend/LightRAG/rag_storage.bak-*/
+frontend/airi/test-results/
+frontend/airi/**/test-results/
+frontend/airi/**/tmp-*.png

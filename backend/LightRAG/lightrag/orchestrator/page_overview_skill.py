@@ -16,6 +16,7 @@ _MODULE_LABEL_PATTERNS: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("Let's learn", (r"\blet'?s\s+learn\b",)),
     ("Let's talk", (r"\blet'?s\s+talk\b",)),
     ("Let's try", (r"\blet'?s\s+try\b",)),
+    ("Ask and answer", (r"\bask\s+and\s+answer\b",)),
     ("Let's play", (r"\blet'?s\s+play\b",)),
     ("Start to read", (r"\bstart\s+to\s+read\b",)),
 )
@@ -27,6 +28,21 @@ _CHINESE_ORDINALS = {
     "三": 2,
     "四": 3,
     "五": 4,
+}
+
+_FALLBACK_MODULE_LABELS = ("第一块", "第二块", "第三块", "第四块", "第五块", "第六块")
+_BROAD_CORE_BLOCK_TYPES = {"dialogue_core"}
+_ALIAS_DETAIL_FIELDS = ("branchable_topics", "focus_vocabulary", "core_patterns")
+_ALIAS_WORD_STOPWORDS = {
+    "and",
+    "are",
+    "for",
+    "like",
+    "some",
+    "the",
+    "what",
+    "would",
+    "you",
 }
 
 
@@ -84,13 +100,11 @@ class PageOverviewSkill:
 
         labels = [module.label for module in modules]
         choice_prompt = f"你想先学哪一块？可以说 {self._format_choices(labels)}。"
-        module_lines = " ".join(
-            f"{module.label}：{module.summary}" for module in modules
+        module_lines = self._format_module_choice_overview(modules)
+        topic_prefix = self._compact_page_topic_prefix(
+            str(getattr(page, "page_intro_cn", "") or "")
         )
-        teacher_response = (
-            f"这一页有 {len(modules)} 块：{self._format_labels(labels)}。"
-            f" {module_lines} {choice_prompt}"
-        )
+        teacher_response = f"这一页{topic_prefix}先选入口：{module_lines}。{choice_prompt}"
         return PageOverview(
             page_uid=str(getattr(page, "page_uid", "")),
             modules=tuple(modules),
@@ -148,22 +162,123 @@ class PageOverviewSkill:
                 current.has_explicit_label = True
             current.blocks.append(block)
 
-        explicit_labels = {
-            draft.label for draft in drafts if draft.has_explicit_label and draft.blocks
-        }
-        if not {"Let's check", "Let's wrap it up"}.issubset(explicit_labels):
-            return []
+        explicit_drafts = [
+            draft for draft in drafts if draft.has_explicit_label and draft.blocks
+        ]
+        if len(explicit_drafts) < 2:
+            return self._build_block_modules(blocks)
 
         return [
             PageOverviewModule(
                 label=draft.label,
-                block_uids=tuple(str(getattr(block, "block_uid", "")) for block in draft.blocks),
+                block_uids=tuple(
+                    str(getattr(block, "block_uid", "")) for block in draft.blocks
+                ),
                 summary=self._summarize_module(draft),
                 aliases=self._aliases_for_label(draft.label),
             )
-            for draft in drafts
-            if draft.blocks
+            for draft in explicit_drafts
         ]
+
+    def _build_block_modules(self, blocks: list[Any]) -> list[PageOverviewModule]:
+        visible_blocks = [block for block in blocks if _has_visible_source(block)]
+        if len(visible_blocks) < 2:
+            return []
+
+        all_detail_alias_keys = self._block_detail_alias_keys_by_uid(visible_blocks)
+        modules: list[PageOverviewModule] = []
+        for index, block in enumerate(visible_blocks):
+            label = _fallback_label(index)
+            draft = _ModuleDraft(label=label, blocks=[block], has_explicit_label=False)
+            modules.append(
+                PageOverviewModule(
+                    label=label,
+                    block_uids=(str(getattr(block, "block_uid", "")),),
+                    summary=self._summarize_module(draft),
+                    aliases=self._aliases_for_block_module(
+                        label=label,
+                        block=block,
+                        all_detail_alias_keys=all_detail_alias_keys,
+                    ),
+                )
+            )
+        return modules
+
+    def _format_module_choice_overview(
+        self,
+        modules: list[PageOverviewModule],
+    ) -> str:
+        parts = [
+            f"{module.label}（{self._compact_summary_for_overview(module.summary)}）"
+            for module in modules
+        ]
+        return "、".join(parts)
+
+    def _compact_summary_for_overview(self, summary: str) -> str:
+        text = re.sub(r"\s+", " ", summary).strip(" 。.!！")
+        if not text:
+            return "先看这一块"
+
+        lower = text.casefold()
+        if not re.search(r"[\u4e00-\u9fff]", text):
+            if "listen" in lower and "circle" in lower:
+                return "听音辨词"
+            if "listen" in lower and "complete" in lower:
+                return "听音补词"
+            if "ow as in" in lower or ("ow" in lower and "pronunciation" in lower):
+                return "ow 发音"
+            if "writing" in lower or "write" in lower:
+                return "写句子"
+            if "social media" in lower or "post" in lower:
+                return "读图文"
+            if "talking about" in lower or "dialogue" in lower:
+                return "看对话"
+            return _clip_for_overview(text, limit=18)
+
+        text = re.sub(r"\s*Key patterns:.*$", "", text, flags=re.IGNORECASE).strip()
+        if "饥饿" in text and "口渴" in text:
+            return "hungry/thirsty"
+        if "食物小词库" in text:
+            return "食物小词库"
+        if "饮料小词库" in text:
+            return "饮料小词库"
+        if "角色扮演" in text:
+            return "角色扮演"
+        if "示范" in text and "I'd like" in text:
+            return "点餐示范"
+        if "听" in text and ("录音" in text or "听力" in text):
+            return "听力"
+        if "认识" in text:
+            vocabulary_hint = _vocabulary_hint_for_overview(text)
+            if vocabulary_hint:
+                return vocabulary_hint
+            return "认词"
+        text = re.sub(r"^(?:先|继续|再次)\s*", "", text)
+        text = re.split(r"[。；;]", text, maxsplit=1)[0]
+        text = re.split(r"，(?:再|然后|并|提供|要求|鼓励)", text, maxsplit=1)[0]
+        return _clip_for_overview(text, limit=22)
+
+    def _compact_page_topic_prefix(self, page_intro_cn: str) -> str:
+        intro = re.sub(r"\s+", " ", page_intro_cn).strip()
+        if not intro:
+            return ""
+        if any(token in intro for token in ("点餐", "想吃", "想喝", "餐厅")):
+            return "练点餐，"
+        return ""
+
+    def _block_detail_alias_keys_by_uid(
+        self,
+        blocks: list[Any],
+    ) -> dict[str, set[str]]:
+        keys_by_uid: dict[str, set[str]] = {}
+        for block in blocks:
+            block_uid = str(getattr(block, "block_uid", "") or "")
+            keys_by_uid[block_uid] = {
+                _choice_key(alias)
+                for alias in self._block_detail_aliases(block)
+                if _choice_key(alias)
+            }
+        return keys_by_uid
 
     def _detect_module_label(self, block: Any) -> str | None:
         values: list[str] = []
@@ -193,6 +308,10 @@ class PageOverviewSkill:
 
         topic_bits = self._topic_bits(" ".join(summaries))
         activity_bits = self._activity_bits(patterns=patterns, block_types=block_types)
+        if not draft.has_explicit_label and summaries:
+            cleaned = _clean_summary(summaries[0])
+            if cleaned and not topic_bits:
+                return _finish_sentence(_shorten(cleaned, limit=64))
         bits = _unique([*topic_bits, *activity_bits])
         if not bits:
             cleaned = _clean_summary(summaries[0] if summaries else "")
@@ -261,6 +380,44 @@ class PageOverviewSkill:
             aliases.extend(["wrap it up", "wrap up", "Let's wrap up"])
         return tuple(_unique(aliases))
 
+    def _aliases_for_block_module(
+        self,
+        *,
+        label: str,
+        block: Any,
+        all_detail_alias_keys: dict[str, set[str]],
+    ) -> tuple[str, ...]:
+        aliases = [
+            label,
+            str(getattr(block, "block_uid", "") or ""),
+        ]
+        detail_aliases = self._block_detail_aliases(block)
+        if _is_broad_core_block(block):
+            block_uid = str(getattr(block, "block_uid", "") or "")
+            other_keys: set[str] = set()
+            for uid, keys in all_detail_alias_keys.items():
+                if uid != block_uid:
+                    other_keys.update(keys)
+            detail_aliases = [
+                alias
+                for alias in detail_aliases
+                if _choice_key(alias) and _choice_key(alias) not in other_keys
+            ]
+            detail_aliases = [
+                alias
+                for alias in detail_aliases
+                if alias not in [*getattr(block, "core_patterns", [])]
+            ]
+        aliases.extend(detail_aliases[:12])
+        return tuple(_unique(aliases))
+
+    def _block_detail_aliases(self, block: Any) -> list[str]:
+        aliases: list[str] = []
+        for attr in _ALIAS_DETAIL_FIELDS:
+            for value in getattr(block, attr, []) or []:
+                aliases.extend(_alias_variants(str(value)))
+        return _unique(aliases)
+
     def _format_labels(self, labels: list[str]) -> str:
         if len(labels) == 2:
             return f"{labels[0]} 和 {labels[1]}"
@@ -296,6 +453,30 @@ def _shorten(text: str, *, limit: int) -> str:
     return text[:limit].rstrip("，,。.!?；;") + "..."
 
 
+def _vocabulary_hint_for_overview(text: str) -> str:
+    words = [
+        " ".join(match.group(0).split())
+        for match in re.finditer(r"[A-Za-z][A-Za-z]*(?:\s+[A-Za-z][A-Za-z]*)*", text)
+    ]
+    words = [
+        word
+        for word in _unique(words)
+        if word.casefold() not in {"i", "key patterns", "let", "learn"}
+    ]
+    if len(words) >= 2:
+        return f"{words[0]}/{words[-1]}"
+    if words:
+        return words[0]
+    return ""
+
+
+def _clip_for_overview(text: str, *, limit: int) -> str:
+    cleaned = text.strip(" ，,。.!?；;")
+    if len(cleaned) <= limit:
+        return cleaned
+    return cleaned[:limit].rstrip(" ，,。.!?；;")
+
+
 def _finish_sentence(text: str) -> str:
     stripped = text.strip()
     if not stripped:
@@ -322,3 +503,42 @@ def _unique(values: list[str]) -> list[str]:
 
 def _choice_key(text: str) -> str:
     return re.sub(r"[\s'’`\"“”.,!?！？。；;:：、，-]+", "", text.casefold())
+
+
+def _fallback_label(index: int) -> str:
+    if index < len(_FALLBACK_MODULE_LABELS):
+        return _FALLBACK_MODULE_LABELS[index]
+    return f"第{index + 1}块"
+
+
+def _has_visible_source(block: Any) -> bool:
+    return any(str(value).strip() for value in getattr(block, "source_refs", []) or [])
+
+
+def _is_broad_core_block(block: Any) -> bool:
+    block_type = str(getattr(block, "block_type", "") or "").casefold()
+    return block_type in _BROAD_CORE_BLOCK_TYPES
+
+
+def _alias_variants(text: str) -> list[str]:
+    cleaned = text.strip()
+    if not cleaned:
+        return []
+    variants = []
+    if _alias_is_safe_for_content_match(cleaned):
+        variants.append(cleaned)
+    for token in re.findall(r"[A-Za-z][A-Za-z'-]{2,}", cleaned):
+        normalized = token.strip("'’`-").casefold()
+        if len(normalized) < 4 or normalized in _ALIAS_WORD_STOPWORDS:
+            continue
+        variants.append(normalized)
+    return variants
+
+
+def _alias_is_safe_for_content_match(text: str) -> bool:
+    key = _choice_key(text)
+    if not key:
+        return False
+    if re.search(r"[\u4e00-\u9fff]", text):
+        return len(key) >= 2
+    return len(key) >= 4

@@ -12,6 +12,18 @@ import { useAuthStore } from '../auth'
 import { useAiriCardStore } from '../modules/airi-card'
 import { mergeLoadedSessionMessages } from './session-message-merge'
 
+interface ChatSessionCreateOptions {
+  setActive?: boolean
+  messages?: ChatHistoryItem[]
+  title?: string
+  systemPrompt?: string
+}
+
+interface ChatSessionEnsureOptions {
+  systemPrompt?: string
+  title?: string
+}
+
 export const useChatSessionStore = defineStore('chat-session', () => {
   const { userId, isAuthenticated } = storeToRefs(useAuthStore())
   const { activeCardId, systemPrompt } = storeToRefs(useAiriCardStore())
@@ -188,6 +200,16 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     return generateInitialMessageFromPrompt(systemPrompt.value)
   }
 
+  function buildInitialMessages(options?: Pick<ChatSessionCreateOptions, 'messages' | 'systemPrompt'>) {
+    if (options?.messages?.length)
+      return snapshotMessages(options.messages)
+
+    if (options?.systemPrompt !== undefined)
+      return [generateInitialMessageFromPrompt(options.systemPrompt)]
+
+    return [generateInitialMessage()]
+  }
+
   function ensureGeneration(sessionId: string) {
     if (sessionGenerations.value[sessionId] === undefined)
       sessionGenerations.value[sessionId] = 0
@@ -278,7 +300,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     loadingSessions.delete(sessionId)
   }
 
-  async function createSession(characterId: string, options?: { setActive?: boolean, messages?: ChatHistoryItem[], title?: string }) {
+  async function createSession(characterId: string, options?: ChatSessionCreateOptions) {
     const currentUserId = getCurrentUserId()
     const sessionId = nanoid()
     const now = Date.now()
@@ -291,7 +313,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
       updatedAt: now,
     }
 
-    const initialMessages = options?.messages?.length ? options.messages : [generateInitialMessage()]
+    const initialMessages = buildInitialMessages(options)
 
     sessionMetas.value[sessionId] = meta
     sessionMessages.value[sessionId] = initialMessages
@@ -320,14 +342,17 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     return sessionId
   }
 
-  async function upsertSessionRecord(record: ChatSessionRecord, options?: { setActive?: boolean }) {
+  async function upsertSessionRecord(record: ChatSessionRecord, options?: { setActive?: boolean, systemPrompt?: string }) {
     const currentUserId = getCurrentUserId()
     const meta = {
       ...record.meta,
       userId: record.meta.userId || currentUserId,
       characterId: record.meta.characterId || getCurrentCharacterId(),
     }
-    const initialMessages = record.messages?.length ? snapshotMessages(record.messages) : [generateInitialMessage()]
+    const initialMessages = buildInitialMessages({
+      messages: record.messages,
+      systemPrompt: options?.systemPrompt,
+    })
 
     sessionMetas.value[meta.sessionId] = meta
     sessionMessages.value[meta.sessionId] = initialMessages
@@ -355,27 +380,63 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     await persistIndex()
   }
 
-  async function ensureActiveSessionForCharacter() {
+  async function upsertSessionMeta(recordMeta: ChatSessionMeta, options?: { setActive?: boolean }) {
     const currentUserId = getCurrentUserId()
-    const characterId = getCurrentCharacterId()
+    const meta = {
+      ...recordMeta,
+      userId: recordMeta.userId || currentUserId,
+      characterId: recordMeta.characterId || getCurrentCharacterId(),
+    }
+
+    sessionMetas.value[meta.sessionId] = meta
+    ensureGeneration(meta.sessionId)
+
+    if (!index.value)
+      index.value = { userId: currentUserId, characters: {} }
+
+    const characterIndex = index.value.characters[meta.characterId] ?? {
+      activeSessionId: meta.sessionId,
+      sessions: {},
+    }
+    characterIndex.sessions[meta.sessionId] = meta
+    if (options?.setActive || !characterIndex.activeSessionId) {
+      characterIndex.activeSessionId = meta.sessionId
+      if (options?.setActive)
+        activeSessionId.value = meta.sessionId
+    }
+    index.value.characters[meta.characterId] = characterIndex
+
+    await persistIndex()
+  }
+
+  async function ensureActiveSessionForCharacter(characterId: string = getCurrentCharacterId(), options: ChatSessionEnsureOptions = {}) {
+    const currentUserId = getCurrentUserId()
 
     if (!index.value || index.value.userId !== currentUserId)
       await loadIndexForUser(currentUserId)
 
     const characterIndex = getCharacterIndex(characterId)
     if (!characterIndex) {
-      await createSession(characterId)
+      await createSession(characterId, {
+        title: options.title,
+        systemPrompt: options.systemPrompt,
+      })
       return
     }
 
     if (!characterIndex.activeSessionId) {
-      await createSession(characterId)
+      await createSession(characterId, {
+        title: options.title,
+        systemPrompt: options.systemPrompt,
+      })
       return
     }
 
     activeSessionId.value = characterIndex.activeSessionId
     await loadSession(characterIndex.activeSessionId)
-    ensureSession(characterIndex.activeSessionId)
+    ensureSession(characterIndex.activeSessionId, {
+      systemPrompt: options.systemPrompt,
+    })
   }
 
   async function initialize() {
@@ -398,10 +459,12 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     }
   }
 
-  function ensureSession(sessionId: string) {
+  function ensureSession(sessionId: string, options: { systemPrompt?: string } = {}) {
     ensureGeneration(sessionId)
     if (!sessionMessages.value[sessionId] || sessionMessages.value[sessionId].length === 0) {
-      sessionMessages.value[sessionId] = [generateInitialMessage()]
+      sessionMessages.value[sessionId] = buildInitialMessages({
+        systemPrompt: options.systemPrompt,
+      })
       void persistSession(sessionId)
     }
   }
@@ -423,11 +486,26 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     },
   })
 
-  function setActiveSession(sessionId: string) {
-    activeSessionId.value = sessionId
-    ensureSession(sessionId)
+  function findCharacterIdForSession(sessionId: string) {
+    const metaCharacterId = sessionMetas.value[sessionId]?.characterId
+    if (metaCharacterId)
+      return metaCharacterId
 
-    const characterId = getCurrentCharacterId()
+    for (const [characterId, characterIndex] of Object.entries(index.value?.characters ?? {})) {
+      if (characterIndex.sessions[sessionId])
+        return characterId
+    }
+
+    return getCurrentCharacterId()
+  }
+
+  function setActiveSession(sessionId: string, options: { systemPrompt?: string } = {}) {
+    activeSessionId.value = sessionId
+    ensureSession(sessionId, {
+      systemPrompt: options.systemPrompt,
+    })
+
+    const characterId = findCharacterIdForSession(sessionId)
     const characterIndex = index.value?.characters[characterId]
     if (characterIndex) {
       characterIndex.activeSessionId = sessionId
@@ -438,10 +516,12 @@ export const useChatSessionStore = defineStore('chat-session', () => {
       void loadSession(sessionId)
   }
 
-  function cleanupMessages(sessionId = activeSessionId.value) {
+  function cleanupMessages(sessionId = activeSessionId.value, options: { systemPrompt?: string } = {}) {
     ensureGeneration(sessionId)
     sessionGenerations.value[sessionId] += 1
-    setSessionMessages(sessionId, [generateInitialMessage()])
+    setSessionMessages(sessionId, buildInitialMessages({
+      systemPrompt: options.systemPrompt,
+    }))
   }
 
   function getAllSessions() {
@@ -477,8 +557,10 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     await createSession(characterId)
   }
 
-  function getSessionMessages(sessionId: string) {
-    ensureSession(sessionId)
+  function getSessionMessages(sessionId: string, options: { systemPrompt?: string } = {}) {
+    ensureSession(sessionId, {
+      systemPrompt: options.systemPrompt,
+    })
     if (ready.value)
       void loadSession(sessionId)
     return sessionMessages.value[sessionId] ?? []
@@ -500,20 +582,23 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     return getSessionGeneration(target)
   }
 
-  const currentCharacterSessionMetas = computed<ChatSessionMeta[]>(() => {
-    const characterId = getCurrentCharacterId()
+  function getSessionMetasForCharacter(characterId: string) {
     const characterIndex = index.value?.characters[characterId]
     const metas = {
-      ...(characterIndex?.sessions ?? {}),
+      ...characterIndex?.sessions,
       ...Object.fromEntries(
         Object.entries(sessionMetas.value).filter(([, meta]) => meta.characterId === characterId),
       ),
     }
 
     return Object.values(metas).sort((left, right) => right.updatedAt - left.updatedAt)
+  }
+
+  const currentCharacterSessionMetas = computed<ChatSessionMeta[]>(() => {
+    return getSessionMetasForCharacter(getCurrentCharacterId())
   })
 
-  async function createCurrentSession(options?: { setActive?: boolean, messages?: ChatHistoryItem[], title?: string }) {
+  async function createCurrentSession(options?: ChatSessionCreateOptions) {
     return await createSession(getCurrentCharacterId(), options)
   }
 
@@ -592,6 +677,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     ready,
     isReady,
     initialize,
+    ensureActiveSessionForCharacter,
 
     activeSessionId,
     messages,
@@ -599,6 +685,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     createCurrentSession,
     createSession,
     upsertSessionRecord,
+    upsertSessionMeta,
     setActiveSession,
     loadSession,
     cleanupMessages,
@@ -611,6 +698,7 @@ export const useChatSessionStore = defineStore('chat-session', () => {
     getSessionMessages,
     sessionMessages,
     sessionMetas,
+    getSessionMetasForCharacter,
     currentCharacterSessionMetas,
     getSessionGeneration,
     bumpSessionGeneration,

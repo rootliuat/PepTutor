@@ -5,6 +5,8 @@ const props = withDefaults(defineProps<{
   label: string
   description?: string
   options?: { label: string, value: string | number }[]
+  inputId?: string
+  inputName?: string
   placeholder?: string
   disabled?: boolean
   layout?: 'horizontal' | 'vertical'
@@ -44,6 +46,8 @@ const modelValue = defineModel<string>({ required: false })
       <slot>
         <Select
           v-model="modelValue"
+          :input-id="props.inputId"
+          :input-name="props.inputName"
           :options="props.options?.filter(option => option.label && option.value) || []"
           :placeholder="props.placeholder"
           :disabled="props.disabled"

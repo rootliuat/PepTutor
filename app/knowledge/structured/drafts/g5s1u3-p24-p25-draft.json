@@ -170,7 +170,7 @@
       "text": "tea",
       "gloss": "a drink item",
       "linked_blocks": [
-        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P24-D4",
         "TB-G5S1U3-P25-D1",
         "TB-G5S1U3-P25-D3"
       ]
@@ -181,7 +181,7 @@
       "text": "What would you like to eat?",
       "linked_blocks": [
         "TB-G5S1U3-P24-D2",
-        "TB-G5S1U3-P24-D4",
+        "TB-G5S1U3-P24-D3",
         "TB-G5S1U3-P25-D2",
         "TB-G5S1U3-P25-D3"
       ]
@@ -192,7 +192,7 @@
       "text": "What would you like to drink?",
       "linked_blocks": [
         "TB-G5S1U3-P24-D2",
-        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P24-D4",
         "TB-G5S1U3-P25-D3"
       ]
     },
@@ -381,52 +381,6 @@
       "source_refs": [
         "TB-G5S1U3-P24-D3"
       ],
-      "teaching_goal": "Answer the drink question with a short ordering sentence.",
-      "teaching_summary": "Practice drink choices with a small word bank and answer the drink question with I'd like ....",
-      "focus_vocabulary": [
-        "water",
-        "tea"
-      ],
-      "core_patterns": [
-        "What would you like to drink?",
-        "I'd like ..."
-      ],
-      "allowed_answer_scope": [
-        "I'd like water.",
-        "I'd like some tea."
-      ],
-      "entry_probe_questions": [
-        "If I ask What would you like to drink, how do you answer?"
-      ],
-      "repair_modes": [
-        "choice_probe",
-        "word_drill",
-        "sentence_drill"
-      ],
-      "next_block_uids": [
-        "TB-G5S1U3-P24-D4",
-        "TB-G5S1U3-P24-D1"
-      ],
-      "learning_target_uids": [
-        "LT-G5S1U3-P24-answer-id-like"
-      ],
-      "branchable_topics": [
-        "restaurant",
-        "drink choice"
-      ],
-      "return_anchors": [
-        "What would you like to drink?",
-        "I'd like ..."
-      ]
-    },
-    {
-      "block_uid": "TB-G5S1U3-P24-D4",
-      "page_uid": "TB-G5S1U3-P24",
-      "page_type": "dialogue",
-      "block_type": "dialogue_practice",
-      "source_refs": [
-        "TB-G5S1U3-P24-D3"
-      ],
       "teaching_goal": "Answer the food question with a short ordering sentence.",
       "teaching_summary": "Continue the ordering exchange with food choices and answer the eat question with I'd like ....",
       "focus_vocabulary": [
@@ -450,10 +404,11 @@
         "sentence_drill"
       ],
       "next_block_uids": [
+        "TB-G5S1U3-P24-D4",
         "TB-G5S1U3-P24-D1"
       ],
       "learning_target_uids": [
-        "LT-G5S1U3-P24-dialogue-food-drink-roleplay"
+        "LT-G5S1U3-P24-answer-id-like"
       ],
       "branchable_topics": [
         "restaurant",
@@ -461,6 +416,51 @@
       ],
       "return_anchors": [
         "What would you like to eat?",
+        "I'd like ..."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P24-D4",
+      "page_uid": "TB-G5S1U3-P24",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S1U3-P24-D3"
+      ],
+      "teaching_goal": "Answer the drink question with a short ordering sentence.",
+      "teaching_summary": "Practice drink choices with a small word bank and answer the drink question with I'd like ....",
+      "focus_vocabulary": [
+        "water",
+        "tea"
+      ],
+      "core_patterns": [
+        "What would you like to drink?",
+        "I'd like ..."
+      ],
+      "allowed_answer_scope": [
+        "I'd like water.",
+        "I'd like some tea."
+      ],
+      "entry_probe_questions": [
+        "If I ask What would you like to drink, how do you answer?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S1U3-P24-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S1U3-P24-dialogue-food-drink-roleplay"
+      ],
+      "branchable_topics": [
+        "restaurant",
+        "drink choice"
+      ],
+      "return_anchors": [
+        "What would you like to drink?",
         "I'd like ..."
       ]
     },

@@ -32,6 +32,7 @@
     "./utils/opfs-loader": "./src/utils/opfs-loader.ts"
   },
   "scripts": {
+    "test:run": "vitest run",
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {

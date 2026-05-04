@@ -1,5 +1,52 @@
 import type { LessonCatalogOutline, LessonTurnResult } from '../types/lesson'
 
+type LessonPersonaDebugSignalFixture = NonNullable<NonNullable<LessonTurnResult['debug_signals']>['persona']>
+type LessonAiriPerformancePlanFixture = NonNullable<LessonPersonaDebugSignalFixture['airi_performance']>
+
+export function lessonPersonaDebugSignalFixture(
+  airiPerformance: LessonAiriPerformancePlanFixture,
+): LessonPersonaDebugSignalFixture {
+  return {
+    enabled: true,
+    schema_version: 'lesson-persona-context/v1',
+    profile_id: 'peptutor-teacher-v1',
+    profile_version: '2026-04-24',
+    display_name: '米粒',
+    voice_hint: 'zh-CN-XiaoxiaoNeural',
+    allowed_to_shape: [
+      'tone',
+      'pacing',
+      'encouragement',
+      'scaffold_granularity',
+      'classroom_habits',
+      'speech_style',
+      'embodied_performance',
+    ],
+    protected_authorities: [
+      'target_answer',
+      'correctness_judgment',
+      'page_progression',
+      'retrieval_scope',
+      'teaching_block',
+      'required_teaching_action',
+    ],
+    relationship_student_id: 'demo-student',
+    relationship_signals: [],
+    common_mistakes: [],
+    preferences: [],
+    mastery_signals: [],
+    semantic_memories: [],
+    affect_state: {
+      student_confidence: 'unknown',
+      teacher_energy: 'calm',
+      stuckness: 0,
+      interruption_state: 'none',
+      recent_turn_labels: ['page_entry'],
+    },
+    airi_performance: airiPerformance,
+  }
+}
+
 export const lessonCatalogFixture: LessonCatalogOutline = {
   scope_count: 3,
   page_count: 4,

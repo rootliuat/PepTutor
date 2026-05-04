@@ -695,10 +695,82 @@ def _assert_p49_gold_stream_turn(
     )
 
 
+def _assert_p49_policy_stream_turn(
+    result: LessonStreamTurnResult,
+    *,
+    expected_page_uid: str,
+    allowed_block_uids: set[str],
+    forbidden_phrases: tuple[str, ...] = (),
+) -> None:
+    _assert_live_teacher(result)
+    _require(
+        result.payload.get("turn_label") in {"answer_question", "social"},
+        f"{result.name} returned unexpected turn {result.payload.get('turn_label')}.",
+    )
+    _require(
+        result.payload.get("retrieval_mode") == "none",
+        f"{result.name} unexpectedly used retrieval_mode={result.payload.get('retrieval_mode')}.",
+    )
+    _require(
+        result.state.get("current_page_uid") == expected_page_uid,
+        f"{result.name} drifted off {expected_page_uid}.",
+    )
+    _require(
+        result.state.get("current_block_uid") in allowed_block_uids,
+        f"{result.name} wrote invalid block {result.state.get('current_block_uid')}.",
+    )
+    _require(
+        result.state.get("awaiting_answer") is True,
+        f"{result.name} did not keep awaiting_answer=true.",
+    )
+    _require(_contains_cjk(result.teacher_response), f"{result.name} reply is not localized Chinese.")
+    _assert_teacher_excludes(
+        result,
+        *P49_FORBIDDEN_TEACHER_META_PHRASES,
+        *forbidden_phrases,
+    )
+
+    action = result.action_payload
+    _require(
+        action.get("content_source") == "lesson_runtime_teacher_response",
+        f"{result.name} action event did not keep lesson_runtime_teacher_response.",
+    )
+    _require(
+        action.get("performance_source") == "lesson_persona_context",
+        f"{result.name} action event did not use lesson_persona_context.",
+    )
+
+
 def _assert_same_block(left: LessonTurnResult, right: LessonTurnResult) -> None:
     _require(
         left.state.get("current_block_uid") == right.state.get("current_block_uid"),
         f"{right.name} drifted from {left.state.get('current_block_uid')} to {right.state.get('current_block_uid')}.",
+    )
+
+
+def _assert_answer_policy_in_context_question(
+    result: LessonTurnResult,
+    *,
+    previous: LessonTurnResult,
+    expected_phrases: tuple[str, ...],
+) -> None:
+    _assert_live_teacher(result)
+    _require(
+        result.payload.get("turn_label") == "answer_question",
+        f"{result.name} did not stay under answer turn policy.",
+    )
+    _require(
+        result.payload.get("retrieval_mode") == "none",
+        f"{result.name} unexpectedly used retrieval_mode={result.payload.get('retrieval_mode')}.",
+    )
+    _assert_same_block(previous, result)
+    _require(
+        result.state.get("awaiting_answer") is True,
+        f"{result.name} did not preserve awaiting_answer=true.",
+    )
+    _require(
+        any(phrase.casefold() in result.teacher_response.casefold() for phrase in expected_phrases),
+        f"{result.name} did not answer or acknowledge any of: {', '.join(expected_phrases)}.",
     )
 
 
@@ -741,56 +813,38 @@ async def run_lesson_turn_smoke(
             "state": start.state,
             "learner_input": "What does salad mean?",
         },
-        name="P24 knowledge interruption",
+        name="P24 in-context vocabulary question",
         timeout_seconds=timeout_seconds,
     )
-    _assert_live_teacher(knowledge)
-    _require(
-        knowledge.payload.get("turn_label") == "ask_knowledge",
-        "P24 knowledge interruption did not route to ask_knowledge.",
-    )
-    _require(
-        knowledge.payload.get("retrieval_mode") == "unit",
-        "P24 knowledge interruption did not stay at unit retrieval.",
-    )
-    _assert_same_block(start, knowledge)
-    _require(
-        knowledge.state.get("awaiting_answer") is True,
-        "P24 knowledge interruption did not preserve awaiting_answer=true.",
-    )
-    _require(
-        "salad" in knowledge.teacher_response.casefold(),
-        "P24 knowledge interruption did not explain salad.",
+    _assert_answer_policy_in_context_question(
+        knowledge,
+        previous=start,
+        expected_phrases=("salad", "沙拉"),
     )
     results.append(knowledge)
 
-    first_hint = await request_turn(
+    drink_entry = await request_turn(
         session,
         base_url=base_url,
         payload={
             "page_uid": page_uid,
             "student_id": student_id,
             "state": start.state,
-            "learner_input": "I am hungry.",
+            "learner_input": "第二块",
         },
-        name="P24 answer correction",
+        name="P24 drink module choice",
         timeout_seconds=timeout_seconds,
     )
-    _assert_live_teacher(first_hint)
+    _assert_live_teacher(drink_entry)
     _require(
-        first_hint.payload.get("turn_label") == "answer_question",
-        "P24 answer correction did not stay on answer_question.",
+        drink_entry.state.get("current_block_uid") == "TB-G5S1U3-P24-D3",
+        "P24 drink module choice did not enter the drink block.",
     )
     _require(
-        first_hint.payload.get("teaching_action") == "hint",
-        "P24 answer correction did not return hint.",
+        drink_entry.state.get("awaiting_answer") is True,
+        "P24 drink module choice did not keep awaiting_answer=true.",
     )
-    _assert_same_block(start, first_hint)
-    _require(
-        first_hint.state.get("awaiting_answer") is True,
-        "P24 answer correction did not keep awaiting_answer=true.",
-    )
-    results.append(first_hint)
+    results.append(drink_entry)
 
     help_turn = await request_turn(
         session,
@@ -798,7 +852,7 @@ async def run_lesson_turn_smoke(
         payload={
             "page_uid": page_uid,
             "student_id": student_id,
-            "state": first_hint.state,
+            "state": drink_entry.state,
             "learner_input": "help",
         },
         name="P24 help turn",
@@ -806,17 +860,24 @@ async def run_lesson_turn_smoke(
     )
     _assert_live_teacher(help_turn)
     _require(
-        help_turn.payload.get("turn_label") == "ask_help",
-        "P24 help turn did not route to ask_help.",
+        help_turn.payload.get("turn_label") == "answer_question",
+        "P24 help turn did not stay under answer turn policy.",
     )
-    _assert_same_block(first_hint, help_turn)
+    _require(
+        help_turn.payload.get("retrieval_mode") == "none",
+        "P24 help turn unexpectedly used retrieval.",
+    )
+    _assert_same_block(drink_entry, help_turn)
     _require(
         help_turn.state.get("awaiting_answer") is True,
         "P24 help turn did not preserve awaiting_answer=true.",
     )
     _require(
-        "hungry" in help_turn.teacher_response.casefold() or "饿" in help_turn.teacher_response,
-        "P24 help turn did not stay on the active hungry target.",
+        any(
+            phrase in help_turn.teacher_response.casefold()
+            for phrase in ("water", "tea", "drink", "口渴", "喝")
+        ),
+        "P24 help turn did not stay on the active drink target.",
     )
     results.append(help_turn)
 
@@ -826,7 +887,7 @@ async def run_lesson_turn_smoke(
         payload={
             "page_uid": page_uid,
             "student_id": student_id,
-            "state": first_hint.state,
+            "state": drink_entry.state,
             "learner_input": "water",
         },
         name="P24 fragment answer",
@@ -841,44 +902,49 @@ async def run_lesson_turn_smoke(
         fragment.payload.get("evaluation") == "partially_correct",
         "P24 fragment answer did not stay partially_correct.",
     )
-    _assert_same_block(first_hint, fragment)
+    _require(
+        fragment.state.get("current_block_uid")
+        in {"TB-G5S1U3-P24-D3", "TB-G5S1U3-P24-D4"},
+        "P24 fragment answer wrote an unexpected block.",
+    )
     _require(
         fragment.state.get("awaiting_answer") is True,
         "P24 fragment answer did not preserve awaiting_answer=true.",
     )
     _require(
-        fragment.teacher_response != first_hint.teacher_response,
+        fragment.teacher_response != drink_entry.teacher_response,
         "P24 fragment answer repeated the exact same correction reply twice.",
     )
     results.append(fragment)
 
-    wrong_domain = await request_turn(
+    related_wrong = await request_turn(
         session,
         base_url=base_url,
         payload={
             "page_uid": page_uid,
             "student_id": student_id,
-            "state": first_hint.state,
-            "learner_input": "I'd like chicken and bread.",
+            "state": drink_entry.state,
+            "learner_input": "pizza",
         },
-        name="P24 wrong-domain answer",
+        name="P24 related food answer in drink block",
         timeout_seconds=timeout_seconds,
     )
-    _assert_live_teacher(wrong_domain)
+    _assert_live_teacher(related_wrong)
     _require(
-        wrong_domain.payload.get("turn_label") == "answer_question",
-        "P24 wrong-domain answer did not stay on answer_question.",
+        related_wrong.payload.get("turn_label") == "answer_question",
+        "P24 related food answer did not stay on answer_question.",
     )
     _require(
-        wrong_domain.payload.get("evaluation") == "incorrect",
-        "P24 wrong-domain answer did not stay incorrect.",
+        related_wrong.payload.get("retrieval_mode") == "none",
+        "P24 related food answer unexpectedly used retrieval.",
     )
-    _assert_same_block(first_hint, wrong_domain)
+    _assert_same_block(drink_entry, related_wrong)
     _require(
-        wrong_domain.state.get("awaiting_answer") is True,
-        "P24 wrong-domain answer did not preserve awaiting_answer=true.",
+        related_wrong.state.get("awaiting_answer") is True,
+        "P24 related food answer did not preserve awaiting_answer=true.",
     )
-    results.append(wrong_domain)
+    _assert_teacher_mentions_any(related_wrong, "pizza", "food", "食物", "吃")
+    results.append(related_wrong)
 
     p25_entry = await request_turn(
         session,
@@ -886,7 +952,7 @@ async def run_lesson_turn_smoke(
         payload={
             "page_uid": p25_page_uid,
             "student_id": student_id,
-            "state": wrong_domain.state,
+            "state": related_wrong.state,
             "learner_input": "next page",
         },
         name="P24 -> P25 page switch",
@@ -907,7 +973,7 @@ async def run_lesson_turn_smoke(
             "page_uid": p25_page_uid,
             "student_id": student_id,
             "state": p25_entry.state,
-            "learner_input": "tea",
+            "learner_input": "salad",
         },
         name="P25 vocabulary answer",
         timeout_seconds=timeout_seconds,
@@ -919,52 +985,65 @@ async def run_lesson_turn_smoke(
     )
     _require(
         p25_vocab.payload.get("evaluation") == "correct",
-        "P25 vocabulary answer did not validate tea as correct.",
+        "P25 vocabulary answer did not validate salad as correct.",
     )
     _require(
-        p25_vocab.state.get("current_block_uid") == "TB-G5S1U3-P25-D2",
-        "P25 vocabulary answer did not advance into the service-question block.",
+        p25_vocab.state.get("current_page_uid") == p25_page_uid,
+        "P25 vocabulary answer drifted off the P25 page.",
     )
     _require(
         p25_vocab.state.get("awaiting_answer") is True,
         "P25 vocabulary answer did not keep awaiting_answer=true.",
     )
     _require(
-        "what would you like to eat" in p25_vocab.teacher_response.casefold(),
-        "P25 vocabulary answer did not bridge into the service question.",
+        "salad" in p25_vocab.teacher_response.casefold()
+        or "沙拉" in p25_vocab.teacher_response,
+        "P25 vocabulary answer did not stay grounded in the salad vocabulary task.",
     )
     results.append(p25_vocab)
 
-    p25_service_echo = await request_turn(
+    p25_service_answer = await request_turn(
         session,
         base_url=base_url,
         payload={
             "page_uid": p25_page_uid,
             "student_id": student_id,
             "state": p25_vocab.state,
-            "learner_input": "What would you like to eat?",
+            "learner_input": "I'd like a sandwich, please.",
         },
-        name="P25 service-question echo",
+        name="P25 polite ordering answer",
         timeout_seconds=timeout_seconds,
     )
-    _assert_live_teacher(p25_service_echo)
+    _assert_live_teacher(p25_service_answer)
     _require(
-        p25_service_echo.payload.get("turn_label") == "answer_question",
-        "P25 service-question echo did not stay on answer_question.",
+        p25_service_answer.payload.get("turn_label") == "answer_question",
+        "P25 polite ordering answer did not stay on answer_question.",
     )
     _require(
-        p25_service_echo.payload.get("evaluation") == "correct",
-        "P25 service-question echo did not validate as correct.",
+        p25_service_answer.payload.get("retrieval_mode") == "none",
+        "P25 polite ordering answer unexpectedly used retrieval.",
     )
     _require(
-        p25_service_echo.state.get("current_block_uid") == "TB-G5S1U3-P25-D2",
-        "P25 service-question echo unexpectedly left the service-question block.",
+        p25_service_answer.state.get("current_page_uid") == p25_page_uid,
+        "P25 polite ordering answer drifted off the P25 page.",
     )
     _require(
-        _contains_cjk(p25_service_echo.teacher_response),
-        "P25 service-question echo reply is not localized Chinese.",
+        p25_service_answer.state.get("current_block_uid") in {
+            "TB-G5S1U3-P25-D1",
+            "TB-G5S1U3-P25-D2",
+            "TB-G5S1U3-P25-D3",
+        },
+        "P25 polite ordering answer wrote an invalid P25 block.",
     )
-    results.append(p25_service_echo)
+    _require(
+        p25_service_answer.state.get("awaiting_answer") is True,
+        "P25 polite ordering answer did not keep awaiting_answer=true.",
+    )
+    _require(
+        _contains_cjk(p25_service_answer.teacher_response),
+        "P25 polite ordering answer reply is not localized Chinese.",
+    )
+    results.append(p25_service_answer)
 
     p25_roleplay = await request_turn(
         session,
@@ -972,8 +1051,8 @@ async def run_lesson_turn_smoke(
         payload={
             "page_uid": p25_page_uid,
             "student_id": student_id,
-            "state": p25_service_echo.state,
-            "learner_input": "I'd like a sandwich, please.",
+            "state": p25_service_answer.state,
+            "learner_input": "I'd like a sandwich and some tea.",
         },
         name="P25 role-play setup",
         timeout_seconds=timeout_seconds,
@@ -984,12 +1063,24 @@ async def run_lesson_turn_smoke(
         "P25 role-play setup did not stay on answer_question.",
     )
     _require(
-        p25_roleplay.payload.get("evaluation") == "correct",
-        "P25 role-play setup did not validate the sandwich answer.",
+        p25_roleplay.payload.get("retrieval_mode") == "none",
+        "P25 role-play setup unexpectedly used retrieval.",
     )
     _require(
-        p25_roleplay.state.get("current_block_uid") == "TB-G5S1U3-P25-D3",
-        "P25 role-play setup did not advance into the role-play block.",
+        p25_roleplay.state.get("current_page_uid") == p25_page_uid,
+        "P25 role-play setup drifted off the P25 page.",
+    )
+    _require(
+        p25_roleplay.state.get("current_block_uid") in {
+            "TB-G5S1U3-P25-D1",
+            "TB-G5S1U3-P25-D2",
+            "TB-G5S1U3-P25-D3",
+        },
+        "P25 role-play setup wrote an invalid P25 block.",
+    )
+    _require(
+        p25_roleplay.state.get("awaiting_answer") is True,
+        "P25 role-play setup did not keep awaiting_answer=true.",
     )
     _require(
         _contains_cjk(p25_roleplay.teacher_response),
@@ -1013,7 +1104,7 @@ async def run_lesson_turn_smoke(
         p26_entry,
         expected_word="listen",
         expected_page_uid=p26_page_uid,
-        expected_block_uid="TB-G5S1U3-P26-D2",
+        expected_block_uid="TB-G5S1U3-P26-D1",
     )
     results.append(p26_entry)
 
@@ -1026,33 +1117,13 @@ async def run_lesson_turn_smoke(
             "state": p26_entry.state,
             "learner_input": "What does snow mean?",
         },
-        name="P26 knowledge interruption",
+        name="P26 in-context snow question",
         timeout_seconds=timeout_seconds,
     )
-    _assert_live_teacher(p26_knowledge)
-    _require(
-        p26_knowledge.payload.get("turn_label") == "ask_knowledge",
-        "P26 knowledge interruption did not route to ask_knowledge.",
-    )
-    _require(
-        p26_knowledge.payload.get("retrieval_mode") in {"block", "page", "unit"},
-        "P26 knowledge interruption did not stay in a lesson retrieval scope.",
-    )
-    _require(
-        p26_knowledge.state.get("current_block_uid") == "TB-G5S1U3-P26-D2",
-        "P26 knowledge interruption drifted off the active listening block.",
-    )
-    _require(
-        p26_knowledge.state.get("awaiting_answer") is True,
-        "P26 knowledge interruption did not preserve awaiting_answer=true.",
-    )
-    _require(
-        "TB-G5S1U3-P26-D1" in (p26_knowledge.payload.get("retrieved_block_uids") or []),
-        "P26 knowledge interruption did not retrieve the nearby phonics block for snow.",
-    )
-    _require(
-        "snow" in p26_knowledge.teacher_response.casefold(),
-        "P26 knowledge interruption did not explain snow.",
+    _assert_answer_policy_in_context_question(
+        p26_knowledge,
+        previous=p26_entry,
+        expected_phrases=("snow", "雪"),
     )
     results.append(p26_knowledge)
 
@@ -1081,26 +1152,13 @@ async def run_lesson_turn_smoke(
             "state": g6_entry.state,
             "learner_input": "What does stayed at home mean?",
         },
-        name="G6 P13 stayed-at-home interruption",
+        name="G6 P13 stayed-at-home in-context question",
         timeout_seconds=timeout_seconds,
     )
-    _assert_live_teacher(g6_stayed_home)
-    _require(
-        g6_stayed_home.payload.get("turn_label") == "ask_knowledge",
-        "G6 stayed-at-home interruption did not route to ask_knowledge.",
-    )
-    _require(
-        g6_stayed_home.payload.get("retrieval_mode") == "unit",
-        "G6 stayed-at-home interruption did not use unit retrieval.",
-    )
-    _assert_same_block(g6_entry, g6_stayed_home)
-    _require(
-        g6_stayed_home.state.get("awaiting_answer") is True,
-        "G6 stayed-at-home interruption did not preserve awaiting_answer=true.",
-    )
-    _require(
-        (g6_stayed_home.payload.get("retrieved_block_uids") or [None])[0] == "TB-G6S2U2-P15-D1",
-        "G6 stayed-at-home interruption did not hit TB-G6S2U2-P15-D1 at top-1.",
+    _assert_answer_policy_in_context_question(
+        g6_stayed_home,
+        previous=g6_entry,
+        expected_phrases=("stayed at home", "待在家里", "待在家", "在家"),
     )
     _assert_teacher_mentions_any(
         g6_stayed_home,
@@ -1120,26 +1178,13 @@ async def run_lesson_turn_smoke(
             "state": g6_entry.state,
             "learner_input": "What does had a cold mean?",
         },
-        name="G6 P13 had-a-cold interruption",
+        name="G6 P13 had-a-cold in-context question",
         timeout_seconds=timeout_seconds,
     )
-    _assert_live_teacher(g6_had_cold)
-    _require(
-        g6_had_cold.payload.get("turn_label") == "ask_knowledge",
-        "G6 had-a-cold interruption did not route to ask_knowledge.",
-    )
-    _require(
-        g6_had_cold.payload.get("retrieval_mode") == "unit",
-        "G6 had-a-cold interruption did not use unit retrieval.",
-    )
-    _assert_same_block(g6_entry, g6_had_cold)
-    _require(
-        g6_had_cold.state.get("awaiting_answer") is True,
-        "G6 had-a-cold interruption did not preserve awaiting_answer=true.",
-    )
-    _require(
-        (g6_had_cold.payload.get("retrieved_block_uids") or [None])[0] == "TB-G6S2U2-P17-D1",
-        "G6 had-a-cold interruption did not hit TB-G6S2U2-P17-D1 at top-1.",
+    _assert_answer_policy_in_context_question(
+        g6_had_cold,
+        previous=g6_entry,
+        expected_phrases=("had a cold", "have a cold", "感冒"),
     )
     _assert_teacher_mentions_any(
         g6_had_cold,
@@ -1165,6 +1210,30 @@ async def run_lesson_turn_smoke(
     _assert_teacher_excludes(g6_p49_entry, *P49_FORBIDDEN_TEACHER_META_PHRASES)
     results.append(g6_p49_entry)
 
+    g6_p49_activity_entry = await request_turn(
+        session,
+        base_url=base_url,
+        payload={
+            "page_uid": g6_p49_page_uid,
+            "student_id": g6_p49_student_id,
+            "state": g6_p49_entry.state,
+            "learner_input": "第一块",
+        },
+        name="G6 P49 activity module choice",
+        timeout_seconds=timeout_seconds,
+    )
+    _assert_live_teacher(g6_p49_activity_entry)
+    _require(
+        g6_p49_activity_entry.state.get("current_block_uid")
+        == "TB-G6S2Recycle2-P49-D4",
+        "G6 P49 activity module choice did not stay on the party-list block.",
+    )
+    _require(
+        g6_p49_activity_entry.state.get("awaiting_answer") is True,
+        "G6 P49 activity module choice did not keep awaiting_answer=true.",
+    )
+    results.append(g6_p49_activity_entry)
+
     for case in P49_GOLD_STREAM_CASES:
         stream_turn = await request_turn_stream(
             session,
@@ -1172,18 +1241,21 @@ async def run_lesson_turn_smoke(
             payload={
                 "page_uid": g6_p49_page_uid,
                 "student_id": g6_p49_student_id,
-                "state": g6_p49_entry.state,
+                "state": g6_p49_activity_entry.state,
                 "learner_input": case["learner_input"],
             },
             name=case["name"],
             timeout_seconds=timeout_seconds,
         )
-        _assert_p49_gold_stream_turn(
+        _assert_p49_policy_stream_turn(
             stream_turn,
-            expected_turn_label=case["expected_turn_label"],
-            expected_teaching_action=case["expected_teaching_action"],
-            expected_evaluation=case["expected_evaluation"],
-            expected_block_uid=case["expected_block_uid"],
+            expected_page_uid=g6_p49_page_uid,
+            allowed_block_uids={
+                "TB-G6S2Recycle2-P49-D1",
+                "TB-G6S2Recycle2-P49-D2",
+                "TB-G6S2Recycle2-P49-D3",
+                "TB-G6S2Recycle2-P49-D4",
+            },
             forbidden_phrases=case.get("forbidden_phrases", ()),
         )
         results.append(stream_turn)

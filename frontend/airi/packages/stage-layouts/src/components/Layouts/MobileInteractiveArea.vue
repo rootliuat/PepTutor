@@ -54,7 +54,7 @@ const settingsAudioDevice = useSettingsAudioDevice()
 const { enabled, selectedAudioInput, stream, audioInputs } = storeToRefs(settingsAudioDevice)
 const { ingest, onAfterMessageComposed, discoverToolsCompatibility } = chatOrchestrator
 const { t } = useI18n()
-const { audioContext } = useAudioContext()
+const { resumeAudioContext } = useAudioContext()
 const { startAnalyzer, stopAnalyzer, volumeLevel } = useAudioAnalyzer()
 let analyzerSource: MediaStreamAudioSourceNode | undefined
 
@@ -108,8 +108,7 @@ async function setupAnalyzer() {
   teardownAnalyzer()
   if (!hearingDialogOpen.value || !enabled.value || !stream.value)
     return
-  if (audioContext.state === 'suspended')
-    await audioContext.resume()
+  const audioContext = await resumeAudioContext()
   const analyser = startAnalyzer(audioContext)
   if (!analyser)
     return

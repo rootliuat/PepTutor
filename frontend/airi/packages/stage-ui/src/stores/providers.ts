@@ -75,6 +75,10 @@ const DOUBAO_REALTIME_DEFAULT_PROXY_URL = '/api/peptutor/doubao-realtime-asr'
 
 type AliyunNlsRegion = typeof ALIYUN_NLS_REGIONS[number]
 
+function isLessonRuntimeLocation() {
+  return typeof window !== 'undefined' && window.location.pathname.startsWith('/lesson')
+}
+
 export interface ProviderMetadata {
   id: string
   order?: number
@@ -234,7 +238,7 @@ export const useProvidersStore = defineStore('providers', () => {
   })
 
   async function isBrowserAndMemoryEnough() {
-    if (isStageTamagotchi())
+    if (isStageTamagotchi() || isLessonRuntimeLocation())
       return false
 
     const webGPUAvailable = await isWebGPUSupported()

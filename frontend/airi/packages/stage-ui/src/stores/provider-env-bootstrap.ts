@@ -13,6 +13,7 @@ interface ProviderEnvBootstrapTarget {
   voiceId?: string
   selectFirstVoice?: boolean
   forceSelection?: boolean
+  forceConfigKeys?: string[]
 }
 
 interface PepTutorVoiceEnvBootstrapPlan {
@@ -67,6 +68,14 @@ function buildPepTutorSpeechProxyUrl(baseUrl: unknown, path: string): string {
     return normalizedPath
   }
   return `${normalizedBaseUrl}${normalizedPath}`
+}
+
+function compatibleEdgeTtsProxyUrl(value: unknown): string {
+  const proxyUrl = firstDefinedString(value)
+  if (!proxyUrl) {
+    return ''
+  }
+  return /\/doubao-tts(?:$|[/?#])/.test(proxyUrl) ? '' : proxyUrl
 }
 
 function shouldUseDefaultLessonApiProxy(): boolean {
@@ -234,7 +243,7 @@ function resolveSpeechBootstrap(env: ImportMetaEnv): ProviderEnvBootstrapTarget 
       const proxyAuth = maybeBuildPepTutorBackendProxyAuth(resolvedEnv)
       const model = firstDefinedString(resolvedEnv.VITE_PEPTUTOR_TTS_MODEL) || DEFAULT_TTS_MODELS[providerId]
       const voiceId = firstDefinedString(resolvedEnv.VITE_PEPTUTOR_TTS_VOICE) || EDGE_TTS_DEFAULT_VOICE
-      const proxyUrl = firstDefinedString(resolvedEnv.VITE_PEPTUTOR_TTS_PROXY_URL)
+      const proxyUrl = compatibleEdgeTtsProxyUrl(resolvedEnv.VITE_PEPTUTOR_TTS_PROXY_URL)
         || buildPepTutorSpeechProxyUrl(lessonApiBaseUrl, '/api/peptutor/edge-tts')
 
       if (!proxyUrl) {
@@ -251,6 +260,7 @@ function resolveSpeechBootstrap(env: ImportMetaEnv): ProviderEnvBootstrapTarget 
         model,
         voiceId,
         forceSelection: Boolean(explicitProviderId) || lessonApiConfigured,
+        forceConfigKeys: ['proxyUrl', 'model'],
       }
     }
     case 'volcengine': {
@@ -471,7 +481,19 @@ async function bootstrapProviderConfig(target: ProviderEnvBootstrapTarget): Prom
   }
 
   const changed = applyMissingConfig(config, target.config, defaultConfig)
-  if (changed) {
+  let forcedChanged = false
+  for (const key of target.forceConfigKeys ?? []) {
+    if (!Object.hasOwn(target.config, key)) {
+      continue
+    }
+    const nextValue = target.config[key]
+    if (!configValuesEqual(config[key], nextValue)) {
+      config[key] = nextValue
+      forcedChanged = true
+    }
+  }
+
+  if (changed || forcedChanged) {
     await providersStore.validateProvider(target.providerId)
   }
 }
@@ -492,11 +514,11 @@ async function bootstrapSpeechSelection(target: ProviderEnvBootstrapTarget): Pro
     return
   }
 
-  if (!speechStore.activeSpeechModel && target.model) {
+  if ((target.forceSelection || !speechStore.activeSpeechModel) && target.model) {
     speechStore.activeSpeechModel = target.model
   }
 
-  if (!speechStore.activeSpeechVoiceId && target.voiceId) {
+  if ((target.forceSelection || !speechStore.activeSpeechVoiceId) && target.voiceId) {
     speechStore.activeSpeechVoiceId = target.voiceId
     return
   }

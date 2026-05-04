@@ -8,7 +8,8 @@ import type { UnElevenLabsOptions } from 'unspeech'
 import type { EmotionPayload } from '../../constants/emotions'
 
 import { createPlaybackManager, createSpeechPipeline } from '@proj-airi/pipelines-audio'
-import { Live2DScene, useLive2d } from '@proj-airi/stage-ui-live2d'
+import { Live2DScene } from '@proj-airi/stage-ui-live2d/components/scenes'
+import { useLive2d } from '@proj-airi/stage-ui-live2d/stores/live2d'
 import { createQueue } from '@proj-airi/stream-kit'
 import { useBroadcastChannel } from '@vueuse/core'
 // import { createTransformers } from '@xsai-transformers/embed'
@@ -29,7 +30,8 @@ import { useSpeechStore } from '../../stores/modules/speech'
 import { useProvidersStore } from '../../stores/providers'
 import { useSettings } from '../../stores/settings'
 import { useSpeechRuntimeStore } from '../../stores/speech-runtime'
-import { applyLessonMouthIntensity, calculateAnalyserMouthOpen, computeLive2dSpeechMouthState, resolveLessonSpeechStyleRuntimeOptions, shouldRunLive2dLipSyncLoop } from './runtime'
+import { resolveLessonInterruptDecision } from '../../utils/lesson-interrupt-policy'
+import { applyLessonMouthIntensity, calculateAnalyserMouthOpen, computeLive2dSpeechMouthState, createLessonSpeechSegmentStream, isLessonRuntimePerformancePayload, resolveLessonSpeechStyleRuntimeOptions, resolveLive2dPerformanceApplyState, resolveSpeechVoiceForPlayback, shouldRunLive2dLipSyncLoop } from './runtime'
 
 const props = withDefaults(defineProps<{
   paused?: boolean
@@ -75,9 +77,9 @@ const {
   live2dShadowEnabled,
   live2dMaxFps,
 } = storeToRefs(settingsStore)
-const { mouthOpenSize } = storeToRefs(useSpeakingStore())
+const { mouthOpenSize, nowSpeaking: characterNowSpeaking } = storeToRefs(useSpeakingStore())
 const mouthFormValue = ref(0)
-const { audioContext } = useAudioContext()
+const audioContextStore = useAudioContext()
 const currentAudioSource = ref<AudioBufferSourceNode>()
 
 const chatHookCleanups: Array<() => void> = []
@@ -128,6 +130,10 @@ const live2dLipSyncOptions: Live2DLipSyncOptions = {
   mouthLerpWindowMs: 50,
 }
 
+function ensureStageAudioContext() {
+  return audioContextStore.ensureAudioContext()
+}
+
 const speechStore = speechRuntimeEnabled ? useSpeechStore() : null
 const activeCardId = computed(() => props.lessonSafe ? 'lesson' : useAiriCardStore().activeCard?.name ?? 'default')
 const speechRuntimeStore = speechRuntimeEnabled ? useSpeechRuntimeStore() : null
@@ -135,35 +141,107 @@ const ssmlEnabled = computed(() => speechStore?.ssmlEnabled ?? false)
 const activeSpeechProvider = computed(() => speechStore?.activeSpeechProvider ?? 'speech-noop')
 const activeSpeechModel = computed(() => speechStore?.activeSpeechModel ?? '')
 const activeSpeechVoice = computed(() => speechStore?.activeSpeechVoice)
+const activeSpeechVoiceId = computed(() => speechStore?.activeSpeechVoiceId ?? '')
 const pitch = computed(() => speechStore?.pitch ?? 0)
 const lessonAiriRuntimeStore = props.lessonSafe ? useLessonAiriRuntimeStore() : null
 const lessonAiriRuntimeRefs = lessonAiriRuntimeStore ? storeToRefs(lessonAiriRuntimeStore) : null
 const lessonSpeechStyle = computed(() => lessonAiriRuntimeRefs?.currentSpeechStyle.value ?? 'normal')
 const lessonMouthIntensity = computed(() => lessonAiriRuntimeRefs?.currentMouthIntensity.value ?? 1)
 const lessonInterruptPolicy = computed(() => lessonAiriRuntimeRefs?.currentInterruptPolicy.value ?? 'barge_in_allowed')
-const canBargeInDuringTeacherSpeech = computed(() => lessonAiriRuntimeRefs?.canBargeInDuringTeacherSpeech.value ?? true)
+const canDriveLessonMouthOpen = computed(() => !props.lessonSafe || (lessonAiriRuntimeRefs?.canDriveMouthOpen.value ?? false))
+const lessonPerformancePlan = computed(() => lessonAiriRuntimeRefs?.currentPerformancePlan.value ?? null)
 
-const { currentMotion } = storeToRefs(useLive2d())
+const { currentMotion, availableMotions } = storeToRefs(live2dStore)
 
 function hasReadableSpeechText(text: string) {
   return /[\p{L}\p{N}]/u.test(text)
 }
 
+function resolveSpeechHttpFailure(error: unknown) {
+  const candidates = [error]
+  if (typeof error === 'object' && error !== null && 'cause' in error)
+    candidates.push((error as { cause?: unknown }).cause)
+
+  for (const candidate of candidates) {
+    if (typeof candidate !== 'object' || candidate === null)
+      continue
+    const status = (candidate as { status?: unknown, statusCode?: unknown }).status
+      ?? (candidate as { status?: unknown, statusCode?: unknown }).statusCode
+    if (typeof status === 'number' && Number.isFinite(status)) {
+      const statusText = (candidate as { statusText?: unknown }).statusText
+      return {
+        status,
+        statusText: typeof statusText === 'string' ? statusText : '',
+      }
+    }
+  }
+
+  const message = error instanceof Error ? error.message : String(error ?? '')
+  const match = /\bHTTP\s+(\d{3})\b/i.exec(message)
+  if (match) {
+    return {
+      status: Number(match[1]),
+      statusText: '',
+    }
+  }
+
+  return {
+    status: null,
+    statusText: '',
+  }
+}
+
 const emotionsQueue = createQueue<EmotionPayload>({
   handlers: [
     async (ctx) => {
-      lessonAiriRuntimeStore?.applyPerformancePlan(ctx.data)
+      if (props.lessonSafe) {
+        if (!isLessonRuntimePerformancePayload(ctx.data))
+          return
+
+        lessonAiriRuntimeStore?.applyPerformancePlan(ctx.data)
+        return
+      }
+
+      const requestedMotion = ctx.data.motion || EMOTION_EmotionMotionName_value[ctx.data.name] || ''
+      const requestedExpression = ctx.data.expression || EMOTION_VRMExpressionName_value[ctx.data.name] || ''
 
       if (stageModelRenderer.value === 'vrm') {
         // console.debug('VRM emotion anime: ', ctx.data)
-        const value = ctx.data.expression || EMOTION_VRMExpressionName_value[ctx.data.name]
-        if (!value)
+        const value = requestedExpression
+        if (!value) {
+          lessonAiriRuntimeStore?.markPerformanceApplied({
+            status: 'unsupported',
+            requestedMotion,
+            requestedExpression,
+            fallbackReason: 'vrm_expression_unavailable',
+          })
           return
+        }
 
-        await vrmViewerRef.value?.setExpression?.(value, ctx.data.intensity)
+        if (!vrmViewerRef.value?.setExpression) {
+          lessonAiriRuntimeStore?.markPerformanceApplied({
+            status: 'unsupported',
+            requestedMotion,
+            requestedExpression: value,
+            fallbackReason: 'vrm_expression_runtime_unavailable',
+          })
+          return
+        }
+
+        await vrmViewerRef.value.setExpression(value, ctx.data.intensity)
+        lessonAiriRuntimeStore?.markPerformanceApplied({
+          status: 'applied',
+          requestedMotion,
+          appliedMotion: requestedMotion,
+          requestedExpression: value,
+          appliedExpression: value,
+        })
       }
       else if (stageModelRenderer.value === 'live2d') {
-        currentMotion.value = { group: ctx.data.motion || EMOTION_EmotionMotionName_value[ctx.data.name] }
+        applyLive2dPerformanceMotion({
+          motion: requestedMotion,
+          expression: requestedExpression,
+        })
       }
     },
   ],
@@ -206,10 +284,20 @@ async function ensureVrmAssetsLoaded() {
 }
 
 async function playFunction(item: Parameters<Parameters<typeof createPlaybackManager<AudioBuffer>>[0]['play']>[0], signal: AbortSignal): Promise<void> {
-  if (!audioContext || !item.audio)
+  if (!item.audio) {
+    lessonAiriRuntimeStore?.markSpeechPlaybackError('没有可播放的 TTS 音频。', {
+      playbackId: item.id,
+      replyId: item.intentId,
+      stage: 'missing_audio',
+      playbackState: 'skipped',
+      reason: 'audio_element_missing',
+    })
     return
+  }
 
-  // Lesson speech enters through the shared speech runtime, bypassing chat hooks.
+  const audioContext = ensureStageAudioContext()
+
+  // Teacher speech reaches this point after AIRI chat hooks emit assistant tokens.
   // Prepare analyser/lip-sync at playback time so Live2D can react to teacher audio.
   setupAnalyser()
   await setupLipSync()
@@ -219,7 +307,29 @@ async function playFunction(item: Parameters<Parameters<typeof createPlaybackMan
     try {
       await audioContext.resume()
     }
-    catch {
+    catch (error) {
+      lessonAiriRuntimeStore?.markSpeechPlaybackError(error instanceof Error ? error.message : '浏览器拒绝启动音频上下文。', {
+        playbackId: item.id,
+        replyId: item.intentId,
+        stage: 'audio_context',
+        playbackState: error instanceof DOMException && error.name === 'NotAllowedError'
+          ? 'autoplay_blocked'
+          : 'audio_context_suspended',
+        reason: error instanceof DOMException && error.name === 'NotAllowedError'
+          ? 'autoplay_blocked'
+          : 'audio_context_suspended',
+      })
+      return
+    }
+
+    if (audioContext.state === 'suspended') {
+      lessonAiriRuntimeStore?.markSpeechPlaybackError('AudioContext remained suspended after resume().', {
+        playbackId: item.id,
+        replyId: item.intentId,
+        stage: 'audio_context',
+        playbackState: 'audio_context_suspended',
+        reason: 'audio_context_suspended',
+      })
       return
     }
   }
@@ -234,42 +344,79 @@ async function playFunction(item: Parameters<Parameters<typeof createPlaybackMan
   if (lipSyncNode.value)
     source.connect(lipSyncNode.value)
 
-  return new Promise<void>((resolve) => {
+  return new Promise<void>((resolve, reject) => {
     let settled = false
-    const resolveOnce = () => {
+    const settlePlayback = (error?: unknown) => {
       if (settled)
         return
       settled = true
+      if (currentAudioSource.value === source)
+        currentAudioSource.value = undefined
+      nowSpeaking.value = false
+      characterNowSpeaking.value = false
+      mouthOpenSize.value = 0
+      mouthFormValue.value = 0
+      if (error) {
+        lessonAiriRuntimeStore?.markSpeechPlaybackError(error instanceof Error ? error.message : 'TTS 播放失败。', {
+          playbackId: item.id,
+          replyId: item.intentId,
+          stage: 'playback',
+          playbackState: 'play_rejected',
+          reason: 'source_start_rejected',
+        })
+        reject(error)
+        return
+      }
       resolve()
     }
 
-    const stopPlayback = () => {
+    const stopPlayback = (status: 'ended' | 'interrupted', stopReason: string = status) => {
+      if (settled)
+        return
       try {
         source.stop()
         source.disconnect()
       }
       catch {}
-      if (currentAudioSource.value === source)
-        currentAudioSource.value = undefined
-      resolveOnce()
+      lessonAiriRuntimeStore?.markSpeechPlaybackEnd(status, {
+        playbackId: item.id,
+        replyId: item.intentId,
+        stopReason,
+      })
+      settlePlayback()
     }
 
     if (signal.aborted) {
-      stopPlayback()
+      stopPlayback('interrupted', String(signal.reason || 'interrupted'))
       return
     }
 
-    signal.addEventListener('abort', stopPlayback, { once: true })
+    const abortPlayback = () => stopPlayback('interrupted', String(signal.reason || 'interrupted'))
+    signal.addEventListener('abort', abortPlayback, { once: true })
     source.onended = () => {
-      signal.removeEventListener('abort', stopPlayback)
-      stopPlayback()
+      signal.removeEventListener('abort', abortPlayback)
+      stopPlayback('ended')
     }
 
     try {
+      lessonAiriRuntimeStore?.markSpeechPlaybackRequested({
+        playbackId: item.id,
+        replyId: item.intentId,
+        audioContextState: audioContext.state,
+        reason: 'web_audio_buffer_source_start',
+      })
       source.start(0)
+      nowSpeaking.value = true
+      characterNowSpeaking.value = true
+      lessonAiriRuntimeStore?.markSpeechPlaybackStart({
+        playbackId: item.id,
+        replyId: item.intentId,
+        audioContextState: audioContext.state,
+      })
     }
-    catch {
-      stopPlayback()
+    catch (error) {
+      signal.removeEventListener('abort', abortPlayback)
+      settlePlayback(error)
     }
   })
 }
@@ -279,9 +426,7 @@ const playbackManager = !speechRuntimeEnabled
   : createPlaybackManager<AudioBuffer>({
       play: playFunction,
       maxVoices: 1,
-      maxVoicesPerOwner: 1,
       overflowPolicy: 'queue',
-      ownerOverflowPolicy: 'steal-oldest',
     })
 
 const speechPipeline = !speechRuntimeEnabled || !playbackManager
@@ -291,23 +436,32 @@ const speechPipeline = !speechRuntimeEnabled || !playbackManager
         if (signal.aborted || !providersStore || !speechStore)
           return null
 
-        if (activeSpeechProvider.value === 'speech-noop' || !activeSpeechProvider.value)
-          return null
-
-        const provider = await providersStore.getProviderInstance(activeSpeechProvider.value) as SpeechProviderWithExtraOptions<string, UnElevenLabsOptions>
-        if (!provider) {
-          console.error('Failed to initialize speech provider')
-          return null
-        }
-
         if (!request.text && !request.special)
           return null
 
         if (request.text && !hasReadableSpeechText(request.text))
           return null
 
+        if (activeSpeechProvider.value === 'speech-noop' || !activeSpeechProvider.value) {
+          lessonAiriRuntimeStore?.markSpeechPlaybackError('TTS provider is not configured.', {
+            replyId: request.intentId,
+            stage: 'configuration',
+          })
+          return null
+        }
+
+        const provider = await providersStore.getProviderInstance(activeSpeechProvider.value) as SpeechProviderWithExtraOptions<string, UnElevenLabsOptions>
+        if (!provider) {
+          console.error('Failed to initialize speech provider')
+          lessonAiriRuntimeStore?.markSpeechPlaybackError(`Failed to initialize TTS provider: ${activeSpeechProvider.value}.`, {
+            replyId: request.intentId,
+            stage: 'configuration',
+          })
+          return null
+        }
+
         const providerConfig = {
-          ...(providersStore.getProviderConfig(activeSpeechProvider.value) ?? {}),
+          ...providersStore.getProviderConfig(activeSpeechProvider.value),
         }
         const lessonSpeechOptions = resolveLessonSpeechStyleRuntimeOptions(lessonSpeechStyle.value)
         if (props.lessonSafe && activeSpeechProvider.value === 'peptutor-edge-tts' && lessonSpeechOptions.edgeRate !== '+0%') {
@@ -319,8 +473,14 @@ const speechPipeline = !speechRuntimeEnabled || !playbackManager
 
         // For OpenAI Compatible providers, always use provider config for model and voice
         // since these are manually configured in provider settings
-        let model = activeSpeechModel.value
-        let voice = activeSpeechVoice.value
+        let model = activeSpeechModel.value || (typeof providerConfig.model === 'string' ? providerConfig.model.trim() : '')
+        let voice = resolveSpeechVoiceForPlayback(
+          activeSpeechProvider.value,
+          activeSpeechVoice.value,
+          activeSpeechVoiceId.value
+          || (typeof providerConfig.voiceId === 'string' ? providerConfig.voiceId : '')
+          || (typeof providerConfig.voice === 'string' ? providerConfig.voice : ''),
+        )
 
         if (activeSpeechProvider.value === 'openai-compatible-audio-speech') {
           if (providerConfig?.model) {
@@ -356,31 +516,93 @@ const speechPipeline = !speechRuntimeEnabled || !playbackManager
           }
         }
 
-        if (!model || !voice)
+        if (!model || !voice) {
+          lessonAiriRuntimeStore?.markSpeechPlaybackError(
+            !model
+              ? `TTS model is not configured for ${activeSpeechProvider.value}.`
+              : `TTS voice is not configured for ${activeSpeechProvider.value}.`,
+            {
+              replyId: request.intentId,
+              stage: 'configuration',
+            },
+          )
           return null
+        }
 
         const input = ssmlEnabled.value
           ? speechStore.generateSSML(request.text, voice, { ...providerConfig, pitch: pitch.value })
           : request.text
 
+        lessonAiriRuntimeStore?.markSpeechSynthesisStart({
+          provider: activeSpeechProvider.value,
+          model,
+          voice: voice.id,
+          text: request.text,
+          replyId: request.intentId,
+        })
+
+        let res: ArrayBuffer
         try {
-          const res = await generateSpeech({
-            ...provider.speech(model, providerConfig),
+          const speechRequest = provider.speech(model, providerConfig)
+          const speechFetch = speechRequest.fetch
+          if (speechFetch) {
+            speechRequest.fetch = (async (fetchInput: URL, fetchInit?: RequestInit) => {
+              const response = await speechFetch(fetchInput, fetchInit ?? {})
+              lessonAiriRuntimeStore?.markSpeechSynthesisHttpResult({
+                status: response.status,
+                statusText: response.statusText,
+              })
+              return response
+            }) as typeof speechFetch
+          }
+
+          res = await generateSpeech({
+            ...speechRequest,
             input,
             voice: voice.id,
           })
+        }
+        catch (error) {
+          const httpFailure = resolveSpeechHttpFailure(error)
+          lessonAiriRuntimeStore?.markSpeechPlaybackError(error instanceof Error ? error.message : 'TTS 合成失败。', {
+            replyId: request.intentId,
+            stage: 'synthesis',
+            httpStatus: httpFailure.status,
+            httpStatusText: httpFailure.statusText,
+          })
+          return null
+        }
 
-          if (signal.aborted || !res || res.byteLength === 0)
-            return null
+        if (signal.aborted)
+          return null
+        if (!res || res.byteLength === 0) {
+          lessonAiriRuntimeStore?.markSpeechPlaybackError('TTS 返回了空音频。', {
+            replyId: request.intentId,
+            stage: 'empty_audio',
+          })
+          return null
+        }
 
+        try {
+          const audioByteLength = res.byteLength
+          const audioContext = ensureStageAudioContext()
           const audioBuffer = await audioContext.decodeAudioData(res)
+          lessonAiriRuntimeStore?.markSpeechSynthesisReady({
+            audioByteLength,
+            audioDurationMs: audioBuffer.duration * 1000,
+          })
           return audioBuffer
         }
-        catch {
+        catch (error) {
+          lessonAiriRuntimeStore?.markSpeechPlaybackError(error instanceof Error ? error.message : 'TTS 解码失败。', {
+            replyId: request.intentId,
+            stage: 'decode',
+          })
           return null
         }
       },
       playback: playbackManager,
+      segmenter: props.lessonSafe ? createLessonSpeechSegmentStream : undefined,
     })
 
 if (speechRuntimeStore && playbackManager && speechPipeline) {
@@ -400,14 +622,13 @@ if (speechRuntimeStore && playbackManager && speechPipeline) {
       playSpecialToken(item.special)
 
     nowSpeaking.value = false
+    characterNowSpeaking.value = false
     lessonAiriRuntimeStore?.setTeacherSpeaking(false)
     mouthOpenSize.value = 0
     mouthFormValue.value = 0
   })
 
   playbackManager.onStart(({ item }) => {
-    nowSpeaking.value = true
-    lessonAiriRuntimeStore?.setTeacherSpeaking(true)
     assistantCaption.value += ` ${item.text}`
     try {
       postCaption({ type: 'caption-assistant', text: assistantCaption.value })
@@ -429,8 +650,8 @@ function startLipSyncLoop() {
   const tick = () => {
     const analyserMouthOpen = readAnalyserMouthOpen()
 
-    if (!nowSpeaking.value || !live2dLipSync.value) {
-      if (!nowSpeaking.value) {
+    if (!nowSpeaking.value || !canDriveLessonMouthOpen.value || !live2dLipSync.value) {
+      if (!nowSpeaking.value || !canDriveLessonMouthOpen.value) {
         mouthOpenSize.value = 0
         mouthFormValue.value = 0
       }
@@ -522,7 +743,7 @@ function registerLipSyncDebugHandle() {
       lipSyncStarted: lipSyncStarted.value,
       lipSyncFallbackEnabled: lipSyncFallbackEnabled.value,
       analyserMouthOpen: readAnalyserMouthOpen(),
-      audioWorkletAvailable: Boolean(audioContext.audioWorklet?.addModule),
+      audioWorkletAvailable: Boolean(audioContextStore.audioContext?.audioWorklet?.addModule),
       live2dLipSyncMouthOpen: live2dLipSync.value?.getMouthOpen() ?? null,
       live2dLipSyncVolume: live2dLipSync.value?.node.volume ?? null,
       live2dLipSyncWeights: live2dLipSync.value?.node.weights ?? null,
@@ -531,6 +752,10 @@ function registerLipSyncDebugHandle() {
       lessonMouthIntensity: lessonMouthIntensity.value,
       lessonInterruptPolicy: lessonInterruptPolicy.value,
       lessonPerformanceSource: lessonAiriRuntimeStore?.currentPerformancePlan?.performanceSource ?? null,
+      lessonPerformanceApplyStatus: lessonAiriRuntimeStore?.performanceApplyStatus ?? null,
+      lessonPerformanceAppliedMotion: lessonAiriRuntimeStore?.appliedMotion ?? null,
+      lessonPerformanceAppliedExpression: lessonAiriRuntimeStore?.appliedExpression ?? null,
+      lessonPerformanceFallbackReason: lessonAiriRuntimeStore?.performanceFallbackReason ?? null,
     }),
   }
 }
@@ -550,6 +775,8 @@ async function setupLipSync() {
 
   if (lipSyncStarted.value || lipSyncFallbackEnabled.value)
     return
+
+  const audioContext = ensureStageAudioContext()
 
   if (!audioContext.audioWorklet?.addModule) {
     lipSyncFallbackEnabled.value = true
@@ -586,8 +813,109 @@ async function setupLipSync() {
 
 function setupAnalyser() {
   if (!audioAnalyser.value) {
+    const audioContext = ensureStageAudioContext()
     audioAnalyser.value = audioContext.createAnalyser()
   }
+}
+
+function applyLive2dPerformanceMotion(profile: {
+  motion: string
+  expression: string
+}, options: {
+  recordPerformanceState?: boolean
+} = {}) {
+  const recordPerformanceState = options.recordPerformanceState ?? true
+  const resolution = resolveLive2dPerformanceApplyState(profile, availableMotions.value)
+  if (resolution.motion) {
+    currentMotion.value = resolution.motion
+  }
+
+  if (!recordPerformanceState)
+    return
+
+  lessonAiriRuntimeStore?.markPerformanceApplied({
+    status: resolution.status,
+    requestedMotion: resolution.requestedMotion,
+    appliedMotion: resolution.appliedMotion,
+    requestedExpression: resolution.requestedExpression,
+    appliedExpression: resolution.appliedExpression,
+    fallbackReason: resolution.fallbackReason,
+  })
+}
+
+function live2dMotionCatalogKey() {
+  return availableMotions.value
+    .map(motion => `${motion.motionName}:${motion.motionIndex ?? ''}:${motion.fileName ?? ''}`)
+    .join('|')
+}
+
+let lastLessonPerformanceApplyKey = ''
+
+async function applyCurrentLessonPerformancePlan() {
+  if (!props.lessonSafe || !lessonAiriRuntimeStore)
+    return
+
+  const plan = lessonPerformancePlan.value
+  if (!plan) {
+    lastLessonPerformanceApplyKey = ''
+    return
+  }
+
+  const applyKey = [
+    plan.updatedAt,
+    stageModelRenderer.value,
+    stageModelRenderer.value === 'live2d' ? live2dMotionCatalogKey() : '',
+  ].join(':')
+  if (applyKey === lastLessonPerformanceApplyKey)
+    return
+  lastLessonPerformanceApplyKey = applyKey
+
+  if (stageModelRenderer.value === 'live2d') {
+    applyLive2dPerformanceMotion({
+      motion: plan.motion,
+      expression: plan.expression,
+    })
+    return
+  }
+
+  if (stageModelRenderer.value === 'vrm') {
+    if (!plan.expression) {
+      lessonAiriRuntimeStore.markPerformanceApplied({
+        status: 'unsupported',
+        requestedMotion: plan.motion,
+        requestedExpression: plan.expression,
+        fallbackReason: 'vrm_expression_not_requested',
+      })
+      return
+    }
+
+    if (!vrmViewerRef.value?.setExpression) {
+      lessonAiriRuntimeStore.markPerformanceApplied({
+        status: 'unsupported',
+        requestedMotion: plan.motion,
+        requestedExpression: plan.expression,
+        fallbackReason: 'vrm_expression_runtime_unavailable',
+      })
+      return
+    }
+
+    await vrmViewerRef.value.setExpression(plan.expression, plan.emotionIntensity)
+    lessonAiriRuntimeStore.markPerformanceApplied({
+      status: 'applied',
+      requestedMotion: plan.motion,
+      appliedMotion: plan.motion,
+      requestedExpression: plan.expression,
+      appliedExpression: plan.expression,
+    })
+    return
+  }
+
+  lessonAiriRuntimeStore.markPerformanceApplied({
+    status: 'unsupported',
+    requestedMotion: plan.motion,
+    requestedExpression: plan.expression,
+    fallbackReason: `stage_renderer_unsupported:${stageModelRenderer.value}`,
+  })
 }
 
 function applyLessonClassroomAction(profile: {
@@ -601,7 +929,7 @@ function applyLessonClassroomAction(profile: {
   }
 
   if (stageModelRenderer.value === 'live2d') {
-    currentMotion.value = { group: profile.motion }
+    applyLive2dPerformanceMotion(profile, { recordPerformanceState: false })
   }
 }
 
@@ -610,10 +938,20 @@ let lessonBargeInActive = false
 
 if (chatOrchestratorStore && speechRuntimeStore && playbackManager) {
   chatHookCleanups.push(chatOrchestratorStore.onBeforeMessageComposed(async () => {
-    playbackManager.stopAll('new-message')
+    const interruptDecision = props.lessonSafe
+      ? resolveLessonInterruptDecision({
+          event: 'new_teacher_turn',
+          policy: lessonInterruptPolicy.value,
+        })
+      : null
+    const stopReason = interruptDecision?.rawStopReason || 'new-message'
+    if (!props.lessonSafe || interruptDecision?.shouldStopPlayback)
+      playbackManager.stopAll(stopReason)
 
-    setupAnalyser()
-    await setupLipSync()
+    if (!props.lessonSafe) {
+      setupAnalyser()
+      await setupLipSync()
+    }
     assistantCaption.value = ''
     try {
       postCaption({ type: 'caption-assistant', text: '' })
@@ -629,18 +967,24 @@ if (chatOrchestratorStore && speechRuntimeStore && playbackManager) {
     }
 
     if (currentChatIntent) {
-      currentChatIntent.cancel('new-message')
+      if (!props.lessonSafe || interruptDecision?.shouldStopPlayback)
+        currentChatIntent.cancel(stopReason)
+      else
+        currentChatIntent.end()
       currentChatIntent = null
     }
 
     currentChatIntent = speechRuntimeStore.openIntent({
       ownerId: activeCardId.value,
       priority: 'normal',
-      behavior: 'interrupt',
+      behavior: interruptDecision?.speechIntentBehavior || 'interrupt',
     })
   }))
 
   chatHookCleanups.push(chatOrchestratorStore.onBeforeSend(async () => {
+    if (props.lessonSafe)
+      return
+
     currentMotion.value = { group: EmotionThinkMotionName }
   }))
 
@@ -672,14 +1016,26 @@ if (chatOrchestratorStore && speechRuntimeStore && playbackManager) {
 if (lessonAiriRuntimeStore) {
   const { hearingListening, microphoneEnabled, inputVolumeLevel, classroomState } = storeToRefs(lessonAiriRuntimeStore)
 
-  watch([hearingListening, microphoneEnabled, inputVolumeLevel, nowSpeaking, classroomState, canBargeInDuringTeacherSpeech], ([listening, enabled, volume, speaking, classroom, canBargeIn]) => {
+  watch([
+    () => lessonPerformancePlan.value?.updatedAt ?? 0,
+    stageModelRenderer,
+    () => live2dMotionCatalogKey(),
+  ], () => {
+    void applyCurrentLessonPerformancePlan()
+  }, { immediate: true })
+
+  watch([hearingListening, microphoneEnabled, inputVolumeLevel, nowSpeaking, classroomState, lessonInterruptPolicy], ([listening, enabled, volume, speaking, classroom, interruptPolicy]) => {
     if (!props.lessonSafe)
       return
 
     const learnerSpeaking = listening && volume >= 12
-    if (learnerSpeaking && speaking && canBargeIn && !lessonBargeInActive) {
-      speechRuntimeStore?.stopAll('lesson-learner-barge-in')
-      currentChatIntent?.cancel('lesson-learner-barge-in')
+    const interruptDecision = resolveLessonInterruptDecision({
+      event: 'volume_barge_in',
+      policy: interruptPolicy,
+    })
+    if (learnerSpeaking && speaking && interruptDecision.shouldStopPlayback && !lessonBargeInActive) {
+      speechRuntimeStore?.stopAll(interruptDecision.rawStopReason)
+      currentChatIntent?.cancel(interruptDecision.rawStopReason)
       currentChatIntent = null
       lessonBargeInActive = true
     }
@@ -748,10 +1104,10 @@ if (lessonAiriRuntimeStore) {
 // Resume audio context on first user interaction (browser requirement)
 let audioContextResumed = false
 function resumeAudioContextOnInteraction() {
-  if (audioContextResumed || !audioContext)
+  if (audioContextResumed)
     return
   audioContextResumed = true
-  audioContext.resume().catch(() => {
+  audioContextStore.resumeAudioContext().catch(() => {
     // Ignore errors - audio context will be resumed when needed
   })
 }
@@ -830,11 +1186,16 @@ function readRenderTargetRegionAtClientPoint(clientX: number, clientY: number, r
 }
 
 onUnmounted(() => {
+  currentChatIntent?.cancel('stage-unmount')
+  currentChatIntent = null
+  speechPipeline?.stopAll('stage-unmount')
   lessonAiriRuntimeStore?.setTeacherSpeaking(false)
+  characterNowSpeaking.value = false
   resetLive2dLipSync()
   chatHookCleanups.forEach(dispose => dispose?.())
   viewUpdateCleanups.forEach(dispose => dispose?.())
   speechRuntimeStore?.clearPlaybackController()
+  void speechRuntimeStore?.dispose()
   clearLipSyncDebugHandle()
 })
 

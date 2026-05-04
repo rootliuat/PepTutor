@@ -1,6 +1,7 @@
 import { createPinia, setActivePinia } from 'pinia'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
+import { createPepTutorLessonSessionSystemPrompt, PEPTUTOR_TEACHER_SESSION_CHARACTER_ID } from '../../constants/peptutor-teacher-card'
 import { useAiriCardStore } from './airi-card'
 
 vi.mock('vue-i18n', () => ({
@@ -65,6 +66,15 @@ describe('airi card store', () => {
     expect(store.systemPrompt).toContain('后端 LessonRuntime')
     expect(store.activeCard?.greetings).toEqual([])
     expect(store.activeCard?.messageExample).toEqual([])
+  })
+
+  it('exposes a lesson-scoped Mili session prompt without default AIRI lore', () => {
+    const prompt = createPepTutorLessonSessionSystemPrompt()
+
+    expect(PEPTUTOR_TEACHER_SESSION_CHARACTER_ID).toBe('peptutor-mili-teacher')
+    expect(prompt).toContain('你是米粒（Mili）')
+    expect(prompt).toContain('Teacher Kernel and LessonRuntime decide teaching facts')
+    expect(prompt).toContain('Do not import AIRI/Neko Ayaka default lore')
   })
 
   it('does not overwrite an existing default card', () => {

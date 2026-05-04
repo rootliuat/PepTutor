@@ -126,6 +126,56 @@ def test_build_general_draft_from_real_g6_s1_u1_pages():
     assert bookstore_atom["linked_blocks"] == ["TB-G6S1U1-P4-D1", "TB-G6S1U1-P5-D1"]
 
 
+def test_build_general_draft_keeps_scaffolded_phonics_page_in_source_order():
+    raw_root = _raw_root()
+    normalized_pages = normalize_textbook_source(raw_root / "04.六年级下册语料.json")
+    selected_pages = select_general_scope_pages(
+        normalized_pages,
+        grade="G6",
+        semester="S2",
+        unit="Recycle2",
+        page_numbers=[48, 49, 50, 51],
+    )
+    word_list_sections = normalize_word_list_markdown(raw_root / "08.六年级下册单词表.md")
+
+    draft = build_general_draft(
+        selected_pages,
+        draft_id="g6s2recycle2-general-v1",
+        source_files=[
+            "app/knowledge/raw/04.六年级下册语料.json",
+            "app/knowledge/raw/08.六年级下册单词表.md",
+        ],
+        word_list_sections=word_list_sections,
+        display_name=selected_pages[0].book,
+    )
+
+    p49 = next(
+        page for page in draft.page_lessons if page.page_uid == "TB-G6S2Recycle2-P49"
+    )
+    assert p49.priority_blocks == [
+        "TB-G6S2Recycle2-P49-D1",
+        "TB-G6S2Recycle2-P49-D2",
+        "TB-G6S2Recycle2-P49-D3",
+        "TB-G6S2Recycle2-P49-D4",
+    ]
+    assert p49.entry_probe_questions == [
+        "Do you know the word brown bread?",
+        "Can you say: Identify and match vocabulary related to party food, drinks, and supplies.",
+    ]
+
+    next_blocks_by_uid = {
+        block.block_uid: block.next_block_uids
+        for block in draft.teaching_blocks
+        if block.page_uid == "TB-G6S2Recycle2-P49"
+    }
+    assert next_blocks_by_uid["TB-G6S2Recycle2-P49-D1"] == [
+        "TB-G6S2Recycle2-P49-D2",
+        "TB-G6S2Recycle2-P49-D3",
+        "TB-G6S2Recycle2-P49-D4",
+    ]
+    assert next_blocks_by_uid["TB-G6S2Recycle2-P49-D4"] == []
+
+
 def test_select_general_scope_pages_supports_explicit_page_override_for_dirty_metadata():
     raw_root = _raw_root()
     normalized_pages = normalize_textbook_source(raw_root / "04.六年级下册语料.json")

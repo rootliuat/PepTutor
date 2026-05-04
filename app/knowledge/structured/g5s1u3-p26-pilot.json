@@ -45,15 +45,15 @@
       "teaching_goal": "Distinguish the two common ow sounds.",
       "teaching_summary": "Introduce ow as in cow and ow as in snow with a small contrast set.",
       "focus_vocabulary": ["cow", "flower", "down", "slow", "snow", "yellow", "window"],
-      "core_patterns": ["ow -> cow sound", "ow -> snow sound"],
-      "allowed_answer_scope": ["cow uses the cow sound", "snow uses the snow sound"],
+      "core_patterns": ["ow as in cow -> /aʊ/", "ow as in snow -> /oʊ/"],
+      "allowed_answer_scope": ["cow", "snow"],
       "entry_probe_questions": ["Can you read cow?", "Can you read snow?"],
       "repair_modes": ["repeat", "slow_read", "choice_probe"],
-      "next_block_uids": ["TB-G5S1U3-P26-D2", "TB-G5S1U3-P26-D3"],
+      "next_block_uids": ["TB-G5S1U3-P26-D2", "TB-G5S1U3-P26-D3", "TB-G5S1U3-P26-D4"],
       "learning_target_uids": ["LT-G5S1U3-P26-phonics-ow-contrast"]
       ,
       "branchable_topics": ["ow sound", "cow", "snow"],
-      "return_anchors": ["ow -> cow sound", "ow -> snow sound"]
+      "return_anchors": ["cow: ow -> /aʊ/", "snow: ow -> /oʊ/"]
     },
     {
       "block_uid": "TB-G5S1U3-P26-D2",
@@ -68,7 +68,7 @@
       "allowed_answer_scope": ["snow", "window", "slow", "wow"],
       "entry_probe_questions": ["Which word sounds different: cow, snow, down?"],
       "repair_modes": ["repeat", "choice_probe"],
-      "next_block_uids": ["TB-G5S1U3-P26-D3"],
+      "next_block_uids": ["TB-G5S1U3-P26-D3", "TB-G5S1U3-P26-D4"],
       "learning_target_uids": ["LT-G5S1U3-P26-listening-ow-discrimination"]
       ,
       "branchable_topics": ["listening", "ow sound"],
@@ -116,8 +116,11 @@
   "knowledge_atoms": [
     { "atom_uid": "KA-G5S1U3-phonics-ow-cow", "atom_type": "phonics_pattern", "text": "ow as in cow" },
     { "atom_uid": "KA-G5S1U3-phonics-ow-snow", "atom_type": "phonics_pattern", "text": "ow as in snow" },
-    { "atom_uid": "KA-G5S1U3-word-flower", "atom_type": "word", "text": "flower", "gloss": "a flower item" },
-    { "atom_uid": "KA-G5S1U3-word-down", "atom_type": "word", "text": "down", "gloss": "toward a lower place" }
+    { "atom_uid": "KA-G5S1U3-word-cow", "atom_type": "word", "text": "cow", "gloss": "奶牛" },
+    { "atom_uid": "KA-G5S1U3-word-snow", "atom_type": "word", "text": "snow", "gloss": "雪" },
+    { "atom_uid": "KA-G5S1U3-word-flower", "atom_type": "word", "text": "flower", "gloss": "花" },
+    { "atom_uid": "KA-G5S1U3-word-down", "atom_type": "word", "text": "down", "gloss": "向下" },
+    { "atom_uid": "KA-G5S1U3-word-tomorrow", "atom_type": "word", "text": "tomorrow", "gloss": "明天" }
   ],
   "learning_targets": [
     {

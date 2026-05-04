@@ -651,6 +651,12 @@ pages:
       speech-noop:
         title: None
         description: No speech output.
+      peptutor-edge-tts:
+        title: PepTutor Edge TTS
+        description: PepTutor backend proxy for Microsoft Edge Xiaoxiao voice.
+      volcengine-realtime-transcription:
+        title: Doubao Realtime ASR
+        description: Volcengine / Doubao realtime speech transcription via local websocket proxy.
       deepseek:
         description: deepseek.com
         title: DeepSeek

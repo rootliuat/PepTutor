@@ -37,6 +37,7 @@ const lessonLiteEnabled = computed(() =>
 const showingSetup = ref(false)
 const needsOnboarding = ref(false)
 let voiceEnvBootstrapped = false
+let lessonRuntimeInitialized = false
 let globalRuntimeInitialized = false
 let nonLessonRuntimeInitialized = false
 let onboardingStoreInitialized = false
@@ -124,7 +125,11 @@ function ensureOnboardingStore() {
 }
 
 async function initializeGlobalRuntime() {
-  if (globalRuntimeInitialized) {
+  if (
+    globalRuntimeInitialized
+    || lessonLiteEnabled.value
+    || (typeof window !== 'undefined' && isLessonPath(window.location.pathname))
+  ) {
     return
   }
 
@@ -153,6 +158,21 @@ async function initializeGlobalRuntime() {
   globalRuntimeInitialized = true
 }
 
+async function initializeLessonRuntime() {
+  if (lessonRuntimeInitialized) {
+    return
+  }
+
+  ensureCardStore()
+
+  if (!voiceEnvBootstrapped) {
+    await bootstrapPepTutorVoiceEnvDefaults()
+    voiceEnvBootstrapped = true
+  }
+
+  lessonRuntimeInitialized = true
+}
+
 async function initializeNonLessonRuntime() {
   if (nonLessonRuntimeInitialized) {
     return
@@ -171,9 +191,11 @@ async function initializeNonLessonRuntime() {
 
 // Initialize first-time setup check when app mounts
 onMounted(async () => {
-  await initializeGlobalRuntime()
-
-  if (!lessonLiteEnabled.value) {
+  if (lessonLiteEnabled.value) {
+    await initializeLessonRuntime()
+  }
+  else {
+    await initializeGlobalRuntime()
     await initializeNonLessonRuntime()
   }
 
@@ -181,11 +203,15 @@ onMounted(async () => {
 })
 
 watch(lessonLiteEnabled, (enabled) => {
-  void initializeGlobalRuntime()
-
-  if (!enabled) {
-    void initializeNonLessonRuntime()
+  if (enabled) {
+    void initializeLessonRuntime()
+    return
   }
+
+  void (async () => {
+    await initializeGlobalRuntime()
+    await initializeNonLessonRuntime()
+  })()
 })
 
 onUnmounted(() => {

@@ -107,7 +107,7 @@ def test_build_pilot_draft_from_real_g5_s1_u3_pages():
         "text": "What would you like to eat?",
         "linked_blocks": [
             "TB-G5S1U3-P24-D2",
-            "TB-G5S1U3-P24-D4",
+            "TB-G5S1U3-P24-D3",
             "TB-G5S1U3-P25-D2",
             "TB-G5S1U3-P25-D3",
         ],
@@ -247,60 +247,60 @@ def test_build_pilot_draft_from_real_g5_s1_u3_pages():
         == "Family ordering dialogue with hungry and thirsty cues, plus two target questions about food and drink."
     )
     assert block_p24_d3.core_patterns == [
-        "What would you like to drink?",
+        "What would you like to eat?",
         "I'd like ...",
     ]
     assert block_p24_d3.focus_vocabulary == [
-        "water",
-        "tea",
+        "chicken and bread",
+        "rice and vegetables",
     ]
     assert block_p24_d3.allowed_answer_scope == [
-        "I'd like water.",
-        "I'd like some tea.",
+        "I'd like chicken and bread.",
+        "I'd like rice and vegetables.",
     ]
     assert block_p24_d3.entry_probe_questions == [
-        "If I ask What would you like to drink, how do you answer?"
+        "If I ask What would you like to eat, how do you answer?"
     ]
     assert block_p24_d3.next_block_uids == ["TB-G5S1U3-P24-D4", "TB-G5S1U3-P24-D1"]
-    assert block_p24_d3.branchable_topics == ["restaurant", "drink choice"]
+    assert block_p24_d3.branchable_topics == ["restaurant", "food choice"]
     assert block_p24_d3.learning_target_uids == [
         "LT-G5S1U3-P24-answer-id-like",
     ]
     assert (
         block_p24_d3.teaching_goal
-        == "Answer the drink question with a short ordering sentence."
+        == "Answer the food question with a short ordering sentence."
     )
     assert (
         block_p24_d3.teaching_summary
-        == "Practice drink choices with a small word bank and answer the drink question with I'd like ...."
+        == "Continue the ordering exchange with food choices and answer the eat question with I'd like ...."
     )
     assert block_p24_d4.core_patterns == [
-        "What would you like to eat?",
+        "What would you like to drink?",
         "I'd like ...",
     ]
     assert block_p24_d4.focus_vocabulary == [
-        "chicken and bread",
-        "rice and vegetables",
+        "water",
+        "tea",
     ]
     assert block_p24_d4.allowed_answer_scope == [
-        "I'd like chicken and bread.",
-        "I'd like rice and vegetables.",
+        "I'd like water.",
+        "I'd like some tea.",
     ]
     assert block_p24_d4.entry_probe_questions == [
-        "If I ask What would you like to eat, how do you answer?"
+        "If I ask What would you like to drink, how do you answer?"
     ]
     assert block_p24_d4.next_block_uids == ["TB-G5S1U3-P24-D1"]
-    assert block_p24_d4.branchable_topics == ["restaurant", "food choice"]
+    assert block_p24_d4.branchable_topics == ["restaurant", "drink choice"]
     assert block_p24_d4.learning_target_uids == [
         "LT-G5S1U3-P24-dialogue-food-drink-roleplay",
     ]
     assert (
         block_p24_d4.teaching_goal
-        == "Answer the food question with a short ordering sentence."
+        == "Answer the drink question with a short ordering sentence."
     )
     assert (
         block_p24_d4.teaching_summary
-        == "Continue the ordering exchange with food choices and answer the eat question with I'd like ...."
+        == "Practice drink choices with a small word bank and answer the drink question with I'd like ...."
     )
     assert block_p25_d1.branchable_topics == [
         "sandwich",

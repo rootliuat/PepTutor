@@ -7,6 +7,7 @@ import {
   cloneLessonFixture,
   lessonCatalogFixture,
   lessonJsonResponse,
+  lessonPersonaDebugSignalFixture,
   lessonTurnP24AnswerFixture,
   lessonTurnP24RestartStartFixture,
   lessonTurnP24StartFixture,
@@ -14,7 +15,9 @@ import {
   lessonTurnP31StartFixture,
 } from '../testing/lesson-api-fixtures'
 import { useCharacterNotebookStore } from './character'
+import { useSharedChatHooks } from './chat/hooks'
 import { setLessonApiBaseUrlForTest, useLessonStore } from './lesson'
+import { useLessonAiriRuntimeStore } from './lesson-airi-runtime'
 import { useSpeechRuntimeStore } from './speech-runtime'
 
 function createLocalStorageMock() {
@@ -44,31 +47,49 @@ function createLocalStorageMock() {
 
 function mockSpeechRuntimeStore() {
   const speechRuntimeStore = useSpeechRuntimeStore()
-  const intent = {
-    intentId: 'lesson-intent',
-    streamId: 'lesson-stream',
-    ownerId: 'peptutor-lesson',
-    priority: 1,
-    stream: new ReadableStream(),
-    writeLiteral: vi.fn(),
-    writeSpecial: vi.fn(),
-    writeFlush: vi.fn(),
-    end: vi.fn(),
-    cancel: vi.fn(),
-  }
 
-  speechRuntimeStore.stopByOwner = vi.fn()
   speechRuntimeStore.stopAll = vi.fn()
-  speechRuntimeStore.openIntent = vi.fn(() => intent)
 
   return {
     speechRuntimeStore,
-    intent,
   }
 }
 
-function literalWrites(intent: { writeLiteral: ReturnType<typeof vi.fn> }) {
-  return intent.writeLiteral.mock.calls.map(call => String(call[0] ?? '')).join('')
+function mockAiriAssistantOutput() {
+  const chatHooks = useSharedChatHooks()
+  const literalWrites: string[] = []
+  const specialWrites: string[] = []
+  const beforeMessageComposed = vi.fn()
+  const streamEnd = vi.fn()
+  const assistantResponseEnd = vi.fn()
+
+  chatHooks.onBeforeMessageComposed(async (message) => {
+    beforeMessageComposed(message)
+  })
+  chatHooks.onTokenLiteral(async (literal) => {
+    literalWrites.push(String(literal ?? ''))
+  })
+  chatHooks.onTokenSpecial(async (special) => {
+    specialWrites.push(String(special ?? ''))
+  })
+  chatHooks.onStreamEnd(async () => {
+    streamEnd()
+  })
+  chatHooks.onAssistantResponseEnd(async (message) => {
+    assistantResponseEnd(message)
+  })
+
+  return {
+    literalWrites,
+    specialWrites,
+    beforeMessageComposed,
+    streamEnd,
+    assistantResponseEnd,
+  }
+}
+
+function assistantLiteralText(output: { literalWrites: string[] }) {
+  return output.literalWrites.join('')
 }
 
 function catalogResponse() {
@@ -92,6 +113,7 @@ function mockLessonTurnFetch(...results: LessonTurnResult[]) {
 describe('store lesson', () => {
   beforeEach(() => {
     setActivePinia(createPinia())
+    useSharedChatHooks().clearHooks()
     setLessonApiBaseUrlForTest('http://127.0.0.1:9625')
   })
 
@@ -355,7 +377,7 @@ describe('store lesson', () => {
 
     vi.stubGlobal('fetch', fetchSpy)
 
-    const { speechRuntimeStore, intent } = mockSpeechRuntimeStore()
+    const assistantOutput = mockAiriAssistantOutput()
     const store = useLessonStore()
     await store.startLesson('TB-G5S1U3-P24')
 
@@ -365,17 +387,101 @@ describe('store lesson', () => {
     expect(store.transcript[0]?.speaker).toBe('teacher')
     expect(store.currentTeacherPrompt).toBe('What would you like to drink?')
     expect(store.activeTurn?.debug_signals).toEqual(lessonTurnP24StartFixture.debug_signals)
-    expect(speechRuntimeStore.stopByOwner).toHaveBeenCalledWith('peptutor-lesson', 'lesson-start')
-    expect(speechRuntimeStore.openIntent).toHaveBeenCalledWith({
-      ownerId: 'peptutor-lesson',
-      priority: 'high',
-      behavior: 'interrupt',
+    await vi.waitFor(() => {
+      expect(assistantLiteralText(assistantOutput)).toBe('这一页练习点餐和饮料表达。Can you say: What would you like to drink?')
+    })
+    expect(assistantOutput.specialWrites).toHaveLength(1)
+    expect(assistantOutput.specialWrites[0]).toContain('<|ACT ')
+    expect(assistantOutput.specialWrites[0]).toContain('"teaching_action":"page_intro"')
+    expect(assistantOutput.beforeMessageComposed).toHaveBeenCalledWith('lesson-start')
+    expect(assistantOutput.streamEnd).toHaveBeenCalledTimes(1)
+    expect(assistantOutput.assistantResponseEnd).toHaveBeenCalledWith('这一页练习点餐和饮料表达。Can you say: What would you like to drink?')
+  })
+
+  it('replays backend persona performance metadata instead of guessing from the turn label', async () => {
+    const startFixture = cloneLessonFixture(lessonTurnP24StartFixture)
+    startFixture.debug_signals = {
+      ...startFixture.debug_signals!,
+      persona: {
+        airi_performance: {
+          emotion: 'correction',
+          motion: 'Explain',
+          expression: 'focused',
+          speech_style: 'gentle_correction',
+          mouth_intensity: 0.7,
+          interrupt_policy: 'finish_current_sentence',
+          content_source: 'lesson_runtime_teacher_response',
+          fallback_allowed: false,
+        },
+      },
+    }
+
+    const fetchSpy = mockLessonTurnFetch(startFixture)
+    vi.stubGlobal('fetch', fetchSpy)
+
+    const assistantOutput = mockAiriAssistantOutput()
+    const store = useLessonStore()
+    const lessonAiriRuntimeStore = useLessonAiriRuntimeStore()
+    await store.startLesson('TB-G5S1U3-P24')
+
+    expect(lessonAiriRuntimeStore.currentPerformancePlan).toMatchObject({
+      motion: 'Think',
+      expression: 'think',
+      speechStyle: 'gentle_correction',
+      mouthIntensity: 0.7,
+      interruptPolicy: 'finish_current_sentence',
+      fallbackAllowed: false,
+      performanceSource: 'lesson_persona_context',
+      turnLabel: 'page_entry',
     })
     await vi.waitFor(() => {
-      expect(literalWrites(intent)).toBe('这一页练习点餐和饮料表达。Can you say: What would you like to drink?')
+      expect(assistantOutput.specialWrites).toHaveLength(1)
     })
-    expect(intent.writeFlush).toHaveBeenCalledTimes(1)
-    expect(intent.end).toHaveBeenCalledTimes(1)
+    expect(assistantOutput.specialWrites[0]).toContain('"emotion":{"name":"question","intensity":0.86}')
+    expect(assistantOutput.specialWrites[0]).toContain('"motion":"Think"')
+    expect(assistantOutput.specialWrites[0]).toContain('"expression":"think"')
+    expect(assistantOutput.specialWrites[0]).toContain('"speech_style":"gentle_correction"')
+    expect(assistantOutput.specialWrites[0]).toContain('"mouth_intensity":0.7')
+    expect(assistantOutput.specialWrites[0]).toContain('"interrupt_policy":"finish_current_sentence"')
+    expect(assistantOutput.specialWrites[0]).toContain('"fallback_allowed":false')
+    expect(assistantOutput.specialWrites[0]).toContain('"performance_source":"lesson_persona_context"')
+  })
+
+  it('restores the active turn persona performance plan from a history snapshot', async () => {
+    const startFixture = cloneLessonFixture(lessonTurnP24StartFixture)
+    startFixture.debug_signals = {
+      ...startFixture.debug_signals!,
+      persona: lessonPersonaDebugSignalFixture({
+        emotion: 'encouraging',
+        motion: 'Encourage',
+        expression: 'soft_smile',
+        speech_style: 'normal',
+        mouth_intensity: 0.75,
+        interrupt_policy: 'barge_in_allowed',
+        content_source: 'lesson_runtime_teacher_response',
+        fallback_allowed: true,
+      }),
+    }
+
+    const fetchSpy = mockLessonTurnFetch(startFixture)
+    vi.stubGlobal('fetch', fetchSpy)
+
+    const store = useLessonStore()
+    const lessonAiriRuntimeStore = useLessonAiriRuntimeStore()
+    await store.startLesson('TB-G5S1U3-P24', { replayTeacher: false })
+
+    const snapshot = store.exportRuntimeSnapshot()
+    lessonAiriRuntimeStore.clearPerformancePlan()
+    store.restoreRuntimeSnapshot(snapshot)
+
+    expect(lessonAiriRuntimeStore.currentPerformancePlan).toMatchObject({
+      motion: 'Curious',
+      expression: 'happy',
+      speechStyle: 'normal',
+      mouthIntensity: 0.75,
+      performanceSource: 'lesson_persona_context',
+      turnLabel: 'page_entry',
+    })
   })
 
   it('strips markdown emphasis before replaying teacher speech', async () => {
@@ -385,12 +491,12 @@ describe('store lesson', () => {
     const fetchSpy = mockLessonTurnFetch(startFixtureWithMarkdown)
     vi.stubGlobal('fetch', fetchSpy)
 
-    const { intent } = mockSpeechRuntimeStore()
+    const assistantOutput = mockAiriAssistantOutput()
     const store = useLessonStore()
     await store.startLesson('TB-G5S1U3-P24')
 
     await vi.waitFor(() => {
-      expect(literalWrites(intent)).toBe('先热身：Do you know the word hungry?')
+      expect(assistantLiteralText(assistantOutput)).toBe('先热身：Do you know the word hungry?')
     })
   })
 
@@ -402,7 +508,7 @@ describe('store lesson', () => {
 
     vi.stubGlobal('fetch', fetchSpy)
 
-    const { speechRuntimeStore, intent } = mockSpeechRuntimeStore()
+    const assistantOutput = mockAiriAssistantOutput()
     const store = useLessonStore()
     await store.startLesson('TB-G5S1U3-P24')
     await store.sendTurn(`I'd like some water.`)
@@ -415,13 +521,15 @@ describe('store lesson', () => {
     expect(store.activeTurn?.evaluation).toBe('correct')
     expect(store.runtimeState?.current_block_uid).toBe('TB-G5S1U3-P24-D2')
     expect(store.activeTurn?.debug_signals).toEqual(lessonTurnP24AnswerFixture.debug_signals)
-    expect(speechRuntimeStore.stopByOwner).toHaveBeenNthCalledWith(1, 'peptutor-lesson', 'lesson-start')
-    expect(speechRuntimeStore.stopByOwner).toHaveBeenNthCalledWith(2, 'peptutor-lesson', 'lesson-turn')
     await vi.waitFor(() => {
-      expect(literalWrites(intent)).toBe('这一页练习点餐和饮料表达。Can you say: What would you like to drink?对了。我们继续：Now say one full drink sentence.')
+      expect(assistantLiteralText(assistantOutput)).toBe('这一页练习点餐和饮料表达。Can you say: What would you like to drink?对了。我们继续：Now say one full drink sentence.')
     })
-    expect(intent.writeFlush).toHaveBeenCalledTimes(2)
-    expect(intent.end).toHaveBeenCalledTimes(2)
+    expect(assistantOutput.beforeMessageComposed).toHaveBeenNthCalledWith(1, 'lesson-start')
+    expect(assistantOutput.beforeMessageComposed).toHaveBeenNthCalledWith(2, 'lesson-turn')
+    expect(assistantOutput.specialWrites).toHaveLength(2)
+    expect(assistantOutput.specialWrites[1]).toContain('"evaluation":"correct"')
+    expect(assistantOutput.streamEnd).toHaveBeenCalledTimes(2)
+    expect(assistantOutput.assistantResponseEnd).toHaveBeenCalledTimes(2)
   })
 
   it('prepares and aborts a streamed lesson turn without using the JSON turn route', async () => {
@@ -559,12 +667,12 @@ describe('store lesson', () => {
     expect(store.transcript[0]?.text).toContain('salad')
   })
 
-  it('replays the latest teacher prompt through the lesson speech runtime', async () => {
-    const { speechRuntimeStore, intent } = mockSpeechRuntimeStore()
+  it('replays the latest teacher prompt through the AIRI assistant hooks', async () => {
+    const assistantOutput = mockAiriAssistantOutput()
     const store = useLessonStore()
 
     store.repeatTeacherPrompt()
-    expect(speechRuntimeStore.openIntent).not.toHaveBeenCalled()
+    expect(assistantOutput.beforeMessageComposed).not.toHaveBeenCalled()
 
     store.transcript.push({
       id: 'teacher-1',
@@ -579,15 +687,15 @@ describe('store lesson', () => {
 
     store.repeatTeacherPrompt()
     await vi.waitFor(() => {
-      expect(intent.writeFlush).toHaveBeenCalledTimes(1)
+      expect(assistantOutput.streamEnd).toHaveBeenCalledTimes(1)
     })
 
     expect(store.transcript).toHaveLength(2)
     expect(store.transcript[1]?.local_only).toBe(true)
     expect(store.transcript[1]?.text).toBe('Listen again: What would you like to drink?')
-    expect(speechRuntimeStore.stopByOwner).toHaveBeenCalledWith('peptutor-lesson', 'lesson-repeat')
-    expect(literalWrites(intent)).toBe('Listen again: What would you like to drink?')
-    expect(intent.writeFlush).toHaveBeenCalledTimes(1)
-    expect(intent.end).toHaveBeenCalledTimes(1)
+    expect(assistantOutput.beforeMessageComposed).toHaveBeenCalledWith('lesson-repeat')
+    expect(assistantLiteralText(assistantOutput)).toBe('Listen again: What would you like to drink?')
+    expect(assistantOutput.streamEnd).toHaveBeenCalledTimes(1)
+    expect(assistantOutput.assistantResponseEnd).toHaveBeenCalledWith('Listen again: What would you like to drink?')
   })
 })

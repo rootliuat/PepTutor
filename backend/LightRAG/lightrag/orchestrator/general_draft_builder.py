@@ -405,6 +405,9 @@ def _build_page_probe_questions(
 
 
 def _build_priority_block_uids(page: NormalizedTextbookPage) -> list[str]:
+    if _should_preserve_phonics_scaffold_order(page):
+        return [block.block_uid for block in page.blocks]
+
     ordered_blocks = sorted(
         page.blocks,
         key=lambda block: (
@@ -416,6 +419,18 @@ def _build_priority_block_uids(page: NormalizedTextbookPage) -> list[str]:
         ),
     )
     return [block.block_uid for block in ordered_blocks]
+
+
+def _should_preserve_phonics_scaffold_order(page: NormalizedTextbookPage) -> bool:
+    """Keep scaffolded phonics pages in visual dependency order."""
+    if page.page_type_hint != "phonics" or len(page.blocks) < 3:
+        return False
+    block_types = [_canonical_block_type(block.block_type) for block in page.blocks]
+    return (
+        block_types[0] == "picture_scene"
+        and "phonics" in block_types[1:]
+        and "extension_task" in block_types[1:]
+    )
 
 
 def _canonical_block_type(block_type: str) -> str:

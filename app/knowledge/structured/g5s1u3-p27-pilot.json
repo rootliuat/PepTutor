@@ -49,7 +49,7 @@
       "allowed_answer_scope": ["Zhang Peng -> milk", "Sarah -> grape juice"],
       "entry_probe_questions": ["Can you hear milk in the dialogue?"],
       "repair_modes": ["repeat", "choice_probe"],
-      "next_block_uids": ["TB-G5S1U3-P27-D2"],
+      "next_block_uids": [],
       "learning_target_uids": ["LT-G5S1U3-P27-listening-favourite-drink"]
       ,
       "branchable_topics": ["milk", "grape juice", "favourite drink"],
@@ -87,7 +87,7 @@
       "allowed_answer_scope": ["His favourite food is fish.", "Her favourite drink is milk."],
       "entry_probe_questions": ["Can you tell me one sentence about your friend's favourite food?"],
       "repair_modes": ["choice_probe", "sentence_drill"],
-      "next_block_uids": [],
+      "next_block_uids": ["TB-G5S1U3-P27-D1"],
       "learning_target_uids": ["LT-G5S1U3-P27-survey-report"]
       ,
       "branchable_topics": ["favourite food", "favourite drink", "survey"],

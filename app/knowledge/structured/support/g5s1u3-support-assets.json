@@ -159,7 +159,7 @@
         "TB-G5S1U3-P30"
       ],
       "linked_block_uids": [
-        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P24-D4",
         "TB-G5S1U3-P25-D1",
         "TB-G5S1U3-P25-D2",
         "TB-G5S1U3-P25-D3",
@@ -313,8 +313,7 @@
       ],
       "linked_block_uids": [
         "TB-G5S1U3-P24-D2",
-        "TB-G5S1U3-P24-D3",
-        "TB-G5S1U3-P25-D1",
+        "TB-G5S1U3-P24-D4",
         "TB-G5S1U3-P25-D3",
         "TB-G5S1U3-P27-D3",
         "TB-G5S1U3-P27-D1",
@@ -405,12 +404,10 @@
       "linked_block_uids": [
         "TB-G5S1U3-P24-D2",
         "TB-G5S1U3-P24-D3",
-        "TB-G5S1U3-P24-D1",
-        "TB-G5S1U3-P25-D1",
-        "TB-G5S1U3-P25-D2",
         "TB-G5S1U3-P25-D3",
         "TB-G5S1U3-P27-D2",
         "TB-G5S1U3-P27-D3",
+        "TB-G5S1U3-P27-D4",
         "TB-G5S1U3-P28-D1",
         "TB-G5S1U3-P28-D2",
         "TB-G5S1U3-P28-D3",
@@ -479,7 +476,7 @@
       ],
       "linked_block_uids": [
         "TB-G5S1U3-P24-D2",
-        "TB-G5S1U3-P24-D4"
+        "TB-G5S1U3-P24-D3"
       ]
     },
     {
@@ -514,7 +511,7 @@
       ],
       "linked_block_uids": [
         "TB-G5S1U3-P24-D2",
-        "TB-G5S1U3-P24-D3"
+        "TB-G5S1U3-P24-D4"
       ]
     },
     {

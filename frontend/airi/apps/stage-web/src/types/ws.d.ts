@@ -1,4 +1,5 @@
 declare module 'ws' {
+  import type { Buffer } from 'node:buffer'
   import type { IncomingMessage } from 'node:http'
   import type { Duplex } from 'node:stream'
 

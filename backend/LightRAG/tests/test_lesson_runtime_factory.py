@@ -580,8 +580,55 @@ def test_build_lesson_runtime_can_enable_live_prompts(tmp_path):
     _assert_feature_statuses(bundle)
     assert bundle.close is not None
     assert result.turn_label == "ask_knowledge"
-    assert result.retrieval_mode == "none"
+    assert result.retrieval_mode == "block"
+    assert result.retrieved_block_uids == ["TB-G5S1U3-P24-D1"]
     assert result.teacher_response == "我们先把这个小问题收一下，回到这一页继续。"
+
+
+def test_build_lesson_runtime_binds_hashing_kv_for_live_prompts(tmp_path):
+    manifest_path = _write_test_pilot(tmp_path)
+    hashing_kv = object()
+    captured_kwargs = []
+
+    async def _hashing_required_llm(
+        prompt,
+        system_prompt=None,
+        history_messages=None,
+        **kwargs,
+    ):
+        _ = (history_messages,)
+        assert kwargs["hashing_kv"] is hashing_kv
+        assert kwargs["host"] == "http://lesson-llm"
+        captured_kwargs.append(dict(kwargs))
+        return await _fake_llm(
+            prompt,
+            system_prompt=system_prompt,
+            history_messages=history_messages,
+        )
+
+    bundle = build_lesson_runtime(
+        workspace="test-workspace",
+        manifest_path=manifest_path,
+        llm_model_func=_hashing_required_llm,
+        llm_model_kwargs={"host": "http://lesson-llm"},
+        llm_hashing_kv=hashing_kv,
+        llm_provider="ollama",
+        live_prompts_enabled=True,
+        vector_enabled=False,
+        semantic_recall_enabled=False,
+        prompt_injection_enabled=False,
+        writeback_enabled=False,
+    )
+
+    try:
+        result = bundle.runtime.start_page("TB-G5S1U3-P24", "student-1")
+    finally:
+        if bundle.close:
+            bundle.close()
+
+    assert result.turn_label == "page_entry"
+    assert result.teacher_response == "我们先把这个小问题收一下，回到这一页继续。"
+    assert captured_kwargs
 
 
 def test_build_lesson_runtime_live_route_classifier_can_promote_open_turn(tmp_path):
@@ -1005,17 +1052,21 @@ def test_resolve_lesson_manifest_path_prefers_env_override(tmp_path, monkeypatch
     assert _resolve_lesson_manifest_path() == manifest_path.resolve()
 
 
-def test_resolve_lesson_manifest_path_defaults_to_general_manifest(monkeypatch):
+def test_resolve_lesson_manifest_path_defaults_to_general_with_pilot_overrides(
+    monkeypatch,
+):
     monkeypatch.delenv("PEPTUTOR_LESSON_MANIFEST", raising=False)
     monkeypatch.delenv("PEPTUTOR_PILOT_MANIFEST", raising=False)
 
     resolved = _resolve_lesson_manifest_path()
 
-    assert resolved.name == "general-manifest.json"
+    assert resolved.name == "general-with-pilot-overrides-manifest.json"
     assert resolved.exists()
 
 
-def test_build_lesson_runtime_uses_general_manifest_by_default(monkeypatch):
+def test_build_lesson_runtime_uses_general_manifest_with_pilot_overrides_by_default(
+    monkeypatch,
+):
     monkeypatch.delenv("PEPTUTOR_LESSON_MANIFEST", raising=False)
     monkeypatch.delenv("PEPTUTOR_PILOT_MANIFEST", raising=False)
 
@@ -1031,6 +1082,9 @@ def test_build_lesson_runtime_uses_general_manifest_by_default(monkeypatch):
     try:
         scope = bundle.runtime.catalog.get_scope_for_page("TB-G6S1U1-P2")
         result = bundle.runtime.start_page("TB-G6S1U1-P2", "student-1")
+        p24 = bundle.runtime.catalog.get_page("TB-G5S1U3-P24")
+        p24_d3 = bundle.runtime.catalog.get_block("TB-G5S1U3-P24-D3")
+        p24_d4 = bundle.runtime.catalog.get_block("TB-G5S1U3-P24-D4")
     finally:
         if bundle.close:
             bundle.close()
@@ -1039,6 +1093,21 @@ def test_build_lesson_runtime_uses_general_manifest_by_default(monkeypatch):
     assert scope.semester == "S1"
     assert scope.unit == "U1"
     assert result.page_uid == "TB-G6S1U1-P2"
+    assert p24.priority_blocks == [
+        "TB-G5S1U3-P24-D2",
+        "TB-G5S1U3-P24-D3",
+        "TB-G5S1U3-P24-D4",
+        "TB-G5S1U3-P24-D1",
+    ]
+    assert p24_d3.focus_vocabulary == [
+        "chicken and bread",
+        "rice and vegetables",
+    ]
+    assert p24_d3.next_block_uids == [
+        "TB-G5S1U3-P24-D4",
+        "TB-G5S1U3-P24-D1",
+    ]
+    assert p24_d4.focus_vocabulary == ["water", "tea", "orange juice"]
 
 
 def test_build_lesson_runtime_general_manifest_exposes_catalog_outline(monkeypatch):

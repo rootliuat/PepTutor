@@ -19,6 +19,8 @@ import {
 
 const props = defineProps<{
   options: { groupLabel: string, children?: { label: string, value: T }[] }[]
+  inputId?: string
+  inputName?: string
   placeholder?: string
 }>()
 
@@ -43,6 +45,8 @@ function toDisplayValue(value: T): string {
       ]"
     >
       <ComboboxInput
+        :id="props.inputId"
+        :name="props.inputName"
         :class="[
           '!bg-transparent h-full min-w-0 flex-1 outline-none selection:bg-grass5 placeholder-stone-400',
           'text-neutral-700 dark:text-neutral-200',

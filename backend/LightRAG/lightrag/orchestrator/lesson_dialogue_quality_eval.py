@@ -43,7 +43,10 @@ def default_dialogue_quality_gold_path() -> Path:
 
 
 def default_manifest_path() -> Path:
-    return _repo_root() / "app/knowledge/structured/general/general-manifest.json"
+    return (
+        _repo_root()
+        / "app/knowledge/structured/general/general-with-pilot-overrides-manifest.json"
+    )
 
 
 class LessonDialogueQualityEvalSample(BaseModel):
@@ -80,6 +83,7 @@ class LessonDialogueQualityEvalSample(BaseModel):
     expected_teaching_move: TeachingMoveName | None = None
     expected_state_current_block_uid: str | None = None
     expected_state_awaiting_answer: bool | None = None
+    expected_return_anchor: str | None = None
 
 
 class LessonDialogueQualityGoldSet(BaseModel):
@@ -124,6 +128,8 @@ class LessonDialogueQualitySampleOutcome(BaseModel):
     actual_state_current_block_uid: str | None = None
     expected_state_awaiting_answer: bool | None = None
     actual_state_awaiting_answer: bool | None = None
+    expected_return_anchor: str | None = None
+    actual_return_anchor: str | None = None
     missing_required_response_phrases: list[str] = Field(default_factory=list)
     matched_forbidden_response_phrases: list[str] = Field(default_factory=list)
     response_has_cjk: bool
@@ -428,6 +434,8 @@ def _evaluate_sample(
         actual_state_current_block_uid=result.state.current_block_uid,
         expected_state_awaiting_answer=sample.expected_state_awaiting_answer,
         actual_state_awaiting_answer=result.state.awaiting_answer,
+        expected_return_anchor=sample.expected_return_anchor,
+        actual_return_anchor=result.return_anchor,
         missing_required_response_phrases=_missing_required_phrases(
             sample.required_response_phrases,
             result.teacher_response,
@@ -762,6 +770,24 @@ def _check_state_progression_contract(
             "state awaiting_answer expected "
             f"{sample.expected_state_awaiting_answer}, "
             f"got {result.state.awaiting_answer}"
+        )
+        passed = False
+    if (
+        sample.expected_return_anchor is not None
+        and result.return_anchor != sample.expected_return_anchor
+    ):
+        failure_reasons.append(
+            "return_anchor expected "
+            f"{sample.expected_return_anchor}, got {result.return_anchor}"
+        )
+        passed = False
+    if (
+        sample.expected_return_anchor is not None
+        and result.state.return_anchor != sample.expected_return_anchor
+    ):
+        failure_reasons.append(
+            "state return_anchor expected "
+            f"{sample.expected_return_anchor}, got {result.state.return_anchor}"
         )
         passed = False
     return passed

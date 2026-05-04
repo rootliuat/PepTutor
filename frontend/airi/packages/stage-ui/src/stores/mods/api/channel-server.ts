@@ -8,7 +8,28 @@ import { nanoid } from 'nanoid'
 import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
 
+import { isLessonPath } from '../../../utils'
 import { useWebSocketInspectorStore } from '../../devtools/websocket-inspector'
+
+const websocketUrlStorageKey = 'settings/connection/websocket-url'
+const builtinWebSocketUrl = 'ws://localhost:6121/ws'
+
+function storedWebSocketUrl() {
+  if (typeof localStorage === 'undefined') {
+    return ''
+  }
+
+  try {
+    return localStorage.getItem(websocketUrlStorageKey)?.trim() || ''
+  }
+  catch {
+    return ''
+  }
+}
+
+function currentPathname() {
+  return typeof window === 'undefined' ? '' : window.location.pathname
+}
 
 export const useModsServerChannelStore = defineStore('mods:channels:proj-airi:server', () => {
   const connected = ref(false)
@@ -18,8 +39,10 @@ export const useModsServerChannelStore = defineStore('mods:channels:proj-airi:se
   const listenersInitialized = ref(false)
   const listenerDisposers = ref<Array<() => void>>([])
 
-  const defaultWebSocketUrl = import.meta.env.VITE_AIRI_WS_URL || 'ws://localhost:6121/ws'
-  const websocketUrl = useLocalStorage('settings/connection/websocket-url', defaultWebSocketUrl)
+  const configuredWebSocketUrl = import.meta.env.VITE_AIRI_WS_URL || ''
+  const defaultWebSocketUrl = configuredWebSocketUrl || builtinWebSocketUrl
+  const initiallyStoredWebSocketUrl = storedWebSocketUrl()
+  const websocketUrl = useLocalStorage(websocketUrlStorageKey, defaultWebSocketUrl)
 
   const basePossibleEvents: Array<keyof WebSocketEvents> = [
     'context:update',
@@ -38,7 +61,31 @@ export const useModsServerChannelStore = defineStore('mods:channels:proj-airi:se
     'ui:configure',
   ]
 
+  function hasExplicitWebSocketUrl() {
+    const currentUrl = websocketUrl.value?.trim() || ''
+    return Boolean(
+      configuredWebSocketUrl
+      || (currentUrl && currentUrl !== defaultWebSocketUrl && currentUrl !== builtinWebSocketUrl)
+      || (
+        initiallyStoredWebSocketUrl
+        && currentUrl
+        && currentUrl !== builtinWebSocketUrl
+      ),
+    )
+  }
+
+  function shouldSkipLessonChannelConnection() {
+    return isStageWeb()
+      && isLessonPath(currentPathname())
+      && !hasExplicitWebSocketUrl()
+  }
+
   async function initialize(options?: { token?: string, possibleEvents?: Array<keyof WebSocketEvents> }) {
+    if (shouldSkipLessonChannelConnection()) {
+      connected.value = false
+      initializing.value = null
+      return Promise.resolve()
+    }
     if (connected.value && client.value)
       return Promise.resolve()
     if (initializing.value)
@@ -96,6 +143,9 @@ export const useModsServerChannelStore = defineStore('mods:channels:proj-airi:se
   }
 
   async function ensureConnected() {
+    if (shouldSkipLessonChannelConnection()) {
+      return
+    }
     await initializing.value
     if (!connected.value) {
       return await initialize()
@@ -123,6 +173,10 @@ export const useModsServerChannelStore = defineStore('mods:channels:proj-airi:se
   }
 
   function send<C = undefined>(data: WebSocketEventOptionalSource<C>) {
+    if (shouldSkipLessonChannelConnection()) {
+      return
+    }
+
     if (!client.value && !initializing.value)
       void initialize()
 
@@ -145,6 +199,10 @@ export const useModsServerChannelStore = defineStore('mods:channels:proj-airi:se
   }
 
   function onContextUpdate(callback: (event: WebSocketBaseEvent<'context:update', ContextUpdate<Record<string, unknown>, string | CommonContentPart[]>>) => void | Promise<void>) {
+    if (shouldSkipLessonChannelConnection()) {
+      return () => {}
+    }
+
     if (!client.value && !initializing.value)
       void initialize()
 
@@ -159,6 +217,10 @@ export const useModsServerChannelStore = defineStore('mods:channels:proj-airi:se
     type: E,
     callback: (event: WebSocketBaseEvent<E, WebSocketEvents[E]>) => void | Promise<void>,
   ) {
+    if (shouldSkipLessonChannelConnection()) {
+      return () => {}
+    }
+
     if (!client.value && !initializing.value)
       void initialize()
 

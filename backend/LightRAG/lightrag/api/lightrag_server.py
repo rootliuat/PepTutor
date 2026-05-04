@@ -1072,6 +1072,7 @@ def create_app(args):
     )
 
     llm_model_func = create_llm_model_func(args.llm_binding)
+    llm_model_kwargs = create_llm_model_kwargs(args.llm_binding, args, llm_timeout)
 
     # Initialize RAG with unified configuration
     try:
@@ -1085,9 +1086,7 @@ def create_app(args):
             summary_context_size=args.summary_context_size,
             chunk_token_size=int(args.chunk_size),
             chunk_overlap_token_size=int(args.chunk_overlap_size),
-            llm_model_kwargs=create_llm_model_kwargs(
-                args.llm_binding, args, llm_timeout
-            ),
+            llm_model_kwargs=llm_model_kwargs,
             embedding_func=embedding_func,
             default_llm_timeout=llm_timeout,
             default_embedding_timeout=embedding_timeout,
@@ -1128,6 +1127,10 @@ def create_app(args):
             workspace=args.workspace,
             embedding_func=embedding_func,
             llm_model_func=llm_model_func,
+            llm_model_kwargs=llm_model_kwargs,
+            llm_hashing_kv=rag.llm_response_cache,
+            llm_provider=args.llm_binding,
+            llm_model=args.llm_model,
         )
         app.include_router(
             create_lesson_routes(lesson_runtime_bundle.runtime, api_key)

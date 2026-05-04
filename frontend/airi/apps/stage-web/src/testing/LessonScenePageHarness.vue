@@ -11,6 +11,7 @@ import { useBackgroundThemeColor } from '@proj-airi/stage-layouts/composables/th
 import { useBackgroundStore } from '@proj-airi/stage-layouts/stores/background'
 import { WidgetStage } from '@proj-airi/stage-ui/components/scenes'
 import { useLessonStore } from '@proj-airi/stage-ui/stores/lesson'
+import { useLessonChatHistoryStore } from '@proj-airi/stage-ui/stores/lesson-chat-history'
 import { ensureLessonHearingFallbackProvider } from '@proj-airi/stage-ui/stores/lesson-voice-hearing-fallback'
 import { ensureLessonSpeechFallbackProvider } from '@proj-airi/stage-ui/stores/lesson-voice-speech-fallback'
 import { bootstrapPepTutorBackendAuth } from '@proj-airi/stage-ui/stores/peptutor-backend-auth'
@@ -25,6 +26,7 @@ import { computed, onMounted, ref, useTemplateRef, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 const lessonStore = useLessonStore()
+const lessonChatHistoryStore = useLessonChatHistoryStore()
 const { availablePages, selectedPageUid, isConfigured, loading, hasStarted } = storeToRefs(lessonStore)
 const settingsStore = useSettings()
 const { stageModelRenderer, stageModelSelectedUrl } = storeToRefs(settingsStore)
@@ -56,6 +58,11 @@ const queryPageUid = computed(() => {
   return Array.isArray(rawPageUid) ? rawPageUid[0] : rawPageUid
 })
 
+const queryStudentId = computed(() => {
+  const rawStudentId = route.query.student_id
+  return Array.isArray(rawStudentId) ? rawStudentId[0] : rawStudentId
+})
+
 const knownLessonPageUids = computed(() =>
   new Set(availablePages.value.map(page => page.value)),
 )
@@ -66,6 +73,20 @@ function resolvedLessonPageUid() {
     knownLessonPageUids.value,
     selectedPageUid.value,
   )
+}
+
+function resolvedLessonStudentId() {
+  return queryStudentId.value?.trim() || lessonStore.studentId.trim() || 'demo-student'
+}
+
+function syncRouteStudentId() {
+  const nextStudentId = resolvedLessonStudentId()
+  if (lessonStore.studentId === nextStudentId) {
+    return false
+  }
+
+  lessonStore.setStudentId(nextStudentId)
+  return true
 }
 
 async function replaceLessonPageQuery(pageUid: string) {
@@ -140,6 +161,28 @@ watch(queryPageUid, async (pageUid) => {
   }
 })
 
+watch(queryStudentId, async () => {
+  if (!syncRouteStudentId()) {
+    return
+  }
+
+  lessonStore.resetLessonState({ keepSelectedPage: true })
+  await lessonChatHistoryStore.ensureCurrentLessonHistorySession()
+  if (
+    lessonChatHistoryStore.activeLessonTabWritable
+    && !lessonChatHistoryStore.activeHistoryReadOnly
+    && isConfigured.value
+    && !loading.value
+    && !hasStarted.value
+  ) {
+    try {
+      await lessonStore.startLesson(selectedPageUid.value)
+    }
+    catch {
+    }
+  }
+})
+
 watch([stageModelRenderer, stageModelSelectedUrl], ([renderer, modelUrl]) => {
   if (renderer === 'disabled' || !modelUrl) {
     void ensureLessonStageModel()
@@ -153,6 +196,7 @@ onMounted(async () => {
   await bootstrapPepTutorVoiceEnvDefaults()
   await ensureLessonHearingFallbackProvider().catch(() => false)
   await ensureLessonSpeechFallbackProvider().catch(() => false)
+  syncRouteStudentId()
   await lessonStore.loadCatalog()
 
   const nextPageUid = resolvedLessonPageUid()
@@ -166,7 +210,15 @@ onMounted(async () => {
     await lessonStore.selectLessonPage(nextPageUid)
   }
 
-  if (isConfigured.value && !loading.value) {
+  await lessonChatHistoryStore.initialize()
+
+  if (
+    lessonChatHistoryStore.activeLessonTabWritable
+    && !lessonChatHistoryStore.activeHistoryReadOnly
+    && isConfigured.value
+    && !loading.value
+    && !hasStarted.value
+  ) {
     try {
       await lessonStore.startLesson(nextPageUid)
     }

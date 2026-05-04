@@ -609,7 +609,7 @@ export const useHearingSpeechInputPipeline = defineStore('modules:hearing:speech
       // require restarting the session to create a new reader.
       const existingSession = streamingSession.value
       if (existingSession) {
-          const hasNewCallbacks
+        const hasNewCallbacks
           = options?.onTranscriptUpdate !== undefined
             || options?.onSentenceEnd !== undefined
             || options?.onSpeechEnd !== undefined

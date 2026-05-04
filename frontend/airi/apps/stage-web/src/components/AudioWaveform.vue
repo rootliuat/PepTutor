@@ -8,7 +8,7 @@ const containerRef = ref<HTMLDivElement>()
 // https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode
 const analyser = ref<AnalyserNode>()
 const analyserDataBuffer = ref<Uint8Array<ArrayBuffer>>()
-const { audioContext } = useAudioContext()
+const { ensureAudioContext } = useAudioContext()
 const canvasElemRef = ref<HTMLCanvasElement>()
 const { isDark } = useTheme()
 
@@ -63,6 +63,7 @@ function fetchAnalyserDataDuringFrames() {
 }
 
 function initAnalyser() {
+  const audioContext = ensureAudioContext()
   analyser.value = audioContext.createAnalyser()
   analyserDataBuffer.value = new Uint8Array(analyser.value.frequencyBinCount)
   analyser.value.getByteTimeDomainData(analyserDataBuffer.value)

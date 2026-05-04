@@ -4,13 +4,9 @@ import { ref, watch } from 'vue'
 
 import Live2DCanvas from './live2d/Canvas.vue'
 import Live2DModel from './live2d/Model.vue'
+
 import '../../utils/live2d-zip-loader'
 import '../../utils/live2d-opfs-registration'
-
-const emits = defineEmits<{
-  (e: 'modelLoaded'): void
-  (e: 'error', error: Error): void
-}>()
 
 withDefaults(defineProps<{
   modelSrc?: string
@@ -45,6 +41,11 @@ withDefaults(defineProps<{
   live2dShadowEnabled: true,
   live2dMaxFps: 0,
 })
+
+const emits = defineEmits<{
+  (e: 'modelLoaded'): void
+  (e: 'error', error: Error): void
+}>()
 
 const componentState = defineModel<'pending' | 'loading' | 'mounted'>('state', { default: 'pending' })
 const componentStateCanvas = defineModel<'pending' | 'loading' | 'mounted'>('canvasState', { default: 'pending' })

@@ -1,8 +1,9 @@
+import type { RequestListener, Server } from 'node:http'
+
 import { Buffer } from 'node:buffer'
 import { spawn } from 'node:child_process'
 import { once } from 'node:events'
 import { createServer } from 'node:http'
-import type { RequestListener, Server } from 'node:http'
 
 import { afterEach, describe, expect, it } from 'vitest'
 

@@ -12,6 +12,7 @@ from lightrag.orchestrator.lesson_persona import (
     LearnerRelationshipProfile,
     LessonPersonaContext,
     TeacherPersonaProfile,
+    build_airi_performance_plan_for_turn,
     build_classroom_affect_state_for_turn,
     build_default_lesson_persona_context,
     build_learner_relationship_profile_from_memory,
@@ -231,3 +232,38 @@ def test_lesson_persona_context_for_turn_maps_airi_performance_plan():
     assert context.airi_performance.content_source == (
         "lesson_runtime_teacher_response"
     )
+
+
+def test_airi_performance_plan_defers_interrupt_during_knowledge_explanation():
+    affect = build_classroom_affect_state_for_turn(
+        turn_label="ask_knowledge",
+        evaluation=None,
+    )
+
+    plan = build_airi_performance_plan_for_turn(
+        affect_state=affect,
+        turn_label="ask_knowledge",
+        teaching_action="explain",
+    )
+
+    assert plan.motion == "Explain"
+    assert plan.speech_style == "normal"
+    assert plan.interrupt_policy == "finish_current_sentence"
+
+
+def test_airi_performance_plan_keeps_redirect_barge_in_allowed():
+    affect = build_classroom_affect_state_for_turn(
+        turn_label="answer_question",
+        evaluation="off_topic",
+    )
+
+    plan = build_airi_performance_plan_for_turn(
+        affect_state=affect,
+        turn_label="answer_question",
+        teaching_action="redirect",
+        evaluation="off_topic",
+    )
+
+    assert plan.motion == "Listen"
+    assert plan.speech_style == "short_prompt"
+    assert plan.interrupt_policy == "barge_in_allowed"

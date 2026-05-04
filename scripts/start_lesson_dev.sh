@@ -8,11 +8,20 @@ FRONTEND_DIR="${ROOT_DIR}/frontend/airi"
 SERVER_BIN="${PEPTUTOR_LESSON_SERVER_BIN:-${BACKEND_DIR}/.venv/bin/lightrag-server}"
 WAIT_SCRIPT="${ROOT_DIR}/scripts/wait-for-lesson-backend.sh"
 LOG_DIR="${PEPTUTOR_LESSON_LOG_DIR:-${BACKEND_DIR}/temp}"
-BACKEND_HOST="${PEPTUTOR_LESSON_BACKEND_HOST:-127.0.0.1}"
+BACKEND_HOST="${PEPTUTOR_LESSON_BACKEND_HOST:-0.0.0.0}"
 BACKEND_PORT="${PEPTUTOR_LESSON_BACKEND_PORT:-9625}"
 FRONTEND_HOST="${PEPTUTOR_LESSON_FRONTEND_HOST:-0.0.0.0}"
 FRONTEND_PORT="${PEPTUTOR_LESSON_FRONTEND_PORT:-5173}"
-BACKEND_URL="http://${BACKEND_HOST}:${BACKEND_PORT}"
+DEFAULT_BACKEND_PUBLIC_HOST="$(
+  hostname -I 2>/dev/null | awk '{print $1}'
+)"
+DEFAULT_BACKEND_PUBLIC_HOST="${DEFAULT_BACKEND_PUBLIC_HOST:-127.0.0.1}"
+if [[ "${BACKEND_HOST}" != "0.0.0.0" && "${BACKEND_HOST}" != "::" ]]; then
+  DEFAULT_BACKEND_PUBLIC_HOST="${BACKEND_HOST}"
+fi
+BACKEND_PUBLIC_HOST="${PEPTUTOR_LESSON_BACKEND_PUBLIC_HOST:-${DEFAULT_BACKEND_PUBLIC_HOST}}"
+BACKEND_URL="http://${BACKEND_PUBLIC_HOST}:${BACKEND_PORT}"
+BACKEND_WAIT_URL="http://127.0.0.1:${BACKEND_PORT}"
 LOG_PATH="${LOG_DIR}/lesson_dev_backend_$(date +%Y%m%d_%H%M%S).log"
 BACKEND_PID=""
 
@@ -23,11 +32,13 @@ Usage: scripts/start_lesson_dev.sh [--full-stack]
 Start the PepTutor lesson backend and AIRI stage-web frontend for local use.
 
 Default:
-  Backend:  http://127.0.0.1:9625
+  Backend bind:  0.0.0.0:9625
+  Backend URL:   auto-detected WSL/LAN address, overridable
   Frontend: http://127.0.0.1:5173/lesson
 
 Environment overrides:
-  PEPTUTOR_LESSON_BACKEND_HOST=127.0.0.1
+  PEPTUTOR_LESSON_BACKEND_HOST=0.0.0.0
+  PEPTUTOR_LESSON_BACKEND_PUBLIC_HOST=127.0.0.1
   PEPTUTOR_LESSON_BACKEND_PORT=9625
   PEPTUTOR_LESSON_FRONTEND_HOST=0.0.0.0
   PEPTUTOR_LESSON_FRONTEND_PORT=5173
@@ -114,7 +125,7 @@ if ! is_enabled "${FULL_STACK}"; then
   )
 fi
 
-echo "[INFO] Starting PepTutor lesson backend: ${BACKEND_URL}"
+echo "[INFO] Starting PepTutor lesson backend: bind=${BACKEND_HOST}:${BACKEND_PORT} url=${BACKEND_URL}"
 echo "[INFO] Backend log: ${LOG_PATH}"
 (
   cd "${BACKEND_DIR}"
@@ -122,7 +133,7 @@ echo "[INFO] Backend log: ${LOG_PATH}"
 ) >"${LOG_PATH}" 2>&1 &
 BACKEND_PID="$!"
 
-if ! bash "${WAIT_SCRIPT}" --url "${BACKEND_URL}" --timeout 120; then
+if ! bash "${WAIT_SCRIPT}" --url "${BACKEND_WAIT_URL}" --timeout 120; then
   print_backend_log_tail
   exit 1
 fi
@@ -147,5 +158,5 @@ echo "[INFO] Press Ctrl+C here to stop both frontend and backend."
     "VITE_PEPTUTOR_LESSON_API_URL=${BACKEND_URL}" \
     "VITE_PEPTUTOR_DEV_PROXY_TARGET=${BACKEND_URL}" \
     "VITE_PEPTUTOR_SKIP_REMOTE_ASSET_DOWNLOADS=true" \
-    pnpm -F @proj-airi/stage-web dev -- --host "${FRONTEND_HOST}" --port "${FRONTEND_PORT}"
+    pnpm -F @proj-airi/stage-web exec vite --host "${FRONTEND_HOST}" --port "${FRONTEND_PORT}" --strictPort
 )

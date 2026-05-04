@@ -4,10 +4,12 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import {
   cloneLessonFixture,
   lessonJsonResponse,
+  lessonPersonaDebugSignalFixture,
   lessonTurnP24AnswerFixture,
   lessonTurnP24StartFixture,
 } from '../testing/lesson-api-fixtures'
 import { setLessonApiBaseUrlForTest, useLessonStore } from './lesson'
+import { useLessonAiriRuntimeStore } from './lesson-airi-runtime'
 import { createPepTutorLessonChatProvider } from './lesson-chat-provider'
 
 function lessonStreamResponse(turnClientId: string, events: string[]) {
@@ -43,6 +45,20 @@ function createStreamFetchSpy() {
     if (url.endsWith('/lesson/turn/stream')) {
       const body = JSON.parse(String(init?.body ?? '{}')) as { turn_client_id?: string }
       const turnClientId = body.turn_client_id || 'missing-turn-client-id'
+      const doneResult = cloneLessonFixture(lessonTurnP24AnswerFixture)
+      doneResult.debug_signals = {
+        ...doneResult.debug_signals!,
+        persona: lessonPersonaDebugSignalFixture({
+          emotion: 'joy',
+          motion: 'Nod',
+          expression: 'soft_smile',
+          speech_style: 'normal',
+          mouth_intensity: 0.8,
+          interrupt_policy: 'barge_in_allowed',
+          content_source: 'lesson_runtime_teacher_response',
+          fallback_allowed: true,
+        }),
+      }
 
       return lessonStreamResponse(turnClientId, [
         sseEvent('meta', {
@@ -54,7 +70,7 @@ function createStreamFetchSpy() {
           emotion: { name: 'happy', intensity: 0.92 },
           motion: 'Happy',
           expression: 'happy',
-          duration_ms: 3000,
+          duration_ms: 2800,
           teaching_action: 'confirm',
           evaluation: 'correct',
           reason: 'lesson_turn',
@@ -78,7 +94,7 @@ function createStreamFetchSpy() {
         }),
         sseEvent('done', {
           turn_client_id: turnClientId,
-          result: cloneLessonFixture(lessonTurnP24AnswerFixture),
+          result: doneResult,
         }),
       ])
     }
@@ -104,6 +120,7 @@ describe('lesson chat provider', () => {
 
     const lessonStore = useLessonStore()
     await lessonStore.startLesson('TB-G5S1U3-P24', { replayTeacher: false })
+    const lessonAiriRuntime = useLessonAiriRuntimeStore()
 
     const provider = createPepTutorLessonChatProvider().chat('peptutor-lesson-turn')
     const response = await provider.fetch!(new URL('https://peptutor.lesson.local/v1/chat/completions'), {
@@ -140,6 +157,13 @@ describe('lesson chat provider', () => {
     expect(chatChunks.at(-1)?.choices[0]?.finish_reason).toBe('stop')
 
     expect(lessonStore.activeTurn?.turn_label).toBe('answer_question')
+    expect(lessonAiriRuntime.currentPerformancePlan).toMatchObject({
+      motion: 'Happy',
+      expression: 'happy',
+      durationMs: 2800,
+      performanceSource: 'lesson_persona_context',
+      turnLabel: 'answer_question',
+    })
     expect(lessonStore.loading).toBe(false)
     expect(lessonStore.transcript.map(entry => entry.speaker)).toEqual(['teacher', 'learner', 'teacher'])
   })

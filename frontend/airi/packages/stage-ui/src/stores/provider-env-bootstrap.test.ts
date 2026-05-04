@@ -162,6 +162,23 @@ describe('provider env bootstrap', () => {
     })
   })
 
+  it('ignores a Doubao proxy URL when Edge Xiaoxiao TTS is selected', () => {
+    const plan = resolvePepTutorVoiceEnvBootstrapPlan({
+      VITE_PEPTUTOR_LESSON_API_URL: '/peptutor-api',
+      VITE_PEPTUTOR_TTS_PROVIDER: 'edge-tts',
+      VITE_PEPTUTOR_TTS_PROXY_URL: '/api/peptutor/doubao-tts',
+    } as unknown as ImportMetaEnv)
+
+    expect(plan.speech).toMatchObject({
+      providerId: 'peptutor-edge-tts',
+      config: {
+        proxyUrl: '/peptutor-api/api/peptutor/edge-tts',
+        model: 'edge-tts',
+      },
+      voiceId: 'zh-CN-XiaoxiaoNeural',
+    })
+  })
+
   it('defaults lesson speech to Edge Xiaoxiao TTS when a lesson API is configured', () => {
     vi.stubGlobal('__PEPTUTOR_RUNTIME_CONFIG__', {
       VITE_PEPTUTOR_LESSON_API_URL: 'http://127.0.0.1:9625',
@@ -236,6 +253,33 @@ describe('provider env bootstrap', () => {
     await bootstrapPepTutorVoiceEnvDefaults()
 
     const providersStore = useProvidersStore()
+
+    expect(providersStore.getProviderConfig('peptutor-edge-tts')).toMatchObject({
+      proxyUrl: '/peptutor-api/api/peptutor/edge-tts',
+      model: 'edge-tts',
+    })
+    expect(speechStore.activeSpeechProvider).toBe('peptutor-edge-tts')
+    expect(speechStore.activeSpeechModel).toBe('edge-tts')
+    expect(speechStore.activeSpeechVoiceId).toBe('zh-CN-XiaoxiaoNeural')
+  })
+
+  it('repairs a stale Edge provider proxy URL that points at Doubao TTS', async () => {
+    vi.stubGlobal('__PEPTUTOR_RUNTIME_CONFIG__', {
+      VITE_PEPTUTOR_LESSON_API_URL: '/peptutor-api',
+      VITE_PEPTUTOR_TTS_PROVIDER: 'edge-tts',
+    })
+
+    const providersStore = useProvidersStore()
+    const speechStore = useSpeechStore()
+    Object.assign(providersStore.getProviderConfig('peptutor-edge-tts')!, {
+      proxyUrl: '/api/peptutor/doubao-tts',
+      model: 'v1',
+    })
+    speechStore.activeSpeechProvider = 'peptutor-edge-tts'
+    speechStore.activeSpeechModel = 'v1'
+    speechStore.activeSpeechVoiceId = 'zh_female_vv_uranus_bigtts'
+
+    await bootstrapPepTutorVoiceEnvDefaults()
 
     expect(providersStore.getProviderConfig('peptutor-edge-tts')).toMatchObject({
       proxyUrl: '/peptutor-api/api/peptutor/edge-tts',

@@ -1,7 +1,15 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
+import { useTheme } from '@proj-airi/ui'
+import { computed } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
 
+import LogoDark from '../../assets/logo-dark.svg'
 import Logo from '../../assets/logo.svg'
+
+const { isDark: dark } = useTheme()
+const route = useRoute()
+const lessonActive = computed(() => route.path.startsWith('/lesson'))
+const brandLabel = computed(() => lessonActive.value ? '米粒老师' : 'AIRI')
 </script>
 
 <template>
@@ -9,9 +17,14 @@ import Logo from '../../assets/logo.svg'
     to="/" flex="~"
     w-max items-center gap-2 px-2 text-nowrap text-2xl outline-none
   >
-    <img :src="Logo" h-8 w-8 class="theme-colored" alt="AIRI">
+    <template v-if="dark">
+      <img :src="LogoDark" h-8 w-8 class="theme-colored" :alt="brandLabel">
+    </template>
+    <template v-else>
+      <img :src="Logo" h-8 w-8 class="theme-colored" :alt="brandLabel">
+    </template>
     <div translate-y="[2px]" font-quicksand font-semibold>
-      <span>AIRI</span>
+      <span>{{ brandLabel }}</span>
     </div>
   </RouterLink>
 </template>

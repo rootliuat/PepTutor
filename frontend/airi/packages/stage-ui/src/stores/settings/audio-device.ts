@@ -6,7 +6,7 @@ import { useAudioDevice } from '../audio'
 
 export type AudioPermissionState = 'unknown' | 'requesting' | 'granted' | 'denied' | 'unavailable'
 
-type MicrophoneErrorContext = {
+interface MicrophoneErrorContext {
   hasAudioInputs: boolean
 }
 

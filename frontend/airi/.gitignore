@@ -40,6 +40,9 @@ cert*/
 
 # Test coverage
 coverage/
+test-results/
+**/test-results/
+**/tmp-*.png
 
 # Build
 out/

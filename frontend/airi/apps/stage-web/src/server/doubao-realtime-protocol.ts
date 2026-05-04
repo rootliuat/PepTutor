@@ -1,7 +1,7 @@
 export const DOUBAO_REALTIME_PROTOCOL_VERSION = 0x1
 export const DOUBAO_REALTIME_HEADER_SIZE_WORDS = 0x1
 
-export const enum DoubaoRealtimeMessageType {
+export enum DoubaoRealtimeMessageType {
   FullClientRequest = 0x1,
   AudioOnlyRequest = 0x2,
   FullServerResponse = 0x9,
@@ -9,17 +9,64 @@ export const enum DoubaoRealtimeMessageType {
   ErrorInformation = 0xF,
 }
 
-export const enum DoubaoRealtimeSerializationMethod {
+export enum DoubaoRealtimeSerializationMethod {
   Raw = 0x0,
   JSON = 0x1,
 }
 
-export const enum DoubaoRealtimeCompressionMethod {
+export enum DoubaoRealtimeCompressionMethod {
   None = 0x0,
   Gzip = 0x1,
 }
 
 export const DOUBAO_REALTIME_EVENT_FLAG = 0b0100
+
+export const DOUBAO_REALTIME_CONNECT_EVENT_IDS = new Set<number>([
+  1,
+  2,
+  50,
+  51,
+  52,
+])
+
+export const DOUBAO_REALTIME_SESSION_EVENT_IDS = new Set<number>([
+  100,
+  102,
+  150,
+  152,
+  153,
+  154,
+  200,
+  201,
+  251,
+  300,
+  350,
+  351,
+  352,
+  359,
+  400,
+  450,
+  451,
+  459,
+  500,
+  501,
+  502,
+  510,
+  511,
+  512,
+  513,
+  514,
+  515,
+  550,
+  553,
+  559,
+  567,
+  568,
+  569,
+  570,
+  571,
+  599,
+])
 
 const textEncoder = new TextEncoder()
 const textDecoder = new TextDecoder()
@@ -219,50 +266,3 @@ export function parseDoubaoRealtimeFrame(input: ArrayBuffer | Uint8Array): Parse
 export function decodeDoubaoRealtimeTextPayload(payload: Uint8Array) {
   return textDecoder.decode(payload)
 }
-
-export const DOUBAO_REALTIME_CONNECT_EVENT_IDS = new Set<number>([
-  1,
-  2,
-  50,
-  51,
-  52,
-])
-
-export const DOUBAO_REALTIME_SESSION_EVENT_IDS = new Set<number>([
-  100,
-  102,
-  150,
-  152,
-  153,
-  154,
-  200,
-  201,
-  251,
-  300,
-  350,
-  351,
-  352,
-  359,
-  400,
-  450,
-  451,
-  459,
-  500,
-  501,
-  502,
-  510,
-  511,
-  512,
-  513,
-  514,
-  515,
-  550,
-  553,
-  559,
-  567,
-  568,
-  569,
-  570,
-  571,
-  599,
-])

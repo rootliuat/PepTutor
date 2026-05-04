@@ -8,6 +8,7 @@ import os
 import time
 from collections.abc import Callable
 from dataclasses import dataclass, field
+from functools import partial
 from pathlib import Path
 from queue import Queue
 from threading import Event, Thread
@@ -17,6 +18,10 @@ from lightrag.pedagogy.planner import LessonPlanner
 from lightrag.pedagogy.responder import LessonResponder
 from lightrag.orchestrator.lesson_readiness_judge import ReadinessJudge
 from lightrag.orchestrator.lesson_runtime import LessonRuntime, PilotLessonCatalog
+from lightrag.orchestrator.lesson_llm_metering import (
+    default_lesson_llm_model,
+    record_lesson_llm_call,
+)
 from lightrag.orchestrator.simplemem_prompt_memory import (
     SimpleMemSQLitePromptMemoryProvider,
 )
@@ -45,6 +50,17 @@ def _resolve_lesson_manifest_path(manifest_path: Path | None = None) -> Path:
 
     current = Path(__file__).resolve()
     for ancestor in current.parents:
+        overlay_candidate = (
+            ancestor
+            / "app"
+            / "knowledge"
+            / "structured"
+            / "general"
+            / "general-with-pilot-overrides-manifest.json"
+        )
+        if overlay_candidate.exists():
+            return overlay_candidate.resolve()
+
         general_candidate = (
             ancestor / "app" / "knowledge" / "structured" / "general" / "general-manifest.json"
         )
@@ -113,16 +129,20 @@ def _log_lesson_llm_start(
     call_id: str,
     mode: Literal["complete", "stream"],
     audit_tag: str,
+    llm_provider: str,
     prompt: str,
     system_prompt: str | None,
     history_messages: list[dict[str, Any]] | None,
     call_kwargs: dict[str, Any],
+    llm_model: str,
 ) -> None:
     logger.info(
-        "Lesson LLM audit start call_id=%s mode=%s tag=%s prompt_chars=%d system_chars=%d history_messages=%d prompt_sha256=%s system_sha256=%s kwargs=%s",
+        "Lesson LLM audit start call_id=%s mode=%s tag=%s llmcalled=true llmprovider=%s llmmodel=%s prompt_chars=%d system_chars=%d history_messages=%d prompt_sha256=%s system_sha256=%s kwargs=%s",
         call_id,
         mode,
         audit_tag,
+        llm_provider,
+        llm_model,
         len(prompt),
         len(system_prompt or ""),
         len(history_messages or []),
@@ -137,6 +157,8 @@ def _log_lesson_llm_end(
     call_id: str,
     mode: Literal["complete", "stream"],
     audit_tag: str,
+    llm_provider: str,
+    llm_model: str,
     started_at: float,
     status: Literal["success", "error"],
     response_chars: int = 0,
@@ -146,20 +168,24 @@ def _log_lesson_llm_end(
     duration_ms = int((time.perf_counter() - started_at) * 1000)
     if status == "error":
         logger.warning(
-            "Lesson LLM audit end call_id=%s mode=%s tag=%s status=error duration_ms=%d error=%s",
+            "Lesson LLM audit end call_id=%s mode=%s tag=%s llmcalled=true llmprovider=%s llmmodel=%s status=error latencyms=%d fallbackused=true fallbackreason=llm_exception teacherresponse_source=fallback error=%s",
             call_id,
             mode,
             audit_tag,
+            llm_provider,
+            llm_model,
             duration_ms,
             error,
         )
         return
 
     logger.info(
-        "Lesson LLM audit end call_id=%s mode=%s tag=%s status=success duration_ms=%d response_chars=%d chunk_count=%d",
+        "Lesson LLM audit end call_id=%s mode=%s tag=%s llmcalled=true llmprovider=%s llmmodel=%s status=success latencyms=%d fallbackused=false fallbackreason=none teacherresponse_source=llm response_chars=%d chunk_count=%d",
         call_id,
         mode,
         audit_tag,
+        llm_provider,
+        llm_model,
         duration_ms,
         response_chars,
         chunk_count,
@@ -227,8 +253,16 @@ class EmbeddingLoopRunner:
 class LLMCallLoopRunner:
     """Run async lesson prompt calls on a dedicated background loop."""
 
-    def __init__(self, llm_model_func: Callable[..., Any]):
+    def __init__(
+        self,
+        llm_model_func: Callable[..., Any],
+        *,
+        llm_provider: str = "unknown",
+        llm_model: str = "unknown",
+    ):
         self.llm_model_func = llm_model_func
+        self.llm_provider = llm_provider
+        self.llm_model = llm_model or default_lesson_llm_model()
         self._loop: asyncio.AbstractEventLoop | None = None
         self._thread: Thread | None = None
         self._started = Event()
@@ -256,10 +290,12 @@ class LLMCallLoopRunner:
             call_id=call_id,
             mode="complete",
             audit_tag=audit_tag,
+            llm_provider=self.llm_provider,
             prompt=prompt,
             system_prompt=system_prompt,
             history_messages=history_messages,
             call_kwargs=call_kwargs,
+            llm_model=self.llm_model,
         )
         try:
             future = asyncio.run_coroutine_threadsafe(
@@ -278,16 +314,44 @@ class LLMCallLoopRunner:
                 call_id=call_id,
                 mode="complete",
                 audit_tag=audit_tag,
+                llm_provider=self.llm_provider,
+                llm_model=self.llm_model,
                 started_at=started_at,
                 status="success",
                 response_chars=len(result),
             )
+            record_lesson_llm_call(
+                prompt=prompt,
+                completion=result,
+                system_prompt=system_prompt,
+                history_messages=history_messages,
+                llm_provider=self.llm_provider,
+                llm_model=self.llm_model,
+                audit_tag=audit_tag,
+                mode="complete",
+                status="success",
+                call_id=call_id,
+            )
             return result
         except BaseException as exc:
+            record_lesson_llm_call(
+                prompt=prompt,
+                completion="",
+                system_prompt=system_prompt,
+                history_messages=history_messages,
+                llm_provider=self.llm_provider,
+                llm_model=self.llm_model,
+                audit_tag=audit_tag,
+                mode="complete",
+                status="error",
+                call_id=call_id,
+            )
             _log_lesson_llm_end(
                 call_id=call_id,
                 mode="complete",
                 audit_tag=audit_tag,
+                llm_provider=self.llm_provider,
+                llm_model=self.llm_model,
                 started_at=started_at,
                 status="error",
                 error=exc,
@@ -317,14 +381,17 @@ class LLMCallLoopRunner:
         started_at = time.perf_counter()
         response_chars = 0
         chunk_count = 0
+        chunks_for_metering: list[str] = []
         _log_lesson_llm_start(
             call_id=call_id,
             mode="stream",
             audit_tag=audit_tag,
+            llm_provider=self.llm_provider,
             prompt=prompt,
             system_prompt=system_prompt,
             history_messages=history_messages,
             call_kwargs=call_kwargs,
+            llm_model=self.llm_model,
         )
 
         async def _run_stream() -> None:
@@ -368,17 +435,45 @@ class LLMCallLoopRunner:
                     call_id=call_id,
                     mode="stream",
                     audit_tag=audit_tag,
+                    llm_provider=self.llm_provider,
+                    llm_model=self.llm_model,
                     started_at=started_at,
                     status="success",
                     response_chars=response_chars,
                     chunk_count=chunk_count,
                 )
+                record_lesson_llm_call(
+                    prompt=prompt,
+                    completion="".join(chunks_for_metering),
+                    system_prompt=system_prompt,
+                    history_messages=history_messages,
+                    llm_provider=self.llm_provider,
+                    llm_model=self.llm_model,
+                    audit_tag=audit_tag,
+                    mode="stream",
+                    status="success",
+                    call_id=call_id,
+                )
                 break
             if isinstance(item, BaseException):
+                record_lesson_llm_call(
+                    prompt=prompt,
+                    completion="".join(chunks_for_metering),
+                    system_prompt=system_prompt,
+                    history_messages=history_messages,
+                    llm_provider=self.llm_provider,
+                    llm_model=self.llm_model,
+                    audit_tag=audit_tag,
+                    mode="stream",
+                    status="error",
+                    call_id=call_id,
+                )
                 _log_lesson_llm_end(
                     call_id=call_id,
                     mode="stream",
                     audit_tag=audit_tag,
+                    llm_provider=self.llm_provider,
+                    llm_model=self.llm_model,
                     started_at=started_at,
                     status="error",
                     error=item,
@@ -386,6 +481,7 @@ class LLMCallLoopRunner:
                 raise item
             response_chars += len(item)
             chunk_count += 1
+            chunks_for_metering.append(item)
             yield item
 
     @staticmethod
@@ -663,6 +759,10 @@ def build_lesson_runtime(
     workspace: str = "",
     embedding_func: EmbeddingFunc | None = None,
     llm_model_func: Callable[..., Any] | None = None,
+    llm_model_kwargs: dict[str, Any] | None = None,
+    llm_hashing_kv: Any | None = None,
+    llm_provider: str | None = None,
+    llm_model: str | None = None,
     manifest_path: Path | None = None,
     vector_enabled: bool | None = None,
     live_prompts_enabled: bool | None = None,
@@ -740,6 +840,13 @@ def build_lesson_runtime(
     planner = None
     readiness_judge = None
     responder = None
+    provider = (
+        llm_provider
+        or os.getenv("PEPTUTOR_LESSON_LLM_PROVIDER")
+        or os.getenv("LLM_BINDING")
+        or "unknown"
+    )
+    model_name = llm_model or default_lesson_llm_model()
     live_request = _resolve_feature_request(
         feature_name="Lesson live prompts",
         env_var="PEPTUTOR_LESSON_LIVE_PROMPTS",
@@ -764,13 +871,26 @@ def build_lesson_runtime(
             ),
         )
     else:
-        llm_runner = LLMCallLoopRunner(llm_model_func)
+        lesson_llm_model_func = llm_model_func
+        if llm_hashing_kv is not None or llm_model_kwargs:
+            lesson_llm_model_func = partial(
+                llm_model_func,
+                hashing_kv=llm_hashing_kv,
+                **(llm_model_kwargs or {}),
+            )
+        llm_runner = LLMCallLoopRunner(
+            lesson_llm_model_func,
+            llm_provider=provider,
+            llm_model=model_name,
+        )
         close_callbacks.append(llm_runner.close)
         planner = LessonPlanner(llm_runner.complete_text)
         readiness_judge = ReadinessJudge(llm_runner.complete_text)
         responder = LessonResponder(
             llm_runner.complete_text,
             stream_text=llm_runner.stream_text,
+            llm_provider=provider,
+            llm_model=model_name,
         )
         _record_feature_status(
             feature_statuses,
@@ -911,6 +1031,9 @@ def build_lesson_runtime(
         readiness_judge=readiness_judge,
         responder=responder,
         feature_statuses=feature_statuses,
+        llm_provider=provider if llm_model_func is not None else llm_provider,
+        llm_model=model_name if llm_model_func is not None else llm_model,
+        policy_reply_review_enabled=readiness_judge is not None,
     )
 
     vector_request = _resolve_feature_request(

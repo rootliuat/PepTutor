@@ -1201,18 +1201,6 @@ def _build_p24_split_dialogue_practice_records(
         {
             "block_uid": block.block_uid,
             "source_refs": [block.block_uid],
-            "teaching_goal": "Answer the drink question with a short ordering sentence.",
-            "teaching_summary": "Practice drink choices with a small word bank and answer the drink question with I'd like ....",
-            "focus_vocabulary": ["water", "tea"],
-            "core_patterns": ["What would you like to drink?", "I'd like ..."],
-            "allowed_answer_scope": ["I'd like water.", "I'd like some tea."],
-            "entry_probe_questions": ["If I ask What would you like to drink, how do you answer?"],
-            "branchable_topics": ["restaurant", "drink choice"],
-            "return_anchors": ["What would you like to drink?", "I'd like ..."],
-        },
-        {
-            "block_uid": _P24_SPLIT_DIALOGUE_PRACTICE_FOLLOWUP_UID,
-            "source_refs": [block.block_uid],
             "teaching_goal": "Answer the food question with a short ordering sentence.",
             "teaching_summary": "Continue the ordering exchange with food choices and answer the eat question with I'd like ....",
             "focus_vocabulary": ["chicken and bread", "rice and vegetables"],
@@ -1224,6 +1212,18 @@ def _build_p24_split_dialogue_practice_records(
             "entry_probe_questions": ["If I ask What would you like to eat, how do you answer?"],
             "branchable_topics": ["restaurant", "food choice"],
             "return_anchors": ["What would you like to eat?", "I'd like ..."],
+        },
+        {
+            "block_uid": _P24_SPLIT_DIALOGUE_PRACTICE_FOLLOWUP_UID,
+            "source_refs": [block.block_uid],
+            "teaching_goal": "Answer the drink question with a short ordering sentence.",
+            "teaching_summary": "Practice drink choices with a small word bank and answer the drink question with I'd like ....",
+            "focus_vocabulary": ["water", "tea"],
+            "core_patterns": ["What would you like to drink?", "I'd like ..."],
+            "allowed_answer_scope": ["I'd like water.", "I'd like some tea."],
+            "entry_probe_questions": ["If I ask What would you like to drink, how do you answer?"],
+            "branchable_topics": ["restaurant", "drink choice"],
+            "return_anchors": ["What would you like to drink?", "I'd like ..."],
         },
     ]
     records: list[TeachingBlockRecord] = []
@@ -1842,7 +1842,12 @@ def _teaching_block_links_word(
     page_anchor_word: str | None,
 ) -> bool:
     focus_words = [item.casefold() for item in block.focus_vocabulary]
-    if block.block_type in {"dialogue_core", "vocabulary_core", "sentence_pattern_practice"}:
+    if block.block_type in {
+        "dialogue_core",
+        "dialogue_practice",
+        "vocabulary_core",
+        "sentence_pattern_practice",
+    }:
         return word_lower in focus_words
     if block.block_type == "roleplay_task":
         if page_anchor_word and word_lower == page_anchor_word.casefold():

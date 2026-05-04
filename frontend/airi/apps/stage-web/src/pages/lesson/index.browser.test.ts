@@ -1,12 +1,17 @@
 import type { LessonTurnDebugSignals, LessonTurnResult } from '@proj-airi/stage-ui/types/lesson'
 
+import html2canvas from 'html2canvas'
+
 import { Emotion } from '@proj-airi/stage-ui/constants/emotions'
+import { useChatSessionStore } from '@proj-airi/stage-ui/stores/chat/session-store'
 import { setLessonApiBaseUrlForTest, useLessonStore } from '@proj-airi/stage-ui/stores/lesson'
 import { useLessonAiriRuntimeStore } from '@proj-airi/stage-ui/stores/lesson-airi-runtime'
+import { useLessonChatHistoryStore } from '@proj-airi/stage-ui/stores/lesson-chat-history'
 import {
   cloneLessonFixture,
   lessonCatalogSmokeFixture,
   lessonJsonResponse,
+  lessonPersonaDebugSignalFixture,
   lessonTurnP24AnswerFixture,
   lessonTurnP24StartFixture,
   lessonTurnP25StartFixture,
@@ -192,12 +197,66 @@ vi.mock('@proj-airi/stage-layouts/stores/background', async () => {
 })
 
 vi.mock('@proj-airi/stage-ui/components/scenes', async () => {
-  const { h } = await import('vue')
+  const { h, onUnmounted, watch } = await import('vue')
+  const { useSharedChatHooks } = await import('@proj-airi/stage-ui/stores/chat/hooks')
+  const { useLessonAiriRuntimeStore } = await import('@proj-airi/stage-ui/stores/lesson-airi-runtime')
+  const { useSpeechRuntimeStore } = await import('@proj-airi/stage-ui/stores/speech-runtime')
 
   return {
     WidgetStage: {
       name: 'LessonWidgetStageStub',
-      setup: () => () => h('div', { 'data-testid': 'lesson-widget-stage-stub' }),
+      setup: () => {
+        const chatHooks = useSharedChatHooks()
+        const lessonAiriRuntimeStore = useLessonAiriRuntimeStore()
+        const speechRuntimeStore = useSpeechRuntimeStore()
+        let currentIntent: ReturnType<typeof speechRuntimeStore.openIntent> | null = null
+        const cleanups = [
+          watch(() => lessonAiriRuntimeStore.currentPerformancePlan?.updatedAt ?? 0, () => {
+            const plan = lessonAiriRuntimeStore.currentPerformancePlan
+            if (!plan) {
+              return
+            }
+
+            lessonAiriRuntimeStore.markPerformanceApplied({
+              status: plan.expression ? 'fallback' : 'applied',
+              requestedMotion: plan.motion,
+              appliedMotion: plan.motion,
+              requestedExpression: plan.expression,
+              appliedExpression: plan.expression ? 'motion-only' : '',
+              fallbackReason: plan.expression ? `live2d_expression_unavailable:${plan.expression}` : '',
+            })
+          }, { immediate: true }),
+          chatHooks.onBeforeMessageComposed(async () => {
+            currentIntent?.cancel('new-message')
+            currentIntent = speechRuntimeStore.openIntent({
+              ownerId: 'lesson',
+              priority: 'normal',
+              behavior: 'interrupt',
+            })
+          }),
+          chatHooks.onTokenLiteral(async (literal) => {
+            currentIntent?.writeLiteral(literal)
+          }),
+          chatHooks.onTokenSpecial(async (special) => {
+            currentIntent?.writeSpecial(special)
+          }),
+          chatHooks.onStreamEnd(async () => {
+            currentIntent?.writeFlush()
+          }),
+          chatHooks.onAssistantResponseEnd(async () => {
+            currentIntent?.end()
+            currentIntent = null
+          }),
+        ]
+
+        onUnmounted(() => {
+          cleanups.forEach(cleanup => cleanup())
+          currentIntent?.cancel('stage-unmount')
+          currentIntent = null
+        })
+
+        return () => h('div', { 'data-testid': 'lesson-widget-stage-stub' })
+      },
     },
   }
 })
@@ -261,11 +320,21 @@ async function flushUi(cycles: number = 4) {
 const useRealLessonBackend = import.meta.env.VITE_PEPTUTOR_LESSON_REAL_BACKEND_SMOKE === '1'
 const expectRealLessonDebugSignals = import.meta.env.VITE_PEPTUTOR_LESSON_EXPECT_DEBUG_SIGNALS === '1'
 const lessonApiBaseUrl = import.meta.env.VITE_PEPTUTOR_LESSON_REAL_BACKEND_URL || 'http://127.0.0.1:9625'
-const smokeWaitTimeoutMs = useRealLessonBackend ? 20_000 : 5_000
-const smokeTestTimeoutMs = useRealLessonBackend ? 30_000 : 10_000
 const describeMockSmoke = useRealLessonBackend ? describe.skip : describe
 const describeRealSmoke = useRealLessonBackend ? describe : describe.skip
 const itRealDebugSmoke = expectRealLessonDebugSignals ? it : it.skip
+
+function positiveIntegerEnv(raw: string | undefined, fallback: number): number {
+  const value = Number.parseInt(raw || '', 10)
+  return Number.isFinite(value) && value > 0 ? value : fallback
+}
+
+const smokeWaitTimeoutMs = useRealLessonBackend
+  ? positiveIntegerEnv(import.meta.env.VITE_PEPTUTOR_LESSON_SMOKE_WAIT_TIMEOUT_MS, 30_000)
+  : 5_000
+const smokeTestTimeoutMs = useRealLessonBackend
+  ? positiveIntegerEnv(import.meta.env.VITE_PEPTUTOR_LESSON_SMOKE_TEST_TIMEOUT_MS, 90_000)
+  : 10_000
 
 function lastTeacherTranscriptText(lessonStore: ReturnType<typeof useLessonStore>) {
   return [...lessonStore.transcript]
@@ -292,6 +361,57 @@ function logRealDebugSignalsObservation(testName: string, debugSignals: LessonTu
   console.info(`[lesson-real-debug-signals] ${JSON.stringify({
     test: testName,
     debug_signals: debugSignals,
+  })}`)
+}
+
+async function captureArtifactScreenshot(): Promise<{ data_url?: string, error?: string }> {
+  try {
+    const canvas = await html2canvas(document.body, {
+      backgroundColor: '#ffffff',
+      logging: false,
+      scale: 0.5,
+      useCORS: true,
+    })
+    return { data_url: canvas.toDataURL('image/png') }
+  }
+  catch (error) {
+    return { error: error instanceof Error ? error.message : String(error) }
+  }
+}
+
+async function logRealArtifactSnapshot(testName: string, pinia: ReturnType<typeof createPinia>) {
+  const lessonChatHistoryStore = useLessonChatHistoryStore(pinia)
+  const chatSessionStore = useChatSessionStore(pinia)
+  const screenshot = await captureArtifactScreenshot()
+  const networkEntries = performance.getEntriesByType('resource')
+    .slice(-40)
+    .map((entry) => {
+      const resource = entry as PerformanceResourceTiming
+      return {
+        name: resource.name,
+        initiator_type: resource.initiatorType || '',
+        duration_ms: Math.round(resource.duration),
+        transfer_size: resource.transferSize || 0,
+      }
+    })
+  console.info(`[lesson-real-artifacts] ${JSON.stringify({
+    test: testName,
+    network_entries: networkEntries,
+    history_debug: {
+      active_session_id: chatSessionStore.activeSessionId || '',
+      active_lesson_tab_writable: lessonChatHistoryStore.activeLessonTabWritable,
+      active_history_read_only: lessonChatHistoryStore.activeHistoryReadOnly,
+      history_safety_session_count: Object.keys(lessonChatHistoryStore.historySafetyBySessionId).length,
+    },
+    dom_snapshot: {
+      text_chars: textContent().length,
+      has_lesson_sidebar: textContent().includes('重新开始'),
+    },
+    screenshot: {
+      format: 'png',
+      data_url: screenshot.data_url || '',
+      error: screenshot.error || '',
+    },
   })}`)
 }
 
@@ -517,13 +637,22 @@ function spyOnLessonSpeechRuntime(speechRuntimeStore: {
 
 function attachLessonPlaybackControllerSpy(speechRuntimeStore: {
   registerPlaybackController: (controller: { stopAll?: (reason: string) => void, stopByOwner?: (ownerId: string, reason: string) => void }) => void
-}) {
+}, options: {
+  onStopAll?: (reason: string) => void
+  onStopByOwner?: (ownerId: string, reason: string) => void
+} = {}) {
   const stopAllSpy = vi.fn()
   const stopByOwnerSpy = vi.fn()
 
   speechRuntimeStore.registerPlaybackController({
-    stopAll: stopAllSpy,
-    stopByOwner: stopByOwnerSpy,
+    stopAll: (reason: string) => {
+      stopAllSpy(reason)
+      options.onStopAll?.(reason)
+    },
+    stopByOwner: (ownerId: string, reason: string) => {
+      stopByOwnerSpy(ownerId, reason)
+      options.onStopByOwner?.(ownerId, reason)
+    },
   })
 
   return {
@@ -799,6 +928,53 @@ function expectRenderedDebugSignals(debugSignals: LessonTurnDebugSignals) {
   expect(queryDebugSignalStatus('prompt_memory')).toBe(debugSignals.prompt_memory.enabled ? '开启' : '关闭')
   expect(queryDebugSignalDetail('prompt_memory')).toBe(promptMemoryDetail(debugSignals))
   expectRenderedMemoryDebug(debugSignals)
+  expectRenderedReplyPath(debugSignals)
+}
+
+function expectedReplyPathLabel(debugSignals: LessonTurnDebugSignals): string | null {
+  const audit = debugSignals.response_audit
+  if (!audit) {
+    return null
+  }
+
+  const latencyLabel = Number.isFinite(audit.latency_ms)
+    ? ` · ${audit.latency_ms}ms`
+    : ''
+  const routeLabel = audit.route ? ` · ${audit.route}` : ''
+  const auditFacts = `llm=${audit.llm_called ? 'true' : 'false'} · fallback=${audit.fallback_used ? 'true' : 'false'}${latencyLabel}${routeLabel}`
+  const repairLabel = audit.repair_reason && audit.repair_reason !== 'none'
+    ? ` · repair=${audit.repair_reason}`
+    : ''
+
+  if (audit.fallback_used || audit.source === 'fallback') {
+    return `fallback · ${auditFacts} · ${audit.fallback_reason || 'unknown'}`
+  }
+  if (audit.source === 'policy_repaired') {
+    return `policy_repaired · ${auditFacts}${repairLabel}`
+  }
+  if (audit.source === 'policy') {
+    return `policy · ${auditFacts}`
+  }
+  if (audit.source === 'llm_repaired') {
+    return `llm_repaired · ${auditFacts}${repairLabel}`
+  }
+  if (audit.source === 'llm') {
+    return `llm · ${auditFacts}`
+  }
+  if (audit.source === 'deterministic') {
+    return `deterministic · ${auditFacts}`
+  }
+
+  return null
+}
+
+function expectRenderedReplyPath(debugSignals: LessonTurnDebugSignals) {
+  const expected = expectedReplyPathLabel(debugSignals)
+  if (!expected) {
+    return
+  }
+
+  expect(queryAiriVisibleFact('reply_path')).toBe(expected)
 }
 
 async function mountLessonPage(
@@ -924,20 +1100,45 @@ describeMockSmoke('/lesson browser smoke', () => {
     expect(queryRuntimeFact('auto_send')).toBe('900ms')
     expect(queryRuntimeFact('asr')).toBe('browser-web-speech-api')
     expect(queryRuntimeFact('tts')).toBe('browser-speech-api')
+    expect(queryRuntimeFact('tts_synthesis_state')).toBe('idle')
+    expect(queryRuntimeFact('tts_playback_state')).toBe('idle')
+    expect(queryRuntimeFact('mouth_open')).toBe('0.00')
     mountedApp = null
     app.unmount()
   })
 
   it('renders AIRI classroom state and backend performance intent as visible lesson closure signals', async () => {
-    installLessonApiMock([lessonTurnP24StartFixture])
+    const startFixture = cloneLessonFixture(lessonTurnP24StartFixture)
+    startFixture.debug_signals = {
+      ...startFixture.debug_signals!,
+      persona: lessonPersonaDebugSignalFixture({
+        emotion: 'encouraging',
+        motion: 'Encourage',
+        expression: 'soft_smile',
+        speech_style: 'normal',
+        mouth_intensity: 0.75,
+        interrupt_policy: 'barge_in_allowed',
+        content_source: 'lesson_runtime_teacher_response',
+        fallback_allowed: true,
+      }),
+    }
+
+    installLessonApiMock([startFixture])
     const { app, pinia } = await mountLessonPage()
     mountedApp = app
 
     await vi.waitFor(() => {
-      expect(textContent()).toContain(lessonTurnP24StartFixture.teacher_response)
+      expect(textContent()).toContain(startFixture.teacher_response)
     })
 
     const lessonAiriRuntime = useLessonAiriRuntimeStore(pinia)
+    expect(queryAiriVisibleFact('performance_source')).toBe('backend persona')
+    expect(queryAiriVisibleFact('content_source')).toBe('lesson_runtime_teacher_response')
+    expect(queryAiriVisibleFact('voice_pacing')).toBe('normal')
+    expect(queryAiriVisibleFact('mouth_intensity')).toBe('0.75')
+    expect(queryAiriVisibleFact('mouth_open')).toBe('0.00')
+    expect(queryAiriVisibleFact('tts_synthesis_state')).toBe('idle')
+    expect(queryAiriVisibleFact('tts_playback_state')).toBe('idle')
 
     lessonAiriRuntime.setClassroomState('listening')
     await flushUi()
@@ -981,6 +1182,10 @@ describeMockSmoke('/lesson browser smoke', () => {
     expect(queryAiriVisibleFact('mouth_intensity')).toBe('0.70')
     expect(queryAiriVisibleFact('motion')).toBe('Explain')
     expect(queryAiriVisibleFact('expression')).toBe('focused')
+    expect(queryAiriVisibleFact('performance_apply')).toBe('live2d_expression_unavailable:focused')
+    expect(queryAiriVisibleFact('performance_fallback_kind')).toBe('known_capability_gap')
+    expect(queryAiriVisibleFact('applied_motion')).toBe('Explain')
+    expect(queryAiriVisibleFact('applied_expression')).toBe('motion-only')
     expect(queryAiriVisibleFact('interrupt_policy')).toBe('finish_current_sentence')
 
     lessonAiriRuntime.applyPerformancePlan({
@@ -1002,17 +1207,123 @@ describeMockSmoke('/lesson browser smoke', () => {
     })
     await flushUi()
 
-    expect(queryAiriTeachingStance()).toBe('鼓励推进')
-    expect(queryAiriVisibleFact('voice_pacing')).toBe('normal')
-    expect(queryAiriVisibleFact('mouth_intensity')).toBe('0.80')
-    expect(queryAiriVisibleFact('motion')).toBe('Nod')
-    expect(queryAiriVisibleFact('expression')).toBe('soft_smile')
-    expect(queryAiriVisibleFact('interrupt_policy')).toBe('barge_in_allowed')
+    await vi.waitFor(() => {
+      expect(queryAiriTeachingStance()).toBe('鼓励推进')
+      expect(queryAiriVisibleFact('voice_pacing')).toBe('normal')
+      expect(queryAiriVisibleFact('mouth_intensity')).toBe('0.80')
+      expect(queryAiriVisibleFact('motion')).toBe('Nod')
+      expect(queryAiriVisibleFact('expression')).toBe('soft_smile')
+      expect(queryAiriVisibleFact('performance_apply')).toBe('live2d_expression_unavailable:soft_smile')
+      expect(queryAiriVisibleFact('performance_fallback_kind')).toBe('known_capability_gap')
+      expect(queryAiriVisibleFact('applied_motion')).toBe('Nod')
+      expect(queryAiriVisibleFact('applied_expression')).toBe('motion-only')
+      expect(queryAiriVisibleFact('interrupt_policy')).toBe('barge_in_allowed')
+    })
+
+    lessonAiriRuntime.markSpeechSynthesisStart({
+      provider: 'peptutor-edge-tts',
+      model: 'edge-tts',
+      voice: 'zh-CN-XiaoxiaoNeural',
+      text: 'Great, say it again.',
+      replyId: 'reply-visible-1',
+    })
+    lessonAiriRuntime.markSpeechSynthesisHttpResult({
+      status: 200,
+      statusText: 'OK',
+    })
+    lessonAiriRuntime.markSpeechSynthesisReady({
+      audioByteLength: 4096,
+      audioDurationMs: 1280,
+    })
+    lessonAiriRuntime.markSpeechPlaybackRequested({
+      playbackId: 'playback-visible-1',
+      replyId: 'reply-visible-1',
+      audioContextState: 'running',
+      reason: 'web_audio_buffer_source_start',
+    })
+    await flushUi()
+
+    expect(queryAiriVisibleFact('tts_synthesis_state')).toBe('http_ok')
+    expect(queryAiriVisibleFact('tts_playback_state')).toContain('play_requested')
+    expect(queryAiriVisibleFact('tts_playback_id')).toBe('playback-visible-1')
+    expect(queryAiriVisibleFact('active_reply_id')).toBe('reply-visible-1')
+    expect(queryAiriVisibleFact('tts_stop_reason')).toBe('none')
+    expect(queryAiriVisibleFact('tts_overlap_detected')).toBe('false')
+    expect(queryAiriVisibleFact('mouth_open')).toBe('0.00')
+
+    lessonAiriRuntime.markSpeechPlaybackStart({
+      playbackId: 'playback-visible-1',
+      replyId: 'reply-visible-1',
+      audioContextState: 'running',
+    })
+    await flushUi()
+
+    expect(queryAiriVisibleFact('tts')).toContain('正在播放')
+    expect(queryAiriVisibleFact('tts')).toContain('HTTP 200 OK')
+    expect(queryAiriVisibleFact('tts')).toContain('ctx=running')
+    expect(queryAiriVisibleFact('tts_synthesis_state')).toBe('http_ok')
+    expect(queryAiriVisibleFact('tts_playback_state')).toBe('playing')
+
+    lessonAiriRuntime.markSpeechPlaybackEnd('ended', {
+      playbackId: 'playback-visible-1',
+      replyId: 'reply-visible-1',
+      stopReason: 'ended',
+    })
+    await flushUi()
+    expect(queryAiriVisibleFact('tts')).toContain('播放结束')
+    expect(queryAiriVisibleFact('tts_playback_state')).toContain('ended')
+    expect(queryAiriVisibleFact('tts_stop_reason')).toBe('ended')
+    expect(queryAiriVisibleFact('tts_stop_type')).toBe('playback_ended')
 
     lessonAiriRuntime.markInterrupted()
     await flushUi()
     expect(queryAiriVisibleState()).toBe('被打断')
 
+    mountedApp = null
+    app.unmount()
+  })
+
+  it('does not call backend lesson turns a rules fallback when debug signals are absent', async () => {
+    const startFixture = cloneLessonFixture(lessonTurnP24StartFixture)
+    delete startFixture.debug_signals
+    installLessonApiMock([startFixture])
+    const { app } = await mountLessonPage()
+    mountedApp = app
+
+    await vi.waitFor(() => {
+      expect(textContent()).toContain(startFixture.teacher_response)
+    })
+
+    expect(queryAiriVisibleFact('reply_path')).toBe('后端课堂回复')
+    expect(textContent()).not.toContain('规则兜底')
+    mountedApp = null
+    app.unmount()
+  })
+
+  it('renders teacher response audit source when the backend provides it', async () => {
+    const startFixture = cloneLessonFixture(lessonTurnP24StartFixture)
+    startFixture.debug_signals = {
+      ...startFixture.debug_signals!,
+      response_audit: {
+        source: 'policy',
+        llm_called: true,
+        llm_provider: 'test-llm',
+        latency_ms: 1234,
+        fallback_used: false,
+        fallback_reason: 'none',
+        route: 'answer_turn_policy',
+      },
+    }
+    installLessonApiMock([startFixture])
+    const { app } = await mountLessonPage()
+    mountedApp = app
+
+    await vi.waitFor(() => {
+      expect(textContent()).toContain(startFixture.teacher_response)
+    })
+
+    expect(queryAiriVisibleFact('reply_path')).toBe('policy · llm=true · fallback=false · 1234ms · answer_turn_policy')
+    expect(textContent()).not.toContain('规则兜底')
     mountedApp = null
     app.unmount()
   })
@@ -1168,7 +1479,7 @@ describeMockSmoke('/lesson browser smoke', () => {
     app.unmount()
   })
 
-  it('replays teacher prompts through the lesson speech runtime on start and repeat', async () => {
+  it('replays teacher prompts through AIRI assistant hooks on start and repeat', async () => {
     installLessonApiMock([lessonTurnP24StartFixture])
     let runtimeSpy!: ReturnType<typeof spyOnLessonSpeechRuntime>
     const { app } = await mountLessonPage('/lesson?page_uid=TB-G5S1U3-P24', {
@@ -1182,7 +1493,11 @@ describeMockSmoke('/lesson browser smoke', () => {
       expect(runtimeSpy.openIntentSpy).toHaveBeenCalledTimes(1)
     })
 
-    expect(runtimeSpy.stopByOwnerSpy).toHaveBeenNthCalledWith(1, 'peptutor-lesson', 'lesson-start')
+    expect(runtimeSpy.openIntentSpy).toHaveBeenNthCalledWith(1, {
+      ownerId: 'lesson',
+      priority: 'normal',
+      behavior: 'interrupt',
+    })
     expect(runtimeSpy.literalWrites.join('')).toBe(lessonTurnP24StartFixture.teacher_response)
     expect(runtimeSpy.flushCount).toBe(1)
     expect(runtimeSpy.endCount).toBe(1)
@@ -1194,7 +1509,11 @@ describeMockSmoke('/lesson browser smoke', () => {
       expect(runtimeSpy.openIntentSpy).toHaveBeenCalledTimes(2)
     })
 
-    expect(runtimeSpy.stopByOwnerSpy).toHaveBeenNthCalledWith(2, 'peptutor-lesson', 'lesson-repeat')
+    expect(runtimeSpy.openIntentSpy).toHaveBeenNthCalledWith(2, {
+      ownerId: 'lesson',
+      priority: 'normal',
+      behavior: 'interrupt',
+    })
     await vi.waitFor(() => {
       expect(runtimeSpy.literalWrites.join('')).toBe(
         `${lessonTurnP24StartFixture.teacher_response}${lessonTurnP24StartFixture.teacher_response}`,
@@ -1423,6 +1742,47 @@ describeMockSmoke('/lesson browser smoke', () => {
       pendingStreamTurnClientId,
     ))
     await flushUi()
+
+    mountedApp = null
+    app.unmount()
+  })
+
+  it('keeps the live lesson input enabled while history session repair is pending', async () => {
+    installLessonApiMock([
+      lessonTurnP24StartFixture,
+    ])
+    const { app, pinia } = await mountLessonPage()
+    mountedApp = app
+
+    await vi.waitFor(() => {
+      expect(textContent()).toContain(lessonTurnP24StartFixture.teacher_response)
+    })
+
+    const chatSessionStore = useChatSessionStore(pinia)
+    const lessonChatHistoryStore = useLessonChatHistoryStore(pinia)
+    const activeSessionId = chatSessionStore.activeSessionId
+    lessonChatHistoryStore.historySafetyBySessionId[activeSessionId] = {
+      sessionId: activeSessionId,
+      access: 'read_only',
+      label: '只读',
+      detail: '旧历史或混页历史，只读查看',
+      canRestore: false,
+      historyFormat: 'peptutor-chat-history:v2',
+      auditStatus: 'legacy_readonly',
+      restoreSafety: 'none',
+      messagePageOwnership: 'mixed',
+      safeToMigrate: false,
+      warnings: [],
+    }
+    await flushUi()
+
+    const draftInput = queryRequiredElement<HTMLTextAreaElement>('textarea')
+    setControlValue(draftInput, `I'd like some water.`)
+    await flushUi()
+
+    expect(lessonChatHistoryStore.activeHistoryReadOnly).toBe(true)
+    expect(draftInput.disabled).toBe(false)
+    expect(queryButton('发送').disabled).toBe(false)
 
     mountedApp = null
     app.unmount()
@@ -1671,6 +2031,56 @@ describeMockSmoke('/lesson browser smoke', () => {
     mountedApp = null
     app.unmount()
   })
+
+  it('does not stop lesson playback on recognized speech when the backend asks to finish the current sentence', async () => {
+    installLessonApiMock([lessonTurnP24StartFixture])
+    let playbackControllerSpy!: ReturnType<typeof attachLessonPlaybackControllerSpy>
+    const { app, pinia } = await mountLessonPage('/lesson?page_uid=TB-G5S1U3-P24', {
+      beforeMount: ({ speechRuntimeStore }) => {
+        playbackControllerSpy = attachLessonPlaybackControllerSpy(speechRuntimeStore)
+      },
+    })
+    mountedApp = app
+
+    await vi.waitFor(() => {
+      expect(textContent()).toContain(lessonTurnP24StartFixture.teacher_response)
+    })
+
+    const lessonAiriRuntime = useLessonAiriRuntimeStore(pinia)
+    lessonAiriRuntime.applyPerformancePlan({
+      name: Emotion.Question,
+      intensity: 0.78,
+      motion: 'Explain',
+      expression: 'focused',
+      durationMs: 3000,
+      reason: 'lesson_turn',
+      teachingAction: 'hint',
+      evaluation: 'unclear',
+      turnLabel: 'answer_question',
+      speechStyle: 'gentle_correction',
+      mouthIntensity: 0.7,
+      interruptPolicy: 'finish_current_sentence',
+      contentSource: 'lesson_persona_context',
+      fallbackAllowed: false,
+      performanceSource: 'lesson_persona_context',
+    })
+    await flushUi()
+
+    await openLessonMicrophone()
+
+    await vi.waitFor(() => {
+      expect(mockHearingPipeline.transcribeForMediaStream).toHaveBeenCalledTimes(1)
+    })
+
+    emitMockTranscriptionSentence(`I'd like some water.`)
+    await flushUi()
+
+    expect(playbackControllerSpy.stopAllSpy).not.toHaveBeenCalledWith('lesson-learner-transcription')
+    expect(lessonAiriRuntime.classroomState).not.toBe('interrupted')
+    expect(queryRequiredElement<HTMLTextAreaElement>('textarea').value).toContain(`I'd like some water.`)
+    mountedApp = null
+    app.unmount()
+  })
 })
 
 describeRealSmoke('/lesson browser smoke (real backend)', () => {
@@ -1694,7 +2104,7 @@ describeRealSmoke('/lesson browser smoke (real backend)', () => {
 
   it('loads the catalog, resolves the route page, and auto-starts the first teacher turn', async () => {
     const startedAtMs = Date.now()
-    const { app, lessonStore } = await mountLessonPage()
+    const { app, lessonStore, pinia } = await mountLessonPage()
     mountedApp = app
 
     await vi.waitFor(() => {
@@ -1709,6 +2119,211 @@ describeRealSmoke('/lesson browser smoke (real backend)', () => {
     expect(textContent()).toContain('G5 S1 U3 · P24')
     expect(textContent()).toContain('重新开始')
     logRealSmokeObservation('loads the catalog, resolves the route page, and auto-starts the first teacher turn against the real backend', startedAtMs, teacherResponse)
+    await logRealArtifactSnapshot('loads the catalog, resolves the route page, and auto-starts the first teacher turn against the real backend', pinia)
+    mountedApp = null
+    app.unmount()
+  }, smokeTestTimeoutMs)
+
+  it('observes S4.1 barge-in stop reason while using the real backend lesson turn', async () => {
+    const startedAtMs = Date.now()
+    let playbackControllerSpy!: ReturnType<typeof attachLessonPlaybackControllerSpy>
+    let lessonAiriRuntime!: ReturnType<typeof useLessonAiriRuntimeStore>
+    const playbackId = 's4-barge-in-playback'
+    const replyId = 's4-barge-in-reply'
+    const { app, lessonStore, pinia } = await mountLessonPage('/lesson?page_uid=TB-G5S1U3-P24', {
+      beforeMount: ({ speechRuntimeStore, pinia: mountPinia }) => {
+        lessonAiriRuntime = useLessonAiriRuntimeStore(mountPinia)
+        playbackControllerSpy = attachLessonPlaybackControllerSpy(speechRuntimeStore, {
+          onStopAll: (reason) => {
+            lessonAiriRuntime.markSpeechPlaybackEnd('interrupted', {
+              playbackId,
+              replyId,
+              stopReason: reason,
+            })
+          },
+        })
+      },
+    })
+    mountedApp = app
+
+    await vi.waitFor(() => {
+      expect(lessonStore.transcript).toHaveLength(1)
+      expect(lastTeacherTranscriptText(lessonStore)).not.toBe('')
+    }, { timeout: smokeWaitTimeoutMs })
+
+    lessonAiriRuntime = lessonAiriRuntime || useLessonAiriRuntimeStore(pinia)
+    lessonAiriRuntime.applyPerformancePlan({
+      name: Emotion.Happy,
+      intensity: 0.86,
+      motion: 'Nod',
+      expression: 'soft_smile',
+      durationMs: 3000,
+      reason: 'lesson_turn',
+      teachingAction: 'confirm',
+      evaluation: 'correct',
+      turnLabel: 'answer_question',
+      speechStyle: 'normal',
+      mouthIntensity: 0.8,
+      interruptPolicy: 'barge_in_allowed',
+      contentSource: 'lesson_persona_context',
+      fallbackAllowed: false,
+      performanceSource: 'lesson_persona_context',
+    })
+    lessonAiriRuntime.markSpeechSynthesisStart({
+      provider: 'peptutor-edge-tts',
+      model: 'edge-tts',
+      voice: 'zh-CN-XiaoxiaoNeural',
+      text: lastTeacherTranscriptText(lessonStore),
+      replyId,
+    })
+    lessonAiriRuntime.markSpeechSynthesisHttpResult({
+      status: 200,
+      statusText: 'OK',
+    })
+    lessonAiriRuntime.markSpeechSynthesisReady({
+      audioByteLength: 4096,
+      audioDurationMs: 1800,
+    })
+    lessonAiriRuntime.markSpeechPlaybackRequested({
+      playbackId,
+      replyId,
+      audioContextState: 'running',
+      reason: 's4_evidence_playback_start',
+    })
+    lessonAiriRuntime.markSpeechPlaybackStart({
+      playbackId,
+      replyId,
+      audioContextState: 'running',
+    })
+    await flushUi()
+
+    expect(queryAiriVisibleFact('interrupt_policy')).toBe('barge_in_allowed')
+    expect(queryAiriVisibleFact('tts_playback_state')).toBe('playing')
+
+    await openLessonMicrophone()
+    await vi.waitFor(() => {
+      expect(mockHearingPipeline.transcribeForMediaStream).toHaveBeenCalledTimes(1)
+    }, { timeout: smokeWaitTimeoutMs })
+
+    emitMockTranscriptionSentence(`I'd like some water.`)
+    await flushUi()
+
+    expect(playbackControllerSpy.stopAllSpy).toHaveBeenCalledWith('lesson-learner-transcription')
+    expect(lessonAiriRuntime.ttsPlaybackStopReason).toBe('lesson-learner-transcription')
+    expect(lessonAiriRuntime.ttsPlaybackNormalizedStopReason).toBe('final_transcript_interrupt')
+    expect(queryAiriVisibleFact('tts_stop_reason')).toBe('lesson-learner-transcription')
+    expect(queryAiriVisibleFact('tts_stop_type')).toBe('final_transcript_interrupt')
+    expect(queryAiriVisibleFact('tts_overlap_detected')).toBe('false')
+
+    console.info(`[lesson-s4-interrupt-evidence] ${JSON.stringify({
+      test: 'barge_in_allowed',
+      duration_ms: Date.now() - startedAtMs,
+      interrupt_policy: lessonAiriRuntime.currentInterruptPolicy,
+      tts_playback_stop_reason: lessonAiriRuntime.ttsPlaybackStopReason,
+      tts_playback_stop_reason_normalized: lessonAiriRuntime.ttsPlaybackNormalizedStopReason,
+      sidebar_tts_stop_type: queryAiriVisibleFact('tts_stop_type'),
+      playback_overlap: lessonAiriRuntime.ttsPlaybackOverlapDetected,
+    })}`)
+
+    mountedApp = null
+    app.unmount()
+  }, smokeTestTimeoutMs)
+
+  it('observes S4.1 finish-current-sentence deferral while using the real backend lesson turn', async () => {
+    const startedAtMs = Date.now()
+    let playbackControllerSpy!: ReturnType<typeof attachLessonPlaybackControllerSpy>
+    const playbackId = 's4-finish-current-sentence-playback'
+    const replyId = 's4-finish-current-sentence-reply'
+    const { app, lessonStore, pinia } = await mountLessonPage('/lesson?page_uid=TB-G5S1U3-P24', {
+      beforeMount: ({ speechRuntimeStore }) => {
+        playbackControllerSpy = attachLessonPlaybackControllerSpy(speechRuntimeStore)
+      },
+    })
+    mountedApp = app
+
+    await vi.waitFor(() => {
+      expect(lessonStore.transcript).toHaveLength(1)
+      expect(lastTeacherTranscriptText(lessonStore)).not.toBe('')
+    }, { timeout: smokeWaitTimeoutMs })
+
+    const lessonAiriRuntime = useLessonAiriRuntimeStore(pinia)
+    lessonAiriRuntime.applyPerformancePlan({
+      name: Emotion.Question,
+      intensity: 0.78,
+      motion: 'Explain',
+      expression: 'focused',
+      durationMs: 3000,
+      reason: 'lesson_turn',
+      teachingAction: 'hint',
+      evaluation: 'unclear',
+      turnLabel: 'answer_question',
+      speechStyle: 'gentle_correction',
+      mouthIntensity: 0.7,
+      interruptPolicy: 'finish_current_sentence',
+      contentSource: 'lesson_persona_context',
+      fallbackAllowed: false,
+      performanceSource: 'lesson_persona_context',
+    })
+    lessonAiriRuntime.markSpeechSynthesisStart({
+      provider: 'peptutor-edge-tts',
+      model: 'edge-tts',
+      voice: 'zh-CN-XiaoxiaoNeural',
+      text: lastTeacherTranscriptText(lessonStore),
+      replyId,
+    })
+    lessonAiriRuntime.markSpeechSynthesisHttpResult({
+      status: 200,
+      statusText: 'OK',
+    })
+    lessonAiriRuntime.markSpeechSynthesisReady({
+      audioByteLength: 4096,
+      audioDurationMs: 1800,
+    })
+    lessonAiriRuntime.markSpeechPlaybackRequested({
+      playbackId,
+      replyId,
+      audioContextState: 'running',
+      reason: 's4_evidence_playback_start',
+    })
+    lessonAiriRuntime.markSpeechPlaybackStart({
+      playbackId,
+      replyId,
+      audioContextState: 'running',
+    })
+    await flushUi()
+
+    expect(queryAiriVisibleFact('interrupt_policy')).toBe('finish_current_sentence')
+    expect(queryAiriVisibleFact('tts_playback_state')).toBe('playing')
+
+    await openLessonMicrophone()
+    await vi.waitFor(() => {
+      expect(mockHearingPipeline.transcribeForMediaStream).toHaveBeenCalledTimes(1)
+    }, { timeout: smokeWaitTimeoutMs })
+
+    emitMockTranscriptionSentence(`I'd like some water.`)
+    await flushUi()
+
+    expect(playbackControllerSpy.stopAllSpy).not.toHaveBeenCalledWith('lesson-learner-transcription')
+    expect(lessonAiriRuntime.ttsPlaybackState).toBe('playing')
+    expect(lessonAiriRuntime.ttsPlaybackStopReason).toBe('')
+    expect(lessonAiriRuntime.ttsPlaybackNormalizedStopReason).toBe('')
+    expect(queryAiriVisibleFact('tts_stop_reason')).toBe('none')
+    expect(queryAiriVisibleFact('tts_stop_type')).toBe('none')
+    expect(queryAiriVisibleFact('tts_overlap_detected')).toBe('false')
+    expect(queryRequiredElement<HTMLTextAreaElement>('textarea').value).toContain(`I'd like some water.`)
+
+    console.info(`[lesson-s4-interrupt-evidence] ${JSON.stringify({
+      test: 'finish_current_sentence',
+      duration_ms: Date.now() - startedAtMs,
+      interrupt_policy: lessonAiriRuntime.currentInterruptPolicy,
+      immediate_stop: playbackControllerSpy.stopAllSpy.mock.calls.some(([reason]) => reason === 'lesson-learner-transcription'),
+      deferred_transcript_in_textarea: queryRequiredElement<HTMLTextAreaElement>('textarea').value.includes(`I'd like some water.`),
+      tts_playback_stop_reason: lessonAiriRuntime.ttsPlaybackStopReason || 'none',
+      tts_playback_stop_reason_normalized: lessonAiriRuntime.ttsPlaybackNormalizedStopReason || 'none',
+      sidebar_tts_stop_type: queryAiriVisibleFact('tts_stop_type'),
+      playback_overlap: lessonAiriRuntime.ttsPlaybackOverlapDetected,
+    })}`)
+
     mountedApp = null
     app.unmount()
   }, smokeTestTimeoutMs)
@@ -1775,7 +2390,7 @@ describeRealSmoke('/lesson browser smoke (real backend)', () => {
     app.unmount()
   }, smokeTestTimeoutMs)
 
-  it('keeps browser lesson routing stable across P24 -> P25 -> P26 and preserves the P26 snow interruption', async () => {
+  it('keeps browser lesson routing stable across P24 -> P25 -> P26 and preserves the P26 in-context snow question', async () => {
     const startedAtMs = Date.now()
     const { capturedTurnResults } = installRealLessonApiCapture()
     const { app, lessonStore, router } = await mountLessonPage()
@@ -1808,7 +2423,7 @@ describeRealSmoke('/lesson browser smoke (real backend)', () => {
     await vi.waitFor(() => {
       expect(router.currentRoute.value.query.page_uid).toBe('TB-G5S1U3-P26')
       expect(lessonStore.runtimeState?.current_page_uid).toBe('TB-G5S1U3-P26')
-      expect(lessonStore.runtimeState?.current_block_uid).toBe('TB-G5S1U3-P26-D2')
+      expect(lessonStore.runtimeState?.current_block_uid).toBe('TB-G5S1U3-P26-D1')
       expect(lessonStore.activeTurn?.turn_label).toBe('page_entry')
       expect(lastTeacherTranscriptText(lessonStore)).not.toBe('')
       expect(lastTeacherTranscriptText(lessonStore)).not.toBe(p25TeacherResponse)
@@ -1819,26 +2434,51 @@ describeRealSmoke('/lesson browser smoke (real backend)', () => {
     expect(textContent()).toContain('G5 S1 U3 · P26')
 
     const draftInput = queryRequiredElement<HTMLTextAreaElement>('textarea')
+    setControlValue(draftInput, '第一块')
+    await flushUi()
+    await vi.waitFor(() => {
+      expect(queryRequiredElement<HTMLTextAreaElement>('textarea').disabled).toBe(false)
+      expect(queryButton('发送').disabled).toBe(false)
+    }, { timeout: smokeWaitTimeoutMs })
+    clickButton('发送')
+
+    await vi.waitFor(() => {
+      const latestTurn = capturedTurnResults.at(-1)
+      expect(lessonStore.activeTurn?.turn_label).toBe('navigation')
+      expect(lessonStore.runtimeState?.current_block_uid).toBe('TB-G5S1U3-P26-D1')
+      expect(lessonStore.runtimeState?.awaiting_answer).toBe(true)
+      expect(lastTeacherTranscriptText(lessonStore)).not.toBe(p26TeacherResponse)
+      expect(latestTurn?.turn_label).toBe('navigation')
+      expect(latestTurn?.state.current_block_uid).toBe('TB-G5S1U3-P26-D1')
+      expect(latestTurn?.state.awaiting_answer).toBe(true)
+    }, { timeout: smokeWaitTimeoutMs })
+
+    const p26ModuleResponse = lastTeacherTranscriptText(lessonStore)
     setControlValue(draftInput, 'What does snow mean?')
     await flushUi()
+    await vi.waitFor(() => {
+      expect(queryRequiredElement<HTMLTextAreaElement>('textarea').disabled).toBe(false)
+      expect(queryButton('发送').disabled).toBe(false)
+    }, { timeout: smokeWaitTimeoutMs })
     clickButton('发送')
 
     await vi.waitFor(() => {
       const latestTurn = capturedTurnResults.at(-1)
       expect(lessonStore.activeTurn?.turn_label).toBe('ask_knowledge')
-      expect(lessonStore.runtimeState?.current_block_uid).toBe('TB-G5S1U3-P26-D2')
+      expect(lessonStore.runtimeState?.current_block_uid).toBe('TB-G5S1U3-P26-D1')
       expect(lessonStore.runtimeState?.awaiting_answer).toBe(true)
-      expect(lastTeacherTranscriptText(lessonStore)).not.toBe(p26TeacherResponse)
+      expect(lastTeacherTranscriptText(lessonStore)).not.toBe(p26ModuleResponse)
       expect(latestTurn?.turn_label).toBe('ask_knowledge')
       expect(['block', 'page', 'unit']).toContain(latestTurn?.retrieval_mode)
-      expect(latestTurn?.state.current_block_uid).toBe('TB-G5S1U3-P26-D2')
+      expect(latestTurn?.state.current_block_uid).toBe('TB-G5S1U3-P26-D1')
       expect(latestTurn?.state.awaiting_answer).toBe(true)
-      expect(latestTurn?.retrieved_block_uids).toContain('TB-G5S1U3-P26-D1')
+      expect(latestTurn?.support_entry_uids).toContain('KA-G5S1U3-word-snow')
+      expect(latestTurn?.teacher_response).toMatch(/snow|雪/i)
     }, { timeout: smokeWaitTimeoutMs })
 
     const latestTurn = capturedTurnResults.at(-1)
     if (!latestTurn) {
-      throw new Error('Expected to capture the real backend P26 knowledge-interruption turn.')
+      throw new Error('Expected to capture the real backend P26 in-context snow question turn.')
     }
 
     expectRealTeacherResponse(latestTurn.teacher_response)
@@ -1846,7 +2486,7 @@ describeRealSmoke('/lesson browser smoke (real backend)', () => {
 
     if (expectRealLessonDebugSignals) {
       if (!latestTurn.debug_signals) {
-        throw new Error('Expected the real backend P26 interruption turn to include debug_signals. Start LightRAG with PEPTUTOR_DEBUG_SIGNALS=1.')
+        throw new Error('Expected the real backend P26 in-context question turn to include debug_signals. Start LightRAG with PEPTUTOR_DEBUG_SIGNALS=1.')
       }
 
       expect(latestTurn.debug_signals.live_prompts.enabled).toBe(true)
@@ -1854,7 +2494,7 @@ describeRealSmoke('/lesson browser smoke (real backend)', () => {
     }
 
     logRealSmokeObservation(
-      'keeps browser lesson routing stable across P24 -> P25 -> P26 and preserves the P26 snow interruption',
+      'keeps browser lesson routing stable across P24 -> P25 -> P26 and preserves the P26 in-context snow question',
       startedAtMs,
       latestTurn.teacher_response,
     )
@@ -1863,7 +2503,7 @@ describeRealSmoke('/lesson browser smoke (real backend)', () => {
     app.unmount()
   }, smokeTestTimeoutMs)
 
-  it('keeps browser lesson routing stable on G6 P13 while unit-vocabulary interruptions stay on the dialogue block', async () => {
+  it('keeps browser lesson routing stable on G6 P13 while in-context vocabulary questions stay on the dialogue block', async () => {
     const startedAtMs = Date.now()
     const { capturedTurnResults } = installRealLessonApiCapture()
     const { app, lessonStore, router } = await mountLessonPage('/lesson?page_uid=TB-G6S2U2-P13')
@@ -1905,12 +2545,12 @@ describeRealSmoke('/lesson browser smoke (real backend)', () => {
       expect(latestTurn?.retrieval_mode).toBe('unit')
       expect(latestTurn?.state.current_block_uid).toBe('TB-G6S2U2-P13-D2')
       expect(latestTurn?.state.awaiting_answer).toBe(true)
-      expect(latestTurn?.retrieved_block_uids?.[0]).toBe('TB-G6S2U2-P15-D1')
+      expect(latestTurn?.teacher_response).toMatch(/stayed at home|待在家|在家/i)
     }, { timeout: smokeWaitTimeoutMs })
 
     const stayedHomeTurn = capturedTurnResults.at(-1)
     if (!stayedHomeTurn) {
-      throw new Error('Expected to capture the real backend stayed-at-home interruption turn.')
+      throw new Error('Expected to capture the real backend stayed-at-home in-context question turn.')
     }
 
     expectRealTeacherResponse(stayedHomeTurn.teacher_response)
@@ -1919,7 +2559,7 @@ describeRealSmoke('/lesson browser smoke (real backend)', () => {
 
     if (expectRealLessonDebugSignals) {
       if (!stayedHomeTurn.debug_signals) {
-        throw new Error('Expected the real backend stayed-at-home interruption turn to include debug_signals. Start LightRAG with PEPTUTOR_DEBUG_SIGNALS=1.')
+        throw new Error('Expected the real backend stayed-at-home in-context question turn to include debug_signals. Start LightRAG with PEPTUTOR_DEBUG_SIGNALS=1.')
       }
 
       expect(stayedHomeTurn.debug_signals.live_prompts.enabled).toBe(true)
@@ -1940,12 +2580,12 @@ describeRealSmoke('/lesson browser smoke (real backend)', () => {
       expect(latestTurn?.retrieval_mode).toBe('unit')
       expect(latestTurn?.state.current_block_uid).toBe('TB-G6S2U2-P13-D2')
       expect(latestTurn?.state.awaiting_answer).toBe(true)
-      expect(latestTurn?.retrieved_block_uids?.[0]).toBe('TB-G6S2U2-P17-D1')
+      expect(latestTurn?.teacher_response).toMatch(/had a cold|have a cold|感冒/i)
     }, { timeout: smokeWaitTimeoutMs })
 
     const hadColdTurn = capturedTurnResults.at(-1)
     if (!hadColdTurn) {
-      throw new Error('Expected to capture the real backend had-a-cold interruption turn.')
+      throw new Error('Expected to capture the real backend had-a-cold in-context question turn.')
     }
 
     expectRealTeacherResponse(hadColdTurn.teacher_response)
@@ -1954,7 +2594,7 @@ describeRealSmoke('/lesson browser smoke (real backend)', () => {
 
     if (expectRealLessonDebugSignals) {
       if (!hadColdTurn.debug_signals) {
-        throw new Error('Expected the real backend had-a-cold interruption turn to include debug_signals. Start LightRAG with PEPTUTOR_DEBUG_SIGNALS=1.')
+        throw new Error('Expected the real backend had-a-cold in-context question turn to include debug_signals. Start LightRAG with PEPTUTOR_DEBUG_SIGNALS=1.')
       }
 
       expect(hadColdTurn.debug_signals.live_prompts.enabled).toBe(true)
@@ -1962,7 +2602,7 @@ describeRealSmoke('/lesson browser smoke (real backend)', () => {
     }
 
     logRealSmokeObservation(
-      'keeps browser lesson routing stable on G6 P13 while unit-vocabulary interruptions stay on the dialogue block',
+      'keeps browser lesson routing stable on G6 P13 while in-context vocabulary questions stay on the dialogue block',
       startedAtMs,
       hadColdTurn.teacher_response,
     )

@@ -17,6 +17,8 @@ LearnerSignal = Literal[
     "small_error",
     "help_request",
     "knowledge_question",
+    "vocabulary_question",
+    "module_navigation_unavailable",
     "off_topic",
     "good_answer",
 ]
@@ -29,7 +31,10 @@ TeachingMoveName = Literal[
     "light_recast",
     "give_one_step_hint",
     "answer_briefly_then_return",
+    "vocab_answer_return",
     "redirect_to_active_task",
+    "gentle_redirect",
+    "single_block_guard",
     "confirm_and_advance",
 ]
 
@@ -46,6 +51,13 @@ class TeachingMovePlan(BaseModel):
     rationale: str = Field(min_length=1, max_length=240)
     evidence_fields_used: list[str] = Field(default_factory=list)
     expected_next_learner_action: str = Field(min_length=1, max_length=240)
+    payload_fields: dict[str, Any] = Field(default_factory=dict)
+    constraints: list[str] = Field(default_factory=list)
 
     def to_prompt_payload(self) -> dict[str, Any]:
-        return self.model_dump(mode="json")
+        payload = self.model_dump(mode="json")
+        return {
+            key: value
+            for key, value in payload.items()
+            if not (key in {"payload_fields", "constraints"} and not value)
+        }

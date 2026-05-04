@@ -9,7 +9,7 @@ const props = withDefaults(defineProps<{ colorClass?: string }>(), { colorClass:
 const settingsAudio = useSettingsAudioDevice()
 const { stream, enabled } = storeToRefs(settingsAudio)
 
-const { audioContext } = storeToRefs(useAudioContext())
+const { resumeAudioContext } = useAudioContext()
 const { startAnalyzer, stopAnalyzer, volumeLevel } = useAudioAnalyzer()
 
 let source: MediaStreamAudioSourceNode | undefined
@@ -33,9 +33,7 @@ async function setup() {
   if (!enabled.value || !stream.value)
     return
 
-  const ctx = audioContext.value
-  if (ctx.state === 'suspended')
-    await ctx.resume()
+  const ctx = await resumeAudioContext()
   const analyser = startAnalyzer(ctx)
   if (!analyser)
     return

@@ -98,7 +98,12 @@ export function createPepTutorEdgeSpeechProvider(
 
         if (!response.ok) {
           const errorText = await response.text()
-          throw new Error(errorText || `Edge TTS proxy failed with HTTP ${response.status}`)
+          const error = new Error(errorText || `Edge TTS proxy failed with HTTP ${response.status}`)
+          Object.assign(error, {
+            status: response.status,
+            statusText: response.statusText,
+          })
+          throw error
         }
 
         return response

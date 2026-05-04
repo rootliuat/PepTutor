@@ -1,7 +1,7 @@
 import type { ChatProvider } from '@xsai-ext/providers/utils'
 import type { UserMessage } from '@xsai/shared-chat'
 
-import type { ChatStreamEvent, ContextMessage } from '../../../types/chat'
+import type { ChatStreamEvent, ChatStreamEventContext, ContextMessage } from '../../../types/chat'
 
 import { isStageTamagotchi, isStageWeb } from '@proj-airi/stage-shared'
 import { useBroadcastChannel } from '@vueuse/core'
@@ -156,49 +156,49 @@ export const useContextBridgeStore = defineStore('mods:api:context-bridge', () =
           if (isProcessingRemoteStream)
             return
 
-          broadcastStreamEvent({ type: 'before-compose', message, sessionId: chatSession.activeSessionId, context: structuredClone(toRaw(context)) })
+          broadcastStreamEvent({ type: 'before-compose', message, sessionId: chatSession.activeSessionId, context: cloneChatStreamContextForBroadcast(context) })
         }),
         chatOrchestrator.onAfterMessageComposed(async (message, context) => {
           if (isProcessingRemoteStream)
             return
 
-          broadcastStreamEvent({ type: 'after-compose', message, sessionId: chatSession.activeSessionId, context: structuredClone(toRaw(context)) })
+          broadcastStreamEvent({ type: 'after-compose', message, sessionId: chatSession.activeSessionId, context: cloneChatStreamContextForBroadcast(context) })
         }),
         chatOrchestrator.onBeforeSend(async (message, context) => {
           if (isProcessingRemoteStream)
             return
 
-          broadcastStreamEvent({ type: 'before-send', message, sessionId: chatSession.activeSessionId, context: structuredClone(toRaw(context)) })
+          broadcastStreamEvent({ type: 'before-send', message, sessionId: chatSession.activeSessionId, context: cloneChatStreamContextForBroadcast(context) })
         }),
         chatOrchestrator.onAfterSend(async (message, context) => {
           if (isProcessingRemoteStream)
             return
 
-          broadcastStreamEvent({ type: 'after-send', message, sessionId: chatSession.activeSessionId, context: structuredClone(toRaw(context)) })
+          broadcastStreamEvent({ type: 'after-send', message, sessionId: chatSession.activeSessionId, context: cloneChatStreamContextForBroadcast(context) })
         }),
         chatOrchestrator.onTokenLiteral(async (literal, context) => {
           if (isProcessingRemoteStream)
             return
 
-          broadcastStreamEvent({ type: 'token-literal', literal, sessionId: chatSession.activeSessionId, context: structuredClone(toRaw(context)) })
+          broadcastStreamEvent({ type: 'token-literal', literal, sessionId: chatSession.activeSessionId, context: cloneChatStreamContextForBroadcast(context) })
         }),
         chatOrchestrator.onTokenSpecial(async (special, context) => {
           if (isProcessingRemoteStream)
             return
 
-          broadcastStreamEvent({ type: 'token-special', special, sessionId: chatSession.activeSessionId, context: structuredClone(toRaw(context)) })
+          broadcastStreamEvent({ type: 'token-special', special, sessionId: chatSession.activeSessionId, context: cloneChatStreamContextForBroadcast(context) })
         }),
         chatOrchestrator.onStreamEnd(async (context) => {
           if (isProcessingRemoteStream)
             return
 
-          broadcastStreamEvent({ type: 'stream-end', sessionId: chatSession.activeSessionId, context: structuredClone(toRaw(context)) })
+          broadcastStreamEvent({ type: 'stream-end', sessionId: chatSession.activeSessionId, context: cloneChatStreamContextForBroadcast(context) })
         }),
         chatOrchestrator.onAssistantResponseEnd(async (message, context) => {
           if (isProcessingRemoteStream)
             return
 
-          broadcastStreamEvent({ type: 'assistant-end', message, sessionId: chatSession.activeSessionId, context: structuredClone(toRaw(context)) })
+          broadcastStreamEvent({ type: 'assistant-end', message, sessionId: chatSession.activeSessionId, context: cloneChatStreamContextForBroadcast(context) })
         }),
 
         chatOrchestrator.onAssistantMessage(async (message, _messageText, context) => {
@@ -344,3 +344,65 @@ export const useContextBridgeStore = defineStore('mods:api:context-bridge', () =
     dispose,
   }
 })
+
+function toJsonClone<T>(value: T): T | undefined {
+  if (value === undefined) {
+    return undefined
+  }
+
+  const seen = new WeakSet<object>()
+  const json = JSON.stringify(value, (_key, item) => {
+    if (typeof item === 'function' || typeof item === 'symbol') {
+      return undefined
+    }
+
+    if (item instanceof Error) {
+      return {
+        name: item.name,
+        message: item.message,
+        stack: item.stack,
+      }
+    }
+
+    if (item && typeof item === 'object') {
+      if (seen.has(item)) {
+        return undefined
+      }
+      seen.add(item)
+    }
+
+    return item
+  })
+
+  if (json === undefined) {
+    return undefined
+  }
+
+  return JSON.parse(json) as T
+}
+
+export function cloneChatStreamContextForBroadcast<T extends ChatStreamEvent['context']>(context: T): T {
+  const rawContext = toRaw(context)
+
+  try {
+    return structuredClone(rawContext) as T
+  }
+  catch {
+    const cloned = toJsonClone(rawContext)
+    if (cloned) {
+      return cloned as T
+    }
+
+    const partialContext = rawContext as Partial<ChatStreamEventContext>
+    const fallbackContext = {
+      message: toJsonClone(partialContext.message) ?? { role: 'user', content: '' },
+      contexts: toJsonClone(partialContext.contexts) ?? {},
+      input: toJsonClone(partialContext.input),
+      ...('composedMessage' in partialContext
+        ? { composedMessage: toJsonClone(partialContext.composedMessage) ?? [] }
+        : {}),
+    }
+
+    return fallbackContext as T
+  }
+}

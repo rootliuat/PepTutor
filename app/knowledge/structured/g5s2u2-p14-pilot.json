@@ -1,0 +1,193 @@
+{
+  "pilot_id": "g5s2u2-p14-structure-overlay-v1",
+  "scope": {
+    "grade": "G5",
+    "semester": "S2",
+    "unit": "U2",
+    "pages": [
+      14
+    ]
+  },
+  "source_files": [
+    "app/knowledge/structured/general/g5s2u2-general.json",
+    "app/knowledge/raw/02.五年级下册语料.js"
+  ],
+  "learning_targets": [],
+  "knowledge_atoms": [],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G5S2U2-P14",
+      "page_type": "dialogue",
+      "page_intro_cn": "这一页先看 Let's talk 主对话，练 Which season do you like best?，再做 Ask and answer 调查，最后用 Let's try 听天气信息。",
+      "entry_probe_questions": [
+        "先看 Let's talk：Which season do you like best?",
+        "如果你想先调查同学，可以说：Ask and answer."
+      ],
+      "priority_blocks": [
+        "TB-G5S2U2-P14-D2",
+        "TB-G5S2U2-P14-D3",
+        "TB-G5S2U2-P14-D1"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G5S2U2-P14-D1",
+      "page_uid": "TB-G5S2U2-P14",
+      "page_type": "dialogue",
+      "block_type": "listening_probe",
+      "source_refs": [
+        "TB-G5S2U2-P14-D1"
+      ],
+      "teaching_goal": "Let's try：听天气信息并写出 sunny and warm。",
+      "teaching_summary": "Let's try 听力。学生听录音判断今天的天气，从 rainy and cold、windy and cold、sunny and warm 中抓出 sunny and warm。",
+      "focus_vocabulary": [
+        "rainy and cold",
+        "windy and cold",
+        "sunny and warm"
+      ],
+      "core_patterns": [
+        "What is the weather like today? Listen and write."
+      ],
+      "allowed_answer_scope": [
+        "sunny and warm"
+      ],
+      "entry_probe_questions": [
+        "Listen for the weather: sunny and warm."
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "asr_clarify"
+      ],
+      "next_block_uids": [],
+      "learning_target_uids": [
+        "LT-G5S2U2-P14-D1-goal"
+      ],
+      "branchable_topics": [
+        "Let's try",
+        "weather",
+        "sunny and warm",
+        "rainy and cold",
+        "windy and cold"
+      ],
+      "return_anchors": [
+        "What is the weather like today?",
+        "sunny and warm"
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P14-D2",
+      "page_uid": "TB-G5S2U2-P14",
+      "page_type": "dialogue",
+      "block_type": "dialogue_core",
+      "source_refs": [
+        "TB-G5S2U2-P14-D2"
+      ],
+      "teaching_goal": "Let's talk：理解并会说最喜欢季节的主对话。",
+      "teaching_summary": "Let's talk 主对话。学生先听懂 Mr Jones 和孩子们谈论 The Four Seasons，再练 Which season do you like best? 以及 Winter. I like snow. / Spring. It's pretty.",
+      "focus_vocabulary": [
+        "beautiful",
+        "The Four Seasons",
+        "draw",
+        "winter",
+        "snow",
+        "spring",
+        "pretty"
+      ],
+      "core_patterns": [
+        "Which season do you like best?",
+        "Winter. I like snow.",
+        "Spring. It's pretty."
+      ],
+      "allowed_answer_scope": [
+        "Winter. I like snow.",
+        "Spring. It's pretty.",
+        "I like summer best.",
+        "I like autumn best."
+      ],
+      "entry_probe_questions": [
+        "Can you say: Which season do you like best?",
+        "Try an answer: Winter. I like snow."
+      ],
+      "repair_modes": [
+        "repeat",
+        "slow_read",
+        "word_drill",
+        "sentence_drill",
+        "asr_clarify"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U2-P14-D3",
+        "TB-G5S2U2-P14-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U2-P14-D2-goal"
+      ],
+      "branchable_topics": [
+        "Let's talk",
+        "Favourite Seasons",
+        "Which season do you like best?",
+        "winter",
+        "spring",
+        "snow",
+        "pretty"
+      ],
+      "return_anchors": [
+        "Which season do you like best?",
+        "Winter. I like snow.",
+        "Spring. It's pretty."
+      ]
+    },
+    {
+      "block_uid": "TB-G5S2U2-P14-D3",
+      "page_uid": "TB-G5S2U2-P14",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G5S2U2-P14-D3"
+      ],
+      "teaching_goal": "Ask and answer：用同一个句型做最喜欢季节的小调查。",
+      "teaching_summary": "Ask and answer 调查活动。学生用 Which season do you like best? 询问同伴，并用 Winter. / Spring. / Summer. / Autumn. 简短回答。",
+      "focus_vocabulary": [],
+      "core_patterns": [
+        "Which season do you like best?",
+        "Winter."
+      ],
+      "allowed_answer_scope": [
+        "Winter.",
+        "Spring.",
+        "Summer.",
+        "Autumn."
+      ],
+      "entry_probe_questions": [
+        "Ask your partner: Which season do you like best?"
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G5S2U2-P14-D1"
+      ],
+      "learning_target_uids": [
+        "LT-G5S2U2-P14-D3-goal"
+      ],
+      "branchable_topics": [
+        "Ask and answer",
+        "Favourite Seasons",
+        "season survey",
+        "spring",
+        "summer",
+        "autumn",
+        "winter"
+      ],
+      "return_anchors": [
+        "Which season do you like best?",
+        "Winter."
+      ]
+    }
+  ]
+}

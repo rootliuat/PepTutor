@@ -5,7 +5,7 @@ import posthog from 'posthog-js'
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
-import { useBuildInfo } from '../../composables'
+import { useBuildInfo } from '../../composables/use-build-info'
 
 export const useSharedAnalyticsStore = defineStore('analytics-shared', () => {
   const buildInfo = ref<AboutBuildInfo>(useBuildInfo())

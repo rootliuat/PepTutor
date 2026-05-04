@@ -51,4 +51,27 @@ describe('peptutor edge speech provider', () => {
       }),
     })
   })
+
+  it('attaches the backend HTTP status to failed Edge TTS requests', async () => {
+    vi.stubGlobal('fetch', vi.fn(async () => new Response('upstream unavailable', {
+      status: 503,
+      statusText: 'Service Unavailable',
+    })))
+
+    const provider = createPepTutorEdgeSpeechProvider({
+      proxyUrl: 'https://lesson.example.test/api/peptutor/edge-tts',
+    })
+    const request = provider.speech('edge-tts')
+
+    await expect(request.fetch!(new URL('https://ignored.example.test'), {
+      body: JSON.stringify({
+        input: 'Hello',
+        voice: 'zh-CN-XiaoxiaoNeural',
+      }),
+    })).rejects.toMatchObject({
+      message: 'upstream unavailable',
+      status: 503,
+      statusText: 'Service Unavailable',
+    })
+  })
 })

@@ -15,7 +15,7 @@ const props = defineProps<{
   voice: string
 }>()
 
-const { audioContext } = useAudioContext()
+const { ensureAudioContext } = useAudioContext()
 const nowSpeaking = ref(false)
 const ttsInputChunks = ref<TTSInputChunk[]>([])
 const speechGenerationIndex = ref(-1)
@@ -24,6 +24,7 @@ const audioQueue = createQueue<{ audioBuffer: AudioBuffer, text: string }>({
   handlers: [
     (ctx) => {
       return new Promise((resolve) => {
+        const audioContext = ensureAudioContext()
         const source = audioContext.createBufferSource()
         source.buffer = ctx.data.audioBuffer
         source.connect(audioContext.destination)
@@ -47,6 +48,7 @@ async function handleSpeechGeneration(ctx: { data: string }) {
 
     const res = await props.generateSpeech(input, props.voice, false)
 
+    const audioContext = ensureAudioContext()
     const audioBuffer = await audioContext.decodeAudioData(res)
     audioQueue.enqueue({ audioBuffer, text: ctx.data })
   }

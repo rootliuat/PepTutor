@@ -592,15 +592,16 @@
     {
       "page_uid": "TB-G6S2Recycle2-P49",
       "page_type": "phonics",
-      "page_intro_cn": "Theme: A farewell party. 一个开放性的活动，鼓励学生结合所学词汇，为自己的派对列出一份物品清单。",
+      "page_intro_cn": "Theme: A farewell party. 展示了一个正在准备中的告别派对现场，包含各种食物、饮料、餐具以及派对用品。右侧列出了对应的单词列表供学生观察和匹配。",
       "entry_probe_questions": [
-        "Can you say: Create a personal party shopping list."
+        "Do you know the word brown bread?",
+        "Can you say: Identify and match vocabulary related to party food, drinks, and supplies."
       ],
       "priority_blocks": [
-        "TB-G6S2Recycle2-P49-D4",
+        "TB-G6S2Recycle2-P49-D1",
         "TB-G6S2Recycle2-P49-D2",
         "TB-G6S2Recycle2-P49-D3",
-        "TB-G6S2Recycle2-P49-D1"
+        "TB-G6S2Recycle2-P49-D4"
       ],
       "assumed_prior_knowledge": []
     },
@@ -837,7 +838,11 @@
       "repair_modes": [
         "repeat"
       ],
-      "next_block_uids": [],
+      "next_block_uids": [
+        "TB-G6S2Recycle2-P49-D2",
+        "TB-G6S2Recycle2-P49-D3",
+        "TB-G6S2Recycle2-P49-D4"
+      ],
       "learning_target_uids": [
         "LT-G6S2Recycle2-P49-D1-goal"
       ],
@@ -897,7 +902,7 @@
       ],
       "next_block_uids": [
         "TB-G6S2Recycle2-P49-D3",
-        "TB-G6S2Recycle2-P49-D1"
+        "TB-G6S2Recycle2-P49-D4"
       ],
       "learning_target_uids": [
         "LT-G6S2Recycle2-P49-D2-goal"
@@ -957,7 +962,7 @@
         "word_drill"
       ],
       "next_block_uids": [
-        "TB-G6S2Recycle2-P49-D1"
+        "TB-G6S2Recycle2-P49-D4"
       ],
       "learning_target_uids": [
         "LT-G6S2Recycle2-P49-D3-goal"
@@ -1001,11 +1006,7 @@
         "word_drill",
         "sentence_drill"
       ],
-      "next_block_uids": [
-        "TB-G6S2Recycle2-P49-D2",
-        "TB-G6S2Recycle2-P49-D3",
-        "TB-G6S2Recycle2-P49-D1"
-      ],
+      "next_block_uids": [],
       "learning_target_uids": [
         "LT-G6S2Recycle2-P49-D4-goal"
       ],

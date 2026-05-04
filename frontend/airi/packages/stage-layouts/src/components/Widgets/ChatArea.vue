@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { LessonInterruptEvent } from '@proj-airi/stage-ui/utils/lesson-interrupt-policy'
 import type { ChatProvider } from '@xsai-ext/providers/utils'
 
 import { isStageTamagotchi } from '@proj-airi/stage-shared'
@@ -13,7 +14,7 @@ import { useHearingSpeechInputPipeline, useHearingStore } from '@proj-airi/stage
 import { useProvidersStore } from '@proj-airi/stage-ui/stores/providers'
 import { useSettings, useSettingsAudioDevice } from '@proj-airi/stage-ui/stores/settings'
 import { useSpeechRuntimeStore } from '@proj-airi/stage-ui/stores/speech-runtime'
-import { BasicTextarea } from '@proj-airi/ui'
+import { resolveLessonInterruptDecision } from '@proj-airi/stage-ui/utils/lesson-interrupt-policy'
 import { until } from '@vueuse/core'
 import { storeToRefs } from 'pinia'
 import { computed, nextTick, onMounted, onUnmounted, ref, unref, watch } from 'vue'
@@ -32,6 +33,7 @@ const props = withDefaults(defineProps<{
   interruptPlaybackOnInput?: boolean
   compactMode?: boolean
   pushToTalkHotkey?: boolean
+  beforeSend?: () => Promise<void> | void
 }>(), {
   chatProviderOverride: null,
   modelOverride: '',
@@ -43,6 +45,7 @@ const props = withDefaults(defineProps<{
   interruptPlaybackOnInput: false,
   compactMode: false,
   pushToTalkHotkey: false,
+  beforeSend: undefined,
 })
 
 const messageInput = ref('')
@@ -52,9 +55,11 @@ const microphoneInitInFlight = ref(false)
 const pendingAutoSendText = ref('')
 const pushToTalkActive = ref(false)
 const inputShellRef = ref<HTMLElement>()
+const textareaRef = ref<HTMLTextAreaElement>()
 const lastLiveTranscriptPreview = ref('')
 let pushToTalkCtrlDown = false
 let pushToTalkMetaDown = false
+let textareaResizeFrame: number | undefined
 
 const providersStore = useProvidersStore()
 const { activeProvider, activeModel } = storeToRefs(useConsciousnessStore())
@@ -69,7 +74,7 @@ const chatSession = useChatSessionStore()
 const speechRuntimeStore = useSpeechRuntimeStore()
 const { ingest, onAfterMessageComposed, discoverToolsCompatibility } = chatOrchestrator
 const { messages } = storeToRefs(chatSession)
-const { audioContext } = useAudioContext()
+const { resumeAudioContext } = useAudioContext()
 const { t } = useI18n()
 const { startAnalyzer, stopAnalyzer, volumeLevel } = useAudioAnalyzer()
 const normalizedVolume = computed(() => Math.min(1, Math.max(0, (volumeLevel.value ?? 0) / 100)))
@@ -83,13 +88,19 @@ const { transcribeForMediaStream, stopStreamingTranscription } = hearingPipeline
 const { supportsStreamInput } = storeToRefs(hearingPipeline)
 const { configured: hearingConfigured, autoSendEnabled, autoSendDelay } = storeToRefs(hearingStore)
 const { loading: lessonLoading, runtimeState } = storeToRefs(lessonStore)
-const { teacherSpeaking, lastRecognizedText, liveTranscriptText } = storeToRefs(lessonAiriRuntime)
+const { teacherSpeaking, lastRecognizedText, liveTranscriptText, currentInterruptPolicy } = storeToRefs(lessonAiriRuntime)
 const shouldUseStreamInput = computed(() => supportsStreamInput.value && !!stream.value)
 const effectiveAutoSendEnabled = computed(() => props.autoSendEnabledOverride ?? autoSendEnabled.value)
 const effectiveAutoSendDelay = computed(() => props.autoSendDelayOverride ?? autoSendDelay.value)
 const shouldInterruptPlaybackOnInput = computed(() => props.interruptPlaybackOnInput)
 const chatInputPlaceholder = computed(() => props.placeholder || t('stage.message'))
-const canSendMessage = computed(() => Boolean(messageInput.value.trim()) && !isComposing.value && !props.disabled)
+const canSendMessage = computed(() =>
+  Boolean(messageInput.value.trim())
+  && !isComposing.value
+  && !props.disabled
+  && !lessonLoading.value
+  && !sending.value,
+)
 const activeTranscriptionProviderId = computed(() => {
   const provider = unref(hearingStore.activeTranscriptionProvider)
   return typeof provider === 'string' ? provider : ''
@@ -159,17 +170,17 @@ const microphoneContextLabel = computed(() => {
 
   return selectedAudioInputLabel.value
 })
-const textareaMinHeight = computed(() => props.compactMode ? '[82px]' : '[124px]')
-const textareaDefaultHeight = computed(() => props.compactMode ? '82px' : '124px')
-const textareaBottomPadding = computed(() => props.compactMode ? '[78px]' : '[132px]')
-const textareaHorizontalPaddingClass = computed(() => props.compactMode
-  ? 'pl-[7.5rem] pr-[4.75rem]'
-  : 'px-5')
 const actionButtonSizeClasses = computed(() => props.compactMode ? 'h-10 w-10' : 'h-12 w-12')
 const sendButtonClasses = computed(() => props.compactMode
   ? 'h-10 min-w-10 rounded-full px-3.5'
   : 'h-11 min-w-11 rounded-full px-4')
 const sendButtonLabelVisible = computed(() => !props.compactMode)
+const composerShellClasses = computed(() => props.compactMode
+  ? 'min-h-[5.25rem] items-end gap-2 rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(8,13,23,0.95),rgba(5,9,16,0.96))] px-3 py-3 shadow-[0_24px_80px_-55px_rgba(2,12,27,0.98)]'
+  : 'items-end gap-3 rounded-[28px] border border-sky-100/90 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(240,249,255,0.9))] px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(12,18,28,0.96),rgba(8,12,20,0.92))] dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]')
+const textareaClasses = computed(() => props.compactMode
+  ? 'max-h-[9rem] min-h-[2rem] py-1 text-[15px] leading-6'
+  : 'max-h-[18rem] min-h-[3.25rem] py-2 text-base leading-6')
 const learnerSpeaking = computed(() => isListening.value && normalizedVolume.value >= 0.08)
 const canStopInteraction = computed(() =>
   teacherSpeaking.value
@@ -346,9 +357,10 @@ async function resolveSendOptions() {
   }
 }
 
-async function sendTextToChat(text: string) {
+async function sendTextToChat(text: string, interruptEvent: Extract<LessonInterruptEvent, 'manual_send' | 'auto_send'> = 'manual_send') {
+  await props.beforeSend?.()
   if (shouldInterruptPlaybackOnInput.value) {
-    interruptLessonPlayback('lesson-learner-send')
+    interruptLessonPlayback(interruptEvent)
   }
   lessonAiriRuntime.setClassroomState('thinking')
   await ingest(text, await resolveSendOptions())
@@ -432,11 +444,20 @@ function commitLiveTranscriptDelta(delta: string) {
   return delta.trim()
 }
 
-function interruptLessonPlayback(reason: string) {
+function interruptLessonPlayback(event: LessonInterruptEvent) {
   if (shouldInterruptPlaybackOnInput.value) {
-    speechRuntimeStore.stopAll(reason)
-    lessonStore.abortActiveTurn(reason)
-    lessonAiriRuntime.markInterrupted()
+    const decision = resolveLessonInterruptDecision({
+      event,
+      policy: currentInterruptPolicy.value,
+    })
+    if (!decision.shouldStopPlayback)
+      return
+
+    speechRuntimeStore.stopAll(decision.rawStopReason)
+    if (decision.shouldAbortActiveTurn)
+      lessonStore.abortActiveTurn(decision.rawStopReason)
+    if (decision.shouldMarkInterrupted)
+      lessonAiriRuntime.markInterrupted()
   }
 }
 
@@ -473,7 +494,7 @@ async function debouncedAutoSend(text: string, options: { replace?: boolean } = 
     const textToSend = takePendingAutoSendText()
     if (textToSend && effectiveAutoSendEnabled.value) {
       try {
-        await sendTextToChat(textToSend)
+        await sendTextToChat(textToSend, 'auto_send')
         lessonAiriRuntime.markRecognizedText(textToSend)
         // Clear the message input after sending
         messageInput.value = ''
@@ -508,6 +529,45 @@ async function handleSend() {
   }
 }
 
+function scheduleTextareaResize() {
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  if (textareaResizeFrame !== undefined) {
+    window.cancelAnimationFrame(textareaResizeFrame)
+  }
+
+  textareaResizeFrame = window.requestAnimationFrame(() => {
+    textareaResizeFrame = undefined
+    const textarea = textareaRef.value
+    if (!textarea) {
+      return
+    }
+
+    textarea.style.height = 'auto'
+    textarea.style.height = `${Math.min(textarea.scrollHeight, props.compactMode ? 144 : 288)}px`
+  })
+}
+
+function handleTextareaInput() {
+  scheduleTextareaResize()
+}
+
+function handleTextareaKeydown(event: KeyboardEvent) {
+  if (event.key !== 'Enter' || event.shiftKey || isComposing.value) {
+    return
+  }
+
+  event.preventDefault()
+  void handleSend()
+}
+
+function handleCompositionEnd() {
+  isComposing.value = false
+  scheduleTextareaResize()
+}
+
 async function handleMicrophoneTriggerClick() {
   if (props.disabled || microphoneUnavailableReason.value)
     return
@@ -538,7 +598,7 @@ async function handleMicrophoneButtonClick() {
 
 async function handleStopInteraction() {
   pushToTalkActive.value = false
-  interruptLessonPlayback('lesson-stop-button')
+  interruptLessonPlayback('stop_button')
 
   if (isListening.value) {
     await stopListening({ flushPending: true })
@@ -675,8 +735,7 @@ async function setupAnalyzer() {
   if (typeof MediaStream !== 'undefined' && !(stream.value instanceof MediaStream))
     return
   try {
-    if (audioContext.state === 'suspended')
-      await audioContext.resume()
+    const audioContext = await resumeAudioContext()
     const analyser = startAnalyzer(audioContext)
     if (!analyser)
       return
@@ -784,7 +843,15 @@ onUnmounted(() => {
   void stopListening({ flushPending: false })
   lessonAiriRuntime.resetRuntimeState()
   clearPendingAutoSend()
+  if (textareaResizeFrame !== undefined) {
+    window.cancelAnimationFrame(textareaResizeFrame)
+    textareaResizeFrame = undefined
+  }
 })
+
+watch(messageInput, () => {
+  scheduleTextareaResize()
+}, { flush: 'post' })
 
 // Transcription listening functions
 let startListeningInFlight = false
@@ -910,7 +977,7 @@ async function startListening() {
         },
         onSentenceEnd: (delta) => {
           if (delta && delta.trim()) {
-            interruptLessonPlayback('lesson-learner-transcription')
+            interruptLessonPlayback('final_transcript')
             const committedText = commitLiveTranscriptDelta(delta)
             lessonAiriRuntime.markRecognizedText(committedText || delta)
             lessonAiriRuntime.updateLiveTranscript(messageInput.value)
@@ -967,7 +1034,7 @@ async function stopListening(options: { flushPending?: boolean } = {}) {
       const textToSend = takePendingAutoSendText()
       if (shouldFlushPending && effectiveAutoSendEnabled.value && textToSend && !props.disabled) {
         try {
-          await sendTextToChat(textToSend)
+          await sendTextToChat(textToSend, 'auto_send')
           lessonAiriRuntime.markRecognizedText(textToSend)
           messageInput.value = ''
           lastLiveTranscriptPreview.value = ''
@@ -1036,6 +1103,22 @@ watch(effectiveAutoSendEnabled, (enabled) => {
   <div h="<md:full" flex gap-2 class="ph-no-capture">
     <div class="w-full flex flex-col gap-3">
       <div
+        v-if="props.compactMode"
+        class="sr-only"
+        aria-live="polite"
+      >
+        <span data-testid="lesson-chat-status-label">{{ interactionStatus.label }}</span>
+        <span data-testid="lesson-chat-status-detail">{{ interactionStatus.detail }}</span>
+        <span
+          v-if="liveTranscriptText || lastRecognizedText"
+          data-testid="lesson-chat-live-transcript"
+        >
+          实时转写：{{ liveTranscriptText || lastRecognizedText }}
+        </span>
+      </div>
+
+      <div
+        v-else
         :class="[
           statusPanelClasses,
           statusPanelShellClasses,
@@ -1110,95 +1193,96 @@ watch(effectiveAutoSendEnabled, (enabled) => {
       <div
         ref="inputShellRef"
         data-testid="lesson-chat-input-shell"
-        class="relative w-full cursor-text overflow-hidden border border-sky-100/90 rounded-[28px] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(240,249,255,0.9))] shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(12,18,28,0.96),rgba(8,12,20,0.92))] dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
+        :class="[
+          composerShellClasses,
+          'relative flex w-full cursor-text overflow-hidden backdrop-blur-xl',
+        ]"
         @pointerdown="focusMessageInputFromContainer"
       >
-        <BasicTextarea
-          v-model="messageInput"
-          :placeholder="chatInputPlaceholder"
-          :disabled="props.disabled"
-          :default-height="textareaDefaultHeight"
-          bg="transparent"
-          :min-h="textareaMinHeight" max-h="[320px]" w-full
-          :pb="textareaBottomPadding"
-          rounded-none pt-5 font-medium
-          outline-none transition="all duration-250 ease-in-out placeholder:all placeholder:duration-250 placeholder:ease-in-out"
-          :class="[
-            'cursor-text resize-none text-slate-800 placeholder:text-slate-400 dark:text-neutral-50 dark:placeholder:text-neutral-400',
-            textareaHorizontalPaddingClass,
-            {
-              'transition-colors-none placeholder:transition-colors-none': themeColorsHueDynamic,
-            },
-          ]"
-          @submit="handleSend"
-          @compositionstart="isComposing = true"
-          @compositionend="isComposing = false"
-        />
+        <div class="flex shrink-0 items-end gap-2">
+          <button
+            type="button"
+            :class="[
+              actionButtonSizeClasses,
+              'flex items-center justify-center rounded-full border border-sky-100/90 bg-white/72 text-slate-700 shadow-[0_10px_30px_-24px_rgba(15,23,42,0.45)] outline-none transition-all duration-200 active:scale-95 hover:bg-sky-50 dark:border-white/12 dark:bg-white/8 dark:text-neutral-100 dark:shadow-[0_10px_30px_-18px_rgba(15,23,42,0.95)] dark:hover:bg-white/12',
+              { 'cursor-not-allowed opacity-45 active:scale-100': props.disabled || microphoneUnavailableReason },
+            ]"
+            :disabled="props.disabled || Boolean(microphoneUnavailableReason)"
+            aria-label="麦克风"
+            :title="microphoneButtonTitle"
+            @click="void handleMicrophoneButtonClick()"
+          >
+            <Transition name="fade" mode="out-in">
+              <IndicatorMicVolume v-if="enabled" class="h-6 w-6" />
+              <div v-else class="i-ph:microphone h-6 w-6" />
+            </Transition>
+          </button>
 
-        <div class="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,rgba(255,255,255,0),rgba(240,249,255,0.96))] dark:bg-[linear-gradient(180deg,rgba(8,12,20,0),rgba(8,12,20,0.96))]" />
+          <button
+            type="button"
+            :class="[
+              actionButtonSizeClasses,
+              'flex items-center justify-center rounded-full border border-sky-100/90 bg-white/64 text-slate-600 shadow-[0_10px_30px_-24px_rgba(15,23,42,0.45)] outline-none transition-all duration-200 active:scale-95 hover:bg-sky-50 dark:border-white/12 dark:bg-white/6 dark:text-neutral-200 dark:shadow-[0_10px_30px_-18px_rgba(15,23,42,0.95)] dark:hover:bg-white/12',
+              { 'cursor-not-allowed opacity-40 active:scale-100': !canStopInteraction },
+            ]"
+            :disabled="!canStopInteraction"
+            aria-label="停止听写"
+            title="停止"
+            @click="void handleStopInteraction()"
+          >
+            <div class="i-ph:hand-palm h-5.5 w-5.5" />
+          </button>
+        </div>
 
-        <div class="absolute inset-x-3 bottom-3 z-10 flex items-end gap-3">
-          <div class="flex items-center gap-2">
-            <button
-              :class="[
-                actionButtonSizeClasses,
-                'flex items-center justify-center rounded-full border border-sky-100/90 bg-white/72 text-slate-700 shadow-[0_10px_30px_-24px_rgba(15,23,42,0.45)] outline-none transition-all duration-200 active:scale-95 hover:bg-sky-50 dark:border-white/12 dark:bg-white/8 dark:text-neutral-100 dark:shadow-[0_10px_30px_-18px_rgba(15,23,42,0.95)] dark:hover:bg-white/12',
-                { 'cursor-not-allowed opacity-45 active:scale-100': props.disabled || microphoneUnavailableReason },
-              ]"
-              :disabled="props.disabled || Boolean(microphoneUnavailableReason)"
-              aria-label="麦克风"
-              :title="microphoneButtonTitle"
-              @click="void handleMicrophoneButtonClick()"
-            >
-              <Transition name="fade" mode="out-in">
-                <IndicatorMicVolume v-if="enabled" class="h-6 w-6" />
-                <div v-else class="i-ph:microphone h-6 w-6" />
-              </Transition>
-            </button>
+        <div class="min-w-0 flex-1 self-center">
+          <textarea
+            id="lesson-chat-input"
+            ref="textareaRef"
+            v-model="messageInput"
+            name="lesson-chat-input"
+            :placeholder="chatInputPlaceholder"
+            :disabled="props.disabled"
+            rows="1"
+            :class="[
+              textareaClasses,
+              'block w-full cursor-text resize-none overflow-y-auto bg-transparent px-0 font-medium text-slate-800 outline-none placeholder:text-slate-400 scrollbar-none dark:text-neutral-50 dark:placeholder:text-neutral-400',
+              {
+                'transition-colors-none placeholder:transition-colors-none': themeColorsHueDynamic,
+              },
+            ]"
+            @input="handleTextareaInput"
+            @keydown="handleTextareaKeydown"
+            @compositionstart="isComposing = true"
+            @compositionend="handleCompositionEnd"
+          />
 
-            <button
-              :class="[
-                actionButtonSizeClasses,
-                'flex items-center justify-center rounded-full border border-sky-100/90 bg-white/64 text-slate-600 shadow-[0_10px_30px_-24px_rgba(15,23,42,0.45)] outline-none transition-all duration-200 active:scale-95 hover:bg-sky-50 dark:border-white/12 dark:bg-white/6 dark:text-neutral-200 dark:shadow-[0_10px_30px_-18px_rgba(15,23,42,0.95)] dark:hover:bg-white/12',
-                { 'cursor-not-allowed opacity-40 active:scale-100': !canStopInteraction },
-              ]"
-              :disabled="!canStopInteraction"
-              aria-label="停止听写"
-              title="停止"
-              @click="void handleStopInteraction()"
-            >
-              <div class="i-ph:hand-palm h-5.5 w-5.5" />
-            </button>
-          </div>
-
-          <div v-if="!props.compactMode" class="min-w-0 flex-1 pb-1">
+          <div v-if="!props.compactMode" class="mt-1 min-w-0">
             <div class="truncate text-xs text-slate-800 font-medium dark:text-neutral-100">
               {{ microphoneStatusLabel }}
             </div>
-            <div class="mt-1 truncate text-[11px] text-slate-500 dark:text-neutral-400">
+            <div class="mt-0.5 truncate text-[11px] text-slate-500 dark:text-neutral-400">
               {{ microphoneContextLabel }}
             </div>
           </div>
-
-          <div v-else class="flex-1" />
-
-          <button
-            :class="[
-              sendButtonClasses,
-              'flex items-center justify-center gap-2 font-medium outline-none transition-all duration-200 active:scale-95',
-              canSendMessage
-                ? 'bg-primary-500 text-white shadow-sm hover:bg-primary-600'
-                : 'cursor-not-allowed bg-slate-100 text-slate-400 dark:bg-white/8 dark:text-neutral-500',
-            ]"
-            :disabled="!canSendMessage"
-            aria-label="发送"
-            title="Send"
-            @click="handleSend"
-          >
-            <div class="i-solar:arrow-up-bold h-4 w-4" />
-            <span v-if="sendButtonLabelVisible" class="text-sm">发送</span>
-          </button>
         </div>
+
+        <button
+          type="button"
+          :class="[
+            sendButtonClasses,
+            'shrink-0 flex items-center justify-center gap-2 font-medium outline-none transition-all duration-200 active:scale-95',
+            canSendMessage
+              ? 'bg-primary-500 text-white shadow-sm hover:bg-primary-600'
+              : 'cursor-not-allowed bg-slate-100 text-slate-400 dark:bg-white/8 dark:text-neutral-500',
+          ]"
+          :disabled="!canSendMessage"
+          aria-label="发送"
+          title="Send"
+          @click="handleSend"
+        >
+          <div class="i-solar:arrow-up-bold h-4 w-4" />
+          <span v-if="sendButtonLabelVisible" class="text-sm">发送</span>
+        </button>
       </div>
     </div>
   </div>

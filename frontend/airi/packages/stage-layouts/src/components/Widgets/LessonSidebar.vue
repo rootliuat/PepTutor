@@ -1,18 +1,22 @@
 <script setup lang="ts">
 import type { ChatHistoryItem } from '@proj-airi/stage-ui/types/chat'
-import type { LessonRuntimeSnapshot } from '@proj-airi/stage-ui/stores/lesson'
 
+import { PEPTUTOR_TEACHER_SESSION_CHARACTER_ID } from '@proj-airi/stage-ui/constants/peptutor-teacher-card'
+import { useSpeakingStore } from '@proj-airi/stage-ui/stores/audio'
 import { useChatSessionStore } from '@proj-airi/stage-ui/stores/chat/session-store'
 import { useChatStreamStore } from '@proj-airi/stage-ui/stores/chat/stream-store'
 import { useLessonStore } from '@proj-airi/stage-ui/stores/lesson'
 import { useLessonAiriRuntimeStore } from '@proj-airi/stage-ui/stores/lesson-airi-runtime'
+import { resolveLessonChatMessageText as resolveMessageText, useLessonChatHistoryStore } from '@proj-airi/stage-ui/stores/lesson-chat-history'
 import { useHearingStore } from '@proj-airi/stage-ui/stores/modules/hearing'
 import { useSpeechStore } from '@proj-airi/stage-ui/stores/modules/speech'
 import { storeToRefs } from 'pinia'
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
 
 const lessonStore = useLessonStore()
-const { currentPageTitle, selectedPageUid, loading, runtimeState, activeTurn, transcript, isConfigured } = storeToRefs(lessonStore)
+const { currentPageTitle, selectedPageUid, loading, activeTurn } = storeToRefs(lessonStore)
+const lessonChatHistoryStore = useLessonChatHistoryStore()
+const { listLoading, sessionLoading, listError, sessionError, syncError, restoreWarning, activeHistoryReadOnly } = storeToRefs(lessonChatHistoryStore)
 const lessonAiriRuntime = useLessonAiriRuntimeStore()
 const {
   microphoneEnabled,
@@ -34,18 +38,31 @@ const {
   currentMouthIntensity,
   currentInterruptPolicy,
   currentPerformancePlan,
+  performanceApplyStatusLabel,
+  appliedMotion,
+  appliedExpression,
+  performanceFallbackReason,
+  performanceFallbackKind,
+  ttsSynthesisState,
+  ttsPlaybackState,
+  ttsPlaybackReason,
+  ttsPlaybackId,
+  activeReplyId,
+  ttsPlaybackStopReason,
+  ttsPlaybackNormalizedStopReason,
+  ttsPlaybackOverlapDetected,
+  ttsPlaybackOverlapCount,
+  speechPlaybackDebugLabel,
 } = storeToRefs(lessonAiriRuntime)
+const { mouthOpenSize } = storeToRefs(useSpeakingStore())
 const { activeTranscriptionProvider } = storeToRefs(useHearingStore())
 const { activeSpeechProvider } = storeToRefs(useSpeechStore())
 
 const chatSessionStore = useChatSessionStore()
-const { activeSessionId, currentCharacterSessionMetas, messages } = storeToRefs(chatSessionStore)
+const { activeSessionId, messages } = storeToRefs(chatSessionStore)
 const { streamingMessage } = storeToRefs(useChatStreamStore())
 const sidebarChatScrollRef = ref<HTMLElement>()
 const historyPanelOpen = ref(false)
-const lessonSessionSwitching = ref(false)
-
-const lessonSessionSnapshotStoragePrefix = 'peptutor/lesson/chat-session-runtime/v1/'
 
 const historyMessages = computed(() =>
   (messages.value as unknown as ChatHistoryItem[]).filter(message => message.role !== 'system'),
@@ -77,12 +94,29 @@ const latestAssistantPreview = computed(() =>
   [...sidebarMessages.value].reverse().find(message => message.role === 'assistant')?.text || '老师开始后，对话记录会显示在这里。',
 )
 const historySessionRows = computed(() =>
-  currentCharacterSessionMetas.value.map(meta => ({
-    id: meta.sessionId,
-    title: resolveSessionTitle(meta.sessionId, meta.title),
-    updatedAt: formatSessionTime(meta.updatedAt),
-    active: meta.sessionId === activeSessionId.value,
-  })),
+  chatSessionStore.getSessionMetasForCharacter(PEPTUTOR_TEACHER_SESSION_CHARACTER_ID).filter(meta =>
+    lessonChatHistoryStore.sessionBelongsToCurrentLessonIdentity(meta.sessionId),
+  ).map((meta) => {
+    const safety = lessonChatHistoryStore.historySafetyForSession(meta.sessionId)
+    return {
+      id: meta.sessionId,
+      title: resolveSessionTitle(meta.sessionId, meta.title),
+      updatedAt: formatSessionTime(meta.updatedAt),
+      active: meta.sessionId === activeSessionId.value,
+      safetyLabel: safety?.label || '本地',
+      safetyDetail: safety?.detail || '本地会话，保存后可继续',
+      safetyClass: historySafetyBadgeClass(safety?.access),
+      canRestore: safety?.canRestore ?? true,
+    }
+  }),
+)
+const historyStatusMessage = computed(() =>
+  listError.value
+  || sessionError.value
+  || syncError.value
+  || restoreWarning.value
+  || (listLoading.value ? '正在加载历史对话...' : '')
+  || (sessionLoading.value ? '正在恢复历史对话...' : ''),
 )
 const browserContextLabel = computed(() => {
   if (typeof window === 'undefined') {
@@ -162,6 +196,41 @@ const speechChainFacts = computed(() => [
     value: speechProviderLabel.value,
   },
   {
+    key: 'tts_synthesis_state',
+    label: '合成',
+    value: ttsSynthesisState.value,
+  },
+  {
+    key: 'tts_playback_state',
+    label: '播放',
+    value: ttsPlaybackState.value,
+  },
+  {
+    key: 'tts_playback_id',
+    label: '播放 ID',
+    value: ttsPlaybackId.value || 'none',
+  },
+  {
+    key: 'active_reply_id',
+    label: '回复 ID',
+    value: activeReplyId.value || 'none',
+  },
+  {
+    key: 'tts_stop_reason',
+    label: '停止原因',
+    value: ttsPlaybackStopReason.value || 'none',
+  },
+  {
+    key: 'tts_stop_type',
+    label: '停止类型',
+    value: ttsPlaybackNormalizedStopReason.value || 'none',
+  },
+  {
+    key: 'tts_overlap_detected',
+    label: '重叠',
+    value: ttsPlaybackOverlapDetected.value ? `true/${ttsPlaybackOverlapCount.value}` : 'false',
+  },
+  {
     key: 'speech_style',
     label: '语气',
     value: currentSpeechStyle.value,
@@ -170,6 +239,11 @@ const speechChainFacts = computed(() => [
     key: 'mouth_intensity',
     label: '嘴型',
     value: currentMouthIntensity.value.toFixed(2),
+  },
+  {
+    key: 'mouth_open',
+    label: '开口',
+    value: mouthOpenSize.value.toFixed(2),
   },
   {
     key: 'interrupt_policy',
@@ -190,6 +264,26 @@ const speechChainFacts = computed(() => [
     key: 'performance_source',
     label: '表现层',
     value: currentPerformancePlan.value?.performanceSource || '未收到',
+  },
+  {
+    key: 'performance_apply',
+    label: '应用',
+    value: performanceApplyStatusLabel.value,
+  },
+  {
+    key: 'performance_fallback_kind',
+    label: '降级类型',
+    value: performanceFallbackKind.value || 'none',
+  },
+  {
+    key: 'applied_motion',
+    label: '实际动作',
+    value: appliedMotion.value || '待命',
+  },
+  {
+    key: 'applied_expression',
+    label: '实际表情',
+    value: appliedExpression.value || '待命',
   },
 ])
 const toolbarItems = [
@@ -214,49 +308,9 @@ function scrollSidebarChatToBottom() {
 }
 
 watch(sidebarMessages, scrollSidebarChatToBottom, { deep: true, flush: 'post' })
-onMounted(scrollSidebarChatToBottom)
-
-function lessonSessionSnapshotKey(sessionId: string) {
-  return `${lessonSessionSnapshotStoragePrefix}${sessionId}`
-}
-
-function readLessonSessionSnapshot(sessionId: string): LessonRuntimeSnapshot | null {
-  if (typeof localStorage === 'undefined' || !sessionId) {
-    return null
-  }
-
-  try {
-    const raw = localStorage.getItem(lessonSessionSnapshotKey(sessionId))
-    if (!raw) {
-      return null
-    }
-    const parsed = JSON.parse(raw) as LessonRuntimeSnapshot
-    return parsed?.version === 1 ? parsed : null
-  }
-  catch {
-    return null
-  }
-}
-
-function writeLessonSessionSnapshot(sessionId: string, snapshot: LessonRuntimeSnapshot) {
-  if (typeof localStorage === 'undefined' || !sessionId) {
-    return
-  }
-
-  try {
-    localStorage.setItem(lessonSessionSnapshotKey(sessionId), JSON.stringify(snapshot))
-  }
-  catch {
-  }
-}
-
-function persistActiveLessonRuntimeSnapshot() {
-  if (lessonSessionSwitching.value || !activeSessionId.value) {
-    return
-  }
-
-  writeLessonSessionSnapshot(activeSessionId.value, lessonStore.exportRuntimeSnapshot())
-}
+onMounted(() => {
+  scrollSidebarChatToBottom()
+})
 
 function resolveSessionTitle(sessionId: string, title?: string) {
   const explicitTitle = title?.trim()
@@ -289,31 +343,25 @@ function formatSessionTime(updatedAt: number) {
   }
 }
 
-function newSessionTitle() {
-  const pageTitle = currentPageTitle.value?.trim() || selectedPageUid.value || '课堂'
-  return `${pageTitle} · ${formatSessionTime(Date.now())}`
-}
-
-async function startCurrentLessonSilently() {
-  if (!isConfigured.value || loading.value || !selectedPageUid.value) {
-    return
+function historySafetyBadgeClass(access?: string) {
+  if (access === 'continue') {
+    return 'bg-emerald-100 text-emerald-700 dark:bg-emerald-400/15 dark:text-emerald-100'
   }
-
-  await lessonStore.startLesson(selectedPageUid.value, { replayTeacher: false })
+  if (access === 'read_only') {
+    return 'bg-amber-100 text-amber-700 dark:bg-amber-400/15 dark:text-amber-100'
+  }
+  if (access === 'view_only') {
+    return 'bg-slate-100 text-slate-600 dark:bg-white/10 dark:text-neutral-200'
+  }
+  return 'bg-sky-100 text-sky-700 dark:bg-sky-400/15 dark:text-sky-100'
 }
 
 async function createNewLessonSession() {
-  persistActiveLessonRuntimeSnapshot()
-  lessonSessionSwitching.value = true
   try {
-    lessonStore.resetLessonState({ keepSelectedPage: true })
-    await chatSessionStore.createCurrentSession({ title: newSessionTitle() })
-    await startCurrentLessonSilently()
+    await lessonChatHistoryStore.createNewLessonSession()
     historyPanelOpen.value = false
   }
   finally {
-    lessonSessionSwitching.value = false
-    persistActiveLessonRuntimeSnapshot()
     scrollSidebarChatToBottom()
   }
 }
@@ -329,26 +377,11 @@ async function selectLessonHistorySession(sessionId: string) {
     return
   }
 
-  persistActiveLessonRuntimeSnapshot()
-  lessonSessionSwitching.value = true
   try {
-    chatSessionStore.setActiveSession(sessionId)
-    await chatSessionStore.loadSession(sessionId)
-
-    const snapshot = readLessonSessionSnapshot(sessionId)
-    if (snapshot) {
-      lessonStore.restoreRuntimeSnapshot(snapshot)
-    }
-    else {
-      lessonStore.resetLessonState({ keepSelectedPage: true })
-      await startCurrentLessonSilently()
-    }
-
+    await lessonChatHistoryStore.selectLessonHistorySession(sessionId)
     historyPanelOpen.value = false
   }
   finally {
-    lessonSessionSwitching.value = false
-    persistActiveLessonRuntimeSnapshot()
     scrollSidebarChatToBottom()
   }
 }
@@ -363,12 +396,6 @@ function handleToolbarButton(item: { key: string }) {
     void createNewLessonSession()
   }
 }
-
-watch(
-  [activeSessionId, selectedPageUid, runtimeState, activeTurn, transcript],
-  persistActiveLessonRuntimeSnapshot,
-  { deep: true, flush: 'post' },
-)
 
 const sidebarRuntimeStatus = computed(() => {
   if (microphonePermissionState.value === 'requesting') {
@@ -425,6 +452,16 @@ const sidebarRuntimeStatus = computed(() => {
     classes: 'bg-slate-100 text-slate-600 ring-slate-200 dark:bg-white/10 dark:text-neutral-100 dark:ring-white/10',
   }
 })
+const performancePlanSourceDetail = computed(() => {
+  const source = currentPerformancePlan.value?.performanceSource || ''
+  if (source === 'lesson_persona_context') {
+    return '按 backend persona 表现计划播报当前回复。'
+  }
+  if (source === 'frontend_lesson_runtime_profile') {
+    return '按前端默认表现计划播报当前回复。'
+  }
+  return '当前回复正在播报，表现计划未同步。'
+})
 const visibleAiriState = computed(() => {
   if (classroomState.value === 'interrupted') {
     return {
@@ -437,7 +474,7 @@ const visibleAiriState = computed(() => {
   if (teacherSpeaking.value || classroomState.value === 'teacher_speaking') {
     return {
       label: '老师说话',
-      detail: '按后端表现计划播报当前回复。',
+      detail: performancePlanSourceDetail.value,
       classes: 'bg-cyan-100 text-cyan-700 ring-cyan-200 dark:bg-cyan-400/14 dark:text-cyan-100 dark:ring-cyan-300/18',
     }
   }
@@ -480,6 +517,19 @@ const visibleAiriState = computed(() => {
     classes: 'bg-slate-100 text-slate-600 ring-slate-200 dark:bg-white/10 dark:text-neutral-100 dark:ring-white/10',
   }
 })
+const performancePlanSourceLabel = computed(() => {
+  const source = currentPerformancePlan.value?.performanceSource || ''
+  if (source === 'lesson_persona_context') {
+    return 'backend persona'
+  }
+  if (source === 'frontend_lesson_runtime_profile') {
+    return 'frontend default'
+  }
+  return source || '未收到'
+})
+const performanceContentSourceLabel = computed(() =>
+  currentPerformancePlan.value?.contentSource || '未收到',
+)
 const visibleTeachingStance = computed(() => {
   const action = currentPerformancePlan.value?.teachingAction || ''
   const evaluation = currentPerformancePlan.value?.evaluation || ''
@@ -532,6 +582,63 @@ const visibleTeachingStance = computed(() => {
 })
 const visiblePerformanceFacts = computed(() => [
   {
+    key: 'reply_path',
+    label: '链路',
+    value: resolveReplyPathLabel(),
+  },
+  {
+    key: 'performance_source',
+    label: '计划源',
+    value: performancePlanSourceLabel.value,
+  },
+  {
+    key: 'content_source',
+    label: '内容源',
+    value: performanceContentSourceLabel.value,
+  },
+  {
+    key: 'tts',
+    label: 'TTS',
+    value: speechPlaybackDebugLabel.value,
+  },
+  {
+    key: 'tts_synthesis_state',
+    label: 'TTS 合成',
+    value: ttsSynthesisState.value,
+  },
+  {
+    key: 'tts_playback_state',
+    label: 'TTS 播放',
+    value: ttsPlaybackReason.value
+      ? `${ttsPlaybackState.value} · ${ttsPlaybackReason.value}`
+      : ttsPlaybackState.value,
+  },
+  {
+    key: 'tts_playback_id',
+    label: '播放 ID',
+    value: ttsPlaybackId.value || 'none',
+  },
+  {
+    key: 'active_reply_id',
+    label: '回复 ID',
+    value: activeReplyId.value || 'none',
+  },
+  {
+    key: 'tts_stop_reason',
+    label: '停止原因',
+    value: ttsPlaybackStopReason.value || 'none',
+  },
+  {
+    key: 'tts_stop_type',
+    label: '停止类型',
+    value: ttsPlaybackNormalizedStopReason.value || 'none',
+  },
+  {
+    key: 'tts_overlap_detected',
+    label: '重叠',
+    value: ttsPlaybackOverlapDetected.value ? `true/${ttsPlaybackOverlapCount.value}` : 'false',
+  },
+  {
     key: 'voice_pacing',
     label: '节奏',
     value: currentSpeechStyle.value,
@@ -540,6 +647,11 @@ const visiblePerformanceFacts = computed(() => [
     key: 'mouth_intensity',
     label: '嘴型',
     value: currentMouthIntensity.value.toFixed(2),
+  },
+  {
+    key: 'mouth_open',
+    label: '开口',
+    value: mouthOpenSize.value.toFixed(2),
   },
   {
     key: 'motion',
@@ -552,43 +664,81 @@ const visiblePerformanceFacts = computed(() => [
     value: currentPerformancePlan.value?.expression || 'neutral',
   },
   {
+    key: 'performance_apply',
+    label: '应用',
+    value: performanceFallbackReason.value || performanceApplyStatusLabel.value,
+  },
+  {
+    key: 'performance_fallback_kind',
+    label: '降级类型',
+    value: performanceFallbackKind.value || 'none',
+  },
+  {
+    key: 'applied_motion',
+    label: '实际动作',
+    value: appliedMotion.value || '待命',
+  },
+  {
+    key: 'applied_expression',
+    label: '实际表情',
+    value: appliedExpression.value || '待命',
+  },
+  {
     key: 'interrupt_policy',
     label: '打断',
     value: currentInterruptPolicy.value,
   },
 ])
 
-function resolveMessageText(message: ChatHistoryItem): string {
-  if ('slices' in message && Array.isArray(message.slices) && message.slices.length > 0) {
-    return message.slices
-      .filter(slice => slice.type === 'text')
-      .map(slice => slice.text)
-      .join('')
-      .trim()
+function resolveReplyPathLabel() {
+  const turn = activeTurn.value
+  if (!turn) {
+    return '待命'
   }
 
-  const content = message.content
-  if (typeof content === 'string') {
-    return content.trim()
+  const audit = turn.debug_signals?.response_audit
+  if (audit) {
+    const latencyLabel = Number.isFinite(audit.latency_ms)
+      ? ` · ${audit.latency_ms}ms`
+      : ''
+    const routeLabel = audit.route ? ` · ${audit.route}` : ''
+    const auditFacts = `llm=${audit.llm_called ? 'true' : 'false'} · fallback=${audit.fallback_used ? 'true' : 'false'}${latencyLabel}${routeLabel}`
+    const repairLabel = audit.repair_reason && audit.repair_reason !== 'none'
+      ? ` · repair=${audit.repair_reason}`
+      : ''
+    if (audit.fallback_used || audit.source === 'fallback') {
+      return `fallback · ${auditFacts} · ${audit.fallback_reason || 'unknown'}`
+    }
+    if (audit.source === 'policy_repaired') {
+      return `policy_repaired · ${auditFacts}${repairLabel}`
+    }
+    if (audit.source === 'policy') {
+      return `policy · ${auditFacts}`
+    }
+    if (audit.source === 'llm_repaired') {
+      return `llm_repaired · ${auditFacts}${repairLabel}`
+    }
+    if (audit.source === 'llm') {
+      return `llm · ${auditFacts}`
+    }
+    if (audit.source === 'deterministic') {
+      return `deterministic · ${auditFacts}`
+    }
   }
 
-  if (Array.isArray(content)) {
-    return content
-      .map((part) => {
-        if (typeof part === 'string') {
-          return part
-        }
-        if (part && typeof part === 'object' && 'text' in part && typeof part.text === 'string') {
-          return part.text
-        }
-        return ''
-      })
-      .filter(Boolean)
-      .join('\n')
-      .trim()
+  const livePrompts = Boolean(turn.debug_signals?.live_prompts?.enabled)
+  const retrievalMode = turn.retrieval_mode
+  const hasRetrieval = retrievalMode === 'unit' || retrievalMode === 'branch'
+  if (livePrompts && hasRetrieval) {
+    return 'RAG + LLM'
   }
-
-  return ''
+  if (livePrompts) {
+    return 'LLM'
+  }
+  if (hasRetrieval) {
+    return 'RAG + 后端回复'
+  }
+  return '后端课堂回复'
 }
 </script>
 
@@ -639,11 +789,11 @@ function resolveMessageText(message: ChatHistoryItem): string {
             历史对话
           </div>
           <div class="truncate text-[11px] text-slate-500 dark:text-neutral-400">
-            切换后会恢复对应课堂状态
+            可继续的会话会恢复课堂状态，旧历史只读查看
           </div>
         </div>
         <button
-          class="h-7 w-7 flex shrink-0 items-center justify-center rounded-full bg-sky-100/75 text-slate-600 transition hover:bg-sky-50 dark:bg-white/8 dark:text-neutral-100 dark:hover:bg-white/12"
+          class="h-7 w-7 flex shrink-0 items-center justify-center rounded-full bg-sky-100/75 text-slate-600 transition dark:bg-white/8 hover:bg-sky-50 dark:text-neutral-100 dark:hover:bg-white/12"
           aria-label="新建课堂对话"
           title="新建课堂对话"
           type="button"
@@ -654,6 +804,13 @@ function resolveMessageText(message: ChatHistoryItem): string {
       </div>
 
       <div class="max-h-58 overflow-y-auto p-2">
+        <div
+          v-if="historyStatusMessage"
+          class="mb-2 border border-sky-100/90 rounded-[14px] bg-sky-50/80 px-3 py-2 text-[11px] text-slate-600 dark:border-white/10 dark:bg-white/6 dark:text-neutral-300"
+        >
+          {{ historyStatusMessage }}
+        </div>
+
         <button
           v-for="session in historySessionRows"
           :key="session.id"
@@ -670,14 +827,19 @@ function resolveMessageText(message: ChatHistoryItem): string {
             <span class="truncate text-xs font-semibold">{{ session.title }}</span>
             <span class="shrink-0 text-[10px] text-slate-400 dark:text-neutral-500">{{ session.updatedAt }}</span>
           </div>
-          <div class="mt-1 truncate text-[11px] text-slate-500 dark:text-neutral-400">
-            {{ session.active ? '当前对话' : '点击恢复并继续' }}
+          <div class="mt-1 min-w-0 flex items-center gap-2">
+            <span :class="['shrink-0 rounded-full px-2 py-0.5 text-[10px] font-semibold', session.safetyClass]">
+              {{ session.safetyLabel }}
+            </span>
+            <span class="min-w-0 truncate text-[11px] text-slate-500 dark:text-neutral-400">
+              {{ session.active ? (activeHistoryReadOnly ? '当前只读查看' : '当前对话') : session.safetyDetail }}
+            </span>
           </div>
         </button>
 
         <div
           v-if="historySessionRows.length === 0"
-          class="rounded-[14px] border border-dashed border-sky-100/90 px-3 py-3 text-xs text-slate-500 dark:border-white/10 dark:text-neutral-400"
+          class="border border-sky-100/90 rounded-[14px] border-dashed px-3 py-3 text-xs text-slate-500 dark:border-white/10 dark:text-neutral-400"
         >
           还没有历史对话。
         </div>
@@ -815,7 +977,7 @@ function resolveMessageText(message: ChatHistoryItem): string {
           :key="fact.key"
           :class="[
             'min-w-0 rounded-[14px] border border-sky-100/80 bg-sky-50/55 px-2.5 py-2 dark:border-white/8 dark:bg-white/5',
-            fact.key === 'interrupt_policy' ? 'col-span-2' : '',
+            ['reply_path', 'performance_source', 'content_source', 'performance_apply', 'performance_fallback_kind', 'tts_playback_state', 'tts_playback_id', 'active_reply_id', 'tts_stop_reason', 'tts_stop_type', 'tts_overlap_detected', 'interrupt_policy'].includes(fact.key) ? 'col-span-2' : '',
           ]"
         >
           <div class="text-[10px] text-slate-400 font-semibold tracking-[0.12em] uppercase dark:text-neutral-500">
@@ -823,7 +985,10 @@ function resolveMessageText(message: ChatHistoryItem): string {
           </div>
           <div
             :data-testid="`lesson-airi-visible-fact-${fact.key}`"
-            class="mt-1 truncate text-[11px] text-slate-800 font-semibold dark:text-neutral-100"
+            :class="[
+              'mt-1 text-[11px] text-slate-800 font-semibold dark:text-neutral-100',
+              ['reply_path', 'performance_source', 'content_source', 'performance_apply', 'performance_fallback_kind', 'tts_playback_state', 'tts_playback_id', 'active_reply_id', 'tts_stop_reason', 'tts_stop_type', 'tts_overlap_detected'].includes(fact.key) ? 'break-words leading-4' : 'truncate',
+            ]"
           >
             {{ fact.value }}
           </div>

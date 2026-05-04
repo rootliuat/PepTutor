@@ -1,12 +1,18 @@
 <script setup lang="ts">
+import { useTheme } from '@proj-airi/ui'
 import { storeToRefs } from 'pinia'
-import { RouterLink } from 'vue-router'
+import { computed } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
 
+import LogoDark from '../../assets/logo-dark.svg'
 import Logo from '../../assets/logo.svg'
 
 import { BackgroundKind, useBackgroundStore } from '../../stores/background'
 
 const { selectedOption } = storeToRefs(useBackgroundStore())
+const { isDark: dark } = useTheme()
+const route = useRoute()
+const brandLabel = computed(() => route.path.startsWith('/lesson') ? '米粒老师' : 'AIRI')
 </script>
 
 <template>
@@ -15,7 +21,12 @@ const { selectedOption } = storeToRefs(useBackgroundStore())
     gap-2 px-2 text-nowrap text-2xl outline-none
   >
     <template v-if="selectedOption?.kind === BackgroundKind.Wave">
-      <img :src="Logo" h-8 w-8 class="theme-colored" alt="AIRI">
+      <template v-if="dark">
+        <img :src="LogoDark" h-8 w-8 class="theme-colored" :alt="brandLabel">
+      </template>
+      <template v-else>
+        <img :src="Logo" h-8 w-8 class="theme-colored" :alt="brandLabel">
+      </template>
     </template>
   </RouterLink>
 </template>

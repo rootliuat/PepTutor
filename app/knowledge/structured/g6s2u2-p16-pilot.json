@@ -1,0 +1,79 @@
+{
+  "pilot_id": "g6s2u2-p16-structure-overlay-v1",
+  "scope": {
+    "grade": "G6",
+    "semester": "S2",
+    "unit": "U2",
+    "pages": [
+      16
+    ]
+  },
+  "source_files": [
+    "app/knowledge/structured/general/g6s2u2-general.json",
+    "app/knowledge/raw/04.六年级下册语料.js"
+  ],
+  "learning_targets": [],
+  "knowledge_atoms": [],
+  "page_lessons": [],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G6S2U2-P16-D4",
+      "page_uid": "TB-G6S2U2-P16",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": [
+        "TB-G6S2U2-P16-D4"
+      ],
+      "teaching_goal": "Use the page dialogue pattern to ask and answer about past and usual weekend activities.",
+      "teaching_summary": "学生用 What did you do yesterday/last night ...? 询问过去做了什么，也能用 What do you usually do on weekends? 问平常周末活动。回答范围是开放的过去式活动句，不限于两个教材问句。",
+      "focus_vocabulary": [
+        "watched TV",
+        "cleaned my room",
+        "stayed at home",
+        "saw a film",
+        "read a book"
+      ],
+      "core_patterns": [
+        "What did you do yesterday/last night ...?",
+        "What do you usually do on weekends?"
+      ],
+      "allowed_answer_scope": [
+        "I watched TV.",
+        "I cleaned my room.",
+        "I stayed at home.",
+        "I saw a film.",
+        "I read a book.",
+        "I slept.",
+        "I usually read books on weekends.",
+        "I usually play football on weekends."
+      ],
+      "entry_probe_questions": [
+        "Ask: What did you do yesterday?",
+        "Answer with one past activity: I watched TV."
+      ],
+      "repair_modes": [
+        "choice_probe",
+        "word_drill",
+        "sentence_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2U2-P16-D1",
+        "TB-G6S2U2-P16-D3"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2U2-P16-D4-goal"
+      ],
+      "branchable_topics": [
+        "Last weekend",
+        "Practice",
+        "past activities",
+        "usual weekend activities"
+      ],
+      "return_anchors": [
+        "What did you do yesterday?",
+        "I watched TV.",
+        "What do you usually do on weekends?"
+      ]
+    }
+  ]
+}

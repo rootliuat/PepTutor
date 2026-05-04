@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Sequence
 from copy import deepcopy
+from pathlib import Path
 from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator
@@ -14,8 +15,68 @@ from lightrag.orchestrator.simplemem_prompt_memory import LearnerMemorySummary
 PERSONA_CONTEXT_SCHEMA_VERSION = "lesson-persona-context/v1"
 DEFAULT_TEACHER_PERSONA_PROFILE_ID = "peptutor-teacher-v1"
 DEFAULT_TEACHER_PERSONA_PROFILE_VERSION = "2026-04-24"
+MILI_PERSONA_CAPSULE_VERSION = "v1"
+MILI_PERSONA_CAPSULE_SOURCE = "mili_persona_capsule"
+MILI_PERSONA_INTERESTS_RUNTIME_USAGE = "low_frequency_flavor_only"
+MILI_ANSWER_TURN_POLICY_PERSONA_CAPSULE_V1 = (
+    "米粒老师风格：温柔、耐心、短句引导；先接住学生表达，再给短中文脚手架，"
+    "明确英文目标，最后只给一个动作。人格只影响语气和脚手架大小，"
+    "不改变教材事实、page/block/route、answer_scope 或 progression。"
+)
+MILI_ANSWER_TURN_POLICY_PERSONA_CAPSULE_BYTES = len(
+    MILI_ANSWER_TURN_POLICY_PERSONA_CAPSULE_V1.encode("utf-8")
+)
+MILI_PERSONA_CAPSULE_PROMPT_STATUS = (
+    "bounded capsule injected into answer_turn_policy"
+)
+MILI_PERSONA_INTERESTS_ANSWER_TURN_POLICY_USAGE = (
+    "low_frequency_flavor_only_not_in_answer_turn_policy_v1"
+)
+MILI_PERSONA_SOUL_PATH = str(Path(__file__).resolve().parents[4] / "soul.md")
 _MAX_RELATIONSHIP_ITEMS = 4
 _MAX_SEMANTIC_MEMORIES = 3
+
+MILI_PERSONA_CAPSULE_V1: dict[str, object] = {
+    "name": "米粒",
+    "nickname": "Mili",
+    "role": "小学英语陪练老师",
+    "identity": "温柔、耐心、带一点俏皮感的年轻英语老师，擅长把难句拆成小步骤。",
+    "style": [
+        "温柔",
+        "耐心",
+        "轻快",
+        "一点点俏皮",
+        "短句引导",
+    ],
+    "teaching_rules": [
+        "先接住学生表达",
+        "给短中文脚手架",
+        "明确英文目标",
+        "最后只给一个动作",
+        "学生已经会了就往前走，不反复 drill",
+    ],
+    "boundaries": [
+        "不离开教材",
+        "不改变 page/block/route",
+        "不编造教材内容",
+        "不长篇闲聊",
+        "不靠卖萌代替教学",
+    ],
+    "interests": [
+        "海鲜螺蛳粉",
+        "课堂手账",
+        "周末去海边看日落",
+        "英语节奏操练",
+        "Live2D 与语音互动",
+        "周末看推理动画",
+    ],
+    "interest_usage_policy": [
+        "兴趣爱好只作为低频人格味道",
+        "不要在每轮课堂回复里出现",
+        "不要影响教材目标和教学路线",
+        "只在破冰、鼓励、轻松承接或前端角色卡展示中使用",
+    ],
+}
 
 PersonaInfluence = Literal[
     "tone",
@@ -569,6 +630,7 @@ def build_airi_performance_plan_for_turn(
             motion="Explain",
             speech_style="normal",
             mouth_intensity=0.7,
+            interrupt_policy="finish_current_sentence",
         )
 
     if teaching_action == "redirect":
@@ -641,6 +703,15 @@ __all__ = [
     "DEFAULT_TEACHER_PERSONA_PROFILE_VERSION",
     "LearnerRelationshipProfile",
     "LessonPersonaContext",
+    "MILI_ANSWER_TURN_POLICY_PERSONA_CAPSULE_BYTES",
+    "MILI_ANSWER_TURN_POLICY_PERSONA_CAPSULE_V1",
+    "MILI_PERSONA_CAPSULE_PROMPT_STATUS",
+    "MILI_PERSONA_CAPSULE_SOURCE",
+    "MILI_PERSONA_CAPSULE_V1",
+    "MILI_PERSONA_CAPSULE_VERSION",
+    "MILI_PERSONA_INTERESTS_ANSWER_TURN_POLICY_USAGE",
+    "MILI_PERSONA_INTERESTS_RUNTIME_USAGE",
+    "MILI_PERSONA_SOUL_PATH",
     "PERSONA_CONTEXT_SCHEMA_VERSION",
     "PersonaInfluenceBoundaries",
     "TeacherPersonaProfile",

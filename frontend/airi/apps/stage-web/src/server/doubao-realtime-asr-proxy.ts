@@ -4,6 +4,7 @@ import type { Duplex } from 'node:stream'
 import type { Plugin, PreviewServer, ViteDevServer } from 'vite'
 import type { RawData } from 'ws'
 
+import { Buffer } from 'node:buffer'
 import { randomUUID } from 'node:crypto'
 import { gunzipSync } from 'node:zlib'
 

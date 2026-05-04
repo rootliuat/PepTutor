@@ -24,11 +24,13 @@ import { computed, onMounted, onUnmounted, ref } from 'vue'
 const sceneRef = ref<InstanceType<typeof ThreeScene>>()
 const currentAudioSource = ref<AudioBufferSourceNode>()
 
-const { audioContext } = useAudioContext()
+const { ensureAudioContext } = useAudioContext()
 const audioAnalyser = ref<AnalyserNode>()
 function setupAnalyser() {
-  if (!audioAnalyser.value)
+  if (!audioAnalyser.value) {
+    const audioContext = ensureAudioContext()
     audioAnalyser.value = audioContext.createAnalyser()
+  }
 }
 
 const settingsStore = useSettings()
@@ -100,6 +102,7 @@ function log(line: string) {
 const playbackManager = createPlaybackManager<AudioBuffer>({
   play: (item, signal) => {
     return new Promise((resolve) => {
+      const audioContext = ensureAudioContext()
       const source = audioContext.createBufferSource()
       source.buffer = item.audio
       source.connect(audioContext.destination)
@@ -171,7 +174,7 @@ const speechPipeline = createSpeechPipeline<AudioBuffer>({
       return null
 
     log(`    - 排队：${request.text}${request.special ? ` [special: ${request.special}]` : ''}`)
-    return audioContext.decodeAudioData(res)
+    return ensureAudioContext().decodeAudioData(res)
   },
   playback: playbackManager,
 })

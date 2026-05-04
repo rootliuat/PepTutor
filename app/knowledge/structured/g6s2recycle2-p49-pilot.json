@@ -1,0 +1,137 @@
+{
+  "pilot_id": "g6s2recycle2-p49-structure-overlay-v1",
+  "scope": {
+    "grade": "G6",
+    "semester": "S2",
+    "unit": "Recycle2",
+    "pages": [
+      49
+    ]
+  },
+  "source_files": [
+    "app/knowledge/structured/general/g6s2recycle2-general.json",
+    "app/knowledge/raw/04.六年级下册语料.js"
+  ],
+  "learning_targets": [],
+  "knowledge_atoms": [],
+  "page_lessons": [
+    {
+      "page_uid": "TB-G6S2Recycle2-P49",
+      "page_type": "phonics",
+      "page_intro_cn": "这一页先观察告别派对图片，把单词按 food、drinks、supplies 分类，再做辅音和元音拼读复习，最后自己列 party list。",
+      "entry_probe_questions": [
+        "先看第一块：找一个 food word，比如 brown bread.",
+        "如果想做开放任务，可以说：make your own party list."
+      ],
+      "priority_blocks": [
+        "TB-G6S2Recycle2-P49-D1",
+        "TB-G6S2Recycle2-P49-D2",
+        "TB-G6S2Recycle2-P49-D3",
+        "TB-G6S2Recycle2-P49-D4"
+      ],
+      "assumed_prior_knowledge": []
+    }
+  ],
+  "teaching_blocks": [
+    {
+      "block_uid": "TB-G6S2Recycle2-P49-D1",
+      "page_uid": "TB-G6S2Recycle2-P49",
+      "page_type": "phonics",
+      "block_type": "picture_scene",
+      "source_refs": [
+        "TB-G6S2Recycle2-P49-D1"
+      ],
+      "teaching_goal": "Classify the farewell party picture vocabulary into food, drinks, and supplies.",
+      "teaching_summary": "Farewell party picture scene. Students look at the party word list and classify items into three groups: food words, drink words, and party supplies. This is a scene-classification task, not a single mixed food/drink target.",
+      "task_type": "classify",
+      "focus_vocabulary": [
+        "brown bread",
+        "cheese",
+        "cake",
+        "fresh fruit",
+        "milk",
+        "orange juice",
+        "tea bags",
+        "chocolates"
+      ],
+      "core_patterns": [
+        "Classify party words into food, drinks, and supplies."
+      ],
+      "allowed_answer_scope": [
+        "food: brown bread, cheese, cake, fresh fruit, chocolates",
+        "drinks: milk, orange juice",
+        "supplies: tea bags"
+      ],
+      "answer_scope": {
+        "categories": [
+          {
+            "name": "food",
+            "items": [
+              "brown bread",
+              "cheese",
+              "cake",
+              "fresh fruit",
+              "chocolates"
+            ],
+            "aliases": {
+              "披萨": "pizza",
+              "pizza": "pizza"
+            }
+          },
+          {
+            "name": "drinks",
+            "items": [
+              "milk",
+              "orange juice"
+            ],
+            "aliases": {
+              "水": "water",
+              "water": "water"
+            }
+          },
+          {
+            "name": "supplies",
+            "items": [
+              "tea bags"
+            ]
+          }
+        ],
+        "related_terms_policy": "acknowledge_but_prompt_page_item"
+      },
+      "entry_probe_questions": [
+        "Find one food word in the party picture.",
+        "Which words are drinks?"
+      ],
+      "repair_modes": [
+        "repeat",
+        "choice_probe",
+        "word_drill"
+      ],
+      "next_block_uids": [
+        "TB-G6S2Recycle2-P49-D2",
+        "TB-G6S2Recycle2-P49-D3",
+        "TB-G6S2Recycle2-P49-D4"
+      ],
+      "learning_target_uids": [
+        "LT-G6S2Recycle2-P49-D1-goal"
+      ],
+      "branchable_topics": [
+        "A farewell party",
+        "party food",
+        "party drinks",
+        "party supplies",
+        "brown bread",
+        "cheese",
+        "cake",
+        "fresh fruit",
+        "milk",
+        "orange juice",
+        "tea bags",
+        "chocolates"
+      ],
+      "return_anchors": [
+        "Classify party words into food, drinks, and supplies."
+      ]
+    }
+  ]
+}

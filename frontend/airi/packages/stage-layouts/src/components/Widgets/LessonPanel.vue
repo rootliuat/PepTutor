@@ -712,6 +712,8 @@ async function applyPageUidDraft() {
 
           <FieldSelect
             v-model="selectedUnitValue"
+            input-id="lesson-unit-select"
+            input-name="lesson-unit-select"
             label="单元"
             :description="scopedPages.length ? selectedScopeFacts : ''"
             :options="unitSelectOptions"
@@ -747,7 +749,9 @@ async function applyPageUidDraft() {
               <span :class="['text-xs font-medium text-neutral-500 dark:text-neutral-400']">Page UID</span>
               <div :class="['flex gap-2']">
                 <Input
+                  id="lesson-page-uid-input"
                   v-model="pageUidDraft"
+                  name="lesson-page-uid"
                   variant="primary-dimmed"
                   :placeholder="pageInputPlaceholder"
                   @blur="void applyPageUidDraft()"
@@ -767,7 +771,9 @@ async function applyPageUidDraft() {
             <label :class="['flex flex-col gap-2']">
               <span :class="['text-xs font-medium text-neutral-500 dark:text-neutral-400']">Student ID</span>
               <Input
+                id="lesson-student-id-input"
                 v-model="studentId"
+                name="lesson-student-id"
                 variant="primary-dimmed"
                 placeholder="demo-student"
               />

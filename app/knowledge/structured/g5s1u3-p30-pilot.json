@@ -49,7 +49,7 @@
       "allowed_answer_scope": ["Picture 3", "salad, sandwich, and milk"],
       "entry_probe_questions": ["Which meal does Amy choose?"],
       "repair_modes": ["repeat", "choice_probe"],
-      "next_block_uids": ["TB-G5S1U3-P30-D2"],
+      "next_block_uids": ["TB-G5S1U3-P30-D2", "TB-G5S1U3-P30-D3", "TB-G5S1U3-P30-D4"],
       "learning_target_uids": ["LT-G5S1U3-P30-review-listening-meal"]
       ,
       "branchable_topics": ["meal choice", "listening review"],
@@ -68,7 +68,7 @@
       "allowed_answer_scope": ["milk"],
       "entry_probe_questions": ["What is Amy's favourite drink?"],
       "repair_modes": ["repeat", "choice_probe"],
-      "next_block_uids": ["TB-G5S1U3-P30-D3"],
+      "next_block_uids": ["TB-G5S1U3-P30-D3", "TB-G5S1U3-P30-D4"],
       "learning_target_uids": ["LT-G5S1U3-P30-review-favourite-drink"]
       ,
       "branchable_topics": ["favourite drink", "milk"],

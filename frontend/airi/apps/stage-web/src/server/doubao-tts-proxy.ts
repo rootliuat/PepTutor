@@ -2,6 +2,7 @@ import type { IncomingMessage, ServerResponse } from 'node:http'
 
 import type { Plugin, PreviewServer, ViteDevServer } from 'vite'
 
+import { Buffer } from 'node:buffer'
 import { randomUUID } from 'node:crypto'
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'

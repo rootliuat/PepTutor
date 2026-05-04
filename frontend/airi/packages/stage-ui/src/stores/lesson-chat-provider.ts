@@ -354,7 +354,9 @@ function createStreamingLessonChatResponse(
 
           if (event === 'action') {
             const { turn_client_id: _turnClientId, ...actionPayload } = payload
-            enqueueChatChunk(controller, encoder, createActToken(actionPayload as unknown as LessonAiriActionPayload), model)
+            const lessonActionPayload = actionPayload as unknown as LessonAiriActionPayload
+            lessonStore.applyStreamedTurnAction(turnClientId, lessonActionPayload)
+            enqueueChatChunk(controller, encoder, createActToken(lessonActionPayload), model)
             return
           }
 

@@ -39,9 +39,11 @@ class LessonEvidenceBlock(BaseModel):
     block_type: str
     teaching_goal: str
     teaching_summary: str
+    task_type: str | None = None
     focus_vocabulary: list[str] = Field(default_factory=list)
     core_patterns: list[str] = Field(default_factory=list)
     allowed_answer_scope: list[str] = Field(default_factory=list)
+    answer_scope: dict[str, Any] = Field(default_factory=dict)
     entry_probe_questions: list[str] = Field(default_factory=list)
     repair_modes: list[str] = Field(default_factory=list)
     learning_target_uids: list[str] = Field(default_factory=list)
@@ -56,9 +58,11 @@ class LessonEvidenceBlock(BaseModel):
             "block_type": self.block_type,
             "teaching_goal": self.teaching_goal,
             "teaching_summary": self.teaching_summary,
+            "task_type": self.task_type,
             "focus_vocabulary": self.focus_vocabulary[:8],
             "core_patterns": self.core_patterns[:8],
             "allowed_answer_scope": self.allowed_answer_scope[:8],
+            "answer_scope": self.answer_scope,
             "source_refs": self.source_refs,
         }
 
@@ -330,9 +334,15 @@ class LessonEvidenceLookup:
             block_type=str(data.get("block_type") or ""),
             teaching_goal=str(data.get("teaching_goal") or ""),
             teaching_summary=str(data.get("teaching_summary") or ""),
+            task_type=data.get("task_type"),
             focus_vocabulary=list(data.get("focus_vocabulary") or []),
             core_patterns=list(data.get("core_patterns") or []),
             allowed_answer_scope=list(data.get("allowed_answer_scope") or []),
+            answer_scope=(
+                data.get("answer_scope")
+                if isinstance(data.get("answer_scope"), dict)
+                else {}
+            ),
             entry_probe_questions=list(data.get("entry_probe_questions") or []),
             repair_modes=list(data.get("repair_modes") or []),
             learning_target_uids=list(data.get("learning_target_uids") or []),

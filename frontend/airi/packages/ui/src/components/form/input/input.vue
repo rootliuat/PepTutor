@@ -12,6 +12,8 @@ type InputTheme = 'default'
 type InputSize = 'sm' | 'md' | 'lg'
 
 const props = withDefaults(defineProps<{
+  id?: string
+  name?: string
   type?: InputType
   variant?: InputVariant // Button style variant
   size?: InputSize // Button size variant
@@ -65,7 +67,9 @@ const variantClasses: Record<InputVariant, Record<InputTheme, {
 <template>
   <template v-if="props.type === 'number'">
     <input
+      :id="props.id"
       v-model.number="modelValue"
+      :name="props.name"
       :type="props.type || 'text'"
       :class="[
         'transition-all duration-200 ease-in-out',
@@ -76,7 +80,9 @@ const variantClasses: Record<InputVariant, Record<InputTheme, {
   </template>
   <template v-else>
     <input
+      :id="props.id"
       v-model="modelValue"
+      :name="props.name"
       :type="props.type || 'text'"
       :class="[
         'transition-all duration-200 ease-in-out',

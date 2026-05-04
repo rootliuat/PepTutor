@@ -1,6 +1,6 @@
 import type { InternalModel } from 'pixi-live2d-display/cubism4'
 
-import { randomSaccadeInterval } from '../../utils'
+import { randomSaccadeInterval } from '../../utils/eye-motions'
 
 function randFloat(min: number, max: number) {
   return min + Math.random() * (max - min)

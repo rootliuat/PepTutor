@@ -621,6 +621,12 @@ pages:
       speech-noop:
         title: 无
         description: 不使用语音合成
+      peptutor-edge-tts:
+        title: PepTutor Edge TTS
+        description: PepTutor 后端代理的 Microsoft Edge 晓晓语音。
+      volcengine-realtime-transcription:
+        title: 豆包实时语音识别
+        description: 通过本地 WebSocket 代理接入火山引擎 / 豆包实时语音识别。
       deepseek:
         description: DeepSeek.com
         title: 深度求索 DeepSeek

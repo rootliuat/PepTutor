@@ -1,4 +1,7 @@
+import type { EmotionPayload } from '../constants/emotions'
 import type {
+  LessonAiriActionPayload,
+  LessonAiriPerformancePlan,
   LessonCatalogOutline,
   LessonCatalogScopeRecord,
   LessonPageOption,
@@ -26,6 +29,8 @@ import {
 import { resolveLessonPageUid } from '../utils/lesson-route'
 import { stripLessonMarkdown } from '../utils/lesson-text'
 import { resolvePepTutorRuntimeEnv } from '../utils/peptutor-runtime-config'
+import { useSharedChatHooks } from './chat/hooks'
+import { useLessonAiriRuntimeStore } from './lesson-airi-runtime'
 import { fetchPepTutorBackend } from './peptutor-backend-auth'
 import { useSpeechRuntimeStore } from './speech-runtime'
 
@@ -34,7 +39,6 @@ const fallbackLessonCatalog = lessonPilotCatalogOutline
 const fallbackLessonPageOptions = lessonPilotPageOptions
 const defaultLessonPageUid = fallbackLessonPageOptions[0]?.value || ''
 const lessonLastPageStorageKey = 'peptutor/lesson/last-page-uid'
-const lessonSpeechOwnerId = 'peptutor-lesson'
 
 export interface LessonRuntimeSnapshot {
   version: 1
@@ -111,11 +115,214 @@ function buildTranscriptEntry(
   }
 }
 
+type LessonAiriActionProfile = Omit<LessonAiriActionPayload, 'teaching_action' | 'evaluation' | 'reason' | 'turn_label'>
+
+const lessonAiriPerformanceEmotionProfiles: Record<string, LessonAiriActionPayload['emotion']> = {
+  neutral: { name: 'neutral', intensity: 0.7 },
+  encouraging: { name: 'curious', intensity: 0.82 },
+  joy: { name: 'happy', intensity: 0.92 },
+  thinking: { name: 'think', intensity: 0.78 },
+  concerned: { name: 'awkward', intensity: 0.76 },
+  correction: { name: 'question', intensity: 0.86 },
+}
+
+const lessonAiriPerformanceMotionMap: Record<string, string> = {
+  Idle: 'Idle',
+  Listen: 'Question',
+  Explain: 'Think',
+  Nod: 'Happy',
+  Encourage: 'Curious',
+  Interrupted: 'Surprise',
+}
+
+const lessonAiriPerformanceExpressionMap: Record<string, string> = {
+  neutral: 'neutral',
+  soft_smile: 'happy',
+  thinking: 'think',
+  concerned: 'neutral',
+  focused: 'think',
+}
+
+const lessonAiriPerformanceSpeechStyleDurationMs: Record<NonNullable<LessonAiriPerformancePlan['speech_style']>, number> = {
+  normal: 2800,
+  slow_split: 3600,
+  short_prompt: 2200,
+  gentle_correction: 3400,
+}
+
+function clampLessonUnit(value: unknown, fallback: number) {
+  if (typeof value !== 'number' || Number.isNaN(value))
+    return fallback
+  return Math.min(1, Math.max(0, value))
+}
+
+function lessonAiriProfileFromBackendPerformance(result: LessonTurnResult): LessonAiriActionProfile | null {
+  const performance = result.debug_signals?.persona?.airi_performance
+  if (!performance)
+    return null
+
+  const speechStyle = performance.speech_style || 'normal'
+
+  return {
+    emotion: lessonAiriPerformanceEmotionProfiles[performance.emotion || ''] || lessonAiriPerformanceEmotionProfiles.neutral,
+    motion: lessonAiriPerformanceMotionMap[performance.motion || ''] || 'Idle',
+    expression: lessonAiriPerformanceExpressionMap[performance.expression || ''] || 'neutral',
+    duration_ms: lessonAiriPerformanceSpeechStyleDurationMs[speechStyle] || lessonAiriPerformanceSpeechStyleDurationMs.normal,
+    speech_style: speechStyle,
+    mouth_intensity: clampLessonUnit(performance.mouth_intensity, 0.8),
+    interrupt_policy: performance.interrupt_policy || 'barge_in_allowed',
+    content_source: performance.content_source || 'lesson_runtime_teacher_response',
+    fallback_allowed: typeof performance.fallback_allowed === 'boolean' ? performance.fallback_allowed : true,
+    performance_source: 'lesson_persona_context',
+  }
+}
+
+function lessonAiriProfileForTurn(result: LessonTurnResult): LessonAiriActionProfile {
+  const backendPerformanceProfile = lessonAiriProfileFromBackendPerformance(result)
+  if (backendPerformanceProfile)
+    return backendPerformanceProfile
+
+  const evaluation = result.evaluation || ''
+  if (evaluation === 'correct' || evaluation === 'acceptable') {
+    return {
+      emotion: { name: 'happy', intensity: 0.82 },
+      motion: 'Happy',
+      expression: 'happy',
+      duration_ms: 2600,
+      speech_style: 'normal',
+      mouth_intensity: 0.78,
+      interrupt_policy: 'barge_in_allowed',
+      content_source: 'lesson_runtime_teacher_response',
+      fallback_allowed: true,
+      performance_source: 'frontend_lesson_runtime_profile',
+    }
+  }
+
+  if (evaluation === 'incorrect' || evaluation === 'partially_correct' || evaluation === 'unclear') {
+    return {
+      emotion: { name: 'question', intensity: 0.78 },
+      motion: 'Question',
+      expression: 'think',
+      duration_ms: 3400,
+      speech_style: 'gentle_correction',
+      mouth_intensity: 0.72,
+      interrupt_policy: 'barge_in_allowed',
+      content_source: 'lesson_runtime_teacher_response',
+      fallback_allowed: true,
+      performance_source: 'frontend_lesson_runtime_profile',
+    }
+  }
+
+  switch (result.teaching_action) {
+    case 'page_intro':
+    case 'probe':
+      return {
+        emotion: { name: 'curious', intensity: 0.72 },
+        motion: 'Curious',
+        expression: 'think',
+        duration_ms: 3000,
+        speech_style: 'normal',
+        mouth_intensity: 0.78,
+        interrupt_policy: 'barge_in_allowed',
+        content_source: 'lesson_runtime_teacher_response',
+        fallback_allowed: true,
+        performance_source: 'frontend_lesson_runtime_profile',
+      }
+    case 'hint':
+    case 'model':
+    case 'repeat_drill':
+      return {
+        emotion: { name: 'think', intensity: 0.74 },
+        motion: 'Think',
+        expression: 'think',
+        duration_ms: 3400,
+        speech_style: 'slow_split',
+        mouth_intensity: 0.7,
+        interrupt_policy: 'barge_in_allowed',
+        content_source: 'lesson_runtime_teacher_response',
+        fallback_allowed: true,
+        performance_source: 'frontend_lesson_runtime_profile',
+      }
+    case 'complete':
+      return {
+        emotion: { name: 'happy', intensity: 0.82 },
+        motion: 'Happy',
+        expression: 'happy',
+        duration_ms: 2600,
+        speech_style: 'short_prompt',
+        mouth_intensity: 0.78,
+        interrupt_policy: 'barge_in_allowed',
+        content_source: 'lesson_runtime_teacher_response',
+        fallback_allowed: true,
+        performance_source: 'frontend_lesson_runtime_profile',
+      }
+    default:
+      return {
+        emotion: { name: 'neutral', intensity: 0.68 },
+        motion: 'Idle',
+        expression: 'neutral',
+        duration_ms: 2800,
+        speech_style: 'normal',
+        mouth_intensity: 0.76,
+        interrupt_policy: 'barge_in_allowed',
+        content_source: 'lesson_runtime_teacher_response',
+        fallback_allowed: true,
+        performance_source: 'frontend_lesson_runtime_profile',
+      }
+  }
+}
+
+function lessonAiriActionPayloadFromTurn(result: LessonTurnResult): LessonAiriActionPayload {
+  const profile = lessonAiriProfileForTurn(result)
+  return {
+    ...profile,
+    teaching_action: result.teaching_action,
+    evaluation: result.evaluation,
+    reason: result.state.branch_active ? 'lesson_branch_turn' : 'lesson_turn',
+    turn_label: result.turn_label,
+  }
+}
+
+function lessonAiriActTokenFromTurn(result?: LessonTurnResult | null): string {
+  if (!result) {
+    return ''
+  }
+
+  return `<|ACT ${JSON.stringify(lessonAiriActionPayloadFromTurn(result))}|>`
+}
+
+function lessonAiriEmotionPayloadFromTurn(result: LessonTurnResult): EmotionPayload {
+  const payload = lessonAiriActionPayloadFromTurn(result)
+  return lessonAiriEmotionPayloadFromAction(payload)
+}
+
+function lessonAiriEmotionPayloadFromAction(payload: LessonAiriActionPayload): EmotionPayload {
+  return {
+    name: payload.emotion.name as EmotionPayload['name'],
+    intensity: payload.emotion.intensity,
+    motion: payload.motion,
+    expression: payload.expression,
+    durationMs: payload.duration_ms,
+    reason: payload.reason,
+    teachingAction: payload.teaching_action,
+    evaluation: payload.evaluation,
+    speechStyle: payload.speech_style,
+    mouthIntensity: payload.mouth_intensity,
+    interruptPolicy: payload.interrupt_policy,
+    contentSource: payload.content_source,
+    fallbackAllowed: payload.fallback_allowed,
+    performanceSource: payload.performance_source,
+    turnLabel: payload.turn_label,
+  }
+}
+
 export function setLessonApiBaseUrlForTest(value?: string) {
   lessonApiBaseUrlOverride = value === undefined ? undefined : normalizeLessonApiBaseUrl(value)
 }
 
 export const useLessonStore = defineStore('lesson', () => {
+  const chatHooks = useSharedChatHooks()
+  const lessonAiriRuntimeStore = useLessonAiriRuntimeStore()
   const speechRuntimeStore = useSpeechRuntimeStore()
   const preferredPageUid = ref(readPersistedLessonPageUid() || defaultLessonPageUid)
   const catalogOutline = ref<LessonCatalogOutline>(fallbackLessonCatalog)
@@ -269,40 +476,47 @@ export const useLessonStore = defineStore('lesson', () => {
       ?.text || activeTurn.value?.teacher_response || ''
   })
 
-  async function replayTeacherPrompt(text: string, reason: string = 'lesson-teacher-prompt') {
+  async function replayTeacherPrompt(text: string, reason: string = 'lesson-teacher-prompt', turn?: LessonTurnResult | null) {
     const normalizedText = stripLessonMarkdown(text)
     if (!normalizedText) {
       return
     }
+    const textWithAiriAction = `${lessonAiriActTokenFromTurn(turn)}${normalizedText}`
 
-    speechRuntimeStore.stopByOwner(lessonSpeechOwnerId, reason)
-    const intent = speechRuntimeStore.openIntent({
-      ownerId: lessonSpeechOwnerId,
-      priority: 'high',
-      behavior: 'interrupt',
-    })
+    const context = {
+      message: {
+        role: 'user' as const,
+        content: reason,
+        createdAt: Date.now(),
+        id: nanoid(),
+      },
+      contexts: {},
+      composedMessage: [],
+    }
+
+    await chatHooks.emitBeforeMessageComposedHooks(reason, context)
 
     const parser = useLlmmarkerParser({
       onLiteral: async (literal) => {
         if (literal) {
-          intent.writeLiteral(literal)
+          await chatHooks.emitTokenLiteralHooks(literal, context)
         }
       },
       onSpecial: async (special) => {
         if (special) {
-          intent.writeSpecial(special)
+          await chatHooks.emitTokenSpecialHooks(special, context)
         }
       },
     })
 
-    await parser.consume(normalizedText)
+    await parser.consume(textWithAiriAction)
     await parser.end()
-    intent.writeFlush()
-    intent.end()
+    await chatHooks.emitStreamEndHooks(context)
+    await chatHooks.emitAssistantResponseEndHooks(normalizedText, context)
   }
 
-  function queueTeacherPromptReplay(text: string, reason: string) {
-    void replayTeacherPrompt(text, reason).catch((caughtError) => {
+  function queueTeacherPromptReplay(text: string, reason: string, turn?: LessonTurnResult | null) {
+    void replayTeacherPrompt(text, reason, turn).catch((caughtError) => {
       console.warn('Failed to replay lesson teacher prompt', caughtError)
     })
   }
@@ -599,6 +813,7 @@ export const useLessonStore = defineStore('lesson', () => {
     activeTurn.value = null
     transcript.value = []
     draftLearnerInput.value = ''
+    lessonAiriRuntimeStore.clearPerformancePlan()
 
     if (!options.keepSelectedPage) {
       commitSelectedPageUid(defaultPageUid.value, {
@@ -643,11 +858,19 @@ export const useLessonStore = defineStore('lesson', () => {
     activeTurn.value = snapshot.activeTurn ? snapshotValue(snapshot.activeTurn) : null
     transcript.value = snapshotValue(snapshot.transcript || [])
     draftLearnerInput.value = ''
+
+    if (activeTurn.value) {
+      lessonAiriRuntimeStore.applyPerformancePlan(lessonAiriEmotionPayloadFromTurn(activeTurn.value))
+    }
+    else {
+      lessonAiriRuntimeStore.clearPerformancePlan()
+    }
   }
 
   function applyTurnResult(result: LessonTurnResult, options: { replaceTranscript?: boolean } = {}) {
     runtimeState.value = result.state
     activeTurn.value = result
+    lessonAiriRuntimeStore.applyPerformancePlan(lessonAiriEmotionPayloadFromTurn(result))
 
     const teacherEntry = buildTranscriptEntry({
       speaker: 'teacher',
@@ -758,6 +981,15 @@ export const useLessonStore = defineStore('lesson', () => {
     return true
   }
 
+  function applyStreamedTurnAction(turnClientId: string, payload: LessonAiriActionPayload) {
+    if (!isActiveLessonTurn(turnClientId)) {
+      return false
+    }
+
+    lessonAiriRuntimeStore.applyPerformancePlan(lessonAiriEmotionPayloadFromAction(payload))
+    return true
+  }
+
   function failStreamedTurn(turnClientId: string, message: string) {
     if (!isActiveLessonTurn(turnClientId)) {
       return false
@@ -812,7 +1044,7 @@ export const useLessonStore = defineStore('lesson', () => {
       }
       applyTurnResult(result, { replaceTranscript: true })
       if (options.replayTeacher !== false) {
-        queueTeacherPromptReplay(result.teacher_response, 'lesson-start')
+        queueTeacherPromptReplay(result.teacher_response, 'lesson-start', result)
       }
       return result
     }
@@ -854,7 +1086,7 @@ export const useLessonStore = defineStore('lesson', () => {
       })
       applyTurnResult(result)
       if (options.replayTeacher !== false) {
-        queueTeacherPromptReplay(result.teacher_response, 'lesson-turn')
+        queueTeacherPromptReplay(result.teacher_response, 'lesson-turn', result)
       }
       return result
     }
@@ -895,7 +1127,7 @@ export const useLessonStore = defineStore('lesson', () => {
       retrieval_mode: activeTurn.value?.retrieval_mode,
       evaluation: activeTurn.value?.evaluation,
     }))
-    void replayTeacherPrompt(text, 'lesson-repeat')
+    void replayTeacherPrompt(text, 'lesson-repeat', activeTurn.value)
   }
 
   ensureCatalogSelection(preferredPageUid.value || selectedPageUid.value)
@@ -952,6 +1184,7 @@ export const useLessonStore = defineStore('lesson', () => {
     restoreRuntimeSnapshot,
     beginStreamedTurn,
     applyStreamedTurnResult,
+    applyStreamedTurnAction,
     failStreamedTurn,
     completeStreamedTurn,
     abortActiveTurn,

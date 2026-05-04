@@ -34,6 +34,7 @@ DOUBAO_TTS_DEFAULT_ENCODING = "mp3"
 DOUBAO_TTS_ALLOWED_VOICES = ("zh_female_vv_uranus_bigtts",)
 EDGE_TTS_DEFAULT_VOICE = "zh-CN-XiaoxiaoNeural"
 EDGE_TTS_ALLOWED_VOICES = (EDGE_TTS_DEFAULT_VOICE,)
+EDGE_TTS_MAX_ATTEMPTS = 2
 
 
 class DoubaoTtsAudioOptions(BaseModel):
@@ -444,36 +445,59 @@ def validate_edge_tts_request(request: EdgeTtsRequest) -> tuple[str, str]:
 
 async def fetch_edge_tts_audio(request: EdgeTtsRequest) -> tuple[bytes, str]:
     input_text, voice = validate_edge_tts_request(request)
-    audio_chunks: list[bytes] = []
+    last_error: SpeechProxyError | None = None
 
-    try:
-        communicator = edge_tts.Communicate(
-            input_text,
-            voice=voice,
-            rate=request.rate,
-            volume=request.volume,
-            pitch=request.pitch,
-        )
-        async for message in communicator.stream():
-            if message["type"] == "audio" and message.get("data"):
-                audio_chunks.append(message["data"])
-    except Exception as exc:
-        raise SpeechProxyError(
-            code="speech_proxy_upstream_error",
-            message="Edge TTS upstream request failed.",
-            status_code=status.HTTP_502_BAD_GATEWAY,
-            details={"upstream_error": str(exc)},
-        ) from exc
+    for attempt in range(1, EDGE_TTS_MAX_ATTEMPTS + 1):
+        audio_chunks: list[bytes] = []
+        try:
+            communicator = edge_tts.Communicate(
+                input_text,
+                voice=voice,
+                rate=request.rate,
+                volume=request.volume,
+                pitch=request.pitch,
+            )
+            async for message in communicator.stream():
+                if message["type"] == "audio" and message.get("data"):
+                    audio_chunks.append(message["data"])
+        except Exception as exc:
+            last_error = SpeechProxyError(
+                code="speech_proxy_upstream_error",
+                message="Edge TTS upstream request failed.",
+                status_code=status.HTTP_502_BAD_GATEWAY,
+                details={
+                    "upstream_error": str(exc),
+                    "attempt": attempt,
+                    "max_attempts": EDGE_TTS_MAX_ATTEMPTS,
+                },
+            )
+            if attempt < EDGE_TTS_MAX_ATTEMPTS:
+                continue
+            raise last_error from exc
 
-    audio = b"".join(audio_chunks)
-    if not audio:
-        raise SpeechProxyError(
+        audio = b"".join(audio_chunks)
+        if audio:
+            return audio, "audio/mpeg"
+
+        last_error = SpeechProxyError(
             code="speech_proxy_upstream_error",
             message="Edge TTS upstream returned no audio.",
             status_code=status.HTTP_502_BAD_GATEWAY,
+            details={
+                "attempt": attempt,
+                "max_attempts": EDGE_TTS_MAX_ATTEMPTS,
+            },
         )
+        if attempt < EDGE_TTS_MAX_ATTEMPTS:
+            continue
 
-    return audio, "audio/mpeg"
+    if last_error:
+        raise last_error
+    raise SpeechProxyError(
+        code="speech_proxy_upstream_error",
+        message="Edge TTS upstream returned no audio.",
+        status_code=status.HTTP_502_BAD_GATEWAY,
+    )
 
 
 def create_speech_proxy_routes(api_key: str | None = None) -> APIRouter:

@@ -147,6 +147,38 @@ def test_edge_tts_route_returns_audio(monkeypatch):
     assert any("text_preview=Hello from Edge Xiaoxiao" in entry for entry in info_logs)
 
 
+def test_edge_tts_route_retries_once_after_empty_upstream_audio(monkeypatch):
+    attempts: list[str] = []
+
+    class FakeCommunicate:
+        def __init__(self, input_text, **_kwargs):
+            attempts.append(input_text)
+            self.attempt = len(attempts)
+
+        async def stream(self):
+            if self.attempt == 1:
+                if False:
+                    yield {}
+                return
+            yield {"type": "audio", "data": b"retried-edge-mp3"}
+
+    monkeypatch.setattr(speech_routes_module.edge_tts, "Communicate", FakeCommunicate)
+
+    client = TestClient(_make_app())
+    response = client.post(
+        "/api/peptutor/edge-tts",
+        json={
+            "input": "cow 发 aow，snow 发 ow。",
+            "voice": "zh-CN-XiaoxiaoNeural",
+            "model": "edge-tts",
+        },
+    )
+
+    assert response.status_code == 200
+    assert response.content == b"retried-edge-mp3"
+    assert attempts == ["cow 发 aow，snow 发 ow。", "cow 发 aow，snow 发 ow。"]
+
+
 def test_edge_tts_route_rejects_unallowlisted_voice():
     client = TestClient(_make_app())
     response = client.post(

@@ -5,6 +5,8 @@ import { Combobox } from '../combobox'
 
 const props = defineProps<{
   options?: { label: string, value: string | number }[]
+  inputId?: string
+  inputName?: string
   placeholder?: string
   disabled?: boolean
   title?: string
@@ -27,5 +29,12 @@ provide('hide', handleHide)
 </script>
 
 <template>
-  <Combobox v-model="modelValue" :default-value="modelValue" :options="[{ groupLabel: '', children: props.options }]" />
+  <Combobox
+    v-model="modelValue"
+    :default-value="modelValue"
+    :input-id="props.inputId"
+    :input-name="props.inputName"
+    :options="[{ groupLabel: '', children: props.options }]"
+    :placeholder="props.placeholder"
+  />
 </template>

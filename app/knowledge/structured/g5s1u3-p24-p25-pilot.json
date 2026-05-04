@@ -110,36 +110,8 @@
       "page_type": "dialogue",
       "block_type": "dialogue_practice",
       "source_refs": ["TB-G5S1U3-P24-D3"],
-      "teaching_goal": "在简短角色扮演中先回答想喝什么。",
-      "teaching_summary": "先用饮料小词库练习点餐对话，听懂 What would you like to drink?，再用 I'd like ... 回答。",
-      "focus_vocabulary": ["water", "tea"],
-      "core_patterns": [
-        "What would you like to drink?",
-        "I'd like ..."
-      ],
-      "allowed_answer_scope": [
-        "I'd like water.",
-        "I'd like some tea."
-      ],
-      "entry_probe_questions": [
-        "现在你口渴了，跟老师选一句说：I'd like water. 或 I'd like some tea."
-      ],
-      "repair_modes": ["choice_probe", "word_drill", "sentence_drill"],
-      "next_block_uids": ["TB-G5S1U3-P24-D4", "TB-G5S1U3-P24-D1"],
-      "learning_target_uids": [
-        "LT-G5S1U3-P24-answer-id-like"
-      ],
-      "branchable_topics": ["restaurant", "drink choice"],
-      "return_anchors": ["What would you like to drink?", "I'd like ..."]
-    },
-    {
-      "block_uid": "TB-G5S1U3-P24-D4",
-      "page_uid": "TB-G5S1U3-P24",
-      "page_type": "dialogue",
-      "block_type": "dialogue_practice",
-      "source_refs": ["TB-G5S1U3-P24-D3"],
-      "teaching_goal": "在简短角色扮演中再回答想吃什么。",
-      "teaching_summary": "继续用食物小词库练习点餐对话，听懂 What would you like to eat?，再用 I'd like ... 回答。",
+      "teaching_goal": "在简短角色扮演中先回答想吃什么。",
+      "teaching_summary": "先用食物小词库练习点餐对话，听懂 What would you like to eat?，再用 I'd like ... 回答。",
       "focus_vocabulary": ["chicken and bread", "rice and vegetables"],
       "core_patterns": [
         "What would you like to eat?",
@@ -147,18 +119,50 @@
       ],
       "allowed_answer_scope": [
         "I'd like chicken and bread.",
-        "I'd like rice and vegetables."
+        "I'd like rice and vegetables.",
+        "I'd like a sandwich.",
+        "I'd like beef noodles."
       ],
       "entry_probe_questions": [
-        "Can you repeat: What would you like to eat?"
+        "现在你想点吃的，跟老师选一句说：I'd like chicken and bread. 或 I'd like rice and vegetables."
+      ],
+      "repair_modes": ["choice_probe", "word_drill", "sentence_drill"],
+      "next_block_uids": ["TB-G5S1U3-P24-D4", "TB-G5S1U3-P24-D1"],
+      "learning_target_uids": [
+        "LT-G5S1U3-P24-answer-id-like"
+      ],
+      "branchable_topics": ["restaurant", "food choice"],
+      "return_anchors": ["What would you like to eat?", "I'd like ..."]
+    },
+    {
+      "block_uid": "TB-G5S1U3-P24-D4",
+      "page_uid": "TB-G5S1U3-P24",
+      "page_type": "dialogue",
+      "block_type": "dialogue_practice",
+      "source_refs": ["TB-G5S1U3-P24-D3"],
+      "teaching_goal": "在简短角色扮演中再回答想喝什么。",
+      "teaching_summary": "继续用饮料小词库练习点餐对话，听懂 What would you like to drink?，再用 I'd like ... 回答。",
+      "focus_vocabulary": ["water", "tea", "orange juice"],
+      "core_patterns": [
+        "What would you like to drink?",
+        "I'd like ..."
+      ],
+      "allowed_answer_scope": [
+        "I'd like water.",
+        "I'd like some water.",
+        "I'd like some tea.",
+        "I'd like orange juice."
+      ],
+      "entry_probe_questions": [
+        "Can you repeat: What would you like to drink?"
       ],
       "repair_modes": ["choice_probe", "word_drill", "sentence_drill"],
       "next_block_uids": ["TB-G5S1U3-P24-D1"],
       "learning_target_uids": [
         "LT-G5S1U3-P24-dialogue-food-drink-roleplay"
       ],
-      "branchable_topics": ["restaurant", "food choice"],
-      "return_anchors": ["What would you like to eat?", "I'd like ..."]
+      "branchable_topics": ["restaurant", "drink choice"],
+      "return_anchors": ["What would you like to drink?", "I'd like ..."]
     },
     {
       "block_uid": "TB-G5S1U3-P24-D1",
@@ -170,7 +174,7 @@
       "teaching_summary": "听一小段录音，听出 Sarah 想吃什么，并从词库里抓到关键信息。",
       "focus_vocabulary": ["bread", "noodles", "chicken"],
       "core_patterns": [
-        "She would like some ... and ..."
+        "She would like some bread and noodles."
       ],
       "allowed_answer_scope": [
         "bread and noodles",
@@ -185,7 +189,7 @@
         "LT-G5S1U3-P24-listening-food-keywords"
       ],
       "branchable_topics": ["bread", "noodles", "listening"],
-      "return_anchors": ["She would like some ... and ..."]
+      "return_anchors": ["She would like some bread and noodles."]
     },
     {
       "block_uid": "TB-G5S1U3-P25-D1",
@@ -235,7 +239,7 @@
       "allowed_answer_scope": [
         "I'd like a sandwich, please.",
         "I'd like a hamburger, please.",
-        "I'd like some tea, please."
+        "I'd like a salad, please."
       ],
       "entry_probe_questions": [
         "先试着说一遍：I'd like a sandwich, please."
@@ -264,7 +268,9 @@
       ],
       "allowed_answer_scope": [
         "I'd like a sandwich and some tea.",
-        "I'd like a hamburger and some tea."
+        "I'd like a hamburger and some tea.",
+        "I'd like a salad and some water.",
+        "I'd like an ice cream and some tea."
       ],
       "entry_probe_questions": [
         "如果你是顾客，你会怎么点餐？"
@@ -312,19 +318,19 @@
       "atom_type": "word",
       "text": "tea",
       "gloss": "a drink item",
-      "linked_blocks": ["TB-G5S1U3-P24-D3", "TB-G5S1U3-P25-D1", "TB-G5S1U3-P25-D3"]
+      "linked_blocks": ["TB-G5S1U3-P24-D4", "TB-G5S1U3-P25-D1", "TB-G5S1U3-P25-D3"]
     },
     {
       "atom_uid": "KA-G5S1U3-pattern-order-eat",
       "atom_type": "sentence_pattern",
       "text": "What would you like to eat?",
-      "linked_blocks": ["TB-G5S1U3-P24-D2", "TB-G5S1U3-P24-D4", "TB-G5S1U3-P25-D2", "TB-G5S1U3-P25-D3"]
+      "linked_blocks": ["TB-G5S1U3-P24-D2", "TB-G5S1U3-P24-D3", "TB-G5S1U3-P25-D2", "TB-G5S1U3-P25-D3"]
     },
     {
       "atom_uid": "KA-G5S1U3-pattern-order-drink",
       "atom_type": "sentence_pattern",
       "text": "What would you like to drink?",
-      "linked_blocks": ["TB-G5S1U3-P24-D2", "TB-G5S1U3-P24-D3", "TB-G5S1U3-P25-D3"]
+      "linked_blocks": ["TB-G5S1U3-P24-D2", "TB-G5S1U3-P24-D4", "TB-G5S1U3-P25-D3"]
     },
     {
       "atom_uid": "KA-G5S1U3-pattern-id-like",

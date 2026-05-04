@@ -101,12 +101,70 @@ export interface LessonMemoryRuntimeDebugSignal {
     | 'recall_and_writeback_degraded'
 }
 
+export interface LessonTeacherResponseAuditSignal {
+  source:
+    | 'policy'
+    | 'policy_repaired'
+    | 'llm'
+    | 'llm_repaired'
+    | 'fallback'
+    | 'deterministic'
+    | 'unknown'
+  llm_called: boolean
+  llm_provider: string
+  latency_ms: number
+  fallback_used: boolean
+  fallback_reason: string
+  repair_reason?: string
+  route: string
+}
+
 export interface LessonTurnDebugSignals {
   live_prompts: LessonLivePromptsDebugSignal
   vector_retrieval: LessonVectorRetrievalDebugSignal
   prompt_memory: LessonPromptMemoryDebugSignal
   semantic_recall: LessonSemanticRecallDebugSignal
   memory_runtime: LessonMemoryRuntimeDebugSignal
+  persona?: LessonPersonaDebugSignal
+  response_audit?: LessonTeacherResponseAuditSignal
+}
+
+export interface LessonAiriPerformancePlan {
+  emotion?: string
+  expression?: string
+  motion?: string
+  speech_style?: 'normal' | 'slow_split' | 'short_prompt' | 'gentle_correction'
+  mouth_intensity?: number
+  interrupt_policy?: 'barge_in_allowed' | 'finish_current_sentence' | 'no_interrupt'
+  content_source?: string
+  fallback_allowed?: boolean
+}
+
+export interface LessonClassroomAffectState {
+  student_confidence?: string
+  teacher_energy?: string
+  stuckness?: number
+  interruption_state?: string
+  recent_turn_labels?: string[]
+}
+
+export interface LessonPersonaDebugSignal {
+  enabled?: boolean
+  schema_version?: string
+  profile_id?: string
+  profile_version?: string
+  display_name?: string
+  voice_hint?: string
+  allowed_to_shape?: string[]
+  protected_authorities?: string[]
+  relationship_student_id?: string
+  relationship_signals?: string[]
+  common_mistakes?: string[]
+  preferences?: string[]
+  mastery_signals?: string[]
+  semantic_memories?: string[]
+  affect_state?: LessonClassroomAffectState
+  airi_performance?: LessonAiriPerformancePlan
 }
 
 export interface LessonTurnResult {

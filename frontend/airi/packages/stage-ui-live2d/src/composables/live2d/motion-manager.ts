@@ -120,9 +120,16 @@ export function useLive2DMotionManagerUpdate(options: UseLive2DMotionManagerUpda
 
 // -- Plugins ---------------------------------------------------------------
 
+export function normalizeLive2DMotionDeltaSeconds(timeDelta: number) {
+  const rawDelta = Math.max(0, Number.isFinite(timeDelta) ? timeDelta : 0)
+  const seconds = rawDelta > 5 ? rawDelta / 1000 : rawDelta
+  return Math.min(seconds, 0.1)
+}
+
 export function useMotionUpdatePluginBeatSync(beatSync: BeatSyncController): MotionManagerPlugin {
   return (ctx) => {
     beatSync.updateTargets(ctx.now)
+    const deltaSeconds = normalizeLive2DMotionDeltaSeconds(ctx.timeDelta)
 
     // Semi-implicit Euler approach
     const stiffness = 120 // Higher -> Snappier
@@ -139,8 +146,8 @@ export function useMotionUpdatePluginBeatSync(beatSync: BeatSyncController): Mot
       const pos = paramAngleX
       const vel = beatSync.velocityX.value
       const accel = (stiffness * (target - pos) - damping * vel) / mass
-      beatSync.velocityX.value = vel + accel * ctx.timeDelta
-      paramAngleX = pos + beatSync.velocityX.value * ctx.timeDelta
+      beatSync.velocityX.value = vel + accel * deltaSeconds
+      paramAngleX = pos + beatSync.velocityX.value * deltaSeconds
 
       if (Math.abs(target - paramAngleX) < 0.01 && Math.abs(beatSync.velocityX.value) < 0.01) {
         paramAngleX = target
@@ -154,8 +161,8 @@ export function useMotionUpdatePluginBeatSync(beatSync: BeatSyncController): Mot
       const pos = paramAngleY
       const vel = beatSync.velocityY.value
       const accel = (stiffness * (target - pos) - damping * vel) / mass
-      beatSync.velocityY.value = vel + accel * ctx.timeDelta
-      paramAngleY = pos + beatSync.velocityY.value * ctx.timeDelta
+      beatSync.velocityY.value = vel + accel * deltaSeconds
+      paramAngleY = pos + beatSync.velocityY.value * deltaSeconds
 
       // Snap
       if (Math.abs(target - paramAngleY) < 0.01 && Math.abs(beatSync.velocityY.value) < 0.01) {
@@ -170,8 +177,8 @@ export function useMotionUpdatePluginBeatSync(beatSync: BeatSyncController): Mot
       const pos = paramAngleZ
       const vel = beatSync.velocityZ.value
       const accel = (stiffness * (target - pos) - damping * vel) / mass
-      beatSync.velocityZ.value = vel + accel * ctx.timeDelta
-      paramAngleZ = pos + beatSync.velocityZ.value * ctx.timeDelta
+      beatSync.velocityZ.value = vel + accel * deltaSeconds
+      paramAngleZ = pos + beatSync.velocityZ.value * deltaSeconds
 
       // Snap
       if (Math.abs(target - paramAngleZ) < 0.01 && Math.abs(beatSync.velocityZ.value) < 0.01) {

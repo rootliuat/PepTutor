@@ -5,7 +5,9 @@ from __future__ import annotations
 import asyncio
 import json
 import re
+import time
 from typing import Any, Optional
+from uuid import uuid4
 
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import StreamingResponse
@@ -24,6 +26,7 @@ from lightrag.orchestrator.lesson_runtime import (
     stream_lesson_teacher_response,
 )
 from lightrag.orchestrator.lesson_state import LessonRuntimeState
+from lightrag.utils import logger
 
 
 class LessonTurnRequest(BaseModel):
@@ -343,6 +346,52 @@ def _run_lesson_turn(runtime: LessonRuntime, request: LessonTurnRequest) -> Less
     )
 
 
+def _lesson_turn_exception_context(
+    runtime: LessonRuntime,
+    request: LessonTurnRequest,
+) -> dict[str, Any]:
+    selected_block = None
+    if request.state is not None:
+        selected_block = request.state.current_block_uid
+    if selected_block is None:
+        try:
+            selected_block = runtime.catalog.first_block_for_page(request.page_uid).block_uid
+        except Exception:  # noqa: BLE001 - best-effort logging context.
+            selected_block = None
+    route = "page_entry" if request.state is None else "stateful_turn"
+    return {
+        "route": route,
+        "pageUid": request.page_uid,
+        "selected_block": selected_block,
+    }
+
+
+def _log_lesson_turn_exception(
+    *,
+    runtime: LessonRuntime,
+    request: LessonTurnRequest,
+    trace_id: str,
+    started_at: float,
+    exc: Exception,
+) -> None:
+    context = _lesson_turn_exception_context(runtime, request)
+    logger.exception(
+        "Lesson turn exception %s",
+        json.dumps(
+            {
+                "trace_id": trace_id,
+                "exception_type": type(exc).__name__,
+                "elapsed_ms": int((time.perf_counter() - started_at) * 1000),
+                "route": context["route"],
+                "pageUid": context["pageUid"],
+                "selected_block": context["selected_block"],
+            },
+            ensure_ascii=False,
+            sort_keys=True,
+        ),
+    )
+
+
 def create_lesson_routes(
     runtime: LessonRuntime,
     api_key: Optional[str] = None,
@@ -369,12 +418,23 @@ def create_lesson_routes(
         dependencies=[Depends(combined_auth), Depends(lesson_rate_limit)],
     )
     async def lesson_turn(request: LessonTurnRequest) -> LessonTurnResult:
+        started_at = time.perf_counter()
+        trace_id = request.turn_client_id or uuid4().hex
         try:
             return _run_lesson_turn(runtime, request)
         except KeyError as exc:
             raise HTTPException(status_code=404, detail=str(exc)) from exc
         except ValueError as exc:
             raise HTTPException(status_code=400, detail=str(exc)) from exc
+        except Exception as exc:
+            _log_lesson_turn_exception(
+                runtime=runtime,
+                request=request,
+                trace_id=trace_id,
+                started_at=started_at,
+                exc=exc,
+            )
+            raise
 
     @router.post(
         "/turn/stream",
@@ -382,6 +442,8 @@ def create_lesson_routes(
     )
     async def lesson_turn_stream(request: LessonTurnRequest) -> StreamingResponse:
         async def event_stream():
+            started_at = time.perf_counter()
+            trace_id = request.turn_client_id or uuid4().hex
             try:
                 yield _sse_event(
                     "meta",
@@ -517,6 +579,22 @@ def create_lesson_routes(
                         "turn_client_id": request.turn_client_id,
                         "status_code": 400,
                         "detail": str(exc),
+                    },
+                )
+            except Exception as exc:
+                _log_lesson_turn_exception(
+                    runtime=runtime,
+                    request=request,
+                    trace_id=trace_id,
+                    started_at=started_at,
+                    exc=exc,
+                )
+                yield _sse_event(
+                    "error",
+                    {
+                        "turn_client_id": request.turn_client_id,
+                        "status_code": 500,
+                        "detail": f"lesson_turn_exception:{trace_id}",
                     },
                 )
 
