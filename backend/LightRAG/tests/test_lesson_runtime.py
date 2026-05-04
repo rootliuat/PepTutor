@@ -4853,6 +4853,49 @@ def test_redirect_reply_policy_ignores_invalid_action_fields_and_uses_active_pro
     assert "water（水）" in repaired or "water" in repaired
 
 
+def test_redirect_reply_policy_uses_valid_contract_over_polluted_return_anchor():
+    catalog = PilotLessonCatalog(manifest_path=_general_overlay_manifest_path())
+    block = catalog.get_block("TB-G6S2U2-P13-D2")
+
+    repaired = maybe_render_redirect_reply(
+        learner_input="water",
+        target_phrase="What did you do last weekend?",
+        teacher_reply=(
+            "你说了“water”，这是“水”的意思。我们这一页有两块内容可以学："
+            "第一块是图片场景活动，第二块是核心对话。"
+            "你想先学哪一块？可以说“第一块”或“第二块”。"
+        ),
+        block=block,
+        active_prompt="What did you do last weekend?",
+        return_anchor=(
+            "你刚才说了water，那是单词。"
+            "你想先学第一块的图片场景，还是第二块的核心对话？"
+        ),
+        action_fields={
+            "target_role": "question",
+            "expected_student_action": "answer",
+            "question_target": "What did you do last weekend?",
+            "answer_target": "Yes, I did. We played football on Sunday.",
+            "answer_frame": "I ... last weekend.",
+            "action_source": "block_core_pattern",
+            "preserve_page_uid": "TB-G6S2U2-P13",
+            "preserve_block_uid": "TB-G6S2U2-P13-D2",
+            "active_prompt": "What did you do last weekend?",
+            "return_anchor": (
+                "你刚才说了water，那是单词。"
+                "你想先学第一块的图片场景，还是第二块的核心对话？"
+            ),
+            "target_phrase": "What did you do last weekend?",
+        },
+    )
+
+    assert repaired is not None
+    assert "What did you do last weekend?" in repaired
+    assert "I ... last weekend." in repaired
+    assert "第一块" not in repaired
+    assert "第二块" not in repaired
+
+
 def test_g5s2_p6_grounded_page_vocabulary_question_does_not_fallback():
     def _teacher_llm(prompt, system_prompt=None, history_messages=None, **kwargs):
         _ = (system_prompt, history_messages, kwargs)

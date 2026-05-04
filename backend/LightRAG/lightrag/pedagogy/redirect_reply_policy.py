@@ -144,9 +144,15 @@ def maybe_render_redirect_reply(
         and not _is_story_context(block)
     ):
         return None
-    self_target_keys = {_phrase_key(active_prompt), _phrase_key(return_anchor)}
-    if not invalid_action_fields:
-        self_target_keys.add(_phrase_key(target_phrase))
+    self_target_keys = (
+        _action_contract_target_keys(fields)
+        if fields and _looks_like_module_choice(teacher_reply)
+        else set()
+    )
+    if not self_target_keys:
+        self_target_keys = {_phrase_key(active_prompt), _phrase_key(return_anchor)}
+        if not invalid_action_fields:
+            self_target_keys.add(_phrase_key(target_phrase))
     if learner_key and learner_key in {
         key for key in self_target_keys if key
     }:
@@ -215,6 +221,20 @@ def _validated_action_fields(
     if contract is None:
         return {}
     return contract.to_payload_fields()
+
+
+def _action_contract_target_keys(action_fields: Mapping[str, str]) -> set[str]:
+    if not action_fields:
+        return set()
+    keys: set[str] = set()
+    for field in ("question_target", "answer_target", "target_phrase"):
+        value = _clean_phrase(action_fields.get(field, ""))
+        if not value:
+            continue
+        key = _phrase_key(value)
+        if key:
+            keys.add(key)
+    return keys
 
 
 def normalize_redirect_read_target_for_phonics(
