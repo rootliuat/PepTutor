@@ -5,6 +5,8 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 BACKEND_DIR="${ROOT_DIR}/backend/LightRAG"
 FRONTEND_DIR="${ROOT_DIR}/frontend/airi"
+FRONTEND_APP_DIR="${FRONTEND_DIR}/apps/stage-web"
+NODE_BIN_RESOLVER="${FRONTEND_DIR}/scripts/resolve-node-bin.mjs"
 SERVER_BIN="${PEPTUTOR_LESSON_SERVER_BIN:-${BACKEND_DIR}/.venv/bin/lightrag-server}"
 WAIT_SCRIPT="${ROOT_DIR}/scripts/wait-for-lesson-backend.sh"
 LOG_DIR="${PEPTUTOR_LESSON_LOG_DIR:-${BACKEND_DIR}/temp}"
@@ -103,6 +105,15 @@ if ! command -v pnpm >/dev/null 2>&1; then
   exit 1
 fi
 
+if [[ ! -f "${NODE_BIN_RESOLVER}" ]]; then
+  echo "Missing Node bin resolver: ${NODE_BIN_RESOLVER}" >&2
+  exit 1
+fi
+
+VITE_BIN="$(
+  node "${NODE_BIN_RESOLVER}" vite bin/vite.js "${FRONTEND_APP_DIR}"
+)"
+
 mkdir -p "${LOG_DIR}"
 trap cleanup EXIT INT TERM
 
@@ -151,12 +162,12 @@ fi
 echo "[INFO] Starting AIRI stage-web frontend: http://127.0.0.1:${FRONTEND_PORT}/lesson"
 echo "[INFO] Press Ctrl+C here to stop both frontend and backend."
 (
-  cd "${FRONTEND_DIR}"
+  cd "${FRONTEND_APP_DIR}"
   exec env \
     "NO_PROXY=${NO_PROXY}" \
     "no_proxy=${no_proxy}" \
     "VITE_PEPTUTOR_LESSON_API_URL=${BACKEND_URL}" \
     "VITE_PEPTUTOR_DEV_PROXY_TARGET=${BACKEND_URL}" \
     "VITE_PEPTUTOR_SKIP_REMOTE_ASSET_DOWNLOADS=true" \
-    pnpm -F @proj-airi/stage-web exec vite --host "${FRONTEND_HOST}" --port "${FRONTEND_PORT}" --strictPort
+    node "${VITE_BIN}" --host "${FRONTEND_HOST}" --port "${FRONTEND_PORT}" --strictPort
 )
