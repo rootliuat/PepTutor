@@ -234,6 +234,12 @@ Demo handoff:
 docs/demo-handoff-p0-p5-20260505.md
 ```
 
+Strict verification matrix:
+
+```text
+docs/p0-p5-goal-verification-matrix-20260505.md
+```
+
 Clean PR requirements:
 
 - branch from current `rootliuat/PepTutor` main;

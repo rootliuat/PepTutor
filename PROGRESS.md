@@ -274,6 +274,12 @@ Standalone checklist:
 docs/p0-p5-long-task-checklist-20260505.md
 ```
 
+Strict verification matrix:
+
+```text
+docs/p0-p5-goal-verification-matrix-20260505.md
+```
+
 Next concrete tasks:
 
 1. Get human judgement for TTS quality, mouthOpen naturalness, and visible teacher-likeness using `docs/manual-test-s3-mili-tts-20260504.md`.
