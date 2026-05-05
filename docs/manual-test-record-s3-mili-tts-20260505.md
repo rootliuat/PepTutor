@@ -183,4 +183,4 @@ Technical observation:
 
 Technical browser observation now covers all six target pages. The only concrete P5 candidate from this pass was `TB-G6S1U1-P4`, where the visible redirect could still collapse the route/location dialogue into `museum shop`.
 
-Post-observation P5 L1 update: public location question/answer preservation is covered by PR #13: `https://github.com/rootliuat/PepTutor/pull/13`. It has not yet been browser-reobserved. Human judgement is still needed for spoken TTS quality, mouthOpen naturalness, and whether the overall Mili tone feels like a real teacher.
+Post-observation P5 L1 update: public location question/answer preservation is merged through PR #13: `https://github.com/rootliuat/PepTutor/pull/13`. It has not yet been browser-reobserved. Human judgement is still needed for spoken TTS quality, mouthOpen naturalness, and whether the overall Mili tone feels like a real teacher.

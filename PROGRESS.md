@@ -14,7 +14,7 @@ Primary local project path:
 
 ## P0-P5 Long Task State
 
-Updated: 2026-05-05 10:45 CST.
+Updated: 2026-05-05 11:18 CST.
 
 This is the current handoff state for the P0-P5 long task: start the project first, then verify browser testing, then prepare and execute manual classroom observation, then classify only real issues, and only then choose a minimal visible-experience fix.
 
@@ -185,7 +185,7 @@ The only concrete P5 candidate from the technical pass is `TB-G6S1U1-P4`: off-to
 Status:
 
 ```text
-L1 implementation complete; clean GitHub PR opened; demo packaging pending
+L1 implementation complete; PR #13 merged; demo packaging pending
 ```
 
 Implemented local slice:
@@ -220,15 +220,30 @@ What changed:
 - Empty-slot questions like `Where is the ?` still do not pass the safe frame gate.
 - No page_uid or smoke-input special cases were added.
 
-GitHub PR:
+Merged GitHub PR:
 
 ```text
 https://github.com/rootliuat/PepTutor/pull/13
 ```
 
+Main commit:
+
+```text
+a1b7cb7b76397c56be3510e55e670ec52046bd28
+```
+
+Post-merge validation:
+
+```text
+L1 pytest: 396 passed.
+Ruff: All checks passed.
+full smoke=0
+browser smoke=0
+deep smoke=0
+```
+
 Still pending:
 
-- PR review/merge for the P5 handoff branch;
 - human audio/visual judgement;
 - optional browser/manual re-observation under a fresh budgeted goal.
 
@@ -255,10 +270,9 @@ docs/p0-p5-long-task-checklist-20260505.md
 
 Next concrete tasks:
 
-1. Review and merge PR #13: `https://github.com/rootliuat/PepTutor/pull/13`.
-2. Get human judgement for TTS quality, mouthOpen naturalness, and visible teacher-likeness using `docs/manual-test-s3-mili-tts-20260504.md`.
-3. Optionally re-observe `TB-G6S1U1-P4` in browser/manual mode under a fresh budgeted goal.
-4. Prepare a demo handoff package after the P5 PR is either merged or explicitly deferred.
+1. Get human judgement for TTS quality, mouthOpen naturalness, and visible teacher-likeness using `docs/manual-test-s3-mili-tts-20260504.md`.
+2. Optionally re-observe `TB-G6S1U1-P4` in browser/manual mode under a fresh budgeted goal.
+3. Prepare a demo handoff package now that PR #13 is merged.
 
 Latest git working clone used for PR verification:
 

@@ -1,6 +1,6 @@
 # PepTutor P0-P5 Long Task Checklist
 
-Updated: 2026-05-05 11:12 CST
+Updated: 2026-05-05 11:18 CST
 
 Purpose: keep the next conversation focused on the correct order of work: start the project, verify browser testing, prepare manual testing, observe the real classroom experience, classify issues, then choose one minimal fix. This file is the long-task checklist and handoff map; it should be read before starting another broad `/goal`.
 
@@ -13,7 +13,7 @@ Purpose: keep the next conversation focused on the correct order of work: start 
 | P2 Manual test prep | done | `docs/manual-test-s3-mili-tts-20260504.md` |
 | P3 Manual test execution | technical observation done; human audio/visual judgement pending | `temp/lesson-smoke-artifacts/manual_test_s3_mili_tts_20260505.md`, `docs/manual-test-record-s3-mili-tts-20260505.md` |
 | P4 Issue classification | initial technical classification done | G6S1 P4 `museum shop` collapse is the only current P5 candidate |
-| P5 Minimal fix/demo package | L1 implementation complete; clean GitHub PR opened; demo packaging pending | public location question/answer preservation covered by PR #13; no smoke re-run |
+| P5 Minimal fix/demo package | L1 implementation complete; PR #13 merged; demo packaging pending | public location question/answer preservation merged to main; no smoke re-run |
 
 ## Long Task Queue
 
@@ -26,23 +26,22 @@ Purpose: keep the next conversation focused on the correct order of work: start 
 | P2 | Manual test preparation | done | use the checklist for human observation | no smoke |
 | P3 | Manual test execution | technical observation done | complete human audio/visual judgement for TTS and Live2D mouthOpen | no automated smoke |
 | P4 | Issue classification | initial pass done | keep separating real issues from deliberate probes | no smoke |
-| P5 | Minimal visible-experience fix | L1 done and clean PR opened | review/merge PR #13, then decide whether to re-observe G6S1 P4 | L1 only unless final acceptance needs one budgeted browser/manual pass |
+| P5 | Minimal visible-experience fix | L1 done and PR #13 merged | decide whether to re-observe G6S1 P4, then prepare demo package | L1 only unless final acceptance needs one budgeted browser/manual pass |
 
 ### Pending Closure Items
 
-1. Review and merge the clean GitHub PR for the P5 location question/answer preservation handoff: `https://github.com/rootliuat/PepTutor/pull/13`.
-2. Finish human judgement for six S3/Mili/TTS pages:
+1. Finish human judgement for six S3/Mili/TTS pages:
    - TTS naturalness;
    - mouthOpen synchronization;
    - whether Mili feels like a real teacher rather than only a routed response engine.
-3. Re-observe `TB-G6S1U1-P4` only after the P5 PR is merged or explicitly accepted.
-4. Prepare a demo package after the P5 PR state is clear:
+2. Re-observe `TB-G6S1U1-P4` only if a fresh budgeted goal explicitly needs browser/manual confirmation after PR #13.
+3. Prepare a demo package:
    - startup command;
    - browser smoke baseline;
    - manual-test checklist;
    - manual observation record;
    - known limitations and next risks.
-5. Keep the minimal runtime state default-on work env-gated unless a fresh readiness goal passes its gated L1/L3 plan.
+4. Keep the minimal runtime state default-on work env-gated unless a fresh readiness goal passes its gated L1/L3 plan.
 
 ### Broader Backlog After P0-P5
 
@@ -208,15 +207,30 @@ browser smoke=0
 deep smoke=0
 ```
 
-GitHub PR:
+Merged GitHub PR:
 
 ```text
 https://github.com/rootliuat/PepTutor/pull/13
 ```
 
+Main commit:
+
+```text
+a1b7cb7b76397c56be3510e55e670ec52046bd28
+```
+
+Post-merge validation:
+
+```text
+L1 pytest: 396 passed.
+Ruff: All checks passed.
+full smoke=0
+browser smoke=0
+deep smoke=0
+```
+
 Still pending:
 
-- PR review/merge for the P5 handoff branch;
 - human audio/visual judgement;
 - optional browser/manual re-observation with a fresh budgeted goal.
 
@@ -246,5 +260,5 @@ Strict boundaries:
 Use this in a new conversation if continuing:
 
 ```text
-We are in /root/my-project/PepTutor. P0 startup and P1 browser smoke are closed. Latest passing browser smoke is temp/lesson-smoke-artifacts/lesson_browser_smoke_20260505_101008.json. P2 manual checklist is docs/manual-test-s3-mili-tts-20260504.md. P3 technical browser observation is recorded in temp/lesson-smoke-artifacts/manual_test_s3_mili_tts_20260505.md and docs/manual-test-record-s3-mili-tts-20260505.md, but human audio/visual judgement is still pending. P4 initial classification found the only current P5 candidate: TB-G6S1U1-P4 collapsed location dialogue to the noun phrase museum shop. A clean P5 handoff PR is open at https://github.com/rootliuat/PepTutor/pull/13 and adds the location question/answer preservation regression plus docs; L1 pytest was 396 passed and ruff passed. It has not been browser-reobserved. Do not change RAG, P49, P13 data, S4, persona/soul, smoke matrix, or add page_uid/smoke-input special cases.
+We are in /root/my-project/PepTutor. P0 startup and P1 browser smoke are closed. Latest passing browser smoke is temp/lesson-smoke-artifacts/lesson_browser_smoke_20260505_101008.json. P2 manual checklist is docs/manual-test-s3-mili-tts-20260504.md. P3 technical browser observation is recorded in temp/lesson-smoke-artifacts/manual_test_s3_mili_tts_20260505.md and docs/manual-test-record-s3-mili-tts-20260505.md, but human audio/visual judgement is still pending. P4 initial classification found the only current P5 candidate: TB-G6S1U1-P4 collapsed location dialogue to the noun phrase museum shop. PR #13 is merged into main at commit a1b7cb7b76397c56be3510e55e670ec52046bd28 and adds the location question/answer preservation regression plus docs; post-merge L1 pytest was 396 passed and ruff passed. It has not been browser-reobserved. Do not change RAG, P49, P13 data, S4, persona/soul, smoke matrix, or add page_uid/smoke-input special cases.
 ```

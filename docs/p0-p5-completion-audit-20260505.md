@@ -1,6 +1,6 @@
 # PepTutor P0-P5 Completion Audit
 
-Updated: 2026-05-05 11:16 CST
+Updated: 2026-05-05 11:18 CST
 
 Scope: P0-P5 manual test readiness and browser infrastructure closure.
 
@@ -20,7 +20,7 @@ Latest merged evidence handoff PR:
 https://github.com/rootliuat/PepTutor/pull/12
 ```
 
-Current P5 handoff PR:
+Merged P5 handoff PR:
 
 ```text
 https://github.com/rootliuat/PepTutor/pull/13
@@ -29,7 +29,7 @@ https://github.com/rootliuat/PepTutor/pull/13
 Main commit:
 
 ```text
-1e1813bfda56914a5f8fba51ab1484ae6814c52d
+a1b7cb7b76397c56be3510e55e670ec52046bd28
 ```
 
 ## P0 Startup Chain Closure
@@ -178,7 +178,7 @@ Fix only through a public question/answer target-action rule. Do not add page_ui
 
 ## P5 Minimal Fix And Demo Package
 
-Status: L1 implementation complete; clean GitHub PR opened; not browser-reobserved.
+Status: L1 implementation complete; PR #13 merged; not browser-reobserved.
 
 Reason:
 
@@ -199,7 +199,8 @@ Validation:
 
 ```text
 Focused P5 regression: 8 passed.
-L1 pytest: 387 passed.
+Pre-merge L1 pytest: 396 passed.
+Post-merge L1 pytest: 396 passed.
 Ruff: All checks passed.
 full 20-page smoke: 0
 browser smoke: 0
@@ -234,7 +235,7 @@ Still prohibited:
 - smoke input special cases
 - large prompt rewrite
 
-GitHub PR:
+Merged GitHub PR:
 
 ```text
 https://github.com/rootliuat/PepTutor/pull/13
@@ -245,4 +246,4 @@ https://github.com/rootliuat/PepTutor/pull/13
 Proceed with one of two bounded next steps:
 
 1. Human review of spoken TTS quality, mouthOpen naturalness, and whether Mili feels like a real teacher.
-2. Review/merge PR #13, then perform one explicitly budgeted browser or manual re-observation pass only if needed.
+2. Perform one explicitly budgeted browser or manual re-observation pass only if needed for `TB-G6S1U1-P4`, then prepare the demo handoff package.
