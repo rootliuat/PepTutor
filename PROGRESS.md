@@ -714,6 +714,175 @@ Recommended next action:
 - Use a fresh goal id.
 - Run browser smoke at most once after dependency materialization is verified with cheap `node scripts/resolve-node-bin.mjs vitest vitest.mjs apps/stage-web`.
 
+## P0/P1 Manual Readiness Attempt
+
+Updated: 2026-05-05 10:05.
+
+Goal:
+
+```text
+P0 startup closure + P1 browser smoke closure
+```
+
+Local project path:
+
+```text
+/root/my-project/PepTutor
+```
+
+What was verified before browser smoke:
+
+```bash
+cd /root/my-project/PepTutor/frontend/airi
+node scripts/resolve-node-bin.mjs vite bin/vite.js apps/stage-web
+node scripts/resolve-node-bin.mjs vitest vitest.mjs apps/stage-web
+```
+
+Result:
+
+```text
+vite resolved to /root/.local/share/pnpm/store/v10/links/@/vite/8.0.0-beta.15/.../node_modules/vite/bin/vite.js
+vitest resolved to /root/.local/share/pnpm/store/v10/links/@/vitest/4.0.18/.../node_modules/vitest/vitest.mjs
+```
+
+Browser smoke goal id:
+
+```text
+browser-frontend-node-modules-closure
+```
+
+Browser smoke command:
+
+```bash
+PEPTUTOR_TEST_GOAL_ID=browser-frontend-node-modules-closure \
+PEPTUTOR_TEST_GOAL_TYPE=frontend,s4,browser \
+NO_PROXY=127.0.0.1,localhost,::1 \
+bash scripts/smoke_lesson_browser.sh
+```
+
+Budget:
+
+```text
+full smoke=0
+browser smoke=1
+deep smoke=0
+```
+
+Report:
+
+```text
+temp/lesson-smoke-artifacts/lesson_browser_smoke_20260505_100334.json
+```
+
+Result:
+
+```text
+status=failed
+acceptance_passed=false
+browser_exit_code=1
+browser_test_counts={passed:0, failed:0, skipped:0}
+```
+
+What improved:
+
+- Browser smoke no longer failed on missing backend `.venv`.
+- Browser smoke no longer failed on missing `vitest/package.json`.
+- Backend started successfully.
+- `/lesson/catalog` became ready.
+- Real-browser Vitest process started.
+
+Failure observed during the single allowed browser smoke:
+
+```text
+Failed to resolve entry for package "@proj-airi/pipelines-audio"
+Failed to resolve entry for package "@proj-airi/stream-kit"
+```
+
+Root cause:
+
+```text
+frontend/airi/apps/stage-web/node_modules/@proj-airi/*
+frontend/airi/packages/stage-ui/node_modules/@proj-airi/*
+frontend/airi/packages/stage-layouts/node_modules/@proj-airi/*
+```
+
+had workspace symlinks pointing at:
+
+```text
+/tmp/peptutor-main-postmerge/frontend/airi/packages/*
+```
+
+That Git clone did not contain built `dist` outputs for packages such as:
+
+```text
+@proj-airi/stream-kit
+@proj-airi/pipelines-audio
+```
+
+Local dependency closure performed after the failed browser smoke:
+
+```bash
+cd /root/my-project/PepTutor/frontend/airi
+pnpm install --offline --ignore-scripts
+```
+
+Why this was safe:
+
+- It did not edit source files.
+- It did not run frontend postinstall hooks.
+- It repaired local workspace symlinks only.
+
+Post-fix evidence:
+
+```bash
+cd /root/my-project/PepTutor/frontend/airi/apps/stage-web
+node -e "import('@proj-airi/stream-kit').then(m=>console.log(Object.keys(m).slice(0,5)))"
+node -e "import('@proj-airi/pipelines-audio').then(m=>console.log(Object.keys(m).slice(0,8)))"
+```
+
+Result:
+
+```text
+@proj-airi/stream-kit import: ok
+@proj-airi/pipelines-audio import: ok
+```
+
+P0 startup command verified after symlink repair:
+
+```bash
+cd /root/my-project/PepTutor
+timeout 18s bash scripts/start_lesson_dev.sh
+```
+
+Result:
+
+```text
+backend ready after 2s: http://127.0.0.1:9625/lesson/catalog
+VITE v8.0.0-beta.15 ready
+Local: http://localhost:5173/
+lesson URL: http://127.0.0.1:5173/lesson
+```
+
+Current status:
+
+- P0 local startup is closed for the current machine.
+- P1 browser smoke is not closed because the single allowed browser run happened before symlink repair and failed before tests executed.
+- Do not rerun browser smoke under `browser-frontend-node-modules-closure`; that budget is consumed.
+
+Next required goal:
+
+```text
+Browser Smoke Post-Symlink Closure
+```
+
+Rules for that next goal:
+
+- Use a fresh goal id.
+- Do not run full smoke.
+- Do not run deep smoke.
+- Run browser smoke at most once.
+- Browser smoke should now reach real test execution because workspace package symlinks have been repaired.
+
 ## New Conversation Bootstrap Prompt
 
 Use this prompt at the start of the next conversation:
@@ -722,17 +891,27 @@ Use this prompt at the start of the next conversation:
 We are working on PepTutor at /root/my-project/PepTutor, with the GitHub repo rootliuat/PepTutor.
 
 Latest verified git clone used for PR work was /tmp/peptutor-main-postmerge.
-Main now includes PR #8:
-https://github.com/rootliuat/PepTutor/pull/8
+Main now includes PR #8, PR #9, and PR #11:
+- PR #8: S3 Mili visible tone/manual test prep
+- PR #9: Vite/Vitest bin path resolver closure
+- PR #11: browser smoke backend preflight before Test Budget Guard accounting
 
-Main commit after merge:
-963252585b8a951db269a68f1cf8e616d4abdd6a
+Latest known main commit after PR #11:
+7014b1e
 
 PR #8 prepared S3 Mili visible tone and manual testing:
 - classroom replies use warmer Mili-style visible tone where safe;
 - replies aim for warm ack, short Chinese scaffold, clear English target, one action;
 - frontend Sidebar exposes teaching_action, target_role, expected_student_action, speech_style, interrupt/TTS state, persona capsule status;
 - manual test checklist exists at docs/manual-test-s3-mili-tts-20260504.md.
+
+PR #9 fixed local Vite/Vitest bin path resolution:
+- scripts/start_lesson_dev.sh now uses frontend/airi/scripts/resolve-node-bin.mjs;
+- scripts/smoke_lesson_browser.sh route calls now resolve Vitest through the same stable resolver path;
+- the old /root/root/.local pnpm-store path failure should not recur.
+
+PR #11 fixed browser smoke budget accounting:
+- missing backend server binary/wait-script/preflight failures happen before Test Budget Guard accounting.
 
 Do not change RAG, P49/classification, P13 answer_scope data, smoke matrix, full soul.md injection, persona interests, page_uid special cases, smoke input special cases, or deterministic fixed teacher reply templates.
 
@@ -759,23 +938,38 @@ Clean verification after PR #8:
   unknown_context_bytes=0.
 
 Current blocker:
-Browser smoke was allowed once in the clean verification goal and failed before browser assertions due local pnpm/Vitest bin path resolution:
-Cannot find module '/.local/share/pnpm/store/.../vitest.mjs'
-Report:
-temp/lesson-smoke-artifacts/lesson_browser_smoke_20260505_011706.json
+P0 local startup is now verified on /root/my-project/PepTutor:
+- backend ready;
+- Vite ready;
+- lesson URL: http://127.0.0.1:5173/lesson.
 
-This is not a classroom runtime failure. It is a browser smoke infrastructure issue.
+Browser smoke was allowed once under goal id browser-frontend-node-modules-closure and failed before tests executed because local workspace package symlinks pointed at /tmp/peptutor-main-postmerge packages that lacked built dist outputs:
+- @proj-airi/pipelines-audio
+- @proj-airi/stream-kit
+
+Report:
+temp/lesson-smoke-artifacts/lesson_browser_smoke_20260505_100334.json
+
+Post-failure local dependency repair already ran:
+cd /root/my-project/PepTutor/frontend/airi && pnpm install --offline --ignore-scripts
+
+Post-fix evidence:
+- @proj-airi/stream-kit imports from stage-web successfully;
+- @proj-airi/pipelines-audio imports from stage-web successfully;
+- start_lesson_dev.sh reaches VITE ready.
+
+This is not a classroom runtime failure. It is a browser smoke/local workspace dependency materialization issue.
 
 Next task should be:
-Browser Smoke pnpm/Vitest Bin Path Closure.
+Browser Smoke Post-Symlink Closure.
 
 Rules for next task:
 - Do not add classroom functionality.
 - Do not change lesson runtime behavior.
 - Do not change prompt, RAG, S4 playback behavior, P49, P13, persona, or smoke matrix.
-- Fix only browser smoke execution infrastructure.
 - Use a fresh PEPTUTOR_TEST_GOAL_ID.
 - Do not run full smoke.
-- Run browser smoke at most once after the infra fix.
+- Run browser smoke at most once.
 - Deep smoke must remain 0.
+- If browser smoke fails again, do not rerun; record the next failure cause.
 ```
