@@ -54,6 +54,70 @@ def _write_executable(path: Path, content: str) -> Path:
     return path
 
 
+def _write_node_vite_stub(
+    bin_dir: Path,
+    vite_args_log: Path,
+    *,
+    serve_frontend: bool,
+) -> Path:
+    fake_vite_bin = bin_dir / "fake-vite.js"
+    fake_vite_bin.write_text("// fake vite entry\n", encoding="utf-8")
+    serve_flag = "1" if serve_frontend else "0"
+    return _write_executable(
+        bin_dir / "node",
+        f"""\
+        #!/usr/bin/env bash
+        set -euo pipefail
+        if [[ "${{1:-}}" == *"/resolve-node-bin.mjs" ]]; then
+          printf '%s\\n' "{fake_vite_bin}"
+          exit 0
+        fi
+        if [[ "${{1:-}}" == "{fake_vite_bin}" ]]; then
+          shift
+          printf '%s\\n' "$*" > "{vite_args_log}"
+          if [[ "{serve_flag}" != "1" ]]; then
+            exit 0
+          fi
+          host="127.0.0.1"
+          port="0"
+          args=("$@")
+          for ((i = 0; i < ${{#args[@]}}; i++)); do
+            if [[ "${{args[$i]}}" == "--host" && $((i + 1)) -lt ${{#args[@]}} ]]; then
+              host="${{args[$((i + 1))]}}"
+            fi
+            if [[ "${{args[$i]}}" == "--port" && $((i + 1)) -lt ${{#args[@]}} ]]; then
+              port="${{args[$((i + 1))]}}"
+            fi
+          done
+          exec python3 - "$host" "$port" <<'PY'
+        import http.server
+        import socketserver
+        import sys
+
+        host = sys.argv[1]
+        port = int(sys.argv[2])
+
+        class Handler(http.server.BaseHTTPRequestHandler):
+            def do_GET(self):
+                payload = b"lesson-ready"
+                self.send_response(200)
+                self.send_header("Content-Type", "text/plain")
+                self.send_header("Content-Length", str(len(payload)))
+                self.end_headers()
+                self.wfile.write(payload)
+
+            def log_message(self, *_args):
+                return
+
+        with socketserver.TCPServer((host, port), Handler) as httpd:
+            httpd.serve_forever()
+        PY
+        fi
+        exec /usr/bin/node "$@"
+        """,
+    )
+
+
 def _run_wait_script(tmp_path: Path, *, url: str, timeout_seconds: int) -> subprocess.CompletedProcess[str]:
     bin_dir = tmp_path / "bin"
     bin_dir.mkdir(exist_ok=True)
@@ -3435,47 +3499,10 @@ def test_smoke_lesson_deep_browser_runs_observer_with_frontend_and_backend(tmp_p
         exit 0
         """,
     )
-    _write_executable(
-        stubs.server_bin.parent / "pnpm",
-        f"""\
-        #!/usr/bin/env bash
-        set -euo pipefail
-        printf '%s\\n' "$*" > "{frontend_args_log}"
-        host="127.0.0.1"
-        port="0"
-        args=("$@")
-        for ((i = 0; i < ${{#args[@]}}; i++)); do
-          if [[ "${{args[$i]}}" == "--host" && $((i + 1)) -lt ${{#args[@]}} ]]; then
-            host="${{args[$((i + 1))]}}"
-          fi
-          if [[ "${{args[$i]}}" == "--port" && $((i + 1)) -lt ${{#args[@]}} ]]; then
-            port="${{args[$((i + 1))]}}"
-          fi
-        done
-        exec python3 - "$host" "$port" <<'PY'
-        import http.server
-        import socketserver
-        import sys
-
-        host = sys.argv[1]
-        port = int(sys.argv[2])
-
-        class Handler(http.server.BaseHTTPRequestHandler):
-            def do_GET(self):
-                payload = b"lesson-ready"
-                self.send_response(200)
-                self.send_header("Content-Type", "text/plain")
-                self.send_header("Content-Length", str(len(payload)))
-                self.end_headers()
-                self.wfile.write(payload)
-
-            def log_message(self, *_args):
-                return
-
-        with socketserver.TCPServer((host, port), Handler) as httpd:
-            httpd.serve_forever()
-        PY
-        """,
+    _write_node_vite_stub(
+        stubs.server_bin.parent,
+        frontend_args_log,
+        serve_frontend=True,
     )
 
     result = _run_deep_browser_script(
@@ -3491,7 +3518,7 @@ def test_smoke_lesson_deep_browser_runs_observer_with_frontend_and_backend(tmp_p
     assert stubs.wait_args_log.read_text(encoding="utf-8").strip() == "--url http://127.0.0.1:9625 --timeout 120"
     assert stubs.server_argv_log.read_text(encoding="utf-8").strip() == "--host 127.0.0.1 --port 9625"
     assert frontend_args_log.read_text(encoding="utf-8").strip() == (
-        f"-F @proj-airi/stage-web exec vite --host 127.0.0.1 --port {frontend_port} --strictPort"
+        f"--host 127.0.0.1 --port {frontend_port} --strictPort"
     )
     assert deep_args_log.read_text(encoding="utf-8").strip() == (
         f"--frontend-url http://127.0.0.1:{frontend_port} "
@@ -3521,47 +3548,10 @@ def test_smoke_lesson_deep_browser_times_out_hung_observer_and_cleans_up(tmp_pat
         exit 0
         """,
     )
-    _write_executable(
-        stubs.server_bin.parent / "pnpm",
-        f"""\
-        #!/usr/bin/env bash
-        set -euo pipefail
-        printf '%s\\n' "$*" > "{frontend_args_log}"
-        host="127.0.0.1"
-        port="0"
-        args=("$@")
-        for ((i = 0; i < ${{#args[@]}}; i++)); do
-          if [[ "${{args[$i]}}" == "--host" && $((i + 1)) -lt ${{#args[@]}} ]]; then
-            host="${{args[$((i + 1))]}}"
-          fi
-          if [[ "${{args[$i]}}" == "--port" && $((i + 1)) -lt ${{#args[@]}} ]]; then
-            port="${{args[$((i + 1))]}}"
-          fi
-        done
-        exec python3 - "$host" "$port" <<'PY'
-        import http.server
-        import socketserver
-        import sys
-
-        host = sys.argv[1]
-        port = int(sys.argv[2])
-
-        class Handler(http.server.BaseHTTPRequestHandler):
-            def do_GET(self):
-                payload = b"lesson-ready"
-                self.send_response(200)
-                self.send_header("Content-Type", "text/plain")
-                self.send_header("Content-Length", str(len(payload)))
-                self.end_headers()
-                self.wfile.write(payload)
-
-            def log_message(self, *_args):
-                return
-
-        with socketserver.TCPServer((host, port), Handler) as httpd:
-            httpd.serve_forever()
-        PY
-        """,
+    _write_node_vite_stub(
+        stubs.server_bin.parent,
+        frontend_args_log,
+        serve_frontend=True,
     )
 
     result = _run_deep_browser_script(
@@ -3747,7 +3737,7 @@ def test_start_lesson_dev_runs_vite_on_the_requested_strict_port(tmp_path: Path)
     bin_dir = tmp_path / "bin"
     bin_dir.mkdir(exist_ok=True)
     server_argv_log = tmp_path / "server-argv.log"
-    pnpm_args_log = tmp_path / "pnpm-args.log"
+    vite_args_log = tmp_path / "vite-args.log"
     log_dir = tmp_path / "logs"
 
     server_bin = _write_executable(
@@ -3794,13 +3784,13 @@ def test_start_lesson_dev_runs_vite_on_the_requested_strict_port(tmp_path: Path)
     )
     _write_executable(
         bin_dir / "pnpm",
-        f"""\
+        """\
         #!/usr/bin/env bash
         set -euo pipefail
-        printf '%s\\n' "$*" > "{pnpm_args_log}"
         exit 0
         """,
     )
+    _write_node_vite_stub(bin_dir, vite_args_log, serve_frontend=False)
 
     env = dict(os.environ)
     env["PATH"] = f"{bin_dir}:{env['PATH']}"
@@ -3826,10 +3816,10 @@ def test_start_lesson_dev_runs_vite_on_the_requested_strict_port(tmp_path: Path)
 
     assert result.returncode == 0, result.stderr
     assert server_argv_log.read_text(encoding="utf-8").strip() == f"--host 127.0.0.1 --port {backend_port}"
-    assert pnpm_args_log.read_text(encoding="utf-8").strip() == (
-        f"-F @proj-airi/stage-web exec vite --host 127.0.0.1 --port {frontend_port} --strictPort"
+    assert vite_args_log.read_text(encoding="utf-8").strip() == (
+        f"--host 127.0.0.1 --port {frontend_port} --strictPort"
     )
-    assert "dev -- --host" not in pnpm_args_log.read_text(encoding="utf-8")
+    assert "dev -- --host" not in vite_args_log.read_text(encoding="utf-8")
     assert f"http://127.0.0.1:{frontend_port}/lesson" in result.stdout
 
 

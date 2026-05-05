@@ -1894,6 +1894,31 @@ def test_answer_turn_policy_redirect_reply_naturalizes_museum_shop_wording():
     assert "redirect_reply_policy" in result.debug_signals.response_audit.repair_reason
 
 
+def test_answer_turn_policy_redirect_reply_preserves_location_frame_when_llm_uses_phrase():
+    result = _run_policy_reply_style_case(
+        page_uid="TB-G6S1U1-P4",
+        block_uid="TB-G6S1U1-P4-D2",
+        last_teacher_question="Where is the museum shop?",
+        learner_input="turn left",
+        raw_teacher_reply=(
+            "我听到你说 turn left. 意思是“左转”。"
+            "这页我们先看地点词：museum shop（博物馆商店）。你先读一遍。"
+        ),
+    )
+
+    assert "turn left" in result.teacher_response
+    assert "左转" in result.teacher_response
+    assert "Where is the museum shop?" in result.teacher_response
+    assert "博物馆商店在哪里" in result.teacher_response
+    assert "可以用这个句型回答：It's near ..." in result.teacher_response
+    assert "这页我们先看地点词：museum shop" not in result.teacher_response
+    assert "你先读一遍" not in result.teacher_response
+    assert result.state.current_block_uid == "TB-G6S1U1-P4-D2"
+    assert result.debug_signals is not None
+    assert result.debug_signals.response_audit is not None
+    assert "redirect_reply_policy" in result.debug_signals.response_audit.repair_reason
+
+
 def test_answer_turn_policy_redirect_reply_replaces_follow_teacher_reading_wrapper():
     result = _run_policy_reply_style_case(
         page_uid="TB-G6S1U1-P4",

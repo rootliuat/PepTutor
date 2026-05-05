@@ -1,6 +1,6 @@
 # PepTutor P0-P5 Completion Audit
 
-Updated: 2026-05-05 10:18 CST
+Updated: 2026-05-05 11:16 CST
 
 Scope: P0-P5 manual test readiness and browser infrastructure closure.
 
@@ -14,16 +14,22 @@ Repository:
 https://github.com/rootliuat/PepTutor
 ```
 
-Merged PR:
+Latest merged evidence handoff PR:
 
 ```text
-https://github.com/rootliuat/PepTutor/pull/10
+https://github.com/rootliuat/PepTutor/pull/12
+```
+
+Current P5 handoff PR:
+
+```text
+https://github.com/rootliuat/PepTutor/pull/13
 ```
 
 Main commit:
 
 ```text
-a861a8881cc534fc8c2124139d841e688a608ecc
+1e1813bfda56914a5f8fba51ab1484ae6814c52d
 ```
 
 ## P0 Startup Chain Closure
@@ -120,7 +126,7 @@ Coverage verified:
 
 ## P3 Manual Test Execution And Record
 
-Status: blocked on human observation.
+Status: technical browser observation complete; human audio/visual judgement still pending.
 
 Record file:
 
@@ -131,53 +137,81 @@ temp/lesson-smoke-artifacts/manual_test_s3_mili_tts_20260505.md
 Current record status:
 
 ```text
-pending human execution
+technical observation completed; human audio/visual judgement still pending
 ```
 
-Why not complete:
+Evidence captured:
 
-- P3 requires human observation of spoken TTS quality, visible classroom tone, mouthOpen behavior, interrupt behavior, and whether Mili feels like a real teacher.
-- Browser smoke verifies the real-browser harness and selected route behavior. It does not replace human classroom observation.
+- Live browser UI observations for all six target pages.
+- Learner input, teacher response excerpt, Sidebar values, TTS state, mechanical/overloaded/off-route flags, interrupt status, classification, owner, priority, and next-slice eligibility.
+- P13 `had a cold` vocabulary return was observed returning to `What did you do last weekend?`, not module choice.
+- P6 phonics was observed without `cl' as in`.
 
-Required next action:
+Remaining caveat:
 
 ```text
-Run ./scripts/start_lesson_dev.sh and manually test the six pages using docs/manual-test-s3-mili-tts-20260504.md.
-Fill temp/lesson-smoke-artifacts/manual_test_s3_mili_tts_20260505.md.
+Browser observation can inspect text, Sidebar/debug state, TTS state, stop reason, and overlap.
+It still cannot replace human judgement of spoken TTS quality, mouthOpen naturalness, and whether Mili feels like a real teacher.
 ```
 
 ## P4 Issue Classification
 
-Status: not started.
+Status: initial technical classification complete.
 
-Reason:
+Classification summary:
 
 ```text
-P4 depends on actual P3 manual observations.
+TB-G5S1U3-P22: acceptable S3 visible reply.
+TB-G6S1U1-P4: redirect helper / TeachingMove target-action issue; off-topic input still collapses the location dialogue to the noun phrase museum shop.
+TB-G6S2U1-P4: acceptable S3 visible reply; object-height answer frame is used.
+TB-G5S1U3-P31: acceptable story scaffold.
+TB-G5S2U1-P6: acceptable phonics scaffold; cl' as in did not appear.
+TB-G6S2U2-P13: acceptable P13 vocab return; monitor rag_plus_llm return-anchor boundary.
 ```
 
-Required output after P3:
+Only concrete next-slice candidate from this pass:
 
-- S3 visible tone issues
-- redirect helper issues
-- TeachingMove action contract issues
-- TTS playback issues
-- interrupt / barge-in issues
-- Sidebar/debug readability issues
-- mouthOpen/Live2D issues
-- curriculum structure issues
-- browser infrastructure issues
-- acceptable smoke deliberate probes
+```text
+TB-G6S1U1-P4 should keep the public location question/answer target pair instead of narrowing the redirect to museum shop.
+Fix only through a public question/answer target-action rule. Do not add page_uid or smoke-input special cases.
+```
 
 ## P5 Minimal Fix And Demo Package
 
-Status: not started.
+Status: L1 implementation complete; clean GitHub PR opened; not browser-reobserved.
 
 Reason:
 
 ```text
-P5 depends on P4 classification, and should only fix the highest-value small issues.
+The technical P5 candidate was narrow enough to fix safely before human audio/visual judgement:
+preserve a public location question/answer frame when a valid TeachingMove action contract is phrase-shaped but still carries a reliable question_target and answer_frame.
 ```
+
+Implemented local files:
+
+```text
+backend/LightRAG/lightrag/pedagogy/redirect_reply_policy.py
+backend/LightRAG/tests/test_lesson_runtime.py
+backend/LightRAG/tests/test_lesson_smoke_scripts.py
+```
+
+Validation:
+
+```text
+Focused P5 regression: 8 passed.
+L1 pytest: 387 passed.
+Ruff: All checks passed.
+full 20-page smoke: 0
+browser smoke: 0
+deep smoke: 0
+```
+
+What changed:
+
+- `target_role=phrase` with a known location `question_target` and `answer_frame=It's near ...` now renders the question/answer frame instead of falling back to a noun phrase such as `museum shop`.
+- Valid `where ...?` question contracts with `It's near ...` answer frames can use the answer frame.
+- Malformed empty-slot questions such as `Where is the ?` are still rejected because the question must have a known scaffold.
+- No page_uid or smoke-input special cases were added.
 
 Allowed future fixes remain:
 
@@ -200,6 +234,15 @@ Still prohibited:
 - smoke input special cases
 - large prompt rewrite
 
+GitHub PR:
+
+```text
+https://github.com/rootliuat/PepTutor/pull/13
+```
+
 ## Current Recommendation
 
-Proceed to P3 manual test execution. Do not start P4/P5 fixes until the manual observation record is filled.
+Proceed with one of two bounded next steps:
+
+1. Human review of spoken TTS quality, mouthOpen naturalness, and whether Mili feels like a real teacher.
+2. Review/merge PR #13, then perform one explicitly budgeted browser or manual re-observation pass only if needed.

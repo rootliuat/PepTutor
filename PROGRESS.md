@@ -12,6 +12,254 @@ Primary local project path:
 /root/my-project/PepTutor
 ```
 
+## P0-P5 Long Task State
+
+Updated: 2026-05-05 10:45 CST.
+
+This is the current handoff state for the P0-P5 long task: start the project first, then verify browser testing, then prepare and execute manual classroom observation, then classify only real issues, and only then choose a minimal visible-experience fix.
+
+### Current Local Dev Stack
+
+Local startup is working on this machine:
+
+```bash
+cd /root/my-project/PepTutor
+./scripts/start_lesson_dev.sh
+```
+
+Verified endpoints:
+
+```text
+backend catalog: http://127.0.0.1:9625/lesson/catalog -> 200
+frontend lesson: http://127.0.0.1:5173/lesson -> 200
+```
+
+The dev stack was running during the latest manual technical observation:
+
+```text
+scripts/start_lesson_dev.sh
+lightrag-server on port 9625
+Vite on port 5173
+```
+
+### P0 Startup Closure
+
+Status:
+
+```text
+done
+```
+
+Evidence:
+
+- PR #9 fixed brittle Vite/Vitest pnpm bin path resolution.
+- PR #11 made browser-smoke preflight fail before Test Budget Guard accounting when required backend binaries are missing.
+- Local frontend workspace node_modules/symlinks were repaired.
+- `./scripts/start_lesson_dev.sh` starts backend and frontend.
+- The earlier `Cannot find module '/root/root/.local/.../vite.js'` startup failure is closed for this machine.
+
+### Previous Startup / Browser Failures
+
+These were real blockers and are now recorded so they are not rediscovered as vague "project cannot start" failures:
+
+| goal id | result | failure | resolution |
+| --- | --- | --- | --- |
+| `pr8-post-merge-clean-verification` | browser smoke failed before assertions | bad pnpm Vitest shim path like `/.local/.../vitest.mjs` | PR #9 stable Node bin resolver |
+| `manual-test-readiness-browser-infra-closure` | failed before browser startup | missing `backend/LightRAG/.venv/bin/lightrag-server` in Git working clone | PR #11 preflight before budget accounting; local venv restored where needed |
+| `browser-venv-preflight-closure` | failed before tests | frontend `node_modules` missing in working clone | use local project with materialized frontend deps |
+| `browser-frontend-node-modules-closure` | failed during import | workspace package symlinks pointed at clone without built package entries | `pnpm install --offline --ignore-scripts` repaired local symlinks |
+| `browser-post-symlink-closure` | failed during import | Vite optimized deps during browser-test import and reloaded test context | stage-web browser Vitest optimizeDeps closure |
+| `browser-optimize-deps-closure` | passed | none | current browser smoke baseline |
+
+### P1 Browser Smoke Closure
+
+Status:
+
+```text
+done
+```
+
+Latest passing report:
+
+```text
+temp/lesson-smoke-artifacts/lesson_browser_smoke_20260505_101008.json
+```
+
+Result:
+
+```text
+status=passed
+acceptance_passed=true
+browser_test_counts={passed:10, failed:0, skipped:21}
+real_backend_passed=10
+mock_suite_skipped=21
+skipped_due_real_backend_mode=21
+```
+
+Budget note:
+
+```text
+No full 20-page smoke and no deep smoke were run for this closure path.
+Multiple browser smoke attempts happened under separate goal ids because each exposed and then closed a distinct infrastructure blocker.
+```
+
+### P2 Manual Test Preparation
+
+Status:
+
+```text
+done
+```
+
+Checklist:
+
+```text
+docs/manual-test-s3-mili-tts-20260504.md
+```
+
+The checklist covers:
+
+- `TB-G5S1U3-P22`
+- `TB-G6S1U1-P4`
+- `TB-G6S2U1-P4`
+- `TB-G5S1U3-P31`
+- `TB-G5S2U1-P6`
+- `TB-G6S2U2-P13`
+
+Each page has test inputs, expected teacher behavior, expected Sidebar/TTS state, and human observation points.
+
+### P3 Manual Test Execution
+
+Status:
+
+```text
+technical observation completed; human audio/visual judgement still pending
+```
+
+Records:
+
+```text
+temp/lesson-smoke-artifacts/manual_test_s3_mili_tts_20260505.md
+docs/manual-test-record-s3-mili-tts-20260505.md
+```
+
+What has been observed through the live browser UI:
+
+- learner input
+- teacher response text
+- Sidebar route/action/speech/persona/interrupt/TTS fields
+- TTS synthesis/playback state
+- stop reason / overlap state
+- mechanical / overloaded / off-route flags
+- first-pass issue classification and owner
+
+What still needs human judgement:
+
+- spoken TTS quality;
+- mouthOpen naturalness;
+- whether Mili feels like a real teacher in actual use.
+
+### P4 Issue Classification
+
+Status:
+
+```text
+initial technical classification complete
+```
+
+Current issue table:
+
+| page_uid | classification | status |
+| --- | --- | --- |
+| `TB-G5S1U3-P22` | acceptable S3 visible reply | no fix |
+| `TB-G6S1U1-P4` | redirect helper / TeachingMove target-action issue | next visible-experience candidate |
+| `TB-G6S2U1-P4` | acceptable S3 visible reply | no fix |
+| `TB-G5S1U3-P31` | acceptable story scaffold | no fix |
+| `TB-G5S2U1-P6` | acceptable phonics scaffold; `cl' as in` absent | no fix |
+| `TB-G6S2U2-P13` | acceptable vocab return; monitor rag_plus_llm return-anchor boundary | no immediate fix |
+
+The only concrete P5 candidate from the technical pass is `TB-G6S1U1-P4`: off-topic input can still collapse the location dialogue into the noun phrase `museum shop`. Any fix must be a public question/answer target-action rule, not a page_uid or smoke-input special case.
+
+### P5 Minimal Fix / Demo Package
+
+Status:
+
+```text
+L1 implementation complete; clean GitHub PR opened; demo packaging pending
+```
+
+Implemented local slice:
+
+```text
+Public location question/answer target-action preservation.
+```
+
+Local files touched:
+
+```text
+backend/LightRAG/lightrag/pedagogy/redirect_reply_policy.py
+backend/LightRAG/tests/test_lesson_runtime.py
+backend/LightRAG/tests/test_lesson_smoke_scripts.py
+```
+
+Validation:
+
+```text
+Focused P5 regression: 8 passed.
+L1 pytest: 387 passed.
+Ruff: All checks passed.
+full smoke=0
+browser smoke=0
+deep smoke=0
+```
+
+What changed:
+
+- `target_role=phrase` with a reliable location `question_target` and `answer_frame=It's near ...` renders the question/answer frame instead of falling back to a noun phrase.
+- Valid `where ...?` question contracts with `It's near ...` answer frames can use the answer frame.
+- Empty-slot questions like `Where is the ?` still do not pass the safe frame gate.
+- No page_uid or smoke-input special cases were added.
+
+GitHub PR:
+
+```text
+https://github.com/rootliuat/PepTutor/pull/13
+```
+
+Still pending:
+
+- PR review/merge for the P5 handoff branch;
+- human audio/visual judgement;
+- optional browser/manual re-observation under a fresh budgeted goal.
+
+Scope constraints:
+
+- no RAG changes;
+- no P49/classification changes;
+- no P13 answer_scope data changes;
+- no smoke matrix changes;
+- no full `soul.md` prompt injection;
+- no Mili interest chatter in classroom replies;
+- no page_uid special cases;
+- no smoke-input special cases;
+- no fixed deterministic teacher reply templates;
+- no full/browser/deep smoke unless a new goal explicitly budgets it.
+
+### Current Long Task Checklist
+
+Standalone checklist:
+
+```text
+docs/p0-p5-long-task-checklist-20260505.md
+```
+
+Next concrete tasks:
+
+1. Review and merge PR #13: `https://github.com/rootliuat/PepTutor/pull/13`.
+2. Get human judgement for TTS quality, mouthOpen naturalness, and visible teacher-likeness using `docs/manual-test-s3-mili-tts-20260504.md`.
+3. Optionally re-observe `TB-G6S1U1-P4` in browser/manual mode under a fresh budgeted goal.
+4. Prepare a demo handoff package after the P5 PR is either merged or explicitly deferred.
+
 Latest git working clone used for PR verification:
 
 ```text
@@ -24,10 +272,10 @@ GitHub repository:
 https://github.com/rootliuat/PepTutor
 ```
 
-Current verified `main` commit after PR #8 merge:
+Current verified GitHub `main` commit after PR #12 evidence handoff merge:
 
 ```text
-963252585b8a951db269a68f1cf8e616d4abdd6a
+1e1813bfda56914a5f8fba51ab1484ae6814c52d
 ```
 
 ## Most Recent Goal
@@ -1096,13 +1344,14 @@ Use this prompt at the start of the next conversation:
 We are working on PepTutor at /root/my-project/PepTutor, with the GitHub repo rootliuat/PepTutor.
 
 Latest verified git clone used for PR work was /tmp/peptutor-main-postmerge.
-Main now includes PR #8, PR #9, and PR #11:
+Main now includes PR #8, PR #9, PR #11, and PR #12:
 - PR #8: S3 Mili visible tone/manual test prep
 - PR #9: Vite/Vitest bin path resolver closure
 - PR #11: browser smoke backend preflight before Test Budget Guard accounting
+- PR #12: P0-P5 evidence handoff
 
-Latest known main commit after PR #11:
-7014b1e
+Latest known main commit after PR #12:
+1e1813bfda56914a5f8fba51ab1484ae6814c52d
 
 PR #8 prepared S3 Mili visible tone and manual testing:
 - classroom replies use warmer Mili-style visible tone where safe;
@@ -1142,7 +1391,7 @@ Clean verification after PR #8:
   temp/lesson-smoke-artifacts/llm_context_breakdown_audit_20260505_011800.json
   unknown_context_bytes=0.
 
-Current blocker:
+Current state:
 P0/P1 are now closed on /root/my-project/PepTutor:
 - backend ready;
 - Vite ready;
@@ -1161,14 +1410,35 @@ Result:
 Manual test checklist is ready:
 docs/manual-test-s3-mili-tts-20260504.md
 
-Next task should be:
-P3 Manual Test Execution.
+Technical manual observation record is filled:
+temp/lesson-smoke-artifacts/manual_test_s3_mili_tts_20260505.md
+docs/manual-test-record-s3-mili-tts-20260505.md
+
+P4 initial classification:
+- TB-G5S1U3-P22: acceptable.
+- TB-G6S1U1-P4: visible redirect still collapses location dialogue to noun phrase museum shop; next candidate, only fix through public question/answer target-action rule.
+- TB-G6S2U1-P4: acceptable.
+- TB-G5S1U3-P31: acceptable.
+- TB-G5S2U1-P6: acceptable, cl' as in absent.
+- TB-G6S2U2-P13: acceptable vocab return; monitor rag_plus_llm return-anchor boundary.
+
+P5 local L1 implementation:
+- redirect_reply_policy.py now preserves public location question/answer frames when a validated contract is phrase-shaped but carries a reliable Where question and It's near ... answer frame.
+- tests added in test_lesson_runtime.py.
+- smoke-script tests were updated to match the stable node/vite resolver path instead of the old pnpm exec vite path.
+- L1 pytest: 387 passed.
+- Ruff: All checks passed.
+- full/browser/deep smoke: 0.
+- This P5 slice is not yet isolated into a clean GitHub PR.
+
+Next task should be one of:
+1. Human review of TTS quality, mouthOpen naturalness, and whether Mili feels like a real teacher.
+2. Isolate the local P5 changes into a clean GitHub branch/PR.
 
 Rules for next task:
 - Use docs/manual-test-s3-mili-tts-20260504.md.
 - Run the local stack with ./scripts/start_lesson_dev.sh.
-- Manually observe the six target pages.
-- Record learner input, teacher response, Sidebar values, TTS playback, mechanical/overloaded/routing issues, mouthOpen, and interrupt behavior.
-- Output temp/lesson-smoke-artifacts/manual_test_s3_mili_tts_20260505.md.
-- Do not treat browser smoke as a substitute for this human observation.
+- Do not treat browser smoke as a substitute for human audio/visual judgement.
+- Do not add page_uid or smoke-input special cases.
+- Do not run full/browser/deep smoke unless a fresh goal explicitly budgets it.
 ```
