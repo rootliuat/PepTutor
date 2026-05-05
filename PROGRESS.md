@@ -1064,6 +1064,30 @@ Reason:
 The remaining P3 checks require real human observation of classroom tone, spoken TTS quality, mouthOpen behavior, and whether Mili feels like a real teacher. Browser smoke proves the route and harness; it is not a substitute for the P3 manual observation report.
 ```
 
+## P0-P5 Evidence Handoff
+
+Updated: 2026-05-05 10:20.
+
+Local required output paths:
+
+```text
+temp/lesson-smoke-artifacts/manual_test_s3_mili_tts_20260505.md
+temp/lesson-smoke-artifacts/p0_p5_completion_audit_20260505.md
+```
+
+Tracked GitHub copies:
+
+```text
+docs/manual-test-record-s3-mili-tts-20260505.md
+docs/p0-p5-completion-audit-20260505.md
+```
+
+Reason:
+
+```text
+temp/ is intentionally ignored by git, so docs/ copies preserve the handoff in the repository while the requested temp paths remain available locally.
+```
+
 ## New Conversation Bootstrap Prompt
 
 Use this prompt at the start of the next conversation:
