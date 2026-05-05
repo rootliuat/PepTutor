@@ -14,7 +14,7 @@ Primary local project path:
 
 ## P0-P5 Long Task State
 
-Updated: 2026-05-05 11:18 CST.
+Updated: 2026-05-05 11:22 CST.
 
 This is the current handoff state for the P0-P5 long task: start the project first, then verify browser testing, then prepare and execute manual classroom observation, then classify only real issues, and only then choose a minimal visible-experience fix.
 
@@ -185,7 +185,7 @@ The only concrete P5 candidate from the technical pass is `TB-G6S1U1-P4`: off-to
 Status:
 
 ```text
-L1 implementation complete; PR #13 merged; demo packaging pending
+L1 implementation complete; PR #13 merged; demo handoff package written
 ```
 
 Implemented local slice:
@@ -242,6 +242,12 @@ browser smoke=0
 deep smoke=0
 ```
 
+Demo handoff:
+
+```text
+docs/demo-handoff-p0-p5-20260505.md
+```
+
 Still pending:
 
 - human audio/visual judgement;
@@ -272,7 +278,6 @@ Next concrete tasks:
 
 1. Get human judgement for TTS quality, mouthOpen naturalness, and visible teacher-likeness using `docs/manual-test-s3-mili-tts-20260504.md`.
 2. Optionally re-observe `TB-G6S1U1-P4` in browser/manual mode under a fresh budgeted goal.
-3. Prepare a demo handoff package now that PR #13 is merged.
 
 Latest git working clone used for PR verification:
 

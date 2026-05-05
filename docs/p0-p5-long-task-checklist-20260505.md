@@ -1,6 +1,6 @@
 # PepTutor P0-P5 Long Task Checklist
 
-Updated: 2026-05-05 11:18 CST
+Updated: 2026-05-05 11:22 CST
 
 Purpose: keep the next conversation focused on the correct order of work: start the project, verify browser testing, prepare manual testing, observe the real classroom experience, classify issues, then choose one minimal fix. This file is the long-task checklist and handoff map; it should be read before starting another broad `/goal`.
 
@@ -13,7 +13,7 @@ Purpose: keep the next conversation focused on the correct order of work: start 
 | P2 Manual test prep | done | `docs/manual-test-s3-mili-tts-20260504.md` |
 | P3 Manual test execution | technical observation done; human audio/visual judgement pending | `temp/lesson-smoke-artifacts/manual_test_s3_mili_tts_20260505.md`, `docs/manual-test-record-s3-mili-tts-20260505.md` |
 | P4 Issue classification | initial technical classification done | G6S1 P4 `museum shop` collapse is the only current P5 candidate |
-| P5 Minimal fix/demo package | L1 implementation complete; PR #13 merged; demo packaging pending | public location question/answer preservation merged to main; no smoke re-run |
+| P5 Minimal fix/demo package | L1 implementation complete; PR #13 merged; demo handoff package written | public location question/answer preservation merged to main; no smoke re-run |
 
 ## Long Task Queue
 
@@ -26,7 +26,7 @@ Purpose: keep the next conversation focused on the correct order of work: start 
 | P2 | Manual test preparation | done | use the checklist for human observation | no smoke |
 | P3 | Manual test execution | technical observation done | complete human audio/visual judgement for TTS and Live2D mouthOpen | no automated smoke |
 | P4 | Issue classification | initial pass done | keep separating real issues from deliberate probes | no smoke |
-| P5 | Minimal visible-experience fix | L1 done and PR #13 merged | decide whether to re-observe G6S1 P4, then prepare demo package | L1 only unless final acceptance needs one budgeted browser/manual pass |
+| P5 | Minimal visible-experience fix | L1 done, PR #13 merged, demo package written | decide whether to re-observe G6S1 P4 | L1 only unless final acceptance needs one budgeted browser/manual pass |
 
 ### Pending Closure Items
 
@@ -35,13 +35,7 @@ Purpose: keep the next conversation focused on the correct order of work: start 
    - mouthOpen synchronization;
    - whether Mili feels like a real teacher rather than only a routed response engine.
 2. Re-observe `TB-G6S1U1-P4` only if a fresh budgeted goal explicitly needs browser/manual confirmation after PR #13.
-3. Prepare a demo package:
-   - startup command;
-   - browser smoke baseline;
-   - manual-test checklist;
-   - manual observation record;
-   - known limitations and next risks.
-4. Keep the minimal runtime state default-on work env-gated unless a fresh readiness goal passes its gated L1/L3 plan.
+3. Keep the minimal runtime state default-on work env-gated unless a fresh readiness goal passes its gated L1/L3 plan.
 
 ### Broader Backlog After P0-P5
 
@@ -233,6 +227,12 @@ Still pending:
 
 - human audio/visual judgement;
 - optional browser/manual re-observation with a fresh budgeted goal.
+
+Demo handoff:
+
+```text
+docs/demo-handoff-p0-p5-20260505.md
+```
 
 Clean PR requirements:
 

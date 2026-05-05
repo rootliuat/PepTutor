@@ -1,6 +1,6 @@
 # PepTutor P0-P5 Completion Audit
 
-Updated: 2026-05-05 11:18 CST
+Updated: 2026-05-05 11:22 CST
 
 Scope: P0-P5 manual test readiness and browser infrastructure closure.
 
@@ -178,7 +178,7 @@ Fix only through a public question/answer target-action rule. Do not add page_ui
 
 ## P5 Minimal Fix And Demo Package
 
-Status: L1 implementation complete; PR #13 merged; not browser-reobserved.
+Status: L1 implementation complete; PR #13 merged; demo handoff package written; not browser-reobserved.
 
 Reason:
 
@@ -241,9 +241,15 @@ Merged GitHub PR:
 https://github.com/rootliuat/PepTutor/pull/13
 ```
 
+Demo handoff:
+
+```text
+docs/demo-handoff-p0-p5-20260505.md
+```
+
 ## Current Recommendation
 
 Proceed with one of two bounded next steps:
 
 1. Human review of spoken TTS quality, mouthOpen naturalness, and whether Mili feels like a real teacher.
-2. Perform one explicitly budgeted browser or manual re-observation pass only if needed for `TB-G6S1U1-P4`, then prepare the demo handoff package.
+2. Perform one explicitly budgeted browser or manual re-observation pass only if needed for `TB-G6S1U1-P4`.
