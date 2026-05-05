@@ -1,0 +1,51 @@
+{
+  "schema_version": "curriculum_agentic_query_set_v1",
+  "generated_for": "P8.5 Agentic Curriculum Retrieval Harness",
+  "generated_at": "2026-05-05",
+  "canonical_source": "app/knowledge/structured",
+  "agentic_outputs_are": "offline_supporting_evidence_only",
+  "queries": [
+    {
+      "query_id": "museum_shop_question",
+      "text": "Where is the museum shop?",
+      "page_uid": "TB-G6S1U1-P4",
+      "review_focus": "location question target preservation"
+    },
+    {
+      "query_id": "museum_shop_answer_frame",
+      "text": "It's near ...",
+      "page_uid": "TB-G6S1U1-P4",
+      "review_focus": "location answer frame"
+    },
+    {
+      "query_id": "height_question",
+      "text": "How tall is it?",
+      "page_uid": "TB-G6S2U1-P4",
+      "review_focus": "object-height question target and answer frame"
+    },
+    {
+      "query_id": "p13_answer_scope",
+      "text": "TB-G6S2U2-P13 answer scope",
+      "page_uid": "TB-G6S2U2-P13",
+      "review_focus": "answer-scope boundary review"
+    },
+    {
+      "query_id": "phonics_cl_clean",
+      "text": "cl as in clean",
+      "page_uid": "TB-G5S2U1-P6",
+      "review_focus": "phonics pattern and exemplar inheritance"
+    },
+    {
+      "query_id": "favourite_food",
+      "text": "What's your favourite food?",
+      "page_uid": "TB-G5S1U3-P22",
+      "review_focus": "favourite food question and scaffold"
+    },
+    {
+      "query_id": "story_scaffold_p31",
+      "text": "story scaffold P31",
+      "page_uid": "TB-G5S1U3-P31",
+      "review_focus": "story question and answer-frame scaffold"
+    }
+  ]
+}
