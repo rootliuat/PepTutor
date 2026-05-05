@@ -12,6 +12,109 @@ Primary local project path:
 /root/my-project/PepTutor
 ```
 
+## P8.1 Curriculum Graph Extraction Audit v1
+
+Status:
+
+```text
+implemented on branch p8-1-curriculum-graph-extraction-audit-20260505
+```
+
+Purpose:
+
+```text
+Build a read-only offline curriculum graph and deterministic audit pipeline for the full current structured curriculum, inspired by graph extraction / reward-eval methodology without introducing GRPO training or live classroom runtime changes.
+```
+
+Files added:
+
+```text
+docs/curriculum-graph-schema-v1.md
+scripts/build_curriculum_graph.py
+scripts/audit_curriculum_graph.py
+backend/LightRAG/tests/test_curriculum_graph_audit.py
+```
+
+Generated artifacts:
+
+```text
+temp/lesson-smoke-artifacts/curriculum_graph_20260505_132456.json
+temp/lesson-smoke-artifacts/curriculum_graph_audit_20260505_132456.json
+```
+
+Corpus coverage:
+
+```text
+books=4
+units=30
+pages=255
+blocks=581
+nodes=9328
+edges=22475
+```
+
+Six regression anchors:
+
+```text
+present=6
+missing=0
+anchors=TB-G5S1U3-P22, TB-G6S1U1-P4, TB-G6S2U1-P4, TB-G5S1U3-P31, TB-G5S2U1-P6, TB-G6S2U2-P13
+```
+
+Anchor issue summary:
+
+| page_uid | blocks | issue_count | notable graph/audit signal |
+| --- | ---: | ---: | --- |
+| `TB-G5S1U3-P22` | 1 | 1 | favourite-food question has answer frame; bare noun redirect risk remains visible as data signal |
+| `TB-G6S1U1-P4` | 3 | 4 | location question/answer frames represented; museum-shop bare noun risk remains visible |
+| `TB-G6S2U1-P4` | 4 | 5 | `How tall is it?` and `It's ... metres tall.` represented; personal-height targets also visible for audit |
+| `TB-G5S1U3-P31` | 1 | 0 | story question and answer frame represented |
+| `TB-G5S2U1-P6` | 3 | 5 | phonics exemplar extraction works for D1; D2/D3 expose phonics-pattern/exemplar quality gaps |
+| `TB-G6S2U2-P13` | 2 | 1 | P13 question targets and answer frames represented; no runtime answer-scope data changed |
+
+Audit counts:
+
+```text
+severity: info=0, warning=928, error=60
+rules with findings:
+- missing_question_target=9
+- question_without_answer_frame=576
+- phonics_without_pattern=60
+- story_without_question=65
+- story_without_answer_frame=40
+- vocab_without_return_anchor=1
+- suspicious_return_anchor=53
+- answer_scope_ambiguous=3
+- bare_noun_redirect_risk=180
+- module_choice_leak_risk=1
+```
+
+Top issue pages:
+
+```text
+TB-G5S1U2-P19=18
+TB-G5S2U5-P48=14
+TB-G5S2U6-P63=14
+TB-G6S1U5-P55=13
+TB-G5S2U2-P14=12
+```
+
+Validation:
+
+```text
+pytest backend/LightRAG/tests/test_curriculum_graph_audit.py -q -> 4 passed
+ruff check scripts/build_curriculum_graph.py scripts/audit_curriculum_graph.py backend/LightRAG/tests/test_curriculum_graph_audit.py -> passed
+full smoke=0
+browser smoke=0
+deep smoke=0
+```
+
+Runtime boundary:
+
+```text
+No lesson_runtime, TeachingMove planner, redirect_reply_policy, prompts, RAG, S4, P49/classification, P13 answer_scope data, smoke matrix, soul/persona, or classroom-visible reply behavior changed.
+```
+
 ## P0-P5 Long Task State
 
 Updated: 2026-05-05 11:22 CST.
