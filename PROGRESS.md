@@ -307,6 +307,8 @@ Status:
 
 ```text
 in main after PR #17 merge, docs-only delivery integration
+baseline_commit=f779f4dd812b5ce52967ae031ff62778019a3b3a
+pr17_merge_commit=c565b0321fa9848bb256aba490ad871bf74de5f9
 ```
 
 Purpose:
@@ -319,9 +321,13 @@ Delivery docs:
 
 ```text
 docs/submission-project-book-outline-20260508.md
+docs/submission-project-book-final-draft-20260508.md
+docs/submission-one-page-scorecard-20260508.md
 docs/submission-video-script-20260508.md
+docs/submission-video-rehearsal-pack-20260508.md
 docs/submission-readiness-summary-20260508.md
 docs/submission-demo-checklist-20260508.md
+docs/submission-demo-risk-checklist-20260508.md
 docs/no-runtime-external-agent-boundary-20260508.md
 ```
 
@@ -343,6 +349,39 @@ docs-only after PR #17 merge
 full smoke=0
 browser smoke=0
 deep smoke=0
+```
+
+No full/browser/deep smoke was run after the docs-only delivery baseline commit.
+
+## P8.7 Final Submission Accuracy Pass
+
+Status:
+
+```text
+docs-only final submission pass completed for May 8 delivery materials
+```
+
+Purpose:
+
+```text
+Turn the existing scaffolds into directly usable project-book, one-page scorecard, video rehearsal, and demo-risk materials while keeping factual boundaries accurate.
+```
+
+Facts locked for submission:
+
+```text
+PR #15 merged: full curriculum graph audit and candidate planner.
+PR #16 merged: offline RAGFlow curriculum evidence integration.
+PR #17 merged: offline agentic curriculum retrieval harness.
+RAGFlow is offline evidence only.
+Agentic harness is offline review only.
+app/knowledge/structured remains canonical.
+TeachingMove remains classroom control.
+GRPO is deferred and not implemented.
+No model training is implemented.
+No LLM extraction is implemented.
+TTS naturalness and mouthOpen sync still require real human AV judgement.
+No full autonomous teacher claim.
 ```
 
 ## P0-P5 Long Task State
