@@ -10,6 +10,31 @@ Global expectations:
 - TTS plays the final teacher reply. `mouthOpen` should follow playback and should not keep moving after playback stops.
 - Interrupt behavior should match the visible `interrupt_policy`; do not mark Live2D expression gaps as classroom content failures.
 
+## Startup And Test Entry
+
+Start the local lesson stack:
+
+```bash
+cd /root/my-project/PepTutor
+./scripts/start_lesson_dev.sh
+```
+
+Open the browser entry:
+
+```text
+http://127.0.0.1:5173/lesson
+```
+
+Before recording page observations, confirm:
+
+- The backend reports `/lesson/catalog` ready.
+- The frontend reports Vite ready.
+- The lesson page loads without a blank screen.
+- The Sidebar is visible or can be opened.
+- TTS provider state is visible in the Sidebar.
+
+For each page below, use the page selector or route controls to reach the listed `page_uid`, then enter the learner inputs in order. Do not mark browser infrastructure failures as classroom behavior failures; record them separately as browser infra issues.
+
 ## TB-G5S1U3-P22
 
 Focus: favourite food question scaffold.
