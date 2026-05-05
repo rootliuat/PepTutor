@@ -35,12 +35,14 @@ scripts/audit_curriculum_graph.py
 backend/LightRAG/tests/test_curriculum_graph_audit.py
 ```
 
-Generated artifacts:
+Generated local artifacts:
 
 ```text
 temp/lesson-smoke-artifacts/curriculum_graph_20260505_132456.json
 temp/lesson-smoke-artifacts/curriculum_graph_audit_20260505_132456.json
 ```
+
+These full graph/audit JSON files are generated locally and intentionally not tracked in Git. Tracked summaries live under `docs/`.
 
 Corpus coverage:
 
@@ -113,6 +115,71 @@ Runtime boundary:
 
 ```text
 No lesson_runtime, TeachingMove planner, redirect_reply_policy, prompts, RAG, S4, P49/classification, P13 answer_scope data, smoke matrix, soul/persona, or classroom-visible reply behavior changed.
+```
+
+## P8.2b PR15 Merge Hygiene + P8.3a Candidate Plan
+
+Status:
+
+```text
+implemented on branch p8-1-curriculum-graph-extraction-audit-20260505
+```
+
+Purpose:
+
+```text
+Keep PR #15 reviewable by removing tracked full generated JSON artifacts, moving triage into docs, and adding a read-only candidate planner for later curriculum data tightening review.
+```
+
+Tracked documentation:
+
+```text
+docs/curriculum-graph-findings-triage-20260505.md
+docs/curriculum-graph-audit-summary-20260505.md
+docs/curriculum-data-tightening-candidates-20260505.md
+```
+
+Read-only candidate planner:
+
+```text
+scripts/plan_curriculum_data_tightening.py
+backend/LightRAG/tests/test_curriculum_data_tightening_plan.py
+```
+
+Candidate summary from the current local audit:
+
+```text
+candidate_count=988
+answer_scope_tightening_candidate=3
+phonics_graph_inheritance_candidate=60
+return_anchor_wrapper_candidate=55
+false_positive_rule_refinement_candidate=105
+defer_low_priority_candidate=765
+```
+
+Anchor conclusions:
+
+```text
+P13: classified only as answer_scope_tightening_candidate from audit evidence; no P13 return_anchor or module_choice_leak_risk finding is invented.
+P6: not classified as phonics_without_exemplar; the exposed issue is phonics_without_pattern plus wrapper return anchors, with P8.3b phonics page-level inheritance recommended later.
+```
+
+Generated local candidate JSON:
+
+```text
+temp/lesson-smoke-artifacts/curriculum_data_tightening_candidates_20260505_150353.json
+```
+
+This generated candidate JSON is intentionally not tracked.
+
+Validation:
+
+```text
+pytest backend/LightRAG/tests/test_curriculum_graph_audit.py backend/LightRAG/tests/test_curriculum_data_tightening_plan.py -q
+ruff check scripts/build_curriculum_graph.py scripts/audit_curriculum_graph.py scripts/plan_curriculum_data_tightening.py backend/LightRAG/tests/test_curriculum_graph_audit.py backend/LightRAG/tests/test_curriculum_data_tightening_plan.py
+full smoke=0
+browser smoke=0
+deep smoke=0
 ```
 
 ## P0-P5 Long Task State
