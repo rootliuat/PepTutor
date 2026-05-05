@@ -187,7 +187,7 @@ deep smoke=0
 Status:
 
 ```text
-implemented on branch p8-4-ragflow-curriculum-evidence-20260505
+merged via PR #16 into main
 ```
 
 Purpose:
@@ -239,6 +239,107 @@ Validation:
 ```text
 pytest backend/LightRAG/tests/test_curriculum_graph_audit.py backend/LightRAG/tests/test_curriculum_data_tightening_plan.py backend/LightRAG/tests/test_ragflow_client.py backend/LightRAG/tests/test_ragflow_chunk_import.py backend/LightRAG/tests/test_curriculum_evidence_index.py -q
 ruff check scripts/check_ragflow_service.py scripts/ragflow_upload_curriculum_sources.py scripts/ragflow_export_chunks.py scripts/clean_ragflow_chunks.py scripts/import_ragflow_chunks.py scripts/build_curriculum_evidence_index.py scripts/lib/ragflow_client.py backend/LightRAG/tests/test_ragflow_client.py backend/LightRAG/tests/test_ragflow_chunk_import.py backend/LightRAG/tests/test_curriculum_evidence_index.py
+full smoke=0
+browser smoke=0
+deep smoke=0
+```
+
+## P8.5 Agentic Curriculum Retrieval Harness
+
+Status:
+
+```text
+merged via PR #17 into main
+```
+
+Purpose:
+
+```text
+Add an offline agentic CLI harness for curriculum evidence review and retrieval comparison. The harness is review tooling only and is not connected to lesson runtime, TeachingMove, redirect policy, prompt, RAG classroom chain, S4, persona, or structured curriculum mutation.
+```
+
+Boundary:
+
+```text
+provider=none is the default and generates prompts/evidence review packages only.
+Non-none providers are optional slow-path review tools and must not edit app/knowledge/structured or control classroom runtime.
+app/knowledge/structured remains canonical.
+TeachingMove remains the classroom control layer.
+No GRPO, no model training, no LLM extraction, and no live lesson runtime connection are introduced.
+```
+
+Files:
+
+```text
+docs/agentic-cli-harness-config-20260505.md
+docs/curriculum-agentic-query-set-20260505.json
+docs/curriculum-retrieval-comparison-report-20260505.md
+docs/curriculum-evidence-review-queue-20260505.md
+scripts/run_agentic_curriculum_harness.py
+scripts/run_curriculum_retrieval_comparison.py
+scripts/build_curriculum_evidence_review_queue.py
+backend/LightRAG/tests/test_agentic_curriculum_harness.py
+```
+
+Generated local artifacts:
+
+```text
+temp/lesson-smoke-artifacts/agentic_curriculum_harness_20260505_195756.json
+temp/lesson-smoke-artifacts/curriculum_retrieval_comparison_20260505_195756.json
+temp/lesson-smoke-artifacts/curriculum_evidence_review_queue_20260505_195756.json
+```
+
+These generated JSON artifacts are intentionally not tracked.
+
+Validation:
+
+```text
+pytest backend/LightRAG/tests/test_curriculum_graph_audit.py backend/LightRAG/tests/test_curriculum_data_tightening_plan.py backend/LightRAG/tests/test_ragflow_client.py backend/LightRAG/tests/test_ragflow_chunk_import.py backend/LightRAG/tests/test_curriculum_evidence_index.py backend/LightRAG/tests/test_agentic_curriculum_harness.py -q -> 22 passed
+ruff check scripts/run_agentic_curriculum_harness.py scripts/run_curriculum_retrieval_comparison.py scripts/build_curriculum_evidence_review_queue.py backend/LightRAG/tests/test_agentic_curriculum_harness.py -> All checks passed
+full smoke=0
+browser smoke=0
+deep smoke=0
+```
+
+## P8.6 May 8 Final Delivery Integration
+
+Status:
+
+```text
+in main after PR #17 merge, docs-only delivery integration
+```
+
+Purpose:
+
+```text
+Finalize May 8 project-book, video-script, demo-checklist, readiness, and external-agent boundary documentation so PR #15, PR #16, and PR #17 are represented accurately without adding runtime changes.
+```
+
+Delivery docs:
+
+```text
+docs/submission-project-book-outline-20260508.md
+docs/submission-video-script-20260508.md
+docs/submission-readiness-summary-20260508.md
+docs/submission-demo-checklist-20260508.md
+docs/no-runtime-external-agent-boundary-20260508.md
+```
+
+Boundary:
+
+```text
+RAGFlow remains external offline evidence only.
+Agentic CLI harness remains offline review tooling only.
+app/knowledge/structured remains canonical.
+TeachingMove remains classroom control.
+GRPO is deferred and not implemented.
+No model training, no LLM extraction, and no runtime connection were introduced.
+```
+
+Validation:
+
+```text
+docs-only after PR #17 merge
 full smoke=0
 browser smoke=0
 deep smoke=0

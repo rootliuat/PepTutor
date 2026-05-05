@@ -60,7 +60,7 @@ PepTutor 的问题定义不是“做一个万能聊天老师”，而是“让 A
 
 ## 6. 教材结构化与知识图谱
 
-P8.1/P8.2 已完成 full structured curriculum graph audit：
+P8.1/P8.2/P8.3a 已完成 full structured curriculum graph audit、findings triage 和 review-only data-tightening candidate plan：
 
 - 覆盖 4 册书
 - 30 个单元
@@ -79,6 +79,10 @@ P8.1/P8.2 已完成 full structured curriculum graph audit：
 - 低优先级风险信号：233
 
 这部分没有引入模型训练、GRPO、LLM 抽取或 runtime 连接，是离线、确定性的教材结构分析。
+
+P8.4 进一步增加了 RAGFlow curriculum evidence integration，但它是外部离线证据管线：用于上传、导出、清洗、映射和索引教材证据，不替代 `app/knowledge/structured`，也不进入课堂 runtime。
+
+P8.5 增加了 agentic curriculum retrieval harness，用于把结构化图谱、RAGFlow 证据和候选问题整理成离线 review prompt 与对比报告。默认 provider 是 `none`，只生成 prompt/evidence review 包，不调用外部 agent，也不控制课堂。
 
 ## 7. TeachingMove 教学动作契约
 
@@ -167,8 +171,10 @@ Test Budget Guard 将验证分层：
 - P4 technical classification complete
 - P5 engineering fix complete with PR #13
 - P8.1/P8.2 curriculum graph audit and triage complete with PR #15
+- P8.4 offline RAGFlow curriculum evidence integration complete with PR #16
+- P8.5 offline agentic curriculum retrieval harness complete with PR #17
 
-PR #15 已合并，图谱审计和候选计划进入 main。
+PR #15、PR #16、PR #17 已合并，图谱审计、RAGFlow 离线证据管线和 agentic 离线 review harness 进入 main。
 
 ## 12. 关键技术成果
 
@@ -180,6 +186,8 @@ PR #15 已合并，图谱审计和候选计划进入 main。
 - browser smoke 报告区分 real backend passed 和 mock suite skipped。
 - LLM token/context metering 和 prompt 成本归因。
 - full structured curriculum graph audit。
+- RAGFlow 离线证据管线：服务检查、上传计划、chunk 导出、清洗、映射和 evidence index。
+- Agentic CLI 离线 review harness：provider=none 默认生成 prompt，支持后续人工选择 kimi/deepagents/bub/generic 等慢路径审阅。
 - Test Budget Guard 防止高成本验证失控。
 
 ## 13. 对比普通 AI 对话系统的优势
@@ -200,12 +208,13 @@ PR #15 已合并，图谱审计和候选计划进入 main。
 - 米粒的 visible personality 还不是最终体验，只是完成了受控人格接入和部分可见语气切片。
 - TTS 自然度和 mouthOpen 同步还没有人类 AV 认证。
 - P8.3a 只完成 answer-scope 候选计划，没有直接改教材数据。
-- RAGFlow 没有集成。
+- RAGFlow 只作为离线证据管线，不控制课堂 runtime。
+- Agentic CLI harness 只作为离线证据 review 工具，不控制课堂 runtime。
 - GRPO 没有实现。
 - 没有引入模型训练。
 - full autonomous teacher 还没有解决。
 - 40-44 页扩展矩阵尚未进行。
-- P8.4 增加的是 RAGFlow 离线证据管线；它不控制课堂 runtime，也不替代 `app/knowledge/structured`。
+- `app/knowledge/structured` 仍是 canonical curriculum source。
 
 ## 15. 未来工作
 
@@ -214,7 +223,7 @@ May 8 之后可以推进：
 - RAGFlow-style book parsing
 - chapter-level plain-text hierarchy
 - stronger embedding/retrieval route as slow path
-- agentic retrieval harness，例如 deepagent / kimi-cli-like 工具
+- agentic retrieval harness 的生产化和更多 provider 审阅流程，例如 deepagent / kimi-cli-like 工具
 - curriculum graph reward/eval
 - P8.3a answer-scope source review
 - P8.3b phonics graph inheritance
@@ -222,7 +231,7 @@ May 8 之后可以推进：
 - S4 backend natural interrupt trigger
 - browser smoke productization
 
-其中 RAGFlow 在当前交付中只作为外部离线证据来源，不接入 live lesson runtime。GRPO、模型训练和 RAGFlow 驱动的课堂检索都不属于 May 8 交付。
+其中 RAGFlow 和 agentic harness 在当前交付中只作为外部离线证据来源，不接入 live lesson runtime。GRPO、模型训练、LLM extraction 和 RAGFlow/agentic 驱动的课堂检索都不属于 May 8 交付。
 
 ## 16. 5 月 8 日演示路径
 
@@ -261,7 +270,12 @@ http://127.0.0.1:5173/lesson
 - `docs/curriculum-graph-audit-summary-20260505.md`
 - `docs/curriculum-graph-findings-triage-20260505.md`
 - `docs/curriculum-data-tightening-candidates-20260505.md`
+- `docs/ragflow-service-integration-plan-20260505.md`
+- `docs/curriculum-retrieval-comparison-report-20260505.md`
+- `docs/curriculum-evidence-review-queue-20260505.md`
 
 6. 明确说明：
 
 当前交付证明的是“可控、可观察、可审计的教材陪练系统”，不是已经完成完全拟人化、完全自主化的 AI 老师。
+
+同时明确：RAGFlow、agentic harness、GRPO 都没有进入课堂控制链路。课堂控制仍由 structured curriculum、lesson runtime、TeachingMove 和 redirect policy 负责。
