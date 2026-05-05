@@ -182,6 +182,68 @@ browser smoke=0
 deep smoke=0
 ```
 
+## P8.4 RAGFlow Curriculum Evidence Integration
+
+Status:
+
+```text
+implemented on branch p8-4-ragflow-curriculum-evidence-20260505
+```
+
+Purpose:
+
+```text
+Add an optional offline RAGFlow evidence pipeline for curriculum graph audit, answer-scope review, phonics review, and future human-approved data tightening.
+```
+
+Boundary:
+
+```text
+app/knowledge/structured remains canonical.
+RAGFlow evidence is supporting evidence only.
+TeachingMove remains the classroom control layer.
+No GRPO, no model training, no LLM extraction, and no live lesson runtime connection are introduced.
+```
+
+Files:
+
+```text
+docs/ragflow-service-integration-plan-20260505.md
+docs/ragflow-parser-config-20260505.md
+docs/ragflow-to-peptutor-mapping-report-20260505.md
+docs/curriculum-evidence-index-schema-v1.md
+scripts/lib/ragflow_client.py
+scripts/check_ragflow_service.py
+scripts/ragflow_upload_curriculum_sources.py
+scripts/ragflow_export_chunks.py
+scripts/clean_ragflow_chunks.py
+scripts/import_ragflow_chunks.py
+scripts/build_curriculum_evidence_index.py
+backend/LightRAG/tests/test_ragflow_client.py
+backend/LightRAG/tests/test_ragflow_chunk_import.py
+backend/LightRAG/tests/test_curriculum_evidence_index.py
+```
+
+Environment fields added:
+
+```text
+PEPTUTOR_RAGFLOW_ENABLED=0
+RAGFLOW_BASE_URL
+RAGFLOW_API_KEY
+RAGFLOW_DATASET_ID
+RAGFLOW_TIMEOUT_SECONDS
+```
+
+Validation:
+
+```text
+pytest backend/LightRAG/tests/test_curriculum_graph_audit.py backend/LightRAG/tests/test_curriculum_data_tightening_plan.py backend/LightRAG/tests/test_ragflow_client.py backend/LightRAG/tests/test_ragflow_chunk_import.py backend/LightRAG/tests/test_curriculum_evidence_index.py -q
+ruff check scripts/check_ragflow_service.py scripts/ragflow_upload_curriculum_sources.py scripts/ragflow_export_chunks.py scripts/clean_ragflow_chunks.py scripts/import_ragflow_chunks.py scripts/build_curriculum_evidence_index.py scripts/lib/ragflow_client.py backend/LightRAG/tests/test_ragflow_client.py backend/LightRAG/tests/test_ragflow_chunk_import.py backend/LightRAG/tests/test_curriculum_evidence_index.py
+full smoke=0
+browser smoke=0
+deep smoke=0
+```
+
 ## P0-P5 Long Task State
 
 Updated: 2026-05-05 11:22 CST.

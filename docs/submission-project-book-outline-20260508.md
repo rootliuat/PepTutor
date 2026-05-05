@@ -205,6 +205,7 @@ PR #15 已合并，图谱审计和候选计划进入 main。
 - 没有引入模型训练。
 - full autonomous teacher 还没有解决。
 - 40-44 页扩展矩阵尚未进行。
+- P8.4 增加的是 RAGFlow 离线证据管线；它不控制课堂 runtime，也不替代 `app/knowledge/structured`。
 
 ## 15. 未来工作
 
@@ -221,7 +222,7 @@ May 8 之后可以推进：
 - S4 backend natural interrupt trigger
 - browser smoke productization
 
-这些是未来方向，不属于 May 8 交付。
+其中 RAGFlow 在当前交付中只作为外部离线证据来源，不接入 live lesson runtime。GRPO、模型训练和 RAGFlow 驱动的课堂检索都不属于 May 8 交付。
 
 ## 16. 5 月 8 日演示路径
 
