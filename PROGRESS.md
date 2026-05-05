@@ -610,6 +610,110 @@ Next step after PR #11:
 - Restore or create `backend/LightRAG/.venv` in the Git working clone.
 - Use a fresh goal id for exactly one browser smoke.
 
+## Browser Venv Preflight Closure Attempt
+
+Updated: 2026-05-05 09:52.
+
+Git working clone:
+
+```text
+/tmp/peptutor-main-postmerge
+```
+
+Main commit:
+
+```text
+7014b1e
+```
+
+Action:
+
+- Restored `backend/LightRAG/.venv` in the Git working clone by linking to the existing local venv:
+
+```bash
+ln -s /root/my-project/PepTutor/backend/LightRAG/.venv /tmp/peptutor-main-postmerge/backend/LightRAG/.venv
+```
+
+Verified:
+
+```text
+backend/LightRAG/.venv/bin/lightrag-server --help
+```
+
+Goal id:
+
+```text
+browser-venv-preflight-closure
+```
+
+Browser smoke command:
+
+```bash
+PEPTUTOR_TEST_GOAL_ID=browser-venv-preflight-closure \
+PEPTUTOR_TEST_GOAL_TYPE=frontend,s4,browser \
+NO_PROXY=127.0.0.1,localhost,::1 \
+bash scripts/smoke_lesson_browser.sh
+```
+
+Budget:
+
+```text
+full smoke=0
+browser smoke=1
+deep smoke=0
+```
+
+Report:
+
+```text
+temp/lesson-smoke-artifacts/lesson_browser_smoke_20260505_095207.json
+```
+
+Result:
+
+```text
+status=failed
+acceptance_passed=false
+browser_exit_code=1
+browser_test_counts={passed:0, failed:0, skipped:0}
+```
+
+What improved:
+
+- Backend started successfully.
+- `/lesson/catalog` became ready.
+- The previous missing `.venv` preflight failure is resolved.
+- The previous bad pnpm shim path failure is not the active blocker anymore.
+
+Current failure:
+
+```text
+Error: Cannot find module 'vitest/package.json'
+Require stack:
+- /tmp/peptutor-main-postmerge/frontend/airi/apps/stage-web/package.json
+WARN Local package.json exists, but node_modules missing, did you mean to install?
+```
+
+Interpretation:
+
+- This Git working clone lacks frontend `node_modules`.
+- Browser tests still did not execute.
+- The failure is frontend dependency/materialization, not classroom runtime.
+- Do not rerun browser smoke under `browser-venv-preflight-closure`; budget is already consumed.
+
+Next required goal:
+
+```text
+Browser Smoke Frontend Node Modules Closure
+```
+
+Recommended next action:
+
+- Restore or materialize `frontend/airi/node_modules` and workspace package node_modules in the Git working clone without running expensive smoke first.
+- Avoid `pnpm install` if it triggers heavy postinstall downloads; prefer linking or reusing the known working `/root/my-project/PepTutor/frontend/airi/node_modules` if appropriate.
+- Use a fresh goal id.
+- Run browser smoke at most once after dependency materialization is verified with cheap `node scripts/resolve-node-bin.mjs vitest vitest.mjs apps/stage-web`.
+
 ## New Conversation Bootstrap Prompt
 
 Use this prompt at the start of the next conversation:
