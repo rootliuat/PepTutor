@@ -4,7 +4,7 @@ import {
   lessonRetrievalModeLabels,
   lessonTeachingActionLabels,
 } from '@proj-airi/stage-ui/types/lesson'
-import { stripLessonMarkdown } from '@proj-airi/stage-ui/utils/lesson-text'
+import { sanitizeLessonVisibleText } from '@proj-airi/stage-ui/utils/lesson-text'
 import { Button, Callout, FieldSelect, Input, Progress, SelectTab, useTheme } from '@proj-airi/ui'
 import { storeToRefs } from 'pinia'
 import { computed, ref, watch } from 'vue'
@@ -139,8 +139,8 @@ const pageSelectorDisabled = computed(() => loading.value || pageOptions.value.l
 const pageInputPlaceholder = computed(() => scopedPages.value[0]?.value || 'TB-G5S1U3-P24')
 
 const currentTask = computed(() =>
-  stripLessonMarkdown(activeTurn.value?.teacher_response || '')
-  || stripLessonMarkdown(currentTeacherPrompt.value || '')
+  sanitizeLessonVisibleText(activeTurn.value?.teacher_response || '')
+  || sanitizeLessonVisibleText(currentTeacherPrompt.value || '')
   || '先选择页面并开始本页 lesson。',
 )
 const currentTaskDetail = computed(() => {
@@ -167,7 +167,7 @@ const studyBoardSummary = computed(() => {
   return detail.replace(/\s+/g, ' ').trim()
 })
 const studyBoardLines = computed(() => {
-  const source = [currentTask.value, currentTaskDetail.value, stripLessonMarkdown(selectedPageDescription.value)]
+  const source = [currentTask.value, currentTaskDetail.value, sanitizeLessonVisibleText(selectedPageDescription.value)]
     .filter(Boolean)
     .join('。')
     .split(/[。!?！？]/)

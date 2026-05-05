@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ChatHistoryItem } from '@proj-airi/stage-ui/types/chat'
+import type { ChatHistoryItem, StreamingAssistantMessage } from '@proj-airi/stage-ui/types/chat'
 
 import { ChatHistory } from '@proj-airi/stage-ui/components'
 import { useChatOrchestratorStore } from '@proj-airi/stage-ui/stores/chat'
@@ -11,6 +11,7 @@ import { useLessonChatHistoryStore } from '@proj-airi/stage-ui/stores/lesson-cha
 import { createPepTutorLessonChatProvider, LESSON_CHAT_MODEL } from '@proj-airi/stage-ui/stores/lesson-chat-provider'
 import { useHearingStore } from '@proj-airi/stage-ui/stores/modules/hearing'
 import { useSpeechStore } from '@proj-airi/stage-ui/stores/modules/speech'
+import { sanitizeLessonVisibleText } from '@proj-airi/stage-ui/utils/lesson-text'
 import { useDeferredMount } from '@proj-airi/ui'
 import { storeToRefs } from 'pinia'
 import { computed, ref } from 'vue'
@@ -33,9 +34,9 @@ const lessonChatProvider = createPepTutorLessonChatProvider()
 const lessonStore = useLessonStore()
 const lessonAiriRuntime = useLessonAiriRuntimeStore()
 const lessonChatHistoryStore = useLessonChatHistoryStore()
-const { isConfigured, hasStarted } = storeToRefs(lessonStore)
+const { isConfigured, hasStarted, loading } = storeToRefs(lessonStore)
 const { activeHistoryReadOnly, activeLessonTabReadOnly } = storeToRefs(lessonChatHistoryStore)
-const { microphoneStatus, microphoneStatusLabel, autoSendEnabled } = storeToRefs(lessonAiriRuntime)
+const { microphoneStatus, autoSendEnabled, classroomSimpleStatus } = storeToRefs(lessonAiriRuntime)
 const { activeSpeechProvider, activeSpeechModel, activeSpeechVoiceId } = storeToRefs(useSpeechStore())
 const { activeTranscriptionProvider, activeTranscriptionModel } = storeToRefs(useHearingStore())
 const { isReady } = useDeferredMount()
@@ -46,6 +47,27 @@ const { streamingMessage } = storeToRefs(useChatStreamStore())
 
 const isLoading = ref(true)
 const historyMessages = computed(() => messages.value as unknown as ChatHistoryItem[])
+const sanitizedHistoryMessages = computed(() =>
+  historyMessages.value.map((message) => {
+    const content = sanitizeLessonVisibleText(resolveLessonPanelMessageText(message))
+    return {
+      ...message,
+      content,
+      slices: [{ type: 'text' as const, text: content }],
+    }
+  }),
+)
+const sanitizedStreamingMessage = computed(() => {
+  if (!streamingMessage.value)
+    return undefined
+  const source = streamingMessage.value as StreamingAssistantMessage
+  const content = sanitizeLessonVisibleText(resolveLessonPanelMessageText(source as ChatHistoryItem))
+  return {
+    ...source,
+    content,
+    slices: [{ type: 'text' as const, text: content }],
+  } as StreamingAssistantMessage
+})
 const chatDisabled = computed(() => !isConfigured.value || !hasStarted.value || activeLessonTabReadOnly.value)
 const visibleConversationMessages = computed(() =>
   historyMessages.value.filter(message => message.role !== 'system'),
@@ -61,13 +83,13 @@ const rootClasses = computed(() => props.dockMode
   ? [
       props.overlayMode
         ? 'w-full'
-        : 'w-full rounded-[30px] border border-sky-100/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.86),rgba(240,249,255,0.72))] p-3.5 shadow-[0_36px_120px_-70px_rgba(15,23,42,0.62)] backdrop-blur-xl',
+        : 'w-full rounded-[30px] border border-sky-100/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(240,249,255,0.78))] p-3.5 shadow-[0_26px_80px_-58px_rgba(15,23,42,0.58)]',
       props.overlayMode
         ? ''
-        : 'dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(7,12,20,0.95),rgba(10,16,26,0.88))] dark:shadow-[0_36px_120px_-64px_rgba(2,12,27,0.98)]',
+        : 'dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(7,12,20,0.95),rgba(10,16,26,0.88))] dark:shadow-[0_26px_80px_-58px_rgba(2,12,27,0.98)]',
     ]
   : [
-      'min-h-0 flex-1 overflow-hidden rounded-[28px] border-2 border-solid border-white/50 bg-white/78 p-4 backdrop-blur-xl',
+      'min-h-0 flex-1 overflow-hidden rounded-[28px] border-2 border-solid border-white/50 bg-white/86 p-4',
       'dark:border-neutral-800/70 dark:bg-neutral-950/72',
     ])
 const historyShellClasses = computed(() => props.dockMode
@@ -95,7 +117,7 @@ const historyHeightClass = computed(() => {
 })
 const inputShellClasses = computed(() => props.dockMode
   ? [
-      'overflow-hidden rounded-[28px] border border-sky-100/80 bg-white/58',
+      'overflow-hidden rounded-[24px] border border-sky-100/80 bg-white/92',
       'dark:border-white/8 dark:bg-white/4',
     ]
   : [])
@@ -170,6 +192,25 @@ const lessonRuntimeBadge = computed(() => {
     classes: 'bg-neutral-100/90 text-neutral-500 dark:bg-neutral-800/80 dark:text-neutral-300',
   }
 })
+const classroomSimpleStatusLabel = computed(() =>
+  loading.value ? '思考/说话中' : classroomSimpleStatus.value,
+)
+
+function resolveLessonPanelMessageText(message: ChatHistoryItem): string {
+  if ('slices' in message && Array.isArray(message.slices) && message.slices.length > 0) {
+    return message.slices
+      .filter(slice => slice.type === 'text')
+      .map(slice => slice.text)
+      .join('')
+      .trim()
+  }
+  if (typeof message.content === 'string')
+    return message.content
+  if (Array.isArray(message.content)) {
+    return message.content.map(part => typeof part === 'string' ? part : '').join('\n')
+  }
+  return ''
+}
 </script>
 
 <template>
@@ -233,7 +274,7 @@ const lessonRuntimeBadge = computed(() => {
             microphoneBadgeClasses,
           ]"
         >
-          {{ microphoneStatusLabel }}
+          {{ classroomSimpleStatusLabel }}
         </div>
         <div
           :class="[
@@ -272,7 +313,7 @@ const lessonRuntimeBadge = computed(() => {
                 聊天记录
               </div>
               <div class="text-xs text-slate-500 dark:text-neutral-400">
-                AIRI runtime 与 lesson turn 的合并对话视图
+                PepTutor runtime 与 lesson turn 的合并对话视图
               </div>
             </div>
             <div class="rounded-full bg-sky-100/75 px-3 py-1 text-[11px] text-slate-600 font-medium dark:bg-white/8 dark:text-neutral-200">
@@ -283,9 +324,9 @@ const lessonRuntimeBadge = computed(() => {
           <div class="relative min-h-0 flex flex-1 flex-col overflow-hidden rounded-lg px-2 py-3 md:px-0">
             <ChatHistory
               v-if="isReady"
-              :messages="historyMessages"
+              :messages="sanitizedHistoryMessages"
               :sending="sending"
-              :streaming-message="streamingMessage"
+              :streaming-message="sanitizedStreamingMessage"
               h-full
               :variant="props.mobile ? 'mobile' : 'desktop'"
               @vue:mounted="isLoading = false"

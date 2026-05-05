@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useLessonStore } from '@proj-airi/stage-ui/stores/lesson'
 import { useLessonAiriRuntimeStore } from '@proj-airi/stage-ui/stores/lesson-airi-runtime'
-import { stripLessonMarkdown } from '@proj-airi/stage-ui/utils/lesson-text'
+import { segmentLessonTeacherReply } from '@proj-airi/stage-ui/utils/lesson-text'
 import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
 
@@ -11,11 +11,17 @@ const lessonAiriRuntime = useLessonAiriRuntimeStore()
 const { currentPageTitle, currentTeacherPrompt, activeTurn } = storeToRefs(lessonStore)
 const { lastRecognizedText, liveTranscriptText } = storeToRefs(lessonAiriRuntime)
 
-const subtitleText = computed(() =>
-  stripLessonMarkdown(activeTurn.value?.teacher_response || '')
-  || stripLessonMarkdown(currentTeacherPrompt.value || '')
-  || '等待老师话术...',
-)
+const subtitleSegments = computed(() => {
+  const activeSegments = segmentLessonTeacherReply(activeTurn.value?.teacher_response || '')
+  if (activeSegments.length > 0)
+    return activeSegments
+
+  const promptSegments = segmentLessonTeacherReply(currentTeacherPrompt.value || '')
+  if (promptSegments.length > 0)
+    return promptSegments
+
+  return ['等待老师话术...']
+})
 const subtitleSpeakerLabel = computed(() =>
   activeTurn.value?.turn_label === 'page_entry'
     ? '米粒老师开场讲解'
@@ -45,8 +51,13 @@ const subtitleContext = computed(() =>
           </span>
         </div>
 
-        <div class="mt-2 text-sm text-slate-900 font-semibold leading-6 md:text-lg dark:text-white md:leading-7">
-          {{ subtitleText }}
+        <div class="mt-2 text-sm text-slate-900 font-semibold leading-6 space-y-1.5 md:text-lg dark:text-white md:leading-7">
+          <div
+            v-for="(segment, index) in subtitleSegments"
+            :key="`${subtitleContext}:${index}:${segment}`"
+          >
+            {{ segment }}
+          </div>
         </div>
 
         <div class="mt-2.5 flex flex-wrap items-center gap-2 text-xs text-slate-500 dark:text-neutral-200/78">

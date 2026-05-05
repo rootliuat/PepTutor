@@ -10,11 +10,12 @@ import { useLessonAiriRuntimeStore } from '@proj-airi/stage-ui/stores/lesson-air
 import { resolveLessonChatMessageText as resolveMessageText, useLessonChatHistoryStore } from '@proj-airi/stage-ui/stores/lesson-chat-history'
 import { useHearingStore } from '@proj-airi/stage-ui/stores/modules/hearing'
 import { useSpeechStore } from '@proj-airi/stage-ui/stores/modules/speech'
+import { sanitizeLessonVisibleText, segmentLessonTeacherReply } from '@proj-airi/stage-ui/utils/lesson-text'
 import { storeToRefs } from 'pinia'
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
 
 const lessonStore = useLessonStore()
-const { currentPageTitle, selectedPageUid, loading, activeTurn } = storeToRefs(lessonStore)
+const { currentPageTitle, selectedPageUid, loading, activeTurn, transcript } = storeToRefs(lessonStore)
 const lessonChatHistoryStore = useLessonChatHistoryStore()
 const { listLoading, sessionLoading, listError, sessionError, syncError, restoreWarning, activeHistoryReadOnly } = storeToRefs(lessonChatHistoryStore)
 const lessonAiriRuntime = useLessonAiriRuntimeStore()
@@ -53,6 +54,7 @@ const {
   ttsPlaybackOverlapDetected,
   ttsPlaybackOverlapCount,
   speechPlaybackDebugLabel,
+  classroomSimpleStatus,
 } = storeToRefs(lessonAiriRuntime)
 const { mouthOpenSize } = storeToRefs(useSpeakingStore())
 const { activeTranscriptionProvider } = storeToRefs(useHearingStore())
@@ -63,35 +65,57 @@ const { activeSessionId, messages } = storeToRefs(chatSessionStore)
 const { streamingMessage } = storeToRefs(useChatStreamStore())
 const sidebarChatScrollRef = ref<HTMLElement>()
 const historyPanelOpen = ref(false)
+const debugPanelOpen = ref(false)
 
 const historyMessages = computed(() =>
   (messages.value as unknown as ChatHistoryItem[]).filter(message => message.role !== 'system'),
 )
-const conversationCountLabel = computed(() => `${historyMessages.value.length} 条对话`)
 const sidebarMessages = computed(() => {
+  const transcriptMessages = transcript.value
+    .filter(entry => entry.speaker === 'teacher' || entry.speaker === 'learner' || entry.speaker === 'system')
+    .map(entry => ({
+      id: entry.id,
+      role: entry.speaker === 'learner' ? 'user' : entry.speaker === 'system' ? 'error' : 'assistant',
+      text: entry.speaker === 'teacher'
+        ? sanitizeLessonVisibleText(entry.text)
+        : sanitizeLessonVisibleText(entry.text),
+      segments: entry.speaker === 'teacher'
+        ? segmentLessonTeacherReply(entry.text)
+        : [sanitizeLessonVisibleText(entry.text)].filter(Boolean),
+      createdAt: entry.created_at,
+    }))
+    .filter(message => message.text)
+
   const normalized = historyMessages.value
     .map((message, index) => ({
       id: message.id || `${message.role}:${message.createdAt || index}`,
       role: message.role,
-      text: resolveMessageText(message),
+      text: sanitizeLessonVisibleText(resolveMessageText(message)),
+      segments: message.role === 'assistant'
+        ? segmentLessonTeacherReply(resolveMessageText(message))
+        : [sanitizeLessonVisibleText(resolveMessageText(message))].filter(Boolean),
       createdAt: message.createdAt,
     }))
     .filter(message => (message.role === 'assistant' || message.role === 'user' || message.role === 'error') && message.text)
 
+  const messagesForDisplay = transcriptMessages.length > 0 ? transcriptMessages : normalized
+
   const streamingText = streamingMessage.value ? resolveMessageText(streamingMessage.value as ChatHistoryItem) : ''
   if (streamingText) {
-    normalized.push({
+    messagesForDisplay.push({
       id: 'streaming-message',
       role: 'assistant',
-      text: streamingText,
+      text: sanitizeLessonVisibleText(streamingText),
+      segments: segmentLessonTeacherReply(streamingText),
       createdAt: Date.now(),
     })
   }
 
-  return normalized
+  return messagesForDisplay
 })
+const conversationCountLabel = computed(() => `${sidebarMessages.value.length} 条对话`)
 const latestAssistantPreview = computed(() =>
-  [...sidebarMessages.value].reverse().find(message => message.role === 'assistant')?.text || '老师开始后，对话记录会显示在这里。',
+  [...sidebarMessages.value].reverse().find(message => message.role === 'assistant')?.text || '课堂开始后，对话记录会显示在这里。',
 )
 const historySessionRows = computed(() =>
   chatSessionStore.getSessionMetasForCharacter(PEPTUTOR_TEACHER_SESSION_CHARACTER_ID).filter(meta =>
@@ -397,6 +421,10 @@ function handleToolbarButton(item: { key: string }) {
   }
 }
 
+function handleDebugPanelToggle(event: Event) {
+  debugPanelOpen.value = (event.target as HTMLDetailsElement).open
+}
+
 const sidebarRuntimeStatus = computed(() => {
   if (microphonePermissionState.value === 'requesting') {
     return {
@@ -450,6 +478,24 @@ const sidebarRuntimeStatus = computed(() => {
     label: '未接通',
     detail: '当前还没有开始实时听写。',
     classes: 'bg-slate-100 text-slate-600 ring-slate-200 dark:bg-white/10 dark:text-neutral-100 dark:ring-white/10',
+  }
+})
+const classroomSimpleStatusLabel = computed(() => {
+  if (loading.value)
+    return '思考/说话中'
+  return classroomSimpleStatus.value
+})
+const classroomSimpleStatusClasses = computed(() => {
+  switch (classroomSimpleStatusLabel.value) {
+    case '思考/说话中':
+      return 'bg-violet-500 text-white shadow-[0_12px_24px_-16px_rgba(124,58,237,0.85)]'
+    case '未连接':
+      return 'bg-rose-100 text-rose-700 dark:bg-rose-400/15 dark:text-rose-100'
+    case '不可用':
+      return 'bg-slate-100 text-slate-600 dark:bg-white/10 dark:text-neutral-100'
+    case '等待':
+    default:
+      return 'bg-emerald-400 text-emerald-950 shadow-[0_12px_24px_-16px_rgba(34,197,94,0.85)]'
   }
 })
 const performancePlanSourceDetail = computed(() => {
@@ -808,8 +854,8 @@ function resolveReplyPathLabel() {
         </template>
       </div>
 
-      <div class="rounded-full bg-emerald-400 px-3 py-1 text-[11px] text-emerald-950 font-semibold shadow-[0_12px_24px_-16px_rgba(34,197,94,0.85)]">
-        已连接
+      <div :class="['rounded-full px-3 py-1 text-[11px] font-semibold', classroomSimpleStatusClasses]">
+        {{ classroomSimpleStatusLabel }}
       </div>
     </div>
 
@@ -904,131 +950,147 @@ function resolveReplyPathLabel() {
         </div>
 
         <div v-else class="flex flex-col gap-3">
-          <div
+          <template
             v-for="message in sidebarMessages"
             :key="message.id"
-            :class="[
-              'flex items-end gap-2',
-              message.role === 'user' ? 'justify-end' : 'justify-start',
-            ]"
           >
             <div
-              v-if="message.role !== 'user'"
-              class="h-7 w-7 shrink-0 overflow-hidden rounded-full bg-[linear-gradient(135deg,rgba(56,189,248,0.24),rgba(14,165,233,0.08))] ring-1 ring-sky-100/90 dark:ring-white/10"
-            >
-              <div class="h-full w-full flex items-center justify-center text-[11px] text-cyan-700 font-bold dark:text-cyan-100">
-                米
-              </div>
-            </div>
-
-            <div
+              v-for="(segment, segmentIndex) in message.segments.length ? message.segments : [message.text]"
+              :key="`${message.id}:${segmentIndex}`"
               :class="[
-                'max-w-[13.5rem] whitespace-pre-wrap break-words rounded-[18px] px-3 py-2.5 text-sm leading-5 shadow-[0_16px_34px_-28px_rgba(0,0,0,0.85)]',
-                message.role === 'user'
-                  ? 'rounded-br-md bg-emerald-100 text-emerald-950 ring-1 ring-inset ring-emerald-200/80 dark:bg-neutral-600 dark:text-white dark:ring-transparent'
-                  : message.role === 'error'
-                    ? 'rounded-bl-md bg-rose-50 text-rose-700 ring-1 ring-inset ring-rose-200 dark:bg-rose-500/18 dark:text-rose-100 dark:ring-rose-300/18'
-                    : 'rounded-bl-md bg-white/88 text-slate-800 ring-1 ring-inset ring-sky-100/90 dark:bg-neutral-600/72 dark:text-neutral-50 dark:ring-transparent',
+                'flex items-end gap-2',
+                message.role === 'user' ? 'justify-end' : 'justify-start',
               ]"
             >
-              {{ message.text }}
-            </div>
+              <div
+                v-if="message.role !== 'user'"
+                class="h-7 w-7 shrink-0 overflow-hidden rounded-full bg-[linear-gradient(135deg,rgba(56,189,248,0.24),rgba(14,165,233,0.08))] ring-1 ring-sky-100/90 dark:ring-white/10"
+              >
+                <div class="h-full w-full flex items-center justify-center text-[11px] text-cyan-700 font-bold dark:text-cyan-100">
+                  米
+                </div>
+              </div>
 
-            <div
-              v-if="message.role === 'user'"
-              class="h-8 w-8 flex shrink-0 items-center justify-center rounded-full bg-emerald-400 text-sm text-emerald-950 font-bold"
-            >
-              M
+              <div
+                :class="[
+                  'max-w-[13.5rem] whitespace-pre-wrap break-words rounded-[18px] px-3 py-2.5 text-sm leading-5 shadow-[0_16px_34px_-28px_rgba(0,0,0,0.85)]',
+                  message.role === 'user'
+                    ? 'rounded-br-md bg-emerald-100 text-emerald-950 ring-1 ring-inset ring-emerald-200/80 dark:bg-neutral-600 dark:text-white dark:ring-transparent'
+                    : message.role === 'error'
+                      ? 'rounded-bl-md bg-rose-50 text-rose-700 ring-1 ring-inset ring-rose-200 dark:bg-rose-500/18 dark:text-rose-100 dark:ring-rose-300/18'
+                      : 'rounded-bl-md bg-white/88 text-slate-800 ring-1 ring-inset ring-sky-100/90 dark:bg-neutral-600/72 dark:text-neutral-50 dark:ring-transparent',
+                ]"
+              >
+                {{ segment }}
+              </div>
+
+              <div
+                v-if="message.role === 'user'"
+                class="h-8 w-8 flex shrink-0 items-center justify-center rounded-full bg-emerald-400 text-sm text-emerald-950 font-bold"
+              >
+                M
+              </div>
             </div>
-          </div>
+          </template>
         </div>
       </div>
     </div>
 
-    <div
-      class="mt-3 shrink-0 border border-sky-100/90 rounded-[20px] bg-white/62 p-3 shadow-[0_18px_44px_-34px_rgba(14,116,144,0.55)] dark:border-white/8 dark:bg-black/20"
+    <details
+      :open="debugPanelOpen"
+      class="mt-3 shrink-0 border border-sky-100/90 rounded-[20px] bg-white/62 shadow-[0_18px_44px_-34px_rgba(14,116,144,0.55)] dark:border-white/8 dark:bg-black/20"
       data-testid="lesson-airi-visible-closure"
+      @toggle="handleDebugPanelToggle"
     >
-      <div class="flex items-start justify-between gap-3">
-        <div class="min-w-0">
-          <div class="text-[10px] text-slate-400 font-semibold tracking-[0.14em] uppercase dark:text-neutral-500">
-            米粒老师状态
+      <summary class="flex cursor-pointer list-none items-center justify-between gap-3 px-3 py-2 text-sm text-slate-700 font-semibold dark:text-neutral-100">
+        <span>状态详情 / 调试信息</span>
+        <span class="rounded-full bg-sky-100/75 px-2.5 py-1 text-[11px] text-slate-600 dark:bg-white/8 dark:text-neutral-300">
+          {{ debugPanelOpen ? '收起' : '展开' }}
+        </span>
+      </summary>
+
+      <div class="px-3 pb-3">
+        <div class="flex items-start justify-between gap-3">
+          <div class="min-w-0">
+            <div class="text-[10px] text-slate-400 font-semibold tracking-[0.14em] uppercase dark:text-neutral-500">
+              米粒老师状态
+            </div>
+            <div
+              class="mt-1 truncate text-sm text-slate-900 font-semibold dark:text-white"
+              data-testid="lesson-airi-visible-state"
+            >
+              {{ visibleAiriState.label }}
+            </div>
+            <div
+              class="line-clamp-2 mt-0.5 text-[11px] text-slate-500 leading-4 dark:text-neutral-400"
+              data-testid="lesson-airi-visible-state-detail"
+            >
+              {{ visibleAiriState.detail }}
+            </div>
           </div>
           <div
-            class="mt-1 truncate text-sm text-slate-900 font-semibold dark:text-white"
-            data-testid="lesson-airi-visible-state"
+            :class="[
+              'shrink-0 rounded-full px-2.5 py-1 text-[11px] font-semibold ring-1 ring-inset',
+              visibleAiriState.classes,
+            ]"
           >
             {{ visibleAiriState.label }}
           </div>
-          <div
-            class="line-clamp-2 mt-0.5 text-[11px] text-slate-500 leading-4 dark:text-neutral-400"
-            data-testid="lesson-airi-visible-state-detail"
-          >
-            {{ visibleAiriState.detail }}
-          </div>
         </div>
-        <div
-          :class="[
-            'shrink-0 rounded-full px-2.5 py-1 text-[11px] font-semibold ring-1 ring-inset',
-            visibleAiriState.classes,
-          ]"
-        >
-          {{ visibleAiriState.label }}
-        </div>
-      </div>
 
-      <div class="mt-3 flex items-start justify-between gap-3 border-t border-sky-100/80 pt-3 dark:border-white/8">
-        <div class="min-w-0">
-          <div class="text-[10px] text-slate-400 font-semibold tracking-[0.14em] uppercase dark:text-neutral-500">
-            教学姿态
+        <div class="mt-3 flex items-start justify-between gap-3 border-t border-sky-100/80 pt-3 dark:border-white/8">
+          <div class="min-w-0">
+            <div class="text-[10px] text-slate-400 font-semibold tracking-[0.14em] uppercase dark:text-neutral-500">
+              教学姿态
+            </div>
+            <div
+              class="mt-1 truncate text-sm text-slate-900 font-semibold dark:text-white"
+              data-testid="lesson-airi-teaching-stance"
+            >
+              {{ visibleTeachingStance.label }}
+            </div>
+            <div
+              class="line-clamp-2 mt-0.5 text-[11px] text-slate-500 leading-4 dark:text-neutral-400"
+              data-testid="lesson-airi-teaching-stance-detail"
+            >
+              {{ visibleTeachingStance.detail }}
+            </div>
           </div>
           <div
-            class="mt-1 truncate text-sm text-slate-900 font-semibold dark:text-white"
-            data-testid="lesson-airi-teaching-stance"
+            :class="[
+              'shrink-0 rounded-full px-2.5 py-1 text-[11px] font-semibold ring-1 ring-inset',
+              visibleTeachingStance.classes,
+            ]"
           >
             {{ visibleTeachingStance.label }}
           </div>
-          <div
-            class="line-clamp-2 mt-0.5 text-[11px] text-slate-500 leading-4 dark:text-neutral-400"
-            data-testid="lesson-airi-teaching-stance-detail"
-          >
-            {{ visibleTeachingStance.detail }}
-          </div>
         </div>
-        <div
-          :class="[
-            'shrink-0 rounded-full px-2.5 py-1 text-[11px] font-semibold ring-1 ring-inset',
-            visibleTeachingStance.classes,
-          ]"
-        >
-          {{ visibleTeachingStance.label }}
-        </div>
-      </div>
 
-      <div class="grid grid-cols-2 mt-3 gap-2">
-        <div
-          v-for="fact in visiblePerformanceFacts"
-          :key="fact.key"
-          :class="[
-            'min-w-0 rounded-[14px] border border-sky-100/80 bg-sky-50/55 px-2.5 py-2 dark:border-white/8 dark:bg-white/5',
-            ['reply_path', 'performance_source', 'content_source', 'teaching_action', 'target_role', 'expected_student_action', 'speech_style_tag', 'persona_capsule', 'performance_apply', 'performance_fallback_kind', 'tts_playback_state', 'tts_playback_id', 'active_reply_id', 'tts_stop_reason', 'tts_stop_type', 'tts_overlap_detected', 'interrupt_policy'].includes(fact.key) ? 'col-span-2' : '',
-          ]"
-        >
-          <div class="text-[10px] text-slate-400 font-semibold tracking-[0.12em] uppercase dark:text-neutral-500">
-            {{ fact.label }}
-          </div>
+        <div class="grid grid-cols-2 mt-3 gap-2">
           <div
-            :data-testid="`lesson-airi-visible-fact-${fact.key}`"
+            v-for="fact in visiblePerformanceFacts"
+            :key="fact.key"
             :class="[
-              'mt-1 text-[11px] text-slate-800 font-semibold dark:text-neutral-100',
-              ['reply_path', 'performance_source', 'content_source', 'teaching_action', 'target_role', 'expected_student_action', 'speech_style_tag', 'persona_capsule', 'performance_apply', 'performance_fallback_kind', 'tts_playback_state', 'tts_playback_id', 'active_reply_id', 'tts_stop_reason', 'tts_stop_type', 'tts_overlap_detected'].includes(fact.key) ? 'break-words leading-4' : 'truncate',
+              'min-w-0 rounded-[14px] border border-sky-100/80 bg-sky-50/55 px-2.5 py-2 dark:border-white/8 dark:bg-white/5',
+              ['reply_path', 'performance_source', 'content_source', 'teaching_action', 'target_role', 'expected_student_action', 'speech_style_tag', 'persona_capsule', 'performance_apply', 'performance_fallback_kind', 'tts_playback_state', 'tts_playback_id', 'active_reply_id', 'tts_stop_reason', 'tts_stop_type', 'tts_overlap_detected', 'interrupt_policy'].includes(fact.key) ? 'col-span-2' : '',
             ]"
           >
-            {{ fact.value }}
+            <div class="text-[10px] text-slate-400 font-semibold tracking-[0.12em] uppercase dark:text-neutral-500">
+              {{ fact.label }}
+            </div>
+            <div
+              :data-testid="`lesson-airi-visible-fact-${fact.key}`"
+              :class="[
+                'mt-1 text-[11px] text-slate-800 font-semibold dark:text-neutral-100',
+                ['reply_path', 'performance_source', 'content_source', 'teaching_action', 'target_role', 'expected_student_action', 'speech_style_tag', 'persona_capsule', 'performance_apply', 'performance_fallback_kind', 'tts_playback_state', 'tts_playback_id', 'active_reply_id', 'tts_stop_reason', 'tts_stop_type', 'tts_overlap_detected'].includes(fact.key) ? 'break-words leading-4' : 'truncate',
+              ]"
+            >
+              {{ fact.value }}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </details>
 
     <div class="sr-only">
       <div>{{ selectedPageUid }}</div>
