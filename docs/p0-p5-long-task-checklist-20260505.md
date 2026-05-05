@@ -207,7 +207,7 @@ Merged GitHub PR:
 https://github.com/rootliuat/PepTutor/pull/13
 ```
 
-Main commit:
+PR #13 merge commit:
 
 ```text
 a1b7cb7b76397c56be3510e55e670ec52046bd28

@@ -100,10 +100,10 @@ docs/manual-test-record-s3-mili-tts-20260505.md
 - Minimal runtime state default-on remains env-gated.
 - Broader token/context trimming remains a later optimization.
 
-## Current Main Commit
+## P5 PR Merge Commit
 
 ```text
-eb043a6 docs: update p0 p5 post merge state
+a1b7cb7b76397c56be3510e55e670ec52046bd28
 ```
 
 Merged P5 PR:
