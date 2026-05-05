@@ -647,15 +647,6 @@ if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
   exit 0
 fi
 
-if [[ ! -f "${BUDGET_GUARD_SCRIPT}" ]]; then
-  echo "Missing test budget guard script: ${BUDGET_GUARD_SCRIPT}" >&2
-  exit 1
-fi
-
-# shellcheck source=/dev/null
-source "${BUDGET_GUARD_SCRIPT}"
-peptutor_test_budget_guard "browser" "frontend,s4,browser" "${BROWSER_REPORT_JSON_PATH}"
-
 if [[ ! -x "${SERVER_BIN}" ]]; then
   echo "Missing LightRAG server binary: ${SERVER_BIN}" >&2
   echo "Install backend/LightRAG/.venv first." >&2
@@ -667,10 +658,20 @@ if [[ ! -f "${WAIT_SCRIPT}" ]]; then
   exit 1
 fi
 
+if [[ ! -f "${BUDGET_GUARD_SCRIPT}" ]]; then
+  echo "Missing test budget guard script: ${BUDGET_GUARD_SCRIPT}" >&2
+  exit 1
+fi
+
 mkdir -p "${LOG_DIR}" "${ARTIFACT_DIR}"
 append_loopback_no_proxy
 LESSON_BACKEND_PORT="$(select_backend_port)"
 LESSON_BACKEND_URL="http://${LESSON_BACKEND_HOST}:${LESSON_BACKEND_PORT}"
+
+# shellcheck source=/dev/null
+source "${BUDGET_GUARD_SCRIPT}"
+peptutor_test_budget_guard "browser" "frontend,s4,browser" "${BROWSER_REPORT_JSON_PATH}"
+
 trap cleanup EXIT
 
 server_env=(
