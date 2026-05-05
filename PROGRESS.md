@@ -531,6 +531,85 @@ Recommended next action:
 - Do not run full smoke.
 - Run browser smoke at most once after preflight is corrected.
 
+## Browser Smoke Budget Preflight PR
+
+Updated: 2026-05-05 08:00.
+
+After the missing `.venv` failure, a small browser smoke wrapper fix was prepared so missing backend binaries fail before Test Budget Guard accounting.
+
+PR:
+
+```text
+https://github.com/rootliuat/PepTutor/pull/11
+```
+
+Status:
+
+```text
+MERGED
+```
+
+Main commit after merge:
+
+```text
+7014b1e
+```
+
+Branch:
+
+```text
+browser-smoke-preflight-before-budget-20260505
+```
+
+Commit:
+
+```text
+c377e58
+```
+
+Change:
+
+```text
+scripts/smoke_lesson_browser.sh
+```
+
+What changed:
+
+- Check `backend/LightRAG/.venv/bin/lightrag-server` before calling `peptutor_test_budget_guard`.
+- Check `wait-for-lesson-backend.sh` before budget accounting.
+- Select backend port before budget accounting.
+- Keep actual browser smoke behavior unchanged after preflight passes.
+
+Validation:
+
+```bash
+bash -n scripts/smoke_lesson_browser.sh
+PEPTUTOR_TEST_GOAL_ID=browser-preflight-no-budget-test \
+PEPTUTOR_TEST_GOAL_TYPE=frontend,s4,browser \
+bash scripts/smoke_lesson_browser.sh
+```
+
+Expected result:
+
+```text
+Missing LightRAG server binary: /tmp/peptutor-main-postmerge/backend/LightRAG/.venv/bin/lightrag-server
+Install backend/LightRAG/.venv first.
+NO_BUDGET_WRITTEN
+```
+
+Smoke budget for PR #11:
+
+```text
+full smoke=0
+browser smoke=0 guard-counted
+deep smoke=0
+```
+
+Next step after PR #11:
+
+- Restore or create `backend/LightRAG/.venv` in the Git working clone.
+- Use a fresh goal id for exactly one browser smoke.
+
 ## New Conversation Bootstrap Prompt
 
 Use this prompt at the start of the next conversation:
