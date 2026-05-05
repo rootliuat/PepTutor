@@ -11,9 +11,9 @@ This file maps the P0-P5 goal requirements to concrete evidence. It is intention
 | P0 startup chain | complete | `./scripts/start_lesson_dev.sh` verified locally; PR #9 and PR #11 included in main |
 | P1 browser smoke | complete | `temp/lesson-smoke-artifacts/lesson_browser_smoke_20260505_101008.json` passed |
 | P2 manual test preparation | complete | `docs/manual-test-s3-mili-tts-20260504.md` |
-| P3 manual test execution | partially complete | technical observation exists; human audio/visual judgement remains pending |
+| P3 manual test execution | partially complete | technical observation plus human AV blocker record exist; human listener/viewer ratings remain pending |
 | P4 issue classification | complete for technical pass | `docs/manual-test-record-s3-mili-tts-20260505.md` |
-| P5 minimal fix and demo package | complete except optional re-observation | PR #13 merged; `docs/demo-handoff-p0-p5-20260505.md` |
+| P5 minimal fix and demo package | complete | PR #13 merged; post-PR G6S1 P4 re-observation recorded; `docs/demo-handoff-p0-p5-20260505.md` |
 
 ## P0 Startup Chain
 
@@ -57,15 +57,15 @@ This file maps the P0-P5 goal requirements to concrete evidence. It is intention
 
 | requirement | evidence | status |
 | --- | --- | --- |
-| each target page has an observation record | `docs/manual-test-record-s3-mili-tts-20260505.md` covers all six pages | complete |
+| each target page has an observation record | `docs/manual-test-record-s3-mili-tts-20260505.md` and `docs/manual-test-record-s3-mili-tts-human-av-20260505.md` cover all six pages | complete |
 | learner input recorded | record includes learner input for each page | complete |
 | teacher response recorded | record includes teacher response excerpt for each page | complete |
 | Sidebar display recorded | record includes route/action/speech/persona/interrupt/overlap fields | complete |
 | TTS playback recorded | record includes synthesis/playback state for each page | complete |
 | mechanical/overloaded/off-route recorded | record includes these flags for each page | complete |
-| mouthOpen abnormality recorded | technical record notes `not confirmed by human` where needed | partially complete |
+| mouthOpen abnormality recorded | human AV blocker record preserves numeric mouthOpen/Sidebar observations and marks true synchronization rating as `human-required` | partially complete |
 | interrupt abnormality recorded | record includes interrupt status for each page | complete |
-| can clearly judge whether Mili feels like a real teacher | technical observation cannot replace human audio/visual judgement | pending human judgement |
+| can clearly judge whether Mili feels like a real teacher | text/DOM proxy ratings exist; true audio/visual teacher-likeness requires human listener/viewer judgement | pending human judgement |
 | real issues listed instead of vague "unnatural" | technical record lists the single concrete P5 candidate and acceptable pages | complete |
 
 ## P4 Issue Classification
@@ -89,7 +89,7 @@ This file maps the P0-P5 goal requirements to concrete evidence. It is intention
 
 | requirement | evidence | status |
 | --- | --- | --- |
-| only highest-value small issue fixed | PR #13 covers only location QA preservation regression/test/docs | complete |
+| only highest-value small issue fixed | PR #13 covers only location QA preservation regression/test/docs; post-PR observation confirms `Where is the museum shop?` and `It's near ...` are preserved | complete |
 | no RAG changes | PR #13 files do not include RAG files | complete |
 | no P49/classification changes | PR #13 files do not include classification policy files | complete |
 | no P13 answer_scope data changes | PR #13 files do not include P13 data or answer-scope changes | complete |
@@ -100,7 +100,7 @@ This file maps the P0-P5 goal requirements to concrete evidence. It is intention
 | no smoke-input special cases | PR #13 adds regression coverage only | complete |
 | no deterministic teacher reply template | PR #13 adds assertions, not production reply templates | complete |
 | `PROGRESS.md` updated | updated and pushed to main | complete |
-| manual test report exists | `docs/manual-test-record-s3-mili-tts-20260505.md` | complete |
+| manual test report exists | `docs/manual-test-record-s3-mili-tts-20260505.md`; human AV blocker record `docs/manual-test-record-s3-mili-tts-human-av-20260505.md` | complete |
 | known issue list exists | `docs/p0-p5-long-task-checklist-20260505.md` and completion audit | complete |
 | demo startup instructions exist | `docs/demo-handoff-p0-p5-20260505.md` | complete |
 | GitHub PR exists and merged | PR #13 merged | complete |
@@ -115,4 +115,4 @@ The only remaining P0-P5 requirement that cannot be closed by automated or text-
 - mouthOpen synchronization;
 - whether Mili feels like a real English teacher during actual use.
 
-Use `docs/manual-test-s3-mili-tts-20260504.md` and record the result in `docs/manual-test-record-s3-mili-tts-20260505.md` or a follow-up dated record. Do not run full smoke for that judgement.
+Use `docs/manual-test-s3-mili-tts-20260504.md` and fill the unresolved `human-required` fields in `docs/manual-test-record-s3-mili-tts-human-av-20260505.md`. Do not run full smoke for that judgement.

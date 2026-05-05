@@ -133,7 +133,7 @@ Each page has test inputs, expected teacher behavior, expected Sidebar/TTS state
 Status:
 
 ```text
-technical observation completed; human audio/visual judgement still pending
+technical observation and post-PR G6S1 P4 re-observation completed; human audio/visual judgement still pending
 ```
 
 Records:
@@ -141,6 +141,7 @@ Records:
 ```text
 temp/lesson-smoke-artifacts/manual_test_s3_mili_tts_20260505.md
 docs/manual-test-record-s3-mili-tts-20260505.md
+docs/manual-test-record-s3-mili-tts-human-av-20260505.md
 ```
 
 What has been observed through the live browser UI:
@@ -158,6 +159,8 @@ What still needs human judgement:
 - spoken TTS quality;
 - mouthOpen naturalness;
 - whether Mili feels like a real teacher in actual use.
+
+The human AV blocker record preserves the current honest boundary: DOM/Sidebar evidence shows live TTS and mouthOpen state, and `TB-G6S1U1-P4` no longer collapses to bare `museum shop` after PR #13, but true TTS naturalness and mouthOpen synchronization still require a human listener/viewer rating.
 
 ### P4 Issue Classification
 
@@ -283,7 +286,7 @@ docs/p0-p5-goal-verification-matrix-20260505.md
 Next concrete tasks:
 
 1. Get human judgement for TTS quality, mouthOpen naturalness, and visible teacher-likeness using `docs/manual-test-s3-mili-tts-20260504.md`.
-2. Optionally re-observe `TB-G6S1U1-P4` in browser/manual mode under a fresh budgeted goal.
+2. Fill the unresolved `human-required` fields in `docs/manual-test-record-s3-mili-tts-human-av-20260505.md`.
 
 Latest git working clone used for PR verification:
 
@@ -1352,6 +1355,7 @@ Tracked GitHub copies:
 
 ```text
 docs/manual-test-record-s3-mili-tts-20260505.md
+docs/manual-test-record-s3-mili-tts-human-av-20260505.md
 docs/p0-p5-completion-audit-20260505.md
 ```
 
@@ -1438,27 +1442,26 @@ docs/manual-test-s3-mili-tts-20260504.md
 Technical manual observation record is filled:
 temp/lesson-smoke-artifacts/manual_test_s3_mili_tts_20260505.md
 docs/manual-test-record-s3-mili-tts-20260505.md
+docs/manual-test-record-s3-mili-tts-human-av-20260505.md
 
 P4 initial classification:
 - TB-G5S1U3-P22: acceptable.
-- TB-G6S1U1-P4: visible redirect still collapses location dialogue to noun phrase museum shop; next candidate, only fix through public question/answer target-action rule.
+- TB-G6S1U1-P4: post-PR #13 re-observation with turn left preserves Where is the museum shop? and It's near ...; no longer collapses to bare museum shop.
 - TB-G6S2U1-P4: acceptable.
 - TB-G5S1U3-P31: acceptable.
 - TB-G5S2U1-P6: acceptable, cl' as in absent.
 - TB-G6S2U2-P13: acceptable vocab return; monitor rag_plus_llm return-anchor boundary.
 
-P5 local L1 implementation:
+P5 PR #13:
 - redirect_reply_policy.py now preserves public location question/answer frames when a validated contract is phrase-shaped but carries a reliable Where question and It's near ... answer frame.
-- tests added in test_lesson_runtime.py.
-- smoke-script tests were updated to match the stable node/vite resolver path instead of the old pnpm exec vite path.
-- L1 pytest: 387 passed.
+- PR #13 is merged.
+- Post-merge L1 pytest: 396 passed.
 - Ruff: All checks passed.
 - full/browser/deep smoke: 0.
-- This P5 slice is not yet isolated into a clean GitHub PR.
 
-Next task should be one of:
+Next task should be:
 1. Human review of TTS quality, mouthOpen naturalness, and whether Mili feels like a real teacher.
-2. Isolate the local P5 changes into a clean GitHub branch/PR.
+2. Fill the unresolved human-required fields in docs/manual-test-record-s3-mili-tts-human-av-20260505.md.
 
 Rules for next task:
 - Use docs/manual-test-s3-mili-tts-20260504.md.
