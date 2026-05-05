@@ -151,6 +151,7 @@ PepTutor 有多层验证：
 - GRPO 没有实现。
 - 没有做模型训练。
 - P8.3a 只是 answer-scope 数据收紧候选计划，还没有直接改教材数据。
+- P8.4 的 RAGFlow 只是离线证据管线，不控制课堂 runtime。
 
 这不是全自动老师的最终形态，而是一个可控、可观察、可审计的教材陪练原型。
 
@@ -188,6 +189,8 @@ Do not claim:
 - GRPO is implemented
 - RAGFlow is integrated
 - full autonomous teacher is solved
+
+For RAGFlow, the safe wording is: an offline evidence integration exists; it is not connected to live classroom control.
 
 Safe claims:
 

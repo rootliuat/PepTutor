@@ -72,6 +72,7 @@ Show:
 - Mili persona wiring is clean, but fully human-like visible personality is not complete.
 - P8.3a is review-only; answer-scope source data was not changed before May 8.
 - RAGFlow is not integrated.
+- P8.4 adds RAGFlow as an external offline evidence pipeline only; it is not connected to live lesson runtime.
 - GRPO is not implemented.
 - No model training was introduced.
 - Full autonomous teacher behavior is not claimed.
@@ -104,6 +105,7 @@ ruff check scripts/build_curriculum_graph.py scripts/audit_curriculum_graph.py s
 - Do not change smoke matrix.
 - Do not edit `app/knowledge/structured`.
 - Do not start GRPO, model training, or RAGFlow integration.
+- Do not connect RAGFlow evidence to classroom route, prompt, planner, or runtime before submission.
 - Do not run full/browser/deep smoke unless explicitly requested for a final acceptance pass.
 
 ## May 6 Exact Next Action
