@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ChatHistoryItem } from '@proj-airi/stage-ui/types/chat'
+import type { LessonVisibleChatMessage } from '@proj-airi/stage-ui/utils/lesson-text'
 
 import { PEPTUTOR_TEACHER_SESSION_CHARACTER_ID } from '@proj-airi/stage-ui/constants/peptutor-teacher-card'
 import { useSpeakingStore } from '@proj-airi/stage-ui/stores/audio'
@@ -11,6 +12,7 @@ import { resolveLessonChatMessageText as resolveMessageText, useLessonChatHistor
 import { useHearingStore } from '@proj-airi/stage-ui/stores/modules/hearing'
 import { useSpeechStore } from '@proj-airi/stage-ui/stores/modules/speech'
 import {
+  coalesceAdjacentLessonVisibleMessages,
   joinLessonVisibleSegmentsForDisplay,
   normalizeLessonVisibleSegments,
   sanitizeLessonVisibleText,
@@ -70,16 +72,29 @@ const { streamingMessage } = storeToRefs(useChatStreamStore())
 const sidebarChatScrollRef = ref<HTMLElement>()
 const historyPanelOpen = ref(false)
 const debugPanelOpen = ref(false)
+type LessonSidebarMessage = LessonVisibleChatMessage & { role: 'assistant' | 'user' | 'error' }
+
+function lessonSidebarRoleForSpeaker(speaker: string): LessonSidebarMessage['role'] {
+  if (speaker === 'learner')
+    return 'user'
+  if (speaker === 'system')
+    return 'error'
+  return 'assistant'
+}
+
+function isLessonSidebarMessageRole(role: string): role is LessonSidebarMessage['role'] {
+  return role === 'assistant' || role === 'user' || role === 'error'
+}
 
 const historyMessages = computed(() =>
   (messages.value as unknown as ChatHistoryItem[]).filter(message => message.role !== 'system'),
 )
 const sidebarMessages = computed(() => {
-  const transcriptMessages = transcript.value
+  const transcriptMessages: LessonSidebarMessage[] = transcript.value
     .filter(entry => entry.speaker === 'teacher' || entry.speaker === 'learner' || entry.speaker === 'system')
     .map(entry => ({
       id: entry.id,
-      role: entry.speaker === 'learner' ? 'user' : entry.speaker === 'system' ? 'error' : 'assistant',
+      role: lessonSidebarRoleForSpeaker(entry.speaker),
       text: entry.speaker === 'teacher'
         ? joinLessonVisibleSegmentsForDisplay(normalizeLessonVisibleSegments(entry.segments, entry.text))
         : sanitizeLessonVisibleText(entry.text),
@@ -87,20 +102,38 @@ const sidebarMessages = computed(() => {
     }))
     .filter(message => message.text)
 
-  const normalized = historyMessages.value
-    .map((message, index) => ({
+  const normalized: LessonSidebarMessage[] = historyMessages.value.flatMap((message, index) => {
+    if (!isLessonSidebarMessageRole(message.role))
+      return []
+
+    const text = sanitizeLessonVisibleText(resolveMessageText(message))
+    if (!text)
+      return []
+
+    return [{
       id: message.id || `${message.role}:${message.createdAt || index}`,
       role: message.role,
-      text: sanitizeLessonVisibleText(resolveMessageText(message)),
+      text,
       createdAt: message.createdAt,
-    }))
-    .filter(message => (message.role === 'assistant' || message.role === 'user' || message.role === 'error') && message.text)
+    }]
+  })
 
-  const messagesForDisplay = transcriptMessages.length > 0 ? transcriptMessages : normalized
+  const messagesForDisplay = normalized.length > 0 ? [...normalized] : [...transcriptMessages]
+  if (normalized.length > 0) {
+    const existing = new Set(messagesForDisplay.map(message => `${message.role}:${message.text}`))
+    for (const message of transcriptMessages) {
+      const key = `${message.role}:${message.text}`
+      if (existing.has(key))
+        continue
+      messagesForDisplay.push(message)
+      existing.add(key)
+    }
+  }
 
   const streamingText = streamingMessage.value ? resolveMessageText(streamingMessage.value as ChatHistoryItem) : ''
+  const coalescedMessages = coalesceAdjacentLessonVisibleMessages(messagesForDisplay)
   if (streamingText) {
-    messagesForDisplay.push({
+    coalescedMessages.push({
       id: 'streaming-message',
       role: 'assistant',
       text: sanitizeLessonVisibleText(streamingText),
@@ -108,7 +141,7 @@ const sidebarMessages = computed(() => {
     })
   }
 
-  return messagesForDisplay
+  return coalescedMessages
 })
 const conversationCountLabel = computed(() => `${sidebarMessages.value.length} 条对话`)
 const latestAssistantPreview = computed(() =>

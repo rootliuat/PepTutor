@@ -14,6 +14,12 @@ import { useHearingSpeechInputPipeline, useHearingStore } from '@proj-airi/stage
 import { useProvidersStore } from '@proj-airi/stage-ui/stores/providers'
 import { useSettings, useSettingsAudioDevice } from '@proj-airi/stage-ui/stores/settings'
 import { useSpeechRuntimeStore } from '@proj-airi/stage-ui/stores/speech-runtime'
+import {
+  isLessonControlKey,
+  isLessonPushToTalkCombo,
+  isLessonShiftKey,
+  updateLessonPushToTalkModifierState,
+} from '@proj-airi/stage-ui/utils/lesson-hotkeys'
 import { resolveLessonInterruptDecision } from '@proj-airi/stage-ui/utils/lesson-interrupt-policy'
 import { until } from '@vueuse/core'
 import { storeToRefs } from 'pinia'
@@ -57,8 +63,10 @@ const pushToTalkActive = ref(false)
 const inputShellRef = ref<HTMLElement>()
 const textareaRef = ref<HTMLTextAreaElement>()
 const lastLiveTranscriptPreview = ref('')
-let pushToTalkCtrlDown = false
-let pushToTalkMetaDown = false
+const pushToTalkModifierState = {
+  ctrlDown: false,
+  shiftDown: false,
+}
 let textareaResizeFrame: number | undefined
 
 const providersStore = useProvidersStore()
@@ -176,7 +184,7 @@ const sendButtonClasses = computed(() => props.compactMode
   : 'h-11 min-w-11 rounded-full px-4')
 const sendButtonLabelVisible = computed(() => !props.compactMode)
 const composerShellClasses = computed(() => props.compactMode
-  ? 'min-h-[4.25rem] items-center gap-2 rounded-[24px] border border-sky-100/90 bg-white/96 px-3 py-2.5 shadow-[0_18px_48px_-38px_rgba(15,23,42,0.55)]'
+  ? 'min-h-[4.75rem] items-stretch gap-3 rounded-[28px] border border-sky-100/90 bg-white/94 px-3.5 py-2.5 shadow-[0_18px_48px_-38px_rgba(15,23,42,0.55)]'
   : 'items-end gap-3 rounded-[28px] border border-sky-100/90 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(240,249,255,0.9))] px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(12,18,28,0.96),rgba(8,12,20,0.92))] dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]')
 const textareaClasses = computed(() => props.compactMode
   ? 'max-h-[7.5rem] min-h-[2rem] py-1 text-[15px] leading-6'
@@ -628,26 +636,12 @@ async function handleStopInteraction() {
   }
 }
 
-function isControlKey(event: KeyboardEvent) {
-  return event.key === 'Control' || event.code === 'ControlLeft' || event.code === 'ControlRight'
-}
-
-function isMetaKey(event: KeyboardEvent) {
-  return event.key === 'Meta' || event.key === 'OS' || event.code === 'MetaLeft' || event.code === 'MetaRight' || event.code === 'OSLeft' || event.code === 'OSRight'
-}
-
 function updatePushToTalkModifierState(event: KeyboardEvent, pressed: boolean) {
-  if (isControlKey(event)) {
-    pushToTalkCtrlDown = pressed
-  }
-
-  if (isMetaKey(event)) {
-    pushToTalkMetaDown = pressed
-  }
+  updateLessonPushToTalkModifierState(pushToTalkModifierState, event, pressed)
 }
 
 function isPushToTalkCombo(event: KeyboardEvent) {
-  return (event.ctrlKey || pushToTalkCtrlDown) && (event.metaKey || pushToTalkMetaDown)
+  return isLessonPushToTalkCombo(event, pushToTalkModifierState)
 }
 
 async function beginPushToTalk() {
@@ -694,7 +688,7 @@ function handlePushToTalkKeydown(event: KeyboardEvent) {
 
 function handlePushToTalkKeyup(event: KeyboardEvent) {
   const wasPushToTalkActive = pushToTalkActive.value
-  const releasedPushToTalkModifier = isControlKey(event) || isMetaKey(event)
+  const releasedPushToTalkModifier = isLessonControlKey(event) || isLessonShiftKey(event)
   updatePushToTalkModifierState(event, false)
 
   if (!wasPushToTalkActive || !releasedPushToTalkModifier) {
@@ -706,8 +700,8 @@ function handlePushToTalkKeyup(event: KeyboardEvent) {
 }
 
 function handlePushToTalkBlur() {
-  pushToTalkCtrlDown = false
-  pushToTalkMetaDown = false
+  pushToTalkModifierState.ctrlDown = false
+  pushToTalkModifierState.shiftDown = false
   void endPushToTalk()
 }
 
@@ -853,8 +847,8 @@ onUnmounted(() => {
     window.removeEventListener('keyup', handlePushToTalkKeyup, { capture: true })
     window.removeEventListener('blur', handlePushToTalkBlur)
   }
-  pushToTalkCtrlDown = false
-  pushToTalkMetaDown = false
+  pushToTalkModifierState.ctrlDown = false
+  pushToTalkModifierState.shiftDown = false
   teardownAnalyzer()
   void stopListening({ flushPending: false })
   lessonAiriRuntime.resetRuntimeState()
@@ -1216,49 +1210,57 @@ watch(effectiveAutoSendEnabled, (enabled) => {
         @pointerdown="focusMessageInputFromContainer"
       >
         <div
-          v-if="props.compactMode"
-          data-testid="lesson-chat-compact-status-label"
           :class="[
-            compactClassroomStatusClasses,
-            'absolute left-3 top-[-2.1rem] rounded-full px-3 py-1.5 text-[12px] font-semibold',
+            props.compactMode
+              ? 'flex w-[6.25rem] shrink-0 flex-col items-center justify-center gap-1.5 self-stretch'
+              : 'flex shrink-0 items-end gap-2',
           ]"
         >
-          {{ compactClassroomStatusLabel }}
-        </div>
-
-        <div class="flex shrink-0 items-end gap-2">
-          <button
-            type="button"
+          <div
+            v-if="props.compactMode"
+            data-testid="lesson-chat-compact-status-label"
             :class="[
-              actionButtonSizeClasses,
-              'flex items-center justify-center rounded-full border border-sky-100/90 bg-sky-50/95 text-slate-700 shadow-[0_10px_24px_-20px_rgba(15,23,42,0.42)] outline-none transition-colors duration-150 hover:bg-sky-100 dark:border-white/12 dark:bg-white/8 dark:text-neutral-100 dark:shadow-[0_10px_24px_-18px_rgba(15,23,42,0.95)] dark:hover:bg-white/12',
-              { 'cursor-not-allowed opacity-45 active:scale-100': props.disabled || microphoneUnavailableReason },
+              compactClassroomStatusClasses,
+              'w-full rounded-full px-2.5 py-1.5 text-center text-[12px] font-semibold leading-4',
             ]"
-            :disabled="props.disabled || Boolean(microphoneUnavailableReason)"
-            aria-label="麦克风"
-            :title="microphoneButtonTitle"
-            @click="void handleMicrophoneButtonClick()"
           >
-            <Transition name="fade" mode="out-in">
-              <IndicatorMicVolume v-if="enabled" class="h-6 w-6" />
-              <div v-else class="i-ph:microphone h-6 w-6" />
-            </Transition>
-          </button>
+            {{ compactClassroomStatusLabel }}
+          </div>
 
-          <button
-            type="button"
-            :class="[
-              actionButtonSizeClasses,
-              'flex items-center justify-center rounded-full border border-sky-100/90 bg-slate-100/92 text-slate-600 shadow-[0_10px_24px_-20px_rgba(15,23,42,0.38)] outline-none transition-colors duration-150 hover:bg-slate-200 dark:border-white/12 dark:bg-white/6 dark:text-neutral-200 dark:shadow-[0_10px_24px_-18px_rgba(15,23,42,0.95)] dark:hover:bg-white/12',
-              { 'cursor-not-allowed opacity-40 active:scale-100': !canStopInteraction },
-            ]"
-            :disabled="!canStopInteraction"
-            aria-label="停止听写"
-            title="停止"
-            @click="void handleStopInteraction()"
-          >
-            <div class="i-ph:hand-palm h-5.5 w-5.5" />
-          </button>
+          <div :class="[props.compactMode ? 'flex items-center gap-2' : 'flex items-end gap-2']">
+            <button
+              type="button"
+              :class="[
+                actionButtonSizeClasses,
+                'flex items-center justify-center rounded-full border border-sky-100/90 bg-sky-50/95 text-slate-700 shadow-[0_10px_24px_-20px_rgba(15,23,42,0.42)] outline-none transition-colors duration-150 hover:bg-sky-100 dark:border-white/12 dark:bg-white/8 dark:text-neutral-100 dark:shadow-[0_10px_24px_-18px_rgba(15,23,42,0.95)] dark:hover:bg-white/12',
+                { 'cursor-not-allowed opacity-45 active:scale-100': props.disabled || microphoneUnavailableReason },
+              ]"
+              :disabled="props.disabled || Boolean(microphoneUnavailableReason)"
+              aria-label="麦克风"
+              :title="microphoneButtonTitle"
+              @click="void handleMicrophoneButtonClick()"
+            >
+              <Transition name="fade" mode="out-in">
+                <IndicatorMicVolume v-if="enabled" class="h-6 w-6" />
+                <div v-else class="i-ph:microphone h-6 w-6" />
+              </Transition>
+            </button>
+
+            <button
+              type="button"
+              :class="[
+                actionButtonSizeClasses,
+                'flex items-center justify-center rounded-full border border-sky-100/90 bg-slate-100/92 text-slate-600 shadow-[0_10px_24px_-20px_rgba(15,23,42,0.38)] outline-none transition-colors duration-150 hover:bg-slate-200 dark:border-white/12 dark:bg-white/6 dark:text-neutral-200 dark:shadow-[0_10px_24px_-18px_rgba(15,23,42,0.95)] dark:hover:bg-white/12',
+                { 'cursor-not-allowed opacity-40 active:scale-100': !canStopInteraction },
+              ]"
+              :disabled="!canStopInteraction"
+              aria-label="停止听写"
+              title="停止"
+              @click="void handleStopInteraction()"
+            >
+              <div class="i-ph:hand-palm h-5.5 w-5.5" />
+            </button>
+          </div>
         </div>
 
         <div class="min-w-0 flex-1 self-center">

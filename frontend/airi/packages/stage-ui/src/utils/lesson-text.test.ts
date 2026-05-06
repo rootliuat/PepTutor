@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 
 import {
   buildLessonVisibleSegments,
+  coalesceAdjacentLessonVisibleMessages,
   firstLessonCaptionSegment,
   joinLessonVisibleSegmentsForDisplay,
   joinLessonVisibleSegmentsForSpeech,
@@ -18,6 +19,25 @@ describe('stripLessonMarkdown', () => {
 
   it('keeps link labels while removing markdown links and act tokens', () => {
     expect(stripLessonMarkdown('<|ACT {"emotion":"happy"}|>Read [hungry](https://example.com) aloud.')).toBe('Read hungry aloud.')
+  })
+})
+
+describe('coalesceAdjacentLessonVisibleMessages', () => {
+  it('keeps one teacher turn in one visible bubble when transcript segments arrive separately', () => {
+    expect(coalesceAdjacentLessonVisibleMessages([
+      { id: 'teacher-1', role: 'assistant', text: '好，那我们开始第一块。' },
+      { id: 'teacher-2', role: 'assistant', text: '先看看这个词你认不认识：salad' },
+      { id: 'learner-1', role: 'user', text: 'salad' },
+    ])).toMatchObject([
+      {
+        role: 'assistant',
+        text: '好，那我们开始第一块。\n先看看这个词你认不认识：salad',
+      },
+      {
+        role: 'user',
+        text: 'salad',
+      },
+    ])
   })
 })
 

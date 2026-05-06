@@ -45,6 +45,13 @@ export interface LessonVisibleSegmentInput {
   emotion?: unknown
 }
 
+export interface LessonVisibleChatMessage {
+  id: string
+  role: string
+  text: string
+  createdAt?: unknown
+}
+
 export function sanitizeLessonVisibleText(text: string): string {
   return stripLessonMarkdownSyntax(text)
     .replace(visibleEmotionTagPattern, '')
@@ -144,6 +151,36 @@ export function joinLessonVisibleSegmentsForDisplay(segments: LessonVisibleSegme
 
 export function joinLessonVisibleSegmentsForSpeech(segments: LessonVisibleSegment[]): string {
   return segments.map(segment => segment.tts_text || segment.display_text).filter(Boolean).join(' ')
+}
+
+export function coalesceAdjacentLessonVisibleMessages<T extends LessonVisibleChatMessage>(messages: T[]): T[] {
+  const merged: T[] = []
+
+  for (const message of messages) {
+    const text = message.text.trim()
+    if (!text)
+      continue
+
+    const previous = merged[merged.length - 1]
+    if (
+      previous
+      && previous.role === message.role
+      && message.role !== 'user'
+      && message.role !== 'error'
+    ) {
+      previous.id = `${previous.id}:${message.id}`
+      previous.text = [previous.text, text].filter(Boolean).join('\n')
+      previous.createdAt = message.createdAt ?? previous.createdAt
+      continue
+    }
+
+    merged.push({
+      ...message,
+      text,
+    })
+  }
+
+  return merged
 }
 
 function splitVisibleLessonSentence(text: string, maxLength: number): string[] {
