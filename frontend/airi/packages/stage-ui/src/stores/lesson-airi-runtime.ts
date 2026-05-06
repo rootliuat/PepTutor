@@ -34,6 +34,8 @@ export type LessonAiriSpeechPlaybackStatus
     | 'interrupted'
     | 'error'
 
+export type LessonClassroomSimpleStatus = '思考/说话中' | '等待' | '未连接' | '不可用'
+
 export type LessonAiriTtsSynthesisState
   = | 'idle'
     | 'requesting'
@@ -143,6 +145,36 @@ function classifyPerformanceFallback(reason: string): LessonAiriPerformanceFallb
 
 function isActivePlaybackState(state: LessonAiriTtsPlaybackState) {
   return state === 'play_requested' || state === 'playing'
+}
+
+export function resolveLessonClassroomSimpleStatus(input: {
+  backendLoading?: boolean
+  assistantStreaming?: boolean
+  teacherSpeaking?: boolean
+  ttsSynthesisState?: LessonAiriTtsSynthesisState
+  ttsPlaybackState?: LessonAiriTtsPlaybackState
+  learnerSpeaking?: boolean
+  learnerTyping?: boolean
+  microphoneListening?: boolean
+  connectionFailed?: boolean
+  unavailable?: boolean
+}): LessonClassroomSimpleStatus {
+  if (input.unavailable)
+    return '不可用'
+  if (input.connectionFailed)
+    return '未连接'
+  if (
+    input.backendLoading
+    || input.assistantStreaming
+    || input.teacherSpeaking
+    || input.ttsSynthesisState === 'requesting'
+    || input.ttsSynthesisState === 'http_ok'
+    || input.ttsPlaybackState === 'play_requested'
+    || input.ttsPlaybackState === 'playing'
+  ) {
+    return '思考/说话中'
+  }
+  return '等待'
 }
 
 function fingerprintPerformancePlan(plan: LessonAiriPerformancePlanState): string {
@@ -342,6 +374,17 @@ export const useLessonAiriRuntimeStore = defineStore('lesson-airi-runtime', () =
         return '待命'
     }
   })
+  const classroomSimpleStatus = computed(() =>
+    resolveLessonClassroomSimpleStatus({
+      teacherSpeaking: teacherSpeaking.value || classroomState.value === 'teacher_speaking',
+      ttsSynthesisState: ttsSynthesisState.value,
+      ttsPlaybackState: ttsPlaybackState.value,
+      learnerSpeaking: classroomState.value === 'learner_speaking' || microphoneStatus.value === 'speaking',
+      microphoneListening: hearingListening.value,
+      connectionFailed: microphonePermissionState.value === 'denied' || Boolean(microphonePermissionError.value),
+      unavailable: Boolean(microphoneUnavailableReason.value),
+    }),
+  )
   const speechPlaybackDebugLabel = computed(() => {
     const parts = [speechPlaybackStatusLabel.value]
     const providerLabel = [speechPlaybackProvider.value, speechPlaybackVoice.value]
@@ -853,6 +896,7 @@ export const useLessonAiriRuntimeStore = defineStore('lesson-airi-runtime', () =
     ttsPlaybackOverlapDetected,
     ttsPlaybackOverlapCount,
     speechPlaybackStatusLabel,
+    classroomSimpleStatus,
     speechPlaybackDebugLabel,
     speechPlaybackError,
     speechPlaybackProvider,

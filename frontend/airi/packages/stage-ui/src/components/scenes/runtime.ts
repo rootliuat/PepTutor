@@ -103,7 +103,7 @@ function joinFallbackReasons(reasons: string[]) {
     .join(';')
 }
 
-function splitLessonSpeechText(text: string) {
+function splitLessonSpeechText(text: string): string[] {
   const normalized = text.trim()
   if (!normalized)
     return []

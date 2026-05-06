@@ -3,7 +3,7 @@ import { beforeEach, describe, expect, it } from 'vitest'
 
 import { Emotion } from '../constants/emotions'
 import { normalizeLessonPlaybackStopReason, resolveLessonInterruptDecision } from '../utils/lesson-interrupt-policy'
-import { useLessonAiriRuntimeStore } from './lesson-airi-runtime'
+import { resolveLessonClassroomSimpleStatus, useLessonAiriRuntimeStore } from './lesson-airi-runtime'
 
 describe('lesson AIRI runtime store', () => {
   beforeEach(() => {
@@ -175,6 +175,20 @@ describe('lesson AIRI runtime store', () => {
     expect(normalizeLessonPlaybackStopReason('lesson-learner-send')).toBe('manual_send_interrupt')
     expect(normalizeLessonPlaybackStopReason('stage-unmount')).toBe('unmount_cleanup')
     expect(normalizeLessonPlaybackStopReason('lesson-stop-button')).toBe('user_stop')
+  })
+
+  it('maps lesson runtime signals to simple classroom status labels', () => {
+    expect(resolveLessonClassroomSimpleStatus({ learnerSpeaking: true })).toBe('等待')
+    expect(resolveLessonClassroomSimpleStatus({ learnerTyping: true })).toBe('等待')
+    expect(resolveLessonClassroomSimpleStatus({ microphoneListening: true })).toBe('等待')
+    expect(resolveLessonClassroomSimpleStatus({})).toBe('等待')
+    expect(resolveLessonClassroomSimpleStatus({ backendLoading: true })).toBe('思考/说话中')
+    expect(resolveLessonClassroomSimpleStatus({ assistantStreaming: true })).toBe('思考/说话中')
+    expect(resolveLessonClassroomSimpleStatus({ teacherSpeaking: true })).toBe('思考/说话中')
+    expect(resolveLessonClassroomSimpleStatus({ ttsSynthesisState: 'requesting' })).toBe('思考/说话中')
+    expect(resolveLessonClassroomSimpleStatus({ ttsPlaybackState: 'playing' })).toBe('思考/说话中')
+    expect(resolveLessonClassroomSimpleStatus({ connectionFailed: true })).toBe('未连接')
+    expect(resolveLessonClassroomSimpleStatus({ unavailable: true })).toBe('不可用')
   })
 
   it('records speech synthesis and playback audit details', () => {

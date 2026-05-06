@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ChatHistoryItem } from '@proj-airi/stage-ui/types/chat'
+import type { LessonVisibleChatMessage } from '@proj-airi/stage-ui/utils/lesson-text'
 
 import { PEPTUTOR_TEACHER_SESSION_CHARACTER_ID } from '@proj-airi/stage-ui/constants/peptutor-teacher-card'
 import { useSpeakingStore } from '@proj-airi/stage-ui/stores/audio'
@@ -10,11 +11,17 @@ import { useLessonAiriRuntimeStore } from '@proj-airi/stage-ui/stores/lesson-air
 import { resolveLessonChatMessageText as resolveMessageText, useLessonChatHistoryStore } from '@proj-airi/stage-ui/stores/lesson-chat-history'
 import { useHearingStore } from '@proj-airi/stage-ui/stores/modules/hearing'
 import { useSpeechStore } from '@proj-airi/stage-ui/stores/modules/speech'
+import {
+  coalesceAdjacentLessonVisibleMessages,
+  joinLessonVisibleSegmentsForDisplay,
+  normalizeLessonVisibleSegments,
+  sanitizeLessonVisibleText,
+} from '@proj-airi/stage-ui/utils/lesson-text'
 import { storeToRefs } from 'pinia'
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
 
 const lessonStore = useLessonStore()
-const { currentPageTitle, selectedPageUid, loading, activeTurn } = storeToRefs(lessonStore)
+const { currentPageTitle, selectedPageUid, loading, activeTurn, transcript } = storeToRefs(lessonStore)
 const lessonChatHistoryStore = useLessonChatHistoryStore()
 const { listLoading, sessionLoading, listError, sessionError, syncError, restoreWarning, activeHistoryReadOnly } = storeToRefs(lessonChatHistoryStore)
 const lessonAiriRuntime = useLessonAiriRuntimeStore()
@@ -53,6 +60,7 @@ const {
   ttsPlaybackOverlapDetected,
   ttsPlaybackOverlapCount,
   speechPlaybackDebugLabel,
+  classroomSimpleStatus,
 } = storeToRefs(lessonAiriRuntime)
 const { mouthOpenSize } = storeToRefs(useSpeakingStore())
 const { activeTranscriptionProvider } = storeToRefs(useHearingStore())
@@ -63,35 +71,81 @@ const { activeSessionId, messages } = storeToRefs(chatSessionStore)
 const { streamingMessage } = storeToRefs(useChatStreamStore())
 const sidebarChatScrollRef = ref<HTMLElement>()
 const historyPanelOpen = ref(false)
+const debugPanelOpen = ref(false)
+type LessonSidebarMessage = LessonVisibleChatMessage & { role: 'assistant' | 'user' | 'error' }
+
+function lessonSidebarRoleForSpeaker(speaker: string): LessonSidebarMessage['role'] {
+  if (speaker === 'learner')
+    return 'user'
+  if (speaker === 'system')
+    return 'error'
+  return 'assistant'
+}
+
+function isLessonSidebarMessageRole(role: string): role is LessonSidebarMessage['role'] {
+  return role === 'assistant' || role === 'user' || role === 'error'
+}
 
 const historyMessages = computed(() =>
   (messages.value as unknown as ChatHistoryItem[]).filter(message => message.role !== 'system'),
 )
-const conversationCountLabel = computed(() => `${historyMessages.value.length} 条对话`)
 const sidebarMessages = computed(() => {
-  const normalized = historyMessages.value
-    .map((message, index) => ({
+  const transcriptMessages: LessonSidebarMessage[] = transcript.value
+    .filter(entry => entry.speaker === 'teacher' || entry.speaker === 'learner' || entry.speaker === 'system')
+    .map(entry => ({
+      id: entry.id,
+      role: lessonSidebarRoleForSpeaker(entry.speaker),
+      text: entry.speaker === 'teacher'
+        ? joinLessonVisibleSegmentsForDisplay(normalizeLessonVisibleSegments(entry.segments, entry.text))
+        : sanitizeLessonVisibleText(entry.text),
+      createdAt: entry.created_at,
+    }))
+    .filter(message => message.text)
+
+  const normalized: LessonSidebarMessage[] = historyMessages.value.flatMap((message, index) => {
+    if (!isLessonSidebarMessageRole(message.role))
+      return []
+
+    const text = sanitizeLessonVisibleText(resolveMessageText(message))
+    if (!text)
+      return []
+
+    return [{
       id: message.id || `${message.role}:${message.createdAt || index}`,
       role: message.role,
-      text: resolveMessageText(message),
+      text,
       createdAt: message.createdAt,
-    }))
-    .filter(message => (message.role === 'assistant' || message.role === 'user' || message.role === 'error') && message.text)
+    }]
+  })
+
+  const messagesForDisplay = normalized.length > 0 ? [...normalized] : [...transcriptMessages]
+  if (normalized.length > 0) {
+    const existing = new Set(messagesForDisplay.map(message => `${message.role}:${message.text}`))
+    for (const message of transcriptMessages) {
+      const key = `${message.role}:${message.text}`
+      if (existing.has(key))
+        continue
+      messagesForDisplay.push(message)
+      existing.add(key)
+    }
+  }
 
   const streamingText = streamingMessage.value ? resolveMessageText(streamingMessage.value as ChatHistoryItem) : ''
+  const coalescedMessages = coalesceAdjacentLessonVisibleMessages(messagesForDisplay)
   if (streamingText) {
-    normalized.push({
+    coalescedMessages.push({
       id: 'streaming-message',
       role: 'assistant',
-      text: streamingText,
+      text: sanitizeLessonVisibleText(streamingText),
       createdAt: Date.now(),
     })
   }
 
-  return normalized
+  return coalescedMessages
 })
+const conversationCountLabel = computed(() => `${sidebarMessages.value.length} 条对话`)
 const latestAssistantPreview = computed(() =>
-  [...sidebarMessages.value].reverse().find(message => message.role === 'assistant')?.text || '老师开始后，对话记录会显示在这里。',
+  [...sidebarMessages.value].reverse().find(message => message.role === 'assistant')?.text || '课堂开始后，对话记录会显示在这里。',
 )
 const historySessionRows = computed(() =>
   chatSessionStore.getSessionMetasForCharacter(PEPTUTOR_TEACHER_SESSION_CHARACTER_ID).filter(meta =>
@@ -397,6 +451,10 @@ function handleToolbarButton(item: { key: string }) {
   }
 }
 
+function handleDebugPanelToggle(event: Event) {
+  debugPanelOpen.value = (event.target as HTMLDetailsElement).open
+}
+
 const sidebarRuntimeStatus = computed(() => {
   if (microphonePermissionState.value === 'requesting') {
     return {
@@ -450,6 +508,24 @@ const sidebarRuntimeStatus = computed(() => {
     label: '未接通',
     detail: '当前还没有开始实时听写。',
     classes: 'bg-slate-100 text-slate-600 ring-slate-200 dark:bg-white/10 dark:text-neutral-100 dark:ring-white/10',
+  }
+})
+const classroomSimpleStatusLabel = computed(() => {
+  if (loading.value)
+    return '思考/说话中'
+  return classroomSimpleStatus.value
+})
+const classroomSimpleStatusClasses = computed(() => {
+  switch (classroomSimpleStatusLabel.value) {
+    case '思考/说话中':
+      return 'bg-violet-500 text-white shadow-[0_12px_24px_-16px_rgba(124,58,237,0.85)]'
+    case '未连接':
+      return 'bg-rose-100 text-rose-700 dark:bg-rose-400/15 dark:text-rose-100'
+    case '不可用':
+      return 'bg-slate-100 text-slate-600 dark:bg-white/10 dark:text-neutral-100'
+    case '等待':
+    default:
+      return 'bg-emerald-400 text-emerald-950 shadow-[0_12px_24px_-16px_rgba(34,197,94,0.85)]'
   }
 })
 const performancePlanSourceDetail = computed(() => {
@@ -808,8 +884,8 @@ function resolveReplyPathLabel() {
         </template>
       </div>
 
-      <div class="rounded-full bg-emerald-400 px-3 py-1 text-[11px] text-emerald-950 font-semibold shadow-[0_12px_24px_-16px_rgba(34,197,94,0.85)]">
-        已连接
+      <div :class="['rounded-full px-3 py-1 text-[11px] font-semibold', classroomSimpleStatusClasses]">
+        {{ classroomSimpleStatusLabel }}
       </div>
     </div>
 
@@ -945,90 +1021,101 @@ function resolveReplyPathLabel() {
       </div>
     </div>
 
-    <div
-      class="mt-3 shrink-0 border border-sky-100/90 rounded-[20px] bg-white/62 p-3 shadow-[0_18px_44px_-34px_rgba(14,116,144,0.55)] dark:border-white/8 dark:bg-black/20"
+    <details
+      :open="debugPanelOpen"
+      class="mt-3 shrink-0 border border-sky-100/90 rounded-[20px] bg-white/62 shadow-[0_18px_44px_-34px_rgba(14,116,144,0.55)] dark:border-white/8 dark:bg-black/20"
       data-testid="lesson-airi-visible-closure"
+      @toggle="handleDebugPanelToggle"
     >
-      <div class="flex items-start justify-between gap-3">
-        <div class="min-w-0">
-          <div class="text-[10px] text-slate-400 font-semibold tracking-[0.14em] uppercase dark:text-neutral-500">
-            米粒老师状态
+      <summary class="flex cursor-pointer list-none items-center justify-between gap-3 px-3 py-2 text-sm text-slate-700 font-semibold dark:text-neutral-100">
+        <span>状态详情 / 调试信息</span>
+        <span class="rounded-full bg-sky-100/75 px-2.5 py-1 text-[11px] text-slate-600 dark:bg-white/8 dark:text-neutral-300">
+          {{ debugPanelOpen ? '收起' : '展开' }}
+        </span>
+      </summary>
+
+      <div class="px-3 pb-3">
+        <div class="flex items-start justify-between gap-3">
+          <div class="min-w-0">
+            <div class="text-[10px] text-slate-400 font-semibold tracking-[0.14em] uppercase dark:text-neutral-500">
+              米粒老师状态
+            </div>
+            <div
+              class="mt-1 truncate text-sm text-slate-900 font-semibold dark:text-white"
+              data-testid="lesson-airi-visible-state"
+            >
+              {{ visibleAiriState.label }}
+            </div>
+            <div
+              class="line-clamp-2 mt-0.5 text-[11px] text-slate-500 leading-4 dark:text-neutral-400"
+              data-testid="lesson-airi-visible-state-detail"
+            >
+              {{ visibleAiriState.detail }}
+            </div>
           </div>
           <div
-            class="mt-1 truncate text-sm text-slate-900 font-semibold dark:text-white"
-            data-testid="lesson-airi-visible-state"
+            :class="[
+              'shrink-0 rounded-full px-2.5 py-1 text-[11px] font-semibold ring-1 ring-inset',
+              visibleAiriState.classes,
+            ]"
           >
             {{ visibleAiriState.label }}
           </div>
-          <div
-            class="line-clamp-2 mt-0.5 text-[11px] text-slate-500 leading-4 dark:text-neutral-400"
-            data-testid="lesson-airi-visible-state-detail"
-          >
-            {{ visibleAiriState.detail }}
-          </div>
         </div>
-        <div
-          :class="[
-            'shrink-0 rounded-full px-2.5 py-1 text-[11px] font-semibold ring-1 ring-inset',
-            visibleAiriState.classes,
-          ]"
-        >
-          {{ visibleAiriState.label }}
-        </div>
-      </div>
 
-      <div class="mt-3 flex items-start justify-between gap-3 border-t border-sky-100/80 pt-3 dark:border-white/8">
-        <div class="min-w-0">
-          <div class="text-[10px] text-slate-400 font-semibold tracking-[0.14em] uppercase dark:text-neutral-500">
-            教学姿态
+        <div class="mt-3 flex items-start justify-between gap-3 border-t border-sky-100/80 pt-3 dark:border-white/8">
+          <div class="min-w-0">
+            <div class="text-[10px] text-slate-400 font-semibold tracking-[0.14em] uppercase dark:text-neutral-500">
+              教学姿态
+            </div>
+            <div
+              class="mt-1 truncate text-sm text-slate-900 font-semibold dark:text-white"
+              data-testid="lesson-airi-teaching-stance"
+            >
+              {{ visibleTeachingStance.label }}
+            </div>
+            <div
+              class="line-clamp-2 mt-0.5 text-[11px] text-slate-500 leading-4 dark:text-neutral-400"
+              data-testid="lesson-airi-teaching-stance-detail"
+            >
+              {{ visibleTeachingStance.detail }}
+            </div>
           </div>
           <div
-            class="mt-1 truncate text-sm text-slate-900 font-semibold dark:text-white"
-            data-testid="lesson-airi-teaching-stance"
+            :class="[
+              'shrink-0 rounded-full px-2.5 py-1 text-[11px] font-semibold ring-1 ring-inset',
+              visibleTeachingStance.classes,
+            ]"
           >
             {{ visibleTeachingStance.label }}
           </div>
-          <div
-            class="line-clamp-2 mt-0.5 text-[11px] text-slate-500 leading-4 dark:text-neutral-400"
-            data-testid="lesson-airi-teaching-stance-detail"
-          >
-            {{ visibleTeachingStance.detail }}
-          </div>
         </div>
-        <div
-          :class="[
-            'shrink-0 rounded-full px-2.5 py-1 text-[11px] font-semibold ring-1 ring-inset',
-            visibleTeachingStance.classes,
-          ]"
-        >
-          {{ visibleTeachingStance.label }}
-        </div>
-      </div>
 
-      <div class="grid grid-cols-2 mt-3 gap-2">
-        <div
-          v-for="fact in visiblePerformanceFacts"
-          :key="fact.key"
-          :class="[
-            'min-w-0 rounded-[14px] border border-sky-100/80 bg-sky-50/55 px-2.5 py-2 dark:border-white/8 dark:bg-white/5',
-            ['reply_path', 'performance_source', 'content_source', 'teaching_action', 'target_role', 'expected_student_action', 'speech_style_tag', 'persona_capsule', 'performance_apply', 'performance_fallback_kind', 'tts_playback_state', 'tts_playback_id', 'active_reply_id', 'tts_stop_reason', 'tts_stop_type', 'tts_overlap_detected', 'interrupt_policy'].includes(fact.key) ? 'col-span-2' : '',
-          ]"
-        >
-          <div class="text-[10px] text-slate-400 font-semibold tracking-[0.12em] uppercase dark:text-neutral-500">
-            {{ fact.label }}
-          </div>
+        <div class="grid grid-cols-2 mt-3 gap-2">
           <div
-            :data-testid="`lesson-airi-visible-fact-${fact.key}`"
+            v-for="fact in visiblePerformanceFacts"
+            :key="fact.key"
             :class="[
-              'mt-1 text-[11px] text-slate-800 font-semibold dark:text-neutral-100',
-              ['reply_path', 'performance_source', 'content_source', 'teaching_action', 'target_role', 'expected_student_action', 'speech_style_tag', 'persona_capsule', 'performance_apply', 'performance_fallback_kind', 'tts_playback_state', 'tts_playback_id', 'active_reply_id', 'tts_stop_reason', 'tts_stop_type', 'tts_overlap_detected'].includes(fact.key) ? 'break-words leading-4' : 'truncate',
+              'min-w-0 rounded-[14px] border border-sky-100/80 bg-sky-50/55 px-2.5 py-2 dark:border-white/8 dark:bg-white/5',
+              ['reply_path', 'performance_source', 'content_source', 'teaching_action', 'target_role', 'expected_student_action', 'speech_style_tag', 'persona_capsule', 'performance_apply', 'performance_fallback_kind', 'tts_playback_state', 'tts_playback_id', 'active_reply_id', 'tts_stop_reason', 'tts_stop_type', 'tts_overlap_detected', 'interrupt_policy'].includes(fact.key) ? 'col-span-2' : '',
             ]"
           >
-            {{ fact.value }}
+            <div class="text-[10px] text-slate-400 font-semibold tracking-[0.12em] uppercase dark:text-neutral-500">
+              {{ fact.label }}
+            </div>
+            <div
+              :data-testid="`lesson-airi-visible-fact-${fact.key}`"
+              :class="[
+                'mt-1 text-[11px] text-slate-800 font-semibold dark:text-neutral-100',
+                ['reply_path', 'performance_source', 'content_source', 'teaching_action', 'target_role', 'expected_student_action', 'speech_style_tag', 'persona_capsule', 'performance_apply', 'performance_fallback_kind', 'tts_playback_state', 'tts_playback_id', 'active_reply_id', 'tts_stop_reason', 'tts_stop_type', 'tts_overlap_detected'].includes(fact.key) ? 'break-words leading-4' : 'truncate',
+              ]"
+            >
+              {{ fact.value }}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </details>
 
     <div class="sr-only">
       <div>{{ selectedPageUid }}</div>

@@ -500,6 +500,46 @@ describe('store lesson', () => {
     })
   })
 
+  it('uses backend teacher visible segments for transcript display and one-pass replay speech', async () => {
+    const startFixtureWithSegments = cloneLessonFixture(lessonTurnP25StartFixture)
+    startFixtureWithSegments.teacher_response = '好，那我们开始第一块。\n先看看这个词你认不认识：salad'
+    startFixtureWithSegments.teacher_visible_segments = [
+      {
+        segment_id: 'teacher-visible-1',
+        sequence: 0,
+        segment_kind: 'ack',
+        display_text: '好，那我们开始第一块。',
+        tts_text: '好，那我们开始第一块。',
+        caption_text: '好，那我们开始第一块。',
+        emotion: null,
+      },
+      {
+        segment_id: 'teacher-visible-2',
+        sequence: 1,
+        segment_kind: 'scaffold',
+        display_text: '先看看这个词你认不认识：salad',
+        tts_text: '先看看这个词你认不认识：salad',
+        caption_text: '先看看这个词你认不认识：salad',
+        emotion: null,
+      },
+    ]
+
+    const fetchSpy = mockLessonTurnFetch(startFixtureWithSegments)
+    vi.stubGlobal('fetch', fetchSpy)
+
+    const assistantOutput = mockAiriAssistantOutput()
+    const store = useLessonStore()
+    await store.startLesson('TB-G5S1U3-P25')
+
+    expect(store.transcript[0]?.segments?.map(segment => segment.display_text)).toEqual([
+      '好，那我们开始第一块。',
+      '先看看这个词你认不认识：salad',
+    ])
+    await vi.waitFor(() => {
+      expect(assistantLiteralText(assistantOutput)).toBe('好，那我们开始第一块。 先看看这个词你认不认识：salad')
+    })
+  })
+
   it('continues a lesson turn and appends learner and teacher transcript entries', async () => {
     const fetchSpy = mockLessonTurnFetch(
       lessonTurnP24StartFixture,
