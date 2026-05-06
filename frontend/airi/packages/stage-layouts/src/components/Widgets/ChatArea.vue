@@ -184,7 +184,7 @@ const sendButtonClasses = computed(() => props.compactMode
   : 'h-11 min-w-11 rounded-full px-4')
 const sendButtonLabelVisible = computed(() => !props.compactMode)
 const composerShellClasses = computed(() => props.compactMode
-  ? 'min-h-[4.75rem] items-stretch gap-3 rounded-[28px] border border-sky-100/90 bg-white/94 px-3.5 py-2.5 shadow-[0_18px_48px_-38px_rgba(15,23,42,0.55)]'
+  ? 'min-h-[4.75rem] items-stretch gap-3 rounded-[28px] border border-sky-100/90 bg-white/94 px-3.5 py-2.5 shadow-[0_18px_48px_-38px_rgba(15,23,42,0.55)] dark:border-cyan-300/18 dark:!bg-slate-950/92 dark:shadow-[0_20px_56px_-36px_rgba(8,145,178,0.5)]'
   : 'items-end gap-3 rounded-[28px] border border-sky-100/90 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(240,249,255,0.9))] px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(12,18,28,0.96),rgba(8,12,20,0.92))] dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]')
 const textareaClasses = computed(() => props.compactMode
   ? 'max-h-[7.5rem] min-h-[2rem] py-1 text-[15px] leading-6'
@@ -349,10 +349,10 @@ const compactClassroomStatusLabel = computed(() => {
 })
 const compactClassroomStatusClasses = computed(() =>
   compactClassroomStatusLabel.value === '思考/说话中'
-    ? 'bg-violet-500 text-white shadow-[0_14px_30px_-18px_rgba(124,58,237,0.88)]'
+    ? 'bg-violet-500 text-white shadow-[0_14px_30px_-18px_rgba(124,58,237,0.88)] dark:bg-violet-400 dark:text-violet-950 dark:shadow-[0_12px_32px_-16px_rgba(167,139,250,0.95)]'
     : compactClassroomStatusLabel.value === '等待'
-      ? 'bg-emerald-100 text-emerald-700 ring-1 ring-inset ring-emerald-200/90 dark:bg-emerald-400/14 dark:text-emerald-100 dark:ring-emerald-300/18'
-      : 'bg-slate-100 text-slate-500 ring-1 ring-inset ring-slate-200 dark:bg-white/10 dark:text-neutral-200 dark:ring-white/10',
+      ? 'bg-emerald-100 text-emerald-700 ring-1 ring-inset ring-emerald-200/90 dark:bg-emerald-300 dark:text-emerald-950 dark:ring-emerald-200/80 dark:shadow-[0_12px_30px_-18px_rgba(110,231,183,0.9)]'
+      : 'bg-slate-100 text-slate-500 ring-1 ring-inset ring-slate-200 dark:bg-slate-200 dark:text-slate-950 dark:ring-white/40',
 )
 
 async function resolveSendOptions() {
@@ -1212,7 +1212,7 @@ watch(effectiveAutoSendEnabled, (enabled) => {
         <div
           :class="[
             props.compactMode
-              ? 'flex w-[6.25rem] shrink-0 flex-col items-center justify-center gap-1.5 self-stretch'
+              ? 'flex w-[6.25rem] shrink-0 flex-col items-center justify-center gap-1.5 self-stretch rounded-[22px] bg-sky-50/70 p-1.5 ring-1 ring-inset ring-sky-100/90 dark:bg-slate-950/58 dark:ring-cyan-200/16'
               : 'flex shrink-0 items-end gap-2',
           ]"
         >
@@ -1232,7 +1232,7 @@ watch(effectiveAutoSendEnabled, (enabled) => {
               type="button"
               :class="[
                 actionButtonSizeClasses,
-                'flex items-center justify-center rounded-full border border-sky-100/90 bg-sky-50/95 text-slate-700 shadow-[0_10px_24px_-20px_rgba(15,23,42,0.42)] outline-none transition-colors duration-150 hover:bg-sky-100 dark:border-white/12 dark:bg-white/8 dark:text-neutral-100 dark:shadow-[0_10px_24px_-18px_rgba(15,23,42,0.95)] dark:hover:bg-white/12',
+                'flex items-center justify-center rounded-full border border-sky-100/90 bg-sky-50/95 text-slate-700 shadow-[0_10px_24px_-20px_rgba(15,23,42,0.42)] outline-none transition-colors duration-150 hover:bg-sky-100 dark:border-cyan-200/24 dark:bg-cyan-300/18 dark:text-cyan-50 dark:shadow-[0_12px_26px_-18px_rgba(103,232,249,0.86)] dark:hover:bg-cyan-300/28',
                 { 'cursor-not-allowed opacity-45 active:scale-100': props.disabled || microphoneUnavailableReason },
               ]"
               :disabled="props.disabled || Boolean(microphoneUnavailableReason)"
@@ -1250,7 +1250,7 @@ watch(effectiveAutoSendEnabled, (enabled) => {
               type="button"
               :class="[
                 actionButtonSizeClasses,
-                'flex items-center justify-center rounded-full border border-sky-100/90 bg-slate-100/92 text-slate-600 shadow-[0_10px_24px_-20px_rgba(15,23,42,0.38)] outline-none transition-colors duration-150 hover:bg-slate-200 dark:border-white/12 dark:bg-white/6 dark:text-neutral-200 dark:shadow-[0_10px_24px_-18px_rgba(15,23,42,0.95)] dark:hover:bg-white/12',
+                'flex items-center justify-center rounded-full border border-sky-100/90 bg-slate-100/92 text-slate-600 shadow-[0_10px_24px_-20px_rgba(15,23,42,0.38)] outline-none transition-colors duration-150 hover:bg-slate-200 dark:border-slate-200/18 dark:bg-slate-700/80 dark:text-slate-100 dark:shadow-[0_12px_26px_-18px_rgba(148,163,184,0.74)] dark:hover:bg-slate-600/90',
                 { 'cursor-not-allowed opacity-40 active:scale-100': !canStopInteraction },
               ]"
               :disabled="!canStopInteraction"
