@@ -3,13 +3,16 @@ import { describe, expect, it } from 'vitest'
 import {
   buildLessonVisibleSegments,
   coalesceAdjacentLessonVisibleMessages,
+  createLessonVisibleTextMemoizer,
   firstLessonCaptionSegment,
   joinLessonVisibleSegmentsForDisplay,
   joinLessonVisibleSegmentsForSpeech,
+  lessonVisibleMessagesRenderKey,
   normalizeLessonVisibleSegments,
   sanitizeLessonVisibleText,
   segmentLessonTeacherReply,
   stripLessonMarkdown,
+  windowLessonVisibleMessages,
 } from './lesson-text'
 
 describe('stripLessonMarkdown', () => {
@@ -41,6 +44,39 @@ describe('coalesceAdjacentLessonVisibleMessages', () => {
   })
 })
 
+describe('windowLessonVisibleMessages', () => {
+  it('keeps only recent classroom messages while preserving source data', () => {
+    const messages = Array.from({ length: 56 }, (_, index) => ({
+      id: `message-${index}`,
+      role: index % 2 === 0 ? 'assistant' : 'user',
+      text: `message ${index}`,
+    }))
+
+    const window = windowLessonVisibleMessages(messages, 50)
+
+    expect(window.totalCount).toBe(56)
+    expect(window.hiddenCount).toBe(6)
+    expect(window.visibleMessages).toHaveLength(50)
+    expect(window.visibleMessages[0].id).toBe('message-6')
+    expect(messages).toHaveLength(56)
+  })
+
+  it('builds a lightweight render key from list shape and last message', () => {
+    const messages = [
+      { id: 'assistant-1', role: 'assistant', text: '短句。' },
+      { id: 'user-1', role: 'user', text: 'salad' },
+    ]
+
+    const originalKey = lessonVisibleMessagesRenderKey(messages)
+    messages[0].text = '不影响滚动的旧消息深层变化。'
+
+    expect(lessonVisibleMessagesRenderKey(messages)).toBe(originalKey)
+
+    messages[1].text = 'salad please'
+    expect(lessonVisibleMessagesRenderKey(messages)).not.toBe(originalKey)
+  })
+})
+
 describe('sanitizeLessonVisibleText', () => {
   it('removes visible emotion tags, source references, and lesson section headers', () => {
     expect(sanitizeLessonVisibleText(
@@ -52,6 +88,25 @@ describe('sanitizeLessonVisibleText', () => {
     expect(sanitizeLessonVisibleText(
       '[joy] 英文目标：确认歌唱比赛不在五月。动作：跟老师读一遍 No。target_role question route answer_turn_policy',
     )).toBe('确认歌唱比赛不在五月。跟老师读一遍 No。 question')
+  })
+})
+
+describe('createLessonVisibleTextMemoizer', () => {
+  it('returns stable sanitized text for unchanged key and raw text', () => {
+    const memoize = createLessonVisibleTextMemoizer()
+    const first = memoize('teacher-1', '[joy] 好，我们开始。[见TB-G5S1U3-P25-D1]')
+    const second = memoize('teacher-1', '[joy] 好，我们开始。[见TB-G5S1U3-P25-D1]')
+
+    expect(first).toBe('好，我们开始。')
+    expect(second).toBe(first)
+  })
+
+  it('evicts oldest entries when cache size is exceeded', () => {
+    const memoize = createLessonVisibleTextMemoizer(1)
+
+    expect(memoize('teacher-1', '[neutral] 第一条')).toBe('第一条')
+    expect(memoize('teacher-2', '[neutral] 第二条')).toBe('第二条')
+    expect(memoize('teacher-1', '[neutral] 第一条')).toBe('第一条')
   })
 })
 

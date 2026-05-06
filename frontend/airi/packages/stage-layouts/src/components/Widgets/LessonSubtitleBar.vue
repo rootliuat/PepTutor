@@ -4,9 +4,9 @@ import { useLessonStore } from '@proj-airi/stage-ui/stores/lesson'
 import { useLessonAiriRuntimeStore } from '@proj-airi/stage-ui/stores/lesson-airi-runtime'
 import { resolveLessonChatMessageText } from '@proj-airi/stage-ui/stores/lesson-chat-history'
 import {
+  createLessonVisibleTextMemoizer,
   joinLessonVisibleSegmentsForDisplay,
   normalizeLessonVisibleSegments,
-  sanitizeLessonVisibleText,
 } from '@proj-airi/stage-ui/utils/lesson-text'
 import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
@@ -18,17 +18,22 @@ const chatSessionStore = useChatSessionStore()
 const { currentTeacherPrompt, activeTurn, transcript } = storeToRefs(lessonStore)
 const { lastRecognizedText, liveTranscriptText } = storeToRefs(lessonAiriRuntime)
 const { messages } = storeToRefs(chatSessionStore)
+const memoizeSubtitleText = createLessonVisibleTextMemoizer(120)
 
 const subtitleText = computed(() => {
-  const latestTranscriptText = sanitizeLessonVisibleText(
-    [...transcript.value].reverse().find(entry => entry.speaker === 'teacher')?.text || '',
-  )
+  const latestTranscript = [...transcript.value].reverse().find(entry => entry.speaker === 'teacher')
+  const latestTranscriptText = latestTranscript
+    ? memoizeSubtitleText(`transcript:${latestTranscript.id}`, latestTranscript.text || '')
+    : ''
   if (latestTranscriptText)
     return latestTranscriptText
 
   const latestAssistantMessage = [...messages.value].reverse().find(message => message.role === 'assistant')
   const latestAssistantText = latestAssistantMessage
-    ? sanitizeLessonVisibleText(resolveLessonChatMessageText(latestAssistantMessage))
+    ? memoizeSubtitleText(
+        `message:${latestAssistantMessage.id || latestAssistantMessage.createdAt || 'latest'}`,
+        resolveLessonChatMessageText(latestAssistantMessage),
+      )
     : ''
   if (latestAssistantText)
     return latestAssistantText
@@ -43,7 +48,7 @@ const subtitleText = computed(() => {
       return text
   }
 
-  return sanitizeLessonVisibleText(currentTeacherPrompt.value || '') || '等待老师话术...'
+  return memoizeSubtitleText('current-teacher-prompt', currentTeacherPrompt.value || '') || '等待老师话术...'
 })
 </script>
 
