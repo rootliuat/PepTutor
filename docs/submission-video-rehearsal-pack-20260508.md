@@ -71,6 +71,12 @@ What to say:
 系统分四层。第一层是 app/knowledge/structured，它仍是 canonical curriculum source。第二层是 backend/LightRAG 的 lesson runtime 和 TeachingMove。第三层是 frontend/airi 的 /lesson、TTS、Live2D 和 Sidebar。第四层是 smoke、audit 和 Test Budget Guard。课堂控制层是 TeachingMove，不是 RAGFlow，也不是外部 agent。
 ```
 
+Optional add-on after PR #18/#19:
+
+```text
+前端这里也做了演示层收口：Sidebar 默认先显示课堂对话记录，调试信息仍可展开；同时减少了默认渲染压力，不改变后端课堂逻辑。
+```
+
 What not to say:
 
 ```text
@@ -115,6 +121,14 @@ What to say:
 
 ```text
 这里演示 TB-G6S1U1-P4。它是问路问答页，核心是 Where is the museum shop? 和 It's near ...。PR #13 之后，这个页面不会长期塌缩成裸词 museum shop，而是保留问答目标。右侧 Sidebar 可以看到 route、TeachingMove 和 answer frame。
+```
+
+Show in order:
+
+```text
+1. Sidebar transcript-first classroom record.
+2. Current teacher reply in the center classroom card.
+3. Expanded Sidebar detail/debug section with TeachingMove fields.
 ```
 
 What not to say:
@@ -279,6 +293,12 @@ What to say:
 
 ```text
 PepTutor 有 backend smoke、browser smoke、TeachingMove audit、classroom quality audit、redirect audit、curriculum graph audit 和 Test Budget Guard。Test Budget Guard 把验证分成 L1、L2、L3，防止每个目标反复跑 full smoke。PR #15、#16、#17 都用 targeted tests 验证；P8.6/P8.7 是 docs-only，没有跑 full、browser 或 deep smoke。
+```
+
+Optional add-on after PR #18/#19:
+
+```text
+PR #18 和 PR #19 是前端展示与性能优化，只改 /lesson 的显示层和渲染压力，没有改 backend runtime、TeachingMove、prompt、RAG、S4 或教材数据；合并这组 PR 时也没有跑 full、browser 或 deep smoke。
 ```
 
 What not to say:

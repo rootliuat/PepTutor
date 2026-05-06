@@ -30,6 +30,8 @@ http://127.0.0.1:5173/lesson
 
 Confirm the catalog loads, a lesson page can be selected, and Sidebar debug fields are visible.
 
+PR #18 changes the first visual focus of Sidebar: it should now show the classroom transcript first. Detailed runtime fields remain available in the collapsed status/debug section.
+
 ## 3. Classroom Pages To Demo
 
 Use one or two pages, not every regression page.
@@ -74,7 +76,14 @@ Show story question / answer-frame style scaffold.
 
 ## 4. Sidebar Fields To Show
 
-Show only the fields that explain why PepTutor is controllable:
+Start with the transcript:
+
+- learner bubbles
+- Mili teacher bubbles
+- simple status pill
+- conversation count
+
+Then expand the detail/debug section and show only the fields that explain why PepTutor is controllable:
 
 - route / source
 - TeachingMove type
@@ -87,6 +96,8 @@ Show only the fields that explain why PepTutor is controllable:
 - TTS playback state
 - stop reason / normalized stop reason if visible
 - playback overlap if visible
+
+PR #19 keeps these details available while reducing default render pressure. Debug cards are not the default visual focus; they are opened only when needed for explanation.
 
 ## 5. PR #13 Location QA Preservation
 
@@ -174,8 +185,9 @@ Do not claim:
 3. Select TB-G6S1U1-P4.
 4. Enter a representative student input.
 5. Show teacher reply.
-6. Show Sidebar TeachingMove fields.
-7. Say: location Q/A pair is preserved after PR #13.
-8. Show graph audit facts: 4 books, 30 units, 255 pages, 581 blocks, anchors 6/6.
-9. Say: RAGFlow and agentic harness are offline evidence tooling, not runtime control.
+6. Show the transcript-first Sidebar.
+7. Expand debug details and show TeachingMove fields.
+8. Say: location Q/A pair is preserved after PR #13.
+9. Show graph audit facts: 4 books, 30 units, 255 pages, 581 blocks, anchors 6/6.
+10. Say: RAGFlow and agentic harness are offline evidence tooling, not runtime control.
 ```

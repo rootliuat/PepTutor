@@ -1,6 +1,6 @@
 # PepTutor Progress
 
-Updated: 2026-05-05
+Updated: 2026-05-06
 
 ## Current Working Context
 
@@ -10,6 +10,65 @@ Primary local project path:
 
 ```text
 /root/my-project/PepTutor
+```
+
+## P6.2 + P6.3 Frontend Classroom UI Stack
+
+Status:
+
+```text
+merged into main
+```
+
+Merged PRs:
+
+```text
+PR #18 fix: polish lesson classroom transcript display
+merge_commit=0dab840f850e5b50228abeab9c1ad39ea59310aa
+
+PR #19 fix: reduce lesson frontend render pressure
+merge_commit=a755591eab93502c676eebb128a7fae9fe8189d9
+```
+
+Frontend classroom display changes from PR #18:
+
+```text
+- Sidebar default view is classroom transcript first, with debug details still accessible.
+- Simple classroom status label is used for demo readability.
+- Visible text sanitizer hides raw tags/debug labels from classroom bubbles.
+- Long teacher replies are segmented for readable display.
+```
+
+Frontend performance changes from PR #19:
+
+```text
+- Sidebar debug card DOM is lazy-rendered behind the expanded details panel.
+- Sidebar transcript uses a recent-window render strategy.
+- Deep sidebar message watch was replaced by a lightweight scroll key.
+- Scroll scheduling is coalesced into one requestAnimationFrame path.
+- High-frequency mouth/volume/debug display fields are throttled for Sidebar only.
+- Live2D lip-sync RAF is paused/reduced when the page is hidden.
+- Subtitle sanitizer output is memoized for stable teacher replies.
+```
+
+Boundary:
+
+```text
+Frontend display/performance only.
+No backend runtime, TeachingMove planner, redirect policy, prompt, classroom RAG, S4 backend behavior, P13 data, persona/soul, smoke matrix, or structured curriculum data changed.
+```
+
+Recorded validation from the PRs:
+
+```text
+PR #18: stage-ui targeted tests passed; stage-ui typecheck passed; stage-layouts typecheck passed; lint passed; full/browser/deep smoke=0/0/0.
+PR #19: 37 frontend tests passed; stage-ui typecheck passed; stage-layouts typecheck passed; stage-web typecheck passed; eslint passed; git diff --check passed; full/browser/deep smoke=0/0/0.
+```
+
+Post-merge note:
+
+```text
+This merge-stack closure updated documentation only after the two PR merges. No full 20-page smoke, browser smoke, or deep smoke was run in this closure.
 ```
 
 ## P8.1 Curriculum Graph Extraction Audit v1

@@ -1,22 +1,28 @@
 # May 8 Submission Readiness Summary
 
-Date: 2026-05-05
+Date: 2026-05-06
 
-## Latest Main Commit
+## Latest Frontend Stack Merge Commit
 
-Final docs-only delivery baseline after PR #17 merge:
-
-```text
-f779f4dd812b5ce52967ae031ff62778019a3b3a
-```
-
-PR #17 merge commit remains:
+Latest frontend classroom UI stack merge baseline:
 
 ```text
-c565b0321fa9848bb256aba490ad871bf74de5f9
+a755591eab93502c676eebb128a7fae9fe8189d9
 ```
 
-This means PR #15, PR #16, and PR #17 are merged, and `f779f4d` is the docs-only integration commit after those merges.
+PR #18 merge commit:
+
+```text
+0dab840f850e5b50228abeab9c1ad39ea59310aa
+```
+
+PR #19 merge commit:
+
+```text
+a755591eab93502c676eebb128a7fae9fe8189d9
+```
+
+This means PR #15, PR #16, PR #17, PR #18, and PR #19 are merged. PR #18 and PR #19 are frontend display/performance changes only.
 
 ## Relevant Merged PRs
 
@@ -29,6 +35,8 @@ This means PR #15, PR #16, and PR #17 are merged, and `f779f4d` is the docs-only
 | [#15](https://github.com/rootliuat/PepTutor/pull/15) | feat: add curriculum graph extraction audit | `4a79d4eab034637866e96ba7b564d925b418e7bd` | Added full structured curriculum graph audit, triage, and candidate planner. |
 | [#16](https://github.com/rootliuat/PepTutor/pull/16) | feat: add ragflow curriculum evidence integration | `92fe9f70d9d635acb4cd0269ebeb7d37727f1c41` | Added offline RAGFlow evidence integration; no live runtime connection. |
 | [#17](https://github.com/rootliuat/PepTutor/pull/17) | feat: add agentic curriculum retrieval harness | `c565b0321fa9848bb256aba490ad871bf74de5f9` | Added offline agentic curriculum review harness; no classroom control connection. |
+| [#18](https://github.com/rootliuat/PepTutor/pull/18) | fix: polish lesson classroom transcript display | `0dab840f850e5b50228abeab9c1ad39ea59310aa` | Improved transcript-first classroom display, status label, visible-text sanitizing, and long teacher reply segmentation. |
+| [#19](https://github.com/rootliuat/PepTutor/pull/19) | fix: reduce lesson frontend render pressure | `a755591eab93502c676eebb128a7fae9fe8189d9` | Reduced frontend render pressure with lazy debug rendering, recent transcript windowing, lighter scroll watching, throttled debug display values, hidden-tab Live2D pause, and subtitle memoization. |
 
 ## Key Docs
 
@@ -84,7 +92,8 @@ Show:
 
 - student input
 - teacher reply
-- Sidebar route / TeachingMove / persona / TTS fields
+- Sidebar classroom transcript first
+- Sidebar route / TeachingMove / persona / TTS fields in the debug/detail panel
 - TTS playback state and Live2D observation fields where visible
 
 ## Known Blockers / Honest Limits
@@ -110,7 +119,7 @@ browser smoke=0
 deep smoke=0
 ```
 
-No full/browser/deep smoke was run after `f779f4dd812b5ce52967ae031ff62778019a3b3a`.
+No full/browser/deep smoke was run during the PR #18 / PR #19 merge-stack closure.
 
 PR #15 validation reused the already completed targeted checks:
 
@@ -131,6 +140,28 @@ PR #17 validation used targeted harness tests only:
 ```text
 pytest backend/LightRAG/tests/test_curriculum_graph_audit.py backend/LightRAG/tests/test_curriculum_data_tightening_plan.py backend/LightRAG/tests/test_ragflow_client.py backend/LightRAG/tests/test_ragflow_chunk_import.py backend/LightRAG/tests/test_curriculum_evidence_index.py backend/LightRAG/tests/test_agentic_curriculum_harness.py -q -> 22 passed
 ruff check scripts/run_agentic_curriculum_harness.py scripts/run_curriculum_retrieval_comparison.py scripts/build_curriculum_evidence_review_queue.py backend/LightRAG/tests/test_agentic_curriculum_harness.py -> All checks passed
+```
+
+PR #18 validation used targeted frontend checks only:
+
+```text
+stage-ui targeted tests -> passed
+stage-ui typecheck -> passed
+stage-layouts typecheck -> passed
+lint -> passed
+full/browser/deep smoke -> 0/0/0
+```
+
+PR #19 validation used targeted frontend checks only:
+
+```text
+frontend tests -> 37 passed
+stage-ui typecheck -> passed
+stage-layouts typecheck -> passed
+stage-web typecheck -> passed
+eslint -> passed
+git diff --check -> passed
+full/browser/deep smoke -> 0/0/0
 ```
 
 ## Do Not Change Before Submission
