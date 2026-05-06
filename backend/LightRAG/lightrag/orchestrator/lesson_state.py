@@ -49,6 +49,7 @@ class LessonRuntimeState(BaseModel):
     return_target: str | None = None
     simplemem_content_session_id: str | None = None
     simplemem_memory_session_id: str | None = None
+    strategy_state: dict[str, object] | None = None
 
     @field_validator(
         "student_id",

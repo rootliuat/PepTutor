@@ -1,0 +1,175 @@
+{
+  "schema_version": "peptutor-page-teaching-strategy-v1",
+  "strategy_version": "2026-05-06-demo-v1",
+  "page_uid": "TB-G5S1U3-P26",
+  "book_id": "G5S1",
+  "unit_id": "U3",
+  "page_number": 26,
+  "module_type": "lets_spell",
+  "review_status": "reviewed_demo_slice",
+  "strategy_summary": "Let the learner notice that ow has two sounds, practice the two word groups, compare the groups, then complete the listen/circle/say task without drifting into copy correction.",
+  "strategy_lock": {
+    "page_uid": "TB-G5S1U3-P26",
+    "module_type": "lets_spell",
+    "step_id": "p26_s1_notice_ow",
+    "allowed_words": [
+      "cow",
+      "flower",
+      "wow",
+      "down",
+      "slow",
+      "snow",
+      "yellow",
+      "window"
+    ],
+    "allowed_actions": [
+      "notice",
+      "repeat",
+      "choose",
+      "circle",
+      "say",
+      "ask_meaning",
+      "claim_completion"
+    ],
+    "blocked_actions": [
+      "copy_task_drift",
+      "correct_capitalization_in_oral_mode",
+      "correct_punctuation_in_oral_mode",
+      "unscoped_similar_word_switch"
+    ],
+    "completion_rule": "Learner notices or says the current ow sound target.",
+    "transition_rule": "Advance only inside the reviewed ow flow."
+  },
+  "steps": [
+    {
+      "step_id": "p26_s1_notice_ow",
+      "block_uid": "TB-G5S1U3-P26-D1",
+      "module_type": "lets_spell",
+      "step_type": "notice_sound",
+      "teacher_prompt": "今天我们先看 ow。它在 cow 和 snow 里声音不一样。先听：cow, snow。哪个听起来不一样？",
+      "question_target": "Which ow sound is different?",
+      "target_words": ["cow", "snow"],
+      "allowed_words": ["cow", "snow"],
+      "allowed_actions": ["notice", "repeat", "choose", "ask_meaning"],
+      "blocked_actions": [
+        "copy_task_drift",
+        "correct_capitalization_in_oral_mode",
+        "correct_punctuation_in_oral_mode"
+      ],
+      "repair_rules": [
+        "If learner asks meaning, translate the current word briefly and return to ow sound noticing.",
+        "If learner says an allowed ow word, classify the sound group and give one next action."
+      ],
+      "completion_rules": [
+        "Learner hears or repeats the contrast between cow and snow."
+      ],
+      "completion_rule": "notice_ow_contrast",
+      "transition_rule": "practice_au_group"
+    },
+    {
+      "step_id": "p26_s2_au_group",
+      "block_uid": "TB-G5S1U3-P26-D1",
+      "module_type": "lets_spell",
+      "step_type": "model_word_group",
+      "teacher_prompt": "第一组读 /aʊ/：cow, flower, wow, down。先跟我读一个：cow.",
+      "question_target": "Can you say one /aʊ/ word?",
+      "sound_group": "/aʊ/",
+      "target_words": ["cow", "flower", "wow", "down"],
+      "allowed_words": ["cow", "flower", "wow", "down"],
+      "allowed_actions": ["repeat", "choose", "ask_meaning"],
+      "blocked_actions": [
+        "copy_task_drift",
+        "correct_capitalization_in_oral_mode",
+        "correct_punctuation_in_oral_mode"
+      ],
+      "repair_rules": [
+        "If learner says an /oʊ/ word, contrast once with cow and stay in the sound comparison.",
+        "Ignore casing, punctuation, and apostrophes in oral mode."
+      ],
+      "completion_rules": [
+        "Learner repeats or identifies one /aʊ/ word."
+      ],
+      "completion_rule": "say_or_identify_au_word",
+      "transition_rule": "practice_ou_group"
+    },
+    {
+      "step_id": "p26_s3_ou_group",
+      "block_uid": "TB-G5S1U3-P26-D1",
+      "module_type": "lets_spell",
+      "step_type": "model_word_group",
+      "teacher_prompt": "第二组读 /oʊ/：slow, snow, yellow, window。先跟我读：snow.",
+      "question_target": "Can you say one /oʊ/ word?",
+      "sound_group": "/oʊ/",
+      "target_words": ["slow", "snow", "yellow", "window"],
+      "allowed_words": ["slow", "snow", "yellow", "window"],
+      "allowed_actions": ["repeat", "choose", "ask_meaning"],
+      "blocked_actions": [
+        "copy_task_drift",
+        "correct_capitalization_in_oral_mode",
+        "correct_punctuation_in_oral_mode"
+      ],
+      "repair_rules": [
+        "If learner says an /aʊ/ word, contrast once with snow and stay in the sound comparison.",
+        "Do not turn flower or yellow into a copy sentence."
+      ],
+      "completion_rules": [
+        "Learner repeats or identifies one /oʊ/ word."
+      ],
+      "completion_rule": "say_or_identify_ou_word",
+      "transition_rule": "compare_groups"
+    },
+    {
+      "step_id": "p26_s4_compare",
+      "block_uid": "TB-G5S1U3-P26-D2",
+      "module_type": "lets_spell",
+      "step_type": "discriminate_sound",
+      "teacher_prompt": "现在听一组：cow, snow, down。哪个词里的 ow 发音跟另外两个不同？",
+      "question_target": "Which ow word sounds different?",
+      "target_words": ["cow", "snow", "down"],
+      "allowed_words": ["cow", "snow", "down", "flower", "window", "slow", "yellow", "wow"],
+      "allowed_actions": ["choose", "repeat", "ask_meaning"],
+      "blocked_actions": ["copy_task_drift", "long_phonetic_lecture"],
+      "repair_rules": [
+        "If wrong, model /aʊ/ and /oʊ/ once and ask again.",
+        "Do not change the task to writing or copying."
+      ],
+      "completion_rules": [
+        "Learner chooses the different-sounding word or succeeds after one repair."
+      ],
+      "completion_rule": "choose_different_sound",
+      "transition_rule": "listen_circle_say"
+    },
+    {
+      "step_id": "p26_s5_listen_circle_say",
+      "block_uid": "TB-G5S1U3-P26-D3",
+      "module_type": "lets_spell",
+      "step_type": "listen_and_circle",
+      "teacher_prompt": "最后听句子并说完整：I see a yellow ______. 这里缺的是 flower.",
+      "question_target": "Can you say the completed sentence?",
+      "target_words": ["yellow", "flower", "down", "tomorrow"],
+      "allowed_words": ["yellow", "flower", "down", "tomorrow"],
+      "answer_frames": ["I see a yellow flower."],
+      "allowed_actions": ["say", "fill_blank", "ask_meaning", "claim_completion"],
+      "blocked_actions": [
+        "copy_task_drift",
+        "correct_capitalization_in_oral_mode",
+        "correct_punctuation_in_oral_mode"
+      ],
+      "repair_rules": [
+        "If learner says I see a yellow flower, accept it as oral completion.",
+        "Do not correct capitalization or punctuation in oral mode.",
+        "Do not say with a capital letter unless writing mode is explicitly active."
+      ],
+      "completion_rules": [
+        "Learner identifies the missing word and says the completed line orally."
+      ],
+      "completion_rule": "say_completed_line",
+      "transition_rule": "stay_or_complete_page"
+    }
+  ],
+  "evidence_policy": {
+    "structured_curriculum_is_canonical": true,
+    "rag_can_supply": ["P26 word lists", "P26 exercise evidence"],
+    "rag_must_not_decide": ["teaching step", "module switch", "copy task"]
+  }
+}

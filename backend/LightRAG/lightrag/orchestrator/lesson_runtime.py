@@ -91,6 +91,12 @@ from lightrag.pedagogy.redirect_reply_policy import (
     looks_like_redirect_reply,
     maybe_render_redirect_reply,
 )
+from lightrag.pedagogy.page_teaching_strategy import PageTeachingStrategyRepository
+from lightrag.pedagogy.teacher_strategy_renderer import (
+    next_strategy_state,
+    render_strategy_page_entry,
+    render_strategy_turn,
+)
 from lightrag.pedagogy.teaching_move import TeachingMoveActionContract
 from lightrag.pedagogy.evaluation import evaluate_answer, normalize_text
 from lightrag.pedagogy.types import (
@@ -175,6 +181,7 @@ _ANSWER_TURN_GENERIC_PRAISE_COMPACT_PHRASES = (
 _ANSWER_TURN_MINIMAL_RUNTIME_STATE_ENV = (
     "PEPTUTOR_ANSWER_TURN_MINIMAL_RUNTIME_STATE"
 )
+_TEACHING_STRATEGY_RUNTIME_ENV = "PEPTUTOR_TEACHING_STRATEGY_RUNTIME"
 _ANSWER_TURN_LEGACY_RUNTIME_STATE_FRAME_KEYS = (
     "taskboundary",
     "recentdialogue",
@@ -454,6 +461,24 @@ class LessonTeacherResponseRenderResult(BaseModel):
     audit: LessonTeacherResponseAuditSignal
 
 
+class LessonStrategyDebugSignal(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    enabled: bool
+    source: str = ""
+    page_uid: str = ""
+    module_type: str = ""
+    step_id: str = ""
+    block_uid: str = ""
+    allowed_words: list[str] = Field(default_factory=list)
+    allowed_actions: list[str] = Field(default_factory=list)
+    blocked_actions: list[str] = Field(default_factory=list)
+    priority: list[str] = Field(default_factory=list)
+    completion_rule: str = ""
+    transition_rule: str = ""
+    completion_status: str = ""
+
+
 class LessonTurnDebugSignals(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
@@ -463,11 +488,15 @@ class LessonTurnDebugSignals(BaseModel):
     semantic_recall: LessonSemanticRecallDebugSignal
     memory_runtime: LessonMemoryRuntimeDebugSignal
     persona: LessonPersonaDebugSignal
+    strategy: LessonStrategyDebugSignal
     response_audit: LessonTeacherResponseAuditSignal | None = None
 
     @model_serializer(mode="wrap")
     def _serialize_without_empty_response_audit(self, handler):
         payload = handler(self)
+        strategy = payload.get("strategy")
+        if isinstance(strategy, dict) and not strategy.get("enabled"):
+            payload.pop("strategy", None)
         if payload.get("response_audit") is None:
             payload.pop("response_audit", None)
         return payload
@@ -968,6 +997,8 @@ class LessonRuntime:
         page_overview_skill: PageOverviewSkill | None = None,
         module_choice_skill: ModuleChoiceSkill | None = None,
         task_resize_skill: TaskResizeSkill | None = None,
+        strategy_repository: PageTeachingStrategyRepository | None = None,
+        strategy_runtime_enabled: bool | None = None,
         feature_statuses: dict[str, Any] | None = None,
         debug_signals_enabled: bool | None = None,
         llm_provider: str | None = None,
@@ -988,6 +1019,12 @@ class LessonRuntime:
         self.page_overview_skill = page_overview_skill or PageOverviewSkill()
         self.module_choice_skill = module_choice_skill or ModuleChoiceSkill()
         self.task_resize_skill = task_resize_skill or TaskResizeSkill()
+        self.strategy_repository = strategy_repository or PageTeachingStrategyRepository.default()
+        self.strategy_runtime_enabled = (
+            _is_enabled(os.getenv(_TEACHING_STRATEGY_RUNTIME_ENV))
+            if strategy_runtime_enabled is None
+            else strategy_runtime_enabled
+        )
         self.feature_statuses = feature_statuses or {}
         self.llm_provider = llm_provider or "unknown"
         self.llm_model = llm_model or default_lesson_llm_model()
@@ -1034,10 +1071,28 @@ class LessonRuntime:
             page_entry_probe_done=overview is None,
             simplemem_content_session_id=f"lesson-{page_uid}-{uuid4().hex}",
         )
+        strategy = (
+            self.strategy_repository.get(page_uid)
+            if self.strategy_runtime_enabled
+            else None
+        )
+        if strategy is not None:
+            strategy_entry = render_strategy_page_entry(strategy)
+            state.strategy_state = next_strategy_state(
+                strategy=strategy,
+                result=strategy_entry,
+            )
+            state.current_block_uid = strategy_entry.block_uid
+            state.awaiting_answer = strategy_entry.awaiting_answer
+            state.last_teacher_question = strategy_entry.last_teacher_question
+            state.page_entry_probe_done = True
+            block = self.catalog.get_block(strategy_entry.block_uid)
         state.push_turn_label("page_entry")
         self._ensure_memory_session(state=state, page=page, block=block)
         response = (
-            overview.teacher_response
+            strategy_entry.teacher_reply
+            if strategy is not None
+            else overview.teacher_response
             if overview is not None
             else self._render_page_entry_response(
                 page=page,
@@ -1046,7 +1101,9 @@ class LessonRuntime:
             )
         )
         response_focus = (
-            "Give a concise page overview and ask the learner which module to start."
+            "Use the reviewed page strategy opening and ask one student action."
+            if strategy is not None
+            else "Give a concise page overview and ask the learner which module to start."
             if overview is not None
             else "Welcome the learner, explain the page, and ask the probe naturally."
         )
@@ -1168,6 +1225,14 @@ class LessonRuntime:
         learner_input: str,
     ) -> LessonTurnResult:
         block = self.catalog.get_block(state.current_block_uid or "")
+        strategy_result = self._handle_strategy_answer_turn(
+            state=state,
+            learner_input=learner_input,
+            current_block=block,
+        )
+        if strategy_result is not None:
+            return strategy_result
+
         module_choice = self._handle_module_choice_turn(
             state=state,
             learner_input=learner_input,
@@ -1289,6 +1354,86 @@ class LessonRuntime:
             block,
             next_state,
             learner_input=learner_input,
+        )
+
+    def _handle_strategy_answer_turn(
+        self,
+        *,
+        state: LessonRuntimeState,
+        learner_input: str,
+        current_block: TeachingBlockRecord,
+    ) -> LessonTurnResult | None:
+        strategy = self.strategy_repository.get(state.current_page_uid)
+        if not self.strategy_runtime_enabled or strategy is None:
+            return None
+        try:
+            render_result = render_strategy_turn(
+                strategy=strategy,
+                strategy_state=state.strategy_state,
+                learner_input=learner_input,
+                teaching_move_payload=None,
+            )
+        except Exception as exc:
+            logger.warning(
+                "Lesson strategy renderer fallback page_uid=%s block_uid=%s error=%s",
+                state.current_page_uid,
+                current_block.block_uid,
+                exc,
+            )
+            return None
+
+        next_state = state.model_copy(deep=True)
+        next_state.push_turn_label("answer_question")
+        next_state.strategy_state = next_strategy_state(
+            strategy=strategy,
+            result=render_result,
+        )
+        next_state.current_block_uid = render_result.block_uid
+        next_state.current_activity_type = "practice"
+        next_state.awaiting_answer = render_result.awaiting_answer
+        next_state.last_teacher_question = render_result.last_teacher_question
+        next_state.same_goal_attempt_count += 1
+        next_state.hint_level = max(next_state.hint_level, 1)
+        next_state.repair_mode = "strategy_step"
+        next_state.last_eval_result = render_result.evaluation
+        try:
+            response_block = self.catalog.get_block(render_result.block_uid)
+        except KeyError:
+            response_block = current_block
+
+        self._emit_teacher_response(
+            state=next_state,
+            turn_label="answer_question",
+            teaching_action=render_result.teaching_action,
+            teacher_response=render_result.teacher_reply,
+        )
+        return LessonTurnResult(
+            page_uid=next_state.current_page_uid,
+            block_uid=response_block.block_uid,
+            turn_label="answer_question",
+            teaching_action=render_result.teaching_action,
+            retrieval_mode="none",
+            teacher_response=render_result.teacher_reply,
+            state=next_state,
+            evaluation=next_state.last_eval_result,
+            debug_signals=self._build_debug_signals(
+                state=next_state,
+                retrieval_mode="none",
+                turn_label="answer_question",
+                teaching_action=render_result.teaching_action,
+                evaluation=next_state.last_eval_result,
+                learner_turn=True,
+                response_audit=LessonTeacherResponseAuditSignal(
+                    source="deterministic",
+                    llm_called=False,
+                    llm_provider=self.llm_provider,
+                    latency_ms=0,
+                    fallback_used=False,
+                    fallback_reason="none",
+                    repair_reason="strategy_renderer",
+                    route="strategy_runtime",
+                ),
+            ),
         )
 
     def _handle_answer_turn_policy(
@@ -6440,7 +6585,55 @@ class LessonRuntime:
                 evaluation=evaluation,
                 action_contract_fields=action_contract_fields,
             ),
+            strategy=self._build_strategy_debug_signal(state),
             response_audit=response_audit,
+        )
+
+    def _build_strategy_debug_signal(
+        self,
+        state: LessonRuntimeState,
+    ) -> LessonStrategyDebugSignal:
+        strategy_state = state.strategy_state
+        if not isinstance(strategy_state, dict):
+            return LessonStrategyDebugSignal(enabled=False)
+        return LessonStrategyDebugSignal(
+            enabled=True,
+            source=str(strategy_state.get("strategy_source") or ""),
+            page_uid=str(strategy_state.get("page_uid") or ""),
+            module_type=str(strategy_state.get("module_type") or ""),
+            step_id=str(strategy_state.get("step_id") or ""),
+            block_uid=str(strategy_state.get("block_uid") or ""),
+            allowed_words=[
+                str(value)
+                for value in strategy_state.get("allowed_words", [])
+                if str(value).strip()
+            ]
+            if isinstance(strategy_state.get("allowed_words"), list)
+            else [],
+            allowed_actions=[
+                str(value)
+                for value in strategy_state.get("allowed_actions", [])
+                if str(value).strip()
+            ]
+            if isinstance(strategy_state.get("allowed_actions"), list)
+            else [],
+            blocked_actions=[
+                str(value)
+                for value in strategy_state.get("blocked_actions", [])
+                if str(value).strip()
+            ]
+            if isinstance(strategy_state.get("blocked_actions"), list)
+            else [],
+            priority=[
+                str(value)
+                for value in strategy_state.get("priority", [])
+                if str(value).strip()
+            ]
+            if isinstance(strategy_state.get("priority"), list)
+            else [],
+            completion_rule=str(strategy_state.get("completion_rule") or ""),
+            transition_rule=str(strategy_state.get("transition_rule") or ""),
+            completion_status=str(strategy_state.get("completion_status") or ""),
         )
 
     def _build_persona_debug_signal(

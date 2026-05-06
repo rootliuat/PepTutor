@@ -1,0 +1,191 @@
+{
+  "schema_version": "peptutor-page-teaching-strategy-v1",
+  "strategy_version": "2026-05-06-demo-v1",
+  "page_uid": "TB-G5S1U3-P24",
+  "book_id": "G5S1",
+  "unit_id": "U3",
+  "page_number": 24,
+  "module_type": "lets_try",
+  "review_status": "reviewed_demo_slice",
+  "strategy_summary": "Teach Sarah's hungry listening task first, then keep food and drink role-play frames scoped inside a restaurant scene.",
+  "strategy_lock": {
+    "page_uid": "TB-G5S1U3-P24",
+    "module_type": "lets_try",
+    "step_id": "p24_s1_scene_intro",
+    "allowed_words": [
+      "hungry",
+      "thirsty",
+      "eat",
+      "drink",
+      "bread",
+      "noodles",
+      "chicken",
+      "water",
+      "tea",
+      "milk",
+      "juice",
+      "sandwich",
+      "salad"
+    ],
+    "allowed_actions": [
+      "listen",
+      "fill_blank",
+      "answer",
+      "repeat",
+      "role_play",
+      "substitute",
+      "ask_meaning"
+    ],
+    "blocked_actions": [
+      "merge_food_and_drink_scope",
+      "start_role_play_before_listening_check",
+      "unscoped_rag_topic_switch"
+    ],
+    "completion_rule": "Learner completes the current food/drink action.",
+    "transition_rule": "Advance only inside the reviewed P24 food/drink flow."
+  },
+  "steps": [
+    {
+      "step_id": "p24_s1_scene_intro",
+      "block_uid": "TB-G5S1U3-P24-D1",
+      "module_type": "lets_try",
+      "step_type": "scene_intro",
+      "teacher_prompt": "我们先进入餐厅场景。Sarah is hungry. 她饿了。先听她想吃什么。",
+      "question_target": "What would Sarah like to eat?",
+      "target_words": ["Sarah", "hungry"],
+      "allowed_words": ["Sarah", "hungry"],
+      "allowed_actions": ["listen", "ask_meaning"],
+      "blocked_actions": ["generic_module_choice"],
+      "repair_rules": [
+        "Do not start with generic which block when strategy has an entry step."
+      ],
+      "completion_rules": ["Learner understands Sarah is hungry."],
+      "completion_rule": "scene_set",
+      "transition_rule": "preteach_food"
+    },
+    {
+      "step_id": "p24_s2_preteach_food",
+      "block_uid": "TB-G5S1U3-P24-D1",
+      "module_type": "lets_try",
+      "step_type": "preteach_food",
+      "teacher_prompt": "先看三个食物词：bread, noodles, chicken。听的时候找 Sarah 想吃的食物。",
+      "question_target": "Which food does Sarah want?",
+      "target_words": ["bread", "noodles", "chicken"],
+      "allowed_words": ["bread", "noodles", "chicken"],
+      "allowed_actions": ["listen", "choose", "ask_meaning"],
+      "blocked_actions": ["start_role_play_before_listening_check"],
+      "repair_rules": [
+        "If learner asks meaning, translate the current food word and return to listening.",
+        "Chicken is an option/distractor; compare it with bread and noodles without leaving the task."
+      ],
+      "completion_rules": ["Learner can name a food option."],
+      "completion_rule": "food_options_previewed",
+      "transition_rule": "listening_task"
+    },
+    {
+      "step_id": "p24_s3_listening_task",
+      "block_uid": "TB-G5S1U3-P24-D1",
+      "module_type": "lets_try",
+      "step_type": "listen_and_fill",
+      "teacher_prompt": "听力任务里 Sarah 想吃 bread 和 noodles。你可以说 bread 或 noodles.",
+      "question_target": "What would Sarah like to eat?",
+      "answer_frames": ["Sarah would like bread and noodles."],
+      "target_words": ["bread", "noodles", "chicken"],
+      "allowed_words": ["bread", "noodles", "chicken"],
+      "allowed_actions": ["fill_blank", "answer", "ask_meaning"],
+      "blocked_actions": ["start_role_play_before_listening_check"],
+      "repair_rules": [
+        "If learner chooses chicken, return to listening evidence and compare with bread/noodles."
+      ],
+      "completion_rules": ["Learner identifies bread and noodles or one correct listening item."],
+      "completion_rule": "listening_answer_checked",
+      "transition_rule": "role_scene"
+    },
+    {
+      "step_id": "p24_s4_role_scene",
+      "block_uid": "TB-G5S1U3-P24-D2",
+      "module_type": "lets_talk",
+      "step_type": "role_scene",
+      "teacher_prompt": "现在做餐厅角色扮演。我是服务员，你是顾客。我问：What would you like to eat?",
+      "question_target": "What would you like to eat?",
+      "answer_frames": ["I'd like ..."],
+      "target_words": ["hungry", "eat", "drink"],
+      "allowed_words": ["hungry", "eat", "drink"],
+      "allowed_actions": ["role_play", "answer", "ask_meaning"],
+      "blocked_actions": ["merge_food_and_drink_scope"],
+      "repair_rules": [
+        "One role-play turn at a time.",
+        "Do not run both eat and drink questions plus role switch in one reply."
+      ],
+      "completion_rules": ["Learner accepts the server/customer scene or answers one question."],
+      "completion_rule": "role_scene_started",
+      "transition_rule": "eat_drink_contrast"
+    },
+    {
+      "step_id": "p24_s5_eat_drink_contrast",
+      "block_uid": "TB-G5S1U3-P24-D2",
+      "module_type": "lets_talk",
+      "step_type": "contrast_scope",
+      "teacher_prompt": "eat 是吃，drink 是喝。吃的用 food，喝的用 drink。我们先回答：What would you like to eat?",
+      "question_target": "What would you like to eat?",
+      "answer_frames": ["I'd like ..."],
+      "food_words": ["bread", "noodles", "chicken", "sandwich", "salad"],
+      "drink_words": ["water", "tea", "milk", "juice"],
+      "allowed_words": ["bread", "noodles", "chicken", "sandwich", "salad", "water", "tea", "milk", "juice"],
+      "allowed_actions": ["answer", "repeat", "ask_meaning"],
+      "blocked_actions": ["merge_food_and_drink_scope"],
+      "repair_rules": [
+        "Keep eat and drink answer scopes separate.",
+        "If current question is eat, a drink-only answer is wrong scope.",
+        "If current question is drink, a food-only answer is wrong scope."
+      ],
+      "completion_rules": ["Learner answers the current eat question with a food item."],
+      "completion_rule": "eat_scope_answered",
+      "transition_rule": "role_play"
+    },
+    {
+      "step_id": "p24_s6_role_play",
+      "block_uid": "TB-G5S1U3-P24-D2",
+      "module_type": "lets_talk",
+      "step_type": "role_play",
+      "teacher_prompt": "我来当服务员。What would you like to eat?",
+      "question_target": "What would you like to eat?",
+      "answer_frames": ["I'd like ..."],
+      "food_words": ["bread", "noodles", "chicken", "sandwich", "salad"],
+      "drink_words": ["water", "tea", "milk", "juice"],
+      "allowed_words": ["bread", "noodles", "chicken", "sandwich", "salad", "water", "tea", "milk", "juice"],
+      "allowed_actions": ["role_play", "answer", "substitute", "ask_meaning"],
+      "blocked_actions": ["merge_food_and_drink_scope", "unscoped_rag_topic_switch"],
+      "repair_rules": [
+        "If learner answers with only a food word, recast once with I'd like.",
+        "If learner asks meaning, answer briefly and return to role-play."
+      ],
+      "completion_rules": ["Learner completes one server/customer exchange."],
+      "completion_rule": "role_play_exchange",
+      "transition_rule": "substitution_practice"
+    },
+    {
+      "step_id": "p24_s7_substitution_practice",
+      "block_uid": "TB-G5S1U3-P24-D3",
+      "module_type": "ask_and_answer",
+      "step_type": "substitution_practice",
+      "teacher_prompt": "最后换词练习。用 I'd like ... 回答，可以换一个食物或饮料。",
+      "question_target": "What would you like to eat or drink?",
+      "answer_frames": ["I'd like ..."],
+      "food_words": ["bread", "noodles", "chicken", "sandwich", "salad"],
+      "drink_words": ["water", "tea", "milk", "juice"],
+      "allowed_words": ["bread", "noodles", "chicken", "sandwich", "salad", "water", "tea", "milk", "juice"],
+      "allowed_actions": ["answer", "substitute", "ask_meaning"],
+      "blocked_actions": ["unscoped_rag_topic_switch"],
+      "repair_rules": ["One substitution at a time."],
+      "completion_rules": ["Learner produces one meaning-correct substitution."],
+      "completion_rule": "substitution_answer",
+      "transition_rule": "stay_or_complete_page"
+    }
+  ],
+  "evidence_policy": {
+    "structured_curriculum_is_canonical": true,
+    "rag_can_supply": ["P24 food/drink facts", "dialogue lines", "substitution words"],
+    "rag_must_not_decide": ["role-play start", "food/drink scope", "module switch"]
+  }
+}
