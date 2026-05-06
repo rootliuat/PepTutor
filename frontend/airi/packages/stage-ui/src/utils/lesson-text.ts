@@ -22,6 +22,7 @@ const visibleSourceRefPattern = /\s*\[见\s*TB-[^\]]+\]\s*/gi
 const visibleInternalLabelsPattern = /英文目标\s*[:：]\s*|动作\s*[:：]\s*|target_role|expected_student_action|answer_scope|TeachingMove|\b[\w-]*route[\w-]*\b|\b[\w-]*policy[\w-]*\b|\bdebug\b|statepatch/gi
 const visibleBlankLinePattern = /[ \t]*\n[ \t]*/g
 const displaySegmentMaxLength = 90
+export const DEFAULT_LESSON_TRANSCRIPT_WINDOW_SIZE = 50
 
 export type LessonVisibleSegmentKind = 'ack' | 'scaffold' | 'target' | 'action' | 'other'
 
@@ -52,6 +53,12 @@ export interface LessonVisibleChatMessage {
   createdAt?: unknown
 }
 
+export interface LessonVisibleMessageWindow<T extends LessonVisibleChatMessage> {
+  visibleMessages: T[]
+  hiddenCount: number
+  totalCount: number
+}
+
 export function sanitizeLessonVisibleText(text: string): string {
   return stripLessonMarkdownSyntax(text)
     .replace(visibleEmotionTagPattern, '')
@@ -62,6 +69,29 @@ export function sanitizeLessonVisibleText(text: string): string {
     .replace(/[ \t]{2,}/g, ' ')
     .replace(/\n{3,}/g, '\n\n')
     .trim()
+}
+
+export function createLessonVisibleTextMemoizer(maxEntries = 200) {
+  const cache = new Map<string, string>()
+
+  return (cacheKey: string, text: string): string => {
+    const normalizedKey = `${cacheKey}:${text}`
+    const cached = cache.get(normalizedKey)
+    if (cached !== undefined)
+      return cached
+
+    const sanitized = sanitizeLessonVisibleText(text)
+    cache.set(normalizedKey, sanitized)
+
+    while (cache.size > maxEntries) {
+      const oldestKey = cache.keys().next().value
+      if (oldestKey === undefined)
+        break
+      cache.delete(oldestKey)
+    }
+
+    return sanitized
+  }
 }
 
 export function segmentLessonTeacherReply(
@@ -181,6 +211,39 @@ export function coalesceAdjacentLessonVisibleMessages<T extends LessonVisibleCha
   }
 
   return merged
+}
+
+export function windowLessonVisibleMessages<T extends LessonVisibleChatMessage>(
+  messages: T[],
+  maxVisible = DEFAULT_LESSON_TRANSCRIPT_WINDOW_SIZE,
+): LessonVisibleMessageWindow<T> {
+  const safeMax = Math.max(1, Math.floor(maxVisible))
+  const totalCount = messages.length
+  if (totalCount <= safeMax) {
+    return {
+      visibleMessages: messages,
+      hiddenCount: 0,
+      totalCount,
+    }
+  }
+
+  return {
+    visibleMessages: messages.slice(totalCount - safeMax),
+    hiddenCount: totalCount - safeMax,
+    totalCount,
+  }
+}
+
+export function lessonVisibleMessagesRenderKey(messages: LessonVisibleChatMessage[]): string {
+  const lastMessage = messages[messages.length - 1]
+  const lastTextLength = lastMessage?.text.length ?? 0
+  const lastTextTail = lastMessage?.text.slice(-24) ?? ''
+  return [
+    messages.length,
+    lastMessage?.id ?? '',
+    lastTextLength,
+    lastTextTail,
+  ].join('|')
 }
 
 function splitVisibleLessonSentence(text: string, maxLength: number): string[] {

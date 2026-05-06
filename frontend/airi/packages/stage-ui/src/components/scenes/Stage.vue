@@ -95,6 +95,7 @@ const live2dStore = useLive2d()
 const showStage = ref(true)
 const stageModelRecoveryInFlight = ref(false)
 const viewUpdateCleanups: Array<() => void> = []
+const pageVisible = ref(typeof document === 'undefined' ? true : document.visibilityState !== 'hidden')
 
 // Caption + Presentation broadcast channels
 type CaptionChannelEvent
@@ -648,6 +649,13 @@ function startLipSyncLoop() {
     return
 
   const tick = () => {
+    if (!pageVisible.value) {
+      lipSyncLoopId.value = undefined
+      mouthOpenSize.value = 0
+      mouthFormValue.value = 0
+      return
+    }
+
     const analyserMouthOpen = readAnalyserMouthOpen()
 
     if (!nowSpeaking.value || !canDriveLessonMouthOpen.value || !live2dLipSync.value) {
@@ -711,12 +719,18 @@ function syncLipSyncLoop() {
   if (shouldRunLive2dLipSyncLoop({
     stageModelRenderer: stageModelRenderer.value,
     paused: Boolean(props.paused),
+    pageVisible: pageVisible.value,
   }) && (lipSyncStarted.value || lipSyncFallbackEnabled.value)) {
     startLipSyncLoop()
     return
   }
 
   stopLipSyncLoop()
+}
+
+function handlePageVisibilityChange() {
+  pageVisible.value = typeof document === 'undefined' ? true : document.visibilityState !== 'hidden'
+  syncLipSyncLoop()
 }
 
 function readAnalyserMouthOpen() {
@@ -1200,6 +1214,15 @@ onUnmounted(() => {
 })
 
 registerLipSyncDebugHandle()
+
+if (typeof document !== 'undefined') {
+  onMounted(() => {
+    document.addEventListener('visibilitychange', handlePageVisibilityChange, { passive: true })
+  })
+  onUnmounted(() => {
+    document.removeEventListener('visibilitychange', handlePageVisibilityChange)
+  })
+}
 
 defineExpose({
   canvasElement,

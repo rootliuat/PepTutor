@@ -13,12 +13,15 @@ import { useHearingStore } from '@proj-airi/stage-ui/stores/modules/hearing'
 import { useSpeechStore } from '@proj-airi/stage-ui/stores/modules/speech'
 import {
   coalesceAdjacentLessonVisibleMessages,
+  DEFAULT_LESSON_TRANSCRIPT_WINDOW_SIZE,
   joinLessonVisibleSegmentsForDisplay,
+  lessonVisibleMessagesRenderKey,
   normalizeLessonVisibleSegments,
   sanitizeLessonVisibleText,
+  windowLessonVisibleMessages,
 } from '@proj-airi/stage-ui/utils/lesson-text'
 import { storeToRefs } from 'pinia'
-import { computed, nextTick, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 
 const lessonStore = useLessonStore()
 const { currentPageTitle, selectedPageUid, loading, activeTurn, transcript } = storeToRefs(lessonStore)
@@ -72,6 +75,12 @@ const { streamingMessage } = storeToRefs(useChatStreamStore())
 const sidebarChatScrollRef = ref<HTMLElement>()
 const historyPanelOpen = ref(false)
 const debugPanelOpen = ref(false)
+const showFullTranscript = ref(false)
+const sidebarTranscriptWindowSize = DEFAULT_LESSON_TRANSCRIPT_WINDOW_SIZE
+const displayedMouthOpenSize = ref(mouthOpenSize.value)
+const displayedInputVolumeLevel = ref(inputVolumeLevel.value)
+let sidebarScrollFrame: number | undefined
+let sidebarRuntimeDisplayTimer: ReturnType<typeof setTimeout> | undefined
 type LessonSidebarMessage = LessonVisibleChatMessage & { role: 'assistant' | 'user' | 'error' }
 
 function lessonSidebarRoleForSpeaker(speaker: string): LessonSidebarMessage['role'] {
@@ -143,6 +152,17 @@ const sidebarMessages = computed(() => {
 
   return coalescedMessages
 })
+const sidebarMessageWindow = computed(() =>
+  showFullTranscript.value
+    ? {
+        visibleMessages: sidebarMessages.value,
+        hiddenCount: 0,
+        totalCount: sidebarMessages.value.length,
+      }
+    : windowLessonVisibleMessages(sidebarMessages.value, sidebarTranscriptWindowSize),
+)
+const sidebarVisibleMessages = computed(() => sidebarMessageWindow.value.visibleMessages)
+const hiddenSidebarMessageCount = computed(() => sidebarMessageWindow.value.hiddenCount)
 const conversationCountLabel = computed(() => `${sidebarMessages.value.length} 条对话`)
 const latestAssistantPreview = computed(() =>
   [...sidebarMessages.value].reverse().find(message => message.role === 'assistant')?.text || '课堂开始后，对话记录会显示在这里。',
@@ -297,7 +317,7 @@ const speechChainFacts = computed(() => [
   {
     key: 'mouth_open',
     label: '开口',
-    value: mouthOpenSize.value.toFixed(2),
+    value: displayedMouthOpenSize.value.toFixed(2),
   },
   {
     key: 'interrupt_policy',
@@ -349,21 +369,49 @@ const toolbarItems = [
 ]
 
 function scrollSidebarChatToBottom() {
-  requestAnimationFrame(() => {
-    requestAnimationFrame(async () => {
-      await nextTick()
-      if (!sidebarChatScrollRef.value) {
-        return
-      }
+  if (typeof window === 'undefined' || sidebarScrollFrame !== undefined) {
+    return
+  }
 
-      sidebarChatScrollRef.value.scrollTop = sidebarChatScrollRef.value.scrollHeight
-    })
+  sidebarScrollFrame = window.requestAnimationFrame(async () => {
+    sidebarScrollFrame = undefined
+    await nextTick()
+    if (!sidebarChatScrollRef.value) {
+      return
+    }
+
+    sidebarChatScrollRef.value.scrollTop = sidebarChatScrollRef.value.scrollHeight
   })
 }
 
-watch(sidebarMessages, scrollSidebarChatToBottom, { deep: true, flush: 'post' })
+const sidebarScrollKey = computed(() => lessonVisibleMessagesRenderKey(sidebarVisibleMessages.value))
+
+watch(sidebarScrollKey, scrollSidebarChatToBottom, { flush: 'post' })
 onMounted(() => {
   scrollSidebarChatToBottom()
+})
+
+watch([mouthOpenSize, inputVolumeLevel], () => {
+  if (sidebarRuntimeDisplayTimer !== undefined) {
+    return
+  }
+
+  sidebarRuntimeDisplayTimer = setTimeout(() => {
+    sidebarRuntimeDisplayTimer = undefined
+    displayedMouthOpenSize.value = mouthOpenSize.value
+    displayedInputVolumeLevel.value = inputVolumeLevel.value
+  }, 160)
+}, { flush: 'post' })
+
+onUnmounted(() => {
+  if (sidebarScrollFrame !== undefined) {
+    window.cancelAnimationFrame(sidebarScrollFrame)
+    sidebarScrollFrame = undefined
+  }
+  if (sidebarRuntimeDisplayTimer !== undefined) {
+    clearTimeout(sidebarRuntimeDisplayTimer)
+    sidebarRuntimeDisplayTimer = undefined
+  }
 })
 
 function resolveSessionTitle(sessionId: string, title?: string) {
@@ -555,7 +603,7 @@ const visibleAiriState = computed(() => {
     }
   }
 
-  if (classroomState.value === 'learner_speaking' || (hearingListening.value && inputVolumeLevel.value >= 8)) {
+  if (classroomState.value === 'learner_speaking' || (hearingListening.value && displayedInputVolumeLevel.value >= 8)) {
     return {
       label: '学生说话',
       detail: '正在接收学生声音并更新转写。',
@@ -761,7 +809,7 @@ const visiblePerformanceFacts = computed(() => [
   {
     key: 'mouth_open',
     label: '开口',
-    value: mouthOpenSize.value.toFixed(2),
+    value: displayedMouthOpenSize.value.toFixed(2),
   },
   {
     key: 'motion',
@@ -973,15 +1021,24 @@ function resolveReplyPathLabel() {
 
       <div ref="sidebarChatScrollRef" class="h-full overflow-y-auto px-2.5 py-3 pb-16">
         <div
-          v-if="sidebarMessages.length === 0"
+          v-if="sidebarVisibleMessages.length === 0"
           class="border border-sky-100/90 rounded-[18px] border-dashed bg-white/62 px-3 py-4 text-sm text-slate-500 leading-6 dark:border-white/10 dark:bg-white/5 dark:text-neutral-300"
         >
           {{ latestAssistantPreview }}
         </div>
 
         <div v-else class="flex flex-col gap-3">
+          <button
+            v-if="hiddenSidebarMessageCount > 0"
+            class="mx-auto mb-1 rounded-full bg-sky-100/80 px-3 py-1.5 text-xs text-slate-600 font-medium transition dark:bg-white/8 hover:bg-sky-50 dark:text-neutral-200 dark:hover:bg-white/12"
+            type="button"
+            @click="showFullTranscript = true"
+          >
+            显示更早 {{ hiddenSidebarMessageCount }} 条对话
+          </button>
+
           <div
-            v-for="message in sidebarMessages"
+            v-for="message in sidebarVisibleMessages"
             :key="message.id"
             :class="[
               'flex items-end gap-2',
@@ -1034,7 +1091,7 @@ function resolveReplyPathLabel() {
         </span>
       </summary>
 
-      <div class="px-3 pb-3">
+      <div v-if="debugPanelOpen" class="px-3 pb-3">
         <div class="flex items-start justify-between gap-3">
           <div class="min-w-0">
             <div class="text-[10px] text-slate-400 font-semibold tracking-[0.14em] uppercase dark:text-neutral-500">
@@ -1141,20 +1198,22 @@ function resolveReplyPathLabel() {
         </div>
       </div>
 
-      <div
-        v-for="fact in speechChainFacts"
-        :key="fact.key"
-      >
-        <div class="text-[10px] text-slate-400 font-semibold tracking-[0.12em] uppercase dark:text-neutral-400">
-          {{ fact.label }}
-        </div>
+      <template v-if="debugPanelOpen">
         <div
-          :data-testid="`lesson-runtime-fact-${fact.key}`"
-          class="mt-1 truncate text-[11px] text-slate-800 font-medium dark:text-neutral-100"
+          v-for="fact in speechChainFacts"
+          :key="fact.key"
         >
-          {{ fact.value }}
+          <div class="text-[10px] text-slate-400 font-semibold tracking-[0.12em] uppercase dark:text-neutral-400">
+            {{ fact.label }}
+          </div>
+          <div
+            :data-testid="`lesson-runtime-fact-${fact.key}`"
+            class="mt-1 truncate text-[11px] text-slate-800 font-medium dark:text-neutral-100"
+          >
+            {{ fact.value }}
+          </div>
         </div>
-      </div>
+      </template>
 
       <div
         v-if="liveTranscriptText"
