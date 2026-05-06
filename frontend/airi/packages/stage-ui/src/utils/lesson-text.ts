@@ -23,6 +23,28 @@ const visibleInternalLabelsPattern = /英文目标\s*[:：]\s*|动作\s*[:：]\s
 const visibleBlankLinePattern = /[ \t]*\n[ \t]*/g
 const displaySegmentMaxLength = 90
 
+export type LessonVisibleSegmentKind = 'ack' | 'scaffold' | 'target' | 'action' | 'other'
+
+export interface LessonVisibleSegment {
+  segment_id: string
+  sequence: number
+  segment_kind: LessonVisibleSegmentKind
+  display_text: string
+  tts_text: string
+  caption_text: string
+  emotion?: string | null
+}
+
+export interface LessonVisibleSegmentInput {
+  display_text?: unknown
+  tts_text?: unknown
+  caption_text?: unknown
+  segment_id?: unknown
+  sequence?: unknown
+  segment_kind?: unknown
+  emotion?: unknown
+}
+
 export function sanitizeLessonVisibleText(text: string): string {
   return stripLessonMarkdownSyntax(text)
     .replace(visibleEmotionTagPattern, '')
@@ -71,6 +93,59 @@ export function firstLessonCaptionSegment(text: string): string {
   return segments.find(segment => !isIsolatedTranslationFragment(segment)) || segments[0] || ''
 }
 
+export function buildLessonVisibleSegments(
+  text: string,
+  options: { maxLength?: number } = {},
+): LessonVisibleSegment[] {
+  return segmentLessonTeacherReply(text, options).map((segment, index) => ({
+    segment_id: `teacher-visible-${index + 1}`,
+    sequence: index,
+    segment_kind: inferLessonVisibleSegmentKind(segment),
+    display_text: segment,
+    tts_text: segment,
+    caption_text: segment,
+    emotion: null,
+  }))
+}
+
+export function normalizeLessonVisibleSegments(
+  segments: LessonVisibleSegmentInput[] | null | undefined,
+  fallbackText: string,
+): LessonVisibleSegment[] {
+  const normalized: LessonVisibleSegment[] = []
+
+  for (const [index, segment] of (segments || []).entries()) {
+    const displayText = sanitizeLessonVisibleText(String(segment.display_text ?? ''))
+    if (!displayText)
+      continue
+
+    const ttsText = sanitizeLessonVisibleText(String(segment.tts_text ?? displayText)) || displayText
+    const captionText = sanitizeLessonVisibleText(String(segment.caption_text ?? displayText)) || displayText
+
+    normalized.push({
+      segment_id: String(segment.segment_id || `teacher-visible-${index + 1}`),
+      sequence: typeof segment.sequence === 'number' && Number.isFinite(segment.sequence) ? segment.sequence : index,
+      segment_kind: isLessonVisibleSegmentKind(segment.segment_kind) ? segment.segment_kind : inferLessonVisibleSegmentKind(displayText),
+      display_text: displayText,
+      tts_text: ttsText,
+      caption_text: captionText,
+      emotion: typeof segment.emotion === 'string' ? segment.emotion : null,
+    })
+  }
+
+  normalized.sort((left, right) => left.sequence - right.sequence)
+
+  return normalized.length > 0 ? normalized : buildLessonVisibleSegments(fallbackText)
+}
+
+export function joinLessonVisibleSegmentsForDisplay(segments: LessonVisibleSegment[]): string {
+  return segments.map(segment => segment.display_text).filter(Boolean).join('\n')
+}
+
+export function joinLessonVisibleSegmentsForSpeech(segments: LessonVisibleSegment[]): string {
+  return segments.map(segment => segment.tts_text || segment.display_text).filter(Boolean).join(' ')
+}
+
 function splitVisibleLessonSentence(text: string, maxLength: number): string[] {
   const chunks: string[] = []
   let buffer = ''
@@ -105,4 +180,25 @@ function visibleTextLength(text: string): number {
 
 function isIsolatedTranslationFragment(text: string): boolean {
   return /^["“”']?[（(][^）)]{1,24}[）)][。.!！?？]?["“”']?$/.test(text.trim())
+}
+
+function inferLessonVisibleSegmentKind(text: string): LessonVisibleSegmentKind {
+  const normalized = text.trim()
+  if (/^(?:好|对|没关系|我听到|意思对|这里|先别急|我们慢慢来)/.test(normalized))
+    return 'ack'
+  if (['意思是', '可以用', '句型', '这个词', '这里是', '里的', '要连起来读', '老师问的是', '故事里'].some(signal => normalized.includes(signal)))
+    return 'scaffold'
+  if (['跟我', '你先', '试试', '说一遍', '读一遍', '回答', '先试', '再自然说一遍'].some(signal => normalized.includes(signal)))
+    return 'action'
+  if (/[a-z]/i.test(normalized))
+    return 'target'
+  return 'other'
+}
+
+function isLessonVisibleSegmentKind(value: unknown): value is LessonVisibleSegmentKind {
+  return value === 'ack'
+    || value === 'scaffold'
+    || value === 'target'
+    || value === 'action'
+    || value === 'other'
 }

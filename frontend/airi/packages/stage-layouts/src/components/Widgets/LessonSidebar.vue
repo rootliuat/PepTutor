@@ -10,7 +10,11 @@ import { useLessonAiriRuntimeStore } from '@proj-airi/stage-ui/stores/lesson-air
 import { resolveLessonChatMessageText as resolveMessageText, useLessonChatHistoryStore } from '@proj-airi/stage-ui/stores/lesson-chat-history'
 import { useHearingStore } from '@proj-airi/stage-ui/stores/modules/hearing'
 import { useSpeechStore } from '@proj-airi/stage-ui/stores/modules/speech'
-import { sanitizeLessonVisibleText, segmentLessonTeacherReply } from '@proj-airi/stage-ui/utils/lesson-text'
+import {
+  joinLessonVisibleSegmentsForDisplay,
+  normalizeLessonVisibleSegments,
+  sanitizeLessonVisibleText,
+} from '@proj-airi/stage-ui/utils/lesson-text'
 import { storeToRefs } from 'pinia'
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
 
@@ -77,11 +81,8 @@ const sidebarMessages = computed(() => {
       id: entry.id,
       role: entry.speaker === 'learner' ? 'user' : entry.speaker === 'system' ? 'error' : 'assistant',
       text: entry.speaker === 'teacher'
-        ? sanitizeLessonVisibleText(entry.text)
+        ? joinLessonVisibleSegmentsForDisplay(normalizeLessonVisibleSegments(entry.segments, entry.text))
         : sanitizeLessonVisibleText(entry.text),
-      segments: entry.speaker === 'teacher'
-        ? segmentLessonTeacherReply(entry.text)
-        : [sanitizeLessonVisibleText(entry.text)].filter(Boolean),
       createdAt: entry.created_at,
     }))
     .filter(message => message.text)
@@ -91,9 +92,6 @@ const sidebarMessages = computed(() => {
       id: message.id || `${message.role}:${message.createdAt || index}`,
       role: message.role,
       text: sanitizeLessonVisibleText(resolveMessageText(message)),
-      segments: message.role === 'assistant'
-        ? segmentLessonTeacherReply(resolveMessageText(message))
-        : [sanitizeLessonVisibleText(resolveMessageText(message))].filter(Boolean),
       createdAt: message.createdAt,
     }))
     .filter(message => (message.role === 'assistant' || message.role === 'user' || message.role === 'error') && message.text)
@@ -106,7 +104,6 @@ const sidebarMessages = computed(() => {
       id: 'streaming-message',
       role: 'assistant',
       text: sanitizeLessonVisibleText(streamingText),
-      segments: segmentLessonTeacherReply(streamingText),
       createdAt: Date.now(),
     })
   }
@@ -950,48 +947,43 @@ function resolveReplyPathLabel() {
         </div>
 
         <div v-else class="flex flex-col gap-3">
-          <template
+          <div
             v-for="message in sidebarMessages"
             :key="message.id"
+            :class="[
+              'flex items-end gap-2',
+              message.role === 'user' ? 'justify-end' : 'justify-start',
+            ]"
           >
             <div
-              v-for="(segment, segmentIndex) in message.segments.length ? message.segments : [message.text]"
-              :key="`${message.id}:${segmentIndex}`"
-              :class="[
-                'flex items-end gap-2',
-                message.role === 'user' ? 'justify-end' : 'justify-start',
-              ]"
+              v-if="message.role !== 'user'"
+              class="h-7 w-7 shrink-0 overflow-hidden rounded-full bg-[linear-gradient(135deg,rgba(56,189,248,0.24),rgba(14,165,233,0.08))] ring-1 ring-sky-100/90 dark:ring-white/10"
             >
-              <div
-                v-if="message.role !== 'user'"
-                class="h-7 w-7 shrink-0 overflow-hidden rounded-full bg-[linear-gradient(135deg,rgba(56,189,248,0.24),rgba(14,165,233,0.08))] ring-1 ring-sky-100/90 dark:ring-white/10"
-              >
-                <div class="h-full w-full flex items-center justify-center text-[11px] text-cyan-700 font-bold dark:text-cyan-100">
-                  米
-                </div>
-              </div>
-
-              <div
-                :class="[
-                  'max-w-[13.5rem] whitespace-pre-wrap break-words rounded-[18px] px-3 py-2.5 text-sm leading-5 shadow-[0_16px_34px_-28px_rgba(0,0,0,0.85)]',
-                  message.role === 'user'
-                    ? 'rounded-br-md bg-emerald-100 text-emerald-950 ring-1 ring-inset ring-emerald-200/80 dark:bg-neutral-600 dark:text-white dark:ring-transparent'
-                    : message.role === 'error'
-                      ? 'rounded-bl-md bg-rose-50 text-rose-700 ring-1 ring-inset ring-rose-200 dark:bg-rose-500/18 dark:text-rose-100 dark:ring-rose-300/18'
-                      : 'rounded-bl-md bg-white/88 text-slate-800 ring-1 ring-inset ring-sky-100/90 dark:bg-neutral-600/72 dark:text-neutral-50 dark:ring-transparent',
-                ]"
-              >
-                {{ segment }}
-              </div>
-
-              <div
-                v-if="message.role === 'user'"
-                class="h-8 w-8 flex shrink-0 items-center justify-center rounded-full bg-emerald-400 text-sm text-emerald-950 font-bold"
-              >
-                M
+              <div class="h-full w-full flex items-center justify-center text-[11px] text-cyan-700 font-bold dark:text-cyan-100">
+                米
               </div>
             </div>
-          </template>
+
+            <div
+              :class="[
+                'max-w-[13.5rem] whitespace-pre-wrap break-words rounded-[18px] px-3 py-2.5 text-sm leading-5 shadow-[0_16px_34px_-28px_rgba(0,0,0,0.85)]',
+                message.role === 'user'
+                  ? 'rounded-br-md bg-emerald-100 text-emerald-950 ring-1 ring-inset ring-emerald-200/80 dark:bg-neutral-600 dark:text-white dark:ring-transparent'
+                  : message.role === 'error'
+                    ? 'rounded-bl-md bg-rose-50 text-rose-700 ring-1 ring-inset ring-rose-200 dark:bg-rose-500/18 dark:text-rose-100 dark:ring-rose-300/18'
+                    : 'rounded-bl-md bg-white/88 text-slate-800 ring-1 ring-inset ring-sky-100/90 dark:bg-neutral-600/72 dark:text-neutral-50 dark:ring-transparent',
+              ]"
+            >
+              {{ message.text }}
+            </div>
+
+            <div
+              v-if="message.role === 'user'"
+              class="h-8 w-8 flex shrink-0 items-center justify-center rounded-full bg-emerald-400 text-sm text-emerald-950 font-bold"
+            >
+              M
+            </div>
+          </div>
         </div>
       </div>
     </div>

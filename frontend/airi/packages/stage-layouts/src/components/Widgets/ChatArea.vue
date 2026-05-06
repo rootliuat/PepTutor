@@ -88,7 +88,7 @@ const { transcribeForMediaStream, stopStreamingTranscription } = hearingPipeline
 const { supportsStreamInput } = storeToRefs(hearingPipeline)
 const { configured: hearingConfigured, autoSendEnabled, autoSendDelay } = storeToRefs(hearingStore)
 const { loading: lessonLoading, runtimeState } = storeToRefs(lessonStore)
-const { teacherSpeaking, lastRecognizedText, liveTranscriptText, currentInterruptPolicy } = storeToRefs(lessonAiriRuntime)
+const { teacherSpeaking, lastRecognizedText, liveTranscriptText, currentInterruptPolicy, classroomSimpleStatus } = storeToRefs(lessonAiriRuntime)
 const shouldUseStreamInput = computed(() => supportsStreamInput.value && !!stream.value)
 const effectiveAutoSendEnabled = computed(() => props.autoSendEnabledOverride ?? autoSendEnabled.value)
 const effectiveAutoSendDelay = computed(() => props.autoSendDelayOverride ?? autoSendDelay.value)
@@ -176,10 +176,10 @@ const sendButtonClasses = computed(() => props.compactMode
   : 'h-11 min-w-11 rounded-full px-4')
 const sendButtonLabelVisible = computed(() => !props.compactMode)
 const composerShellClasses = computed(() => props.compactMode
-  ? 'min-h-[5.25rem] items-end gap-2 rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(8,13,23,0.95),rgba(5,9,16,0.96))] px-3 py-3 shadow-[0_24px_80px_-55px_rgba(2,12,27,0.98)]'
+  ? 'min-h-[4.25rem] items-center gap-2 rounded-[24px] border border-sky-100/90 bg-white/96 px-3 py-2.5 shadow-[0_18px_48px_-38px_rgba(15,23,42,0.55)]'
   : 'items-end gap-3 rounded-[28px] border border-sky-100/90 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(240,249,255,0.9))] px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(12,18,28,0.96),rgba(8,12,20,0.92))] dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]')
 const textareaClasses = computed(() => props.compactMode
-  ? 'max-h-[9rem] min-h-[2rem] py-1 text-[15px] leading-6'
+  ? 'max-h-[7.5rem] min-h-[2rem] py-1 text-[15px] leading-6'
   : 'max-h-[18rem] min-h-[3.25rem] py-2 text-base leading-6')
 const learnerSpeaking = computed(() => isListening.value && normalizedVolume.value >= 0.08)
 const canStopInteraction = computed(() =>
@@ -330,6 +330,22 @@ const statusPanelClasses = computed(() => {
 const statusPanelShellClasses = computed(() => props.compactMode
   ? 'w-max max-w-[18rem] rounded-full px-2.5 py-1.5 shadow-[0_14px_36px_-28px_rgba(2,12,27,0.9)]'
   : 'max-w-[24rem] rounded-[18px] px-3.5 py-2.5 shadow-[0_18px_55px_-35px_rgba(2,12,27,0.9)]')
+const compactClassroomStatusLabel = computed(() => {
+  if (microphoneUnavailableReason.value || permissionError.value)
+    return '未连接'
+  if (props.disabled)
+    return '不可用'
+  if (lessonLoading.value || sending.value || teacherSpeaking.value)
+    return '思考/说话中'
+  return classroomSimpleStatus.value === '思考/说话中' ? '思考/说话中' : '等待'
+})
+const compactClassroomStatusClasses = computed(() =>
+  compactClassroomStatusLabel.value === '思考/说话中'
+    ? 'bg-violet-500 text-white shadow-[0_14px_30px_-18px_rgba(124,58,237,0.88)]'
+    : compactClassroomStatusLabel.value === '等待'
+      ? 'bg-emerald-100 text-emerald-700 ring-1 ring-inset ring-emerald-200/90 dark:bg-emerald-400/14 dark:text-emerald-100 dark:ring-emerald-300/18'
+      : 'bg-slate-100 text-slate-500 ring-1 ring-inset ring-slate-200 dark:bg-white/10 dark:text-neutral-200 dark:ring-white/10',
+)
 
 async function resolveSendOptions() {
   const overrideProvider = props.chatProviderOverride
@@ -1107,8 +1123,8 @@ watch(effectiveAutoSendEnabled, (enabled) => {
         class="sr-only"
         aria-live="polite"
       >
-        <span data-testid="lesson-chat-status-label">{{ interactionStatus.label }}</span>
-        <span data-testid="lesson-chat-status-detail">{{ interactionStatus.detail }}</span>
+        <span data-testid="lesson-chat-status-label">{{ compactClassroomStatusLabel }}</span>
+        <span data-testid="lesson-chat-status-detail">{{ compactClassroomStatusLabel }}</span>
         <span
           v-if="liveTranscriptText || lastRecognizedText"
           data-testid="lesson-chat-live-transcript"
@@ -1195,16 +1211,27 @@ watch(effectiveAutoSendEnabled, (enabled) => {
         data-testid="lesson-chat-input-shell"
         :class="[
           composerShellClasses,
-          'relative flex w-full cursor-text overflow-hidden backdrop-blur-xl',
+          'relative flex w-full cursor-text',
         ]"
         @pointerdown="focusMessageInputFromContainer"
       >
+        <div
+          v-if="props.compactMode"
+          data-testid="lesson-chat-compact-status-label"
+          :class="[
+            compactClassroomStatusClasses,
+            'absolute left-3 top-[-2.1rem] rounded-full px-3 py-1.5 text-[12px] font-semibold',
+          ]"
+        >
+          {{ compactClassroomStatusLabel }}
+        </div>
+
         <div class="flex shrink-0 items-end gap-2">
           <button
             type="button"
             :class="[
               actionButtonSizeClasses,
-              'flex items-center justify-center rounded-full border border-sky-100/90 bg-white/72 text-slate-700 shadow-[0_10px_30px_-24px_rgba(15,23,42,0.45)] outline-none transition-all duration-200 active:scale-95 hover:bg-sky-50 dark:border-white/12 dark:bg-white/8 dark:text-neutral-100 dark:shadow-[0_10px_30px_-18px_rgba(15,23,42,0.95)] dark:hover:bg-white/12',
+              'flex items-center justify-center rounded-full border border-sky-100/90 bg-sky-50/95 text-slate-700 shadow-[0_10px_24px_-20px_rgba(15,23,42,0.42)] outline-none transition-colors duration-150 hover:bg-sky-100 dark:border-white/12 dark:bg-white/8 dark:text-neutral-100 dark:shadow-[0_10px_24px_-18px_rgba(15,23,42,0.95)] dark:hover:bg-white/12',
               { 'cursor-not-allowed opacity-45 active:scale-100': props.disabled || microphoneUnavailableReason },
             ]"
             :disabled="props.disabled || Boolean(microphoneUnavailableReason)"
@@ -1222,7 +1249,7 @@ watch(effectiveAutoSendEnabled, (enabled) => {
             type="button"
             :class="[
               actionButtonSizeClasses,
-              'flex items-center justify-center rounded-full border border-sky-100/90 bg-white/64 text-slate-600 shadow-[0_10px_30px_-24px_rgba(15,23,42,0.45)] outline-none transition-all duration-200 active:scale-95 hover:bg-sky-50 dark:border-white/12 dark:bg-white/6 dark:text-neutral-200 dark:shadow-[0_10px_30px_-18px_rgba(15,23,42,0.95)] dark:hover:bg-white/12',
+              'flex items-center justify-center rounded-full border border-sky-100/90 bg-slate-100/92 text-slate-600 shadow-[0_10px_24px_-20px_rgba(15,23,42,0.38)] outline-none transition-colors duration-150 hover:bg-slate-200 dark:border-white/12 dark:bg-white/6 dark:text-neutral-200 dark:shadow-[0_10px_24px_-18px_rgba(15,23,42,0.95)] dark:hover:bg-white/12',
               { 'cursor-not-allowed opacity-40 active:scale-100': !canStopInteraction },
             ]"
             :disabled="!canStopInteraction"
@@ -1245,7 +1272,7 @@ watch(effectiveAutoSendEnabled, (enabled) => {
             rows="1"
             :class="[
               textareaClasses,
-              'block w-full cursor-text resize-none overflow-y-auto bg-transparent px-0 font-medium text-slate-800 outline-none placeholder:text-slate-400 scrollbar-none dark:text-neutral-50 dark:placeholder:text-neutral-400',
+              'block w-full cursor-text resize-none overflow-y-auto bg-transparent px-0 font-medium text-slate-800 outline-none placeholder:text-slate-500 scrollbar-none dark:text-neutral-50 dark:placeholder:text-neutral-400',
               {
                 'transition-colors-none placeholder:transition-colors-none': themeColorsHueDynamic,
               },
@@ -1270,7 +1297,7 @@ watch(effectiveAutoSendEnabled, (enabled) => {
           type="button"
           :class="[
             sendButtonClasses,
-            'shrink-0 flex items-center justify-center gap-2 font-medium outline-none transition-all duration-200 active:scale-95',
+            'shrink-0 flex items-center justify-center gap-2 font-medium outline-none transition-colors duration-150',
             canSendMessage
               ? 'bg-primary-500 text-white shadow-sm hover:bg-primary-600'
               : 'cursor-not-allowed bg-slate-100 text-slate-400 dark:bg-white/8 dark:text-neutral-500',

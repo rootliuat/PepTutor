@@ -1,37 +1,50 @@
 <script setup lang="ts">
+import { useChatSessionStore } from '@proj-airi/stage-ui/stores/chat/session-store'
 import { useLessonStore } from '@proj-airi/stage-ui/stores/lesson'
 import { useLessonAiriRuntimeStore } from '@proj-airi/stage-ui/stores/lesson-airi-runtime'
-import { segmentLessonTeacherReply } from '@proj-airi/stage-ui/utils/lesson-text'
+import { resolveLessonChatMessageText } from '@proj-airi/stage-ui/stores/lesson-chat-history'
+import {
+  joinLessonVisibleSegmentsForDisplay,
+  normalizeLessonVisibleSegments,
+  sanitizeLessonVisibleText,
+} from '@proj-airi/stage-ui/utils/lesson-text'
 import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
 
 const lessonStore = useLessonStore()
 const lessonAiriRuntime = useLessonAiriRuntimeStore()
+const chatSessionStore = useChatSessionStore()
 
-const { currentPageTitle, currentTeacherPrompt, activeTurn } = storeToRefs(lessonStore)
+const { currentTeacherPrompt, activeTurn, transcript } = storeToRefs(lessonStore)
 const { lastRecognizedText, liveTranscriptText } = storeToRefs(lessonAiriRuntime)
+const { messages } = storeToRefs(chatSessionStore)
 
-const subtitleSegments = computed(() => {
-  const activeSegments = segmentLessonTeacherReply(activeTurn.value?.teacher_response || '')
-  if (activeSegments.length > 0)
-    return activeSegments
+const subtitleText = computed(() => {
+  const latestTranscriptText = sanitizeLessonVisibleText(
+    [...transcript.value].reverse().find(entry => entry.speaker === 'teacher')?.text || '',
+  )
+  if (latestTranscriptText)
+    return latestTranscriptText
 
-  const promptSegments = segmentLessonTeacherReply(currentTeacherPrompt.value || '')
-  if (promptSegments.length > 0)
-    return promptSegments
+  const latestAssistantMessage = [...messages.value].reverse().find(message => message.role === 'assistant')
+  const latestAssistantText = latestAssistantMessage
+    ? sanitizeLessonVisibleText(resolveLessonChatMessageText(latestAssistantMessage))
+    : ''
+  if (latestAssistantText)
+    return latestAssistantText
 
-  return ['等待老师话术...']
+  if (activeTurn.value) {
+    const segments = normalizeLessonVisibleSegments(
+      activeTurn.value.teacher_visible_segments,
+      activeTurn.value.teacher_response,
+    )
+    const text = joinLessonVisibleSegmentsForDisplay(segments)
+    if (text)
+      return text
+  }
+
+  return sanitizeLessonVisibleText(currentTeacherPrompt.value || '') || '等待老师话术...'
 })
-const subtitleSpeakerLabel = computed(() =>
-  activeTurn.value?.turn_label === 'page_entry'
-    ? '米粒老师开场讲解'
-    : '米粒老师当前台词',
-)
-const subtitleContext = computed(() =>
-  activeTurn.value?.block_uid
-  || currentPageTitle.value
-  || 'lesson runtime',
-)
 </script>
 
 <template>
@@ -44,28 +57,15 @@ const subtitleContext = computed(() =>
       </div>
 
       <div class="min-w-0 flex-1">
-        <div class="flex flex-wrap items-center gap-2 text-[11px] text-sky-700/72 font-semibold tracking-[0.22em] uppercase dark:text-cyan-100/72">
-          <span>{{ subtitleSpeakerLabel }}</span>
-          <span class="rounded-full bg-sky-100/80 px-2.5 py-1 text-[10px] text-slate-500 tracking-[0.18em] dark:bg-white/8 dark:text-neutral-200/85">
-            {{ subtitleContext }}
-          </span>
+        <div class="whitespace-pre-wrap text-sm text-slate-900 font-semibold leading-6 md:text-lg dark:text-white md:leading-7">
+          {{ subtitleText }}
         </div>
 
-        <div class="mt-2 text-sm text-slate-900 font-semibold leading-6 space-y-1.5 md:text-lg dark:text-white md:leading-7">
-          <div
-            v-for="(segment, index) in subtitleSegments"
-            :key="`${subtitleContext}:${index}:${segment}`"
-          >
-            {{ segment }}
-          </div>
-        </div>
-
-        <div class="mt-2.5 flex flex-wrap items-center gap-2 text-xs text-slate-500 dark:text-neutral-200/78">
-          <span class="rounded-full bg-sky-100/70 px-3 py-1.5 dark:bg-white/8">
-            {{ currentPageTitle }}
-          </span>
+        <div
+          v-if="liveTranscriptText || lastRecognizedText"
+          class="mt-2.5 flex flex-wrap items-center gap-2 text-xs text-slate-500 dark:text-neutral-200/78"
+        >
           <span
-            v-if="liveTranscriptText || lastRecognizedText"
             class="max-w-full truncate rounded-full bg-emerald-100/80 px-3 py-1.5 text-emerald-700 dark:bg-emerald-400/12 dark:text-emerald-100/90"
           >
             实时转写：{{ liveTranscriptText || lastRecognizedText }}

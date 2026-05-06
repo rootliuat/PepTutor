@@ -1,7 +1,11 @@
 import { describe, expect, it } from 'vitest'
 
 import {
+  buildLessonVisibleSegments,
   firstLessonCaptionSegment,
+  joinLessonVisibleSegmentsForDisplay,
+  joinLessonVisibleSegmentsForSpeech,
+  normalizeLessonVisibleSegments,
   sanitizeLessonVisibleText,
   segmentLessonTeacherReply,
   stripLessonMarkdown,
@@ -52,5 +56,56 @@ describe('segmentLessonTeacherReply', () => {
 
   it('does not use an isolated translation fragment as the caption', () => {
     expect(firstLessonCaptionSegment('（我饿了）。\n跟我读：I\'m hungry.')).toBe('跟我读：I\'m hungry.')
+  })
+})
+
+describe('lesson visible segments', () => {
+  it('builds an ordered display/TTS segment contract from teacher text', () => {
+    const segments = buildLessonVisibleSegments('好，那我们开始第一块。\n先看看这个词你认不认识：salad')
+
+    expect(segments).toMatchObject([
+      {
+        sequence: 0,
+        segment_kind: 'ack',
+        display_text: '好，那我们开始第一块。',
+        tts_text: '好，那我们开始第一块。',
+      },
+      {
+        sequence: 1,
+        segment_kind: 'scaffold',
+        display_text: '先看看这个词你认不认识：salad',
+        caption_text: '先看看这个词你认不认识：salad',
+      },
+    ])
+    expect(joinLessonVisibleSegmentsForDisplay(segments)).toBe('好，那我们开始第一块。\n先看看这个词你认不认识：salad')
+    expect(joinLessonVisibleSegmentsForSpeech(segments)).toBe('好，那我们开始第一块。 先看看这个词你认不认识：salad')
+  })
+
+  it('normalizes backend-provided segments and falls back when they are empty', () => {
+    expect(normalizeLessonVisibleSegments([
+      {
+        display_text: '[neutral] 好。\n[见TB-G5S1U3-P25-D1]',
+        tts_text: '好。',
+        sequence: 2,
+        segment_kind: 'unknown',
+      },
+      {
+        display_text: '',
+      },
+    ], '跟我读：salad')).toMatchObject([
+      {
+        sequence: 2,
+        display_text: '好。',
+        tts_text: '好。',
+        segment_kind: 'ack',
+      },
+    ])
+
+    expect(normalizeLessonVisibleSegments([], '跟我读：salad')).toMatchObject([
+      {
+        display_text: '跟我读：salad',
+        segment_kind: 'action',
+      },
+    ])
   })
 })

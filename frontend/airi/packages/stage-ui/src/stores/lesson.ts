@@ -27,7 +27,11 @@ import {
   lessonPilotPageOptions,
 } from '../types/lesson'
 import { resolveLessonPageUid } from '../utils/lesson-route'
-import { stripLessonMarkdown } from '../utils/lesson-text'
+import {
+  joinLessonVisibleSegmentsForSpeech,
+  normalizeLessonVisibleSegments,
+  stripLessonMarkdown,
+} from '../utils/lesson-text'
 import { resolvePepTutorRuntimeEnv } from '../utils/peptutor-runtime-config'
 import { useSharedChatHooks } from './chat/hooks'
 import { useLessonAiriRuntimeStore } from './lesson-airi-runtime'
@@ -113,6 +117,19 @@ function buildTranscriptEntry(
     created_at: Date.now(),
     ...entry,
   }
+}
+
+function resolveTeacherVisibleSegments(result: LessonTurnResult) {
+  return normalizeLessonVisibleSegments(result.teacher_visible_segments, result.teacher_response)
+}
+
+function resolveTeacherReplayText(result: LessonTurnResult | null | undefined, fallbackText: string) {
+  if (!result || !result.teacher_visible_segments?.length)
+    return stripLessonMarkdown(fallbackText)
+
+  const segments = resolveTeacherVisibleSegments(result)
+  const segmentedSpeech = stripLessonMarkdown(joinLessonVisibleSegmentsForSpeech(segments))
+  return segmentedSpeech || stripLessonMarkdown(fallbackText)
 }
 
 type LessonAiriActionProfile = Omit<LessonAiriActionPayload, 'teaching_action' | 'evaluation' | 'reason' | 'turn_label'>
@@ -483,7 +500,7 @@ export const useLessonStore = defineStore('lesson', () => {
   })
 
   async function replayTeacherPrompt(text: string, reason: string = 'lesson-teacher-prompt', turn?: LessonTurnResult | null) {
-    const normalizedText = stripLessonMarkdown(text)
+    const normalizedText = resolveTeacherReplayText(turn, text)
     if (!normalizedText) {
       return
     }
@@ -881,6 +898,7 @@ export const useLessonStore = defineStore('lesson', () => {
     const teacherEntry = buildTranscriptEntry({
       speaker: 'teacher',
       text: result.teacher_response,
+      segments: resolveTeacherVisibleSegments(result),
       turn_label: result.turn_label,
       teaching_action: result.teaching_action,
       retrieval_mode: result.retrieval_mode,
@@ -1127,6 +1145,7 @@ export const useLessonStore = defineStore('lesson', () => {
     transcript.value.push(buildTranscriptEntry({
       speaker: 'teacher',
       text,
+      segments: activeTurn.value ? resolveTeacherVisibleSegments(activeTurn.value) : normalizeLessonVisibleSegments(null, text),
       local_only: true,
       turn_label: activeTurn.value?.turn_label,
       teaching_action: activeTurn.value?.teaching_action,

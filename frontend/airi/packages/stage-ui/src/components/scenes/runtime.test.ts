@@ -185,6 +185,18 @@ describe('createLessonSpeechSegmentStream', () => {
     expect(segments[0]?.text).toBe(text)
     expect(segments[0]?.reason).toBe('flush')
   })
+
+  it('keeps lesson utterance line breaks in one TTS request', async () => {
+    const text = '好，那我们开始第一块。\n先看看这个词你认不认识：salad'
+    const segments = await readSegments(createLessonSpeechSegmentStream(
+      createTokenStream(text),
+      { streamId: 'stream-2', intentId: 'intent-2' },
+    ))
+
+    expect(segments).toHaveLength(1)
+    expect(segments[0]?.text).toBe(text)
+    expect(segments[0]?.reason).toBe('flush')
+  })
 })
 
 describe('resolveLive2dPerformanceMotion', () => {
