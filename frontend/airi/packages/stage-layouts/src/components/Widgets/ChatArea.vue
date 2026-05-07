@@ -152,7 +152,7 @@ const microphoneStatusLabel = computed(() => {
   if (isListening.value && normalizedVolume.value >= 0.08)
     return '学生正在说话'
   if (isListening.value)
-    return '正在听，识别后会自动发送'
+    return effectiveAutoSendEnabled.value ? '正在听，识别后会自动发送' : '正在听，识别后会填入输入框'
   if (enabled.value && stream.value)
     return '麦克风已开，等待语音'
   if (enabled.value)
