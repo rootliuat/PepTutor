@@ -36,6 +36,22 @@ PR #18 changes the first visual focus of Sidebar: it should now show the classro
 
 Use one or two pages, not every regression page.
 
+Optional P7.1 strategy demo slice:
+
+```text
+TB-G5S1U3-P26
+TB-G5S1U3-P24
+```
+
+Purpose:
+
+```text
+Show that reviewed page strategy data can control a two-page demo path when
+PEPTUTOR_TEACHING_STRATEGY_RUNTIME=1 is explicitly enabled.
+P26 demonstrates ow phonics: /aʊ/ cow, flower, wow, down; /oʊ/ slow, snow, yellow, window.
+P24 demonstrates food/drink Let’s try + Let’s talk with restaurant role-play.
+```
+
 Recommended:
 
 ```text
@@ -111,6 +127,26 @@ It's near ...
 ```
 
 Do not claim this solves every possible location dialogue or role-play case.
+
+## 5a. P7.1 Teaching Strategy Runtime Demo Slice
+
+Safe explanation:
+
+```text
+P7.1 is a reviewed-strategy runtime demo slice for two pages, not full 255-page
+strategy coverage. Strategy Lock gives the live classroom a checked step,
+allowed words, allowed actions, blocked actions, completion rule, and transition
+rule. Its priority is Strategy State > TeachingMove > Page Strategy > Scoped
+Evidence > RAG. RAG/RAGFlow remain evidence only.
+```
+
+Demo setup if this slice is shown:
+
+```bash
+PEPTUTOR_TEACHING_STRATEGY_RUNTIME=1 ./scripts/start_lesson_dev.sh
+```
+
+Do not claim P7.1 is default-on or complete for all pages.
 
 ## 6. Curriculum Graph Audit Talking Points
 

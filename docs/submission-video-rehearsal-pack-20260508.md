@@ -77,10 +77,17 @@ Optional add-on after PR #18/#19:
 前端这里也做了演示层收口：Sidebar 默认先显示课堂对话记录，调试信息仍可展开；同时减少了默认渲染压力，不改变后端课堂逻辑。
 ```
 
+Optional add-on for P7.1:
+
+```text
+如果需要展示 reviewed strategy 进入课堂控制链路，可以用 PEPTUTOR_TEACHING_STRATEGY_RUNTIME=1 启动两页 demo slice。TB-G5S1U3-P26 展示 ow phonics 的分步策略，TB-G5S1U3-P24 展示食物饮料的 Let’s try / Let’s talk 策略。这个 slice 证明 Strategy State 可以约束步骤、可用词和下一步动作，但不是全教材默认启用。
+```
+
 What not to say:
 
 ```text
 不要说 RAGFlow 或 agentic harness 在 live lesson 里控制路由。
+不要说 P7.1 已经覆盖全部 255 页。
 ```
 
 Fallback if demo fails:
