@@ -2,6 +2,8 @@
 .env.*
 *.env
 *.env.local
+!/.env.example
+!backend/LightRAG/.env.example
 
 # Python / JS local state
 __pycache__/
