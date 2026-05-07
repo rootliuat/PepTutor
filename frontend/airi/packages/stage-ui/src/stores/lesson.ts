@@ -28,6 +28,7 @@ import {
 } from '../types/lesson'
 import { resolveLessonPageUid } from '../utils/lesson-route'
 import {
+  deriveLessonMessagePayload,
   joinLessonVisibleSegmentsForSpeech,
   normalizeLessonVisibleSegments,
   stripLessonMarkdown,
@@ -125,11 +126,11 @@ function resolveTeacherVisibleSegments(result: LessonTurnResult) {
 
 function resolveTeacherReplayText(result: LessonTurnResult | null | undefined, fallbackText: string) {
   if (!result || !result.teacher_visible_segments?.length)
-    return stripLessonMarkdown(fallbackText)
+    return deriveLessonMessagePayload(stripLessonMarkdown(fallbackText)).ttsText
 
   const segments = resolveTeacherVisibleSegments(result)
   const segmentedSpeech = stripLessonMarkdown(joinLessonVisibleSegmentsForSpeech(segments))
-  return segmentedSpeech || stripLessonMarkdown(fallbackText)
+  return deriveLessonMessagePayload(segmentedSpeech || stripLessonMarkdown(fallbackText)).ttsText
 }
 
 type LessonAiriActionProfile = Omit<LessonAiriActionPayload, 'teaching_action' | 'evaluation' | 'reason' | 'turn_label'>

@@ -96,6 +96,7 @@ const showStage = ref(true)
 const stageModelRecoveryInFlight = ref(false)
 const viewUpdateCleanups: Array<() => void> = []
 const pageVisible = ref(typeof document === 'undefined' ? true : document.visibilityState !== 'hidden')
+const live2dPlaybackPaused = computed(() => Boolean(props.paused) || !pageVisible.value)
 
 // Caption + Presentation broadcast channels
 type CaptionChannelEvent
@@ -124,6 +125,8 @@ const lipSyncFallbackEnabled = ref(false)
 const lipSyncLoopId = ref<number>()
 const lipSyncTimeDomainBuffer = ref<Float32Array<ArrayBuffer>>()
 const live2dLipSync = ref<Live2DLipSync>()
+let lastReactiveMouthUpdateAt = 0
+const lessonMouthReactiveUpdateIntervalMs = 33
 const live2dLipSyncOptions: Live2DLipSyncOptions = {
   cap: 1,
   volumeScale: 1,
@@ -151,6 +154,14 @@ const lessonMouthIntensity = computed(() => lessonAiriRuntimeRefs?.currentMouthI
 const lessonInterruptPolicy = computed(() => lessonAiriRuntimeRefs?.currentInterruptPolicy.value ?? 'barge_in_allowed')
 const canDriveLessonMouthOpen = computed(() => !props.lessonSafe || (lessonAiriRuntimeRefs?.canDriveMouthOpen.value ?? false))
 const lessonPerformancePlan = computed(() => lessonAiriRuntimeRefs?.currentPerformancePlan.value ?? null)
+const effectiveLive2dMaxFps = computed(() => {
+  if (!props.lessonSafe)
+    return live2dMaxFps.value
+
+  return live2dMaxFps.value > 0 ? live2dMaxFps.value : 30
+})
+const effectiveThemeColorsHueDynamic = computed(() => props.lessonSafe ? false : themeColorsHueDynamic.value)
+const effectiveLive2dShadowEnabled = computed(() => props.lessonSafe ? false : live2dShadowEnabled.value)
 
 const { currentMotion, availableMotions } = storeToRefs(live2dStore)
 
@@ -648,11 +659,20 @@ function startLipSyncLoop() {
   if (lipSyncLoopId.value)
     return
 
-  const tick = () => {
+  const applyReactiveMouthState = (mouthOpen: number, mouthForm: number, now: number) => {
+    const forceClosed = mouthOpen <= 0 && mouthForm === 0 && (mouthOpenSize.value !== 0 || mouthFormValue.value !== 0)
+    if (!forceClosed && now - lastReactiveMouthUpdateAt < lessonMouthReactiveUpdateIntervalMs)
+      return
+
+    lastReactiveMouthUpdateAt = now
+    mouthOpenSize.value = mouthOpen
+    mouthFormValue.value = mouthForm
+  }
+
+  const tick = (now: number) => {
     if (!pageVisible.value) {
       lipSyncLoopId.value = undefined
-      mouthOpenSize.value = 0
-      mouthFormValue.value = 0
+      applyReactiveMouthState(0, 0, now)
       return
     }
 
@@ -660,16 +680,13 @@ function startLipSyncLoop() {
 
     if (!nowSpeaking.value || !canDriveLessonMouthOpen.value || !live2dLipSync.value) {
       if (!nowSpeaking.value || !canDriveLessonMouthOpen.value) {
-        mouthOpenSize.value = 0
-        mouthFormValue.value = 0
+        applyReactiveMouthState(0, 0, now)
       }
       else if (lipSyncFallbackEnabled.value) {
-        mouthOpenSize.value = applyLessonMouthIntensity(analyserMouthOpen, lessonMouthIntensity.value)
-        mouthFormValue.value = 0
+        applyReactiveMouthState(applyLessonMouthIntensity(analyserMouthOpen, lessonMouthIntensity.value), 0, now)
       }
       else {
-        mouthOpenSize.value = 0
-        mouthFormValue.value = 0
+        applyReactiveMouthState(0, 0, now)
       }
     }
     else {
@@ -679,8 +696,7 @@ function startLipSyncLoop() {
         mouthIntensity: lessonMouthIntensity.value,
         vowelWeights: live2dLipSync.value.getVowelWeights(),
       })
-      mouthOpenSize.value = mouthState.mouthOpen
-      mouthFormValue.value = mouthState.mouthForm
+      applyReactiveMouthState(mouthState.mouthOpen, mouthState.mouthForm, now)
     }
     lipSyncLoopId.value = requestAnimationFrame(tick)
   }
@@ -718,7 +734,7 @@ function resetLive2dLipSync() {
 function syncLipSyncLoop() {
   if (shouldRunLive2dLipSyncLoop({
     stageModelRenderer: stageModelRenderer.value,
-    paused: Boolean(props.paused),
+    paused: live2dPlaybackPaused.value,
     pageVisible: pageVisible.value,
   }) && (lipSyncStarted.value || lipSyncFallbackEnabled.value)) {
     startLipSyncLoop()
@@ -1151,7 +1167,7 @@ onMounted(async () => {
   await db.value.execute(`CREATE TABLE memory_test (vec FLOAT[768]);`)
 })
 
-watch([stageModelRenderer, () => props.paused], ([renderer]) => {
+watch([stageModelRenderer, live2dPlaybackPaused], ([renderer]) => {
   if (renderer === 'vrm') {
     void ensureVrmAssetsLoaded()
   }
@@ -1244,18 +1260,18 @@ defineExpose({
         :focus-at="focusAt"
         :mouth-open-size="mouthOpenSize"
         :mouth-form-value="mouthFormValue"
-        :paused="paused"
+        :paused="live2dPlaybackPaused"
         :x-offset="xOffset"
         :y-offset="yOffset"
         :scale="scale"
         :disable-focus-at="live2dDisableFocus"
         :theme-colors-hue="themeColorsHue"
-        :theme-colors-hue-dynamic="themeColorsHueDynamic"
+        :theme-colors-hue-dynamic="effectiveThemeColorsHueDynamic"
         :live2d-idle-animation-enabled="live2dIdleAnimationEnabled"
         :live2d-auto-blink-enabled="live2dAutoBlinkEnabled"
         :live2d-force-auto-blink-enabled="live2dForceAutoBlinkEnabled"
-        :live2d-shadow-enabled="live2dShadowEnabled"
-        :live2d-max-fps="live2dMaxFps"
+        :live2d-shadow-enabled="effectiveLive2dShadowEnabled"
+        :live2d-max-fps="effectiveLive2dMaxFps"
         @error="handleStageModelError"
       />
       <ThreeScene
@@ -1265,7 +1281,7 @@ defineExpose({
         min-w="50% <lg:full" min-h="100 sm:100" h-full w-full flex-1
         :model-src="stageModelSelectedUrl"
         :idle-animation="vrmIdleAnimation"
-        :paused="paused"
+        :paused="live2dPlaybackPaused"
         :show-axes="stageViewControlsEnabled"
         :current-audio-source="currentAudioSource"
         @error="handleStageModelError"

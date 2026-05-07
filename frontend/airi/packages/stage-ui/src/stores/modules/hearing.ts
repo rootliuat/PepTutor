@@ -264,6 +264,7 @@ export const useHearingSpeechInputPipeline = defineStore('modules:hearing:speech
 
   const DEFAULT_SAMPLE_RATE = 16000
   const DEFAULT_STREAM_IDLE_TIMEOUT = 15000
+  const STREAM_STOP_TEXT_TIMEOUT_MS = 1500
 
   function float32ToInt16(buffer: Float32Array) {
     const output = new Int16Array(buffer.length)
@@ -321,6 +322,25 @@ export const useHearingSpeechInputPipeline = defineStore('modules:hearing:speech
     }
   }
 
+  async function waitForStreamTextWithTimeout(
+    textPromise: Promise<string>,
+    timeoutMs = STREAM_STOP_TEXT_TIMEOUT_MS,
+  ) {
+    let timeout: ReturnType<typeof setTimeout> | undefined
+    try {
+      return await Promise.race([
+        textPromise,
+        new Promise<undefined>((resolve) => {
+          timeout = setTimeout(() => resolve(undefined), timeoutMs)
+        }),
+      ])
+    }
+    finally {
+      if (timeout)
+        clearTimeout(timeout)
+    }
+  }
+
   async function stopStreamingTranscription(abort?: boolean, disposeProviderId?: string) {
     const session = streamingSession.value
     if (!session)
@@ -329,8 +349,8 @@ export const useHearingSpeechInputPipeline = defineStore('modules:hearing:speech
     // Special handling for Web Speech API
     if (session.providerId === 'browser-web-speech-api') {
       try {
-        const reason = new DOMException(abort ? 'Aborted' : 'Stopped', 'AbortError')
-        if (!session.abortController.signal.aborted) {
+        const reason = new DOMException('Aborted', 'AbortError')
+        if (abort && !session.abortController.signal.aborted) {
           session.abortController.abort(reason)
         }
 
@@ -338,6 +358,9 @@ export const useHearingSpeechInputPipeline = defineStore('modules:hearing:speech
         const result = session.result as any
         if (result?.recognition) {
           try {
+            if (!abort) {
+              result.recognition.continuous = false
+            }
             result.recognition.stop()
           }
           catch (err) {
@@ -355,8 +378,12 @@ export const useHearingSpeechInputPipeline = defineStore('modules:hearing:speech
       streamingSession.value = undefined
 
       if (session.result?.mode === 'stream') {
+        if (abort) {
+          return
+        }
+
         try {
-          const text = await session.result.text
+          const text = await waitForStreamTextWithTimeout(session.result.text)
           return text
         }
         catch (err) {
@@ -370,8 +397,9 @@ export const useHearingSpeechInputPipeline = defineStore('modules:hearing:speech
 
     try {
       const reason = new DOMException(abort ? 'Aborted' : 'Stopped', 'AbortError')
-      // Ensure provider transports (e.g., Aliyun NLS) are signaled to stop over websocket.
-      if (!session.abortController.signal.aborted) {
+      // Abort is destructive. For push-to-talk release we close the audio stream instead,
+      // allowing websocket providers to emit their final transcript before finishing.
+      if (abort && !session.abortController.signal.aborted) {
         session.abortController.abort(reason)
       }
 
@@ -396,7 +424,7 @@ export const useHearingSpeechInputPipeline = defineStore('modules:hearing:speech
 
     if (session.result?.mode === 'stream') {
       try {
-        const text = await session.result.text
+        const text = await waitForStreamTextWithTimeout(session.result.text)
 
         if (disposeProviderId) {
           await providersStore.disposeProviderInstance(disposeProviderId)
