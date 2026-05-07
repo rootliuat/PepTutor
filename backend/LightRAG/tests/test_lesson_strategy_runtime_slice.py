@@ -90,6 +90,36 @@ def test_runtime_p26_bad_dialogue_regression_stays_oral_and_strategy_locked():
     _assert_no_internal_labels(joined)
 
 
+def test_runtime_p26_first_block_then_cow_does_not_return_to_module_choice():
+    runtime = LessonRuntime(
+        PilotLessonCatalog(),
+        debug_signals_enabled=True,
+        strategy_runtime_enabled=True,
+    )
+    state = runtime.start_page("TB-G5S1U3-P26", "student-1").state
+
+    first_block = runtime.handle_turn(state, "吃第一块")
+    cow = runtime.handle_turn(first_block.state, "cow")
+    repeat_choice = runtime.handle_turn(cow.state, "第一块")
+    joined = "\n".join(
+        [
+            first_block.teacher_response,
+            cow.teacher_response,
+            repeat_choice.teacher_response,
+        ]
+    )
+
+    assert "cow 属于 /aʊ/" in joined
+    assert "先选入口" not in joined
+    assert "你想先学哪一块" not in joined
+    assert "可以说“第一块”" not in joined
+    assert repeat_choice.state.strategy_state is not None
+    assert repeat_choice.state.strategy_state["step_id"] == "p26_s2_au_group"
+    assert repeat_choice.debug_signals is not None
+    assert repeat_choice.debug_signals.response_audit is not None
+    assert repeat_choice.debug_signals.response_audit.route == "strategy_runtime"
+
+
 def test_runtime_p24_strategy_opens_with_food_scene_not_generic_block_choice():
     runtime = LessonRuntime(
         PilotLessonCatalog(),

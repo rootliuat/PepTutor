@@ -135,7 +135,7 @@ def render_strategy_turn(
         )
     if _looks_like_completion_claim(learner_input):
         return _render_completion_claim(strategy=strategy, step=step)
-    choice_step = _module_choice_step(strategy, learner_input)
+    choice_step = _module_choice_step(strategy, learner_input, step, strategy_state)
     if choice_step is not None:
         return _render_step_entry(strategy=strategy, step=choice_step)
     if strategy.module_type == "lets_spell":
@@ -225,11 +225,39 @@ def _render_step_entry(
 def _module_choice_step(
     strategy: PageTeachingStrategy,
     learner_input: str,
+    current_step: PageTeachingStrategyStep,
+    strategy_state: dict[str, Any] | None,
 ) -> PageTeachingStrategyStep | None:
+    if not _strategy_accepts_module_choice(
+        strategy=strategy,
+        current_step=current_step,
+        strategy_state=strategy_state,
+    ):
+        return None
     for marker, index in _ORDINAL_TO_INDEX.items():
         if marker in learner_input:
             return strategy.steps[min(index, len(strategy.steps) - 1)]
     return None
+
+
+def _strategy_accepts_module_choice(
+    *,
+    strategy: PageTeachingStrategy,
+    current_step: PageTeachingStrategyStep,
+    strategy_state: dict[str, Any] | None,
+) -> bool:
+    if strategy.module_type != "lets_spell":
+        return True
+    if current_step.step_id != strategy.initial_step().step_id:
+        return False
+    if not isinstance(strategy_state, dict):
+        return True
+    if _state_focus_word(strategy_state):
+        return False
+    return str(strategy_state.get("completion_status") or "") in {
+        "initialized",
+        "step_entry",
+    }
 
 
 def _render_meaning_request(
