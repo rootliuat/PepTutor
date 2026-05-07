@@ -19,7 +19,9 @@ function stripLessonMarkdownSyntax(text: string): string {
 const visibleEmotionTagPattern = /^\s*\[(?:neutral|joy|happy|sad|thinking|angry|surprised|question|confused|calm|serious|encouraging|gentle)[^\]]*\]\s*/gim
 const visibleSectionHeaderPattern = /\s*\[(?:教材知识点摘要|应用场景|练习建议)\]\s*/g
 const visibleSourceRefPattern = /\s*\[见\s*TB-[^\]]+\]\s*/gi
-const visibleInternalLabelsPattern = /英文目标\s*[:：]\s*|动作\s*[:：]\s*|target_role|expected_student_action|answer_scope|TeachingMove|\b[\w-]*route[\w-]*\b|\b[\w-]*policy[\w-]*\b|\bdebug\b|statepatch/gi
+const visibleChineseInternalLabelsPattern = /(?:英文目标|动作)\s*[:：]\s*/g
+const visibleEnglishInternalTokenPattern = /target_role|expected_student_action|answer_scope|TeachingMove|\b[\w-]*route[\w-]*\b|\b[\w-]*policy[\w-]*\b|\bdebug\b|statepatch/i
+const visibleInternalParentheticalNotePattern = /[（(][^（）()]{0,80}(?:学生回答|给反馈|再给|等待学生|待学生|先听学生|内部备注|课堂备注|不要读)[^（）()]{0,80}[）)]/g
 const visibleBlankLinePattern = /[ \t]*\n[ \t]*/g
 const displaySegmentMaxLength = 90
 export const DEFAULT_LESSON_TRANSCRIPT_WINDOW_SIZE = 50
@@ -53,22 +55,43 @@ export interface LessonVisibleChatMessage {
   createdAt?: unknown
 }
 
-export interface LessonVisibleMessageWindow<T extends LessonVisibleChatMessage> {
+export interface LessonVisibleMessageWindow<T> {
   visibleMessages: T[]
   hiddenCount: number
   totalCount: number
 }
 
+export interface LessonMessagePayload {
+  visibleText: string
+  ttsText: string
+  captionText: string
+  debugText: string
+}
+
 export function sanitizeLessonVisibleText(text: string): string {
-  return stripLessonMarkdownSyntax(text)
+  return stripLessonInternalDebugLines(stripLessonMarkdownSyntax(text))
     .replace(visibleEmotionTagPattern, '')
     .replace(visibleSectionHeaderPattern, match => match.includes('\n') ? '\n' : ' ')
     .replace(visibleSourceRefPattern, match => match.includes('\n') ? '\n' : ' ')
-    .replace(visibleInternalLabelsPattern, '')
+    .replace(visibleChineseInternalLabelsPattern, '')
+    .replace(visibleInternalParentheticalNotePattern, '')
     .replace(visibleBlankLinePattern, '\n')
     .replace(/[ \t]{2,}/g, ' ')
     .replace(/\n{3,}/g, '\n\n')
     .trim()
+}
+
+export function deriveLessonMessagePayload(rawText: string): LessonMessagePayload {
+  const visibleText = sanitizeLessonVisibleText(rawText)
+  const ttsText = sanitizeLessonVisibleText(rawText)
+  const captionText = firstLessonCaptionSegment(rawText) || visibleText
+
+  return {
+    visibleText,
+    ttsText,
+    captionText,
+    debugText: rawText,
+  }
 }
 
 export function createLessonVisibleTextMemoizer(maxEntries = 200) {
@@ -183,37 +206,7 @@ export function joinLessonVisibleSegmentsForSpeech(segments: LessonVisibleSegmen
   return segments.map(segment => segment.tts_text || segment.display_text).filter(Boolean).join(' ')
 }
 
-export function coalesceAdjacentLessonVisibleMessages<T extends LessonVisibleChatMessage>(messages: T[]): T[] {
-  const merged: T[] = []
-
-  for (const message of messages) {
-    const text = message.text.trim()
-    if (!text)
-      continue
-
-    const previous = merged[merged.length - 1]
-    if (
-      previous
-      && previous.role === message.role
-      && message.role !== 'user'
-      && message.role !== 'error'
-    ) {
-      previous.id = `${previous.id}:${message.id}`
-      previous.text = [previous.text, text].filter(Boolean).join('\n')
-      previous.createdAt = message.createdAt ?? previous.createdAt
-      continue
-    }
-
-    merged.push({
-      ...message,
-      text,
-    })
-  }
-
-  return merged
-}
-
-export function windowLessonVisibleMessages<T extends LessonVisibleChatMessage>(
+export function windowLessonVisibleMessages<T>(
   messages: T[],
   maxVisible = DEFAULT_LESSON_TRANSCRIPT_WINDOW_SIZE,
 ): LessonVisibleMessageWindow<T> {
@@ -249,16 +242,26 @@ export function lessonVisibleMessagesRenderKey(messages: LessonVisibleChatMessag
 function splitVisibleLessonSentence(text: string, maxLength: number): string[] {
   const chunks: string[] = []
   let buffer = ''
+  let parentheticalDepth = 0
 
   for (const char of text) {
+    if (char === '（' || char === '(')
+      parentheticalDepth += 1
+
     buffer += char
-    if (/[。！？；!?;]/.test(char)) {
+
+    if (char === '）' || char === ')') {
+      parentheticalDepth = Math.max(0, parentheticalDepth - 1)
+      continue
+    }
+
+    if (parentheticalDepth === 0 && /[。！？；!?;]/.test(char)) {
       flushBuffer()
     }
-    else if (/[：:]/.test(char) && visibleTextLength(buffer) >= Math.min(36, maxLength)) {
+    else if (parentheticalDepth === 0 && /[：:]/.test(char) && visibleTextLength(buffer) >= Math.min(36, maxLength)) {
       flushBuffer()
     }
-    else if (visibleTextLength(buffer) >= maxLength && /[\s，,、]/.test(char)) {
+    else if (parentheticalDepth === 0 && visibleTextLength(buffer) >= maxLength && /[\s，,、]/.test(char)) {
       flushBuffer()
     }
   }
@@ -280,6 +283,19 @@ function visibleTextLength(text: string): number {
 
 function isIsolatedTranslationFragment(text: string): boolean {
   return /^["“”']?[（(][^）)]{1,24}[）)][。.!！?？]?["“”']?$/.test(text.trim())
+}
+
+function stripLessonInternalDebugLines(text: string): string {
+  return text
+    .split(/\n/)
+    .map((line) => {
+      const match = visibleEnglishInternalTokenPattern.exec(line)
+      if (!match)
+        return line
+      return line.slice(0, match.index).trimEnd()
+    })
+    .filter(line => line.trim())
+    .join('\n')
 }
 
 function inferLessonVisibleSegmentKind(text: string): LessonVisibleSegmentKind {

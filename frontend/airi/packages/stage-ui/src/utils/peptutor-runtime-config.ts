@@ -22,6 +22,7 @@ export type PepTutorRuntimeConfigKey = typeof pepTutorRuntimeConfigKeys[number]
 export type PepTutorRuntimeConfig = Partial<Record<PepTutorRuntimeConfigKey, string>>
 
 declare global {
+  // eslint-disable-next-line vars-on-top
   var __PEPTUTOR_RUNTIME_CONFIG__: PepTutorRuntimeConfig | undefined
 }
 

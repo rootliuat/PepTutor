@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest'
 
 import {
   buildLessonVisibleSegments,
-  coalesceAdjacentLessonVisibleMessages,
   createLessonVisibleTextMemoizer,
+  deriveLessonMessagePayload,
   firstLessonCaptionSegment,
   joinLessonVisibleSegmentsForDisplay,
   joinLessonVisibleSegmentsForSpeech,
@@ -22,25 +22,6 @@ describe('stripLessonMarkdown', () => {
 
   it('keeps link labels while removing markdown links and act tokens', () => {
     expect(stripLessonMarkdown('<|ACT {"emotion":"happy"}|>Read [hungry](https://example.com) aloud.')).toBe('Read hungry aloud.')
-  })
-})
-
-describe('coalesceAdjacentLessonVisibleMessages', () => {
-  it('keeps one teacher turn in one visible bubble when transcript segments arrive separately', () => {
-    expect(coalesceAdjacentLessonVisibleMessages([
-      { id: 'teacher-1', role: 'assistant', text: '好，那我们开始第一块。' },
-      { id: 'teacher-2', role: 'assistant', text: '先看看这个词你认不认识：salad' },
-      { id: 'learner-1', role: 'user', text: 'salad' },
-    ])).toMatchObject([
-      {
-        role: 'assistant',
-        text: '好，那我们开始第一块。\n先看看这个词你认不认识：salad',
-      },
-      {
-        role: 'user',
-        text: 'salad',
-      },
-    ])
   })
 })
 
@@ -87,7 +68,39 @@ describe('sanitizeLessonVisibleText', () => {
   it('removes internal labels from student-visible text', () => {
     expect(sanitizeLessonVisibleText(
       '[joy] 英文目标：确认歌唱比赛不在五月。动作：跟老师读一遍 No。target_role question route answer_turn_policy',
-    )).toBe('确认歌唱比赛不在五月。跟老师读一遍 No。 question')
+    )).toBe('确认歌唱比赛不在五月。跟老师读一遍 No。')
+  })
+
+  it('removes internal parenthetical classroom notes but keeps translation parentheses', () => {
+    expect(sanitizeLessonVisibleText(
+      '听这句：cow, snow, down —— 哪个词里的ow发音跟另外两个不同?（先听学生回答，再给反馈。）',
+    )).toBe('听这句：cow, snow, down —— 哪个词里的ow发音跟另外两个不同?')
+    expect(sanitizeLessonVisibleText('跟我读：I\'m hungry.（我饿了。）')).toBe('跟我读：I\'m hungry.（我饿了。）')
+  })
+})
+
+describe('deriveLessonMessagePayload', () => {
+  it('splits raw lesson reply into visible, TTS, caption, and debug channels', () => {
+    const payload = deriveLessonMessagePayload(
+      '[joy] 跟我读：I\'m hungry.（我饿了。）[见TB-G5S1U3-P31-B1]\n（先听学生回答，再给反馈。）',
+    )
+
+    expect(payload.visibleText).toBe('跟我读：I\'m hungry.（我饿了。）')
+    expect(payload.ttsText).toBe('跟我读：I\'m hungry.（我饿了。）')
+    expect(payload.captionText).toBe('跟我读：I\'m hungry.（我饿了。）')
+    expect(payload.debugText).toContain('[joy]')
+    expect(payload.debugText).toContain('先听学生回答')
+  })
+
+  it('removes internal classroom notes without treating normal translations as notes', () => {
+    const payload = deriveLessonMessagePayload(
+      '听这句：cow, snow, down —— 哪个词里的ow发音跟另外两个不同?（先听学生回答，再给反馈。）\n跟我读：It\'s near the door.（它在门附近。）',
+    )
+
+    expect(payload.visibleText).not.toContain('先听学生回答')
+    expect(payload.ttsText).not.toContain('先听学生回答')
+    expect(payload.visibleText).toContain('（它在门附近。）')
+    expect(payload.ttsText).toContain('（它在门附近。）')
   })
 })
 

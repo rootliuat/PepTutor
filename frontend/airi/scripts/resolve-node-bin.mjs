@@ -2,6 +2,8 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
+import process from 'node:process'
+
 import { createRequire } from 'node:module'
 
 const [, , packageName, binPath, startDir = process.cwd()] = process.argv
@@ -20,4 +22,4 @@ if (!fs.existsSync(resolvedBinPath)) {
   process.exit(1)
 }
 
-console.log(resolvedBinPath)
+console.info(resolvedBinPath)

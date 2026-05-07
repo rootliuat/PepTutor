@@ -12,8 +12,8 @@ import { resolveLessonChatMessageText as resolveMessageText, useLessonChatHistor
 import { useHearingStore } from '@proj-airi/stage-ui/stores/modules/hearing'
 import { useSpeechStore } from '@proj-airi/stage-ui/stores/modules/speech'
 import {
-  coalesceAdjacentLessonVisibleMessages,
   DEFAULT_LESSON_TRANSCRIPT_WINDOW_SIZE,
+  deriveLessonMessagePayload,
   joinLessonVisibleSegmentsForDisplay,
   lessonVisibleMessagesRenderKey,
   normalizeLessonVisibleSegments,
@@ -82,6 +82,7 @@ const displayedInputVolumeLevel = ref(inputVolumeLevel.value)
 let sidebarScrollFrame: number | undefined
 let sidebarRuntimeDisplayTimer: ReturnType<typeof setTimeout> | undefined
 type LessonSidebarMessage = LessonVisibleChatMessage & { role: 'assistant' | 'user' | 'error' }
+type LessonSidebarRawMessage = Omit<LessonSidebarMessage, 'text'> & { rawText: string }
 
 function lessonSidebarRoleForSpeaker(speaker: string): LessonSidebarMessage['role'] {
   if (speaker === 'learner')
@@ -95,78 +96,105 @@ function isLessonSidebarMessageRole(role: string): role is LessonSidebarMessage[
   return role === 'assistant' || role === 'user' || role === 'error'
 }
 
+function compactSidebarMessageText(text: string) {
+  return text.replace(/\s+/g, ' ').trim().toLocaleLowerCase()
+}
+
+function hasEquivalentSidebarMessage(messages: LessonSidebarRawMessage[], candidate: LessonSidebarRawMessage) {
+  const candidateText = compactSidebarMessageText(candidate.rawText)
+  if (!candidateText)
+    return true
+
+  return messages.some(message =>
+    message.role === candidate.role
+    && compactSidebarMessageText(message.rawText) === candidateText,
+  )
+}
+
 const historyMessages = computed(() =>
   (messages.value as unknown as ChatHistoryItem[]).filter(message => message.role !== 'system'),
 )
-const sidebarMessages = computed(() => {
-  const transcriptMessages: LessonSidebarMessage[] = transcript.value
+const sidebarRawMessages = computed(() => {
+  const transcriptMessages: LessonSidebarRawMessage[] = transcript.value
     .filter(entry => entry.speaker === 'teacher' || entry.speaker === 'learner' || entry.speaker === 'system')
     .map(entry => ({
       id: entry.id,
       role: lessonSidebarRoleForSpeaker(entry.speaker),
-      text: entry.speaker === 'teacher'
+      rawText: entry.speaker === 'teacher'
         ? joinLessonVisibleSegmentsForDisplay(normalizeLessonVisibleSegments(entry.segments, entry.text))
-        : sanitizeLessonVisibleText(entry.text),
+        : entry.text,
       createdAt: entry.created_at,
     }))
-    .filter(message => message.text)
+    .filter(message => message.rawText.trim())
 
-  const normalized: LessonSidebarMessage[] = historyMessages.value.flatMap((message, index) => {
+  const normalized: LessonSidebarRawMessage[] = historyMessages.value.flatMap((message, index) => {
     if (!isLessonSidebarMessageRole(message.role))
       return []
 
-    const text = sanitizeLessonVisibleText(resolveMessageText(message))
-    if (!text)
+    const rawText = resolveMessageText(message)
+    if (!rawText.trim())
       return []
 
     return [{
       id: message.id || `${message.role}:${message.createdAt || index}`,
       role: message.role,
-      text,
+      rawText,
       createdAt: message.createdAt,
     }]
   })
 
-  const messagesForDisplay = normalized.length > 0 ? [...normalized] : [...transcriptMessages]
-  if (normalized.length > 0) {
-    const existing = new Set(messagesForDisplay.map(message => `${message.role}:${message.text}`))
-    for (const message of transcriptMessages) {
-      const key = `${message.role}:${message.text}`
-      if (existing.has(key))
-        continue
-      messagesForDisplay.push(message)
-      existing.add(key)
+  const messagesForDisplay = [...normalized]
+  for (const transcriptMessage of transcriptMessages) {
+    if (!hasEquivalentSidebarMessage(messagesForDisplay, transcriptMessage)) {
+      messagesForDisplay.push(transcriptMessage)
     }
   }
 
   const streamingText = streamingMessage.value ? resolveMessageText(streamingMessage.value as ChatHistoryItem) : ''
-  const coalescedMessages = coalesceAdjacentLessonVisibleMessages(messagesForDisplay)
+  const visibleMessages = messagesForDisplay
+    .map(message => ({
+      ...message,
+      rawText: message.rawText.trim(),
+    }))
+    .filter(message => message.rawText)
   if (streamingText) {
-    coalescedMessages.push({
+    visibleMessages.push({
       id: 'streaming-message',
       role: 'assistant',
-      text: sanitizeLessonVisibleText(streamingText),
+      rawText: streamingText,
       createdAt: Date.now(),
     })
   }
 
-  return coalescedMessages
+  return visibleMessages
 })
-const sidebarMessageWindow = computed(() =>
+const sidebarRawMessageWindow = computed(() =>
   showFullTranscript.value
     ? {
-        visibleMessages: sidebarMessages.value,
+        visibleMessages: sidebarRawMessages.value,
         hiddenCount: 0,
-        totalCount: sidebarMessages.value.length,
+        totalCount: sidebarRawMessages.value.length,
       }
-    : windowLessonVisibleMessages(sidebarMessages.value, sidebarTranscriptWindowSize),
+    : windowLessonVisibleMessages(sidebarRawMessages.value, sidebarTranscriptWindowSize),
 )
-const sidebarVisibleMessages = computed(() => sidebarMessageWindow.value.visibleMessages)
-const hiddenSidebarMessageCount = computed(() => sidebarMessageWindow.value.hiddenCount)
-const conversationCountLabel = computed(() => `${sidebarMessages.value.length} 条对话`)
-const latestAssistantPreview = computed(() =>
-  [...sidebarMessages.value].reverse().find(message => message.role === 'assistant')?.text || '课堂开始后，对话记录会显示在这里。',
+const sidebarVisibleMessages = computed(() =>
+  sidebarRawMessageWindow.value.visibleMessages
+    .map(message => ({
+      ...message,
+      text: message.role === 'assistant'
+        ? deriveLessonMessagePayload(message.rawText).visibleText
+        : sanitizeLessonVisibleText(message.rawText),
+    }))
+    .filter(message => message.text),
 )
+const hiddenSidebarMessageCount = computed(() => sidebarRawMessageWindow.value.hiddenCount)
+const conversationCountLabel = computed(() => `${sidebarRawMessages.value.length} 条对话`)
+const latestAssistantPreview = computed(() => {
+  const latestAssistant = [...sidebarRawMessages.value].reverse().find(message => message.role === 'assistant')
+  return latestAssistant
+    ? deriveLessonMessagePayload(latestAssistant.rawText).visibleText
+    : '课堂开始后，对话记录会显示在这里。'
+})
 const historySessionRows = computed(() =>
   chatSessionStore.getSessionMetasForCharacter(PEPTUTOR_TEACHER_SESSION_CHARACTER_ID).filter(meta =>
     lessonChatHistoryStore.sessionBelongsToCurrentLessonIdentity(meta.sessionId),
@@ -494,13 +522,14 @@ function handleToolbarButton(item: { key: string }) {
     return
   }
 
+  if (item.key === 'layers') {
+    debugPanelOpen.value = !debugPanelOpen.value
+    return
+  }
+
   if (item.key === 'plus') {
     void createNewLessonSession()
   }
-}
-
-function handleDebugPanelToggle(event: Event) {
-  debugPanelOpen.value = (event.target as HTMLDetailsElement).open
 }
 
 const sidebarRuntimeStatus = computed(() => {
@@ -921,6 +950,7 @@ function resolveReplyPathLabel() {
             :class="[
               'h-8 w-8 flex items-center justify-center rounded-full text-slate-500 transition hover:bg-sky-100/75 dark:text-neutral-300 hover:text-slate-900 dark:hover:bg-white/8 dark:hover:text-white',
               item.key === 'history' && historyPanelOpen ? 'bg-sky-100/75 text-slate-900 dark:bg-white/10 dark:text-white' : '',
+              item.key === 'layers' && debugPanelOpen ? 'bg-sky-100/75 text-slate-900 dark:bg-white/10 dark:text-white' : '',
             ]"
             :aria-label="item.label"
             :title="item.label"
@@ -1078,105 +1108,80 @@ function resolveReplyPathLabel() {
       </div>
     </div>
 
-    <details
-      :open="debugPanelOpen"
-      class="mt-3 shrink-0 border border-sky-100/90 rounded-[20px] bg-white/62 shadow-[0_18px_44px_-34px_rgba(14,116,144,0.55)] dark:border-white/8 dark:bg-black/20"
-      data-testid="lesson-airi-visible-closure"
-      @toggle="handleDebugPanelToggle"
+    <div
+      v-if="debugPanelOpen"
+      class="mt-2 max-h-[15rem] shrink-0 overflow-y-auto border border-sky-100/90 rounded-[18px] bg-white/72 p-3 text-xs text-slate-600 shadow-[0_18px_44px_-36px_rgba(14,116,144,0.55)] dark:border-white/10 dark:bg-black/32 dark:text-neutral-300"
     >
-      <summary class="flex cursor-pointer list-none items-center justify-between gap-3 px-3 py-2 text-sm text-slate-700 font-semibold dark:text-neutral-100">
-        <span>状态详情 / 调试信息</span>
-        <span class="rounded-full bg-sky-100/75 px-2.5 py-1 text-[11px] text-slate-600 dark:bg-white/8 dark:text-neutral-300">
-          {{ debugPanelOpen ? '收起' : '展开' }}
-        </span>
-      </summary>
-
-      <div v-if="debugPanelOpen" class="px-3 pb-3">
-        <div class="flex items-start justify-between gap-3">
-          <div class="min-w-0">
-            <div class="text-[10px] text-slate-400 font-semibold tracking-[0.14em] uppercase dark:text-neutral-500">
-              米粒老师状态
-            </div>
-            <div
-              class="mt-1 truncate text-sm text-slate-900 font-semibold dark:text-white"
-              data-testid="lesson-airi-visible-state"
-            >
-              {{ visibleAiriState.label }}
-            </div>
-            <div
-              class="line-clamp-2 mt-0.5 text-[11px] text-slate-500 leading-4 dark:text-neutral-400"
-              data-testid="lesson-airi-visible-state-detail"
-            >
-              {{ visibleAiriState.detail }}
-            </div>
+      <div class="mb-2 flex items-center justify-between gap-2">
+        <div>
+          <div class="text-sm text-slate-900 font-semibold dark:text-white">
+            状态详情 / 调试信息
           </div>
-          <div
-            :class="[
-              'shrink-0 rounded-full px-2.5 py-1 text-[11px] font-semibold ring-1 ring-inset',
-              visibleAiriState.classes,
-            ]"
-          >
-            {{ visibleAiriState.label }}
+          <div class="text-[11px] text-slate-500 dark:text-neutral-400">
+            课堂观测信息，不参与学生对话。
           </div>
         </div>
+        <button
+          class="rounded-full bg-sky-100/75 px-3 py-1 text-[11px] text-slate-600 font-semibold transition dark:bg-white/8 hover:bg-sky-50 dark:text-neutral-200 dark:hover:bg-white/12"
+          type="button"
+          @click="debugPanelOpen = false"
+        >
+          收起
+        </button>
+      </div>
 
-        <div class="mt-3 flex items-start justify-between gap-3 border-t border-sky-100/80 pt-3 dark:border-white/8">
-          <div class="min-w-0">
-            <div class="text-[10px] text-slate-400 font-semibold tracking-[0.14em] uppercase dark:text-neutral-500">
-              教学姿态
-            </div>
-            <div
-              class="mt-1 truncate text-sm text-slate-900 font-semibold dark:text-white"
-              data-testid="lesson-airi-teaching-stance"
-            >
-              {{ visibleTeachingStance.label }}
-            </div>
-            <div
-              class="line-clamp-2 mt-0.5 text-[11px] text-slate-500 leading-4 dark:text-neutral-400"
-              data-testid="lesson-airi-teaching-stance-detail"
-            >
-              {{ visibleTeachingStance.detail }}
-            </div>
+      <div class="grid grid-cols-2 gap-2">
+        <div
+          v-for="fact in visiblePerformanceFacts"
+          :key="fact.key"
+          class="min-w-0 rounded-[12px] bg-sky-50/75 px-2.5 py-2 ring-1 ring-sky-100/80 ring-inset dark:bg-white/6 dark:ring-white/8"
+        >
+          <div class="text-[10px] text-slate-400 font-semibold tracking-[0.12em] uppercase dark:text-neutral-500">
+            {{ fact.label }}
           </div>
           <div
-            :class="[
-              'shrink-0 rounded-full px-2.5 py-1 text-[11px] font-semibold ring-1 ring-inset',
-              visibleTeachingStance.classes,
-            ]"
+            :data-testid="`lesson-airi-visible-fact-${fact.key}`"
+            class="mt-1 truncate text-[11px] text-slate-800 font-medium dark:text-neutral-100"
           >
-            {{ visibleTeachingStance.label }}
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 mt-3 gap-2">
-          <div
-            v-for="fact in visiblePerformanceFacts"
-            :key="fact.key"
-            :class="[
-              'min-w-0 rounded-[14px] border border-sky-100/80 bg-sky-50/55 px-2.5 py-2 dark:border-white/8 dark:bg-white/5',
-              ['reply_path', 'performance_source', 'content_source', 'teaching_action', 'target_role', 'expected_student_action', 'speech_style_tag', 'persona_capsule', 'performance_apply', 'performance_fallback_kind', 'tts_playback_state', 'tts_playback_id', 'active_reply_id', 'tts_stop_reason', 'tts_stop_type', 'tts_overlap_detected', 'interrupt_policy'].includes(fact.key) ? 'col-span-2' : '',
-            ]"
-          >
-            <div class="text-[10px] text-slate-400 font-semibold tracking-[0.12em] uppercase dark:text-neutral-500">
-              {{ fact.label }}
-            </div>
-            <div
-              :data-testid="`lesson-airi-visible-fact-${fact.key}`"
-              :class="[
-                'mt-1 text-[11px] text-slate-800 font-semibold dark:text-neutral-100',
-                ['reply_path', 'performance_source', 'content_source', 'teaching_action', 'target_role', 'expected_student_action', 'speech_style_tag', 'persona_capsule', 'performance_apply', 'performance_fallback_kind', 'tts_playback_state', 'tts_playback_id', 'active_reply_id', 'tts_stop_reason', 'tts_stop_type', 'tts_overlap_detected'].includes(fact.key) ? 'break-words leading-4' : 'truncate',
-              ]"
-            >
-              {{ fact.value }}
-            </div>
+            {{ fact.value }}
           </div>
         </div>
       </div>
-    </details>
+
+      <div
+        v-if="liveTranscriptText"
+        data-testid="lesson-runtime-live-transcript"
+        class="mt-2 rounded-[12px] bg-emerald-50/90 px-3 py-2 text-emerald-800 dark:bg-emerald-400/12 dark:text-emerald-100"
+      >
+        实时转写：{{ liveTranscriptText }}
+      </div>
+    </div>
 
     <div class="sr-only">
       <div>{{ selectedPageUid }}</div>
       <div>{{ currentPageTitle }}</div>
+      <div data-testid="lesson-airi-visible-closure">
+        debug hidden
+      </div>
+      <div data-testid="lesson-airi-visible-state">
+        {{ visibleAiriState.label }}
+      </div>
+      <div data-testid="lesson-airi-visible-state-detail">
+        {{ visibleAiriState.detail }}
+      </div>
+      <div data-testid="lesson-airi-teaching-stance">
+        {{ visibleTeachingStance.label }}
+      </div>
+      <div data-testid="lesson-airi-teaching-stance-detail">
+        {{ visibleTeachingStance.detail }}
+      </div>
+      <div
+        v-for="fact in visiblePerformanceFacts"
+        :key="fact.key"
+        :data-testid="`lesson-airi-visible-fact-${fact.key}`"
+      >
+        {{ fact.value }}
+      </div>
       <div data-testid="lesson-runtime-status-label">
         {{ sidebarRuntimeStatus.label }}
       </div>
@@ -1198,22 +1203,20 @@ function resolveReplyPathLabel() {
         </div>
       </div>
 
-      <template v-if="debugPanelOpen">
-        <div
-          v-for="fact in speechChainFacts"
-          :key="fact.key"
-        >
-          <div class="text-[10px] text-slate-400 font-semibold tracking-[0.12em] uppercase dark:text-neutral-400">
-            {{ fact.label }}
-          </div>
-          <div
-            :data-testid="`lesson-runtime-fact-${fact.key}`"
-            class="mt-1 truncate text-[11px] text-slate-800 font-medium dark:text-neutral-100"
-          >
-            {{ fact.value }}
-          </div>
+      <div
+        v-for="fact in speechChainFacts"
+        :key="fact.key"
+      >
+        <div class="text-[10px] text-slate-400 font-semibold tracking-[0.12em] uppercase dark:text-neutral-400">
+          {{ fact.label }}
         </div>
-      </template>
+        <div
+          :data-testid="`lesson-runtime-fact-${fact.key}`"
+          class="mt-1 truncate text-[11px] text-slate-800 font-medium dark:text-neutral-100"
+        >
+          {{ fact.value }}
+        </div>
+      </div>
 
       <div
         v-if="liveTranscriptText"

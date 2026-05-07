@@ -68,6 +68,11 @@ const pushToTalkModifierState = {
   shiftDown: false,
 }
 let textareaResizeFrame: number | undefined
+interface StopListeningOptions {
+  flushPending?: boolean
+  abortTranscription?: boolean
+  commitStoppedTranscript?: boolean
+}
 
 const providersStore = useProvidersStore()
 const { activeProvider, activeModel } = storeToRefs(useConsciousnessStore())
@@ -442,6 +447,22 @@ function appendInputSegment(currentText: string, segment: string) {
   return [normalizedCurrentText, normalizedSegment].filter(Boolean).join(' ')
 }
 
+function compactTranscriptText(text: string) {
+  return text.replace(/\s+/g, ' ').trim()
+}
+
+function hasEquivalentTranscriptText(currentText: string, segment: string) {
+  const normalizedCurrentText = compactTranscriptText(currentText).toLocaleLowerCase()
+  const normalizedSegment = compactTranscriptText(segment).toLocaleLowerCase()
+  if (!normalizedCurrentText || !normalizedSegment) {
+    return false
+  }
+
+  return normalizedCurrentText === normalizedSegment
+    || normalizedCurrentText.endsWith(normalizedSegment)
+    || normalizedCurrentText.includes(normalizedSegment)
+}
+
 function applyLiveTranscriptPreview(text: string) {
   const preview = text.trim()
   const baseText = withoutTrailingPreview(messageInput.value, lastLiveTranscriptPreview.value)
@@ -466,6 +487,23 @@ function commitLiveTranscriptDelta(delta: string) {
   lastLiveTranscriptPreview.value = ''
   messageInput.value = appendInputSegment(baseText, delta)
   return delta.trim()
+}
+
+function commitStoppedTranscriptionText(text: string | undefined) {
+  const finalText = compactTranscriptText(text || '')
+  if (!finalText) {
+    return ''
+  }
+
+  const baseText = withoutTrailingPreview(messageInput.value, lastLiveTranscriptPreview.value)
+  if (!hasEquivalentTranscriptText(baseText, finalText)) {
+    messageInput.value = appendInputSegment(baseText, finalText)
+  }
+
+  lastLiveTranscriptPreview.value = ''
+  lessonAiriRuntime.markRecognizedText(finalText)
+  lessonAiriRuntime.updateLiveTranscript(messageInput.value)
+  return finalText
 }
 
 function interruptLessonPlayback(event: LessonInterruptEvent) {
@@ -651,6 +689,9 @@ async function beginPushToTalk() {
 
   pushToTalkActive.value = true
   await handleMicrophoneTriggerClick()
+  if (pushToTalkActive.value && enabled.value && stream.value && !isListening.value) {
+    await startListening()
+  }
 }
 
 async function endPushToTalk() {
@@ -660,7 +701,11 @@ async function endPushToTalk() {
 
   pushToTalkActive.value = false
   if (isListening.value) {
-    await stopListening({ flushPending: true })
+    await stopListening({
+      flushPending: true,
+      abortTranscription: false,
+      commitStoppedTranscript: true,
+    })
   }
   else {
     clearPendingAutoSend()
@@ -1026,8 +1071,10 @@ async function startListening() {
   }
 }
 
-async function stopListening(options: { flushPending?: boolean } = {}) {
+async function stopListening(options: StopListeningOptions = {}) {
   const shouldFlushPending = options.flushPending !== false
+  const shouldAbortTranscription = options.abortTranscription !== false
+  const shouldCommitStoppedTranscript = options.commitStoppedTranscript === true
   if (stopListeningPromise) {
     await stopListeningPromise
     return
@@ -1040,8 +1087,14 @@ async function stopListening(options: { flushPending?: boolean } = {}) {
     try {
       console.info('[ChatArea] Stopping transcription...')
 
-      // Send any pending text immediately if auto-send is enabled
-      const textToSend = takePendingAutoSendText()
+      const transcriptFallbackText = compactTranscriptText(lastLiveTranscriptPreview.value || liveTranscriptText.value)
+      const stoppedText = await stopStreamingTranscription(shouldAbortTranscription)
+      const committedStoppedText = shouldCommitStoppedTranscript
+        ? commitStoppedTranscriptionText(stoppedText || transcriptFallbackText)
+        : ''
+
+      const pendingTextToSend = takePendingAutoSendText()
+      const textToSend = pendingTextToSend || committedStoppedText
       if (shouldFlushPending && effectiveAutoSendEnabled.value && textToSend && !props.disabled) {
         try {
           await sendTextToChat(textToSend, 'auto_send')
@@ -1057,7 +1110,6 @@ async function stopListening(options: { flushPending?: boolean } = {}) {
         clearPendingAutoSend()
       }
 
-      await stopStreamingTranscription(true)
       isListening.value = false
       lastLiveTranscriptPreview.value = ''
       lessonAiriRuntime.clearLiveTranscript()

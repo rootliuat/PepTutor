@@ -74,7 +74,7 @@ defineExpose({
       v-model:state="componentStateCanvas"
       :width="width"
       :height="height"
-      :resolution="2"
+      :resolution="1"
       :max-fps="live2dMaxFps"
       max-h="100dvh"
     >

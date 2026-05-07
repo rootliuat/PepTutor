@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<{
   resolution?: number
   maxFps?: number
 }>(), {
-  resolution: 2,
+  resolution: 1,
   maxFps: 0,
 })
 
@@ -56,16 +56,15 @@ async function initLive2DPixiStage(parent: HTMLDivElement) {
   // extensions.add(InteractionManager)
 
   pixiApp.value = new Application({
-    width: props.width * props.resolution,
-    height: props.height * props.resolution,
+    width: props.width,
+    height: props.height,
     backgroundAlpha: 0,
-    preserveDrawingBuffer: true,
-    autoDensity: false,
-    resolution: 1,
+    preserveDrawingBuffer: false,
+    autoDensity: true,
+    resolution: props.resolution,
   })
 
   installRenderGuard(pixiApp.value)
-  pixiApp.value.stage.scale.set(props.resolution)
 
   pixiAppCanvas.value = pixiApp.value.view
 
@@ -84,8 +83,8 @@ async function initLive2DPixiStage(parent: HTMLDivElement) {
 function handleResize() {
   if (pixiApp.value) {
     // Update the internal rendering resolution
-    pixiApp.value.renderer.resize(props.width * props.resolution, props.height * props.resolution)
-    pixiApp.value.stage.scale.set(props.resolution)
+    pixiApp.value.renderer.resolution = props.resolution
+    pixiApp.value.renderer.resize(props.width, props.height)
   }
 
   // The CSS styles handle the display size, so we don't need to manually set view dimensions

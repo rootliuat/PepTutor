@@ -526,9 +526,21 @@ watch(offset, () => setScaleAndPosition())
 watch(() => props.scale, () => setScaleAndPosition())
 
 // TODO: This is hacky!
+function shouldRunDropShadowFilterLoop() {
+  return themeColorsHueDynamic.value && live2dShadowEnabled.value && !paused.value
+}
+
+function stopDropShadowFilterLoop() {
+  if (!dropShadowAnimationId.value)
+    return
+
+  cancelAnimationFrame(dropShadowAnimationId.value)
+  dropShadowAnimationId.value = 0
+}
+
 function updateDropShadowFilterLoop() {
   updateDropShadowFilter()
-  if (!live2dShadowEnabled.value) {
+  if (!shouldRunDropShadowFilterLoop()) {
     dropShadowAnimationId.value = 0
     return
   }
@@ -536,13 +548,20 @@ function updateDropShadowFilterLoop() {
   dropShadowAnimationId.value = requestAnimationFrame(updateDropShadowFilterLoop)
 }
 
-watch([themeColorsHueDynamic, live2dShadowEnabled], ([dynamic, shadowEnabled]) => {
-  if (dynamic && shadowEnabled) {
-    dropShadowAnimationId.value = requestAnimationFrame(updateDropShadowFilterLoop)
+function startDropShadowFilterLoop() {
+  if (dropShadowAnimationId.value || !shouldRunDropShadowFilterLoop())
+    return
+
+  dropShadowAnimationId.value = requestAnimationFrame(updateDropShadowFilterLoop)
+}
+
+watch([themeColorsHueDynamic, live2dShadowEnabled, paused], () => {
+  if (shouldRunDropShadowFilterLoop()) {
+    startDropShadowFilterLoop()
   }
   else {
-    cancelAnimationFrame(dropShadowAnimationId.value)
-    dropShadowAnimationId.value = 0
+    stopDropShadowFilterLoop()
+    updateDropShadowFilter()
   }
 }, { immediate: true })
 
@@ -723,6 +742,7 @@ onUnmounted(() => {
   clearModelLipSyncDebugHandle()
   isUnmounted = true
   resizeAnimation?.pause()
+  stopDropShadowFilterLoop()
   disposeShouldUpdateView?.()
 })
 

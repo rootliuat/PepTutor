@@ -5,6 +5,7 @@ import { useLessonAiriRuntimeStore } from '@proj-airi/stage-ui/stores/lesson-air
 import { resolveLessonChatMessageText } from '@proj-airi/stage-ui/stores/lesson-chat-history'
 import {
   createLessonVisibleTextMemoizer,
+  deriveLessonMessagePayload,
   joinLessonVisibleSegmentsForDisplay,
   normalizeLessonVisibleSegments,
 } from '@proj-airi/stage-ui/utils/lesson-text'
@@ -20,20 +21,29 @@ const { lastRecognizedText, liveTranscriptText } = storeToRefs(lessonAiriRuntime
 const { messages } = storeToRefs(chatSessionStore)
 const memoizeSubtitleText = createLessonVisibleTextMemoizer(120)
 
+function findLatest<T>(items: T[], predicate: (item: T) => boolean): T | undefined {
+  for (let index = items.length - 1; index >= 0; index -= 1) {
+    const item = items[index]
+    if (predicate(item))
+      return item
+  }
+  return undefined
+}
+
 const subtitleText = computed(() => {
-  const latestTranscript = [...transcript.value].reverse().find(entry => entry.speaker === 'teacher')
+  const latestTranscript = findLatest(transcript.value, entry => entry.speaker === 'teacher')
   const latestTranscriptText = latestTranscript
-    ? memoizeSubtitleText(`transcript:${latestTranscript.id}`, latestTranscript.text || '')
+    ? deriveLessonMessagePayload(memoizeSubtitleText(`transcript:${latestTranscript.id}`, latestTranscript.text || '')).captionText
     : ''
   if (latestTranscriptText)
     return latestTranscriptText
 
-  const latestAssistantMessage = [...messages.value].reverse().find(message => message.role === 'assistant')
+  const latestAssistantMessage = findLatest(messages.value, message => message.role === 'assistant')
   const latestAssistantText = latestAssistantMessage
-    ? memoizeSubtitleText(
-        `message:${latestAssistantMessage.id || latestAssistantMessage.createdAt || 'latest'}`,
-        resolveLessonChatMessageText(latestAssistantMessage),
-      )
+    ? deriveLessonMessagePayload(memoizeSubtitleText(
+      `message:${latestAssistantMessage.id || latestAssistantMessage.createdAt || 'latest'}`,
+      resolveLessonChatMessageText(latestAssistantMessage),
+    )).captionText
     : ''
   if (latestAssistantText)
     return latestAssistantText
@@ -45,10 +55,11 @@ const subtitleText = computed(() => {
     )
     const text = joinLessonVisibleSegmentsForDisplay(segments)
     if (text)
-      return text
+      return deriveLessonMessagePayload(text).captionText
   }
 
-  return memoizeSubtitleText('current-teacher-prompt', currentTeacherPrompt.value || '') || '等待老师话术...'
+  const fallbackText = memoizeSubtitleText('current-teacher-prompt', currentTeacherPrompt.value || '')
+  return deriveLessonMessagePayload(fallbackText).captionText || '等待老师话术...'
 })
 </script>
 
