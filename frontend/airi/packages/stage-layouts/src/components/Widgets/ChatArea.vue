@@ -101,7 +101,7 @@ const { transcribeForMediaStream, stopStreamingTranscription } = hearingPipeline
 const { supportsStreamInput } = storeToRefs(hearingPipeline)
 const { configured: hearingConfigured, autoSendEnabled, autoSendDelay } = storeToRefs(hearingStore)
 const { loading: lessonLoading, runtimeState } = storeToRefs(lessonStore)
-const { teacherSpeaking, lastRecognizedText, liveTranscriptText, currentInterruptPolicy, classroomSimpleStatus } = storeToRefs(lessonAiriRuntime)
+const { teacherSpeaking, liveTranscriptText, currentInterruptPolicy, classroomSimpleStatus } = storeToRefs(lessonAiriRuntime)
 const shouldUseStreamInput = computed(() => supportsStreamInput.value && !!stream.value)
 const effectiveAutoSendEnabled = computed(() => props.autoSendEnabledOverride ?? autoSendEnabled.value)
 const effectiveAutoSendDelay = computed(() => props.autoSendDelayOverride ?? autoSendDelay.value)
@@ -1172,10 +1172,10 @@ watch(effectiveAutoSendEnabled, (enabled) => {
         <span data-testid="lesson-chat-status-label">{{ compactClassroomStatusLabel }}</span>
         <span data-testid="lesson-chat-status-detail">{{ compactClassroomStatusLabel }}</span>
         <span
-          v-if="liveTranscriptText || lastRecognizedText"
+          v-if="liveTranscriptText"
           data-testid="lesson-chat-live-transcript"
         >
-          实时转写：{{ liveTranscriptText || lastRecognizedText }}
+          实时转写：{{ liveTranscriptText }}
         </span>
       </div>
 
@@ -1241,11 +1241,11 @@ watch(effectiveAutoSendEnabled, (enabled) => {
                 自动发送 {{ effectiveAutoSendDelay }}ms
               </span>
               <span
-                v-if="liveTranscriptText || lastRecognizedText"
+                v-if="liveTranscriptText"
                 data-testid="lesson-chat-live-transcript"
                 class="max-w-full truncate rounded-full bg-emerald-100/80 px-2.5 py-1 text-emerald-700 dark:bg-emerald-400/10 dark:text-emerald-100/90"
               >
-                实时转写：{{ liveTranscriptText || lastRecognizedText }}
+                实时转写：{{ liveTranscriptText }}
               </span>
             </div>
           </div>
