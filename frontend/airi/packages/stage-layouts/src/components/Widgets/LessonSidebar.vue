@@ -143,12 +143,7 @@ const sidebarRawMessages = computed(() => {
     }]
   })
 
-  const messagesForDisplay = [...normalized]
-  for (const transcriptMessage of transcriptMessages) {
-    if (!hasEquivalentSidebarMessage(messagesForDisplay, transcriptMessage)) {
-      messagesForDisplay.push(transcriptMessage)
-    }
-  }
+  const messagesForDisplay = transcriptMessages.length > 0 ? [...transcriptMessages] : [...normalized]
 
   const streamingText = streamingMessage.value ? resolveMessageText(streamingMessage.value as ChatHistoryItem) : ''
   const visibleMessages = messagesForDisplay
@@ -158,12 +153,14 @@ const sidebarRawMessages = computed(() => {
     }))
     .filter(message => message.rawText)
   if (streamingText) {
-    visibleMessages.push({
+    const streamingSidebarMessage: LessonSidebarRawMessage = {
       id: 'streaming-message',
       role: 'assistant',
       rawText: streamingText,
       createdAt: Date.now(),
-    })
+    }
+    if (!hasEquivalentSidebarMessage(visibleMessages, streamingSidebarMessage))
+      visibleMessages.push(streamingSidebarMessage)
   }
 
   return visibleMessages

@@ -6,8 +6,7 @@ import { resolveLessonChatMessageText } from '@proj-airi/stage-ui/stores/lesson-
 import {
   createLessonVisibleTextMemoizer,
   deriveLessonMessagePayload,
-  joinLessonVisibleSegmentsForDisplay,
-  normalizeLessonVisibleSegments,
+  resolveLessonTeacherDisplayText,
 } from '@proj-airi/stage-ui/utils/lesson-text'
 import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
@@ -17,7 +16,7 @@ const lessonAiriRuntime = useLessonAiriRuntimeStore()
 const chatSessionStore = useChatSessionStore()
 
 const { currentTeacherPrompt, activeTurn, transcript } = storeToRefs(lessonStore)
-const { lastRecognizedText, liveTranscriptText } = storeToRefs(lessonAiriRuntime)
+const { liveTranscriptText } = storeToRefs(lessonAiriRuntime)
 const { messages } = storeToRefs(chatSessionStore)
 const memoizeSubtitleText = createLessonVisibleTextMemoizer(120)
 
@@ -33,33 +32,35 @@ function findLatest<T>(items: T[], predicate: (item: T) => boolean): T | undefin
 const subtitleText = computed(() => {
   const latestTranscript = findLatest(transcript.value, entry => entry.speaker === 'teacher')
   const latestTranscriptText = latestTranscript
-    ? deriveLessonMessagePayload(memoizeSubtitleText(`transcript:${latestTranscript.id}`, latestTranscript.text || '')).captionText
+    ? memoizeSubtitleText(
+        `transcript:${latestTranscript.id}`,
+        resolveLessonTeacherDisplayText(latestTranscript.segments, latestTranscript.text || ''),
+      )
     : ''
   if (latestTranscriptText)
     return latestTranscriptText
+
+  if (activeTurn.value) {
+    const text = resolveLessonTeacherDisplayText(
+      activeTurn.value.teacher_visible_segments,
+      activeTurn.value.teacher_response,
+    )
+    if (text)
+      return memoizeSubtitleText(`active-turn:${activeTurn.value.page_uid}:${activeTurn.value.block_uid || ''}:${activeTurn.value.turn_label}`, text)
+  }
 
   const latestAssistantMessage = findLatest(messages.value, message => message.role === 'assistant')
   const latestAssistantText = latestAssistantMessage
     ? deriveLessonMessagePayload(memoizeSubtitleText(
       `message:${latestAssistantMessage.id || latestAssistantMessage.createdAt || 'latest'}`,
       resolveLessonChatMessageText(latestAssistantMessage),
-    )).captionText
+    )).visibleText
     : ''
   if (latestAssistantText)
     return latestAssistantText
 
-  if (activeTurn.value) {
-    const segments = normalizeLessonVisibleSegments(
-      activeTurn.value.teacher_visible_segments,
-      activeTurn.value.teacher_response,
-    )
-    const text = joinLessonVisibleSegmentsForDisplay(segments)
-    if (text)
-      return deriveLessonMessagePayload(text).captionText
-  }
-
   const fallbackText = memoizeSubtitleText('current-teacher-prompt', currentTeacherPrompt.value || '')
-  return deriveLessonMessagePayload(fallbackText).captionText || '等待老师话术...'
+  return deriveLessonMessagePayload(fallbackText).visibleText || '等待老师话术...'
 })
 </script>
 
@@ -78,13 +79,13 @@ const subtitleText = computed(() => {
         </div>
 
         <div
-          v-if="liveTranscriptText || lastRecognizedText"
+          v-if="liveTranscriptText"
           class="mt-2.5 flex flex-wrap items-center gap-2 text-xs text-slate-500 dark:text-neutral-200/78"
         >
           <span
             class="max-w-full truncate rounded-full bg-emerald-100/80 px-3 py-1.5 text-emerald-700 dark:bg-emerald-400/12 dark:text-emerald-100/90"
           >
-            实时转写：{{ liveTranscriptText || lastRecognizedText }}
+            实时转写：{{ liveTranscriptText }}
           </span>
         </div>
       </div>

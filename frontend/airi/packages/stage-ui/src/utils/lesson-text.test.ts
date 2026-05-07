@@ -9,6 +9,7 @@ import {
   joinLessonVisibleSegmentsForSpeech,
   lessonVisibleMessagesRenderKey,
   normalizeLessonVisibleSegments,
+  resolveLessonTeacherDisplayText,
   sanitizeLessonVisibleText,
   segmentLessonTeacherReply,
   stripLessonMarkdown,
@@ -195,5 +196,24 @@ describe('lesson visible segments', () => {
         segment_kind: 'action',
       },
     ])
+  })
+
+  it('resolves full teacher display text instead of only the first caption segment', () => {
+    expect(resolveLessonTeacherDisplayText([
+      {
+        display_text: '好，我们先来第一块。',
+        caption_text: '好，我们先来第一块。',
+        tts_text: '好，我们先来第一块。',
+        sequence: 0,
+        segment_kind: 'ack',
+      },
+      {
+        display_text: '这个单词里有 ow，读作 cow 里的 ow：cow。',
+        caption_text: '这个单词里有 ow，读作 cow 里的 ow：cow。',
+        tts_text: '这个单词里有 ow，读作 cow 里的 ow：cow。',
+        sequence: 1,
+        segment_kind: 'scaffold',
+      },
+    ], 'fallback')).toBe('好，我们先来第一块。\n这个单词里有 ow，读作 cow 里的 ow：cow。')
   })
 })

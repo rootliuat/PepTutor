@@ -202,6 +202,13 @@ export function joinLessonVisibleSegmentsForDisplay(segments: LessonVisibleSegme
   return segments.map(segment => segment.display_text).filter(Boolean).join('\n')
 }
 
+export function resolveLessonTeacherDisplayText(
+  segments: LessonVisibleSegmentInput[] | null | undefined,
+  fallbackText: string,
+): string {
+  return joinLessonVisibleSegmentsForDisplay(normalizeLessonVisibleSegments(segments, fallbackText))
+}
+
 export function joinLessonVisibleSegmentsForSpeech(segments: LessonVisibleSegment[]): string {
   return segments.map(segment => segment.tts_text || segment.display_text).filter(Boolean).join(' ')
 }
