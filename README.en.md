@@ -1,6 +1,17 @@
 # PepTutor Mili English Tutoring Classroom
 
-中文版本: [README.md](README.md)
+<p align="center">
+  <img src="photo/peptutor_logo.png" alt="PepTutor logo" width="96" />
+</p>
+
+<p align="center">
+  <strong>Generative-AI English tutoring classroom for primary-school textbooks</strong><br />
+  Bounded teaching actions · Live2D Mili teacher · structured curriculum · offline evidence chain
+</p>
+
+<p align="center">
+  <a href="README.md">中文 README</a>
+</p>
 
 PepTutor is an auditable AI English tutoring classroom for primary-school
 textbook practice. It combines structured curriculum data, a lesson runtime,
@@ -20,6 +31,17 @@ GitHub repository:
 https://github.com/rootliuat/PepTutor
 ```
 
+## Classroom UI
+
+PepTutor's classroom frontend is adapted from the [AIRI](https://github.com/moeru-ai/airi) / Live2D interaction
+stack. It keeps the virtual character, voice input, TTS playback, captions, and
+debug sidebar, while turning the main view into a student-facing English tutoring
+classroom.
+
+<p align="center">
+  <img src="photo/peptutor-brand-desktop-20260505.png" alt="PepTutor lesson classroom UI" width="900" />
+</p>
+
 ## Repository Contents
 
 - `app/knowledge/` — curriculum assets, structured curriculum data, and reviewed teaching-strategy data.
@@ -29,6 +51,10 @@ https://github.com/rootliuat/PepTutor
 - `scripts/` — local dev launcher, smoke wrappers, audit scripts, curriculum graph/evidence tooling, and test-budget guard.
 
 ## Architecture
+
+<p align="center">
+  <img src="photo/系统总体架构图.png" alt="PepTutor system architecture diagram" width="900" />
+</p>
 
 Live classroom path:
 
@@ -56,6 +82,27 @@ structured curriculum
 `app/knowledge/structured` remains the canonical curriculum source. RAGFlow,
 agentic tools, and future GRPO-style experiments must not override live lesson
 state without a reviewed implementation goal.
+
+## Runtime Loop
+
+The live classroom does not let the LLM freely decide the teaching route.
+`LessonRuntime + Strategy State + TeachingMove` controls classroom state, while
+the deterministic renderer or bounded LLM path handles expression.
+
+<p align="center">
+  <img src="photo/课堂运行.png" alt="PepTutor classroom runtime flow" width="900" />
+</p>
+
+## Structured Curriculum and Evidence Chain
+
+PepTutor has audited a structured curriculum graph covering 4 books, 30 units,
+255 pages, and 581 blocks. The curriculum graph, RAGFlow, and agentic harness
+support offline review and human-approved tightening; they do not directly
+control the live classroom.
+
+<p align="center">
+  <img src="photo/教材结构化知识图谱示意图.png" alt="PepTutor structured curriculum graph evidence diagram" width="900" />
+</p>
 
 ## Environment Files
 

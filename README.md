@@ -1,6 +1,17 @@
 # PepTutor 米粒英语陪练课堂
 
-English version: [README.en.md](README.en.md)
+<p align="center">
+  <img src="photo/peptutor_logo.png" alt="PepTutor logo" width="96" />
+</p>
+
+<p align="center">
+  <strong>基于生成式 AI 的小学英语陪练课堂</strong><br />
+  可控教学动作 · Live2D 米粒老师 · 结构化教材 · 离线证据链
+</p>
+
+<p align="center">
+  <a href="README.en.md">English README</a>
+</p>
 
 PepTutor 是一个面向小学英语教材陪练的可审计 AI 课堂系统。它把结构化教材、
 课堂运行时、TeachingMove 教学动作契约、Live2D 前端课堂、语音输入输出和离线
@@ -15,6 +26,15 @@ GitHub 仓库：
 https://github.com/rootliuat/PepTutor
 ```
 
+## 课堂界面
+
+PepTutor 的课堂前端基于 [AIRI](https://github.com/moeru-ai/airi) / Live2D 交互框架改造，保留虚拟角色、语音输入、
+TTS 播放、字幕和调试侧栏，同时把课堂主视图改成面向学生的英语陪练场景。
+
+<p align="center">
+  <img src="photo/peptutor-brand-desktop-20260505.png" alt="PepTutor lesson classroom UI" width="900" />
+</p>
+
 ## 仓库内容
 
 - `app/knowledge/`：教材资源、结构化课程数据和已评审的 teaching strategy 数据。
@@ -24,6 +44,10 @@ https://github.com/rootliuat/PepTutor
 - `scripts/`：本地启动脚本、smoke 包装器、审计脚本、课程图谱/证据工具和测试预算 guard。
 
 ## 系统架构
+
+<p align="center">
+  <img src="photo/系统总体架构图.png" alt="PepTutor 系统总体架构图" width="900" />
+</p>
 
 实时课堂链路：
 
@@ -50,6 +74,24 @@ https://github.com/rootliuat/PepTutor
 
 `app/knowledge/structured` 仍然是权威教材来源。RAGFlow、agentic 工具和未来可能的
 GRPO 类实验，不能在未经评审的实现目标中覆盖实时课堂状态。
+
+## 课堂运行闭环
+
+课堂运行时不是让 LLM 自由决定教学路线，而是由 `LessonRuntime + Strategy State +
+TeachingMove` 控制课堂状态，再把表达交给确定性 renderer 或受边界约束的 LLM。
+
+<p align="center">
+  <img src="photo/课堂运行.png" alt="PepTutor 课堂运行时流程图" width="900" />
+</p>
+
+## 教材结构化与证据链
+
+PepTutor 已完成 4 册、30 个单元、255 页、581 个 block 的课程图谱审计。课程图谱、
+RAGFlow 和 agentic harness 都用于离线审计和人工复核，不直接接管实时课堂。
+
+<p align="center">
+  <img src="photo/教材结构化知识图谱示意图.png" alt="PepTutor 教材结构化知识图谱示意图" width="900" />
+</p>
 
 ## 环境变量文件
 
