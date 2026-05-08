@@ -39,7 +39,7 @@ debug sidebar, while turning the main view into a student-facing English tutorin
 classroom.
 
 <p align="center">
-  <img src="photo/peptutor-brand-desktop-20260505.png" alt="PepTutor lesson classroom UI" width="900" />
+  <img src="photo/peptutor-lesson-latest-desktop-20260508.png" alt="PepTutor lesson classroom UI" width="900" />
 </p>
 
 ## Repository Contents

@@ -32,7 +32,7 @@ PepTutor 的课堂前端基于 [AIRI](https://github.com/moeru-ai/airi) / Live2D
 TTS 播放、字幕和调试侧栏，同时把课堂主视图改成面向学生的英语陪练场景。
 
 <p align="center">
-  <img src="photo/peptutor-brand-desktop-20260505.png" alt="PepTutor lesson classroom UI" width="900" />
+  <img src="photo/peptutor-lesson-latest-desktop-20260508.png" alt="PepTutor lesson classroom UI" width="900" />
 </p>
 
 ## 仓库内容
